@@ -27,8 +27,10 @@ module.exports = {
       roots: ['<rootDir>/packages/zerolist'],
       testMatch: ['**/__tests__/**/*.test.tsx'],
       modulePathIgnorePatterns: ignore,
+      // bun 호이스팅(.bun/<pkg>@<ver>/node_modules/<pkg>) 때문에 기본
+      // RN 패턴이 안 맞음 → RN/RTL 계열이 경로 어디에 있든 변환.
       transformIgnorePatterns: [
-        'node_modules/(?!(.*/)?(jest-)?@?react-native|@react-native-community|@react-navigation)',
+        'node_modules/(?!.*(?:@react-native|react-native|@react-native-community|@testing-library)/)',
       ],
     },
   ],
