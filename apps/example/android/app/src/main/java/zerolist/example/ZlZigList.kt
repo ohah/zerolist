@@ -1,6 +1,7 @@
 package zerolist.example
 
 import android.util.Log
+import android.util.TypedValue
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,7 +25,6 @@ class ZlZigListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private var builtRowPx = -1
   // Zig 가 zero-copy 로 읽는 누적 오프셋(네이티브 엔디안 direct buffer).
   private var offsets: ByteBuffer? = null
-  private var scheduled = false
   private var checks = 0
 
   private val onScroll =
@@ -53,25 +53,17 @@ class ZlZigListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
       }
     }
 
+  // 동기 rebuild — Fabric 레이아웃 패스 전에 자식(RecyclerView)을
+  // 붙여야 측정/표시된다(post 로 미루면 0 크기 → 백지). 가드가
+  // 중복 빌드를 막으므로 setter 2회라도 실질 빌드는 1회.
   fun setCount(value: Int) {
     n = value
-    schedule()
+    rebuild()
   }
 
   fun setRowHeight(value: Int) {
     rowPx = if (value > 0) value else 1
-    schedule()
-  }
-
-  // Fabric 은 prop 을 개별 setter 로 흘린다 — post 로 한 프레임에
-  // 모아 rebuild 1회(direct alloc·buildOffsets JNI 중복 제거).
-  private fun schedule() {
-    if (scheduled) return
-    scheduled = true
-    post {
-      scheduled = false
-      rebuild()
-    }
+    rebuild()
   }
 
   private fun rebuild() {
@@ -79,9 +71,16 @@ class ZlZigListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     if (offsets != null && rvCount() == n && builtRowPx == rowPx) return
 
     // heights(f32) → offsets(f64, n+1) : JNI→Zig zero-copy 1회.
+    // buildNativeList 셀은 dp(88) 고정 → Zig 오프셋도 동일 px 로
+    // (scrollY=computeVerticalScrollOffset 은 px). dp→px 변환 필수.
+    val rowPxF = TypedValue.applyDimension(
+      TypedValue.COMPLEX_UNIT_DIP,
+      rowPx.toFloat(),
+      resources.displayMetrics,
+    )
     val h = ByteBuffer.allocateDirect(n * 4).order(ByteOrder.nativeOrder())
     val hf = h.asFloatBuffer()
-    for (i in 0 until n) hf.put(i, rowPx.toFloat())
+    for (i in 0 until n) hf.put(i, rowPxF)
     val o = ByteBuffer.allocateDirect((n + 1) * 8).order(ByteOrder.nativeOrder())
     ZlEngine.buildOffsets(h, n, o)
     offsets = o
