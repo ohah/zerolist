@@ -45,10 +45,17 @@ react {
 
     /* Hermes Commands */
     //   RN 0.85 는 hermesc 를 별도 패키지(hermes-compiler)로 분리.
-    //   bun 모노레포 호이스팅으로 기본 경로 해석 실패 → 절대경로 하드코딩.
-    //   주의(PoC): bun 재설치로 .bun 해시 바뀌면 이 경로 갱신 필요.
+    //   bun 모노레포 호이스팅(.bun/<pkg>@<hash>)으로 기본 경로 해석
+    //   실패. 하드코딩 대신 react-native 위치 기준 node require.resolve
+    //   로 설정 시점에 계산 → bun 재설치/해시 변경에 견고.
     //   (%OS-BIN% 은 RN gradle 플러그인이 osx-bin/linux64-bin 로 치환)
-    hermesCommand = "/Users/yoonhb/Documents/workspace/zerolist/node_modules/.bun/hermes-compiler@250829098.0.10/node_modules/hermes-compiler/hermesc/%OS-BIN%/hermesc"
+    hermesCommand = providers.exec {
+        // app/ 기준 ../../ = apps/example (RN root) — node 모듈 해석이
+        // 여기서 위로 올라가며 모노레포 root node_modules 를 찾는다.
+        workingDir = file("../../")
+        commandLine "node", "-e",
+            "const p=require('path');const rn=p.dirname(require.resolve('react-native/package.json'));process.stdout.write(p.dirname(require.resolve('hermes-compiler/package.json',{paths:[rn]})))"
+    }.standardOutput.asText.get().trim() + "/hermesc/%OS-BIN%/hermesc"
     //
     //   The list of flags to pass to the Hermes compiler. By default is "-O", "-output-source-map"
     // hermesFlags = ["-O", "-output-source-map"]
