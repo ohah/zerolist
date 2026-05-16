@@ -98,6 +98,25 @@ export fn zl_visible_ranges_checksum(
     return sum;
 }
 
+/// 한 scrollY 의 "순수" 가시 index 범위 [first, last) 를 네이티브
+/// 스레드에서 zero-copy offsets 로 계산(프레임당 JS 0회). last 는
+/// exclusive(렌더 루프용). reference.ts `visibleRange` 와 비트수준
+/// 동일 계약 — 오버스캔/초기렌더 정책은 여기 없음(의도된 분리,
+/// 그 레이어는 virtualizer.computeWindow 담당).
+export fn zl_visible_range(
+    offsets: [*]const f64,
+    n: usize,
+    scroll_y: f64,
+    viewport: f64,
+    out_first: *i32,
+    out_last: *i32,
+) void {
+    const first = upperIndex(offsets, n, scroll_y);
+    const last = upperIndex(offsets, n, scroll_y + viewport);
+    out_first.* = first;
+    out_last.* = if (@as(usize, @intCast(last)) < n) last + 1 else @intCast(n);
+}
+
 /// 엔진/타깃 정보 문자열을 buf 에 채우고 길이를 반환한다.
 /// comptime 으로 빌드된 아키텍처/OS 를 박아 넣어 통로가 어느
 /// 타깃에서 도는지 런타임에서 바로 확인한다.

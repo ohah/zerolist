@@ -87,6 +87,15 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        // ZeroList JNI 브리지(zlbridge)는 사전빌드 Zig android-arm64
+        // 정적 라이브러리만 링크 → 에뮬/실기기 arm64 한정.
+        ndk { abiFilters "arm64-v8a" }
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.22.1"
+        }
     }
     signingConfigs {
         debug {

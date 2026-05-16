@@ -20,6 +20,12 @@ int64_t zl_visible_ranges_checksum(const double *offsets, size_t n,
                                    double viewport, const double *scrolls,
                                    size_t k);
 
+// ZeroList③: 한 scrollY 의 가시 index 범위 [first,last) — 네이티브
+// 스레드에서 zero-copy offsets 로 계산(프레임당 JS 0회).
+void zl_visible_range(const double *offsets, size_t n, double scroll_y,
+                      double viewport, int32_t *out_first,
+                      int32_t *out_last);
+
 // 엔진/타깃 정보를 buf 에 채우고 길이를 반환.
 size_t zl_engine_info(uint8_t *buf, size_t cap);
 

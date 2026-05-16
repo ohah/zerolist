@@ -30,6 +30,23 @@ export function upperIndex(
   return lo;
 }
 
+/**
+ * 한 scrollY 의 가시 index 범위 [first, lastExclusive).
+ * Zig `zl_visible_range`(engine.zig) 와 비트수준 동일해야 하는 계약을
+ * 코드 한 곳에 고정한다. 오버스캔/초기렌더 같은 정책은 포함하지 않는
+ * "순수 가시 범위" — 그 위 정책은 virtualizer.computeWindow 가 담당.
+ */
+export function visibleRange(
+  offsets: Float64Array,
+  n: number,
+  scrollY: number,
+  viewport: number
+): [number, number] {
+  const first = upperIndex(offsets, n, scrollY);
+  const last = upperIndex(offsets, n, scrollY + viewport);
+  return [first, last < n ? last + 1 : n];
+}
+
 /** k 개 scrollOffset 의 [first,last] 가시범위 인덱스 합(체크섬). */
 export function visibleChecksum(
   offsets: Float64Array,

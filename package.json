@@ -35,7 +35,7 @@
   "license": "MIT",
   "devDependencies": {
     "@commitlint/config-conventional": "^20.5.0",
-    "@jest/globals": "^30.0.0",
+    "@jest/globals": "^29.7.0",
     "@react-native-community/cli": "20.1.0",
     "@react-native/babel-preset": "0.85.0",
     "@react-native/jest-preset": "0.85.0",
@@ -43,7 +43,7 @@
     "@types/react": "^19.2.0",
     "commitlint": "^20.5.0",
     "del-cli": "^7.0.0",
-    "jest": "^30.3.0",
+    "jest": "^29.7.0",
     "lefthook": "^2.1.4",
     "oxfmt": "0.50.0",
     "oxlint": "1.65.0",
@@ -53,16 +53,6 @@
     "react-native-web": "~0.21.1",
     "release-it": "^19.2.4",
     "typescript": "^6.0.2"
-  },
-  "jest": {
-    "preset": "@react-native/jest-preset",
-    "roots": [
-      "<rootDir>/packages/zerolist"
-    ],
-    "modulePathIgnorePatterns": [
-      "<rootDir>/apps/example/node_modules",
-      "<rootDir>/packages/zerolist/lib/"
-    ]
   },
   "commitlint": {
     "extends": [
