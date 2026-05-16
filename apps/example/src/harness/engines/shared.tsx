@@ -55,14 +55,19 @@ export const SCROLL_THROTTLE = 16;
 
 const fill = StyleSheet.create({ s: { flex: 1 } }).s;
 
-// 네이티브 호스트 엔진(native/nativezig) 공용: 네이티브가 셀을 직접
-// 렌더하므로 JS scrollToOffset 은 no-op. props 매핑만 다름.
+// 네이티브가 스크롤/셀을 소유하는 엔진은 JS scrollToOffset 이 no-op
+// (스크롤은 네이티브 내부 → in-app 측정 무효, native 와 동일).
+export function useNoopScrollable(ref: Ref<Scrollable>) {
+  useImperativeHandle(ref, () => ({ scrollToOffset: () => {} }));
+}
+
+// 네이티브 호스트 엔진(native/nativezig) 공용: props 매핑만 다름.
 export function makeNativeHostEngine<P>(
   Comp: ComponentType<P & { style?: unknown }>,
   mapProps: (p: ListEngineProps) => P
 ) {
   return forwardRef<Scrollable, ListEngineProps>((p, ref) => {
-    useImperativeHandle(ref, () => ({ scrollToOffset: () => {} }));
+    useNoopScrollable(ref);
     return <Comp {...mapProps(p)} style={fill} />;
   });
 }

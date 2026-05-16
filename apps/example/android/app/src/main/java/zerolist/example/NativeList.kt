@@ -2,7 +2,6 @@ package zerolist.example
 
 import android.content.Context
 import android.graphics.Color
-import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
@@ -28,9 +27,7 @@ private val WORDS =
     .split(" ")
 
 private fun dp(ctx: Context, v: Int): Int =
-  TypedValue.applyDimension(
-    TypedValue.COMPLEX_UNIT_DIP, v.toFloat(), ctx.resources.displayMetrics
-  ).toInt()
+  dpF(ctx.resources.displayMetrics, v.toFloat()).toInt()
 
 private fun gen(seed: Int, n: Int): String {
   val sb = StringBuilder()
@@ -193,5 +190,6 @@ class ZlPackage : com.facebook.react.ReactPackage {
     listOf<com.facebook.react.uimanager.ViewManager<*, *>>(
       ZlNativeListManager(),
       ZlZigListManager(),
+      ZlPoolListManager(),
     )
 }

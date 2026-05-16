@@ -4,6 +4,7 @@ import { LegendEngine } from './legend';
 import { FlashListEngine } from './flashlist';
 import { NativeFabricEngine } from './native';
 import { NativeZigEngine } from './nativezig';
+import { ZigPoolEngine } from './zigpool';
 import { ZeroListEngine } from './zerolist';
 import type { EngineId, ListEngineProps } from '../types';
 import type { Scrollable } from '../flingDriver';
@@ -21,6 +22,7 @@ export const ENGINES: Record<EngineId, EngineComponent | null> = {
   flashlist: FlashListEngine,
   native: NativeFabricEngine,
   nativezig: NativeZigEngine,
+  zigpool: ZigPoolEngine,
   zerolist: ZeroListEngine,
 };
 
@@ -31,6 +33,7 @@ export const ENGINE_LABEL: Record<EngineId, string> = {
   flashlist: 'FlashList',
   native: 'FabricNative',
   nativezig: 'NativeZig',
+  zigpool: 'ZigPool',
   zerolist: 'ZeroList',
 };
 
@@ -41,5 +44,6 @@ export const ENGINE_HINT: Record<EngineId, string> = {
   flashlist: 'none(auto)',
   native: 'offsets',
   nativezig: 'zig-offsets',
+  zigpool: 'zig-pool',
   zerolist: 'offsets',
 };

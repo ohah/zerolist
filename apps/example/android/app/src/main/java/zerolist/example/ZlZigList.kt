@@ -1,7 +1,6 @@
 package zerolist.example
 
 import android.util.Log
-import android.util.TypedValue
 import android.widget.FrameLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -73,11 +72,7 @@ class ZlZigListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     // heights(f32) → offsets(f64, n+1) : JNI→Zig zero-copy 1회.
     // buildNativeList 셀은 dp(88) 고정 → Zig 오프셋도 동일 px 로
     // (scrollY=computeVerticalScrollOffset 은 px). dp→px 변환 필수.
-    val rowPxF = TypedValue.applyDimension(
-      TypedValue.COMPLEX_UNIT_DIP,
-      rowPx.toFloat(),
-      resources.displayMetrics,
-    )
+    val rowPxF = dpF(resources.displayMetrics, rowPx.toFloat())
     val h = ByteBuffer.allocateDirect(n * 4).order(ByteOrder.nativeOrder())
     val hf = h.asFloatBuffer()
     for (i in 0 until n) hf.put(i, rowPxF)

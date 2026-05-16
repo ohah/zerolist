@@ -28,6 +28,7 @@ const ENGINE_IDS: EngineId[] = [
   'flashlist',
   'native',
   'nativezig',
+  'zigpool',
   'zerolist',
 ];
 const CELLS: CellType[] = ['simple', 'image', 'complex', 'heavy'];
