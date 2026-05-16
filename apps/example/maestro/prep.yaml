@@ -1,0 +1,20 @@
+# 변별 테스트 1단계: 앱 초기화 + 설정(CELL·COUNT) + 엔진 선택.
+# ENGINE/CELL/COUNT 는 --env 로 주입(기본 complex·20000).
+appId: zerolist.example
+env:
+  ENGINE: FlatList
+  CELL: complex
+  COUNT: '20000'
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: 'engine'
+    timeout: 8000
+# ^...$ 앵커: '200' 이 '2000/20000' 에, 'FlatList' 가 부분일치하는
+# substring 오탭 방지(Maestro text 는 정규식).
+- tapOn: '^${CELL}$'
+- tapOn: '^${COUNT}$'
+- tapOn: '^${ENGINE}$'
+- waitForAnimationToEnd:
+    timeout: 5000

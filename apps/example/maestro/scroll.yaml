@@ -1,0 +1,22 @@
+# 변별 테스트 2단계: 실제 네이티브 플링(위→아래 왕복). 현재 화면의
+# 리스트를 OS 제스처로 구동 — JS animated driver 미사용.
+appId: zerolist.example
+---
+- repeat:
+    times: 14
+    commands:
+      - swipe:
+          start: 50%, 78%
+          end: 50%, 22%
+          duration: 220
+- waitForAnimationToEnd:
+    timeout: 3000
+- repeat:
+    times: 14
+    commands:
+      - swipe:
+          start: 50%, 22%
+          end: 50%, 78%
+          duration: 220
+- waitForAnimationToEnd:
+    timeout: 3000

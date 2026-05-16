@@ -38,20 +38,23 @@ const WARMUP = 1;
 const RUNS = 4; // 수동 Run
 const SWEEP_RUNS = 3; // 전수 sweep(런타임 관리)
 
-// 변별력 매트릭스: 시뮬 Release n=2000 은 너무 쉬워 3 JS 엔진이
-// 동률로 나옴(테스트 무력). 큰 N(20k) + 무거운 셀(complex) +
-// fixed/dynamic + fling/fastJump 로 엔진 차이가 드러나는 지점을 찾음.
-const AUTO_MATRIX = true;
-const BIG_N = 20000;
+// 에뮬 OS-truth 변별 sweet spot: heavy+20k 는 에뮬에서 전 콤보
+// 붕괴+저표본(측정 불가). complex 셀 × n∈{2000,20000} × fixed ×
+// fling/fastJump 로 프레임 충분히 확보하며 엔진 차이가 드러나는
+// 구간을 측정한다. gfxinfo(OS) 가 계측.
+// Maestro(실제 제스처)+gfxinfo(OS) 측정 경로에선 자동 sweep 끔 —
+// 앱은 정적 UI 만 띄우고 Maestro 가 실제 스와이프로 구동, 외부에서
+// gfxinfo 로 OS-truth 측정(깨진 animated driver 미사용).
+const AUTO_MATRIX = false;
 const SWEEP: BenchConfig[] = [];
 for (const engine of ['flatlist', 'legend', 'flashlist'] as EngineId[]) {
-  for (const height of ['fixed', 'dynamic'] as HeightMode[]) {
+  for (const count of [2000, 20000]) {
     for (const scenario of ['fling', 'fastJump'] as ScrollScenario[]) {
       SWEEP.push({
         engine,
-        cell: 'heavy',
-        height,
-        count: BIG_N,
+        cell: 'complex',
+        height: 'fixed',
+        count,
         scenario,
       });
     }
