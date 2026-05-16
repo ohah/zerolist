@@ -40,8 +40,19 @@ echo "--------------------------------------------------------------------------
 for E in "${ENG[@]}"; do
   janks=(); p50s=()
   for r in $(seq 1 "$RUNS"); do
-    "$MAESTRO" test --env ENGINE="$E" --env CELL="$CELL" --env COUNT="$COUNT" \
-      "$HERE/prep.yaml" >/dev/null 2>&1 || { echo "  run$r PREP_FAILED"; continue; }
+    if [ "$E" = "Native" ]; then
+      # 순수 네이티브 베이스라인: RN harness 대신 전용 Activity 직접 실행.
+      "$ADB" shell am start -n "$PKG/.NativeBenchActivity" >/dev/null 2>&1 \
+        || { echo "  run$r NATIVE_FAILED"; continue; }
+      sleep 3
+      # JS 경로의 visible 게이트와 대칭 — 렌더 전 측정 방지.
+      "$ADB" shell dumpsys activity activities 2>/dev/null \
+        | grep -q NativeBenchActivity \
+        || { echo "  run$r NATIVE_NOT_FG"; continue; }
+    else
+      "$MAESTRO" test --env ENGINE="$E" --env CELL="$CELL" --env COUNT="$COUNT" \
+        "$HERE/prep.yaml" >/dev/null 2>&1 || { echo "  run$r PREP_FAILED"; continue; }
+    fi
     "$ADB" shell dumpsys gfxinfo "$PKG" reset >/dev/null 2>&1
     "$MAESTRO" test "$HERE/scroll.yaml" >/dev/null 2>&1
     g=$("$ADB" shell dumpsys gfxinfo "$PKG" 2>/dev/null)

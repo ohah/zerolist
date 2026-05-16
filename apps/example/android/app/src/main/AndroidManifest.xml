@@ -23,5 +23,9 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
       </activity>
+      <!-- 순수 네이티브 베이스라인 (adb am start 로 직접 실행) -->
+      <activity
+        android:name=".NativeBenchActivity"
+        android:exported="true" />
     </application>
 </manifest>

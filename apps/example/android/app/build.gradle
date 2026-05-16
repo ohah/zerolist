@@ -114,6 +114,9 @@ dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
+    // 순수 네이티브 베이스라인(NativeBenchActivity)용 RecyclerView
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
