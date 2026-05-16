@@ -1,7 +1,7 @@
 // 벤치 harness 공용 타입.
 // 측정은 전부 시뮬/에뮬 기준 — directional only, NOT device-validated.
 
-export type CellType = 'simple' | 'image' | 'complex';
+export type CellType = 'simple' | 'image' | 'complex' | 'heavy';
 export type HeightMode = 'fixed' | 'variable' | 'dynamic';
 export type ScrollScenario = 'fling' | 'jsBlocked' | 'fastJump';
 export type EngineId =

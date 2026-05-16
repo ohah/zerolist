@@ -29,7 +29,7 @@ const ENGINE_IDS: EngineId[] = [
   'native',
   'zerolist',
 ];
-const CELLS: CellType[] = ['simple', 'image', 'complex'];
+const CELLS: CellType[] = ['simple', 'image', 'complex', 'heavy'];
 const HEIGHTS: HeightMode[] = ['fixed', 'variable', 'dynamic'];
 const SCENARIOS: ScrollScenario[] = ['fling', 'jsBlocked', 'fastJump'];
 // 렌더 harness 크기 — Phase A 연산 마이크로벤치(N=1e6)와 다른 척도.
@@ -38,21 +38,23 @@ const WARMUP = 1;
 const RUNS = 4; // 수동 Run
 const SWEEP_RUNS = 3; // 전수 sweep(런타임 관리)
 
-// 헤드리스 전수 측정 매트릭스: 구현된 3 JS 엔진 × 셀(simple/complex)
-// × 높이(fixed/dynamic) × 시나리오. count=2000. AUTO_MATRIX 면
-// 마운트 시 자동 실행 후 [Matrix] 로그. Phase C-3 전수 러너 토대.
+// 변별력 매트릭스: 시뮬 Release n=2000 은 너무 쉬워 3 JS 엔진이
+// 동률로 나옴(테스트 무력). 큰 N(20k) + 무거운 셀(complex) +
+// fixed/dynamic + fling/fastJump 로 엔진 차이가 드러나는 지점을 찾음.
 const AUTO_MATRIX = true;
-// 검증 프로브: 각 엔진이 정말 스크롤되는지(maxY) 빠르게 확인.
+const BIG_N = 20000;
 const SWEEP: BenchConfig[] = [];
 for (const engine of ['flatlist', 'legend', 'flashlist'] as EngineId[]) {
-  for (const cell of ['simple', 'complex'] as CellType[]) {
-    SWEEP.push({
-      engine,
-      cell,
-      height: 'fixed',
-      count: 2000,
-      scenario: 'fling',
-    });
+  for (const height of ['fixed', 'dynamic'] as HeightMode[]) {
+    for (const scenario of ['fling', 'fastJump'] as ScrollScenario[]) {
+      SWEEP.push({
+        engine,
+        cell: 'heavy',
+        height,
+        count: BIG_N,
+        scenario,
+      });
+    }
   }
 }
 
