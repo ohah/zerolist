@@ -2,6 +2,7 @@ import type { ForwardRefExoticComponent, RefAttributes } from 'react';
 import { FlatListEngine } from './flatlist';
 import { LegendEngine } from './legend';
 import { FlashListEngine } from './flashlist';
+import { NativeFabricEngine } from './native';
 import type { EngineId, ListEngineProps } from '../types';
 import type { Scrollable } from '../flingDriver';
 
@@ -9,20 +10,21 @@ type EngineComponent = ForwardRefExoticComponent<
   ListEngineProps & RefAttributes<Scrollable>
 >;
 
-// native/zerolist 는 네이티브 빌드 필요 — Phase B 에서 합류.
+// zerolist③ 는 Phase B-2. native = RN 내 Fabric 임베드 네이티브 리스트.
 export const ENGINES: Record<EngineId, EngineComponent | null> = {
   flatlist: FlatListEngine,
   legend: LegendEngine,
   flashlist: FlashListEngine,
-  native: null,
+  native: NativeFabricEngine,
   zerolist: null,
 };
 
+// 라벨은 Maestro tapOn ^...$ 정규식에 안전하게(공백/괄호 없음).
 export const ENGINE_LABEL: Record<EngineId, string> = {
   flatlist: 'FlatList',
   legend: 'Legend List',
   flashlist: 'FlashList',
-  native: 'Native (RN내 Fabric)',
+  native: 'FabricNative',
   zerolist: 'ZeroList ③',
 };
 

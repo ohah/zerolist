@@ -12,8 +12,11 @@
 #
 # ⚠ 한계(불변): 에뮬레이터는 절대치 부풀림 → **상대 순위만 유효**
 #   (동일 환경·동일 제스처·OS-truth). p90+ 는 2000ms 히스토그램
-#   상한에 가려질 수 있어 jank%/p50 이 신뢰 지표. 절대치/체감은
-#   실기기 필요. Native/ZeroList③ 는 미포함(Phase B).
+#   상한에 가려질 수 있어 jank%/p50 이 신뢰 지표. 절대치/체감은 실기기.
+# ⚠ gfxinfo 는 프로세스 단위: harness 안에서 도는 엔진(JS·FabricNative)
+#   끼리는 동일 chrome 이라 공정하나, 맨 'Native'(Activity, chrome 없음)
+#   과의 격차는 Fabric/RN런타임/harness chrome 이 섞임 — 순수 아키텍처
+#   격차 아닌 방향성 바닥으로만. 깨끗한 Fabric-mount 분리는 태스크 #18.
 #
 # 사용: ENGINES="FlatList,Legend List,FlashList" RUNS=3 CELL=complex \
 #       COUNT=20000 ./discriminate.sh
@@ -42,7 +45,9 @@ for E in "${ENG[@]}"; do
   for r in $(seq 1 "$RUNS"); do
     if [ "$E" = "Native" ]; then
       # 순수 네이티브 베이스라인: RN harness 대신 전용 Activity 직접 실행.
-      "$ADB" shell am start -n "$PKG/.NativeBenchActivity" >/dev/null 2>&1 \
+      # count 파리티: harness 엔진과 동일 N 강제(intent extra).
+      "$ADB" shell am start -n "$PKG/.NativeBenchActivity" \
+        --ei count "$COUNT" >/dev/null 2>&1 \
         || { echo "  run$r NATIVE_FAILED"; continue; }
       sleep 3
       # JS 경로의 visible 게이트와 대칭 — 렌더 전 측정 방지.
