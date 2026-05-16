@@ -27,5 +27,10 @@
       <activity
         android:name=".NativeBenchActivity"
         android:exported="true" />
+      <!-- chrome-free 측정 루트 (단일 엔진만, intent extra 구동) -->
+      <activity
+        android:name=".SoloActivity"
+        android:exported="true"
+        android:theme="@style/AppTheme" />
     </application>
 </manifest>

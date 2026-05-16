@@ -1,8 +1,11 @@
 import { AppRegistry } from 'react-native';
 import App from './src/App';
+import Solo from './src/Solo';
 import { name as appName } from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
+// chrome-free 측정 루트(SoloActivity 가 띄움).
+AppRegistry.registerComponent('ZLSolo', () => Solo);
 
 if (typeof document !== 'undefined') {
   AppRegistry.runApplication(appName, {
