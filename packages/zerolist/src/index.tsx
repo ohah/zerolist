@@ -11,3 +11,6 @@ import * as jsRef from './reference';
 export { jsRef };
 // FlatList 동일 시맨틱 가상화 엔진(ZeroList 컴포넌트 기반).
 export * from './virtualizer';
+// FlatList drop-in 컴포넌트.
+export { ZeroList } from './list';
+export type { ZeroListProps, ZeroListHandle } from './list';
