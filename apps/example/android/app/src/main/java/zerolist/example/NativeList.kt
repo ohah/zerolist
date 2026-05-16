@@ -190,5 +190,8 @@ class ZlPackage : com.facebook.react.ReactPackage {
     emptyList<com.facebook.react.bridge.NativeModule>()
 
   override fun createViewManagers(ctx: ReactApplicationContext) =
-    listOf(ZlNativeListManager())
+    listOf<com.facebook.react.uimanager.ViewManager<*, *>>(
+      ZlNativeListManager(),
+      ZlZigListManager(),
+    )
 }

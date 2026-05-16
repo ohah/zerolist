@@ -27,6 +27,7 @@ const ENGINE_IDS: EngineId[] = [
   'legend',
   'flashlist',
   'native',
+  'nativezig',
   'zerolist',
 ];
 const CELLS: CellType[] = ['simple', 'image', 'complex', 'heavy'];

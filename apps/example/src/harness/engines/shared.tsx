@@ -1,5 +1,15 @@
-import { useImperativeHandle, type Ref, type RefObject } from 'react';
-import type { NativeScrollEvent, NativeSyntheticEvent } from 'react-native';
+import {
+  forwardRef,
+  useImperativeHandle,
+  type ComponentType,
+  type Ref,
+  type RefObject,
+} from 'react';
+import {
+  StyleSheet,
+  type NativeScrollEvent,
+  type NativeSyntheticEvent,
+} from 'react-native';
 import { Cell } from '../cells';
 import type { Item, ListEngineProps } from '../types';
 import type { Scrollable } from '../flingDriver';
@@ -42,3 +52,17 @@ export function scrollYHandler(onScrollY?: (y: number) => void) {
 
 // 진행 추적 JS 부하를 엔진 간 동일하게(패리티).
 export const SCROLL_THROTTLE = 16;
+
+const fill = StyleSheet.create({ s: { flex: 1 } }).s;
+
+// 네이티브 호스트 엔진(native/nativezig) 공용: 네이티브가 셀을 직접
+// 렌더하므로 JS scrollToOffset 은 no-op. props 매핑만 다름.
+export function makeNativeHostEngine<P>(
+  Comp: ComponentType<P & { style?: unknown }>,
+  mapProps: (p: ListEngineProps) => P
+) {
+  return forwardRef<Scrollable, ListEngineProps>((p, ref) => {
+    useImperativeHandle(ref, () => ({ scrollToOffset: () => {} }));
+    return <Comp {...mapProps(p)} style={fill} />;
+  });
+}

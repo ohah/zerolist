@@ -3,6 +3,7 @@ import { FlatListEngine } from './flatlist';
 import { LegendEngine } from './legend';
 import { FlashListEngine } from './flashlist';
 import { NativeFabricEngine } from './native';
+import { NativeZigEngine } from './nativezig';
 import { ZeroListEngine } from './zerolist';
 import type { EngineId, ListEngineProps } from '../types';
 import type { Scrollable } from '../flingDriver';
@@ -13,11 +14,13 @@ type EngineComponent = ForwardRefExoticComponent<
 
 // zerolist = FlatList drop-in(@ohah/zerolist, virtualizer 엔진).
 // native = RN 내 Fabric 임베드 네이티브 리스트.
+// nativezig = ③ PoC: 가시범위를 네이티브 스레드 Zig(JNI)로 계산.
 export const ENGINES: Record<EngineId, EngineComponent | null> = {
   flatlist: FlatListEngine,
   legend: LegendEngine,
   flashlist: FlashListEngine,
   native: NativeFabricEngine,
+  nativezig: NativeZigEngine,
   zerolist: ZeroListEngine,
 };
 
@@ -27,6 +30,7 @@ export const ENGINE_LABEL: Record<EngineId, string> = {
   legend: 'Legend List',
   flashlist: 'FlashList',
   native: 'FabricNative',
+  nativezig: 'NativeZig',
   zerolist: 'ZeroList',
 };
 
@@ -36,5 +40,6 @@ export const ENGINE_HINT: Record<EngineId, string> = {
   legend: 'estimatedSize',
   flashlist: 'none(auto)',
   native: 'offsets',
+  nativezig: 'zig-offsets',
   zerolist: 'offsets',
 };

@@ -9,6 +9,7 @@ export type EngineId =
   | 'legend'
   | 'flashlist'
   | 'native'
+  | 'nativezig'
   | 'zerolist';
 
 export interface BenchConfig {
