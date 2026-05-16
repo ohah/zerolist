@@ -39,11 +39,22 @@ export interface FrameStats {
   durationMs: number;
 }
 
-/** 모든 엔진 어댑터가 구현하는 공통 인터페이스. */
+/** 모든 엔진 어댑터가 구현하는 공통 인터페이스.
+ * 레이아웃 힌트 패리티: fixed/variable 에선 모든 엔진이 동일한
+ * offsets/fixedHeight 를 받아 각 엔진의 최강 등가 API 에 연결한다
+ * (한 엔진만 getItemLayout 받는 불공정 방지). dynamic 에선 둘 다 null. */
 export interface ListEngineProps {
   items: Item[];
   cell: CellType;
   height: HeightMode;
+  /** 누적 오프셋(길이 n+1). dynamic 이면 null. */
+  offsets: Float64Array | null;
+  /** 고정 높이값. fixed 가 아니면 null. */
+  fixedHeight: number | null;
   /** dynamic 모드에서 셀이 측정 높이를 보고. */
   onMeasure?: (id: number, h: number) => void;
+  /** 실제 스크롤 검증용 — 현재 contentOffset.y 보고. */
+  onScrollY?: (y: number) => void;
+  /** 렌더 검증용 — 셀이 실제 렌더될 때 id 보고(렌더 0이면 측정 무효). */
+  onRender?: (id: number) => void;
 }

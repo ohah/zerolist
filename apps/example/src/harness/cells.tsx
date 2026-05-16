@@ -22,9 +22,11 @@ interface Props {
   cell: CellType;
   height: HeightMode;
   onMeasure?: (id: number, h: number) => void;
+  onRender?: (id: number) => void;
 }
 
-function CellInner({ item, cell, height, onMeasure }: Props) {
+function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
+  onRender?.(item.id); // 실제 렌더 검증(측정 유효성)
   // fixed/variable 는 사전 확정 높이를 강제, dynamic 은 콘텐츠가 결정.
   const sized = height !== 'dynamic';
   const onLayout =

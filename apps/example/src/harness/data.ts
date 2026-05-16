@@ -15,12 +15,24 @@ function text(seed: number, n: number): string {
 
 const FIXED_H = 88;
 
+function heightAt(i: number, height: HeightMode): number {
+  return height === 'fixed' ? FIXED_H : 64 + ((i * 53) % 140);
+}
+
+/** 객체 생성 없이 공칭 콘텐츠 높이 합(순회 범위 계산용). */
+export function nominalExtent(count: number, height: HeightMode): number {
+  if (height === 'fixed') return FIXED_H * count;
+  let s = 0;
+  for (let i = 0; i < count; i++) s += heightAt(i, height);
+  return s;
+}
+
 export function makeItems(count: number, height: HeightMode): Item[] {
   const items: Item[] = [];
   for (let i = 0; i < count; i++) {
     // body 길이를 시드로 흔들어 dynamic 모드에서 실제 높이 편차를 만든다.
     const bodyLen = 3 + ((i * 37) % 18);
-    const h = height === 'fixed' ? FIXED_H : 64 + ((i * 53) % 140);
+    const h = heightAt(i, height);
     items.push({
       id: i,
       title: `#${i} ${text(i, 3)}`,

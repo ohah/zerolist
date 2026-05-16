@@ -1,42 +1,45 @@
 import type { ScrollScenario } from './types';
-import { nextFrame } from './util';
+import { nextFrame, now } from './util';
 
 export interface Scrollable {
   scrollToOffset: (offset: number, animated?: boolean) => void;
 }
 
-// 결정론적 "스크립트 오프셋 순회" — 프레임마다 오프셋을 강제한다.
-// 실제 네이티브 모멘텀/플링 물리가 아니므로 모멘텀 성능이라 부르면
-// 안 됨(엔진에 동일 입력을 주기 위한 합성 입력). 라벨도 그렇게 표기.
+// 네이티브 애니메이션 스크롤로 구동(animated:true) — 리사이클러
+// 엔진이 윈도우를 실제 렌더하게 한다(매 프레임 순간이동은 백지
+// 렌더 → 측정 무효였음, 스크린샷 입증). 단 물리 플링은 아니므로
+// "animated traversal" 로 표기.
+//
+// 핵심: 각 패스를 "도착까지"가 아니라 **고정 시간** 동안 샘플한다.
+// 도착/정착 휴리스틱은 느린·jank 엔진의 스크롤 이벤트가 늦게 와서
+// 조기 종료 → 그 엔진만 적게 측정되는 불공정을 유발했다. 고정
+// 시간이면 모든 엔진이 동일 창에서 동일 프레임 수로 측정된다.
+
+const PASS_MS = 1500;
+const JUMP_MS = 500;
+
+async function animateFor(
+  target: Scrollable,
+  to: number,
+  ms: number
+): Promise<void> {
+  target.scrollToOffset(to, true);
+  const end = now() + ms;
+  while (now() < end) await nextFrame();
+}
+
 export async function drive(
   target: Scrollable,
   scenario: ScrollScenario,
-  contentHeight: number,
-  viewport: number
+  maxOffset: number
 ): Promise<void> {
-  const maxOffset = Math.max(0, contentHeight - viewport);
-
   if (scenario === 'fastJump') {
-    const stops = [0.0, 0.85, 0.15, 0.97, 0.4, 0.75, 0.05, 1.0];
-    for (const s of stops) {
-      target.scrollToOffset(s * maxOffset, false);
-      for (let f = 0; f < 8; f++) await nextFrame();
+    for (const s of [0.0, 0.85, 0.15, 0.97, 0.4, 0.75, 0.05, 1.0]) {
+      await animateFor(target, s * maxOffset, JUMP_MS);
     }
     return;
   }
-
-  // fling/jsBlocked: cubic ease-out 로 다운→업 1회씩 (합성 감속곡선).
-  const passes: Array<[number, number]> = [
-    [0, maxOffset],
-    [maxOffset, 0],
-  ];
-  for (const [from, to] of passes) {
-    const FRAMES = 90; // ≈1.5s @60fps
-    for (let f = 0; f <= FRAMES; f++) {
-      const t = f / FRAMES;
-      const eased = 1 - Math.pow(1 - t, 3);
-      target.scrollToOffset(from + (to - from) * eased, false);
-      await nextFrame();
-    }
-  }
+  // fling/jsBlocked: 끝까지 내렸다가 다시 위로(고정 시간 1왕복).
+  await animateFor(target, maxOffset, PASS_MS);
+  await animateFor(target, 0, PASS_MS);
 }
