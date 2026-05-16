@@ -10,7 +10,6 @@ import com.facebook.react.uimanager.ViewManagerDelegate
 import com.facebook.react.viewmanagers.ZlZigListManagerDelegate
 import com.facebook.react.viewmanagers.ZlZigListManagerInterface
 import java.nio.ByteBuffer
-import java.nio.ByteOrder
 
 // ZeroList③ 아키텍처 PoC: 가시범위 결정을 네이티브 스크롤 스레드에서
 // Zig(JNI, zero-copy direct ByteBuffer)로 계산 — 프레임당 JS 0. 셀은
@@ -69,16 +68,9 @@ class ZlZigListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     if (n <= 0) return
     if (offsets != null && rvCount() == n && builtRowPx == rowPx) return
 
-    // heights(f32) → offsets(f64, n+1) : JNI→Zig zero-copy 1회.
     // buildNativeList 셀은 dp(88) 고정 → Zig 오프셋도 동일 px 로
     // (scrollY=computeVerticalScrollOffset 은 px). dp→px 변환 필수.
-    val rowPxF = dpF(resources.displayMetrics, rowPx.toFloat())
-    val h = ByteBuffer.allocateDirect(n * 4).order(ByteOrder.nativeOrder())
-    val hf = h.asFloatBuffer()
-    for (i in 0 until n) hf.put(i, rowPxF)
-    val o = ByteBuffer.allocateDirect((n + 1) * 8).order(ByteOrder.nativeOrder())
-    ZlEngine.buildOffsets(h, n, o)
-    offsets = o
+    offsets = buildUniformOffsets(n, dpF(resources.displayMetrics, rowPx.toFloat()))
     builtRowPx = rowPx
     checks = 0
 
