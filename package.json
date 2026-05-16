@@ -1,0 +1,72 @@
+{
+  "name": "zerolist-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Monorepo for @ohah/zerolist — zero-copy SIMD-accelerated React Native list (Zig engine)",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "zig:build": "cd packages/zerolist/zig && zig build",
+    "zig:apple": "cd packages/zerolist/zig && ./build-apple.sh",
+    "build:lib": "cd packages/zerolist && bob build",
+    "codegen": "cd packages/zerolist && bob build --target codegen",
+    "example:start": "cd apps/example && bun run start",
+    "example:ios": "cd apps/example && bun run ios",
+    "example:android": "cd apps/example && bun run android",
+    "typecheck": "tsc -p packages/zerolist/tsconfig.build.json",
+    "lint": "oxlint",
+    "format": "oxfmt --write",
+    "format:check": "oxfmt --check",
+    "test": "jest",
+    "clean": "del-cli packages/zerolist/lib packages/zerolist/android/build packages/zerolist/ios/build apps/example/android/build apps/example/android/app/build apps/example/ios/build"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohah/zerolist.git"
+  },
+  "author": "ohah <bookyoon173@gmail.com> (https://github.com/ohah)",
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^20.5.0",
+    "@jest/globals": "^30.0.0",
+    "@react-native-community/cli": "20.1.0",
+    "@react-native/babel-preset": "0.85.0",
+    "@react-native/jest-preset": "0.85.0",
+    "@release-it/conventional-changelog": "^10.0.6",
+    "@types/react": "^19.2.0",
+    "commitlint": "^20.5.0",
+    "del-cli": "^7.0.0",
+    "jest": "^30.3.0",
+    "lefthook": "^2.1.4",
+    "oxfmt": "0.50.0",
+    "oxlint": "1.65.0",
+    "react": "19.2.3",
+    "react-native": "0.85.0",
+    "react-native-builder-bob": "^0.41.0",
+    "react-native-web": "~0.21.1",
+    "release-it": "^19.2.4",
+    "typescript": "^6.0.2"
+  },
+  "jest": {
+    "preset": "@react-native/jest-preset",
+    "roots": [
+      "<rootDir>/packages/zerolist"
+    ],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/apps/example/node_modules",
+      "<rootDir>/packages/zerolist/lib/"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

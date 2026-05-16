@@ -1,0 +1,10 @@
+# ZeroList toolchain — Android/iOS 전용 (Windows 미고려)
+[tools]
+zig = "0.16.0" # 제로 카피 SIMD 엔진
+bun = "1.3.11" # JS 패키지 매니저 / 런타임
+java = "temurin-17" # RN Android (Gradle) 빌드용
+ruby = "3.4.9" # CocoaPods (iOS) 용
+
+[env]
+# RN Android 빌드 시 mise가 관리하는 JDK 사용
+JAVA_HOME = "{{ env.HOME }}/.local/share/mise/installs/java/temurin-17/Contents/Home"
