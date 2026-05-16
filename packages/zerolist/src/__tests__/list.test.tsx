@@ -141,6 +141,61 @@ describe('ZeroList — FlatList drop-in 동작', () => {
     expect(screen.getByTestId('cell-5')).toBeTruthy();
   });
 
+  it('onScrollToIndexFailed: 범위 밖 index 면 발화', () => {
+    const fail = jest.fn();
+    const ref = { current: null as null | import('../list').ZeroListHandle };
+    render(
+      <ZeroList
+        testID="zl"
+        ref={ref as never}
+        data={make(10)}
+        renderItem={renderRow}
+        estimatedItemSize={50}
+        onScrollToIndexFailed={fail}
+      />
+    );
+    ref.current!.scrollToIndex({ index: 999 });
+    expect(fail).toHaveBeenCalledTimes(1);
+    expect(fail.mock.calls[0]![0]).toMatchObject({ index: 999 });
+  });
+
+  it('ScrollView prop 패스스루: onMomentumScrollEnd 전달', () => {
+    const onMom = jest.fn();
+    render(
+      <ZeroList
+        testID="zl"
+        data={make(20)}
+        renderItem={renderRow}
+        estimatedItemSize={50}
+        onMomentumScrollEnd={onMom as never}
+      />
+    );
+    fireEvent(screen.getByTestId('zl'), 'momentumScrollEnd', {
+      nativeEvent: {
+        contentOffset: { x: 0, y: 0 },
+        contentSize: { width: 0, height: 0 },
+        layoutMeasurement: { width: 0, height: 0 },
+      },
+    });
+    expect(onMom).toHaveBeenCalled();
+  });
+
+  it('scrollToIndex viewPosition 지정해도 throw 안 함', () => {
+    const ref = { current: null as null | import('../list').ZeroListHandle };
+    render(
+      <ZeroList
+        testID="zl"
+        ref={ref as never}
+        data={make(50)}
+        renderItem={renderRow}
+        estimatedItemSize={100}
+      />
+    );
+    expect(() =>
+      ref.current!.scrollToIndex({ index: 25, viewPosition: 0.5 })
+    ).not.toThrow();
+  });
+
   it('imperative ref: scrollToOffset/Index/End 호출', () => {
     const ref = { current: null as null | import('../list').ZeroListHandle };
     render(

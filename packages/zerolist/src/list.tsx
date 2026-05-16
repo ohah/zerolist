@@ -21,6 +21,7 @@ import type {
   LayoutChangeEvent,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  ScrollViewProps,
   StyleProp,
   ViewStyle,
 } from 'react-native';
@@ -54,7 +55,9 @@ type Renderable =
   | null
   | undefined;
 
-export type ZeroListProps<ItemT> = {
+// FlatList 처럼 명시 안 한 ScrollView prop(showsVerticalScrollIndicator,
+// onMomentumScrollEnd, keyboardShouldPersistTaps 등)은 그대로 패스스루.
+type ZeroListOwnProps<ItemT> = {
   data: ReadonlyArray<ItemT> | null | undefined;
   renderItem: (info: RenderItemInfo<ItemT>) => React.ReactElement | null;
   keyExtractor?: (item: ItemT, index: number) => string;
@@ -84,14 +87,19 @@ export type ZeroListProps<ItemT> = {
   initialScrollIndex?: number | null;
   onScroll?: (e: NativeSyntheticEvent<NativeScrollEvent>) => void;
   scrollEventThrottle?: number;
+  onScrollToIndexFailed?: (info: {
+    index: number;
+    highestMeasuredFrameIndex: number;
+    averageItemLength: number;
+  }) => void;
   extraData?: unknown;
   /** ZeroList 확장: 측정 전 추정 행 크기(FlatList 는 내부 추정). */
   estimatedItemSize?: number;
-  style?: StyleProp<ViewStyle>;
-  contentContainerStyle?: StyleProp<ViewStyle>;
   columnWrapperStyle?: StyleProp<ViewStyle>;
-  testID?: string;
 };
+
+export type ZeroListProps<ItemT> = ZeroListOwnProps<ItemT> &
+  Omit<ScrollViewProps, 'onScroll' | 'horizontal' | 'ref'>;
 
 export type ZeroListHandle<ItemT = unknown> = {
   scrollToOffset: (p: { offset: number; animated?: boolean }) => void;
@@ -99,6 +107,7 @@ export type ZeroListHandle<ItemT = unknown> = {
     index: number;
     animated?: boolean;
     viewOffset?: number;
+    viewPosition?: number;
   }) => void;
   scrollToItem: (p: { item: ItemT; animated?: boolean }) => void;
   scrollToEnd: (p?: { animated?: boolean }) => void;
@@ -155,12 +164,20 @@ function ZeroListInner<ItemT>(
     initialScrollIndex,
     onScroll,
     scrollEventThrottle = DEFAULTS.scrollEventThrottle,
+    onScrollToIndexFailed,
     estimatedItemSize = DEFAULTS.estimatedItemSize,
+    columnWrapperStyle,
+    extraData,
     style,
     contentContainerStyle,
-    columnWrapperStyle,
     testID,
+    // 나머지는 ScrollView 로 패스스루(FlatList 동일).
+    ...rest
   } = props;
+
+  // FlatList 패리티: 함수 컴포넌트라 prop(extraData 포함) 변경이 곧
+  // 리렌더 → 선언만으로 충분(class PureComponent 의 bailout 회피용 prop).
+  void extraData;
 
   const items = (data ?? EMPTY) as ReadonlyArray<ItemT>;
   const count = items.length;
@@ -328,8 +345,29 @@ function ZeroListInner<ItemT>(
       scrollRef.current?.scrollTo(axisPoint(offset, animated));
     return {
       scrollToOffset: ({ offset, animated }) => scrollTo(offset, animated),
-      scrollToIndex: ({ index, animated, viewOffset = 0 }) =>
-        scrollTo(offsetForIndex(index) - viewOffset, animated),
+      scrollToIndex: ({
+        index,
+        animated,
+        viewOffset = 0,
+        viewPosition = 0,
+      }) => {
+        if (index < 0 || index >= count) {
+          onScrollToIndexFailed?.({
+            index,
+            highestMeasuredFrameIndex: rowCount - 1,
+            averageItemLength: contentLength / (rowCount || 1),
+          });
+          return;
+        }
+        const row = rows ? Math.floor(index / cols) : index;
+        const itemLen =
+          (offsets[row + 1] ?? offsets[row] ?? 0) - (offsets[row] ?? 0);
+        const offset =
+          offsetForIndex(index) -
+          viewOffset -
+          viewPosition * (viewport - itemLen);
+        scrollTo(offset, animated);
+      },
       scrollToItem: ({ item, animated }) => {
         const i = items.indexOf(item);
         if (i >= 0) scrollTo(offsetForIndex(i), animated);
@@ -340,7 +378,19 @@ function ZeroListInner<ItemT>(
       recordInteraction: () => {},
       getScrollableNode: () => scrollRef.current,
     };
-  }, [axisPoint, offsetForIndex, items]);
+  }, [
+    axisPoint,
+    offsetForIndex,
+    items,
+    count,
+    rowCount,
+    contentLength,
+    rows,
+    cols,
+    offsets,
+    viewport,
+    onScrollToIndexFailed,
+  ]);
 
   // 측정 변경을 rAF 1회로 코얼레싱(초기 수렴 중 buildOffsets 다회 방지).
   const scheduleMeasureFlush = useCallback(() => {
@@ -430,6 +480,7 @@ function ZeroListInner<ItemT>(
   // 반전을 onEndReached/viewability 가 보정하지 않음 — 미구현.
   return (
     <ScrollView
+      {...rest}
       ref={scrollRef}
       testID={testID}
       style={inverted ? [style, INVERT] : style}
@@ -443,7 +494,7 @@ function ZeroListInner<ItemT>(
           ? axisPoint(offsetForIndex(initialScrollIndex))
           : undefined
       }
-      refreshControl={refreshControl}
+      refreshControl={refreshControl ?? rest.refreshControl}
     >
       <View style={inverted ? INVERT : undefined}>
         {ListHeaderComponent ? (
