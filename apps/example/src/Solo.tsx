@@ -1,8 +1,9 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { jsRef } from '@ohah/zerolist';
 import { ENGINES } from './harness/engines';
 import { makeItems } from './harness/data';
+import { inst } from './harness/instrument';
 import type { CellType, EngineId } from './harness/types';
 
 // chrome-free 측정 루트 — harness UI(헤더/Seg/Run) 없이 선택된 엔진만
@@ -29,6 +30,9 @@ export default function Solo(props: {
   }, [items]);
   const fixedHeight = items[0]?.height ?? null;
 
+  // JS-0 정량 계측: 결정적 스크롤에서 renders/cbs 누적을 주기 로깅.
+  useEffect(() => inst.start(engineId), [engineId]);
+
   if (!Engine) return <View style={s.fill} />;
   return (
     <View style={s.fill}>
@@ -38,6 +42,8 @@ export default function Solo(props: {
         height="fixed"
         offsets={offsets}
         fixedHeight={fixedHeight}
+        onRender={inst.render}
+        onScrollY={inst.cb}
       />
     </View>
   );

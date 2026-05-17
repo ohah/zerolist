@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import ZlPoolList from '../../../specs/ZlPoolListNativeComponent';
 import type { ListEngineProps } from '../types';
 import type { Scrollable } from '../flingDriver';
+import { inst } from '../instrument';
 import { renderCell, useNoopScrollable } from './shared';
 
 // ZeroList③ N3: POOL 개 슬롯(JSX, position:absolute)만 마운트. 네이티브
@@ -26,9 +27,11 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
         // 인라인 타입: codegen 이벤트 타입을 tsc 가 해석 못 함(앱-local
         // spec). spec 의 DirectEventHandler 가 단일 출처이고 여기선 그
         // 형태만 손으로 맞춘다(start: Double↔number).
-        onRecycle={(e: { nativeEvent: { start: number } }) =>
-          setStart(e.nativeEvent.start)
-        }
+        onRecycle={(e: { nativeEvent: { start: number } }) => {
+          // JS-0 계측: ③ 의 JS 콜백은 스크롤마다가 아니라 경계 횡단시만.
+          inst.cb();
+          setStart(e.nativeEvent.start);
+        }}
         style={styles.fill}
       >
         {Array.from({ length: Math.min(POOL, data.length) }, (_, s) => {
