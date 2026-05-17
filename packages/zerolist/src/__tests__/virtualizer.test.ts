@@ -10,6 +10,7 @@ import {
   diffViewable,
   isEndReached,
   visibleRange,
+  ringIndex,
   type ViewToken,
 } from '../virtualizer';
 
@@ -325,6 +326,37 @@ describe('diffViewable (onViewableItemsChanged 페이로드)', () => {
   });
   it('같은 키 집합이면 길이 같아도 null(early-out)', () => {
     expect(diffViewable(toMap([mk(3), mk(4)]), [mk(4), mk(3)])).toBeNull();
+  });
+});
+
+describe('ringIndex (③ 링버퍼 슬롯↔데이터 — 교차 계약)', () => {
+  const P = 14;
+  const set = (W: number) =>
+    Array.from({ length: P }, (_, s) => ringIndex(s, W, P)).sort(
+      (a, b) => a - b
+    );
+
+  it('윈도우 [W,W+P) 를 정확히 한 번씩 덮음', () => {
+    for (const W of [0, 1, 7, 100, 1986]) {
+      expect(set(W)).toEqual(Array.from({ length: P }, (_, i) => W + i));
+    }
+  });
+  it('W→W+1 시 정확히 1 슬롯만 변경', () => {
+    for (const W of [0, 5, 137]) {
+      let changed = 0;
+      for (let s = 0; s < P; s++)
+        if (ringIndex(s, W, P) !== ringIndex(s, W + 1, P)) changed++;
+      expect(changed).toBe(1);
+    }
+  });
+  it('W=0 이면 슬롯=데이터 인덱스', () => {
+    for (let s = 0; s < P; s++) expect(ringIndex(s, 0, P)).toBe(s);
+  });
+  it('W→W+1: 빠져나간 행을 보던 슬롯이 새 바닥행을 받음', () => {
+    // W=0→1: 슬롯0(행0 보던)→행14(=W+P-1+1 의 새 바닥)
+    expect(ringIndex(0, 0, P)).toBe(0);
+    expect(ringIndex(0, 1, P)).toBe(P); // 14
+    expect(ringIndex(1, 1, P)).toBe(1); // 나머지 불변
   });
 });
 

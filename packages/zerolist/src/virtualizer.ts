@@ -20,6 +20,28 @@ export function defaultKeyExtractor(item: unknown, index: number): string {
   return String(index);
 }
 
+/**
+ * ③ 링버퍼 리사이클러의 슬롯→데이터인덱스 매핑(미래 구현용 계약 spec).
+ * 윈도우 [windowStart, windowStart+pool) 를 pool 개 고정 슬롯에
+ * 분배하되 windowStart 가 1 변할 때 **정확히 1 슬롯만** 바뀌게 한다.
+ *
+ * 검증된 사실(#24, strategy 메모리): 이 ring 으로 JS renderItem 을
+ * 112→9 로 줄일 수 있음(thesis 지지). 그러나 **네이티브와 JS 가 각자
+ * windowStart 로 ring 을 파생하는 "순수함수 단축"은 desync 시 wrapped
+ * offset 으로 화면이 영구 깨짐**(에뮬 스크린샷 확인, 폐기). 올바른
+ * 구현은 네이티브가 slot↔dataIndex 의 단일 권위가 되어 per-slot
+ * binding 을 이벤트로 내려주고 JS 는 그것을 적용만 해야 한다
+ * (start-only/순수ring 둘 다 불충분). 이 함수는 그 알고리즘의
+ * 단일 소스이자 테스트된 계약 — 통합은 아직 안 됨(미화 금지).
+ */
+export function ringIndex(
+  slot: number,
+  windowStart: number,
+  pool: number
+): number {
+  return windowStart + ((((slot - windowStart) % pool) + pool) % pool);
+}
+
 /** numColumns 적용: data 를 길이 cols 의 행으로 그룹화한 인덱스 행렬. */
 export function groupIntoRows(count: number, numColumns: number): number[][] {
   const cols = Math.max(1, Math.floor(numColumns));
