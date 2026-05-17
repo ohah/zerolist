@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import {
   View,
   Text,
@@ -7,6 +7,7 @@ import {
   type LayoutChangeEvent,
 } from 'react-native';
 import type { Item, CellType, HeightMode } from './types';
+import { inst } from './instrument';
 
 // 결정론적 데이터-URI 이미지(네트워크 비결정성 제거). 실제 대용량
 // 사진 디코드 비용은 별도 축 — 여기선 Image 파이프라인/레이아웃 비용.
@@ -60,6 +61,12 @@ function HeavyCell({ item }: { item: Item }) {
 
 function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
   onRender?.(item.id); // 실제 렌더 검증(측정 유효성)
+  // 카운트 지표: 셀 인스턴스 mount/unmount churn(시간 아님). ③ 고정
+  // 풀 = 초기 후 ≈0, FlatList = 스크롤 따라 생성/파괴.
+  useEffect(() => {
+    inst.mount();
+    return () => inst.unmount();
+  }, []);
   // fixed/variable 는 사전 확정 높이를 강제, dynamic 은 콘텐츠가 결정.
   const sized = height !== 'dynamic';
   const onLayout =
