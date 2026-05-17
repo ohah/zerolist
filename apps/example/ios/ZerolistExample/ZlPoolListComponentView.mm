@@ -1,13 +1,14 @@
-// ZeroList③ iOS: Android ZlPoolList 의 iOS Fabric 포팅.
-// JS 는 POOL 개 JSX 슬롯(children)만 마운트. UIScrollView 가 네이티브
-// 스크롤/모멘텀을 담당(프레임당 JS 0). scrollViewDidScroll 에서 Zig
-// (C ABI, libzerolist_engine.a 직접 링크 — JNI 불요)로 windowStart
-// 산출 → 슬롯 frame 을 content 좌표로 재배치. windowStart 가 바뀔
-// 때만 onRecycle{start} (codegen EventEmitter) → JS 가 슬롯 내용 교체.
-// 한계: 위치 네이티브 즉시 / 내용 JS 비동기 → 횡단 직후 1프레임 skew.
+// ZeroList③ iOS #25: Android ZlPoolList 의 iOS Fabric 포팅. 네이티브가
+// slot↔dataIndex(ring) 의 단일 권위. UIScrollView 가 스크롤/모멘텀
+// (프레임당 JS 0). windowStart 가 바뀔 때만 슬롯 frame 재배치 +
+// binding csv 하달(onRecycle{binds}, codegen EventEmitter) → JS 는
+// 그대로 적용(자체 ring 파생 X = #24 desync 제거). 한계: 위치는 항상
+// 정합하나 내용은 JS state ~1 이벤트지연 → 빠른 플링 중 잠깐 stale
+// (at-rest 정합 — #24 영구겹침 해소).
 #import <React/RCTViewComponentView.h>
 #import <React/RCTComponentViewFactory.h>
 #import <UIKit/UIKit.h>
+#import <string>
 #import <vector>
 
 #import <react/renderer/components/ZlExampleSpec/ComponentDescriptors.h>
@@ -22,9 +23,6 @@ using namespace facebook::react;
 @interface ZlPoolListComponentView : RCTViewComponentView <UIScrollViewDelegate>
 @end
 
-// 윈도우 미설정 sentinel(다음 layoutSlots 강제).
-static const NSInteger kNoStart = -1;
-
 @implementation ZlPoolListComponentView {
   UIScrollView *_scroll;
   // 배치의 단일 진실원. _scroll 서브뷰 인덱스(인디케이터 등 포함)와
@@ -33,6 +31,8 @@ static const NSInteger kNoStart = -1;
   std::vector<double> _offsets; // Zig 가 채운 누적 오프셋(count+1)
   NSInteger _count;
   CGFloat _rowH;
+  // windowStart 불변 프레임은 frame 재배치·csv·emit 전부 스킵
+  // (슬롯은 content 고정좌표라 UIScrollView 가 스크롤 처리).
   NSInteger _lastStart;
 }
 
@@ -53,7 +53,7 @@ static const NSInteger kNoStart = -1;
 - (instancetype)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:frame]) {
     _slots = [NSMutableArray new];
-    _lastStart = kNoStart;
+    _lastStart = NSIntegerMin;
     _scroll = [[UIScrollView alloc] initWithFrame:frame];
     _scroll.delegate = self;
     _scroll.showsVerticalScrollIndicator = YES;
@@ -70,32 +70,39 @@ static const NSInteger kNoStart = -1;
   zl_build_offsets(heights.data(), (size_t)_count, _offsets.data());
   _scroll.contentSize =
       CGSizeMake(self.bounds.size.width, _offsets[(size_t)_count]);
-  _lastStart = kNoStart;
+  _lastStart = NSIntegerMin;
   [self layoutSlots];
 }
 
-// 슬롯 s 를 content 좌표 offsets[windowStart+s] 에 배치. UIScrollView
-// 가 스크롤을 처리하므로 windowStart(=Zig 가시 first 클램프)가 바뀔
-// 때만 재배치+onRecycle, 그 외 프레임은 즉시 반환(프레임당 JS·작업 0).
+// #25: 네이티브가 binding(slot→dataIndex, ring)의 단일 권위. 슬롯 s 를
+// offsets[ring(s)] 에 자기배치(child 순서 무관). windowStart 가 바뀔
+// 때만 재배치 + binding csv 하달 → JS 는 그대로 적용(자체 파생 X =
+// #24 desync 제거). 그 외 프레임은 즉시 반환(프레임당 JS·작업 0).
 - (void)layoutSlots {
   if (_offsets.empty() || _slots.count == 0 || _count <= 0) return;
-  // pool > _count 면 _offsets[start+s] OOB → _count 로 클램프.
-  NSInteger pool = MIN((NSInteger)_slots.count, _count);
+  NSInteger pool = MIN((NSInteger)_slots.count, _count); // OOB 방지
   double y = _scroll.contentOffset.y;
   double vp = _scroll.bounds.size.height;
   int32_t f = 0, l = 0;
   zl_visible_range(_offsets.data(), (size_t)_count, y, vp, &f, &l);
   NSInteger start =
       std::max<NSInteger>(0, std::min<NSInteger>(f, _count - pool));
+  // 슬롯은 content 고정좌표(offsets[ring])라 UIScrollView 가 스크롤
+  // 처리 → windowStart 불변 프레임은 frame·csv·emit 전부 불필요.
   if (start == _lastStart) return;
   _lastStart = start;
+  std::string binds;
   for (NSInteger s = 0; s < pool; s++) {
-    _slots[(NSUInteger)s].frame = CGRectMake(
-        0, _offsets[(size_t)(start + s)], self.bounds.size.width, _rowH);
+    // ring(packages/zerolist/src/virtualizer.ts ringIndex 와 동일 계약)
+    NSInteger idx = start + (((s - start) % pool) + pool) % pool;
+    _slots[(NSUInteger)s].frame =
+        CGRectMake(0, _offsets[(size_t)idx], self.bounds.size.width, _rowH);
+    if (s) binds += ',';
+    binds += std::to_string((long)idx);
   }
   if (_eventEmitter) {
     std::static_pointer_cast<const ZlPoolListEventEmitter>(_eventEmitter)
-        ->onRecycle({.start = (double)start});
+        ->onRecycle({.binds = binds});
   }
 }
 
@@ -124,7 +131,7 @@ static const NSInteger kNoStart = -1;
                           index:(NSInteger)index {
   [_scroll insertSubview:child atIndex:(NSUInteger)index];
   [_slots insertObject:child atIndex:(NSUInteger)index];
-  _lastStart = kNoStart;
+  _lastStart = NSIntegerMin;
   [self layoutSlots];
 }
 
@@ -132,7 +139,7 @@ static const NSInteger kNoStart = -1;
                             index:(NSInteger)index {
   [child removeFromSuperview];
   [_slots removeObjectAtIndex:(NSUInteger)index];
-  _lastStart = kNoStart; // 풀 크기 변경 → 다음 layoutSlots 강제
+  _lastStart = NSIntegerMin; // 풀 크기 변경 → 다음 layoutSlots 강제
   [self layoutSlots];
 }
 
@@ -142,7 +149,7 @@ static const NSInteger kNoStart = -1;
   if (!_offsets.empty())
     _scroll.contentSize =
         CGSizeMake(self.bounds.size.width, _offsets[(size_t)_count]);
-  _lastStart = kNoStart; // bounds 변화 시 슬롯 폭 재적용 강제
+  _lastStart = NSIntegerMin; // bounds 변화 시 슬롯 폭 재적용 강제
   [self layoutSlots];
 }
 
@@ -152,7 +159,7 @@ static const NSInteger kNoStart = -1;
   _offsets.clear();
   _count = 0;
   _rowH = 0;
-  _lastStart = kNoStart;
+  _lastStart = NSIntegerMin;
   _scroll.contentOffset = CGPointZero; // 재사용 셀 스크롤 위치 누수 방지
   _scroll.contentSize = CGSizeZero;
   [super prepareForRecycle];

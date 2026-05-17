@@ -19,14 +19,14 @@ import com.facebook.react.viewmanagers.ZlPoolListManagerInterface
 import java.nio.ByteBuffer
 import java.nio.DoubleBuffer
 
-// ZeroList③ N3: 네이티브 스레드 Zig 가 JSX 셀 풀을 구동(프레임당 JS 0).
-// JS 는 POOL 개 슬롯(JSX, collapsable=false, position:absolute)을 렌더.
-// 네이티브가 스크롤/플링 + Zig visibleRange 로 windowStart 산출 후 매
-// 프레임 slot s 를 offsets[windowStart+s]-scrollY 에 배치. windowStart
-// 가 바뀔 때(경계 횡단)만 onRecycle{start} 1회 발신 → JS 가 슬롯 s
-// 내용을 data[start+s] 로 교체(프레임 ≫ 리사이클 빈도).
-// PoC 한계: 위치는 네이티브가 즉시, 내용은 JS 비동기 갱신 → 경계
-// 횡단 직후 수 프레임 동안 슬롯이 새 위치에 옛 내용을 보일 수 있다.
+// ZeroList③ #25: 네이티브 스레드 Zig 가 JSX 셀 풀을 구동(프레임당
+// JS 0). 네이티브가 slot↔dataIndex(ring) 의 단일 권위. 매 프레임
+// slot s 를 offsets[ring(s,windowStart)]-scrollY 에 자기배치(child
+// 순서 무관). windowStart 가 바뀔 때만 binding csv 를 JS 에 하달
+// (onRecycle{binds}) → JS 는 그대로 적용(자체 ring 파생 X = #24
+// desync 제거). PoC 한계: 위치는 네이티브가 항상 정합하나, 내용은
+// JS state 가 ~1 이벤트지연이라 빠른 플링 중 새 위치에 직전 행이
+// 잠깐 보일 수 있다(at-rest 는 정합 — #24 영구겹침 해소).
 class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private var count = 0
   private var rowPxF = 0f
@@ -35,7 +35,10 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private var offsets: ByteBuffer? = null
   private var offD: DoubleBuffer? = null
   private var scrollY = 0
-  private var lastStart = -1
+  // csv 는 windowStart·n 의 순수 함수 → 이 둘이 안 바뀐 프레임엔
+  // 문자열 빌드/emit 를 전부 스킵(translationY 만 갱신).
+  private var lastWindowStart = -1
+  private var lastN = -1
   private val scroller = OverScroller(ctx)
   private var tracker: VelocityTracker? = null
   private val touchSlop = ViewConfiguration.get(ctx).scaledTouchSlop
@@ -62,10 +65,16 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     builtCount = count
     builtRowPxF = rowPxF
     scrollY = 0
-    lastStart = -1
+    lastWindowStart = -1
+    lastN = -1
     checks = 0
     requestLayout()
   }
+
+  // #25 단일 권위 매핑(reference.ringIndex 와 비트수준 동일 계약):
+  // windowStart 1 변할 때 정확히 1 슬롯만 데이터 인덱스 변경.
+  private fun ring(slot: Int, w: Int, pool: Int): Int =
+    w + (((slot - w) % pool) + pool) % pool
 
   private fun maxScroll(): Int {
     val d = offD ?: return 0
@@ -79,9 +88,11 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     reposition()
   }
 
-  // 매 프레임(JS 0): Zig 로 가시 first → windowStart, 슬롯 s 를
-  // offsets[windowStart+s]-scrollY 에 배치. windowStart 변경 시에만
-  // onRecycle 발신(JS 가 슬롯 내용 교체).
+  // 매 프레임(JS 0): Zig 로 가시 first → windowStart. 네이티브가
+  // binding[s]=ring(s) 의 단일 권위 — 슬롯 s 를 offsets[binding[s]]-
+  // scrollY 에 자기배치(committed binding 으로; 매 프레임 새 windowStart
+  // 로 앞서가지 않음). binding csv 가 바뀔 때만 그 csv 를 JS 에 하달
+  // → JS 는 그대로 적용(자체 파생 X). slot-index 고정 → 재정렬 없음.
   private fun reposition() {
     val d = offD ?: return
     val n = childCount
@@ -92,33 +103,38 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     val first = ZlEngine.firstOf(packed)
     // 풀이 데이터 끝을 넘지 않도록 clamp(뷰포트 ≤ 풀 가정).
     val windowStart = first.coerceIn(0, maxOf(0, count - n))
+    // 위치는 매 프레임 갱신(scrollY 추적). bind 는 windowStart 의
+    // 순수 함수라 ring 으로 자기배치.
     for (s in 0 until n) {
-      getChildAt(s).translationY = (d.get(windowStart + s) - scrollY).toFloat()
+      getChildAt(s).translationY =
+        (d.get(ring(s, windowStart, n)) - scrollY).toFloat()
     }
-    if (windowStart != lastStart) {
-      lastStart = windowStart
-      emitRecycle(windowStart)
+    // csv·emit 는 windowStart/n 이 바뀐 프레임에만(불변 프레임
+    // 문자열 빌드/dispatch 낭비 제거).
+    if (windowStart == lastWindowStart && n == lastN) return
+    lastWindowStart = windowStart
+    lastN = n
+    val sb = StringBuilder(n * 5)
+    for (s in 0 until n) {
+      if (s > 0) sb.append(',')
+      sb.append(ring(s, windowStart, n))
     }
-    if (checks < PARITY_SAMPLES) {
+    val binds = sb.toString()
+    emitRecycle(binds)
+    if (checks < RECYCLE_LOG_SAMPLES) {
       checks++
-      Log.i(
-        "ZlPool",
-        "scrollY=$scrollY start=$windowStart zig=[$first,${
-          ZlEngine.lastOf(packed)
-        }) pool=$n",
-      )
+      Log.i("ZlPool", "recycle scrollY=$scrollY binds=$binds")
     }
   }
 
   // codegen 은 C++ ZlPoolListEventEmitter 도 생성하나, 이 PoC 는
   // Java/Kotlin ViewManager + EventDispatcher 경로를 쓴다(별 경로, 무충돌).
-  private fun emitRecycle(start: Int) {
+  private fun emitRecycle(binds: String) {
     val rc = context as? ReactContext ?: return
     val surfaceId = UIManagerHelper.getSurfaceId(rc)
     UIManagerHelper
       .getEventDispatcher(rc, surfaceId)
-      ?.dispatchEvent(RecycleEvent(surfaceId, id, start))
-    Log.i("ZlPool", "recycle start=$start")
+      ?.dispatchEvent(RecycleEvent(surfaceId, id, binds))
   }
 
   override fun onLayout(c: Boolean, l: Int, t: Int, r: Int, b: Int) {
@@ -185,15 +201,15 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private class RecycleEvent(
     surfaceId: Int,
     viewId: Int,
-    private val start: Int,
+    private val binds: String,
   ) : Event<RecycleEvent>(surfaceId, viewId) {
     override fun getEventName() = "topRecycle"
     override fun getEventData(): WritableMap =
-      Arguments.createMap().apply { putInt("start", start) }
+      Arguments.createMap().apply { putString("binds", binds) }
   }
 
   companion object {
-    private const val PARITY_SAMPLES = 8
+    private const val RECYCLE_LOG_SAMPLES = 8
   }
 }
 
