@@ -136,6 +136,10 @@ private final class CommonListProbe: NSObject {
     for child in v.subviews { rows(child,&result) }
   }
   private func title(_ v:UIView) -> Int? {
+    // 기대값 라벨이 아니라 템플릿의 실제 UILabel 문자열을 읽는다.
+    if let text=(v as? UILabel)?.text, text.hasPrefix("#") {
+      return Int(text.dropFirst().prefix(while: { $0.isNumber }))
+    }
     if let text=v.accessibilityLabel, text.hasPrefix("#") {
       return Int(text.dropFirst().prefix(while: { $0.isNumber }))
     }

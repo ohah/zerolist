@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		050258F6EF9C855F8C331882 /* ZlTemplateTextComponentView.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7C4E68A4713968C2D407369 /* ZlTemplateTextComponentView.mm */; };
 		0C80B921A6F3F58F76C31292 /* libPods-ZerolistExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-ZerolistExample.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		4FC50FB7150982E16DC4932C /* ZlPoolListComponentView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 87F46C86DE87A3A6D939A6CC /* ZlPoolListComponentView.mm */; };
@@ -26,6 +27,7 @@
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ZerolistExample/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ZerolistExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87F46C86DE87A3A6D939A6CC /* ZlPoolListComponentView.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = ZerolistExample/ZlPoolListComponentView.mm; sourceTree = "<group>"; };
+		A7C4E68A4713968C2D407369 /* ZlTemplateTextComponentView.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ZlTemplateTextComponentView.mm; path = ZerolistExample/ZlTemplateTextComponentView.mm; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				A7C4E68A4713968C2D407369 /* ZlTemplateTextComponentView.mm */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
 				4FC50FB7150982E16DC4932C /* ZlPoolListComponentView.mm in Sources */,
+				050258F6EF9C855F8C331882 /* ZlTemplateTextComponentView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

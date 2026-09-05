@@ -1,0 +1,3 @@
+// 웹은 네이티브 UI 런타임 실험 대상이 아니다.
+export const TemplateJSEngine = null;
+export const TemplateWorkletEngine = null;

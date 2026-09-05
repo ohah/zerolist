@@ -11,6 +11,8 @@ export type EngineId =
   | 'native'
   | 'nativezig'
   | 'zigpool'
+  | 'template-js'
+  | 'template-worklet'
   | 'zerolist';
 
 export interface BenchConfig {
