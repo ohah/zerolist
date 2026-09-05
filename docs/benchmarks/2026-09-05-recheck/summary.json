@@ -1,0 +1,2069 @@
+[
+  {
+    "platform": "android",
+    "name": "legend-5",
+    "engine": "legend",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 188.0224609375,
+      "min": 187.6748046875,
+      "max": 191.4140625
+    },
+    "cpu_one_core_percent": {
+      "median": 19.063885640494377,
+      "min": 18.373180633886317,
+      "max": 19.258626420540338
+    },
+    "cpu_seconds": {
+      "median": 1.11,
+      "min": 1.07,
+      "max": 1.12
+    },
+    "wall_seconds": {
+      "median": 5.8225275839999995,
+      "min": 5.815575709000001,
+      "max": 5.823705875000002
+    },
+    "late_percent": {
+      "median": 0.69,
+      "min": 0.69,
+      "max": 1.04
+    },
+    "p95_ms": {
+      "median": 19,
+      "min": 19,
+      "max": 20
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "flashlist-5",
+    "engine": "flashlist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 168.9169921875,
+      "min": 168.8125,
+      "max": 169.419921875
+    },
+    "cpu_one_core_percent": {
+      "median": 24.05329436752782,
+      "min": 24.015880330699005,
+      "max": 24.552574401812105
+    },
+    "cpu_seconds": {
+      "median": 1.4,
+      "min": 1.3999999999999997,
+      "max": 1.4300000000000002
+    },
+    "wall_seconds": {
+      "median": 5.824236500000012,
+      "min": 5.820408542000024,
+      "max": 5.829476082999999
+    },
+    "late_percent": {
+      "median": 0.69,
+      "min": 0.69,
+      "max": 1.03
+    },
+    "p95_ms": {
+      "median": 19,
+      "min": 18,
+      "max": 25
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "zerolist-5",
+    "engine": "zerolist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 154.744140625,
+      "min": 153.728515625,
+      "max": 155.94921875
+    },
+    "cpu_one_core_percent": {
+      "median": 29.511458578285676,
+      "min": 27.841434879647757,
+      "max": 29.920610930702935
+    },
+    "cpu_seconds": {
+      "median": 1.7400000000000002,
+      "min": 1.6400000000000001,
+      "max": 1.7600000000000002
+    },
+    "wall_seconds": {
+      "median": 5.890501,
+      "min": 5.8822328330000175,
+      "max": 5.896014917000002
+    },
+    "late_percent": {
+      "median": 1.02,
+      "min": 1.02,
+      "max": 1.03
+    },
+    "p95_ms": {
+      "median": 29,
+      "min": 28,
+      "max": 29
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 152.3916015625,
+      "min": 152.2578125,
+      "max": 152.5
+    },
+    "cpu_one_core_percent": {
+      "median": 14.433277984289624,
+      "min": 14.420516481637193,
+      "max": 15.066341447519308
+    },
+    "cpu_seconds": {
+      "median": 0.8399999999999999,
+      "min": 0.8399999999999999,
+      "max": 0.88
+    },
+    "wall_seconds": {
+      "median": 5.825034083000006,
+      "min": 5.8198837500000025,
+      "max": 5.840834041000001
+    },
+    "late_percent": {
+      "median": 1.11,
+      "min": 0.37,
+      "max": 1.78
+    },
+    "p95_ms": {
+      "median": 20,
+      "min": 20,
+      "max": 21
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "flashlist-2",
+    "engine": "flashlist",
+    "rows": 2,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 146.5810546875,
+      "min": 146.45703125,
+      "max": 146.646484375
+    },
+    "cpu_one_core_percent": {
+      "median": 19.016378533063204,
+      "min": 18.474083469501238,
+      "max": 19.242001716231986
+    },
+    "cpu_seconds": {
+      "median": 1.1099999999999999,
+      "min": 1.08,
+      "max": 1.12
+    },
+    "wall_seconds": {
+      "median": 5.837073541999999,
+      "min": 5.820600249999984,
+      "max": 5.8460275000000195
+    },
+    "late_percent": {
+      "median": 1.03,
+      "min": 0.69,
+      "max": 1.03
+    },
+    "p95_ms": {
+      "median": 22,
+      "min": 19,
+      "max": 24
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "flatlist-5",
+    "engine": "flatlist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 151.3203125,
+      "min": 151.283203125,
+      "max": 151.38671875
+    },
+    "cpu_one_core_percent": {
+      "median": 22.975543658034542,
+      "min": 22.82080964168107,
+      "max": 25.65379386224274
+    },
+    "cpu_seconds": {
+      "median": 1.34,
+      "min": 1.33,
+      "max": 1.49
+    },
+    "wall_seconds": {
+      "median": 5.828014083999989,
+      "min": 5.808107790999998,
+      "max": 5.832288540999997
+    },
+    "late_percent": {
+      "median": 1.03,
+      "min": 0.69,
+      "max": 1.39
+    },
+    "p95_ms": {
+      "median": 21,
+      "min": 20,
+      "max": 21
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "legend-5",
+    "engine": "legend",
+    "rows": 5,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "blank_episode_max_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "blank_episode_total_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "memory_after_mib": {
+      "median": 189.044921875,
+      "min": 184.0390625,
+      "max": 189.2939453125
+    },
+    "cpu_one_core_percent": {
+      "median": 88.80835360285475,
+      "min": 88.0774902572357,
+      "max": 88.9945873059054
+    },
+    "cpu_seconds": {
+      "median": 5.19,
+      "min": 5.180000000000001,
+      "max": 5.24
+    },
+    "wall_seconds": {
+      "median": 5.844044832999998,
+      "min": 5.820578708,
+      "max": 5.949306667000002
+    },
+    "mean_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "blank_moving_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "max_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 45.618233618233596,
+      "min": 45.30728530728526,
+      "max": 46.534798534798504
+    },
+    "renders_per_100_rows": {
+      "median": 120.56582563077698,
+      "min": 116.97897951850533,
+      "max": 122.48897984886658
+    }
+  },
+  {
+    "platform": "android",
+    "name": "flashlist-5",
+    "engine": "flashlist",
+    "rows": 5,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 0,
+      "min": 0,
+      "max": 1
+    },
+    "blank_episode_max_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 33.670208
+    },
+    "blank_episode_total_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 33.670208
+    },
+    "memory_after_mib": {
+      "median": 168.25,
+      "min": 167.0625,
+      "max": 171.1064453125
+    },
+    "cpu_one_core_percent": {
+      "median": 89.7436614790517,
+      "min": 88.47499510444959,
+      "max": 89.99774790425688
+    },
+    "cpu_seconds": {
+      "median": 5.24,
+      "min": 5.14,
+      "max": 5.340000000000001
+    },
+    "wall_seconds": {
+      "median": 5.822367917000008,
+      "min": 5.809551041999999,
+      "max": 5.950280958000008
+    },
+    "mean_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.28486055776892427
+    },
+    "blank_moving_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.796812749003984
+    },
+    "max_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 37.20833333333333
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 46.051282051281994,
+      "min": 45.499389499389494,
+      "max": 46.61131461131459
+    },
+    "renders_per_100_rows": {
+      "median": 123.07857449549164,
+      "min": 115.08908685968832,
+      "max": 137.30571757884817
+    }
+  },
+  {
+    "platform": "android",
+    "name": "zerolist-5",
+    "engine": "zerolist",
+    "rows": 5,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "blank_episode_max_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "blank_episode_total_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "memory_after_mib": {
+      "median": 161.3193359375,
+      "min": 149.884765625,
+      "max": 166.912109375
+    },
+    "cpu_one_core_percent": {
+      "median": 91.73757906934897,
+      "min": 89.92559781359888,
+      "max": 91.98889668233294
+    },
+    "cpu_seconds": {
+      "median": 5.36,
+      "min": 5.300000000000001,
+      "max": 5.4799999999999995
+    },
+    "wall_seconds": {
+      "median": 5.893761208000015,
+      "min": 5.842752832999999,
+      "max": 5.9572407080000005
+    },
+    "mean_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "blank_moving_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "max_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 46.14896214896211,
+      "min": 45.3349613349613,
+      "max": 46.88644688644684
+    },
+    "renders_per_100_rows": {
+      "median": 99.67721452005512,
+      "min": 99.26114123603986,
+      "max": 102.3750000000001
+    }
+  },
+  {
+    "platform": "android",
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "blank_episode_max_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "blank_episode_total_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "memory_after_mib": {
+      "median": 156.142578125,
+      "min": 150.41015625,
+      "max": 156.6796875
+    },
+    "cpu_one_core_percent": {
+      "median": 84.04986258097628,
+      "min": 83.34688138322319,
+      "max": 86.26827701927151
+    },
+    "cpu_seconds": {
+      "median": 5.030000000000001,
+      "min": 4.8500000000000005,
+      "max": 5.04
+    },
+    "wall_seconds": {
+      "median": 5.830648500000002,
+      "min": 5.819053957999984,
+      "max": 5.996440499999991
+    },
+    "mean_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "blank_moving_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "max_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 45.662189662189654,
+      "min": 41.47334147334143,
+      "max": 45.70451770451772
+    },
+    "renders_per_100_rows": {
+      "median": 96.44749754661444,
+      "min": 94.08260312032482,
+      "max": 102.92979891614378
+    }
+  },
+  {
+    "platform": "android",
+    "name": "flashlist-2",
+    "engine": "flashlist",
+    "rows": 2,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 1,
+      "min": 0,
+      "max": 2
+    },
+    "blank_episode_max_ms": {
+      "median": 50.756292,
+      "min": 0,
+      "max": 82.998042
+    },
+    "blank_episode_total_ms": {
+      "median": 50.756292,
+      "min": 0,
+      "max": 101.896709
+    },
+    "memory_after_mib": {
+      "median": 146.9404296875,
+      "min": 145.99609375,
+      "max": 147.3916015625
+    },
+    "cpu_one_core_percent": {
+      "median": 86.42529082357359,
+      "min": 86.31657702811219,
+      "max": 88.19517232702144
+    },
+    "cpu_seconds": {
+      "median": 5.050000000000001,
+      "min": 5.029999999999999,
+      "max": 5.16
+    },
+    "wall_seconds": {
+      "median": 5.8505563749999965,
+      "min": 5.820055624999995,
+      "max": 5.85066037499999
+    },
+    "mean_blank_area_percent": {
+      "median": 0.11850000000000001,
+      "min": 0.0,
+      "max": 0.3245701058201058
+    },
+    "blank_moving_percent": {
+      "median": 1.2,
+      "min": 0.0,
+      "max": 1.984126984126984
+    },
+    "max_blank_area_percent": {
+      "median": 19.166666666666668,
+      "min": 0.0,
+      "max": 31.75
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 46.03988603988598,
+      "min": 45.9063899063899,
+      "max": 46.1831501831501
+    },
+    "renders_per_100_rows": {
+      "median": 106.73895311724237,
+      "min": 102.08539603960409,
+      "max": 108.26459390862964
+    }
+  },
+  {
+    "platform": "android",
+    "name": "flatlist-5",
+    "engine": "flatlist",
+    "rows": 5,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "blank_episode_max_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "blank_episode_total_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "memory_after_mib": {
+      "median": 154.8984375,
+      "min": 154.6181640625,
+      "max": 155.5810546875
+    },
+    "cpu_one_core_percent": {
+      "median": 87.92335382423924,
+      "min": 86.58925255791581,
+      "max": 88.91613829717654
+    },
+    "cpu_seconds": {
+      "median": 5.11,
+      "min": 5.04,
+      "max": 5.17
+    },
+    "wall_seconds": {
+      "median": 5.814467540999999,
+      "min": 5.811880208999995,
+      "max": 5.820583792000008
+    },
+    "mean_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "blank_moving_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "max_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 46.05942205942203,
+      "min": 45.33658933658931,
+      "max": 46.05942205942204
+    },
+    "renders_per_100_rows": {
+      "median": 97.69987982468547,
+      "min": 97.05185291582885,
+      "max": 99.87098826523405
+    }
+  },
+  {
+    "platform": "android",
+    "name": "legend-5",
+    "engine": "legend",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 194.306640625,
+      "min": 190.76171875,
+      "max": 194.662109375
+    },
+    "cpu_one_core_percent": {
+      "median": 88.16106082455002,
+      "min": 86.24434297992202,
+      "max": 88.5062326217903
+    },
+    "cpu_seconds": {
+      "median": 5.140000000000001,
+      "min": 5.0200000000000005,
+      "max": 5.15
+    },
+    "wall_seconds": {
+      "median": 5.820671625,
+      "min": 5.818799250000012,
+      "max": 5.830238374999993
+    },
+    "late_percent": {
+      "median": 0.69,
+      "min": 0.69,
+      "max": 0.69
+    },
+    "p95_ms": {
+      "median": 18,
+      "min": 18,
+      "max": 18
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "flashlist-5",
+    "engine": "flashlist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 166.7568359375,
+      "min": 165.5859375,
+      "max": 167.8173828125
+    },
+    "cpu_one_core_percent": {
+      "median": 92.35088424318604,
+      "min": 90.69187315631552,
+      "max": 92.53477560538883
+    },
+    "cpu_seconds": {
+      "median": 5.38,
+      "min": 5.27,
+      "max": 5.380000000000001
+    },
+    "wall_seconds": {
+      "median": 5.814030416999998,
+      "min": 5.8108845,
+      "max": 5.8256074580000075
+    },
+    "late_percent": {
+      "median": 0.69,
+      "min": 0.69,
+      "max": 1.04
+    },
+    "p95_ms": {
+      "median": 18,
+      "min": 18,
+      "max": 18
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "zerolist-5",
+    "engine": "zerolist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 159.154296875,
+      "min": 158.5859375,
+      "max": 160.3427734375
+    },
+    "cpu_one_core_percent": {
+      "median": 93.97491400514245,
+      "min": 93.92475065814445,
+      "max": 95.1667413193635
+    },
+    "cpu_seconds": {
+      "median": 5.4799999999999995,
+      "min": 5.47,
+      "max": 5.539999999999999
+    },
+    "wall_seconds": {
+      "median": 5.823811042000017,
+      "min": 5.821361458000013,
+      "max": 5.831343457999999
+    },
+    "late_percent": {
+      "median": 1.04,
+      "min": 1.03,
+      "max": 2.44
+    },
+    "p95_ms": {
+      "median": 29,
+      "min": 29,
+      "max": 31
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 152.8486328125,
+      "min": 152.5380859375,
+      "max": 153.09765625
+    },
+    "cpu_one_core_percent": {
+      "median": 83.93285209401769,
+      "min": 83.67997377933843,
+      "max": 85.09080219998388
+    },
+    "cpu_seconds": {
+      "median": 4.879999999999999,
+      "min": 4.859999999999999,
+      "max": 4.949999999999999
+    },
+    "wall_seconds": {
+      "median": 5.814171541,
+      "min": 5.807841207999985,
+      "max": 5.817315000000008
+    },
+    "late_percent": {
+      "median": 0.37,
+      "min": 0.37,
+      "max": 1.11
+    },
+    "p95_ms": {
+      "median": 18,
+      "min": 18,
+      "max": 24
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "flashlist-2",
+    "engine": "flashlist",
+    "rows": 2,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 145.3544921875,
+      "min": 144.91796875,
+      "max": 145.45703125
+    },
+    "cpu_one_core_percent": {
+      "median": 86.66331940043031,
+      "min": 85.57600077101196,
+      "max": 88.38999937662707
+    },
+    "cpu_seconds": {
+      "median": 5.06,
+      "min": 4.969999999999999,
+      "max": 5.14
+    },
+    "wall_seconds": {
+      "median": 5.815137499999992,
+      "min": 5.807703041999993,
+      "max": 5.838687042000004
+    },
+    "late_percent": {
+      "median": 1.04,
+      "min": 1.03,
+      "max": 1.39
+    },
+    "p95_ms": {
+      "median": 22,
+      "min": 19,
+      "max": 23
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "android",
+    "name": "flatlist-5",
+    "engine": "flatlist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 152.0205078125,
+      "min": 149.2783203125,
+      "max": 153.375
+    },
+    "cpu_one_core_percent": {
+      "median": 92.44044285081054,
+      "min": 90.53484249226953,
+      "max": 93.08268747544841
+    },
+    "cpu_seconds": {
+      "median": 5.409999999999999,
+      "min": 5.289999999999999,
+      "max": 5.449999999999999
+    },
+    "wall_seconds": {
+      "median": 5.852416792,
+      "min": 5.843054292000005,
+      "max": 5.855009291000002
+    },
+    "late_percent": {
+      "median": 1.03,
+      "min": 1.03,
+      "max": 1.03
+    },
+    "p95_ms": {
+      "median": 21,
+      "min": 21,
+      "max": 23
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "legend-5",
+    "engine": "legend",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 439.734375,
+      "min": 433.640625,
+      "max": 441.96875
+    },
+    "cpu_one_core_percent": {
+      "median": 20.87693297439041,
+      "min": 20.456191546046266,
+      "max": 21.218071744163648
+    },
+    "cpu_seconds": {
+      "median": 1.8099999999999996,
+      "min": 1.79,
+      "max": 1.8399999999999999
+    },
+    "wall_seconds": {
+      "median": 8.67185304200001,
+      "min": 8.669855875000001,
+      "max": 8.750406916999992
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "zerolist-5",
+    "engine": "zerolist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 433.421875,
+      "min": 429.390625,
+      "max": 443.796875
+    },
+    "cpu_one_core_percent": {
+      "median": 27.286525699785326,
+      "min": 26.564123272229885,
+      "max": 28.758852954362858
+    },
+    "cpu_seconds": {
+      "median": 2.4,
+      "min": 2.31,
+      "max": 2.5700000000000003
+    },
+    "wall_seconds": {
+      "median": 8.795549959000027,
+      "min": 8.695939166999999,
+      "max": 8.936378666000024
+    },
+    "late_callback_percent": {
+      "median": 0.8421052631578947,
+      "min": 0.43103448275862066,
+      "max": 1.070663811563169
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 376.796875,
+      "min": 375.796875,
+      "max": 380.34375
+    },
+    "cpu_one_core_percent": {
+      "median": 15.528519359035814,
+      "min": 15.15586169523593,
+      "max": 15.783939382774573
+    },
+    "cpu_seconds": {
+      "median": 1.3299999999999996,
+      "min": 1.3099999999999996,
+      "max": 1.35
+    },
+    "wall_seconds": {
+      "median": 8.564886125000015,
+      "min": 8.552997875000017,
+      "max": 8.643520416999998
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "flashlist-12",
+    "engine": "flashlist",
+    "rows": 12,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 444.890625,
+      "min": 443.328125,
+      "max": 447.09375
+    },
+    "cpu_one_core_percent": {
+      "median": 23.313578540853346,
+      "min": 22.89588771269798,
+      "max": 23.40467825627902
+    },
+    "cpu_seconds": {
+      "median": 2.0100000000000002,
+      "min": 2.0000000000000004,
+      "max": 2.02
+    },
+    "wall_seconds": {
+      "median": 8.630753125000012,
+      "min": 8.62158504100001,
+      "max": 8.735193084000002
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "stable-12",
+    "engine": "zigpool",
+    "rows": 12,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 414.78125,
+      "min": 411.125,
+      "max": 415.65625
+    },
+    "cpu_one_core_percent": {
+      "median": 12.846510695032293,
+      "min": 11.875307972002988,
+      "max": 12.992704785052785
+    },
+    "cpu_seconds": {
+      "median": 1.1099999999999999,
+      "min": 1.0100000000000002,
+      "max": 1.15
+    },
+    "wall_seconds": {
+      "median": 8.640478541999997,
+      "min": 8.505042583999995,
+      "max": 8.851120833000039
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "flashlist-5",
+    "engine": "flashlist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 422.484375,
+      "min": 422.25,
+      "max": 424.21875
+    },
+    "cpu_one_core_percent": {
+      "median": 21.899894443934013,
+      "min": 21.817194158787263,
+      "max": 22.16342607470366
+    },
+    "cpu_seconds": {
+      "median": 1.8900000000000006,
+      "min": 1.87,
+      "max": 1.9099999999999997
+    },
+    "wall_seconds": {
+      "median": 8.617801208000003,
+      "min": 8.571221332999983,
+      "max": 8.630178583000003
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "flatlist-5",
+    "engine": "flatlist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 0,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 432.1875,
+      "min": 423.90625,
+      "max": 434.78125
+    },
+    "cpu_one_core_percent": {
+      "median": 26.687200984170328,
+      "min": 25.486120847707777,
+      "max": 26.885046262409396
+    },
+    "cpu_seconds": {
+      "median": 2.3000000000000003,
+      "min": 2.21,
+      "max": 2.34
+    },
+    "wall_seconds": {
+      "median": 8.671386333000015,
+      "min": 8.618363541999997,
+      "max": 8.703723167000021
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "legend-5",
+    "engine": "legend",
+    "rows": 5,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 4,
+      "min": 3,
+      "max": 5
+    },
+    "blank_episode_max_ms": {
+      "median": 133.333333,
+      "min": 116.666667,
+      "max": 133.333333
+    },
+    "blank_episode_total_ms": {
+      "median": 250.0,
+      "min": 216.66666700000002,
+      "max": 300.000001
+    },
+    "memory_after_mib": {
+      "median": 442.84375,
+      "min": 442.015625,
+      "max": 447.953125
+    },
+    "cpu_one_core_percent": {
+      "median": 87.71419663806724,
+      "min": 87.63298397617014,
+      "max": 88.78345281410121
+    },
+    "cpu_seconds": {
+      "median": 7.59,
+      "min": 7.5600000000000005,
+      "max": 7.970000000000001
+    },
+    "wall_seconds": {
+      "median": 8.653103250000015,
+      "min": 8.626888709,
+      "max": 8.976898000000006
+    },
+    "mean_blank_area_percent": {
+      "median": 2.154096109839817,
+      "min": 1.858099375005653,
+      "max": 2.3549545159194283
+    },
+    "blank_moving_percent": {
+      "median": 3.0864197530864197,
+      "min": 2.5691699604743086,
+      "max": 3.711340206185567
+    },
+    "max_blank_area_percent": {
+      "median": 99.77116704805492,
+      "min": 99.77116704805492,
+      "max": 99.77116704805492
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 129.74501282051332,
+      "min": 127.47293162393213,
+      "max": 130.09970940170984
+    },
+    "renders_per_100_rows": {
+      "median": 103.76656536807434,
+      "min": 97.27555365700862,
+      "max": 107.13321227405469
+    }
+  },
+  {
+    "platform": "ios",
+    "name": "zerolist-5",
+    "engine": "zerolist",
+    "rows": 5,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 5,
+      "min": 5,
+      "max": 6
+    },
+    "blank_episode_max_ms": {
+      "median": 133.333333,
+      "min": 116.666667,
+      "max": 150.0
+    },
+    "blank_episode_total_ms": {
+      "median": 466.666665,
+      "min": 433.33333200000004,
+      "max": 466.666666
+    },
+    "memory_after_mib": {
+      "median": 442.375,
+      "min": 438.46875,
+      "max": 445.84375
+    },
+    "cpu_one_core_percent": {
+      "median": 89.92628692749287,
+      "min": 89.64587261010865,
+      "max": 89.99169128244084
+    },
+    "cpu_seconds": {
+      "median": 7.83,
+      "min": 7.809999999999999,
+      "max": 7.899999999999999
+    },
+    "wall_seconds": {
+      "median": 8.734367542000001,
+      "min": 8.684890999999993,
+      "max": 8.778588208999963
+    },
+    "mean_blank_area_percent": {
+      "median": 3.6354061432484883,
+      "min": 2.3784059831444995,
+      "max": 3.9211232936970326
+    },
+    "blank_moving_percent": {
+      "median": 5.338809034907597,
+      "min": 5.284552845528456,
+      "max": 5.725971370143149
+    },
+    "max_blank_area_percent": {
+      "median": 99.77116704805492,
+      "min": 99.77116704805492,
+      "max": 99.77116704805492
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 130.7378974358981,
+      "min": 125.77920085470133,
+      "max": 137.60114102564174
+    },
+    "renders_per_100_rows": {
+      "median": 96.37603363001831,
+      "min": 93.74922259980465,
+      "max": 96.99536900455664
+    }
+  },
+  {
+    "platform": "ios",
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 5,
+      "min": 5,
+      "max": 5
+    },
+    "blank_episode_max_ms": {
+      "median": 133.333334,
+      "min": 133.333334,
+      "max": 150.0
+    },
+    "blank_episode_total_ms": {
+      "median": 400.000001,
+      "min": 383.333333,
+      "max": 516.666667
+    },
+    "memory_after_mib": {
+      "median": 380.921875,
+      "min": 377.140625,
+      "max": 386.734375
+    },
+    "cpu_one_core_percent": {
+      "median": 86.47364224163827,
+      "min": 85.79530835219899,
+      "max": 86.53896189218835
+    },
+    "cpu_seconds": {
+      "median": 7.52,
+      "min": 7.499999999999999,
+      "max": 8.18
+    },
+    "wall_seconds": {
+      "median": 8.741736750000001,
+      "min": 8.696291500000001,
+      "max": 9.45238979200002
+    },
+    "mean_blank_area_percent": {
+      "median": 3.340324598612119,
+      "min": 3.1317949725058916,
+      "max": 5.120450069400158
+    },
+    "blank_moving_percent": {
+      "median": 4.67479674796748,
+      "min": 4.291044776119403,
+      "max": 6.352459016393443
+    },
+    "max_blank_area_percent": {
+      "median": 99.77116704805492,
+      "min": 99.77116704805492,
+      "max": 99.77116704805492
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 137.62535470085567,
+      "min": 123.8048461538468,
+      "max": 142.1638205128213
+    },
+    "renders_per_100_rows": {
+      "median": 94.45933874798706,
+      "min": 93.55404175284185,
+      "max": 95.31129326986654
+    }
+  },
+  {
+    "platform": "ios",
+    "name": "flashlist-12",
+    "engine": "flashlist",
+    "rows": 12,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 0,
+      "min": 0,
+      "max": 1
+    },
+    "blank_episode_max_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 66.666666
+    },
+    "blank_episode_total_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 66.666666
+    },
+    "memory_after_mib": {
+      "median": 447.546875,
+      "min": 444.03125,
+      "max": 447.984375
+    },
+    "cpu_one_core_percent": {
+      "median": 90.36220173268816,
+      "min": 89.10930983772008,
+      "max": 90.37108853819828
+    },
+    "cpu_seconds": {
+      "median": 7.919999999999998,
+      "min": 7.84,
+      "max": 8.0
+    },
+    "wall_seconds": {
+      "median": 8.852388667,
+      "min": 8.676194082999984,
+      "max": 8.88796020800001
+    },
+    "mean_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.16986986003285084
+    },
+    "blank_moving_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.6134969325153374
+    },
+    "max_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 29.97711670480549
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 131.6438717948725,
+      "min": 127.50854700854762,
+      "max": 132.36467094017166
+    },
+    "renders_per_100_rows": {
+      "median": 118.6117102734788,
+      "min": 116.22265276305808,
+      "max": 121.5604786003949
+    }
+  },
+  {
+    "platform": "ios",
+    "name": "stable-12",
+    "engine": "zigpool",
+    "rows": 12,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 0,
+      "min": 0,
+      "max": 1
+    },
+    "blank_episode_max_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 16.666667
+    },
+    "blank_episode_total_ms": {
+      "median": 0,
+      "min": 0,
+      "max": 16.666667
+    },
+    "memory_after_mib": {
+      "median": 427.734375,
+      "min": 423.015625,
+      "max": 434.734375
+    },
+    "cpu_one_core_percent": {
+      "median": 87.11017323379235,
+      "min": 86.93190311884906,
+      "max": 87.18453718321373
+    },
+    "cpu_seconds": {
+      "median": 7.629999999999999,
+      "min": 7.61,
+      "max": 8.85
+    },
+    "wall_seconds": {
+      "median": 8.759022875,
+      "min": 8.753978375000003,
+      "max": 10.150882582999998
+    },
+    "mean_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.15849993978080212
+    },
+    "blank_moving_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.20242914979757085
+    },
+    "max_blank_area_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 78.29897025171626
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 133.7763461538467,
+      "min": 125.183756410257,
+      "max": 143.6666752136761
+    },
+    "renders_per_100_rows": {
+      "median": 115.82972436519674,
+      "min": 104.40834645675785,
+      "max": 116.61254361110704
+    }
+  },
+  {
+    "platform": "ios",
+    "name": "flashlist-5",
+    "engine": "flashlist",
+    "rows": 5,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 3,
+      "min": 2,
+      "max": 5
+    },
+    "blank_episode_max_ms": {
+      "median": 83.333333,
+      "min": 66.666667,
+      "max": 133.333333
+    },
+    "blank_episode_total_ms": {
+      "median": 150.0,
+      "min": 149.999999,
+      "max": 366.666667
+    },
+    "memory_after_mib": {
+      "median": 422.125,
+      "min": 413.125,
+      "max": 429.40625
+    },
+    "cpu_one_core_percent": {
+      "median": 88.55766185139237,
+      "min": 88.02477410750691,
+      "max": 88.66993831419954
+    },
+    "cpu_seconds": {
+      "median": 7.82,
+      "min": 7.789999999999999,
+      "max": 9.279999999999998
+    },
+    "wall_seconds": {
+      "median": 8.819223457999982,
+      "min": 8.796528541,
+      "max": 10.542486583000027
+    },
+    "mean_blank_area_percent": {
+      "median": 1.2505681529251322,
+      "min": 0.8351247024015903,
+      "max": 2.381324561403509
+    },
+    "blank_moving_percent": {
+      "median": 1.6161616161616161,
+      "min": 1.4141414141414141,
+      "max": 3.5000000000000004
+    },
+    "max_blank_area_percent": {
+      "median": 99.77116704805492,
+      "min": 99.77116704805492,
+      "max": 99.77116704805492
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 128.1125427350434,
+      "min": 123.80626923076991,
+      "max": 177.0726538461544
+    },
+    "renders_per_100_rows": {
+      "median": 113.18173607706974,
+      "min": 99.39422953072904,
+      "max": 116.31074976630609
+    }
+  },
+  {
+    "platform": "ios",
+    "name": "flatlist-5",
+    "engine": "flatlist",
+    "rows": 5,
+    "mode": "audit",
+    "block_ms": 160,
+    "n": 3,
+    "blank_episode_count": {
+      "median": 5,
+      "min": 4,
+      "max": 6
+    },
+    "blank_episode_max_ms": {
+      "median": 133.333334,
+      "min": 116.666666,
+      "max": 150.000001
+    },
+    "blank_episode_total_ms": {
+      "median": 350.0,
+      "min": 299.999999,
+      "max": 433.333334
+    },
+    "memory_after_mib": {
+      "median": 433.5625,
+      "min": 432.109375,
+      "max": 439.015625
+    },
+    "cpu_one_core_percent": {
+      "median": 89.22827391156285,
+      "min": 88.81852411925246,
+      "max": 89.84217719133451
+    },
+    "cpu_seconds": {
+      "median": 7.91,
+      "min": 7.779999999999999,
+      "max": 9.739999999999998
+    },
+    "wall_seconds": {
+      "median": 8.804328042000009,
+      "min": 8.759433999999999,
+      "max": 10.91582249999999
+    },
+    "mean_blank_area_percent": {
+      "median": 2.3443841348638075,
+      "min": 2.2143750366719472,
+      "max": 3.6493801292125023
+    },
+    "blank_moving_percent": {
+      "median": 3.6290322580645165,
+      "min": 3.205128205128205,
+      "max": 5.020080321285141
+    },
+    "max_blank_area_percent": {
+      "median": 99.77116704805492,
+      "min": 99.77116704805492,
+      "max": 99.77116704805492
+    },
+    "wrong_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "overlap_frames": {
+      "median": 0,
+      "min": 0,
+      "max": 0
+    },
+    "travel_rows": {
+      "median": 133.05555982906077,
+      "min": 130.43162393162442,
+      "max": 147.8903162393172
+    },
+    "renders_per_100_rows": {
+      "median": 93.19415149528916,
+      "min": 91.96004407747955,
+      "max": 94.3022836735359
+    }
+  },
+  {
+    "platform": "ios",
+    "name": "legend-5",
+    "engine": "legend",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 454.203125,
+      "min": 448.5625,
+      "max": 456.46875
+    },
+    "cpu_one_core_percent": {
+      "median": 86.4062425944109,
+      "min": 86.12254914975013,
+      "max": 86.69949518259507
+    },
+    "cpu_seconds": {
+      "median": 7.879999999999999,
+      "min": 7.77,
+      "max": 7.98
+    },
+    "wall_seconds": {
+      "median": 9.088864916000006,
+      "min": 8.992405834000001,
+      "max": 9.265866000000017
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "zerolist-5",
+    "engine": "zerolist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 462.0625,
+      "min": 455.109375,
+      "max": 484.8125
+    },
+    "cpu_one_core_percent": {
+      "median": 95.35825147358298,
+      "min": 95.22715052500254,
+      "max": 95.78065755896662
+    },
+    "cpu_seconds": {
+      "median": 8.66,
+      "min": 8.540000000000001,
+      "max": 8.899999999999999
+    },
+    "wall_seconds": {
+      "median": 9.094045082999997,
+      "min": 8.955701125000001,
+      "max": 9.292063999999982
+    },
+    "late_callback_percent": {
+      "median": 2.8077753779697625,
+      "min": 2.73109243697479,
+      "max": 3.5398230088495577
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 385.890625,
+      "min": 381.703125,
+      "max": 387.578125
+    },
+    "cpu_one_core_percent": {
+      "median": 85.87527660047726,
+      "min": 84.49115833686045,
+      "max": 85.90905420125935
+    },
+    "cpu_seconds": {
+      "median": 7.65,
+      "min": 7.63,
+      "max": 7.9
+    },
+    "wall_seconds": {
+      "median": 9.030530709000004,
+      "min": 8.908268250000006,
+      "max": 9.195771124999993
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "flashlist-12",
+    "engine": "flashlist",
+    "rows": 12,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 466.578125,
+      "min": 459.03125,
+      "max": 468.75
+    },
+    "cpu_one_core_percent": {
+      "median": 89.32813207300205,
+      "min": 87.20428230436423,
+      "max": 89.79511778335365
+    },
+    "cpu_seconds": {
+      "median": 8.35,
+      "min": 8.07,
+      "max": 8.81
+    },
+    "wall_seconds": {
+      "median": 9.29894654200001,
+      "min": 9.034108083000007,
+      "max": 10.102714875000004
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "stable-12",
+    "engine": "zigpool",
+    "rows": 12,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 427.109375,
+      "min": 423.203125,
+      "max": 427.203125
+    },
+    "cpu_one_core_percent": {
+      "median": 85.79877868843536,
+      "min": 85.38230134973603,
+      "max": 86.00141723716719
+    },
+    "cpu_seconds": {
+      "median": 7.65,
+      "min": 7.640000000000001,
+      "max": 7.77
+    },
+    "wall_seconds": {
+      "median": 8.947990250000004,
+      "min": 8.916210833000036,
+      "max": 9.034734832999987
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "flashlist-5",
+    "engine": "flashlist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 429.0625,
+      "min": 427.96875,
+      "max": 431.546875
+    },
+    "cpu_one_core_percent": {
+      "median": 86.38011494841744,
+      "min": 86.01556912763135,
+      "max": 86.93507684391764
+    },
+    "cpu_seconds": {
+      "median": 8.06,
+      "min": 7.840000000000002,
+      "max": 9.340000000000002
+    },
+    "wall_seconds": {
+      "median": 9.330851209000002,
+      "min": 9.018224040999996,
+      "max": 10.858499332999997
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  },
+  {
+    "platform": "ios",
+    "name": "flatlist-5",
+    "engine": "flatlist",
+    "rows": 5,
+    "mode": "perf",
+    "block_ms": 160,
+    "n": 3,
+    "memory_after_mib": {
+      "median": 465.453125,
+      "min": 445.015625,
+      "max": 476.28125
+    },
+    "cpu_one_core_percent": {
+      "median": 89.60407049096747,
+      "min": 89.26171012885568,
+      "max": 89.95428566027826
+    },
+    "cpu_seconds": {
+      "median": 8.360000000000001,
+      "min": 8.27,
+      "max": 8.719999999999999
+    },
+    "wall_seconds": {
+      "median": 9.293609458000049,
+      "min": 9.264890834,
+      "max": 9.731700749999987
+    },
+    "late_callback_percent": {
+      "median": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "callback_p95_ms": {
+      "median": 16.666667070239782,
+      "min": 16.666667070239782,
+      "max": 16.666667070239782
+    },
+    "renders_per_100_rows": null
+  }
+]
