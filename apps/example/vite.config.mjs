@@ -7,7 +7,7 @@ export default defineConfig((env) =>
   mergeConfig(config(env), {
     resolve: {
       alias: {
-        'react-native': new URL('./src/web/reactNative.ts', import.meta.url)
+        'react-native': new URL('./src/web/reactNative.js', import.meta.url)
           .pathname,
         [pack.name]: new URL(
           '../../packages/zerolist/src/index.tsx',
