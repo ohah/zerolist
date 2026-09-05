@@ -80,6 +80,9 @@ class SoloActivity : ReactActivity() {
           putString("engine", intent.getStringExtra("engine") ?: "flatlist")
           putInt("count", intent.getIntExtra("count", 20_000))
           putString("cell", intent.getStringExtra("cell") ?: "complex")
+          putBoolean("legacyRecycling", intent.getBooleanExtra("legacyRecycling", false))
+          putBoolean("audit", intent.getBooleanExtra("audit", false))
+          putInt("bindingDelayMs", intent.getIntExtra("bindingDelayMs", 0))
           putString("diagnostic", intent.getStringExtra("diagnostic") ?: "normal")
         }
     }

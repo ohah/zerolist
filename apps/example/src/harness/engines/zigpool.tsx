@@ -1,5 +1,5 @@
-import { forwardRef, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { forwardRef, useEffect, useRef, useState } from 'react';
+import { StyleSheet, View, useWindowDimensions } from 'react-native';
 import ZlPoolList from '../../../specs/ZlPoolListNativeComponent';
 import { Cell } from '../cells';
 import type { ListEngineProps } from '../types';
@@ -7,14 +7,9 @@ import type { Scrollable } from '../flingDriver';
 import { inst } from '../instrument';
 import { useNoopScrollable } from './shared';
 
-// ZeroList③ #25: 네이티브가 slot↔dataIndex 의 단일 권위. POOL 슬롯은
-// 고정 identity(key={s}, remount 없음). 네이티브가 스크롤·Zig 로
-// binding 산출·자기배치(프레임당 JS 0). binding csv 변경시만 하달 →
-// JS 는 **그대로 적용만**(자체 ring 파생 금지 = #24 의 JS-파생 desync
-// 제거). slot s 내용 = data[binds[s]]; Cell(memo)라 바뀐 슬롯만 리렌더.
-// 한계: 위치는 네이티브가 항상 정합하나, 내용은 이 setBinds 가 ~1
-// 이벤트지연이라 빠른 플링 중 잠깐 직전 행이 보일 수 있다(at-rest
-// 정합). 측정 무효(횟수 지표 전용, 시간 아님).
+// React가 내용과 committedBinds를 같은 커밋으로 전달한다.
+// 네이티브는 요청한 미래 인덱스 대신 실제 반영된 매핑으로 셀을 배치한다.
+// 지연된 이벤트는 버전으로 거르고, 양방향 여유 셀로 역스크롤을 준비한다.
 const POOL = 14;
 const initBinds = (n: number) => Array.from({ length: n }, (_, i) => i);
 
@@ -23,17 +18,50 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
     useNoopScrollable(ref);
     const rh = p.fixedHeight ?? 88;
     const data = p.items;
-    const n = Math.min(POOL, data.length);
-    const [binds, setBinds] = useState<number[]>(() => initBinds(n));
+    const { height } = useWindowDimensions();
+    const n = Math.min(
+      p.legacyRecycling ? POOL : Math.max(POOL, Math.ceil(height / rh) + 10),
+      data.length
+    );
+    const [binding, setBinding] = useState(() => ({
+      version: -1,
+      binds: initBinds(n),
+    }));
+    const binds = binding.binds;
+    const timers = useRef(new Set<ReturnType<typeof setTimeout>>());
+    useEffect(() => {
+      const pending = timers.current;
+      return () => {
+        for (const timer of pending) clearTimeout(timer);
+        pending.clear();
+      };
+    }, []);
     return (
       <ZlPoolList
         count={data.length}
         rowHeight={rh}
+        committedBinds={binds.join(',')}
+        overscan={p.legacyRecycling ? 0 : 5}
+        legacyRecycling={p.legacyRecycling ?? false}
+        audit={p.audit ?? false}
         // 인라인 타입: codegen 이벤트 타입을 tsc 가 해석 못 함(앱-local).
-        onRecycle={(e: { nativeEvent: { binds: string } }) => {
+        onRecycle={(e: { nativeEvent: { binds: string; version: number } }) => {
           inst.cb(); // ③ JS 콜백 = binding 변경시만(스크롤 프레임 아님)
           if (p.diagnostic !== 'freeze-content') {
-            setBinds(e.nativeEvent.binds.split(',').map(Number));
+            const { binds: encoded, version } = e.nativeEvent;
+            const apply = () =>
+              setBinding((previous) =>
+                version > previous.version
+                  ? { version, binds: encoded.split(',').map(Number) }
+                  : previous
+              );
+            if (p.bindingDelayMs) {
+              const timer = setTimeout(() => {
+                timers.current.delete(timer);
+                apply();
+              }, p.bindingDelayMs);
+              timers.current.add(timer);
+            } else apply();
           }
         }}
         style={styles.fill}

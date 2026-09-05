@@ -1,15 +1,11 @@
-// ZeroList③ iOS #25: Android ZlPoolList 의 iOS Fabric 포팅. 네이티브가
-// slot↔dataIndex(ring) 의 단일 권위. UIScrollView 가 스크롤/모멘텀
-// (프레임당 JS 0). windowStart 가 바뀔 때만 슬롯 frame 재배치 +
-// binding csv 하달(onRecycle{binds}, codegen EventEmitter) → JS 는
-// 그대로 적용(자체 ring 파생 X = #24 desync 제거). 한계: 위치는 항상
-// 정합하나 내용은 JS state ~1 이벤트지연 → 빠른 플링 중 잠깐 stale
-// (at-rest 정합 — #24 영구겹침 해소).
+// React의 내용 커밋과 같은 매핑으로 배치한다. 이전 동작은 비교 옵션으로 남긴다.
 #import <React/RCTViewComponentView.h>
 #import <React/RCTComponentViewFactory.h>
 #import <UIKit/UIKit.h>
 #import <string>
 #import <vector>
+#import <sstream>
+#import <QuartzCore/QuartzCore.h>
 
 #import <react/renderer/components/ZlExampleSpec/ComponentDescriptors.h>
 #import <react/renderer/components/ZlExampleSpec/EventEmitters.h>
@@ -34,6 +30,13 @@ using namespace facebook::react;
   // windowStart 불변 프레임은 frame 재배치·csv·emit 전부 스킵
   // (슬롯은 content 고정좌표라 UIScrollView 가 스크롤 처리).
   NSInteger _lastStart;
+  std::vector<NSInteger> _committed;
+  NSInteger _overscan;
+  int32_t _version;
+  BOOL _legacyRecycling;
+  BOOL _audit;
+  CADisplayLink *_auditLink;
+  NSUInteger _auditFrame;
 }
 
 // app-local Fabric 컴포넌트는 codegen ThirdPartyComponentsProvider 에
@@ -54,7 +57,9 @@ using namespace facebook::react;
   if (self = [super initWithFrame:frame]) {
     _slots = [NSMutableArray new];
     _lastStart = NSIntegerMin;
+    _overscan = 5;
     _scroll = [[UIScrollView alloc] initWithFrame:frame];
+    _scroll.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     _scroll.delegate = self;
     _scroll.showsVerticalScrollIndicator = YES;
     self.contentView = _scroll;
@@ -86,7 +91,7 @@ using namespace facebook::react;
   int32_t f = 0, l = 0;
   zl_visible_range(_offsets.data(), (size_t)_count, y, vp, &f, &l);
   NSInteger start =
-      std::max<NSInteger>(0, std::min<NSInteger>(f, _count - pool));
+      std::max<NSInteger>(0, std::min<NSInteger>(f - _overscan, _count - pool));
   // 슬롯은 content 고정좌표(offsets[ring])라 UIScrollView 가 스크롤
   // 처리 → windowStart 불변 프레임은 frame·csv·emit 전부 불필요.
   if (start == _lastStart) return;
@@ -95,15 +100,59 @@ using namespace facebook::react;
   for (NSInteger s = 0; s < pool; s++) {
     // ring(packages/zerolist/src/virtualizer.ts ringIndex 와 동일 계약)
     NSInteger idx = start + (((s - start) % pool) + pool) % pool;
-    _slots[(NSUInteger)s].frame =
+    if (_legacyRecycling) _slots[(NSUInteger)s].frame =
         CGRectMake(0, _offsets[(size_t)idx], self.bounds.size.width, _rowH);
     if (s) binds += ',';
     binds += std::to_string((long)idx);
   }
   if (_eventEmitter) {
     std::static_pointer_cast<const ZlPoolListEventEmitter>(_eventEmitter)
-        ->onRecycle({.binds = binds});
+        ->onRecycle({.binds = binds, .version = ++_version});
   }
+}
+
+- (void)placeCommitted {
+  for (NSUInteger slot = 0; slot < _slots.count; slot++) {
+    UIView *view = _slots[slot];
+    NSInteger idx = slot < _committed.size() ? _committed[slot] : -1;
+    view.hidden = idx < 0 || idx >= _count || _offsets.empty();
+    if (!view.hidden) view.frame = CGRectMake(0, _offsets[(size_t)idx], self.bounds.size.width, _rowH);
+  }
+}
+
+// 실제 텍스트와 셀 위치에서 구한 항목 번호를 비교한다.
+- (NSInteger)titleIndex:(UIView *)view {
+  NSString *label = view.accessibilityLabel;
+  if ([label hasPrefix:@"#"]) return [[label substringFromIndex:1] integerValue];
+  for (UIView *child in view.subviews) {
+    NSInteger found = [self titleIndex:child];
+    if (found >= 0) return found;
+  }
+  return -1;
+}
+- (void)auditFrame:(CADisplayLink *)link {
+  if (!_audit || _rowH <= 0 || !self.window) return;
+  CGFloat y = _scroll.contentOffset.y, height = _scroll.bounds.size.height;
+  CGFloat viewportStart=MAX(0,-y), viewportEnd=MIN(height,_scroll.contentSize.height-y);
+  NSInteger wrong = 0, visible = 0;
+  std::vector<std::pair<CGFloat,CGFloat>> spans;
+  for (UIView *view in _slots) {
+    CGFloat top = view.frame.origin.y - y, bottom = top + view.frame.size.height;
+    if (view.hidden || bottom <= viewportStart || top >= viewportEnd) continue;
+    visible++;
+    NSInteger expected = (NSInteger)llround(view.frame.origin.y / _rowH);
+    if ([self titleIndex:view] != expected) wrong++;
+    spans.emplace_back(MAX(viewportStart,top), MIN(viewportEnd,bottom));
+  }
+  std::sort(spans.begin(),spans.end());
+  CGFloat end=viewportStart, covered=0, overlap=0;
+  for (auto span : spans) { overlap+=MAX(0,MIN(end,span.second)-span.first); covered+=MAX(0,span.second-MAX(end,span.first)); end=MAX(end,span.second); }
+  NSLog(@"ZlAudit frame=%lu y=%.0f wrong=%ld visible=%ld blank=%.0f overlap=%.0f version=%d",(unsigned long)++_auditFrame,y,(long)wrong,(long)visible,MAX(0,viewportEnd-viewportStart)-covered,overlap,_version);
+}
+- (void)didMoveToWindow {
+  [super didMoveToWindow];
+  [_auditLink invalidate]; _auditLink=nil;
+  if (self.window && _audit) { _auditLink=[CADisplayLink displayLinkWithTarget:self selector:@selector(auditFrame:)]; [_auditLink addToRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes]; }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -114,6 +163,14 @@ using namespace facebook::react;
            oldProps:(const Props::Shared &)oldProps {
   const auto &p = *std::static_pointer_cast<const ZlPoolListProps>(props);
   BOOL changed = NO;
+  _legacyRecycling = p.legacyRecycling;
+  _overscan = MAX(0,p.overscan);
+  if (_audit != p.audit) { _audit = p.audit; [self didMoveToWindow]; }
+  _committed.clear();
+  std::istringstream stream(p.committedBinds);
+  std::string part;
+  while (std::getline(stream,part,',')) { char *end=nullptr; long value=strtol(part.c_str(),&end,10); _committed.push_back(end != part.c_str() && *end == '\0' ? value : -1); }
+  [self setNeedsLayout];
   if ((NSInteger)p.count != _count) {
     _count = (NSInteger)p.count;
     changed = YES;
@@ -149,11 +206,13 @@ using namespace facebook::react;
   if (!_offsets.empty())
     _scroll.contentSize =
         CGSizeMake(self.bounds.size.width, _offsets[(size_t)_count]);
-  _lastStart = NSIntegerMin; // bounds 변화 시 슬롯 폭 재적용 강제
   [self layoutSlots];
+  if (!_legacyRecycling) [self placeCommitted];
 }
 
 - (void)prepareForRecycle {
+  [_auditLink invalidate]; _auditLink=nil;
+  _committed.clear();
   _scroll.delegate = nil;
   [_slots removeAllObjects];
   _offsets.clear();

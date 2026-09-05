@@ -7,16 +7,23 @@ import type { ViewProps } from 'react-native';
 import type {
   DirectEventHandler,
   Int32,
+  WithDefault,
 } from 'react-native/Libraries/Types/CodegenTypes';
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
 
 interface NativeProps extends ViewProps {
   count: Int32;
   rowHeight: Int32;
+  committedBinds: string;
+  overscan: Int32;
+  legacyRecycling?: WithDefault<boolean, false>;
+  audit?: WithDefault<boolean, false>;
   // #25: 네이티브가 slot↔dataIndex 의 단일 권위. binding 이 바뀔 때만
   // csv(슬롯 s → 데이터인덱스, 콤마구분) 하달 → JS 는 *적용만*(자체
   // ring 파생 금지 = #24 desync 원인). codegen-안전한 string 페이로드.
-  onRecycle?: DirectEventHandler<Readonly<{ binds: string }>> | null;
+  onRecycle?: DirectEventHandler<
+    Readonly<{ binds: string; version: Int32 }>
+  > | null;
 }
 
 export default codegenNativeComponent<NativeProps>('ZlPoolList');

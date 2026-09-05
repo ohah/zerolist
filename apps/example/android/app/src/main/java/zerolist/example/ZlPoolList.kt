@@ -1,6 +1,11 @@
 package zerolist.example
 
 import android.util.Log
+import android.view.View
+import android.view.ViewGroup
+import android.view.ViewTreeObserver
+import android.widget.TextView
+import kotlin.math.roundToInt
 import android.view.MotionEvent
 import android.view.VelocityTracker
 import android.view.ViewConfiguration
@@ -19,19 +24,61 @@ import com.facebook.react.viewmanagers.ZlPoolListManagerInterface
 import java.nio.ByteBuffer
 import java.nio.DoubleBuffer
 
-// ZeroList③ #25: 네이티브 스레드 Zig 가 JSX 셀 풀을 구동(프레임당
-// JS 0). 네이티브가 slot↔dataIndex(ring) 의 단일 권위. 매 프레임
-// slot s 를 offsets[ring(s,windowStart)]-scrollY 에 자기배치(child
-// 순서 무관). windowStart 가 바뀔 때만 binding csv 를 JS 에 하달
-// (onRecycle{binds}) → JS 는 그대로 적용(자체 ring 파생 X = #24
-// desync 제거). PoC 한계: 위치는 네이티브가 항상 정합하나, 내용은
-// JS state 가 ~1 이벤트지연이라 빠른 플링 중 새 위치에 직전 행이
-// 잠깐 보일 수 있다(at-rest 는 정합 — #24 영구겹침 해소).
+// React가 내용과 함께 확정한 매핑으로 배치한다. legacyRecycling은 비교용이다.
 class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   // Solo-only ablation, intentionally not a usable list. Default path unchanged.
   private val freezePosition = ctx.currentActivity?.intent?.getStringExtra("diagnostic") == "freeze-position"
   private val traceEnabled = ctx.currentActivity?.intent?.getBooleanExtra("trace", false) == true
   private var positionsInitialized = false
+  private var committed = intArrayOf()
+  private var overscan = 5
+  private var legacyRecycling = false
+  private var audit = false
+  private var version = 0
+  private var auditFrame = 0
+  private val beforeDraw = ViewTreeObserver.OnPreDrawListener {
+    if (!legacyRecycling) placeCommitted()
+    if (audit) auditSlots()
+    true
+  }
+  fun setCommittedBinds(value: String?) { committed = value.orEmpty().split(',').mapNotNull { it.toIntOrNull() }.toIntArray(); invalidate() }
+  fun setOverscan(value: Int) { overscan = value.coerceAtLeast(0); lastWindowStart = -1; invalidate() }
+  fun setLegacyRecycling(value: Boolean) { legacyRecycling = value; lastWindowStart = -1; invalidate() }
+  fun setAudit(value: Boolean) { audit = value }
+  override fun onAttachedToWindow() { super.onAttachedToWindow(); viewTreeObserver.addOnPreDrawListener(beforeDraw) }
+
+  private fun placeCommitted() {
+    val d = offD ?: return
+    for (s in 0 until childCount) {
+      val child = getChildAt(s)
+      val index = committed.getOrNull(s) ?: -1
+      child.visibility = if (index in 0 until count) View.VISIBLE else View.INVISIBLE
+      if (index in 0 until count) child.translationY = (d.get(index) - scrollY).toFloat()
+    }
+  }
+  private fun titleIndex(view: View): Int? {
+    if (view is TextView) Regex("^#(\\d+)").find(view.text.toString())?.let { return it.groupValues[1].toInt() }
+    if (view is ViewGroup) for (i in 0 until view.childCount) titleIndex(view.getChildAt(i))?.let { return it }
+    return null
+  }
+  private fun auditSlots() {
+    if (rowPxF <= 0 || height <= 0) return
+    var wrong = 0; var visible = 0
+    val spans = mutableListOf<Pair<Float, Float>>()
+    for (s in 0 until childCount) {
+      val child = getChildAt(s)
+      val top = child.top + child.translationY
+      val bottom = top + child.height
+      if (child.visibility != View.VISIBLE || bottom <= 0 || top >= height) continue
+      visible++
+      val expected = ((top + scrollY) / rowPxF).roundToInt()
+      if (titleIndex(child) != expected) wrong++
+      spans.add(maxOf(0f, top) to minOf(height.toFloat(), bottom))
+    }
+    var end = 0f; var covered = 0f; var overlap = 0f
+    for ((a,b) in spans.sortedBy { it.first }) { overlap += maxOf(0f, minOf(end,b)-a); covered += maxOf(0f,b-maxOf(end,a)); end=maxOf(end,b) }
+    Log.i("ZlAudit", "frame=${++auditFrame} y=$scrollY wrong=$wrong visible=$visible blank=${(height-covered).roundToInt()} overlap=${overlap.roundToInt()} version=$version")
+  }
   private var count = 0
   private var rowPxF = 0f
   private var builtCount = -1
@@ -91,13 +138,11 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     if (clamped == scrollY) return
     scrollY = clamped
     reposition()
+    if (!legacyRecycling) invalidate()
   }
 
-  // 매 프레임(JS 0): Zig 로 가시 first → windowStart. 네이티브가
-  // binding[s]=ring(s) 의 단일 권위 — 슬롯 s 를 offsets[binding[s]]-
-  // scrollY 에 자기배치(committed binding 으로; 매 프레임 새 windowStart
-  // 로 앞서가지 않음). binding csv 가 바뀔 때만 그 csv 를 JS 에 하달
-  // → JS 는 그대로 적용(자체 파생 X). slot-index 고정 → 재정렬 없음.
+  // 가시 범위와 양방향 여유 범위를 요청한다. 새 요청으로 즉시 이동하지 않고
+  // React가 내용을 반영한 committed 매핑을 그리기 직전에 적용한다.
   private fun reposition() {
     if (traceEnabled) android.os.Trace.beginSection("ZL.reposition")
     try { repositionImpl() } finally {
@@ -114,10 +159,10 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     )
     val first = ZlEngine.firstOf(packed)
     // 풀이 데이터 끝을 넘지 않도록 clamp(뷰포트 ≤ 풀 가정).
-    val windowStart = first.coerceIn(0, maxOf(0, count - n))
+    val windowStart = (first - overscan).coerceIn(0, maxOf(0, count - n))
     // 위치는 매 프레임 갱신(scrollY 추적). bind 는 windowStart 의
     // 순수 함수라 ring 으로 자기배치.
-    if (!freezePosition || !positionsInitialized) {
+    if (legacyRecycling && (!freezePosition || !positionsInitialized)) {
       for (s in 0 until n) {
         getChildAt(s).translationY =
           (d.get(ring(s, windowStart, n)) - scrollY).toFloat()
@@ -135,6 +180,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
       sb.append(ring(s, windowStart, n))
     }
     val binds = sb.toString()
+    version++
     emitRecycle(binds)
     if (checks < RECYCLE_LOG_SAMPLES) {
       checks++
@@ -149,11 +195,12 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     val surfaceId = UIManagerHelper.getSurfaceId(rc)
     UIManagerHelper
       .getEventDispatcher(rc, surfaceId)
-      ?.dispatchEvent(RecycleEvent(surfaceId, id, binds))
+      ?.dispatchEvent(RecycleEvent(surfaceId, id, binds, version))
   }
 
   override fun onLayout(c: Boolean, l: Int, t: Int, r: Int, b: Int) {
     super.onLayout(c, l, t, r, b)
+    if (rowPxF > 0) for (slot in 0 until childCount) getChildAt(slot).layout(0, 0, width, rowPxF.roundToInt())
     reposition()
   }
 
@@ -210,6 +257,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     scroller.forceFinished(true)
     tracker?.recycle()
     tracker = null
+    viewTreeObserver.removeOnPreDrawListener(beforeDraw)
     super.onDetachedFromWindow()
   }
 
@@ -217,10 +265,11 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     surfaceId: Int,
     viewId: Int,
     private val binds: String,
+    private val version: Int,
   ) : Event<RecycleEvent>(surfaceId, viewId) {
     override fun getEventName() = "topRecycle"
     override fun getEventData(): WritableMap =
-      Arguments.createMap().apply { putString("binds", binds) }
+      Arguments.createMap().apply { putString("binds", binds); putInt("version", version) }
   }
 
   companion object {
@@ -240,6 +289,11 @@ class ZlPoolListManager :
     ZlPoolListView(ctx)
 
   override fun getDelegate(): ViewManagerDelegate<ZlPoolListView> = delegate
+
+  override fun setCommittedBinds(view: ZlPoolListView, value: String?) { view.setCommittedBinds(value) }
+  override fun setOverscan(view: ZlPoolListView, value: Int) { view.setOverscan(value) }
+  override fun setLegacyRecycling(view: ZlPoolListView, value: Boolean) { view.setLegacyRecycling(value) }
+  override fun setAudit(view: ZlPoolListView, value: Boolean) { view.setAudit(value) }
 
   override fun setCount(view: ZlPoolListView, value: Int) {
     view.setCount(value)

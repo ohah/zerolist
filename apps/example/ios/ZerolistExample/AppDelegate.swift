@@ -23,9 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     window = UIWindow(frame: UIScreen.main.bounds)
 
+    let env = ProcessInfo.processInfo.environment
+    let solo = env["ZL_SOLO"] == "1"
+    let initial: [String: Any]? = solo ? [
+      "engine": env["ZL_ENGINE"] ?? "zigpool",
+      "count": Int(env["ZL_COUNT"] ?? "100000") ?? 100000,
+      "cell": env["ZL_CELL"] ?? "heavy",
+      "legacyRecycling": env["ZL_LEGACY"] == "1",
+      "audit": env["ZL_AUDIT"] == "1",
+      "bindingDelayMs": Int(env["ZL_DELAY"] ?? "0") ?? 0
+    ] : nil
     factory.startReactNative(
-      withModuleName: "ZerolistExample",
+      withModuleName: solo ? "ZLSolo" : "ZerolistExample",
       in: window,
+      initialProperties: initial,
       launchOptions: launchOptions
     )
 

@@ -16,6 +16,9 @@ export default function Solo(props: {
   count?: number;
   cell?: string;
   diagnostic?: 'normal' | 'freeze-content' | 'freeze-position';
+  legacyRecycling?: boolean;
+  audit?: boolean;
+  bindingDelayMs?: number;
 }) {
   const engineId = (props.engine ?? 'flatlist') as EngineId;
   const count = Number(props.count ?? 20000);
@@ -45,6 +48,9 @@ export default function Solo(props: {
     <View style={s.fill}>
       <Engine
         diagnostic={props.diagnostic}
+        legacyRecycling={props.legacyRecycling}
+        audit={props.audit}
+        bindingDelayMs={props.bindingDelayMs}
         items={items}
         cell={cell}
         height="fixed"

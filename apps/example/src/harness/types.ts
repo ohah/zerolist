@@ -48,6 +48,9 @@ export interface FrameStats {
 export interface ListEngineProps {
   /** Solo-only causal experiment; frozen variants are not functional lists. */
   diagnostic?: 'normal' | 'freeze-content' | 'freeze-position';
+  legacyRecycling?: boolean;
+  audit?: boolean;
+  bindingDelayMs?: number;
   items: Item[];
   cell: CellType;
   height: HeightMode;
