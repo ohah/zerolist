@@ -3,6 +3,7 @@ package zerolist.example
 import android.os.Bundle
 import android.os.Handler
 import android.os.HandlerThread
+import android.os.SystemClock
 import android.view.FrameMetrics
 import android.view.MotionEvent
 import android.view.Window
@@ -17,6 +18,20 @@ import com.facebook.react.defaults.DefaultReactActivityDelegate
 // extra → getLaunchOptions → initialProps 로 전달.
 // 예: am start -n PKG/.SoloActivity --es engine flatlist --ei count 20000
 class SoloActivity : ReactActivity() {
+  // Diagnostic only: preserve drawing cadence across short gaps between gestures.
+  // Extra frames consume work/power; this is not enabled in normal operation.
+  private var keepAliveUntil = 0L
+  private var keepAlivePosted = false
+  private val keepAliveFrame = object : Runnable {
+    override fun run() {
+      if (SystemClock.uptimeMillis() < keepAliveUntil) {
+        window.decorView.invalidate()
+        window.decorView.postOnAnimation(this)
+      } else {
+        keepAlivePosted = false
+      }
+    }
+  }
   private var frameThread: HandlerThread? = null
   private var frameListener: Window.OnFrameMetricsAvailableListener? = null
 
@@ -35,6 +50,13 @@ class SoloActivity : ReactActivity() {
   }
 
   override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+    if (intent.getBooleanExtra("keepAlive", false)) {
+      keepAliveUntil = SystemClock.uptimeMillis() + 250
+      if (!keepAlivePosted) {
+        keepAlivePosted = true
+        window.decorView.postOnAnimation(keepAliveFrame)
+      }
+    }
     if (intent.getBooleanExtra("trace", false) &&
         (event.actionMasked == MotionEvent.ACTION_DOWN || event.actionMasked == MotionEvent.ACTION_UP)) {
       Log.i("ZlFrame", "touch action=${event.actionMasked} nano=${System.nanoTime()}")
@@ -43,6 +65,7 @@ class SoloActivity : ReactActivity() {
   }
 
   override fun onDestroy() {
+    window.decorView.removeCallbacks(keepAliveFrame)
     frameListener?.let { window.removeOnFrameMetricsAvailableListener(it) }
     frameThread?.quitSafely()
     super.onDestroy()
