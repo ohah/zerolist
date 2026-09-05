@@ -7,13 +7,23 @@ cd "$(dirname "$0")"
 echo "▶ zig build (ios + android)"
 zig build
 
+# Zig's archive layout can leave Mach-O members only 2-byte aligned.
+# Apple's linker requires 8-byte alignment; repack with the platform archiver.
+APPLE_ARCHIVES="$(mktemp -d)"
+trap 'rm -rf "$APPLE_ARCHIVES"' EXIT
+for TARGET in ios-arm64 ios-arm64-simulator; do
+  mkdir -p "$APPLE_ARCHIVES/$TARGET"
+  xcrun libtool -static -o "$APPLE_ARCHIVES/$TARGET/libzerolist_engine.a" \
+    "zig-out/$TARGET/libzerolist_engine.a"
+done
+
 OUT="../ios/Zerolist.xcframework"
 rm -rf "$OUT"
 
 echo "▶ create-xcframework"
 xcodebuild -create-xcframework \
-  -library zig-out/ios-arm64/libzerolist_engine.a \
-  -library zig-out/ios-arm64-simulator/libzerolist_engine.a \
+  -library "$APPLE_ARCHIVES/ios-arm64/libzerolist_engine.a" \
+  -library "$APPLE_ARCHIVES/ios-arm64-simulator/libzerolist_engine.a" \
   -output "$OUT"
 
 echo "✔ $OUT"
