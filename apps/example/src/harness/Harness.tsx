@@ -4,6 +4,7 @@ import {
   Text,
   Pressable,
   StyleSheet,
+  useWindowDimensions,
   type LayoutChangeEvent,
 } from 'react-native';
 import { nativeLog, jsRef } from '@ohah/zerolist';
@@ -15,6 +16,7 @@ import type {
   HeightMode,
   ScrollScenario,
 } from './types';
+import { fixedCellHeight } from './cellLayout';
 import { makeItems, nominalExtent } from './data';
 import { FrameRecorder, JsThreadHog, statsFromDeltas } from './metrics';
 import { drive, type Scrollable } from './flingDriver';
@@ -107,10 +109,12 @@ export default function Harness() {
   const maxY = useRef(0); // 측정 중 실제 도달한 스크롤 오프셋(커버리지)
   const renderedIds = useRef(new Set<number>()); // 측정 중 실제 렌더된 셀
 
+  const { width, fontScale } = useWindowDimensions();
+  const rowHeight = fixedCellHeight(cfg.cell, width, fontScale);
   const Engine = ENGINES[cfg.engine];
   const items = useMemo(
-    () => makeItems(cfg.count, cfg.height),
-    [cfg.count, cfg.height]
+    () => makeItems(cfg.count, cfg.height, rowHeight),
+    [cfg.count, cfg.height, rowHeight]
   );
   // 패리티: 모든 엔진에 동일 레이아웃 힌트 전달.
   const offsets = useMemo(() => {
@@ -147,7 +151,11 @@ export default function Harness() {
     // 높이는 콘텐츠 의존이라 근사 — flingDriver/메모리에 명시된 한계.
     const maxOffset = Math.max(
       0,
-      nominalExtent(c.count, c.height) - viewport.current
+      nominalExtent(
+        c.count,
+        c.height,
+        fixedCellHeight(c.cell, width, fontScale)
+      ) - viewport.current
     );
     maxY.current = 0;
     const hog = new JsThreadHog();

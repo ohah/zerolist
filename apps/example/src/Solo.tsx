@@ -1,8 +1,9 @@
 import { useEffect, useMemo } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, useWindowDimensions } from 'react-native';
 import { jsRef } from '@ohah/zerolist';
 import { ENGINES } from './harness/engines';
 import { makeItems } from './harness/data';
+import { fixedCellHeight } from './harness/cellLayout';
 import { inst } from './harness/instrument';
 import type { CellType, EngineId } from './harness/types';
 
@@ -20,7 +21,12 @@ export default function Solo(props: {
   const cell = (props.cell ?? 'complex') as CellType;
   const Engine = ENGINES[engineId];
 
-  const items = useMemo(() => makeItems(count, 'fixed'), [count]);
+  const { width, fontScale } = useWindowDimensions();
+  const rowHeight = fixedCellHeight(cell, width, fontScale);
+  const items = useMemo(
+    () => makeItems(count, 'fixed', rowHeight),
+    [count, rowHeight]
+  );
   const offsets = useMemo(() => {
     const hs = new Float32Array(items.length);
     for (let i = 0; i < items.length; i++) hs[i] = items[i]!.height;

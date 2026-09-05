@@ -31,7 +31,7 @@ const HEAVY_ITERS = 4000; // 셀당 동기 연산 부하 (변별용 코스트 kn
 
 // 무거운 셀: 렌더마다 동기 연산 + 64 서브뷰 + 이미지. 실제 무거운
 // 앱의 행을 모사 — 재활용/재렌더 비용을 표면화한다.
-function HeavyCell({ item }: { item: Item }) {
+function HeavyCell({ item, sized }: { item: Item; sized: boolean }) {
   let acc = 0;
   for (let i = 0; i < HEAVY_ITERS; i++)
     acc += Math.sqrt((i * (item.id + 1)) % 97);
@@ -43,7 +43,9 @@ function HeavyCell({ item }: { item: Item }) {
           <Text style={styles.title} numberOfLines={1}>
             {item.title}
           </Text>
-          <Text style={styles.body}>{item.body}</Text>
+          <Text style={styles.body} numberOfLines={sized ? 3 : undefined}>
+            {item.body}
+          </Text>
           <Text style={styles.body}>∑={acc.toFixed(1)}</Text>
         </View>
       </View>
@@ -110,7 +112,7 @@ function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
   if (cell === 'heavy') {
     return (
       <View style={[style, styles.complex]} onLayout={onLayout}>
-        <HeavyCell item={item} />
+        <HeavyCell item={item} sized={sized} />
       </View>
     );
   }
@@ -123,7 +125,9 @@ function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
           <Text style={styles.title} numberOfLines={1}>
             {item.title}
           </Text>
-          <Text style={styles.body}>{item.body}</Text>
+          <Text style={styles.body} numberOfLines={sized ? 3 : undefined}>
+            {item.body}
+          </Text>
         </View>
       </View>
       <View style={styles.tags}>
@@ -151,8 +155,8 @@ const styles = StyleSheet.create({
   complex: { gap: 8 },
   flex: { flex: 1 },
   thumb: { width: 56, height: 56, borderRadius: 8, backgroundColor: '#ccc' },
-  title: { fontSize: 15, fontWeight: '700', color: '#111' },
-  body: { fontSize: 13, color: '#444', marginTop: 2 },
+  title: { lineHeight: 20, fontSize: 15, fontWeight: '700', color: '#111' },
+  body: { lineHeight: 18, fontSize: 13, color: '#444', marginTop: 2 },
   tags: { flexDirection: 'row', gap: 6, alignItems: 'center' },
   tag: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 10 },
   tagText: { fontSize: 11, color: '#222' },

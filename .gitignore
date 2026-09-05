@@ -93,3 +93,6 @@ zig-out/
 
 # React Native Nitro Modules
 nitrogen/
+
+# Web build output
+dist/
