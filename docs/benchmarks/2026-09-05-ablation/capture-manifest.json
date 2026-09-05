@@ -1,0 +1,662 @@
+[
+  {
+    "engine": "flatlist",
+    "cell": "complex",
+    "count": 100000,
+    "events": [
+      {
+        "t": 1.517,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 2.508,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 3.485,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.082,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.693,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.31,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.928,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 6.577,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 7.21,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      }
+    ],
+    "video": "complex-flatlist.mp4",
+    "wall_seconds": 9.345,
+    "source_seconds": 9.371,
+    "source_sha256": "f96a04fb26baa748d9e0a87c0ac9cfca2f0b7c8164492d6a0bf2aff27f4832ab",
+    "note": "Host emulator capture at requested 60fps; separate run from performance statistics. MP4 transcode keeps source timing. Different scroll physics apply."
+  },
+  {
+    "engine": "legend",
+    "cell": "complex",
+    "count": 100000,
+    "events": [
+      {
+        "t": 1.514,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 2.496,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 3.49,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.099,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.703,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.3,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.907,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 6.543,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 7.188,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      }
+    ],
+    "video": "complex-legend.mp4",
+    "wall_seconds": 9.323,
+    "source_seconds": 9.352,
+    "source_sha256": "4194d1dc2571770165e1f34bbc14102b9f6cbd9708d6ab7792d7c5ed41f1c31c",
+    "note": "Host emulator capture at requested 60fps; separate run from performance statistics. MP4 transcode keeps source timing. Different scroll physics apply."
+  },
+  {
+    "engine": "flashlist",
+    "cell": "complex",
+    "count": 100000,
+    "events": [
+      {
+        "t": 1.513,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 2.507,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 3.515,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.126,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.726,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.341,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.956,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 6.59,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 7.224,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      }
+    ],
+    "video": "complex-flashlist.mp4",
+    "wall_seconds": 9.361,
+    "source_seconds": 9.373,
+    "source_sha256": "5d54aa5e2e71185e731c5f89f88e2957447bbb918622c4cf087226c755f40881",
+    "note": "Host emulator capture at requested 60fps; separate run from performance statistics. MP4 transcode keeps source timing. Different scroll physics apply."
+  },
+  {
+    "engine": "zerolist",
+    "cell": "complex",
+    "count": 100000,
+    "events": [
+      {
+        "t": 1.52,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 2.512,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 3.498,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.144,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.764,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.382,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 6.001,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 6.646,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 7.296,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      }
+    ],
+    "video": "complex-zerolist.mp4",
+    "wall_seconds": 9.452,
+    "source_seconds": 9.461,
+    "source_sha256": "bf93d89b68fee4ec2c3cc292c8c98f048cba476500588c15ea68595d3c2207f9",
+    "note": "Host emulator capture at requested 60fps; separate run from performance statistics. MP4 transcode keeps source timing. Different scroll physics apply."
+  },
+  {
+    "engine": "zigpool",
+    "cell": "complex",
+    "count": 100000,
+    "events": [
+      {
+        "t": 1.522,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 2.505,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 3.487,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.09,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.699,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.304,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.92,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 6.554,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 7.184,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      }
+    ],
+    "video": "complex-zigpool.mp4",
+    "wall_seconds": 9.318,
+    "source_seconds": 9.336,
+    "source_sha256": "4577d0395f1e03ec748c7b0a5d6ed01a0bdfd29a7af14b30136ceea8bfa99105",
+    "note": "Host emulator capture at requested 60fps; separate run from performance statistics. MP4 transcode keeps source timing. Different scroll physics apply."
+  },
+  {
+    "engine": "flatlist",
+    "cell": "heavy",
+    "count": 100000,
+    "events": [
+      {
+        "t": 1.522,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 2.505,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 3.479,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.082,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.688,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.304,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.905,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 6.542,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 7.179,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      }
+    ],
+    "video": "heavy-flatlist.mp4",
+    "wall_seconds": 9.314,
+    "source_seconds": 9.32,
+    "source_sha256": "4ad01441a131a1c79f3c7f7198c49303c477186b91922025bed842cabfd44200",
+    "note": "Host emulator capture at requested 60fps; separate run from performance statistics. MP4 transcode keeps source timing. Different scroll physics apply."
+  },
+  {
+    "engine": "legend",
+    "cell": "heavy",
+    "count": 100000,
+    "events": [
+      {
+        "t": 1.522,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 2.514,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 3.499,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.108,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.714,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.317,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.934,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 6.569,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 7.212,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      }
+    ],
+    "video": "heavy-legend.mp4",
+    "wall_seconds": 9.355,
+    "source_seconds": 9.371,
+    "source_sha256": "5bf4b0c5950e64fb48d797421514cea2eda9c07d070573d330148c6a3f15ab3f",
+    "note": "Host emulator capture at requested 60fps; separate run from performance statistics. MP4 transcode keeps source timing. Different scroll physics apply."
+  },
+  {
+    "engine": "flashlist",
+    "cell": "heavy",
+    "count": 100000,
+    "events": [
+      {
+        "t": 1.522,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 2.505,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 3.488,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.106,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.72,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.32,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.919,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 6.588,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 7.24,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      }
+    ],
+    "video": "heavy-flashlist.mp4",
+    "wall_seconds": 9.396,
+    "source_seconds": 9.422,
+    "source_sha256": "dd36773a944fe58b60d09e5771d216017da82e73fc0729dbe1eb650fb7bf8855",
+    "note": "Host emulator capture at requested 60fps; separate run from performance statistics. MP4 transcode keeps source timing. Different scroll physics apply."
+  },
+  {
+    "engine": "zerolist",
+    "cell": "heavy",
+    "count": 100000,
+    "events": [
+      {
+        "t": 1.52,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 2.512,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 3.487,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.111,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.711,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.363,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 6.022,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 6.724,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 7.39,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      }
+    ],
+    "video": "heavy-zerolist.mp4",
+    "wall_seconds": 9.53,
+    "source_seconds": 9.539,
+    "source_sha256": "7d6762032196e17d277a5fee11c7b02f6e093dc85d39cf8d2dbe8c9994802193",
+    "note": "Host emulator capture at requested 60fps; separate run from performance statistics. MP4 transcode keeps source timing. Different scroll physics apply."
+  },
+  {
+    "engine": "zigpool",
+    "cell": "heavy",
+    "count": 100000,
+    "events": [
+      {
+        "t": 1.513,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 2.51,
+        "from": [540, 1800],
+        "to": [540, 600],
+        "duration_ms": 500
+      },
+      {
+        "t": 3.502,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.109,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 4.71,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.322,
+        "from": [540, 1900],
+        "to": [540, 400],
+        "duration_ms": 120
+      },
+      {
+        "t": 5.924,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 6.555,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      },
+      {
+        "t": 7.194,
+        "from": [540, 500],
+        "to": [540, 1900],
+        "duration_ms": 150
+      }
+    ],
+    "video": "heavy-zigpool.mp4",
+    "wall_seconds": 9.326,
+    "source_seconds": 9.357,
+    "source_sha256": "73cdc35eaa68f9a7f05187daa366716189677cb076012c9f3c78253397a8115a",
+    "note": "Host emulator capture at requested 60fps; separate run from performance statistics. MP4 transcode keeps source timing. Different scroll physics apply."
+  }
+]

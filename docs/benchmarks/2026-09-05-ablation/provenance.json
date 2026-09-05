@@ -1,0 +1,27 @@
+{
+  "stage1": {
+    "source": "75a8264",
+    "apk_sha256": "6de90b7fb053f2a0a112ccf253b6c9126492aab9d9b6b1a30db3ad042df5e32d"
+  },
+  "stage2": {
+    "apk_sha256": "e21d6f0b1685ad79ef5a017bbd830c7893cf88e9f17f2d91f70b605f6924c680",
+    "source": "37d99c7"
+  },
+  "environment": {
+    "device": "emulator-5554; Android 16 API 36 arm64; sdk_gphone64_arm64",
+    "screen_px": [1080, 2400],
+    "density_dpi": 420,
+    "build": "Release arm64-v8a Hermes Fabric",
+    "count": 100000,
+    "cell": "heavy",
+    "row_height_dp": 234,
+    "cell_work": "sqrt loop 4000 iterations and 64 colored child Views",
+    "gestures": "12 sequential adb swipes (540,1800)->(540,600), 300ms each",
+    "warmup_seconds": 3,
+    "settle_seconds": 1.2,
+    "repeats_main": 5,
+    "repeats_trace": 1,
+    "recording_during_statistics": false,
+    "trace_listener_during_statistics": false
+  }
+}

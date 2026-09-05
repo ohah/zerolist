@@ -1,5 +1,7 @@
 # 셀 겹침 수정 후 10만 항목 비교
 
+Follow-up: [original ZeroList included, five-list comparison and ZigPool drawing-cadence ablations](../2026-09-05-ablation/README.md). The runs below are the earlier layout-fix dataset and remain separate.
+
 이전 88dp 셀은 내용이 행 밖으로 넘쳐 겹쳤으며, 유효한 시각 비교가 아니었다. 그 영상과 표를 이번 수정 APK의 결과로 교체했다. 기존 결과와 수치 증감을 비교하지 않는다: 레이아웃, 화면 내 셀 수, 스와이프 횟수가 바뀌었다.
 
 ## 레이아웃 수정

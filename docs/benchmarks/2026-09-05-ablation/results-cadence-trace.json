@@ -1,0 +1,46 @@
+[
+  {
+    "run": 1,
+    "variant": "zigpool",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": true,
+    "keep_alive": false,
+    "frames": 274,
+    "jank_count": 12,
+    "jank_percent": 4.38,
+    "p50_ms": 17,
+    "p95_ms": 20,
+    "slow_ui": 0,
+    "slow_draw": 11,
+    "baseline": [0, 1, 0, 0],
+    "final": [26, 27, 0, 0],
+    "delta": [26, 26, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.3374, 0.6699, 1.0027, 1.3385, 1.671, 2.0038, 2.3354, 2.6695,
+      3.0073, 3.3357, 3.6692
+    ]
+  },
+  {
+    "run": 1,
+    "variant": "zigpool-keep-alive",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": true,
+    "keep_alive": true,
+    "frames": 286,
+    "jank_count": 2,
+    "jank_percent": 0.7,
+    "p50_ms": 19,
+    "p95_ms": 24,
+    "slow_ui": 0,
+    "slow_draw": 2,
+    "baseline": [0, 1, 0, 0],
+    "final": [25, 26, 0, 0],
+    "delta": [25, 25, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.3249, 0.6595, 0.9944, 1.3271, 1.6598, 1.9894, 2.3271, 2.6588,
+      2.9894, 3.3226, 3.6561
+    ]
+  }
+]
