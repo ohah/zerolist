@@ -72,3 +72,11 @@ for row,cell in enumerate(['complex','heavy']):
   d.text((i*270+8,row*655+8),n+' / '+cell_names[cell],font=font(18),fill='white')
   im.paste(Image.open(P/f'{cell}-{e}-before.png').convert('RGB').resize((270,600)),(i*270,row*655+40))
 im.save(P/'layout-check.png')
+
+# 한글 자막으로 다시 만든 영상까지 현재 파일 크기와 재생 길이를 기록한다.
+validation=[]
+for f in sorted(P.glob('*.mp4')):
+ run(['-i',str(f),'-fps_mode','passthrough','-enc_time_base','1/1000000','-f','null','-'])
+ probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration:stream=width,height','-of','json',str(f)]))
+ validation.append({'file':f.name,'bytes':f.stat().st_size,**probe})
+(P/'video-validation.json').write_text(json.dumps(validation,indent=2)+'\n')

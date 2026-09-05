@@ -1,7 +1,7 @@
 [
   {
     "file": "comparison-complex.mp4",
-    "bytes": 4824635,
+    "bytes": 4778604,
     "programs": [],
     "stream_groups": [],
     "streams": [
@@ -16,7 +16,7 @@
   },
   {
     "file": "comparison-heavy.mp4",
-    "bytes": 5127158,
+    "bytes": 5049837,
     "programs": [],
     "stream_groups": [],
     "streams": [
@@ -95,7 +95,7 @@
   },
   {
     "file": "heavy-detail-slow.mp4",
-    "bytes": 10179557,
+    "bytes": 10186739,
     "programs": [],
     "stream_groups": [],
     "streams": [
