@@ -15,14 +15,14 @@ with tempfile.TemporaryDirectory() as td:
  t=Path(td)
  for cell in ['complex','heavy']:
   im=Image.new('RGB',(1080,80),'#111827'); d=ImageDraw.Draw(im)
-  d.text((20,7),f'100,000 items / {cell} / source timeline / separate runs',font=font(21),fill='white')
+  d.text((20,7),f'100,000 items / {cell} / 1x / separate runs',font=font(21),fill='white')
   for i,n in enumerate(names):d.text((i*270+15,43),n,font=font(23),fill=colors[i])
   im.save(t/'header.png')
   inputs=[]
   for e in engines:inputs+=['-i',str(P/f'{cell}-{e}.mp4')]
   filters=';'.join(f'[{i}:v]setpts=PTS-STARTPTS,fps=30,scale=270:600[v{i}]' for i in range(4))
   filters+=';[v0][v1][v2][v3]hstack=inputs=4:shortest=1[grid];[4:v][grid]vstack=inputs=2[out]'
-  run(inputs+['-loop','1','-i',str(t/'header.png'),'-filter_complex',filters,'-map','[out]','-t',('9' if cell=='complex' else '11'),'-c:v','libx264','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart',str(P/f'comparison-{cell}.mp4')])
+  run(inputs+['-loop','1','-i',str(t/'header.png'),'-filter_complex',filters,'-map','[out]','-t','9','-c:v','libx264','-crf','23','-pix_fmt','yuv420p','-movflags','+faststart',str(P/f'comparison-{cell}.mp4')])
  # Zoom crops from exactly the same interval in each original.
  inputs=[]
  for e in engines:inputs+=['-ss','2','-t','6','-i',str(P/f'heavy-{e}.mp4')]
@@ -47,7 +47,7 @@ im.save(P/'contact-heavy.jpg',quality=85)
 rows=json.loads((P/'results-100k-heavy.json').read_text())
 im=Image.new('RGB',(1200,740),'white');d=ImageDraw.Draw(im)
 d.text((35,20),'100,000 heavy items | 5 runs | emulator | no recording',font=font(28),fill='#111827')
-for panel,(key,label,limit) in enumerate([('jank_percent','Janky frames (%) - lower is better',6),('p95_ms','Frame duration p95 (ms) - lower is better',50)]):
+for panel,(key,label,limit) in enumerate([('jank_percent','Janky frames (%) - lower is better',6),('p95_ms','Frame duration p95 (ms) - lower is better',30)]):
  left=80+panel*600; top=130;bottom=570;width=470
  d.text((left-35,85),label,font=font(21),fill='#111827')
  for j in range(6):

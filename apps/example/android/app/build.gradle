@@ -159,6 +159,7 @@ tasks.register("buildZlbridge", Exec) {
     def cppDir = file("src/main/cpp")
     def outDir = file("${buildDir}/zlbridgeJni/arm64-v8a")
     inputs.dir cppDir
+    inputs.file file("../../../../packages/zerolist/zig/zig-out/android-arm64/libzerolist_engine.a")
     outputs.file new File(outDir, "libzlbridge.so")
     commandLine "bash", file("build-zlbridge.sh"),
         "${android.sdkDirectory}/cmake/3.22.1/bin",

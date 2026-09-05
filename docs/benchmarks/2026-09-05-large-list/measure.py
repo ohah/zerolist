@@ -28,7 +28,7 @@ for rep in range(5):
   if rep==0:
    (OUT/(name+'-before.png')).write_bytes(adb('exec-out','screencap','-p',binary=True))
   adb('shell','dumpsys','gfxinfo',PKG,'reset')
-  for i in range(4): adb('shell','input','swipe','540','1800','540','600','300')
+  for i in range(int(os.environ.get('SWIPES','12'))): adb('shell','input','swipe','540','1800','540','600','300')
   time.sleep(1.2)
   gfx=adb('shell','dumpsys','gfxinfo',PKG,'framestats')
   final,log=counters(pid,engine)

@@ -246,7 +246,7 @@ export default function Harness() {
   const comparable = cfg.scenario !== 'jsBlocked';
   const disabled = !Engine || running;
   const runLabel = !Engine
-    ? `${ENGINE_LABEL[cfg.engine]} 미구현`
+    ? `${ENGINE_LABEL[cfg.engine]} 지원하지 않음`
     : running
       ? '측정 중…'
       : `Run (${WARMUP}+${RUNS})`;
@@ -335,7 +335,7 @@ export default function Harness() {
           />
         ) : (
           <Text style={styles.todo}>
-            {ENGINE_LABEL[cfg.engine]} 어댑터는 다음 Phase 에서 합류
+            {ENGINE_LABEL[cfg.engine]}는 이 플랫폼에서 실행할 수 없습니다.
           </Text>
         )}
       </View>
