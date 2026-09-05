@@ -137,14 +137,26 @@
       "name": "sync-correctness-ko.png",
       "local_file": "sync-correctness-ko.png",
       "sha256": "0f5cd0934071c6109ec5174900eb3e605edca4276db2e5adce40ed08a0cf4432"
-    },
-    {
-      "contentType": "text/markdown",
-      "href": "https://github.com/user-attachments/files/31860191/-.-.-.md",
-      "id": 31860191,
-      "name": "-.-.-.md",
-      "local_file": "제로리스트-양플랫폼-동기화-검증.md",
-      "sha256": "23058b093c4e7328ef6d7b423c13ab995f26e21fe096ccfe19818e565404d457"
     }
-  ]
+  ],
+  "unavailable_report_uploads": {
+    "reason": "gh attach 업로드 후 공개 다운로드가 404를 반환했습니다. 본문에서는 정상 접근 가능한 저장소 보고서 링크를 사용합니다.",
+    "attempts": [
+      {
+        "contentType": "text/markdown",
+        "href": "https://github.com/user-attachments/files/31860191/-.-.-.md",
+        "id": 31860191,
+        "name": "-.-.-.md",
+        "local_file": "제로리스트-양플랫폼-동기화-검증.md",
+        "sha256": "23058b093c4e7328ef6d7b423c13ab995f26e21fe096ccfe19818e565404d457"
+      },
+      {
+        "contentType": "text/markdown",
+        "href": "https://github.com/user-attachments/files/31860288/zerolist-sync-report-ko.md",
+        "id": 31860288,
+        "name": "zerolist-sync-report-ko.md"
+      }
+    ],
+    "fallback": "https://github.com/ohah/zerolist/blob/752086f/docs/benchmarks/2026-09-05-sync/README.md"
+  }
 }
