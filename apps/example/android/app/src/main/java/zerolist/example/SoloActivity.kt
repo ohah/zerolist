@@ -1,6 +1,12 @@
 package zerolist.example
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.HandlerThread
+import android.view.FrameMetrics
+import android.view.MotionEvent
+import android.view.Window
+import android.util.Log
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
@@ -11,6 +17,37 @@ import com.facebook.react.defaults.DefaultReactActivityDelegate
 // extra → getLaunchOptions → initialProps 로 전달.
 // 예: am start -n PKG/.SoloActivity --es engine flatlist --ei count 20000
 class SoloActivity : ReactActivity() {
+  private var frameThread: HandlerThread? = null
+  private var frameListener: Window.OnFrameMetricsAvailableListener? = null
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    if (intent.getBooleanExtra("trace", false)) {
+      val thread = HandlerThread("ZLFrameMetrics").also { it.start() }
+      frameThread = thread
+      val listener = Window.OnFrameMetricsAvailableListener { _, frame, dropped ->
+        fun m(id: Int) = frame.getMetric(id)
+        Log.i("ZlFrame", "frame intended=${m(FrameMetrics.INTENDED_VSYNC_TIMESTAMP)} vsync=${m(FrameMetrics.VSYNC_TIMESTAMP)} total=${m(FrameMetrics.TOTAL_DURATION)} deadline=${m(FrameMetrics.DEADLINE)} gpu=${m(FrameMetrics.GPU_DURATION)} input=${m(FrameMetrics.INPUT_HANDLING_DURATION)} layout=${m(FrameMetrics.LAYOUT_MEASURE_DURATION)} unknown=${m(FrameMetrics.UNKNOWN_DELAY_DURATION)} draw=${m(FrameMetrics.DRAW_DURATION)} sync=${m(FrameMetrics.SYNC_DURATION)} command=${m(FrameMetrics.COMMAND_ISSUE_DURATION)} swap=${m(FrameMetrics.SWAP_BUFFERS_DURATION)} first=${m(FrameMetrics.FIRST_DRAW_FRAME)} dropped=$dropped")
+      }
+      frameListener = listener
+      window.addOnFrameMetricsAvailableListener(listener, Handler(thread.looper))
+    }
+  }
+
+  override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+    if (intent.getBooleanExtra("trace", false) &&
+        (event.actionMasked == MotionEvent.ACTION_DOWN || event.actionMasked == MotionEvent.ACTION_UP)) {
+      Log.i("ZlFrame", "touch action=${event.actionMasked} nano=${System.nanoTime()}")
+    }
+    return super.dispatchTouchEvent(event)
+  }
+
+  override fun onDestroy() {
+    frameListener?.let { window.removeOnFrameMetricsAvailableListener(it) }
+    frameThread?.quitSafely()
+    super.onDestroy()
+  }
+
   override fun getMainComponentName(): String = "ZLSolo"
 
   override fun createReactActivityDelegate(): ReactActivityDelegate =
@@ -20,6 +57,7 @@ class SoloActivity : ReactActivity() {
           putString("engine", intent.getStringExtra("engine") ?: "flatlist")
           putInt("count", intent.getIntExtra("count", 20_000))
           putString("cell", intent.getStringExtra("cell") ?: "complex")
+          putString("diagnostic", intent.getStringExtra("diagnostic") ?: "normal")
         }
     }
 }

@@ -46,6 +46,8 @@ export interface FrameStats {
  * offsets/fixedHeight 를 받아 각 엔진의 최강 등가 API 에 연결한다
  * (한 엔진만 getItemLayout 받는 불공정 방지). dynamic 에선 둘 다 null. */
 export interface ListEngineProps {
+  /** Solo-only causal experiment; frozen variants are not functional lists. */
+  diagnostic?: 'normal' | 'freeze-content' | 'freeze-position';
   items: Item[];
   cell: CellType;
   height: HeightMode;

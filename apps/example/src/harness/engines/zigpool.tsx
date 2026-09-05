@@ -32,7 +32,9 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
         // 인라인 타입: codegen 이벤트 타입을 tsc 가 해석 못 함(앱-local).
         onRecycle={(e: { nativeEvent: { binds: string } }) => {
           inst.cb(); // ③ JS 콜백 = binding 변경시만(스크롤 프레임 아님)
-          setBinds(e.nativeEvent.binds.split(',').map(Number));
+          if (p.diagnostic !== 'freeze-content') {
+            setBinds(e.nativeEvent.binds.split(',').map(Number));
+          }
         }}
         style={styles.fill}
       >

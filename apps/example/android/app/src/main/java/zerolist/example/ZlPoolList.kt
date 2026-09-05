@@ -28,6 +28,10 @@ import java.nio.DoubleBuffer
 // JS state 가 ~1 이벤트지연이라 빠른 플링 중 새 위치에 직전 행이
 // 잠깐 보일 수 있다(at-rest 는 정합 — #24 영구겹침 해소).
 class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+  // Solo-only ablation, intentionally not a usable list. Default path unchanged.
+  private val freezePosition = ctx.currentActivity?.intent?.getStringExtra("diagnostic") == "freeze-position"
+  private val traceEnabled = ctx.currentActivity?.intent?.getBooleanExtra("trace", false) == true
+  private var positionsInitialized = false
   private var count = 0
   private var rowPxF = 0f
   private var builtCount = -1
@@ -68,6 +72,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     lastWindowStart = -1
     lastN = -1
     checks = 0
+    positionsInitialized = false
     requestLayout()
   }
 
@@ -94,6 +99,13 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   // 로 앞서가지 않음). binding csv 가 바뀔 때만 그 csv 를 JS 에 하달
   // → JS 는 그대로 적용(자체 파생 X). slot-index 고정 → 재정렬 없음.
   private fun reposition() {
+    if (traceEnabled) android.os.Trace.beginSection("ZL.reposition")
+    try { repositionImpl() } finally {
+      if (traceEnabled) android.os.Trace.endSection()
+    }
+  }
+
+  private fun repositionImpl() {
     val d = offD ?: return
     val n = childCount
     if (n == 0) return
@@ -105,9 +117,12 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     val windowStart = first.coerceIn(0, maxOf(0, count - n))
     // 위치는 매 프레임 갱신(scrollY 추적). bind 는 windowStart 의
     // 순수 함수라 ring 으로 자기배치.
-    for (s in 0 until n) {
-      getChildAt(s).translationY =
-        (d.get(ring(s, windowStart, n)) - scrollY).toFloat()
+    if (!freezePosition || !positionsInitialized) {
+      for (s in 0 until n) {
+        getChildAt(s).translationY =
+          (d.get(ring(s, windowStart, n)) - scrollY).toFloat()
+      }
+      positionsInitialized = true
     }
     // csv·emit 는 windowStart/n 이 바뀐 프레임에만(불변 프레임
     // 문자열 빌드/dispatch 낭비 제거).

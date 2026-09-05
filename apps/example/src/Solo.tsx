@@ -15,6 +15,7 @@ export default function Solo(props: {
   engine?: string;
   count?: number;
   cell?: string;
+  diagnostic?: 'normal' | 'freeze-content' | 'freeze-position';
 }) {
   const engineId = (props.engine ?? 'flatlist') as EngineId;
   const count = Number(props.count ?? 20000);
@@ -43,6 +44,7 @@ export default function Solo(props: {
   return (
     <View style={s.fill}>
       <Engine
+        diagnostic={props.diagnostic}
         items={items}
         cell={cell}
         height="fixed"
