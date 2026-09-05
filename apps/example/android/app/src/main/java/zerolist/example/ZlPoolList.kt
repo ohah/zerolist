@@ -29,6 +29,13 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   // Solo-only ablation, intentionally not a usable list. Default path unchanged.
   private val freezePosition = ctx.currentActivity?.intent?.getStringExtra("diagnostic") == "freeze-position"
   private val traceEnabled = ctx.currentActivity?.intent?.getBooleanExtra("trace", false) == true
+  private val bindingTrace = ctx.currentActivity?.intent?.getStringExtra("diagnostic") == "trace-binding"
+  private val tracedRequests = mutableMapOf<String, Int>()
+  private var tracedCommitVersion = -1
+  private var tracedPlacedVersion = -1
+  private fun bindingLog(phase: String, v: Int) {
+    if (bindingTrace) Log.i("ZlBinding", "phase=$phase version=$v wall=${System.currentTimeMillis()} nano=${System.nanoTime()}")
+  }
   private var positionsInitialized = false
   private var committed = intArrayOf()
   private var overscan = 5
@@ -38,10 +45,14 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private var auditFrame = 0
   private val beforeDraw = ViewTreeObserver.OnPreDrawListener {
     if (!legacyRecycling && (!freezePosition || !positionsInitialized)) { placeCommitted(); positionsInitialized=true }
+    if (bindingTrace && tracedCommitVersion != tracedPlacedVersion) {
+      tracedPlacedVersion = tracedCommitVersion
+      bindingLog("placed", tracedPlacedVersion)
+    }
     if (audit) auditSlots()
     true
   }
-  fun setCommittedBinds(value: String?) { committed = value.orEmpty().split(',').mapNotNull { it.toIntOrNull() }.toIntArray(); invalidate() }
+  fun setCommittedBinds(value: String?) { if (bindingTrace) { tracedCommitVersion = tracedRequests[value] ?: -1; bindingLog("native_commit", tracedCommitVersion) }; committed = value.orEmpty().split(',').mapNotNull { it.toIntOrNull() }.toIntArray(); invalidate() }
   fun setOverscan(value: Int) { overscan = value.coerceAtLeast(0); lastWindowStart = -1; invalidate() }
   fun setLegacyRecycling(value: Boolean) { legacyRecycling = value; lastWindowStart = -1; invalidate() }
   fun setAudit(value: Boolean) { audit = value }
@@ -188,6 +199,11 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     }
     val binds = sb.toString()
     version++
+    if (bindingTrace) {
+      if (tracedRequests.size > 512) tracedRequests.clear()
+      tracedRequests[binds] = version
+      bindingLog("request", version)
+    }
     emitRecycle(binds)
     if (checks < RECYCLE_LOG_SAMPLES) {
       checks++

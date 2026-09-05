@@ -1,4 +1,10 @@
-import { forwardRef, useEffect, useRef, useState } from 'react';
+import {
+  forwardRef,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import { StyleSheet, View, useWindowDimensions } from 'react-native';
 import ZlPoolList from '../../../specs/ZlPoolListNativeComponent';
 import { Cell } from '../cells';
@@ -28,6 +34,17 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
       binds: initBinds(n),
     }));
     const binds = binding.binds;
+    const traceBinding = p.diagnostic === 'trace-binding';
+    if (traceBinding)
+      console.log(
+        `[ZlBinding] phase=render version=${binding.version} wall=${Date.now()}`
+      );
+    useLayoutEffect(() => {
+      if (traceBinding)
+        console.log(
+          `[ZlBinding] phase=react_layout version=${binding.version} wall=${Date.now()}`
+        );
+    }, [binding.version, traceBinding]);
     const timers = useRef(new Set<ReturnType<typeof setTimeout>>());
     useEffect(() => {
       const pending = timers.current;
@@ -49,6 +66,10 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
           inst.cb(); // ③ JS 콜백 = binding 변경시만(스크롤 프레임 아님)
           if (p.diagnostic !== 'freeze-content') {
             const { binds: encoded, version } = e.nativeEvent;
+            if (traceBinding)
+              console.log(
+                `[ZlBinding] phase=receive version=${version} wall=${Date.now()}`
+              );
             const apply = () =>
               setBinding((previous) =>
                 version > previous.version

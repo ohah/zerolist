@@ -1,0 +1,1315 @@
+{
+  "binding": {
+    "zerolist-cause/simple.log": {
+      "request->receive": {
+        "n": 90,
+        "p50": 1.0,
+        "p95": 17,
+        "max": 20
+      },
+      "receive->render": {
+        "n": 90,
+        "p50": 0.0,
+        "p95": 1,
+        "max": 1
+      },
+      "render->react_layout": {
+        "n": 90,
+        "p50": 1.0,
+        "p95": 2,
+        "max": 2
+      },
+      "react_layout->native_commit": {
+        "n": 90,
+        "p50": 15.0,
+        "p95": 17,
+        "max": 22
+      },
+      "native_commit->placed": {
+        "n": 90,
+        "p50": 1.0,
+        "p95": 2,
+        "max": 2
+      },
+      "request->placed": {
+        "n": 90,
+        "p50": 18.0,
+        "p95": 34,
+        "max": 38
+      }
+    },
+    "zerolist-cause/zigpool.log": {
+      "request->receive": {
+        "n": 21,
+        "p50": 1,
+        "p95": 14,
+        "max": 17
+      },
+      "receive->render": {
+        "n": 21,
+        "p50": 0,
+        "p95": 1,
+        "max": 1
+      },
+      "render->react_layout": {
+        "n": 21,
+        "p50": 3,
+        "p95": 3,
+        "max": 5
+      },
+      "react_layout->native_commit": {
+        "n": 21,
+        "p50": 13,
+        "p95": 15,
+        "max": 15
+      },
+      "native_commit->placed": {
+        "n": 21,
+        "p50": 1,
+        "p95": 2,
+        "max": 2
+      },
+      "request->placed": {
+        "n": 21,
+        "p50": 18,
+        "p95": 32,
+        "max": 33
+      }
+    },
+    "zerolist-probe-modes/1-binding.log": {
+      "request->receive": {
+        "n": 21,
+        "p50": 1,
+        "p95": 16,
+        "max": 16
+      },
+      "receive->render": {
+        "n": 21,
+        "p50": 0,
+        "p95": 1,
+        "max": 1
+      },
+      "render->react_layout": {
+        "n": 21,
+        "p50": 2,
+        "p95": 3,
+        "max": 4
+      },
+      "react_layout->native_commit": {
+        "n": 21,
+        "p50": 14,
+        "p95": 15,
+        "max": 17
+      },
+      "native_commit->placed": {
+        "n": 21,
+        "p50": 1,
+        "p95": 2,
+        "max": 2
+      },
+      "request->placed": {
+        "n": 21,
+        "p50": 18,
+        "p95": 33,
+        "max": 37
+      }
+    },
+    "zerolist-probe-modes/2-binding.log": {
+      "request->receive": {
+        "n": 21,
+        "p50": 1,
+        "p95": 17,
+        "max": 19
+      },
+      "receive->render": {
+        "n": 21,
+        "p50": 0,
+        "p95": 0,
+        "max": 1
+      },
+      "render->react_layout": {
+        "n": 21,
+        "p50": 3,
+        "p95": 3,
+        "max": 5
+      },
+      "react_layout->native_commit": {
+        "n": 21,
+        "p50": 13,
+        "p95": 15,
+        "max": 17
+      },
+      "native_commit->placed": {
+        "n": 21,
+        "p50": 1,
+        "p95": 2,
+        "max": 2
+      },
+      "request->placed": {
+        "n": 21,
+        "p50": 18,
+        "p95": 34,
+        "max": 35
+      }
+    },
+    "zerolist-probe-modes/3-binding.log": {
+      "request->receive": {
+        "n": 21,
+        "p50": 0,
+        "p95": 17,
+        "max": 17
+      },
+      "receive->render": {
+        "n": 21,
+        "p50": 0,
+        "p95": 1,
+        "max": 1
+      },
+      "render->react_layout": {
+        "n": 21,
+        "p50": 3,
+        "p95": 4,
+        "max": 5
+      },
+      "react_layout->native_commit": {
+        "n": 21,
+        "p50": 13,
+        "p95": 15,
+        "max": 16
+      },
+      "native_commit->placed": {
+        "n": 21,
+        "p50": 1,
+        "p95": 2,
+        "max": 2
+      },
+      "request->placed": {
+        "n": 21,
+        "p50": 18,
+        "p95": 34,
+        "max": 35
+      }
+    }
+  },
+  "frames": {
+    "zerolist-cause/flatlist.log": {
+      "frames": 287,
+      "late_frames": 1,
+      "median_ms": {
+        "total": 4.641977,
+        "gpu": 0.824833,
+        "unknown": 0.755505,
+        "input": 0.871875,
+        "layout": 0.014708,
+        "draw": 0.622625,
+        "sync": 0.161125,
+        "command": 0.769416,
+        "swap": 0.549333,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 25.953844,
+        "gpu": 3.9965,
+        "unknown": 5.115594,
+        "input": 0.000625,
+        "layout": 0.028042,
+        "draw": 0.115541,
+        "sync": 0.332625,
+        "command": 15.014292,
+        "swap": 1.540667,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 286
+    },
+    "zerolist-cause/simple.log": {
+      "frames": 279,
+      "late_frames": 1,
+      "median_ms": {
+        "total": 3.544171,
+        "gpu": 0.899958,
+        "unknown": 0.805558,
+        "input": 0.455125,
+        "layout": 0.060541,
+        "draw": 0.032708,
+        "sync": 0.05625,
+        "command": 0.296042,
+        "swap": 0.861084,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 23.059285,
+        "gpu": 3.944666,
+        "unknown": 6.741743,
+        "input": 0.842459,
+        "layout": 0.070458,
+        "draw": 0.084709,
+        "sync": 0.106208,
+        "command": 5.639459,
+        "swap": 6.224833,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 275
+    },
+    "zerolist-cause/frozen.log": {
+      "frames": 278,
+      "late_frames": 1,
+      "median_ms": {
+        "total": 6.821693,
+        "gpu": 0.7147295,
+        "unknown": 0.7598795,
+        "input": 0.3758955,
+        "layout": 0.041,
+        "draw": 0.0217085,
+        "sync": 0.4554165,
+        "command": 0.0904795,
+        "swap": 0.9558125,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 19.85737,
+        "gpu": 15.312083,
+        "unknown": 3.42412,
+        "input": 0.284208,
+        "layout": 0.02675,
+        "draw": 0.016166,
+        "sync": 0.319417,
+        "command": 0.052583,
+        "swap": 15.66875,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 157
+    },
+    "zerolist-cause/zigpool.log": {
+      "frames": 273,
+      "late_frames": 0,
+      "median_ms": {
+        "total": 4.048632,
+        "gpu": 0.820875,
+        "unknown": 0.724759,
+        "input": 0.419667,
+        "layout": 0.041833,
+        "draw": 0.020708,
+        "sync": 0.444417,
+        "command": 0.830583,
+        "swap": 0.519,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {},
+      "short_deadline_frames": 273
+    },
+    "zerolist-probe-modes/1-binding.log": {
+      "frames": 271,
+      "late_frames": 13,
+      "median_ms": {
+        "total": 17.27644,
+        "gpu": 14.520666,
+        "unknown": 0.728179,
+        "input": 0.369209,
+        "layout": 0.035209,
+        "draw": 0.017666,
+        "sync": 0.421417,
+        "command": 0.844083,
+        "swap": 0.438166,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.617619,
+        "gpu": 15.152708,
+        "unknown": 0.852366,
+        "input": 0.303334,
+        "layout": 0.023333,
+        "draw": 0.015458,
+        "sync": 0.390708,
+        "command": 0.64075,
+        "swap": 0.487792,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-probe-modes/2-full.log": {
+      "frames": 273,
+      "late_frames": 0,
+      "median_ms": {
+        "total": 3.977375,
+        "gpu": 0.814,
+        "unknown": 0.708108,
+        "input": 0.448,
+        "layout": 0.041708,
+        "draw": 0.021042,
+        "sync": 0.461958,
+        "command": 0.820208,
+        "swap": 0.50125,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {},
+      "short_deadline_frames": 273
+    },
+    "zerolist-probe-modes/3-full.log": {
+      "frames": 273,
+      "late_frames": 0,
+      "median_ms": {
+        "total": 3.653531,
+        "gpu": 0.788459,
+        "unknown": 0.695722,
+        "input": 0.408292,
+        "layout": 0.039417,
+        "draw": 0.0195,
+        "sync": 0.425209,
+        "command": 0.870041,
+        "swap": 0.489375,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {},
+      "short_deadline_frames": 273
+    },
+    "zerolist-probe-modes/1-ftrace.log": {
+      "frames": 274,
+      "late_frames": 0,
+      "median_ms": {
+        "total": 3.8149605,
+        "gpu": 0.809271,
+        "unknown": 0.6876475,
+        "input": 0.400917,
+        "layout": 0.042042,
+        "draw": 0.0207495,
+        "sync": 0.432333,
+        "command": 0.8381875,
+        "swap": 0.493313,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {},
+      "short_deadline_frames": 274
+    },
+    "zerolist-probe-modes/2-binding.log": {
+      "frames": 274,
+      "late_frames": 11,
+      "median_ms": {
+        "total": 17.257843,
+        "gpu": 14.479375,
+        "unknown": 0.6796945,
+        "input": 0.3659165,
+        "layout": 0.038229,
+        "draw": 0.0189165,
+        "sync": 0.4335415,
+        "command": 0.9817915,
+        "swap": 0.4605,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.320376,
+        "gpu": 14.75525,
+        "unknown": 0.692155,
+        "input": 0.327584,
+        "layout": 0.035542,
+        "draw": 0.016042,
+        "sync": 0.401083,
+        "command": 0.657792,
+        "swap": 0.490458,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 11
+    },
+    "zerolist-probe-modes/3-ftrace.log": {
+      "frames": 272,
+      "late_frames": 1,
+      "median_ms": {
+        "total": 4.004976,
+        "gpu": 0.8307705,
+        "unknown": 0.753167,
+        "input": 0.442292,
+        "layout": 0.0405835,
+        "draw": 0.021333,
+        "sync": 0.4802085,
+        "command": 0.8960835,
+        "swap": 0.5271875,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 19.119985,
+        "gpu": 0.886833,
+        "unknown": 15.768194,
+        "input": 0.3865,
+        "layout": 0.168834,
+        "draw": 0.021916,
+        "sync": 0.871,
+        "command": 0.907708,
+        "swap": 0.498583,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 272
+    },
+    "zerolist-probe-modes/1-timeline.log": {
+      "frames": 274,
+      "late_frames": 13,
+      "median_ms": {
+        "total": 17.283751,
+        "gpu": 14.503042,
+        "unknown": 0.7427325,
+        "input": 0.37925,
+        "layout": 0.038271,
+        "draw": 0.0180415,
+        "sync": 0.4202085,
+        "command": 0.860583,
+        "swap": 0.431104,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.231002,
+        "gpu": 15.023333,
+        "unknown": 0.742268,
+        "input": 0.276625,
+        "layout": 0.037125,
+        "draw": 0.01625,
+        "sync": 0.562375,
+        "command": 0.65425,
+        "swap": 0.520625,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 11
+    },
+    "zerolist-probe-modes/1-full.log": {
+      "frames": 272,
+      "late_frames": 0,
+      "median_ms": {
+        "total": 3.7549025,
+        "gpu": 0.8074585,
+        "unknown": 0.6137085,
+        "input": 0.4034795,
+        "layout": 0.045125,
+        "draw": 0.0214585,
+        "sync": 0.4541665,
+        "command": 0.916479,
+        "swap": 0.5044375,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {},
+      "short_deadline_frames": 272
+    },
+    "zerolist-probe-modes/1-off.log": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.25647,
+        "gpu": 14.491875,
+        "unknown": 0.721687,
+        "input": 0.37625,
+        "layout": 0.033208,
+        "draw": 0.0175,
+        "sync": 0.419459,
+        "command": 0.874333,
+        "swap": 0.429417,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.852034,
+        "gpu": 14.735084,
+        "unknown": 1.3768685,
+        "input": 0.253896,
+        "layout": 0.025896,
+        "draw": 0.015771,
+        "sync": 0.4145625,
+        "command": 0.660688,
+        "swap": 0.4886665,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-probe-modes/3-timeline.log": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.18712,
+        "gpu": 14.454666,
+        "unknown": 0.623122,
+        "input": 0.387375,
+        "layout": 0.031583,
+        "draw": 0.017792,
+        "sync": 0.435708,
+        "command": 0.888042,
+        "swap": 0.434583,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.602597,
+        "gpu": 14.9755625,
+        "unknown": 0.599533,
+        "input": 0.3139795,
+        "layout": 0.0261455,
+        "draw": 0.016542,
+        "sync": 0.4333125,
+        "command": 0.602958,
+        "swap": 0.465271,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-probe-modes/2-timeline.log": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.250006,
+        "gpu": 14.401083,
+        "unknown": 0.673927,
+        "input": 0.406375,
+        "layout": 0.037334,
+        "draw": 0.018584,
+        "sync": 0.44425,
+        "command": 0.8935,
+        "swap": 0.467959,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.9175685,
+        "gpu": 15.311479,
+        "unknown": 0.9020265,
+        "input": 0.3097295,
+        "layout": 0.0292085,
+        "draw": 0.017188,
+        "sync": 0.3908335,
+        "command": 0.635,
+        "swap": 0.485396,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-probe-modes/2-ftrace.log": {
+      "frames": 274,
+      "late_frames": 1,
+      "median_ms": {
+        "total": 3.7355675,
+        "gpu": 0.7977495,
+        "unknown": 0.6601505,
+        "input": 0.3610415,
+        "layout": 0.033292,
+        "draw": 0.018604,
+        "sync": 0.4262295,
+        "command": 0.9049165,
+        "swap": 0.501541,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 17.729293,
+        "gpu": 0.579583,
+        "unknown": 0.57696,
+        "input": 0.402625,
+        "layout": 0.031125,
+        "draw": 0.016125,
+        "sync": 0.414416,
+        "command": 1.002084,
+        "swap": 0.556791,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 259
+    },
+    "zerolist-probe-modes/2-off.log": {
+      "frames": 272,
+      "late_frames": 14,
+      "median_ms": {
+        "total": 17.2276935,
+        "gpu": 14.3803125,
+        "unknown": 0.621355,
+        "input": 0.421792,
+        "layout": 0.0389165,
+        "draw": 0.020687,
+        "sync": 0.492958,
+        "command": 0.869292,
+        "swap": 0.509313,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.680728,
+        "gpu": 15.231229,
+        "unknown": 0.639791,
+        "input": 0.3464165,
+        "layout": 0.0276045,
+        "draw": 0.0166665,
+        "sync": 0.41875,
+        "command": 0.673917,
+        "swap": 0.5191875,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-probe-modes/3-binding.log": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.207021,
+        "gpu": 14.410667,
+        "unknown": 0.639413,
+        "input": 0.389625,
+        "layout": 0.037125,
+        "draw": 0.018166,
+        "sync": 0.42875,
+        "command": 0.907125,
+        "swap": 0.447667,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.146681,
+        "gpu": 14.68325,
+        "unknown": 0.699097,
+        "input": 0.359729,
+        "layout": 0.033729,
+        "draw": 0.016771,
+        "sync": 0.491458,
+        "command": 0.6602505,
+        "swap": 0.526417,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 13
+    },
+    "zerolist-probe-modes/3-off.log": {
+      "frames": 274,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.248611,
+        "gpu": 14.418646,
+        "unknown": 0.693964,
+        "input": 0.386896,
+        "layout": 0.033,
+        "draw": 0.017937,
+        "sync": 0.4102085,
+        "command": 0.881625,
+        "swap": 0.4537705,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.2783865,
+        "gpu": 15.036146,
+        "unknown": 0.675766,
+        "input": 0.282729,
+        "layout": 0.024833,
+        "draw": 0.016604,
+        "sync": 0.3889585,
+        "command": 0.653813,
+        "swap": 0.4896455,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-probe-categories/1-app.log": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.217287,
+        "gpu": 14.386459,
+        "unknown": 0.669081,
+        "input": 0.396125,
+        "layout": 0.037583,
+        "draw": 0.018833,
+        "sync": 0.441542,
+        "command": 0.902042,
+        "swap": 0.446417,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 18.0279375,
+        "gpu": 15.2805205,
+        "unknown": 0.6100945,
+        "input": 0.3007085,
+        "layout": 0.033792,
+        "draw": 0.01675,
+        "sync": 0.3734375,
+        "command": 0.593167,
+        "swap": 0.518396,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-probe-categories/1-sched.log": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.221113,
+        "gpu": 14.437292,
+        "unknown": 0.679186,
+        "input": 0.393,
+        "layout": 0.035625,
+        "draw": 0.018042,
+        "sync": 0.41575,
+        "command": 0.828417,
+        "swap": 0.435708,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.966768,
+        "gpu": 15.494979,
+        "unknown": 0.65724,
+        "input": 0.2682915,
+        "layout": 0.0344375,
+        "draw": 0.016083,
+        "sync": 0.371625,
+        "command": 0.6149795,
+        "swap": 0.4412295,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-probe-categories/1-off.log": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.288183,
+        "gpu": 14.27675,
+        "unknown": 0.731096,
+        "input": 0.438834,
+        "layout": 0.044917,
+        "draw": 0.021208,
+        "sync": 0.488375,
+        "command": 0.926834,
+        "swap": 0.485667,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.4510275,
+        "gpu": 15.031354,
+        "unknown": 0.7540655,
+        "input": 0.3983125,
+        "layout": 0.036667,
+        "draw": 0.0167705,
+        "sync": 0.439021,
+        "command": 0.678813,
+        "swap": 0.5920205,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-probe-categories/1-gfx.log": {
+      "frames": 273,
+      "late_frames": 0,
+      "median_ms": {
+        "total": 3.46757,
+        "gpu": 0.790541,
+        "unknown": 0.64716,
+        "input": 0.370917,
+        "layout": 0.034416,
+        "draw": 0.017834,
+        "sync": 0.428583,
+        "command": 0.905083,
+        "swap": 0.486083,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {},
+      "short_deadline_frames": 273
+    },
+    "zerolist-probe-categories/1-view.log": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.23221,
+        "gpu": 14.585791,
+        "unknown": 0.68289,
+        "input": 0.344166,
+        "layout": 0.037125,
+        "draw": 0.018584,
+        "sync": 0.400083,
+        "command": 0.838,
+        "swap": 0.442459,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.549187,
+        "gpu": 14.845437,
+        "unknown": 0.6276815,
+        "input": 0.3054585,
+        "layout": 0.0314585,
+        "draw": 0.0181875,
+        "sync": 0.3722705,
+        "command": 0.640396,
+        "swap": 0.4613125,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-gfx-confirm/1-off.log": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.245755,
+        "gpu": 14.610291,
+        "unknown": 0.656054,
+        "input": 0.374042,
+        "layout": 0.032667,
+        "draw": 0.017125,
+        "sync": 0.400916,
+        "command": 0.890917,
+        "swap": 0.433666,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 18.5206815,
+        "gpu": 16.3315835,
+        "unknown": 0.644257,
+        "input": 0.314771,
+        "layout": 0.027104,
+        "draw": 0.015375,
+        "sync": 0.3691045,
+        "command": 0.7388125,
+        "swap": 0.4799995,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 13
+    },
+    "zerolist-gfx-confirm/1-gfx.log": {
+      "frames": 273,
+      "late_frames": 0,
+      "median_ms": {
+        "total": 3.674144,
+        "gpu": 0.811166,
+        "unknown": 0.674469,
+        "input": 0.347208,
+        "layout": 0.034167,
+        "draw": 0.017459,
+        "sync": 0.415333,
+        "command": 0.941417,
+        "swap": 0.478959,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {},
+      "short_deadline_frames": 273
+    },
+    "zerolist-gfx-confirm/2-gfx.log": {
+      "frames": 273,
+      "late_frames": 0,
+      "median_ms": {
+        "total": 3.69668,
+        "gpu": 0.8055,
+        "unknown": 0.703678,
+        "input": 0.359583,
+        "layout": 0.035125,
+        "draw": 0.018125,
+        "sync": 0.41875,
+        "command": 0.908458,
+        "swap": 0.504375,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {},
+      "short_deadline_frames": 273
+    },
+    "zerolist-gfx-confirm/2-off.log": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.215286,
+        "gpu": 14.516292,
+        "unknown": 0.608112,
+        "input": 0.360958,
+        "layout": 0.032084,
+        "draw": 0.017,
+        "sync": 0.421458,
+        "command": 0.941417,
+        "swap": 0.450667,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.309768,
+        "gpu": 14.7179165,
+        "unknown": 1.038468,
+        "input": 0.327271,
+        "layout": 0.026875,
+        "draw": 0.0163335,
+        "sync": 0.375396,
+        "command": 0.6174585,
+        "swap": 0.462417,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 11
+    },
+    "zerolist-gfx-confirm/3-gfx.log": {
+      "frames": 275,
+      "late_frames": 0,
+      "median_ms": {
+        "total": 3.891679,
+        "gpu": 0.817292,
+        "unknown": 0.696297,
+        "input": 0.40775,
+        "layout": 0.038708,
+        "draw": 0.020334,
+        "sync": 0.480583,
+        "command": 0.906416,
+        "swap": 0.536417,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {},
+      "short_deadline_frames": 275
+    },
+    "zerolist-gfx-confirm/3-off.log": {
+      "frames": 274,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.238644,
+        "gpu": 14.3954585,
+        "unknown": 0.686345,
+        "input": 0.3756875,
+        "layout": 0.034708,
+        "draw": 0.0180205,
+        "sync": 0.4262505,
+        "command": 0.939437,
+        "swap": 0.430354,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.19031,
+        "gpu": 14.9497705,
+        "unknown": 0.829152,
+        "input": 0.273917,
+        "layout": 0.0418955,
+        "draw": 0.0171875,
+        "sync": 0.4414165,
+        "command": 0.631583,
+        "swap": 0.471292,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-cause-vulkan/3-zigpool-log.txt": {
+      "frames": 275,
+      "late_frames": 3,
+      "median_ms": {
+        "total": 7.756094,
+        "gpu": 0.113125,
+        "unknown": 0.702508,
+        "input": 0.388167,
+        "layout": 0.038875,
+        "draw": 0.021542,
+        "sync": 0.494709,
+        "command": 5.343333,
+        "swap": 0.120958,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 17.489959,
+        "gpu": 10.294292,
+        "unknown": 0.630165,
+        "input": 0.38275,
+        "layout": 0.030333,
+        "draw": 0.014083,
+        "sync": 0.864916,
+        "command": 5.309166,
+        "swap": 0.118375,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 231
+    },
+    "zerolist-cause-vulkan/1-flatlist-log.txt": {
+      "frames": 287,
+      "late_frames": 2,
+      "median_ms": {
+        "total": 8.525373,
+        "gpu": 0.086959,
+        "unknown": 0.689437,
+        "input": 0.774791,
+        "layout": 0.0125,
+        "draw": 0.598166,
+        "sync": 0.15425,
+        "command": 5.540459,
+        "swap": 0.092625,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 29.088546,
+        "gpu": 13.360229,
+        "unknown": 2.7331085,
+        "input": 0.537667,
+        "layout": 0.012146,
+        "draw": 0.3626875,
+        "sync": 0.118083,
+        "command": 11.777042,
+        "swap": 0.0984165,
+        "deadline": 24.999999
+      },
+      "short_deadline_frames": 8
+    },
+    "zerolist-cause-vulkan/2-zigpool-log.txt": {
+      "frames": 276,
+      "late_frames": 5,
+      "median_ms": {
+        "total": 7.0737625,
+        "gpu": 0.101604,
+        "unknown": 0.650338,
+        "input": 0.356729,
+        "layout": 0.0371665,
+        "draw": 0.01875,
+        "sync": 0.441396,
+        "command": 5.034833,
+        "swap": 0.107354,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 17.179438,
+        "gpu": 8.920292,
+        "unknown": 1.502337,
+        "input": 0.400625,
+        "layout": 0.033333,
+        "draw": 0.017625,
+        "sync": 0.582834,
+        "command": 4.794958,
+        "swap": 0.095041,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 155
+    },
+    "zerolist-cause-vulkan/2-flatlist-log.txt": {
+      "frames": 287,
+      "late_frames": 1,
+      "median_ms": {
+        "total": 8.447795,
+        "gpu": 0.086792,
+        "unknown": 0.656999,
+        "input": 0.758958,
+        "layout": 0.012709,
+        "draw": 0.644666,
+        "sync": 0.155583,
+        "command": 5.564875,
+        "swap": 0.093166,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 21.992645,
+        "gpu": 0.063125,
+        "unknown": 3.226437,
+        "input": 1.058792,
+        "layout": 0.010166,
+        "draw": 0.777167,
+        "sync": 0.104458,
+        "command": 16.598667,
+        "swap": 0.069458,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 8
+    },
+    "zerolist-cause-vulkan/3-flatlist-log.txt": {
+      "frames": 287,
+      "late_frames": 1,
+      "median_ms": {
+        "total": 8.406516,
+        "gpu": 0.109208,
+        "unknown": 0.814231,
+        "input": 0.764666,
+        "layout": 0.012625,
+        "draw": 0.590459,
+        "sync": 0.156334,
+        "command": 5.393167,
+        "swap": 0.116875,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 17.937019,
+        "gpu": 6.290167,
+        "unknown": 3.99106,
+        "input": 0.906792,
+        "layout": 0.012959,
+        "draw": 1.136541,
+        "sync": 0.188667,
+        "command": 5.137083,
+        "swap": 0.172208,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 175
+    },
+    "zerolist-cause-vulkan/1-zigpool-log.txt": {
+      "frames": 274,
+      "late_frames": 2,
+      "median_ms": {
+        "total": 7.0656675,
+        "gpu": 0.1080625,
+        "unknown": 0.6205485,
+        "input": 0.352396,
+        "layout": 0.031083,
+        "draw": 0.0168125,
+        "sync": 0.431167,
+        "command": 5.075771,
+        "swap": 0.114563,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 17.404987,
+        "gpu": 10.6454585,
+        "unknown": 1.170404,
+        "input": 0.168958,
+        "layout": 0.0369585,
+        "draw": 0.018646,
+        "sync": 0.3700415,
+        "command": 4.800333,
+        "swap": 0.086063,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 233
+    },
+    "zerolist-renderer-confirm/5-skiagl/1-zigpool-log.txt": {
+      "frames": 274,
+      "late_frames": 10,
+      "median_ms": {
+        "total": 17.2676175,
+        "gpu": 14.531854,
+        "unknown": 0.7379425,
+        "input": 0.3520415,
+        "layout": 0.0345625,
+        "draw": 0.018896,
+        "sync": 0.4246045,
+        "command": 0.930062,
+        "swap": 0.4435205,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.907831,
+        "gpu": 14.9574585,
+        "unknown": 0.9216915,
+        "input": 0.291229,
+        "layout": 0.029146,
+        "draw": 0.016521,
+        "sync": 0.394396,
+        "command": 0.652854,
+        "swap": 0.492084,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 10
+    },
+    "zerolist-renderer-confirm/3-skiavk/1-zigpool-log.txt": {
+      "frames": 274,
+      "late_frames": 5,
+      "median_ms": {
+        "total": 7.3927185,
+        "gpu": 0.103583,
+        "unknown": 0.737006,
+        "input": 0.3885415,
+        "layout": 0.0334585,
+        "draw": 0.018209,
+        "sync": 0.447521,
+        "command": 5.098729,
+        "swap": 0.1103335,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 18.053646,
+        "gpu": 10.267708,
+        "unknown": 1.312855,
+        "input": 0.396417,
+        "layout": 0.023875,
+        "draw": 0.01425,
+        "sync": 0.498708,
+        "command": 4.92625,
+        "swap": 0.091625,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 239
+    },
+    "zerolist-renderer-confirm/1-skiagl/1-zigpool-log.txt": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.242477,
+        "gpu": 14.470916,
+        "unknown": 0.700993,
+        "input": 0.379625,
+        "layout": 0.036583,
+        "draw": 0.018458,
+        "sync": 0.431792,
+        "command": 0.853333,
+        "swap": 0.44175,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.214298,
+        "gpu": 14.777167,
+        "unknown": 0.722528,
+        "input": 0.2579165,
+        "layout": 0.025937,
+        "draw": 0.016542,
+        "sync": 0.4196045,
+        "command": 0.626604,
+        "swap": 0.431083,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-renderer-confirm/4-skiagl/1-zigpool-log.txt": {
+      "frames": 273,
+      "late_frames": 12,
+      "median_ms": {
+        "total": 17.212214,
+        "gpu": 14.376834,
+        "unknown": 0.694417,
+        "input": 0.421291,
+        "layout": 0.035833,
+        "draw": 0.019083,
+        "sync": 0.453083,
+        "command": 0.913792,
+        "swap": 0.464625,
+        "deadline": 33.333332
+      },
+      "late_median_ms": {
+        "total": 17.3185175,
+        "gpu": 14.491625,
+        "unknown": 0.8690045,
+        "input": 0.3358335,
+        "layout": 0.028062,
+        "draw": 0.017271,
+        "sync": 0.411209,
+        "command": 0.6250415,
+        "swap": 0.517917,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 12
+    },
+    "zerolist-renderer-confirm/6-skiavk/1-zigpool-log.txt": {
+      "frames": 273,
+      "late_frames": 2,
+      "median_ms": {
+        "total": 7.305756,
+        "gpu": 0.100417,
+        "unknown": 0.691185,
+        "input": 0.38025,
+        "layout": 0.033292,
+        "draw": 0.018083,
+        "sync": 0.441792,
+        "command": 5.120709,
+        "swap": 0.108375,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 17.8913865,
+        "gpu": 9.309021,
+        "unknown": 1.681011,
+        "input": 0.429021,
+        "layout": 0.059896,
+        "draw": 0.181875,
+        "sync": 0.4615,
+        "command": 5.175125,
+        "swap": 0.17575,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 217
+    },
+    "zerolist-renderer-confirm/2-skiavk/1-zigpool-log.txt": {
+      "frames": 273,
+      "late_frames": 3,
+      "median_ms": {
+        "total": 7.251479,
+        "gpu": 0.105458,
+        "unknown": 0.713067,
+        "input": 0.373416,
+        "layout": 0.03375,
+        "draw": 0.018417,
+        "sync": 0.43675,
+        "command": 5.09925,
+        "swap": 0.114,
+        "deadline": 16.666666
+      },
+      "late_median_ms": {
+        "total": 16.992948,
+        "gpu": 10.157583,
+        "unknown": 1.079856,
+        "input": 0.346583,
+        "layout": 0.027166,
+        "draw": 0.019166,
+        "sync": 0.696625,
+        "command": 4.936625,
+        "swap": 0.126167,
+        "deadline": 16.666666
+      },
+      "short_deadline_frames": 208
+    }
+  }
+}

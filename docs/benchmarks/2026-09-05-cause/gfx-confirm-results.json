@@ -1,0 +1,44 @@
+[
+  {
+    "run": 1,
+    "probe": "off",
+    "jank_count": 12,
+    "jank_percent": 4.4,
+    "p95_ms": 20
+  },
+  {
+    "run": 1,
+    "probe": "gfx",
+    "jank_count": 0,
+    "jank_percent": 0.0,
+    "p95_ms": 7
+  },
+  {
+    "run": 2,
+    "probe": "gfx",
+    "jank_count": 0,
+    "jank_percent": 0.0,
+    "p95_ms": 7
+  },
+  {
+    "run": 2,
+    "probe": "off",
+    "jank_count": 12,
+    "jank_percent": 4.4,
+    "p95_ms": 20
+  },
+  {
+    "run": 3,
+    "probe": "off",
+    "jank_count": 12,
+    "jank_percent": 4.38,
+    "p95_ms": 19
+  },
+  {
+    "run": 3,
+    "probe": "gfx",
+    "jank_count": 0,
+    "jank_percent": 0.0,
+    "p95_ms": 7
+  }
+]

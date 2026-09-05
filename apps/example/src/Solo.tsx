@@ -15,7 +15,11 @@ export default function Solo(props: {
   engine?: string;
   count?: number;
   cell?: string;
-  diagnostic?: 'normal' | 'freeze-content' | 'freeze-position';
+  diagnostic?:
+    | 'normal'
+    | 'freeze-content'
+    | 'freeze-position'
+    | 'trace-binding';
   legacyRecycling?: boolean;
   audit?: boolean;
   bindingDelayMs?: number;

@@ -47,7 +47,11 @@ export interface FrameStats {
  * (한 엔진만 getItemLayout 받는 불공정 방지). dynamic 에선 둘 다 null. */
 export interface ListEngineProps {
   /** Solo-only causal experiment; frozen variants are not functional lists. */
-  diagnostic?: 'normal' | 'freeze-content' | 'freeze-position';
+  diagnostic?:
+    | 'normal'
+    | 'freeze-content'
+    | 'freeze-position'
+    | 'trace-binding';
   legacyRecycling?: boolean;
   audit?: boolean;
   bindingDelayMs?: number;

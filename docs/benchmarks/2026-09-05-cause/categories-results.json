@@ -1,0 +1,37 @@
+[
+  {
+    "run": 1,
+    "probe": "off",
+    "jank_count": 12,
+    "jank_percent": 4.4,
+    "p95_ms": 20
+  },
+  {
+    "run": 1,
+    "probe": "sched",
+    "jank_count": 12,
+    "jank_percent": 4.4,
+    "p95_ms": 18
+  },
+  {
+    "run": 1,
+    "probe": "gfx",
+    "jank_count": 0,
+    "jank_percent": 0.0,
+    "p95_ms": 7
+  },
+  {
+    "run": 1,
+    "probe": "view",
+    "jank_count": 12,
+    "jank_percent": 4.4,
+    "p95_ms": 20
+  },
+  {
+    "run": 1,
+    "probe": "app",
+    "jank_count": 12,
+    "jank_percent": 4.4,
+    "p95_ms": 19
+  }
+]
