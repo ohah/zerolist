@@ -47,7 +47,7 @@ jobs:
         with:
           distribution: zulu
           java-version: '17'
-      - run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0' 'ndk;27.1.12297006' 'cmake;3.22.1'
+      - run: "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" 'platforms;android-36' 'build-tools;36.0.0' 'ndk;27.1.12297006' 'cmake;3.22.1'
       - run: bun run zig:build
       - run: bun run codegen
       - name: Build Android release APK
