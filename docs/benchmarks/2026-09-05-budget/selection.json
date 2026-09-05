@@ -1,0 +1,34 @@
+{
+  "android": {
+    "configs": [
+      "flatlist-5",
+      "flashlist-2",
+      "flashlist-5",
+      "legend-5",
+      "zerolist-5",
+      "zigpool-5",
+      "stable-5"
+    ],
+    "reason": "FlatList/ZigPool 약 159MiB·공백 0 비교, FlashList 저메모리 후보와 공백 0 후보, 나머지 목록의 5행 설정 및 같은 풀 범위 유지 비교",
+    "additional_audit_stress_runs": 2,
+    "additional_perf_stress_runs": 2,
+    "normal_perf_runs": 3
+  },
+  "ios": {
+    "configs": [
+      "flatlist-5",
+      "flashlist-5",
+      "flashlist-12",
+      "legend-5",
+      "zerolist-5",
+      "zigpool-5",
+      "stable-12",
+      "stable-5"
+    ],
+    "reason": "각 목록의 5행 기준과, 공백 0이 관측된 FlashList 12행/범위 유지 12행의 자원 비용을 반복 검증; 격리 재탐색에서 작은 풀 범위 유지 예측의 공백 감소가 보여 stable-5도 추가 반복",
+    "additional_audit_stress_runs": 2,
+    "additional_perf_stress_runs": 2,
+    "normal_perf_runs": 3,
+    "extra_separate_group": "stable-5: 정상 성능 3회, 부하 공백/성능 추가 각 2회"
+  }
+}

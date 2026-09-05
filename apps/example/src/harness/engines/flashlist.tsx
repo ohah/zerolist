@@ -19,6 +19,11 @@ export const FlashListEngine = forwardRef<Scrollable, ListEngineProps>(
 
     return (
       <FlashList
+        drawDistance={
+          p.bufferRows == null || p.bufferRows < 0
+            ? undefined
+            : p.bufferRows * (p.fixedHeight ?? 100)
+        }
         ref={listRef}
         data={p.items}
         keyExtractor={(it) => String(it.id)}

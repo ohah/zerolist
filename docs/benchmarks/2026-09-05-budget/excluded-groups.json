@@ -1,0 +1,32 @@
+[
+  {
+    "group": "final-ios-audit-0",
+    "runs": 17,
+    "reason": "Android JS 점유 앱이 남은 배경 부하. isolated-ios 그룹으로 재측정하고 최종 수치에서는 제외."
+  },
+  {
+    "group": "final-ios-audit-160",
+    "runs": 17,
+    "reason": "Android JS 점유 앱이 남은 배경 부하. isolated-ios 그룹으로 재측정하고 최종 수치에서는 제외."
+  },
+  {
+    "group": "final-ios-perf-160",
+    "runs": 17,
+    "reason": "Android JS 점유 앱이 남은 배경 부하. isolated-ios 그룹으로 재측정하고 최종 수치에서는 제외."
+  },
+  {
+    "group": "repeat-ios-perf-0",
+    "runs": 21,
+    "reason": "Android JS 점유 앱이 남은 배경 부하. isolated-ios 그룹으로 재측정하고 최종 수치에서는 제외."
+  },
+  {
+    "group": "repeat-ios-audit-160",
+    "runs": 14,
+    "reason": "Android JS 점유 앱이 남은 배경 부하. isolated-ios 그룹으로 재측정하고 최종 수치에서는 제외."
+  },
+  {
+    "group": "repeat-ios-perf-160",
+    "runs": 14,
+    "reason": "Android JS 점유 앱이 남은 배경 부하. isolated-ios 그룹으로 재측정하고 최종 수치에서는 제외."
+  }
+]

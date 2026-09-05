@@ -1,0 +1,45 @@
+{
+  "rn": "0.87.1",
+  "react": "19.2.3",
+  "hermes": "250829098.0.17",
+  "flash_list": "2.3.1",
+  "legend_list": "2.0.19",
+  "configuration": "Release",
+  "architecture": "arm64/Fabric",
+  "latest_check": "npm view react-native dist-tags: latest=0.87.1, nightly excluded",
+  "base_commit": "c4a4d98b977fbb123c224984c7d088a9fb41c6fd",
+  "sha256": {
+    "apk": "03cb18de475f39ad9ec560526731669253d1dc4809ed1a9e6770b14456782f3a",
+    "ios_binary": "e71369279d095a9522e98a253fa70f3fb5a8a9fc3f70844b6135bb615d5d3c52",
+    "ios_jsbundle": "7251e183d1c10e20d5c0a9484f45633b17126665721bf7d7fed4fb9679e532f5"
+  },
+  "validation": {
+    "tests": 73,
+    "suites": 4,
+    "lint": "passed",
+    "library_typecheck": "passed",
+    "android_build": "passed",
+    "ios_build": "passed",
+    "library_build": "passed"
+  },
+  "notes": [
+    "기존 RN 0.85.0의 207회 자료와 합산하지 않음",
+    "각 실행 시작 시 Platform.constants.reactNativeVersion=0.87.1 검사",
+    "Android 공식 템플릿의 AGP 9 호환 플래그 적용",
+    "iOS React-Core-prebuilt는 pod update React-Core-prebuilt --no-repo-update로 갱신",
+    "iOS 로그 확인 실패한 첫 실행은 정량 단계 전에 중단. Solo 태그 NSLog 복제 후 동일한 최종 iOS 바이너리로 모든 정량 실행을 다시 시작.",
+    "iOS 부하 비용 2회차 시작 전 simctl 콘솔 FIFO 충돌로 앱 미실행. 오래된 비활성 FIFO를 이름 변경하고 같은 조건/바이너리로 미완료 반복만 RESUME=1로 재개. 실패 로그는 원자료에 보존, 정량 결과에 합산하지 않음.",
+    "생성된 Xcode RN 경로는 저장소의 안정적인 node_modules 심볼릭 링크로 정규화. 빌드에 사용한 bun 내부 경로와 같은 RN 0.87.1 디렉터리로 해석됨을 확인."
+  ],
+  "runtime_patch_sha256": "f628df1674fb46054df8eef858390558879ab570471a261c58ec57b764f3738c",
+  "completed_at": "2026-09-05T13:49:47.046383+00:00",
+  "valid_runs": 99,
+  "audit_runs": 33,
+  "restored_environment": {
+    "android_rotation": 1,
+    "renderer": "skiagl",
+    "atrace_flags": "0",
+    "android_app": "baseline zigpool, 100000 heavy, no JS stress",
+    "ios_app": "terminated"
+  }
+}

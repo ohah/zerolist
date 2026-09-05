@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react';
-import { View, StyleSheet, useWindowDimensions } from 'react-native';
+import { View, StyleSheet, useWindowDimensions, Platform } from 'react-native';
 import { jsRef } from '@ohah/zerolist';
 import { ENGINES } from './harness/engines';
 import { makeItems } from './harness/data';
@@ -12,6 +12,8 @@ import type { CellType, EngineId, Preparation } from './harness/types';
 // initialProps 로 주입. gfxinfo(프로세스 단위)가 엔진+RN루트+Fabric
 // mount 만 보게 해 Native(맨 Activity)와 깨끗하게 비교(태스크 #18).
 export default function Solo(props: {
+  bufferRows?: number;
+  commonAudit?: boolean;
   jsBlockMs?: number;
   preparation?: Preparation;
   preparationTrace?: boolean;
@@ -47,6 +49,12 @@ export default function Solo(props: {
   }, [items]);
   const fixedHeight = items[0]?.height ?? null;
 
+  // 설치된 네이티브 코어 버전을 측정 시작 전에 확인한다.
+  useEffect(() => {
+    const v = Platform.constants.reactNativeVersion;
+    console.log(`[ZlRuntime] rn=${v.major}.${v.minor}.${v.patch}`);
+  }, []);
+
   // JS-0 정량 계측: 결정적 스크롤에서 renders/cbs 누적을 주기 로깅.
   useEffect(() => inst.start(engineId), [engineId]);
 
@@ -69,6 +77,8 @@ export default function Solo(props: {
   return (
     <View style={s.fill}>
       <Engine
+        bufferRows={props.bufferRows}
+        commonAudit={props.commonAudit}
         preparation={props.preparation}
         preparationTrace={props.preparationTrace}
         diagnostic={props.diagnostic}

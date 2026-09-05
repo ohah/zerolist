@@ -32,10 +32,14 @@ export function useScrollableHandle(
 }
 
 export function renderCell(
-  p: Pick<ListEngineProps, 'cell' | 'height' | 'onMeasure' | 'onRender'>
+  p: Pick<
+    ListEngineProps,
+    'cell' | 'height' | 'onMeasure' | 'onRender' | 'commonAudit'
+  >
 ) {
   return ({ item }: { item: Item }) => (
     <Cell
+      commonAudit={p.commonAudit}
       item={item}
       cell={p.cell}
       height={p.height}

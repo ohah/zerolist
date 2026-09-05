@@ -57,6 +57,9 @@ export type Preparation =
   | 'combined-stable';
 
 export interface ListEngineProps {
+  /** Solo 측정 옵션: 화면 밖 한쪽 여유 행 수. 생략하면 기존 설정. */
+  bufferRows?: number;
+  commonAudit?: boolean;
   preparation?: Preparation;
   preparationTrace?: boolean;
   /** Solo-only causal experiment; frozen variants are not functional lists. */

@@ -26,14 +26,19 @@ const Slot = memo(function Slot({
   height,
   onMeasure,
   onRender,
+  commonAudit,
 }: {
   item: ListEngineProps['items'][number] | undefined;
   rh: number;
-} & Pick<ListEngineProps, 'cell' | 'height' | 'onMeasure' | 'onRender'>) {
+} & Pick<
+  ListEngineProps,
+  'cell' | 'height' | 'onMeasure' | 'onRender' | 'commonAudit'
+>) {
   return (
     <View collapsable={false} style={[styles.slot, { height: rh }]}>
       {item ? (
         <Cell
+          commonAudit={commonAudit}
           item={item}
           cell={cell}
           height={height}
@@ -76,7 +81,11 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
       ? 24
       : 10;
     const n = Math.min(
-      p.legacyRecycling ? POOL : Math.max(POOL, Math.ceil(height / rh) + extra),
+      p.bufferRows != null && p.bufferRows >= 0
+        ? Math.ceil(height / rh) + 2 * p.bufferRows
+        : p.legacyRecycling
+          ? POOL
+          : Math.max(POOL, Math.ceil(height / rh) + extra),
       data.length
     );
     const [binding, setBinding] = useState(() => ({
@@ -115,7 +124,15 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
         count={data.length}
         rowHeight={rh}
         committedBinds={binds.join(',')}
-        overscan={p.legacyRecycling ? 0 : preparation === 'wide' ? 12 : 5}
+        overscan={
+          p.bufferRows != null && p.bufferRows >= 0
+            ? p.bufferRows
+            : p.legacyRecycling
+              ? 0
+              : preparation === 'wide'
+                ? 12
+                : 5
+        }
         legacyRecycling={p.legacyRecycling ?? false}
         audit={p.audit ?? false}
         // 인라인 타입: codegen 이벤트 타입을 tsc 가 해석 못 함(앱-local).
@@ -149,6 +166,7 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
           if (memoSlots)
             return (
               <Slot
+                commonAudit={p.commonAudit}
                 key={s}
                 item={item}
                 rh={rh}
@@ -166,6 +184,7 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
             >
               {item ? (
                 <Cell
+                  commonAudit={p.commonAudit}
                   item={item}
                   cell={p.cell}
                   height={p.height}

@@ -19,6 +19,7 @@ function hsl(h: number, l = 70) {
 }
 
 interface Props {
+  commonAudit?: boolean;
   item: Item;
   cell: CellType;
   height: HeightMode;
@@ -61,7 +62,17 @@ function HeavyCell({ item, sized }: { item: Item; sized: boolean }) {
   );
 }
 
-function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
+function CellInner({
+  item,
+  cell,
+  height,
+  onMeasure,
+  onRender,
+  commonAudit,
+}: Props) {
+  const auditProps = commonAudit
+    ? { testID: `zl-row-${item.id}-h${item.height}`, collapsable: false }
+    : {};
   onRender?.(item.id); // 실제 렌더 검증(측정 유효성)
   // 카운트 지표: 셀 인스턴스 mount/unmount churn(시간 아님). ③ 고정
   // 풀 = 초기 후 ≈0, FlatList = 스크롤 따라 생성/파괴.
@@ -85,7 +96,7 @@ function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
 
   if (cell === 'simple') {
     return (
-      <View style={style} onLayout={onLayout}>
+      <View {...auditProps} style={style} onLayout={onLayout}>
         <Text style={styles.title} numberOfLines={1}>
           {item.title}
         </Text>
@@ -95,7 +106,11 @@ function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
 
   if (cell === 'image') {
     return (
-      <View style={[style, styles.imageRow]} onLayout={onLayout}>
+      <View
+        {...auditProps}
+        style={[style, styles.imageRow]}
+        onLayout={onLayout}
+      >
         <Image source={{ uri: IMG }} style={styles.thumb} />
         <View style={styles.flex}>
           <Text style={styles.title} numberOfLines={1}>
@@ -111,14 +126,14 @@ function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
 
   if (cell === 'heavy') {
     return (
-      <View style={[style, styles.complex]} onLayout={onLayout}>
+      <View {...auditProps} style={[style, styles.complex]} onLayout={onLayout}>
         <HeavyCell item={item} sized={sized} />
       </View>
     );
   }
 
   return (
-    <View style={[style, styles.complex]} onLayout={onLayout}>
+    <View {...auditProps} style={[style, styles.complex]} onLayout={onLayout}>
       <View style={styles.imageRow}>
         <Image source={{ uri: IMG }} style={styles.thumb} />
         <View style={styles.flex}>

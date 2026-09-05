@@ -1,0 +1,758 @@
+[
+  {
+    "name": "flatlist-5",
+    "engine": "flatlist",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 136.46484375,
+    "memory_after_mib": 158.857421875,
+    "cpu_seconds": 1.3,
+    "wall_seconds": 5.824867833,
+    "cpu_one_core_percent": 22.318102955658944,
+    "initial_counts": {
+      "renders": 37,
+      "callbacks": 95,
+      "mounts": 37,
+      "unmounts": 22
+    },
+    "final_counts": {
+      "renders": 82,
+      "callbacks": 347,
+      "mounts": 82,
+      "unmounts": 68
+    },
+    "work": {
+      "renders": 45,
+      "callbacks": 252,
+      "mounts": 45,
+      "unmounts": 46
+    },
+    "frames": 289,
+    "late": 2,
+    "late_percent": 0.69,
+    "p95_ms": 20
+  },
+  {
+    "name": "flashlist-2",
+    "engine": "flashlist",
+    "rows": 2,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 144.544921875,
+    "memory_after_mib": 152.2783203125,
+    "cpu_seconds": 0.9999999999999998,
+    "wall_seconds": 5.827613291999999,
+    "cpu_one_core_percent": 17.15968355986789,
+    "initial_counts": {
+      "renders": 39,
+      "callbacks": 95,
+      "mounts": 9,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 89,
+      "callbacks": 337,
+      "mounts": 9,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 50,
+      "callbacks": 242,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 290,
+    "late": 3,
+    "late_percent": 1.03,
+    "p95_ms": 24
+  },
+  {
+    "name": "flashlist-5",
+    "engine": "flashlist",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 164.08984375,
+    "memory_after_mib": 174.5732421875,
+    "cpu_seconds": 1.38,
+    "wall_seconds": 5.814626875000002,
+    "cpu_one_core_percent": 23.733251155518033,
+    "initial_counts": {
+      "renders": 43,
+      "callbacks": 96,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 96,
+      "callbacks": 338,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 53,
+      "callbacks": 242,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 290,
+    "late": 2,
+    "late_percent": 0.69,
+    "p95_ms": 19
+  },
+  {
+    "name": "legend-5",
+    "engine": "legend",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 189.5234375,
+    "memory_after_mib": 200.6728515625,
+    "cpu_seconds": 0.94,
+    "wall_seconds": 5.812639042000001,
+    "cpu_one_core_percent": 16.17165616526167,
+    "initial_counts": {
+      "renders": 44,
+      "callbacks": 84,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 98,
+      "callbacks": 302,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 54,
+      "callbacks": 218,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 288,
+    "late": 3,
+    "late_percent": 1.04,
+    "p95_ms": 22
+  },
+  {
+    "name": "zerolist-5",
+    "engine": "zerolist",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 140.5048828125,
+    "memory_after_mib": 159.6259765625,
+    "cpu_seconds": 1.7299999999999998,
+    "wall_seconds": 5.850936583000006,
+    "cpu_one_core_percent": 29.56791575944514,
+    "initial_counts": {
+      "renders": 38,
+      "callbacks": 100,
+      "mounts": 38,
+      "unmounts": 27
+    },
+    "final_counts": {
+      "renders": 83,
+      "callbacks": 344,
+      "mounts": 83,
+      "unmounts": 72
+    },
+    "work": {
+      "renders": 45,
+      "callbacks": 244,
+      "mounts": 45,
+      "unmounts": 45
+    },
+    "frames": 291,
+    "late": 3,
+    "late_percent": 1.03,
+    "p95_ms": 28
+  },
+  {
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 146.767578125,
+    "memory_after_mib": 157.8681640625,
+    "cpu_seconds": 0.8999999999999999,
+    "wall_seconds": 5.829941000000005,
+    "cpu_one_core_percent": 15.43754902493866,
+    "initial_counts": {
+      "renders": 26,
+      "callbacks": 27,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 71,
+      "callbacks": 72,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 45,
+      "callbacks": 45,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 273,
+    "late": 1,
+    "late_percent": 0.37,
+    "p95_ms": 19
+  },
+  {
+    "name": "stable-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "adaptive-stable",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 146.603515625,
+    "memory_after_mib": 157.4951171875,
+    "cpu_seconds": 0.93,
+    "wall_seconds": 5.813344541000006,
+    "cpu_one_core_percent": 15.997675579710647,
+    "initial_counts": {
+      "renders": 27,
+      "callbacks": 28,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 73,
+      "callbacks": 74,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 46,
+      "callbacks": 46,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 272,
+    "late": 1,
+    "late_percent": 0.37,
+    "p95_ms": 18
+  },
+  {
+    "name": "flashlist-2",
+    "engine": "flashlist",
+    "rows": 2,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 144.671875,
+    "memory_after_mib": 152.103515625,
+    "cpu_seconds": 1.0299999999999998,
+    "wall_seconds": 5.811269457999998,
+    "cpu_one_core_percent": 17.72418242595971,
+    "initial_counts": {
+      "renders": 39,
+      "callbacks": 96,
+      "mounts": 9,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 89,
+      "callbacks": 339,
+      "mounts": 9,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 50,
+      "callbacks": 243,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 289,
+    "late": 2,
+    "late_percent": 0.69,
+    "p95_ms": 18
+  },
+  {
+    "name": "flashlist-5",
+    "engine": "flashlist",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 164.126953125,
+    "memory_after_mib": 175.35546875,
+    "cpu_seconds": 1.3800000000000001,
+    "wall_seconds": 5.825848500000006,
+    "cpu_one_core_percent": 23.68753667384242,
+    "initial_counts": {
+      "renders": 43,
+      "callbacks": 98,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 97,
+      "callbacks": 338,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 54,
+      "callbacks": 240,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 289,
+    "late": 2,
+    "late_percent": 0.69,
+    "p95_ms": 19
+  },
+  {
+    "name": "legend-5",
+    "engine": "legend",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 188.8896484375,
+    "memory_after_mib": 193.9619140625,
+    "cpu_seconds": 0.99,
+    "wall_seconds": 5.827326791999994,
+    "cpu_one_core_percent": 16.98892194203206,
+    "initial_counts": {
+      "renders": 43,
+      "callbacks": 82,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 99,
+      "callbacks": 300,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 56,
+      "callbacks": 218,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 290,
+    "late": 2,
+    "late_percent": 0.69,
+    "p95_ms": 19
+  },
+  {
+    "name": "zerolist-5",
+    "engine": "zerolist",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 160.6982421875,
+    "memory_after_mib": 162.6728515625,
+    "cpu_seconds": 1.7100000000000002,
+    "wall_seconds": 5.8868676660000006,
+    "cpu_one_core_percent": 29.047705792270822,
+    "initial_counts": {
+      "renders": 36,
+      "callbacks": 96,
+      "mounts": 36,
+      "unmounts": 25
+    },
+    "final_counts": {
+      "renders": 84,
+      "callbacks": 342,
+      "mounts": 84,
+      "unmounts": 73
+    },
+    "work": {
+      "renders": 48,
+      "callbacks": 246,
+      "mounts": 48,
+      "unmounts": 48
+    },
+    "frames": 294,
+    "late": 3,
+    "late_percent": 1.02,
+    "p95_ms": 28
+  },
+  {
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 147.138671875,
+    "memory_after_mib": 157.2646484375,
+    "cpu_seconds": 0.8699999999999999,
+    "wall_seconds": 5.8183820420000245,
+    "cpu_one_core_percent": 14.952610428808214,
+    "initial_counts": {
+      "renders": 27,
+      "callbacks": 28,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 70,
+      "callbacks": 71,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 43,
+      "callbacks": 43,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 272,
+    "late": 1,
+    "late_percent": 0.37,
+    "p95_ms": 19
+  },
+  {
+    "name": "stable-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "adaptive-stable",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 146.6728515625,
+    "memory_after_mib": 157.2841796875,
+    "cpu_seconds": 1.19,
+    "wall_seconds": 5.8257673329999875,
+    "cpu_one_core_percent": 20.42649374717146,
+    "initial_counts": {
+      "renders": 27,
+      "callbacks": 28,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 70,
+      "callbacks": 71,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 43,
+      "callbacks": 43,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 245,
+    "late": 5,
+    "late_percent": 2.04,
+    "p95_ms": 22
+  },
+  {
+    "name": "flatlist-5",
+    "engine": "flatlist",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 139.20703125,
+    "memory_after_mib": 154.1494140625,
+    "cpu_seconds": 1.7099999999999997,
+    "wall_seconds": 5.950442915999986,
+    "cpu_one_core_percent": 28.737356599153767,
+    "initial_counts": {
+      "renders": 38,
+      "callbacks": 97,
+      "mounts": 38,
+      "unmounts": 23
+    },
+    "final_counts": {
+      "renders": 85,
+      "callbacks": 349,
+      "mounts": 85,
+      "unmounts": 70
+    },
+    "work": {
+      "renders": 47,
+      "callbacks": 252,
+      "mounts": 47,
+      "unmounts": 47
+    },
+    "frames": 294,
+    "late": 5,
+    "late_percent": 1.7,
+    "p95_ms": 26
+  },
+  {
+    "name": "flashlist-5",
+    "engine": "flashlist",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 164.0166015625,
+    "memory_after_mib": 174.416015625,
+    "cpu_seconds": 1.34,
+    "wall_seconds": 5.807717959000001,
+    "cpu_one_core_percent": 23.0727457748435,
+    "initial_counts": {
+      "renders": 43,
+      "callbacks": 96,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 96,
+      "callbacks": 339,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 53,
+      "callbacks": 243,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 289,
+    "late": 2,
+    "late_percent": 0.69,
+    "p95_ms": 18
+  },
+  {
+    "name": "legend-5",
+    "engine": "legend",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 184.6552734375,
+    "memory_after_mib": 197.64453125,
+    "cpu_seconds": 1.1400000000000001,
+    "wall_seconds": 5.904264583000014,
+    "cpu_one_core_percent": 19.30807781349045,
+    "initial_counts": {
+      "renders": 43,
+      "callbacks": 83,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 97,
+      "callbacks": 301,
+      "mounts": 15,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 54,
+      "callbacks": 218,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 293,
+    "late": 4,
+    "late_percent": 1.37,
+    "p95_ms": 26
+  },
+  {
+    "name": "zerolist-5",
+    "engine": "zerolist",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 140.240234375,
+    "memory_after_mib": 161.271484375,
+    "cpu_seconds": 1.73,
+    "wall_seconds": 5.890482958000007,
+    "cpu_one_core_percent": 29.369408456575623,
+    "initial_counts": {
+      "renders": 38,
+      "callbacks": 103,
+      "mounts": 38,
+      "unmounts": 27
+    },
+    "final_counts": {
+      "renders": 84,
+      "callbacks": 351,
+      "mounts": 84,
+      "unmounts": 73
+    },
+    "work": {
+      "renders": 46,
+      "callbacks": 248,
+      "mounts": 46,
+      "unmounts": 46
+    },
+    "frames": 293,
+    "late": 3,
+    "late_percent": 1.02,
+    "p95_ms": 29
+  },
+  {
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 146.744140625,
+    "memory_after_mib": 157.2041015625,
+    "cpu_seconds": 1.1099999999999999,
+    "wall_seconds": 6.029585666000003,
+    "cpu_one_core_percent": 18.40922513563637,
+    "initial_counts": {
+      "renders": 27,
+      "callbacks": 28,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 70,
+      "callbacks": 71,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 43,
+      "callbacks": 43,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 269,
+    "late": 6,
+    "late_percent": 2.23,
+    "p95_ms": 20
+  },
+  {
+    "name": "stable-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "adaptive-stable",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 146.3876953125,
+    "memory_after_mib": 157.8095703125,
+    "cpu_seconds": 0.8500000000000001,
+    "wall_seconds": 5.827575332999999,
+    "cpu_one_core_percent": 14.585826032770054,
+    "initial_counts": {
+      "renders": 25,
+      "callbacks": 26,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 71,
+      "callbacks": 72,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 46,
+      "callbacks": 46,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 272,
+    "late": 1,
+    "late_percent": 0.37,
+    "p95_ms": 19
+  },
+  {
+    "name": "flatlist-5",
+    "engine": "flatlist",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 134.4345703125,
+    "memory_after_mib": 160.5380859375,
+    "cpu_seconds": 1.34,
+    "wall_seconds": 5.8215262500000335,
+    "cpu_one_core_percent": 23.018018685391866,
+    "initial_counts": {
+      "renders": 36,
+      "callbacks": 95,
+      "mounts": 36,
+      "unmounts": 21
+    },
+    "final_counts": {
+      "renders": 82,
+      "callbacks": 347,
+      "mounts": 82,
+      "unmounts": 67
+    },
+    "work": {
+      "renders": 46,
+      "callbacks": 252,
+      "mounts": 46,
+      "unmounts": 46
+    },
+    "frames": 289,
+    "late": 2,
+    "late_percent": 0.69,
+    "p95_ms": 19
+  },
+  {
+    "name": "flashlist-2",
+    "engine": "flashlist",
+    "rows": 2,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 144.08203125,
+    "memory_after_mib": 151.3740234375,
+    "cpu_seconds": 1.12,
+    "wall_seconds": 5.818357750000018,
+    "cpu_one_core_percent": 19.249417930686654,
+    "initial_counts": {
+      "renders": 39,
+      "callbacks": 95,
+      "mounts": 9,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 86,
+      "callbacks": 335,
+      "mounts": 9,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 47,
+      "callbacks": 240,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 288,
+    "late": 4,
+    "late_percent": 1.39,
+    "p95_ms": 23
+  }
+]

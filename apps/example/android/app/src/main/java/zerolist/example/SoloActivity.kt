@@ -32,6 +32,7 @@ class SoloActivity : ReactActivity() {
       }
     }
   }
+  private var commonProbe: CommonListProbe? = null
   private var motionTarget: android.view.View? = null
   private var motionListener: android.view.ViewTreeObserver.OnPreDrawListener? = null
   private fun findMotionTarget(view: android.view.View): android.view.View? {
@@ -44,6 +45,7 @@ class SoloActivity : ReactActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+    if (intent.getBooleanExtra("commonAudit", false)) commonProbe = CommonListProbe(window.decorView, intent.getIntExtra("count", 100000))
     if (intent.getBooleanExtra("motionTrace", false)) {
       val listener = android.view.ViewTreeObserver.OnPreDrawListener {
         val target = motionTarget ?: findMotionTarget(window.decorView).also { motionTarget = it }
@@ -86,6 +88,7 @@ class SoloActivity : ReactActivity() {
     window.decorView.removeCallbacks(keepAliveFrame)
     frameListener?.let { window.removeOnFrameMetricsAvailableListener(it) }
     frameThread?.quitSafely()
+    commonProbe?.close()
     super.onDestroy()
   }
 
@@ -95,6 +98,8 @@ class SoloActivity : ReactActivity() {
     object : DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled) {
       override fun getLaunchOptions(): Bundle =
         Bundle().apply {
+          putInt("bufferRows", intent.getIntExtra("bufferRows", -1))
+          putBoolean("commonAudit", intent.getBooleanExtra("commonAudit", false))
           putInt("jsBlockMs", intent.getIntExtra("jsBlockMs", 0))
           putString("preparation", intent.getStringExtra("preparation") ?: "baseline")
           putBoolean("preparationTrace", intent.getBooleanExtra("preparationTrace", false))
