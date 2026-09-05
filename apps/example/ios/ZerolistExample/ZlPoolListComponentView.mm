@@ -1,6 +1,7 @@
 // React의 내용 커밋과 같은 매핑으로 배치한다. 이전 동작은 비교 옵션으로 남긴다.
 #import <React/RCTViewComponentView.h>
 #import <React/RCTComponentViewFactory.h>
+#import <React/RCTMountingTransactionObserving.h>
 #import <UIKit/UIKit.h>
 #import <string>
 #import <vector>
@@ -16,7 +17,7 @@
 
 using namespace facebook::react;
 
-@interface ZlPoolListComponentView : RCTViewComponentView <UIScrollViewDelegate>
+@interface ZlPoolListComponentView : RCTViewComponentView <UIScrollViewDelegate, RCTMountingTransactionObserving>
 @end
 
 @implementation ZlPoolListComponentView {
@@ -35,6 +36,7 @@ using namespace facebook::react;
   int32_t _version;
   BOOL _legacyRecycling;
   BOOL _audit;
+  BOOL _placementDirty;
   CADisplayLink *_auditLink;
   NSUInteger _auditFrame;
 }
@@ -111,6 +113,12 @@ using namespace facebook::react;
   }
 }
 
+- (void)mountingTransactionDidMount:(const MountingTransaction &)transaction
+               withSurfaceTelemetry:(const SurfaceTelemetry &)surfaceTelemetry {
+  // 하위 텍스트까지 모두 반영한 뒤 같은 매핑으로 위치를 확정한다.
+  if (!_legacyRecycling && _placementDirty) { [self placeCommitted]; _placementDirty=NO; }
+}
+
 - (void)placeCommitted {
   for (NSUInteger slot = 0; slot < _slots.count; slot++) {
     UIView *view = _slots[slot];
@@ -166,6 +174,7 @@ using namespace facebook::react;
   _legacyRecycling = p.legacyRecycling;
   _overscan = MAX(0,p.overscan);
   if (_audit != p.audit) { _audit = p.audit; [self didMoveToWindow]; }
+  _placementDirty=YES;
   _committed.clear();
   std::istringstream stream(p.committedBinds);
   std::string part;
@@ -188,6 +197,7 @@ using namespace facebook::react;
                           index:(NSInteger)index {
   [_scroll insertSubview:child atIndex:(NSUInteger)index];
   [_slots insertObject:child atIndex:(NSUInteger)index];
+  _placementDirty=YES;
   _lastStart = NSIntegerMin;
   [self layoutSlots];
 }
@@ -196,6 +206,7 @@ using namespace facebook::react;
                             index:(NSInteger)index {
   [child removeFromSuperview];
   [_slots removeObjectAtIndex:(NSUInteger)index];
+  _placementDirty=YES;
   _lastStart = NSIntegerMin; // 풀 크기 변경 → 다음 layoutSlots 강제
   [self layoutSlots];
 }

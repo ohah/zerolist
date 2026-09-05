@@ -10,6 +10,8 @@ VARIANTS += [('zigpool-legacy', 'zigpool', 'normal')]
 # Stage 2 is selected explicitly and uses its own APK/results directory.
 if os.environ.get('STAGE') == 'cadence':
     VARIANTS = [('zigpool', 'zigpool', 'normal'), ('zigpool-keep-alive', 'zigpool', 'normal')]
+if os.environ.get('STAGE') == 'indicator':
+    VARIANTS = [('zigpool-no-indicator','zigpool','normal'),('zigpool','zigpool','normal')]
 if os.environ.get('VARIANTS'):
     selected = os.environ['VARIANTS'].split(',')
     VARIANTS = [v for v in VARIANTS if v[0] in selected]
@@ -31,7 +33,7 @@ for rep in range(int(os.environ.get('REPEATS', '1' if TRACE else '5'))):
     for variant, engine, mode in VARIANTS[shift:] + VARIANTS[:shift]:
         name = f'{rep+1}-{variant}'
         adb('shell', 'am', 'force-stop', PKG)
-        adb('shell', 'am', 'start', '-W', '-n', PKG + '/.SoloActivity', '--es', 'engine', engine, '--ei', 'count', '100000', '--es', 'cell', 'heavy', '--es', 'diagnostic', mode, '--ez', 'trace', 'true' if TRACE else 'false', '--ez', 'keepAlive', 'false', '--ez', 'legacyRecycling', 'true' if variant == 'zigpool-legacy' else 'false')
+        adb('shell', 'am', 'start', '-W', '-n', PKG + '/.SoloActivity', '--es', 'engine', engine, '--ei', 'count', '100000', '--es', 'cell', 'heavy', '--es', 'diagnostic', mode, '--ez', 'trace', 'true' if TRACE else 'false', '--ez', 'keepAlive', 'false', '--ez', 'legacyRecycling', 'true' if variant == 'zigpool-legacy' else 'false', '--ez', 'scrollIndicator', 'true' if os.environ.get('STAGE') == 'indicator' and variant == 'zigpool' else 'false')
         time.sleep(3)
         pid = adb('shell', 'pidof', PKG).strip()
         baseline, _ = counters(pid, engine)
@@ -61,7 +63,7 @@ for rep in range(int(os.environ.get('REPEATS', '1' if TRACE else '5'))):
             if not m:
                 raise RuntimeError('Missing gfx metric: ' + pattern)
             return m.group(1)
-        row = {'run': rep+1, 'variant': variant, 'engine': engine, 'mode': mode, 'trace': TRACE, 'legacy_recycling': variant == 'zigpool-legacy',
+        row = {'run': rep+1, 'variant': variant, 'engine': engine, 'mode': mode, 'trace': TRACE, 'legacy_recycling': variant == 'zigpool-legacy', 'scroll_indicator': os.environ.get('STAGE') == 'indicator' and variant == 'zigpool',
                'frames': int(match(r'Total frames rendered: (\d+)')),
                'jank_count': int(match(r'Janky frames: (\d+)')),
                'jank_percent': float(match(r'Janky frames: \d+ \(([\d.]+)%\)')),

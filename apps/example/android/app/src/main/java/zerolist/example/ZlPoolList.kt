@@ -37,7 +37,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private var version = 0
   private var auditFrame = 0
   private val beforeDraw = ViewTreeObserver.OnPreDrawListener {
-    if (!legacyRecycling) placeCommitted()
+    if (!legacyRecycling && (!freezePosition || !positionsInitialized)) { placeCommitted(); positionsInitialized=true }
     if (audit) auditSlots()
     true
   }
@@ -79,6 +79,12 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     for ((a,b) in spans.sortedBy { it.first }) { overlap += maxOf(0f, minOf(end,b)-a); covered += maxOf(0f,b-maxOf(end,a)); end=maxOf(end,b) }
     Log.i("ZlAudit", "frame=${++auditFrame} y=$scrollY wrong=$wrong visible=$visible blank=${(height-covered).roundToInt()} overlap=${overlap.roundToInt()} version=$version")
   }
+  // 스크롤 표시가 프레임 재개에 미치는 영향을 분리하는 진단 옵션. 기본은 끈다.
+  private val showScrollIndicator = ctx.currentActivity?.intent?.getBooleanExtra("scrollIndicator", false) == true
+  init { isVerticalScrollBarEnabled = showScrollIndicator; if (showScrollIndicator) setWillNotDraw(false) }
+  override fun computeVerticalScrollRange(): Int = offD?.get(count)?.toInt() ?: 0
+  override fun computeVerticalScrollOffset(): Int = scrollY
+  override fun computeVerticalScrollExtent(): Int = height
   private var count = 0
   private var rowPxF = 0f
   private var builtCount = -1
@@ -139,6 +145,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     scrollY = clamped
     reposition()
     if (!legacyRecycling) invalidate()
+    if (showScrollIndicator) awakenScrollBars()
   }
 
   // 가시 범위와 양방향 여유 범위를 요청한다. 새 요청으로 즉시 이동하지 않고
