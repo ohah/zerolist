@@ -19,8 +19,15 @@ APPLE_ARCHIVES="$(mktemp -d)"
 trap 'rm -rf "$APPLE_ARCHIVES"' EXIT
 for SLICE in ios-arm64 ios-arm64-simulator; do
   LIB="$OUT/$SLICE/libzerolist_engine.a"
-  xcrun libtool -static -o "$APPLE_ARCHIVES/$SLICE.a" "$LIB"
+  # Newer libtool can skip misaligned archive members. Extract with Zig's
+  # archiver first, then give libtool the Mach-O objects rather than the archive.
+  mkdir -p "$APPLE_ARCHIVES/$SLICE"
+  SOURCE="$PWD/$LIB"
+  (cd "$APPLE_ARCHIVES/$SLICE" && zig ar x "$SOURCE")
+  chmod u+r "$APPLE_ARCHIVES/$SLICE"/*.o
+  xcrun libtool -static -o "$APPLE_ARCHIVES/$SLICE.a" "$APPLE_ARCHIVES/$SLICE"/*.o
   mv "$APPLE_ARCHIVES/$SLICE.a" "$LIB"
+  xcrun nm -gU "$LIB" | awk '$NF == "_zl_build_offsets" { found = 1 } END { exit !found }'
 done
 
 echo "✔ $OUT"
