@@ -1,110 +1,137 @@
-# Five-list comparison and ZigPool jank ablations
+# 다섯 목록 비교와 ZigPool 지연 프레임 원인 확인
 
-The original JS-virtualized ZeroList is now included alongside FlatList, LegendList, FlashList and ZigPool. On this Android emulator, original ZeroList has the most deadline misses in this workload. ZigPool reduces JS callbacks and mounts, but its normal mode still misses more deadlines than the three established lists. A paired drawing-cadence experiment removes most of ZigPool's excess misses without changing its item binding logic.
+기존 ZeroList를 FlatList·LegendList·FlashList·ZigPool과 함께 비교했다. 이번 안드로이드 에뮬레이터에서는 기존 ZeroList의 지연 프레임 비율이 가장 높았다. ZigPool은 자바스크립트 함수 호출과 셀 생성 횟수를 줄였지만, 기본 상태의 지연 프레임 비율은 다른 세 라이브러리보다 높았다. 추가 실험에서는 항목 내용을 연결하는 방식을 그대로 두고 그리기를 유지했을 때 ZigPool의 초과 지연 대부분이 사라졌다.
 
-**“Original ZeroList” does not mean GPU disabled.** Its virtualizer runs in JS and its React Native views still use Android's hardware-rendered display pipeline. This experiment compares virtualization/placement approaches, not GPU on versus off.
+**“기존 ZeroList”는 GPU를 끈다는 뜻이 아니다.** 보이는 항목을 골라내는 가상화 계산은 자바스크립트에서 하지만, 화면은 여전히 안드로이드의 GPU 가속을 사용해 그린다. 이번 실험은 가상화와 셀 배치 방식의 비교다.
 
-## Normal lists: five repetitions each
+## 먼저 알아두면 좋은 용어
 
-Release/Hermes/Fabric, Android 16 API 36 arm64 emulator, 1080×2400 px at 420 dpi. Each list contains **100,000 heavy fixed-height items (234 dp)**. Each heavy cell performs a 4,000-iteration square-root loop and contains 64 colored child Views. Warm up 3 seconds, issue twelve sequential 300 ms swipes from (540,1800) to (540,600), then settle for 1.2 seconds. Rotate engine order across repetitions. No recording, FrameMetrics listener, local build or video encoding runs during measurements.
+| 용어 | 이 문서에서의 뜻 |
+|---|---|
+| 프레임 | 화면을 한 번 그리는 단위 |
+| 지연 프레임 | 안드로이드가 해당 프레임에 정한 마감시간을 넘긴 프레임 |
+| 지연 프레임 비율 | 그린 프레임 중 마감시간을 넘긴 프레임의 비율. 터치 반응 시간과는 다르다. |
+| 중앙값 | 측정값을 크기순으로 정렬했을 때 가운데 값 |
+| p50 | 프레임 시간의 중앙값 |
+| p95 | 프레임의 95%가 이 시간 안에 끝났다는 기준값. 작을수록 대체로 좋지만 지연 비율과 같은 지표는 아니다. |
+| 밀리초(ms) | 1초의 1,000분의 1 |
+| 복합 셀(complex) | 이미지·글·태그를 함께 배치한 목록의 한 행 |
+| 고부하 셀(heavy) | 그릴 때마다 제곱근 계산 4,000회와 색상 사각형 64개를 추가한 행 |
+| 셀 렌더 | 행의 화면 내용을 계산하는 작업 |
+| JS 콜백 | 스크롤이나 셀 재사용 사건을 자바스크립트 함수로 전달한 횟수 |
+| 마운트 / 언마운트 | 셀을 새로 붙이거나 제거하는 작업 |
+| 가상화 | 모든 항목을 동시에 그리지 않고 화면 주변의 필요한 항목만 유지하는 방식 |
+| CI | 코드를 올릴 때 자동으로 실행되는 검사와 빌드 |
 
-Values below are medians of five independent runs, not pooled frames. Counter deltas exclude the warm-up.
+## 정상 목록: 각각 5회 비교
 
-| List | Janky frames | Range | Late frames / rendered frames¹ | gfxinfo p95 | Cell renders | JS callbacks | Mounts / unmounts |
+배포용 빌드에서 Hermes·Fabric을 사용했다. 환경은 안드로이드 16, API 36, arm64 에뮬레이터이며 화면은 1080×2400픽셀, 밀도는 420dpi다. 각 목록은 **높이 234dp인 고부하 항목 10만 개**를 담는다. 3초 준비한 뒤 (540,1800)에서 (540,600)으로 300밀리초 동안 미는 동작을 연속 12회 실행하고 1.2초 기다렸다. 회차마다 목록 실행 순서를 바꿨다. 측정 중 녹화, 프레임 추적, 로컬 빌드, 영상 변환을 동시에 실행하지 않았다.
+
+표는 독립된 5회 측정값의 중앙값이다. 전체 프레임을 합쳐 계산한 값이 아니다. 렌더·콜백·셀 생성 횟수에서는 준비 구간을 제외했다.
+
+| 목록 | 지연 프레임 비율 | 최소~최대 | 지연 / 전체 프레임¹ | 프레임 시간 p95 | 셀 렌더 | JS 콜백 | 셀 추가 / 제거 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| FlatList | 1.05% | 0.69–1.39% | 3 / 287 | 23 ms | 25 | 241 | 25 / 0 |
-| LegendList | 0.70% | 0.69–2.08% | 2 / 287 | 19 ms | 26 | 210 | 2 / 0 |
-| FlashList | 1.05% | 0.69–1.39% | 3 / 287 | 22 ms | 25 | 240 | 1 / 0 |
-| ZeroList (original JS) | 12.55% | 11.52–13.50% | 34 / 271 | 57 ms | 25 | 239 | 25 / 5 |
-| ZigPool | 4.40% | 4.38–5.51% | 12 / 273 | 21 ms | 26 | 26 | 0 / 0 |
+| FlatList | 1.05% | 0.69~1.39% | 3 / 287 | 23ms | 25 | 241 | 25 / 0 |
+| LegendList | 0.70% | 0.69~2.08% | 2 / 287 | 19ms | 26 | 210 | 2 / 0 |
+| FlashList | 1.05% | 0.69~1.39% | 3 / 287 | 22ms | 25 | 240 | 1 / 0 |
+| 기존 ZeroList | 12.55% | 11.52~13.50% | 34 / 271 | 57ms | 25 | 239 | 25 / 5 |
+| ZigPool | 4.40% | 4.38~5.51% | 12 / 273 | 21ms | 26 | 26 | 0 / 0 |
 
-¹ Numerator, denominator and percentage each have their own run-level median, so dividing the displayed medians need not reproduce the percentage exactly.
+¹ 지연 개수, 전체 개수, 비율은 각각의 중앙값이다. 따라서 표의 개수를 나눈 값과 비율이 정확히 일치하지 않을 수 있다.
 
-![Five-list jank measurements](metrics.png)
+![다섯 목록의 지연 프레임 비율](metrics.png)
 
-Original ZeroList's 25 cell renders are close to ZigPool's 26, despite much worse frame timing. Therefore these counters alone do not explain the original implementation's misses. Its JS window/spacer updates and wrapper mount/layout work remain profiling candidates; this experiment does **not** establish a particular one as its root cause. Nor does having more JS callbacks necessarily cause more jank: FlatList has more callbacks and fewer misses here.
+기존 ZeroList의 셀 렌더는 25회로 ZigPool의 26회와 비슷하지만 프레임 시간은 훨씬 나빴다. 따라서 렌더 횟수만으로 기존 구현의 지연 원인을 설명할 수 없다. 자바스크립트의 가시 범위·빈 공간 갱신, 셀을 감싸는 요소의 생성·배치 작업은 추가 조사 대상이지만, **이번 실험에서 특정 작업을 원인으로 확정하지 않았다.** 콜백이 많다고 지연도 반드시 많은 것은 아니다. FlatList는 콜백이 더 많지만 지연이 더 적었다.
 
-## What causes ZigPool's higher percentage here?
+## ZigPool의 지연 비율이 높은 이유 확인
 
-Two intentionally broken controls separate content binding from slot placement. These are diagnostic modes, **not usable list alternatives or performance improvements**.
+내용 갱신과 위치 배치를 분리하기 위해 일부 기능을 의도적으로 멈췄다. 아래 두 고정 조건은 원인 확인용이며, **정상적으로 사용할 수 있는 목록이나 성능 개선안이 아니다.**
 
-| Stage 1 condition | Janky frames (median) | Late / rendered frames | Cell renders | JS callbacks |
+| 1단계 조건 | 지연 비율 중앙값 | 지연 / 전체 프레임 | 셀 렌더 | JS 콜백 |
 |---|---:|---:|---:|---:|
-| Normal ZigPool | 4.40% | 12 / 273 | 26 | 26 |
-| Freeze JS content binding | 4.76% | 13 / 273 | 0 | 25 |
-| Freeze slot positions after initialization | 20.78% | 16 / 77 | 25 | 25 |
+| 정상 ZigPool | 4.40% | 12 / 273 | 26 | 26 |
+| 자바스크립트 내용 갱신 중단 | 4.76% | 13 / 273 | 0 | 25 |
+| 초기 배치 후 셀 위치 고정 | 20.78% | 16 / 77 | 25 | 25 |
 
-Freezing content removes measured Cell rerenders but leaves the misses. Content changes are therefore not necessary for this repeated-jank pattern. Freezing slot positions radically reduces rendered frames and changes what is drawn; its high ratio does not show that positioning is expensive. A smaller denominator can make this percentage worse even when much less work is drawn.
+내용 갱신을 멈추면 측정된 셀 렌더는 0이 되지만 지연은 남는다. 이 반복 지연은 내용이 바뀌지 않아도 생긴다는 뜻이다. 위치를 고정하면 그리는 프레임 수와 화면 동작이 크게 달라진다. 이때 비율이 높다고 위치 계산이 비싸다는 뜻은 아니다. 그리는 작업이 줄어도 분모인 전체 프레임 수가 더 크게 줄면 지연 비율은 높아질 수 있다.
 
-The separate native FrameMetrics trace shows normal ZigPool's repeated misses about **34–44 ms after a new gesture starts**, following a **33.33 ms gap between app frames**. These resumed frames have a **16.67 ms deadline**, and typically finish around 17–21 ms. Ten of the twelve misses in each normal ZigPool trace follow this pattern. Frozen-content mode retains it.
+별도의 안드로이드 프레임 추적에서는 정상 ZigPool의 지연이 **다음 손가락 동작 시작 약 34~44밀리초 뒤**에 반복됐다. 그 직전 앱 프레임 간격은 **33.33밀리초**였다. 다시 그리기 시작하는 프레임에는 **16.67밀리초 마감시간**이 주어졌고, 보통 17~21밀리초에 끝났다. 정상 ZigPool을 추적한 각 실행에서 지연 12개 중 10개가 이 형태였다. 내용 고정 조건에서도 같은 현상이 남았다.
 
-### Paired follow-up: keep drawing across short gesture gaps
+### 추가 비교: 손가락 동작 사이에도 그리기를 유지
 
-A second APK adds an opt-in `keepAlive` diagnostic. During touch activity, it invalidates the window on each animation callback until 250 ms after the latest touch. It leaves item data, binding, placement and scroll physics unchanged. Normal and keep-alive modes are each measured five times **on this same second APK**, with alternating order.
+두 번째 앱 빌드에는 선택적으로 켜는 `keepAlive` 진단 기능을 넣었다. 마지막 터치로부터 250밀리초가 지날 때까지 화면 갱신 주기마다 다시 그리기를 요청한다. 항목 데이터·내용 연결·위치 배치·스크롤 물리는 그대로다. **동일한 두 번째 앱 빌드에서** 정상 조건과 그리기 유지 조건을 각각 5회, 순서를 번갈아 측정했다.
 
-| Stage 2 condition | Janky frames | Range | Late / rendered frames | gfxinfo p95 | Cell renders | JS callbacks |
+| 2단계 조건 | 지연 비율 | 최소~최대 | 지연 / 전체 프레임 | 프레임 시간 p95 | 셀 렌더 | JS 콜백 |
 |---|---:|---:|---:|---:|---:|---:|
-| Normal ZigPool | 4.40% | 4.36–5.51% | 12 / 273 | 20 ms | 26 | 26 |
-| Keep drawing (diagnostic) | 0.70% | 0.70–0.70% | 2 / 286 | 23 ms | 26 | 26 |
+| 정상 ZigPool | 4.40% | 4.36~5.51% | 12 / 273 | 20ms | 26 | 26 |
+| 그리기 유지 진단 | 0.70% | 0.70~0.70% | 2 / 286 | 23ms | 26 | 26 |
 
-Absolute misses fall from 12 to 2, while rendered frames rise only from 273 to 286. This is **not merely percentage dilution**. The separate trace also loses the repeated gesture-restart misses. This supports interrupted/resumed drawing cadence as a major contributor to ZigPool's excess jank in this scripted emulator workload. It does not prove the exact framework/driver scheduling mechanism, and the p95 duration does not improve.
+지연 개수는 12→2개로 줄었고 전체 프레임은 273→286개로 늘었다. **분모만 커져 비율이 좋아진 것은 아니다.** 별도 추적에서도 손가락 동작 재개 때마다 반복되던 지연이 사라졌다. 이는 이번 자동 입력·에뮬레이터 조건에서 그리기가 멈췄다 재개되는 시점이 ZigPool의 초과 지연에 크게 기여한다는 근거다. 운영체제나 드라이버가 작업을 배정하는 정확한 내부 원인까지 확인한 것은 아니다.
 
-`keepAlive` remains **off by default**, confined to the example Activity. Extra invalidations can consume power and rendering work. We have not adopted continuous invalidation as a production optimization or verified benefits on physical tablets, long flings or other interaction patterns.
+**렌더링 자체가 빨라졌다는 뜻도 아니다.** p95는 개선되지 않았다. 별도 2단계 추적에서 16.67밀리초 마감시간을 받은 프레임은 11→1개로 줄었지만, 프레임 시간 중앙값은 17.23→20.73밀리초로 늘었다. 지연 비율과 처리 시간은 함께 봐야 한다.
 
-![Frame timing aligned with gesture starts](trace-timeline.png)
+`keepAlive`는 **기본적으로 꺼져 있으며** 예제 앱에만 있다. 추가 그리기는 전력과 작업량을 늘릴 수 있다. 실제 제품의 최적화로 채택하지 않았으며 실물 태블릿, 긴 관성 스크롤, 다른 입력 방식에서의 효과는 미확인이다. ZigPool에는 빠른 관성 스크롤 중 새 위치에 직전 행 내용이 잠깐 보일 수 있는 기존 제약도 있다. 이번 진단은 그 내용 동기화 문제를 해결하는 변경이 아니다.
 
-Blue dots meet their per-frame deadline; red dots miss it; vertical lines mark touch DOWN. Trace runs are separate from the five-run statistics. Listener-reported dropped callbacks are zero in all nine traced conditions. Analysis includes intended VSYNC from one refresh before the first DOWN through 1.2 s after the final UP; intended VSYNC can precede input dispatch in the same refresh. This touch-relative window is slightly different from the gfxinfo-reset window, so total frame counts can differ at the boundary. Raw logs and the exact analysis are included.
+![손가락 동작 시작 시점과 프레임 마감 초과](trace-timeline.png)
 
-## Meaning and limits of the metrics
+파란 점은 마감시간을 지킨 프레임, 빨간 점은 넘긴 프레임, 세로선은 터치 시작이다. 추적은 5회 통계 측정과 별도로 실행했다. 9개 추적 조건 모두 추적 통지 누락은 0이었다. 분석 범위는 첫 터치 시작보다 화면 갱신 한 주기 앞선 예정 시각부터 마지막 터치 종료 1.2초 뒤까지다. 같은 주기 안에서도 예정 화면 갱신 시각은 터치 전달보다 앞설 수 있다. 이 범위와 `gfxinfo` 초기화 기준 범위는 조금 다르므로 경계에서 전체 프레임 개수가 다를 수 있다. 원시 로그와 분석 코드를 함께 제공한다.
 
-“Janky frames” is the non-legacy `dumpsys gfxinfo` deadline-miss ratio, **not input latency** or the percentage of time frozen. It is not simply “all frames exceeding 16.67 ms”: available frame deadlines differ in this capture. Android exposes `TOTAL_DURATION` and `DEADLINE` separately, and warns that stage durations do not necessarily sum to total duration. See the [official FrameMetrics reference](https://developer.android.com/reference/android/view/FrameMetrics).
+## 지표의 정확한 뜻과 한계
 
-GPU duration, command issue and buffer-swap timings can include pipeline/synchronization effects in this emulator; they do not independently establish pure GPU compute load. The trace identifies a timing pattern and the cadence intervention tests its importance; no Perfetto scheduler/driver trace was collected.
+지연 프레임 비율은 `dumpsys gfxinfo`의 최신 방식으로 집계한 마감 초과 비율이며, **입력 지연 시간이나 화면이 멈춘 시간의 비율이 아니다.** 프레임별 마감시간이 다르므로 단순히 “16.67밀리초 초과 비율”도 아니다. 안드로이드는 전체 시간(`TOTAL_DURATION`)과 마감시간(`DEADLINE`)을 따로 제공한다. 각 단계 시간이 겹칠 수 있어 단계별 합이 전체 시간과 일치하지 않을 수도 있다. 근거는 [안드로이드 공식 프레임 측정 설명서(영문)](https://developer.android.com/reference/android/view/FrameMetrics)다.
 
-This is a small synthetic emulator benchmark. It does not establish old-tablet performance, thermal behavior, power, memory use, startup time, dynamic-height correctness or end-to-end input-to-photon latency. Lists virtualize: 100,000 data items does not mean 100,000 mounted cells, and these gestures cover only the beginning of the dataset. Engines have different scroll physics and distances. Frozen controls are not functionally equivalent to normal lists. Results from the two APK stages are reported separately.
+에뮬레이터의 GPU 시간, 그리기 명령 전달 시간, 화면 버퍼 교체 시간에는 작업 대기·동기화 영향이 포함될 수 있다. 각각을 순수 GPU 계산량으로 해석하지 않는다. 이번 추적은 반복 시점을 찾고 그리기 유지 실험으로 영향을 확인한 것이며, 운영체제 작업 배정·드라이버를 자세히 보는 Perfetto 추적은 수집하지 않았다.
 
-## Visual evidence
+적은 횟수의 인공 부하 실험이다. 구형 태블릿 성능, 발열·전력·메모리, 앱 시작 시간, 동적 높이의 정확성, 터치부터 실제 화면 표시까지의 시간은 검증하지 않았다. 가상화하므로 **10만 데이터가 10만 셀 동시 생성을 뜻하지 않는다.** 이번 동작은 목록 앞부분만 이동했다. 목록마다 스크롤 물리와 이동 거리가 다르며, 기능을 멈춘 진단 조건은 정상 목록과 동등하지 않다. 두 앱 빌드 단계의 통계는 분리했다.
 
-All five normal engines were recorded again on the stage 2 APK, with diagnostics off. Each uses the same nine scripted gestures: two slow forward, four fast forward, three reverse. Recordings are separate from quantitative tests. Full-height before/after screenshots allow checking content overlap and row continuity; complex and heavy heights are shared across engines.
+## 영상과 이미지
 
-- [Heavy: five engines, 1×](comparison-heavy.mp4)
-- [Complex: five engines, 1×](comparison-complex.mp4)
-- [Heavy crop, 0.25×, source seconds 2–8, no interpolation](heavy-detail-slow.mp4)
-- [All five engines × two cell types at rest](layout-check.jpg)
-- [Heavy before/after](contact-heavy.jpg)
+두 번째 앱 빌드에서 진단 기능을 끄고 정상 목록 5종을 다시 녹화했다. 각 영상은 동일하게 느린 정방향 이동 2회, 빠른 정방향 4회, 역방향 3회다. 정량 측정과는 별도 실행이다. 복합 셀과 고부하 셀 높이는 목록끼리 공유하며, 전체 높이의 전후 화면으로 겹침과 항목 순서를 살펴볼 수 있다.
 
-![Heavy preview, reduced to 10 fps; not a smoothness measurement](preview-heavy.gif)
+- [고부하 셀: 다섯 목록 1배속 비교](comparison-heavy.mp4)
+- [복합 셀: 다섯 목록 1배속 비교](comparison-complex.mp4)
+- [고부하 셀 일부 확대: 0.25배속, 원본 2~8초, 중간 프레임 생성 없음](heavy-detail-slow.mp4)
+- [다섯 목록과 두 셀 조건의 초기 화면](layout-check.jpg)
+- [고부하 셀 이동 전후](contact-heavy.jpg)
 
-| Engine | Heavy original | Complex original |
+![초당 10프레임으로 줄인 미리보기이며 부드러움 측정용이 아님](preview-heavy.gif)
+
+| 목록 | 고부하 셀 원본 | 복합 셀 원본 |
 |---|---|---|
-| FlatList | [MP4](heavy-flatlist.mp4) | [MP4](complex-flatlist.mp4) |
-| LegendList | [MP4](heavy-legend.mp4) | [MP4](complex-legend.mp4) |
-| FlashList | [MP4](heavy-flashlist.mp4) | [MP4](complex-flashlist.mp4) |
-| Original ZeroList | [MP4](heavy-zerolist.mp4) | [MP4](complex-zerolist.mp4) |
-| ZigPool | [MP4](heavy-zigpool.mp4) | [MP4](complex-zigpool.mp4) |
+| FlatList | [영상](heavy-flatlist.mp4) | [영상](complex-flatlist.mp4) |
+| LegendList | [영상](heavy-legend.mp4) | [영상](complex-legend.mp4) |
+| FlashList | [영상](heavy-flashlist.mp4) | [영상](complex-flashlist.mp4) |
+| 기존 ZeroList | [영상](heavy-zerolist.mp4) | [영상](complex-zerolist.mp4) |
+| ZigPool | [영상](heavy-zigpool.mp4) | [영상](complex-zigpool.mp4) |
 
-Host emulator capture avoids the earlier Android screenrecord timestamp mismatch. `capture-manifest.json` records wall time, encoded duration, each gesture timestamp and source SHA-256. Panels start at recording time zero but are not frame-perfect gesture or scroll-position synchronization. GIF is only a navigation preview. `video-validation.json` contains full-decode and format checks for all 13 MP4 files.
+설명·그래프·영상 자막은 한글이다. 앱 행 안의 의미 없는 영문 시험 문구와 `open` 버튼은 측정 당시의 원본 화면이다. `open`은 “열기”라는 뜻이다. 글을 바꾸면 줄바꿈과 부하도 달라질 수 있어 원본 화면을 번역해 덮어쓰지 않았다. 이번 한글화는 측정 데이터나 앱 동작을 바꾸지 않는다.
 
-## Reproduction and artifacts
+호스트 에뮬레이터 녹화로 이전 화면 녹화의 시간축 불일치를 피했다. [녹화 기록](capture-manifest.json)에 실제 경과 시간, 영상 길이, 동작별 시각, 원본 파일 식별값을 기록했다. 각 패널은 녹화 시작 기준으로 배치했지만 입력과 스크롤 위치가 프레임 단위로 완벽히 일치하지는 않는다. 움직이는 미리보기는 내용 확인용이다. [영상 검증 기록](video-validation.json)은 MP4 13개의 전체 재생 데이터 해석과 형식 검사를 담는다.
 
-- [Provenance / APK SHA-256 / environment](provenance.json)
-- Stage 1: [all 35 runs](results-main.json), [raw logs/screenshots/XML](raw-main.zip), [7 separate trace runs](results-trace.json), [trace logs](raw-trace.zip)
-- Stage 2: [10 paired runs](results-cadence-main.json), [raw logs/screenshots/XML](raw-cadence-main.zip), [2 separate trace runs](results-cadence-trace.json), [trace logs](raw-cadence-trace.zip)
-- [Run-level summary](summary.json), [per-miss trace timing](trace-summary.json)
-- [Measurement script](measure.py), [analysis](analyze.py), [capture](capture.py), [video composition](visualize.py)
+## 재현 방법과 원시 자료
 
-Stage 1 application source: `75a8264`; stage 2 and video application source: `37d99c7`. Use stage 1's script at that commit to reproduce its exact command line; the later script adds an explicitly false keepAlive extra in ordinary runs.
+자료 파일의 영문 식별자와 실행 명령은 도구가 읽어야 하므로 유지한다. 아래 한글 설명으로 필요한 자료를 찾을 수 있다.
+
+- [측정 소스 버전·앱 파일 식별값·환경](provenance.json)
+- 1단계: [전체 35회 결과](results-main.json), [원시 로그·화면·화면 구조](raw-main.zip), [별도 추적 7회 결과](results-trace.json), [추적 원문](raw-trace.zip)
+- 2단계: [두 조건 10회 결과](results-cadence-main.json), [원시 로그·화면·화면 구조](raw-cadence-main.zip), [별도 추적 2회 결과](results-cadence-trace.json), [추적 원문](raw-cadence-trace.zip)
+- [회차별 요약](summary.json), [각 지연 프레임의 발생 시점](trace-summary.json)
+- [측정 코드](measure.py), [분석 코드](analyze.py), [녹화 코드](capture.py), [영상·이미지 조합 코드](visualize.py)
+
+1단계 앱 소스는 `75a8264`, 2단계와 영상의 앱 소스는 `37d99c7`이다. 1단계의 정확한 명령을 재현하려면 그 버전의 측정 코드를 사용한다. 이후 코드는 일반 실행 시 그리기 유지 기능을 끈다는 옵션을 명시적으로 추가했다.
 
 ```sh
-# Build/install the desired source revision first. Use separate output directories.
+# 원하는 버전의 앱을 먼저 빌드하고 설치한다. 결과 폴더는 각각 다르게 지정한다.
 ADB=/path/to/adb OUT=/tmp/main python3 docs/benchmarks/2026-09-05-ablation/measure.py
 ADB=/path/to/adb TRACE=1 OUT=/tmp/trace python3 docs/benchmarks/2026-09-05-ablation/measure.py
 ADB=/path/to/adb STAGE=cadence OUT=/tmp/cadence-main python3 docs/benchmarks/2026-09-05-ablation/measure.py
 ADB=/path/to/adb STAGE=cadence TRACE=1 OUT=/tmp/cadence-trace python3 docs/benchmarks/2026-09-05-ablation/measure.py
-# After quantitative measurements finish:
+# 수치 측정이 끝난 뒤 녹화와 영상 편집을 실행한다.
 ADB=/path/to/adb OUT="$PWD/docs/benchmarks/2026-09-05-ablation" RAW=/tmp/videos-webm python3 docs/benchmarks/2026-09-05-ablation/capture.py
 python3 docs/benchmarks/2026-09-05-ablation/analyze.py
 python3 docs/benchmarks/2026-09-05-ablation/visualize.py
 ```
 
-Earlier layout/CI repair evidence remains in the [four-engine report](../2026-09-05-large-list/README.md). Do not combine its samples with this follow-up.
+시각화 코드는 한글 글꼴이 필요하다. 기본값은 macOS의 Apple SD 산돌고딕 Neo다. 다른 환경에서는 코드의 `FONT` 경로를 설치된 한글 글꼴로 지정한다.
+
+이전 겹침 수정과 자동 검사 복구 근거는 [네 목록 비교 보고서](../2026-09-05-large-list/README.md)에 남아 있다. 이전 측정값을 이번 결과와 합치지 않는다.

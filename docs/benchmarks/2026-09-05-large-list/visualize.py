@@ -4,7 +4,9 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 import json, subprocess, statistics, tempfile
 P=Path(__file__).resolve().parent
-FONT='/System/Library/Fonts/Supplemental/Arial.ttf'
+cell_names={'complex':'복합 셀','heavy':'고부하 셀'}
+phase_names={'before':'이동 전','after':'이동 후'}
+FONT='/System/Library/Fonts/AppleSDGothicNeo.ttc'
 def font(n):
  try:return ImageFont.truetype(FONT,n)
  except OSError:return ImageFont.truetype('DejaVuSans.ttf',n)
@@ -15,7 +17,7 @@ with tempfile.TemporaryDirectory() as td:
  t=Path(td)
  for cell in ['complex','heavy']:
   im=Image.new('RGB',(1080,80),'#111827'); d=ImageDraw.Draw(im)
-  d.text((20,7),f'100,000 items / {cell} / 1x / separate runs',font=font(21),fill='white')
+  d.text((20,7),f'10만 항목 / {cell_names[cell]} / 1배속 / 각각 별도 실행',font=font(21),fill='white')
   for i,n in enumerate(names):d.text((i*270+15,43),n,font=font(23),fill=colors[i])
   im.save(t/'header.png')
   inputs=[]
@@ -27,8 +29,8 @@ with tempfile.TemporaryDirectory() as td:
  inputs=[]
  for e in engines:inputs+=['-ss','2','-t','6','-i',str(P/f'heavy-{e}.mp4')]
  im=Image.new('RGB',(1080,70),'#111827');d=ImageDraw.Draw(im)
- d.text((15,5),'HEAVY / 100,000 / 0.25x / source 2-8s / no interpolation',font=font(23),fill='white')
- d.text((15,38),'Top: FlatList | LegendList    Bottom: FlashList | ZigPool',font=font(22),fill='white');im.save(t/'slow.png')
+ d.text((15,5),'고부하 셀 / 10만 항목 / 0.25배속 / 원본 2~8초 / 중간 프레임 생성 없음',font=font(23),fill='white')
+ d.text((15,38),'위: FlatList | LegendList    아래: FlashList | ZigPool',font=font(22),fill='white');im.save(t/'slow.png')
  filters=';'.join(f'[{i}:v]crop=540:440:0:300,setpts=4*(PTS-STARTPTS),fps=30[v{i}]' for i in range(4))
  filters+=';[v0][v1]hstack[top];[v2][v3]hstack[bottom];[5:v][top][bottom]vstack=inputs=3[out]'
  # Header is input 4.
@@ -39,15 +41,15 @@ with tempfile.TemporaryDirectory() as td:
 im=Image.new('RGB',(1080,1310),'#111827');d=ImageDraw.Draw(im)
 for row,phase in enumerate(['before','after']):
  for i,(e,n) in enumerate(zip(engines,names)):
-  d.text((i*270+8,row*655+8),n+' / '+phase,font=font(19),fill='white')
+  d.text((i*270+8,row*655+8),n+' / '+phase_names[phase],font=font(19),fill='white')
   shot=Image.open(P/f'heavy-{e}-{phase}.png').convert('RGB').resize((270,600))
   im.paste(shot,(i*270,row*655+40))
 im.save(P/'contact-heavy.jpg',quality=85)
 # Every run is shown; black tick = median, not pooled frames.
 rows=json.loads((P/'results-100k-heavy.json').read_text())
 im=Image.new('RGB',(1200,740),'white');d=ImageDraw.Draw(im)
-d.text((35,20),'100,000 heavy items | 5 runs | emulator | no recording',font=font(28),fill='#111827')
-for panel,(key,label,limit) in enumerate([('jank_percent','Janky frames (%) - lower is better',6),('p95_ms','Frame duration p95 (ms) - lower is better',30)]):
+d.text((35,20),'10만 고부하 항목 | 5회 측정 | 에뮬레이터 | 녹화 없음',font=font(28),fill='#111827')
+for panel,(key,label,limit) in enumerate([('jank_percent','지연 프레임 비율(%) · 낮을수록 좋음',6),('p95_ms','프레임 시간 p95(밀리초) · 낮을수록 좋음',30)]):
  left=80+panel*600; top=130;bottom=570;width=470
  d.text((left-35,85),label,font=font(21),fill='#111827')
  for j in range(6):
@@ -59,6 +61,14 @@ for panel,(key,label,limit) in enumerate([('jank_percent','Janky frames (%) - lo
    y=bottom-v/limit*(bottom-top);xx=x+(j-2)*8;d.ellipse((xx-5,y-5,xx+5,y+5),fill=colors[i])
   med=statistics.median(vals);y=bottom-med/limit*(bottom-top);d.line((x-24,y,x+24,y),fill='black',width=3)
   d.text((x-40,590),n,font=font(16),fill='#111827');d.text((x-30,620),f'{med:g}',font=font(22),fill=colors[i])
-d.text((45,690),'Dots: individual runs. Black tick / number: median. Different scroll physics and small samples apply.',font=font(20),fill='#374151')
+d.text((45,690),'점: 각 측정값 · 검은 선/숫자: 중앙값 · 적은 표본이며 목록별 스크롤 동작이 다릅니다.',font=font(20),fill='#374151')
 im.save(P/'metrics.png')
 print('Visuals generated')
+
+# 두 셀 조건의 원본 화면과 한글 설명을 조합한다.
+im=Image.new('RGB',(1080,1310),'#111827');d=ImageDraw.Draw(im)
+for row,cell in enumerate(['complex','heavy']):
+ for i,(e,n) in enumerate(zip(engines,names)):
+  d.text((i*270+8,row*655+8),n+' / '+cell_names[cell],font=font(18),fill='white')
+  im.paste(Image.open(P/f'{cell}-{e}-before.png').convert('RGB').resize((270,600)),(i*270,row*655+40))
+im.save(P/'layout-check.png')

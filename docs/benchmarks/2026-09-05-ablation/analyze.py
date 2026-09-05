@@ -6,8 +6,8 @@ from pathlib import Path
 import json, re, statistics as stats, zipfile
 from PIL import Image, ImageDraw, ImageFont
 P = Path(__file__).resolve().parent
-NAMES = {'flatlist':'FlatList','legend':'LegendList','flashlist':'FlashList','zerolist':'ZeroList (JS)','zigpool':'ZigPool','zigpool-freeze-content':'ZigPool: frozen content','zigpool-freeze-position':'ZigPool: frozen positions','zigpool-keep-alive':'ZigPool: keep drawing'}
-FONT = '/System/Library/Fonts/Supplemental/Arial.ttf'
+NAMES = {'flatlist':'FlatList','legend':'LegendList','flashlist':'FlashList','zerolist':'기존 ZeroList','zigpool':'ZigPool','zigpool-freeze-content':'ZigPool: 내용 고정','zigpool-freeze-position':'ZigPool: 위치 고정','zigpool-keep-alive':'ZigPool: 그리기 유지'}
+FONT = '/System/Library/Fonts/AppleSDGothicNeo.ttc'
 def font(n):
     try: return ImageFont.truetype(FONT,n)
     except OSError: return ImageFont.load_default()
@@ -57,9 +57,9 @@ for kind in ['trace','cadence-trace']:
 (P/'trace-summary.json').write_text(json.dumps(trace_summary,indent=2)+'\n')
 # Five functional lists only: independent-run medians, min/max whiskers.
 rs=summary['main'][:5]
-im=Image.new('RGB',(1320,580),'#101827'); d=ImageDraw.Draw(im)
-d.text((30,20),'100,000 heavy rows | Android emulator | 5 runs',font=font(29),fill='white')
-d.text((30,65),'Janky frames (%) - median with min/max; no recording or frame listener',font=font(21),fill='#cbd5e1')
+im=Image.new('RGB',(1320,620),'#101827'); d=ImageDraw.Draw(im)
+d.text((30,20),'10만 항목 · 고부하 셀 | 안드로이드 에뮬레이터 | 5회 측정',font=font(29),fill='white')
+d.text((30,65),'지연 프레임 비율(%) · 중앙값과 최소~최대 · 녹화 및 추적 없이 측정',font=font(21),fill='#cbd5e1')
 left=290; scale=51
 for i,r in enumerate(rs):
     y=130+i*76; v=r['jank_percent']; x=left+v['median']*scale
@@ -68,21 +68,22 @@ for i,r in enumerate(rs):
     lo=left+v['min']*scale; hi=left+v['max']*scale
     d.line((lo,y+19,hi,y+19),fill='white',width=2)
     for xx in [lo,hi]: d.line((xx,y+11,xx,y+27),fill='white',width=2)
-    d.text((max(x,hi)+15,y+5),f"{v['median']:.2f}%   p95 {r['p95_ms']['median']} ms",font=font(22),fill='white')
-d.text((30,535),'ZeroList (JS) still uses GPU drawing. Emulator results do not establish old-tablet performance.',font=font(20),fill='#cbd5e1')
+    d.text((max(x,hi)+15,y+5),f"{v['median']:.2f}%   p95 {r['p95_ms']['median']}밀리초",font=font(22),fill='white')
+d.text((30,535),'기존 ZeroList도 GPU로 화면을 그립니다. 구형 태블릿의 실제 성능은 확인하지 않았습니다.',font=font(20),fill='#cbd5e1')
+d.text((30,575),'p95: 프레임의 95%가 이 시간 안에 끝났다는 기준값입니다.',font=font(20),fill='#cbd5e1')
 im.save(P/'metrics.png')
 # Full-window frames, with gesture-start lines. Red = per-frame deadline missed.
 keys=[k for k in traces if k[0]=='trace' and k[1] in ['flatlist','zerolist','zigpool','zigpool-freeze-content']]
 keys += [k for k in traces if k[0]=='cadence-trace']
 im=Image.new('RGB',(1400,140+155*len(keys)),'#101827'); d=ImageDraw.Draw(im)
-d.text((25,16),'Separate FrameMetrics trace: frame cost and gesture boundaries',font=font(27),fill='white')
-d.text((25,58),'Blue = within deadline; red = missed deadline; gray lines = touch DOWN. Y axis 0-110 ms.',font=font(20),fill='#cbd5e1')
+d.text((25,16),'별도 프레임 추적: 프레임 처리 시간과 손가락 동작 시작 시점',font=font(27),fill='white')
+d.text((25,58),'파랑: 마감시간 충족 · 빨강: 마감 초과 · 회색 세로선: 터치 시작 · 세로축: 0~110밀리초',font=font(20),fill='#cbd5e1')
 for i,key in enumerate(keys):
     fs,downs,t0=traces[key]; top=110+i*155; base=top+116; left=330; width=1020; seconds=5.6
-    label=NAMES[key[1]]+(' [stage 2]' if key[0]=='cadence-trace' else '')
+    label=NAMES[key[1]]+(' [2단계]' if key[0]=='cadence-trace' else '')
     d.text((20,top+15),label,font=font(20),fill='white')
     late=sum(f['total']>f['deadline']>0 for f in fs)
-    d.text((20,top+48),f'{late} late / {len(fs)} frames',font=font(19),fill='#cbd5e1')
+    d.text((20,top+48),f'지연 {late}개 / 전체 {len(fs)}프레임',font=font(19),fill='#cbd5e1')
     d.line((left,base,left+width,base),fill='#64748b')
     for t in downs:
         x=left+(t-t0)/1e9/seconds*width
@@ -93,6 +94,6 @@ for i,key in enumerate(keys):
         miss=f['total']>f['deadline']>0
         radius=4 if miss else 2
         d.ellipse((x-radius,y-radius,x+radius,y+radius),fill='#fb7185' if miss else '#38bdf8')
-    for t in range(6): d.text((left+t/seconds*width,base+5),f'{t}s',font=font(15),fill='#94a3b8')
+    for t in range(6): d.text((left+t/seconds*width,base+5),f'{t}초',font=font(15),fill='#94a3b8')
 im.save(P/'trace-timeline.png')
 print(json.dumps({k:[(r['variant'],r['jank_percent']['median']) for r in v] for k,v in summary.items()}))

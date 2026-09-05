@@ -5,19 +5,21 @@ from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
 import json, subprocess,tempfile
 P=Path(__file__).resolve().parent
-FONT='/System/Library/Fonts/Supplemental/Arial.ttf'
+cell_names={'complex':'복합 셀','heavy':'고부하 셀'}
+phase_names={'before':'이동 전','after':'이동 후'}
+FONT='/System/Library/Fonts/AppleSDGothicNeo.ttc'
 def font(n):
  try:return ImageFont.truetype(FONT,n)
  except OSError:return ImageFont.truetype('DejaVuSans.ttf',n)
 def run(args):subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y',*args],check=True)
 engines=['flatlist','legend','flashlist','zerolist','zigpool']
-names=['FlatList','LegendList','FlashList','ZeroList (JS)','ZigPool']
+names=['FlatList','LegendList','FlashList','기존 ZeroList','ZigPool']
 colors=['#60a5fa','#4ade80','#c084fc','#fbbf24','#fb923c']
 with tempfile.TemporaryDirectory() as td:
  t=Path(td)
  for cell in ['complex','heavy']:
   im=Image.new('RGB',(1350,80),'#111827');d=ImageDraw.Draw(im)
-  d.text((20,7),f'100,000 items / {cell} / 1x / separate runs / normal modes',font=font(23),fill='white')
+  d.text((20,7),f'10만 항목 / {cell_names[cell]} / 1배속 / 각각 별도 실행 / 정상 동작',font=font(23),fill='white')
   for i,n in enumerate(names):d.text((i*270+15,43),n,font=font(23),fill=colors[i])
   im.save(t/'header.png')
   inputs=[]
@@ -28,7 +30,7 @@ with tempfile.TemporaryDirectory() as td:
  inputs=[]
  for e in engines:inputs+=['-ss','2','-t','6','-i',str(P/f'heavy-{e}.mp4')]
  im=Image.new('RGB',(1350,80),'#111827');d=ImageDraw.Draw(im)
- d.text((20,7),'HEAVY / 100,000 / 0.25x / source 2-8s / no interpolation',font=font(23),fill='white')
+ d.text((20,7),'고부하 셀 / 10만 항목 / 0.25배속 / 원본 2~8초 / 중간 프레임 생성 없음',font=font(23),fill='white')
  for i,n in enumerate(names):d.text((i*270+15,43),n,font=font(23),fill=colors[i])
  im.save(t/'slow.png')
  filters=';'.join(f'[{i}:v]crop=540:880:0:160,scale=270:440,setpts=4*(PTS-STARTPTS),fps=30[v{i}]' for i in range(5))
@@ -38,14 +40,14 @@ with tempfile.TemporaryDirectory() as td:
 im=Image.new('RGB',(1350,1310),'#111827');d=ImageDraw.Draw(im)
 for row,phase in enumerate(['before','after']):
  for i,(e,n) in enumerate(zip(engines,names)):
-  d.text((i*270+8,row*655+8),n+' / '+phase,font=font(18),fill='white')
+  d.text((i*270+8,row*655+8),n+' / '+phase_names[phase],font=font(18),fill='white')
   im.paste(Image.open(P/f'heavy-{e}-{phase}.png').convert('RGB').resize((270,600)),(i*270,row*655+40))
 im.save(P/'contact-heavy.jpg',quality=88)
 # Both cell types at rest, all five engines.
 im=Image.new('RGB',(1350,1310),'#111827');d=ImageDraw.Draw(im)
 for row,cell in enumerate(['complex','heavy']):
  for i,(e,n) in enumerate(zip(engines,names)):
-  d.text((i*270+8,row*655+8),n+' / '+cell,font=font(18),fill='white')
+  d.text((i*270+8,row*655+8),n+' / '+cell_names[cell],font=font(18),fill='white')
   im.paste(Image.open(P/f'{cell}-{e}-before.png').convert('RGB').resize((270,600)),(i*270,row*655+40))
 im.save(P/'layout-check.jpg',quality=88)
 valid=[]
