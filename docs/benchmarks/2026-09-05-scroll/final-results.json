@@ -1,0 +1,101 @@
+[
+  {
+    "run": 1,
+    "variant": "flatlist",
+    "engine": "flatlist",
+    "resume": "false",
+    "total": 288,
+    "late": 2,
+    "percent": 0.69,
+    "p95_ms": 20,
+    "pipeline": "Skia (OpenGL)"
+  },
+  {
+    "run": 1,
+    "variant": "zigpool-before",
+    "engine": "zigpool",
+    "resume": "false",
+    "total": 266,
+    "late": 19,
+    "percent": 7.14,
+    "p95_ms": 23,
+    "pipeline": "Skia (OpenGL)"
+  },
+  {
+    "run": 1,
+    "variant": "zigpool-after",
+    "engine": "zigpool",
+    "resume": "true",
+    "total": 280,
+    "late": 6,
+    "percent": 2.14,
+    "p95_ms": 27,
+    "pipeline": "Skia (OpenGL)"
+  },
+  {
+    "run": 2,
+    "variant": "zigpool-before",
+    "engine": "zigpool",
+    "resume": "false",
+    "total": 273,
+    "late": 12,
+    "percent": 4.4,
+    "p95_ms": 19,
+    "pipeline": "Skia (OpenGL)"
+  },
+  {
+    "run": 2,
+    "variant": "zigpool-after",
+    "engine": "zigpool",
+    "resume": "true",
+    "total": 284,
+    "late": 1,
+    "percent": 0.35,
+    "p95_ms": 19,
+    "pipeline": "Skia (OpenGL)"
+  },
+  {
+    "run": 2,
+    "variant": "flatlist",
+    "engine": "flatlist",
+    "resume": "false",
+    "total": 287,
+    "late": 2,
+    "percent": 0.7,
+    "p95_ms": 21,
+    "pipeline": "Skia (OpenGL)"
+  },
+  {
+    "run": 3,
+    "variant": "zigpool-after",
+    "engine": "zigpool",
+    "resume": "true",
+    "total": 284,
+    "late": 1,
+    "percent": 0.35,
+    "p95_ms": 20,
+    "pipeline": "Skia (OpenGL)"
+  },
+  {
+    "run": 3,
+    "variant": "flatlist",
+    "engine": "flatlist",
+    "resume": "false",
+    "total": 288,
+    "late": 2,
+    "percent": 0.69,
+    "p95_ms": 20,
+    "pipeline": "Skia (OpenGL)"
+  },
+  {
+    "run": 3,
+    "variant": "zigpool-before",
+    "engine": "zigpool",
+    "resume": "false",
+    "total": 273,
+    "late": 12,
+    "percent": 4.4,
+    "p95_ms": 20,
+    "pipeline": "Skia (OpenGL)"
+  }
+]

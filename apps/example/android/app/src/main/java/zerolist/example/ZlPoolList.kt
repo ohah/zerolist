@@ -36,6 +36,11 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private fun bindingLog(phase: String, v: Int) {
     if (bindingTrace) Log.i("ZlBinding", "phase=$phase version=$v wall=${System.currentTimeMillis()} nano=${System.nanoTime()}")
   }
+  // 관성 이동 중 재터치는 ScrollView처럼 즉시 드래그를 인계한다.
+  // 예제의 resumeDrag=false는 기존 동작과 원인을 비교하는 진단 옵션이다.
+  private val resumeDrag = ctx.currentActivity?.intent?.getBooleanExtra("resumeDrag", true) ?: true
+  private val motionTrace = ctx.currentActivity?.intent?.getBooleanExtra("motionTrace", false) == true
+  fun diagnosticScrollOffset(): Int = scrollY
   private var positionsInitialized = false
   private var committed = intArrayOf()
   private var overscan = 5
@@ -231,7 +236,8 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     when (e.action) {
       MotionEvent.ACTION_DOWN -> {
         lastY = e.y
-        dragging = false
+        if (resumeDrag) scroller.computeScrollOffset()
+        dragging = resumeDrag && !scroller.isFinished
         scroller.forceFinished(true)
       }
       MotionEvent.ACTION_MOVE ->
@@ -243,6 +249,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private fun endGesture(fling: Boolean) {
     if (fling) {
       tracker?.computeCurrentVelocity(1000)
+      if (motionTrace) Log.i("ZlMotion", "phase=fling nano=${System.nanoTime()} velocity=${-(tracker?.yVelocity ?: 0f)} y=$scrollY")
       scroller.fling(
         0, scrollY, 0, -(tracker?.yVelocity ?: 0f).toInt(),
         0, 0, 0, maxScroll(),
@@ -271,6 +278,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
 
   override fun computeScroll() {
     if (scroller.computeScrollOffset()) {
+      if (motionTrace) Log.i("ZlMotion", "phase=compute nano=${System.nanoTime()} y=$scrollY next=${scroller.currY} velocity=${scroller.currVelocity}")
       setScroll(scroller.currY)
       postInvalidateOnAnimation()
     }

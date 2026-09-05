@@ -32,11 +32,28 @@ class SoloActivity : ReactActivity() {
       }
     }
   }
+  private var motionTarget: android.view.View? = null
+  private var motionListener: android.view.ViewTreeObserver.OnPreDrawListener? = null
+  private fun findMotionTarget(view: android.view.View): android.view.View? {
+    if (view is ZlPoolListView || view is android.widget.ScrollView) return view
+    if (view is android.view.ViewGroup) for (i in 0 until view.childCount) findMotionTarget(view.getChildAt(i))?.let { return it }
+    return null
+  }
   private var frameThread: HandlerThread? = null
   private var frameListener: Window.OnFrameMetricsAvailableListener? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+    if (intent.getBooleanExtra("motionTrace", false)) {
+      val listener = android.view.ViewTreeObserver.OnPreDrawListener {
+        val target = motionTarget ?: findMotionTarget(window.decorView).also { motionTarget = it }
+        val y = if (target is ZlPoolListView) target.diagnosticScrollOffset() else target?.scrollY ?: -1
+        Log.i("ZlMotion", "phase=predraw nano=${System.nanoTime()} y=$y")
+        true
+      }
+      motionListener = listener
+      window.decorView.viewTreeObserver.addOnPreDrawListener(listener)
+    }
     if (intent.getBooleanExtra("trace", false)) {
       val thread = HandlerThread("ZLFrameMetrics").also { it.start() }
       frameThread = thread
@@ -65,6 +82,7 @@ class SoloActivity : ReactActivity() {
   }
 
   override fun onDestroy() {
+    motionListener?.let { window.decorView.viewTreeObserver.removeOnPreDrawListener(it) }
     window.decorView.removeCallbacks(keepAliveFrame)
     frameListener?.let { window.removeOnFrameMetricsAvailableListener(it) }
     frameThread?.quitSafely()

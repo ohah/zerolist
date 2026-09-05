@@ -1,0 +1,791 @@
+{
+  "1-flatlist": {
+    "frames": 287,
+    "late": 2,
+    "draws": 288,
+    "gaps_over_25ms": 1,
+    "fling_velocities": [],
+    "compute_calls": 0,
+    "gestures": [
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 1,
+        "draw_gap_ms": null,
+        "draws_after_previous_up": 0,
+        "positions_between": [],
+        "short_deadlines": 2,
+        "late": 1
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 2,
+        "draw_gap_ms": 10.731917,
+        "draws_after_previous_up": 1,
+        "positions_between": [1126.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 3,
+        "draw_gap_ms": 12.691333,
+        "draws_after_previous_up": 1,
+        "positions_between": [2368.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 4,
+        "draw_gap_ms": 12.615458,
+        "draws_after_previous_up": 1,
+        "positions_between": [3606.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 5,
+        "draw_gap_ms": 11.216542,
+        "draws_after_previous_up": 1,
+        "positions_between": [4862.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 6,
+        "draw_gap_ms": 12.13125,
+        "draws_after_previous_up": 1,
+        "positions_between": [6114.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 7,
+        "draw_gap_ms": 18.598,
+        "draws_after_previous_up": 1,
+        "positions_between": [7374.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 8,
+        "draw_gap_ms": 15.605334,
+        "draws_after_previous_up": 1,
+        "positions_between": [8634.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 9,
+        "draw_gap_ms": 17.447458,
+        "draws_after_previous_up": 1,
+        "positions_between": [9894.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 10,
+        "draw_gap_ms": 16.523041,
+        "draws_after_previous_up": 1,
+        "positions_between": [11158.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 11,
+        "draw_gap_ms": 16.576792,
+        "draws_after_previous_up": 1,
+        "positions_between": [12414.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 12,
+        "draw_gap_ms": 16.602834,
+        "draws_after_previous_up": 1,
+        "positions_between": [13682.0],
+        "short_deadlines": 0,
+        "late": 0
+      }
+    ]
+  },
+  "1-zigpool": {
+    "frames": 283,
+    "late": 2,
+    "draws": 284,
+    "gaps_over_25ms": 1,
+    "fling_velocities": [
+      3999.9924, 3999.9558, 4000.0168, 4000.0137, 3999.9585, 3999.945,
+      3999.9692, 3999.891, 3999.9695, 3999.9297, 3999.947, 4000.0388
+    ],
+    "compute_calls": 57,
+    "gestures": [
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 1,
+        "draw_gap_ms": null,
+        "draws_after_previous_up": 0,
+        "positions_between": [],
+        "short_deadlines": 1,
+        "late": 1
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 2,
+        "draw_gap_ms": 16.900625,
+        "draws_after_previous_up": 1,
+        "positions_between": [1187.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 3,
+        "draw_gap_ms": 16.053417,
+        "draws_after_previous_up": 1,
+        "positions_between": [2463.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 4,
+        "draw_gap_ms": 16.496041,
+        "draws_after_previous_up": 1,
+        "positions_between": [3683.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 5,
+        "draw_gap_ms": 15.422542,
+        "draws_after_previous_up": 1,
+        "positions_between": [4947.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 6,
+        "draw_gap_ms": 18.204542,
+        "draws_after_previous_up": 1,
+        "positions_between": [6219.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 7,
+        "draw_gap_ms": 16.933542,
+        "draws_after_previous_up": 1,
+        "positions_between": [7474.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 8,
+        "draw_gap_ms": 16.592791,
+        "draws_after_previous_up": 1,
+        "positions_between": [8729.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 9,
+        "draw_gap_ms": 16.396083,
+        "draws_after_previous_up": 1,
+        "positions_between": [9973.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 10,
+        "draw_gap_ms": 17.371125,
+        "draws_after_previous_up": 1,
+        "positions_between": [11241.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 11,
+        "draw_gap_ms": 16.853416,
+        "draws_after_previous_up": 1,
+        "positions_between": [12501.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 12,
+        "draw_gap_ms": 16.443917,
+        "draws_after_previous_up": 1,
+        "positions_between": [13745.0],
+        "short_deadlines": 0,
+        "late": 0
+      }
+    ]
+  },
+  "2-flatlist": {
+    "frames": 287,
+    "late": 2,
+    "draws": 288,
+    "gaps_over_25ms": 1,
+    "fling_velocities": [],
+    "compute_calls": 0,
+    "gestures": [
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 1,
+        "draw_gap_ms": null,
+        "draws_after_previous_up": 0,
+        "positions_between": [],
+        "short_deadlines": 1,
+        "late": 1
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 2,
+        "draw_gap_ms": 12.175042,
+        "draws_after_previous_up": 1,
+        "positions_between": [1152.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 3,
+        "draw_gap_ms": 10.88225,
+        "draws_after_previous_up": 1,
+        "positions_between": [2408.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 4,
+        "draw_gap_ms": 12.807708,
+        "draws_after_previous_up": 1,
+        "positions_between": [3664.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 5,
+        "draw_gap_ms": 17.336708,
+        "draws_after_previous_up": 1,
+        "positions_between": [4928.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 6,
+        "draw_gap_ms": 16.34025,
+        "draws_after_previous_up": 1,
+        "positions_between": [6184.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 7,
+        "draw_gap_ms": 15.675875,
+        "draws_after_previous_up": 1,
+        "positions_between": [7446.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 8,
+        "draw_gap_ms": 16.658876,
+        "draws_after_previous_up": 1,
+        "positions_between": [8713.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 9,
+        "draw_gap_ms": 17.221125,
+        "draws_after_previous_up": 1,
+        "positions_between": [9977.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 10,
+        "draw_gap_ms": 15.876208,
+        "draws_after_previous_up": 1,
+        "positions_between": [11225.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 11,
+        "draw_gap_ms": 16.246708,
+        "draws_after_previous_up": 1,
+        "positions_between": [12479.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 12,
+        "draw_gap_ms": 16.525417,
+        "draws_after_previous_up": 1,
+        "positions_between": [13743.0],
+        "short_deadlines": 0,
+        "late": 0
+      }
+    ]
+  },
+  "2-zigpool": {
+    "frames": 284,
+    "late": 1,
+    "draws": 284,
+    "gaps_over_25ms": 0,
+    "fling_velocities": [
+      3999.9866, 3999.9294, 4000.0693, 4000.0557, 4000.0496, 3999.9927,
+      4000.0823, 3999.9858, 3999.9187, 3999.962, 3999.974, 3999.956
+    ],
+    "compute_calls": 57,
+    "gestures": [
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 1,
+        "draw_gap_ms": null,
+        "draws_after_previous_up": 0,
+        "positions_between": [],
+        "short_deadlines": 2,
+        "late": 1
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 2,
+        "draw_gap_ms": 16.646542,
+        "draws_after_previous_up": 1,
+        "positions_between": [1207.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 3,
+        "draw_gap_ms": 16.693875,
+        "draws_after_previous_up": 1,
+        "positions_between": [2462.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 4,
+        "draw_gap_ms": 15.838417,
+        "draws_after_previous_up": 1,
+        "positions_between": [3722.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 5,
+        "draw_gap_ms": 15.672,
+        "draws_after_previous_up": 1,
+        "positions_between": [4993.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 6,
+        "draw_gap_ms": 16.711708,
+        "draws_after_previous_up": 1,
+        "positions_between": [6237.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 7,
+        "draw_gap_ms": 16.638,
+        "draws_after_previous_up": 1,
+        "positions_between": [7502.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 8,
+        "draw_gap_ms": 17.162417,
+        "draws_after_previous_up": 1,
+        "positions_between": [8748.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 9,
+        "draw_gap_ms": 16.690792,
+        "draws_after_previous_up": 1,
+        "positions_between": [10004.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 10,
+        "draw_gap_ms": 16.80375,
+        "draws_after_previous_up": 1,
+        "positions_between": [11256.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 11,
+        "draw_gap_ms": 16.65,
+        "draws_after_previous_up": 1,
+        "positions_between": [12520.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 12,
+        "draw_gap_ms": 16.467375,
+        "draws_after_previous_up": 1,
+        "positions_between": [13778.0],
+        "short_deadlines": 0,
+        "late": 0
+      }
+    ]
+  },
+  "3-flatlist": {
+    "frames": 287,
+    "late": 2,
+    "draws": 288,
+    "gaps_over_25ms": 2,
+    "fling_velocities": [],
+    "compute_calls": 0,
+    "gestures": [
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 1,
+        "draw_gap_ms": null,
+        "draws_after_previous_up": 0,
+        "positions_between": [],
+        "short_deadlines": 1,
+        "late": 1
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 2,
+        "draw_gap_ms": 14.284125,
+        "draws_after_previous_up": 1,
+        "positions_between": [1136.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 3,
+        "draw_gap_ms": 12.617834,
+        "draws_after_previous_up": 1,
+        "positions_between": [2390.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 4,
+        "draw_gap_ms": 12.649709,
+        "draws_after_previous_up": 1,
+        "positions_between": [3644.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 5,
+        "draw_gap_ms": 13.951708,
+        "draws_after_previous_up": 1,
+        "positions_between": [4904.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 6,
+        "draw_gap_ms": 12.811458,
+        "draws_after_previous_up": 1,
+        "positions_between": [6118.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 7,
+        "draw_gap_ms": 17.111917,
+        "draws_after_previous_up": 1,
+        "positions_between": [7378.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 8,
+        "draw_gap_ms": 15.214875,
+        "draws_after_previous_up": 1,
+        "positions_between": [8638.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 9,
+        "draw_gap_ms": 17.088709,
+        "draws_after_previous_up": 1,
+        "positions_between": [9898.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 10,
+        "draw_gap_ms": 16.566416,
+        "draws_after_previous_up": 1,
+        "positions_between": [11158.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 11,
+        "draw_gap_ms": 17.499083,
+        "draws_after_previous_up": 1,
+        "positions_between": [12402.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 12,
+        "draw_gap_ms": 16.834666,
+        "draws_after_previous_up": 1,
+        "positions_between": [13658.0],
+        "short_deadlines": 0,
+        "late": 0
+      }
+    ]
+  },
+  "3-zigpool": {
+    "frames": 286,
+    "late": 2,
+    "draws": 286,
+    "gaps_over_25ms": 0,
+    "fling_velocities": [
+      3999.9883, 3999.9692, 3999.9976, 3999.979, 3999.9424, 4000.017, 4000.0388,
+      4000.0579, 4000.0474, 3999.9897, 4000.084, 3999.9634
+    ],
+    "compute_calls": 59,
+    "gestures": [
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 1,
+        "draw_gap_ms": null,
+        "draws_after_previous_up": 0,
+        "positions_between": [],
+        "short_deadlines": 1,
+        "late": 1
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 2,
+        "draw_gap_ms": 14.18825,
+        "draws_after_previous_up": 3,
+        "positions_between": [1180.0, 1192.0, 1256.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 3,
+        "draw_gap_ms": 17.391167,
+        "draws_after_previous_up": 1,
+        "positions_between": [2495.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 4,
+        "draw_gap_ms": 15.31325,
+        "draws_after_previous_up": 1,
+        "positions_between": [3741.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 5,
+        "draw_gap_ms": 16.544458,
+        "draws_after_previous_up": 1,
+        "positions_between": [4997.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 6,
+        "draw_gap_ms": 16.823541,
+        "draws_after_previous_up": 1,
+        "positions_between": [6253.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 7,
+        "draw_gap_ms": 16.589958,
+        "draws_after_previous_up": 1,
+        "positions_between": [7485.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 8,
+        "draw_gap_ms": 16.086917,
+        "draws_after_previous_up": 1,
+        "positions_between": [8741.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 9,
+        "draw_gap_ms": 16.585709,
+        "draws_after_previous_up": 1,
+        "positions_between": [9993.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 10,
+        "draw_gap_ms": 18.008125,
+        "draws_after_previous_up": 1,
+        "positions_between": [11248.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 11,
+        "draw_gap_ms": 16.239625,
+        "draws_after_previous_up": 1,
+        "positions_between": [12507.0],
+        "short_deadlines": 0,
+        "late": 0
+      },
+      {
+        "frame_gaps_over_25ms": 0,
+        "max_frame_gap_ms": 16.666666,
+        "gesture": 12,
+        "draw_gap_ms": 16.28125,
+        "draws_after_previous_up": 1,
+        "positions_between": [13758.0],
+        "short_deadlines": 0,
+        "late": 0
+      }
+    ]
+  }
+}
