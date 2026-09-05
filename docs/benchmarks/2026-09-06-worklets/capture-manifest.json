@@ -1,0 +1,632 @@
+[
+  {
+    "name": "android-zigpool-5-block",
+    "platform": "android",
+    "engine": "zigpool",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-worklet-videos/android-zigpool-5-block.webm",
+    "seconds": 6.813,
+    "wall_seconds": 6.812936124999999,
+    "events": [
+      {
+        "t": 1.0185433749999993,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.3437642920000004,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.6757268339999998,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0086830000000004,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.160857000000001,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.308891375000001,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.4591344590000004,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.608804375000001,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.7586682500000004,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.9086463339999993,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.0629132090000004,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.2089595839999996,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.3667307089999996,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.5110827920000007,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.659476583999999,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.8086691250000007,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.144088917,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.476526167,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "e104f6239827ffc7b416bc7329071770db8cf26238e5cce3db25b527fb73d9d2"
+  },
+  {
+    "name": "android-template-js-5-block",
+    "platform": "android",
+    "engine": "template-js",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-worklet-videos/android-template-js-5-block.webm",
+    "seconds": 6.891,
+    "wall_seconds": 6.860608458999998,
+    "events": [
+      {
+        "t": 1.0181467499999997,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.354311458999998,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.6853040839999984,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.019506875000001,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.1693709589999983,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.320051750000001,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.4702927499999987,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.6254054589999996,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.7866860419999995,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.937014209000001,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.0962851250000014,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.2553755419999995,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.4020259999999993,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.5537283749999986,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.7096997499999986,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.8539674999999995,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.186701416999998,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.5222975420000004,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "77cb1c4899fed4178302e6971e32a981ae8c2f1528cdb1c7eecc99ca62b8ef53"
+  },
+  {
+    "name": "android-template-worklet-5-block",
+    "platform": "android",
+    "engine": "template-worklet",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-worklet-videos/android-template-worklet-5-block.webm",
+    "seconds": 7.029,
+    "wall_seconds": 7.0214206249999975,
+    "events": [
+      {
+        "t": 1.021544083000002,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.3576121250000028,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.690212625000001,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0236030000000014,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.1769724170000018,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.3236981669999963,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.4748115000000013,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.6250660420000003,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.772407125000001,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.9224462919999965,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.0741286669999965,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.226678542000002,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.373503083000003,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.5838216670000023,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.8619728749999993,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.011772999999998,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.3424337080000015,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.6756344579999976,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "e3bd299d9646cfe5cadc691c8c8d09d40a2d58f817aa9c723b544b90231b4888"
+  },
+  {
+    "name": "ios-zigpool-5-block",
+    "platform": "ios",
+    "engine": "zigpool",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-worklet-videos/ios-zigpool-5-block.mp4",
+    "seconds": 9.586667,
+    "wall_seconds": 9.584044500000005,
+    "events": [
+      {
+        "t": 1.007902792000003,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.5293843339999995,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.047779209000005,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.5472193340000047,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.8499811249999993,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.1416125420000043,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.4331320840000004,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.7308525000000046,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.026109375000004,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.321611959000002,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.606887583999999,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.944695375000002,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.239627584000004,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.535250750000003,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.829357958999999,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 6.120251959000001,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.606699167000002,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 7.087306417000001,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "7cdfd5a360163c08ff011328109f5969af2e50464afc54d0e59b8602c71526c6"
+  },
+  {
+    "name": "ios-template-js-5-block",
+    "platform": "ios",
+    "engine": "template-js",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-worklet-videos/ios-template-js-5-block.mp4",
+    "seconds": 9.453333,
+    "wall_seconds": 9.450410457999993,
+    "events": [
+      {
+        "t": 1.0032497499999948,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.5056094999999914,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0132968329999983,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.5232578330000024,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.8117843329999914,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.096428790999994,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.3869567909999887,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.675173457999989,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.9604377080000006,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.246440165999999,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.540422665999998,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.829735833000001,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.113908874999993,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.420928625000002,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.710460707999999,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 6.00364145799999,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.485925707999996,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.963768000000002,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "fd14610c798cb1e445c10549d624989487342ed4d29c75b588165cafeb5e128c"
+  },
+  {
+    "name": "ios-template-worklet-5-block",
+    "platform": "ios",
+    "engine": "template-worklet",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-worklet-videos/ios-template-worklet-5-block.mp4",
+    "seconds": 9.495,
+    "wall_seconds": 9.491336250000003,
+    "events": [
+      {
+        "t": 1.0077434159999967,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.5219568330000044,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0256715410000083,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.5484556660000095,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.8418279159999997,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.1322606250000007,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.4210102079999984,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.7103132080000023,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.00059983300001,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.293462750000003,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.57881041600001,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.871112625000009,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.164481125000009,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.4540870830000046,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.741047666,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 6.02971216600001,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.515579500000001,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.992927332999997,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "b95a9f9000d3a0d2eac66d2dbaccf1e08b95555beb0c57e78e5ab65ded66a4ee"
+  }
+]

@@ -1,0 +1,326 @@
+[
+  {
+    "name": "template-js-5",
+    "engine": "template-js",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 349.72265625,
+    "memory_after_mib": 362.8408203125,
+    "cpu_seconds": 5.1499999999999995,
+    "wall_seconds": 5.836726417,
+    "cpu_one_core_percent": 88.23439085649369,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 15,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 45,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 30,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 274,
+    "late": 3,
+    "late_percent": 1.09,
+    "p95_ms": 18
+  },
+  {
+    "name": "template-worklet-5",
+    "engine": "template-worklet",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 354.9072265625,
+    "memory_after_mib": 365.3447265625,
+    "cpu_seconds": 5.130000000000001,
+    "wall_seconds": 5.815348541999999,
+    "cpu_one_core_percent": 88.21483291929576,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 273,
+    "late": 2,
+    "late_percent": 0.73,
+    "p95_ms": 18
+  },
+  {
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 169.0732421875,
+    "memory_after_mib": 184.8798828125,
+    "cpu_seconds": 4.919999999999999,
+    "wall_seconds": 5.820312666999996,
+    "cpu_one_core_percent": 84.53154119872994,
+    "initial_counts": {
+      "renders": 26,
+      "callbacks": 15,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 72,
+      "callbacks": 44,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 46,
+      "callbacks": 29,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 272,
+    "late": 1,
+    "late_percent": 0.37,
+    "p95_ms": 18
+  },
+  {
+    "name": "template-worklet-5",
+    "engine": "template-worklet",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 348.224609375,
+    "memory_after_mib": 364.89453125,
+    "cpu_seconds": 5.080000000000001,
+    "wall_seconds": 5.805206040999998,
+    "cpu_one_core_percent": 87.50766060880288,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 268,
+    "late": 4,
+    "late_percent": 1.49,
+    "p95_ms": 23
+  },
+  {
+    "name": "template-js-5",
+    "engine": "template-js",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 349.3876953125,
+    "memory_after_mib": 364.6650390625,
+    "cpu_seconds": 5.199999999999999,
+    "wall_seconds": 5.862818333000007,
+    "cpu_one_core_percent": 88.69454423874595,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 14,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 41,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 27,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 272,
+    "late": 6,
+    "late_percent": 2.21,
+    "p95_ms": 20
+  },
+  {
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 169.3330078125,
+    "memory_after_mib": 184.1513671875,
+    "cpu_seconds": 4.8999999999999995,
+    "wall_seconds": 5.814323999999999,
+    "cpu_one_core_percent": 84.27462934642101,
+    "initial_counts": {
+      "renders": 27,
+      "callbacks": 15,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 70,
+      "callbacks": 41,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 43,
+      "callbacks": 26,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 272,
+    "late": 1,
+    "late_percent": 0.37,
+    "p95_ms": 19
+  },
+  {
+    "name": "template-js-5",
+    "engine": "template-js",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 355.208984375,
+    "memory_after_mib": 362.2841796875,
+    "cpu_seconds": 5.129999999999999,
+    "wall_seconds": 5.825635583999997,
+    "cpu_one_core_percent": 88.05906112784417,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 14,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 43,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 29,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 274,
+    "late": 3,
+    "late_percent": 1.09,
+    "p95_ms": 18
+  },
+  {
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 169.138671875,
+    "memory_after_mib": 184.3017578125,
+    "cpu_seconds": 4.9799999999999995,
+    "wall_seconds": 5.813003999999992,
+    "cpu_one_core_percent": 85.6699909375601,
+    "initial_counts": {
+      "renders": 27,
+      "callbacks": 15,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 73,
+      "callbacks": 44,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 46,
+      "callbacks": 29,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 269,
+    "late": 6,
+    "late_percent": 2.23,
+    "p95_ms": 23
+  },
+  {
+    "name": "template-worklet-5",
+    "engine": "template-worklet",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 347.8271484375,
+    "memory_after_mib": 363.9951171875,
+    "cpu_seconds": 5.169999999999999,
+    "wall_seconds": 5.826056167000004,
+    "cpu_one_core_percent": 88.73927493668798,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 273,
+    "late": 2,
+    "late_percent": 0.73,
+    "p95_ms": 18
+  }
+]

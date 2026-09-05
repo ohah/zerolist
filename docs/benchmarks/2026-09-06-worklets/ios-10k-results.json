@@ -1,0 +1,113 @@
+[
+  {
+    "name": "template-js-5",
+    "engine": "template-js",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 410.8125,
+    "memory_after_mib": 439.734375,
+    "cpu_seconds": 1.35,
+    "wall_seconds": 8.457607957999999,
+    "cpu_one_core_percent": 15.961960009307873,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 79,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 175,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 96,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "scroll_min": 38310.667,
+    "scroll_max": 57979.667,
+    "callbacks": 452,
+    "late_callback_percent": 0.0,
+    "callback_p95_ms": 16.666667070239782
+  },
+  {
+    "name": "template-worklet-5",
+    "engine": "template-worklet",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 407.375,
+    "memory_after_mib": 440.734375,
+    "cpu_seconds": 1.3600000000000003,
+    "wall_seconds": 8.415808709,
+    "cpu_one_core_percent": 16.160063126739022,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "scroll_min": 38537.0,
+    "scroll_max": 57430.333,
+    "callbacks": 449,
+    "late_callback_percent": 0.0,
+    "callback_p95_ms": 16.666667070239782
+  },
+  {
+    "name": "zigpool-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 0,
+    "memory_before_mib": 356.484375,
+    "memory_after_mib": 383.265625,
+    "cpu_seconds": 1.37,
+    "wall_seconds": 8.381100540999995,
+    "cpu_one_core_percent": 16.346301936100364,
+    "initial_counts": {
+      "renders": 159,
+      "callbacks": 78,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 281,
+      "callbacks": 175,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 122,
+      "callbacks": 97,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "scroll_min": 38588.0,
+    "scroll_max": 56254.0,
+    "callbacks": 448,
+    "late_callback_percent": 0.0,
+    "callback_p95_ms": 16.666667070239782
+  }
+]

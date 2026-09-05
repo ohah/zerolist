@@ -1,0 +1,18 @@
+[
+  {
+    "file": "android-compare-block.mp4",
+    "seconds": 7.033008,
+    "full_decode_ok": true,
+    "playback_rate": 1,
+    "composite_fps": 60,
+    "separate_runs": true
+  },
+  {
+    "file": "ios-compare-block.mp4",
+    "seconds": 9.6,
+    "full_decode_ok": true,
+    "playback_rate": 1,
+    "composite_fps": 60,
+    "separate_runs": true
+  }
+]

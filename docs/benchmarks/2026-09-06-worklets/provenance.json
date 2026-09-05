@@ -1,0 +1,50 @@
+{
+  "base_commit": "ad2516f72afb8a97f55b1586a5b69a4018b4d4cc",
+  "build": "Release arm64",
+  "versions": {
+    "react-native": "0.87.1",
+    "reanimated": "4.6.0",
+    "worklets": "0.12.1"
+  },
+  "artifacts": [
+    {
+      "name": "app-release.apk",
+      "sha256": "ac105ae7fcdc78891041b1b1ed7386f1bfadf4c901b612d8a6645dd16802c3d7"
+    },
+    {
+      "name": "ZerolistExample",
+      "sha256": "90cbd6605565f4396be3d0f9b58cc24abd143422f641ff09ab04b535f26f261d"
+    },
+    {
+      "name": "main.jsbundle",
+      "sha256": "561a4228b15305348ecb693c1c2626c12db59bdbbce2a0085976a9d1cb0fc422"
+    }
+  ],
+  "sources": [
+    {
+      "path": "apps/example/src/harness/engines/template.native.tsx",
+      "sha256": "09a759f66da63383a1023e448768c9f69626ee81ae24b9396836a8f45ee28b33"
+    },
+    {
+      "path": "apps/example/src/harness/engines/template.tsx",
+      "sha256": "411f79e360ba8b589fab702f4843daacac5947bc27090484d4ba4fb97b05f427"
+    },
+    {
+      "path": "apps/example/android/app/src/main/java/zerolist/example/ZlTemplateText.kt",
+      "sha256": "ea1b5437132d7a7fbd795a630a998054cdc213a03c06e5c9f9ef0a4cec5293c7"
+    },
+    {
+      "path": "apps/example/ios/ZerolistExample/ZlTemplateTextComponentView.mm",
+      "sha256": "4d60902e6ba9482f172c098630ccba01e4216a259f8d715eea9460b83fa2cf9b"
+    },
+    {
+      "path": "apps/example/specs/ZlTemplateTextNativeComponent.ts",
+      "sha256": "cdf5966115909a9c300fb4cf2ada7e765547a747664446f9b8afd44006825da1"
+    },
+    {
+      "path": "apps/example/babel.config.js",
+      "sha256": "4731cb494a590ece7600f272a5f8ed1518f47cf489b8176c462f6c13c8e0e082"
+    }
+  ],
+  "implementation_commit": "4d2378ab6ecedd4c721d64b92b8e43101579c72a"
+}
