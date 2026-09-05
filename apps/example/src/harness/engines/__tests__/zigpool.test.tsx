@@ -74,3 +74,41 @@ describe('ZigPool 내용과 배치 매핑의 커밋', () => {
     expect(jest.getTimerCount()).toBe(0);
   });
 });
+
+describe('내용 준비 PoC의 React 계약', () => {
+  it('확대한 풀도 작은 데이터의 범위를 넘지 않고 커밋 버전을 내용과 함께 전달한다', () => {
+    const view = render(
+      <ZigPoolEngine
+        {...props}
+        items={props.items.slice(0, 4)}
+        preparation="combined"
+      />
+    );
+    expect(view.getByTestId('pool').props.committedBinds).toBe('0,1,2,3');
+    fireEvent(view.getByTestId('pool'), 'recycle', {
+      nativeEvent: { binds: '3,2,1,0', version: 7 },
+    });
+    expect(view.getByTestId('pool').props.committedVersion).toBe(7);
+    expect(view.getByTestId('pool').props.committedBinds).toBe('3,2,1,0');
+    expect(view.getByText('#3')).toBeTruthy();
+  });
+
+  it('슬롯을 메모화해도 같은 ID의 새 데이터와 새 콜백을 반영한다', () => {
+    const view = render(<ZigPoolEngine {...props} preparation="memo" />);
+    const onRender = jest.fn();
+    const items = props.items.map((item) =>
+      item.id === 0 ? { ...item, title: '#0 변경' } : item
+    );
+    view.rerender(
+      <ZigPoolEngine
+        {...props}
+        items={items}
+        preparation="memo"
+        onRender={onRender}
+      />
+    );
+    expect(view.getByText('#0 변경')).toBeTruthy();
+    expect(view.queryByText('#0')).toBeNull();
+    expect(onRender).toHaveBeenCalledWith(0);
+  });
+});

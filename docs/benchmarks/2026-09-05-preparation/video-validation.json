@@ -1,0 +1,16 @@
+[
+  {
+    "file": "android-compare-400.mp4",
+    "seconds": 6.933333,
+    "full_decode_ok": true,
+    "playback_rate": 1,
+    "separate_runs": true
+  },
+  {
+    "file": "ios-compare-400.mp4",
+    "seconds": 9.433333,
+    "full_decode_ok": true,
+    "playback_rate": 1,
+    "separate_runs": true
+  }
+]

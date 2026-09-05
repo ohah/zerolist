@@ -5,13 +5,16 @@ import { ENGINES } from './harness/engines';
 import { makeItems } from './harness/data';
 import { fixedCellHeight } from './harness/cellLayout';
 import { inst } from './harness/instrument';
-import type { CellType, EngineId } from './harness/types';
+import type { CellType, EngineId, Preparation } from './harness/types';
 
 // chrome-free 측정 루트 — harness UI(헤더/Seg/Run) 없이 선택된 엔진만
 // 풀스크린 렌더. engine/count/cell 은 SoloActivity 가 intent extra →
 // initialProps 로 주입. gfxinfo(프로세스 단위)가 엔진+RN루트+Fabric
 // mount 만 보게 해 Native(맨 Activity)와 깨끗하게 비교(태스크 #18).
 export default function Solo(props: {
+  jsBlockMs?: number;
+  preparation?: Preparation;
+  preparationTrace?: boolean;
   engine?: string;
   count?: number;
   cell?: string;
@@ -47,10 +50,27 @@ export default function Solo(props: {
   // JS-0 정량 계측: 결정적 스크롤에서 renders/cbs 누적을 주기 로깅.
   useEffect(() => inst.start(engineId), [engineId]);
 
+  // 지연 타이머와 별도로 JS 스레드가 실제로 점유되는 부하 조건이다.
+  useEffect(() => {
+    const duration = Math.min(400, Math.max(0, props.jsBlockMs ?? 0));
+    if (!duration) return;
+    const timer = setInterval(() => {
+      const start = performance.now();
+      while (performance.now() - start < duration) {
+        /* 측정용 CPU 점유 */
+      }
+      if (props.preparationTrace)
+        console.log(`[ZlBlock] elapsed=${performance.now() - start}`);
+    }, duration + 40);
+    return () => clearInterval(timer);
+  }, [props.jsBlockMs, props.preparationTrace]);
+
   if (!Engine) return <View style={s.fill} />;
   return (
     <View style={s.fill}>
       <Engine
+        preparation={props.preparation}
+        preparationTrace={props.preparationTrace}
         diagnostic={props.diagnostic}
         legacyRecycling={props.legacyRecycling}
         audit={props.audit}

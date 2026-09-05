@@ -95,6 +95,9 @@ class SoloActivity : ReactActivity() {
     object : DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled) {
       override fun getLaunchOptions(): Bundle =
         Bundle().apply {
+          putInt("jsBlockMs", intent.getIntExtra("jsBlockMs", 0))
+          putString("preparation", intent.getStringExtra("preparation") ?: "baseline")
+          putBoolean("preparationTrace", intent.getBooleanExtra("preparationTrace", false))
           putString("engine", intent.getStringExtra("engine") ?: "flatlist")
           putInt("count", intent.getIntExtra("count", 20_000))
           putString("cell", intent.getStringExtra("cell") ?: "complex")

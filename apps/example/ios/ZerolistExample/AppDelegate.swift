@@ -28,14 +28,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let env = ProcessInfo.processInfo.environment
     let solo = env["ZL_SOLO"] == "1"
-    let initial: [String: Any]? = solo ? [
-      "engine": env["ZL_ENGINE"] ?? "zigpool",
-      "count": Int(env["ZL_COUNT"] ?? "100000") ?? 100000,
-      "cell": env["ZL_CELL"] ?? "heavy",
-      "legacyRecycling": env["ZL_LEGACY"] == "1",
-      "audit": env["ZL_AUDIT"] == "1",
-      "bindingDelayMs": Int(env["ZL_DELAY"] ?? "0") ?? 0
-    ] : nil
+    var initial: [String: Any]? = nil
+    if solo {
+      var options: [String: Any] = [:]
+      options["jsBlockMs"] = Int(env["ZL_BLOCK_MS"] ?? "0") ?? 0
+      options["preparation"] = env["ZL_PREPARATION"] ?? "baseline"
+      options["preparationTrace"] = env["ZL_PREPARATION_TRACE"] == "1"
+      options["engine"] = env["ZL_ENGINE"] ?? "zigpool"
+      options["count"] = Int(env["ZL_COUNT"] ?? "100000") ?? 100000
+      options["cell"] = env["ZL_CELL"] ?? "heavy"
+      options["legacyRecycling"] = env["ZL_LEGACY"] == "1"
+      options["audit"] = env["ZL_AUDIT"] == "1"
+      options["bindingDelayMs"] = Int(env["ZL_DELAY"] ?? "0") ?? 0
+      initial = options
+    }
     factory.startReactNative(
       withModuleName: solo ? "ZLSolo" : "ZerolistExample",
       in: window,
@@ -75,10 +81,15 @@ private final class FrameProbe: NSObject {
   deinit { link?.invalidate() }
 }
 private final class ProbeWindow: UIWindow {
+  private func scrollOffset(_ view: UIView) -> CGFloat? {
+    if let scroll = view as? UIScrollView { return scroll.contentOffset.y }
+    for child in view.subviews { if let y = scrollOffset(child) { return y } }
+    return nil
+  }
   override func sendEvent(_ event: UIEvent) {
     for touch in event.allTouches ?? [] {
       if touch.phase == .began || touch.phase == .ended {
-        NSLog("ZlTouch action=%d timestamp=%.9f", touch.phase == .began ? 0 : 1, touch.timestamp)
+        NSLog("ZlTouch action=%d timestamp=%.9f y=%.3f", touch.phase == .began ? 0 : 1, touch.timestamp, scrollOffset(self) ?? -1)
       }
     }
     super.sendEvent(event)

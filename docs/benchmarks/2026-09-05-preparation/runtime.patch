@@ -1,0 +1,678 @@
+diff --git a/apps/example/android/app/src/main/java/zerolist/example/SoloActivity.kt b/apps/example/android/app/src/main/java/zerolist/example/SoloActivity.kt
+index 08f8c0f..cbd309f 100644
+--- a/apps/example/android/app/src/main/java/zerolist/example/SoloActivity.kt
++++ b/apps/example/android/app/src/main/java/zerolist/example/SoloActivity.kt
+@@ -95,6 +95,9 @@ class SoloActivity : ReactActivity() {
+     object : DefaultReactActivityDelegate(this, mainComponentName, fabricEnabled) {
+       override fun getLaunchOptions(): Bundle =
+         Bundle().apply {
++          putInt("jsBlockMs", intent.getIntExtra("jsBlockMs", 0))
++          putString("preparation", intent.getStringExtra("preparation") ?: "baseline")
++          putBoolean("preparationTrace", intent.getBooleanExtra("preparationTrace", false))
+           putString("engine", intent.getStringExtra("engine") ?: "flatlist")
+           putInt("count", intent.getIntExtra("count", 20_000))
+           putString("cell", intent.getStringExtra("cell") ?: "complex")
+diff --git a/apps/example/android/app/src/main/java/zerolist/example/ZlPoolList.kt b/apps/example/android/app/src/main/java/zerolist/example/ZlPoolList.kt
+index f5e3020..1142ed5 100644
+--- a/apps/example/android/app/src/main/java/zerolist/example/ZlPoolList.kt
++++ b/apps/example/android/app/src/main/java/zerolist/example/ZlPoolList.kt
+@@ -41,6 +41,45 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+   private val resumeDrag = ctx.currentActivity?.intent?.getBooleanExtra("resumeDrag", true) ?: true
+   private val motionTrace = ctx.currentActivity?.intent?.getBooleanExtra("motionTrace", false) == true
+   fun diagnosticScrollOffset(): Int = scrollY
++  private var preparationMode = 0
++  private var preparationTrace = false
++  private var committedVersion = -1
++  private var acknowledgedVersion = -1
++  private var inFlightVersion = -1
++  private val preparationRequests = linkedMapOf<Int, Long>()
++  private val preparationSamples = java.util.ArrayDeque<Double>()
++  private var preparationBudgetMs = 34.0
++  private var velocityPxMs = 0.0
++  private var lastMotionMs = 0L
++  fun setPreparationMode(value: Int) { preparationMode = value; lastWindowStart = -1; invalidate() }
++  fun setPreparationTrace(value: Boolean) { preparationTrace = value }
++  fun setCommittedVersion(value: Int) { committedVersion = value; invalidate() }
++  private fun preparationPlaced() {
++    if (committedVersion <= acknowledgedVersion) return
++    acknowledgedVersion = committedVersion
++    val now = android.os.SystemClock.uptimeMillis()
++    preparationRequests[committedVersion]?.let { requested ->
++      val elapsed = (now - requested).toDouble()
++      preparationSamples.addLast(elapsed)
++      if (preparationSamples.size > 32) preparationSamples.removeFirst()
++      val sorted = preparationSamples.sorted()
++      preparationBudgetMs = sorted[kotlin.math.ceil(sorted.size * .95).toInt() - 1].coerceIn(34.0, 500.0)
++      if (preparationTrace) Log.i("ZlPrepare", "phase=ready version=$committedVersion elapsed=$elapsed budget=$preparationBudgetMs pool=$childCount y=$scrollY")
++    }
++    preparationRequests.keys.removeAll { it <= committedVersion }
++    if (inFlightVersion <= committedVersion) {
++      inFlightVersion = -1
++      if ((preparationMode and 2) != 0) reposition()
++    }
++  }
++  private fun preparationBehind(pool: Int): Int {
++    if ((preparationMode and 1) == 0 || rowPxF <= 0f) return overscan
++    val spare = maxOf(0, pool - kotlin.math.ceil(height / rowPxF.toDouble()).toInt())
++    if (spare < 8 || kotlin.math.abs(velocityPxMs) < .01) return minOf(overscan, spare)
++    val lead = kotlin.math.ceil(kotlin.math.abs(velocityPxMs) * (preparationBudgetMs * 1.25 + 16) / rowPxF).toInt() + 2
++    val ahead = lead.coerceIn(5, spare - 3)
++    return if (velocityPxMs >= 0) spare - ahead else ahead
++  }
+   private var positionsInitialized = false
+   private var committed = intArrayOf()
+   private var overscan = 5
+@@ -48,12 +87,14 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+   private var audit = false
+   private var version = 0
+   private var auditFrame = 0
++  private var previousExpected = setOf<Int>()
+   private val beforeDraw = ViewTreeObserver.OnPreDrawListener {
+     if (!legacyRecycling && (!freezePosition || !positionsInitialized)) { placeCommitted(); positionsInitialized=true }
+     if (bindingTrace && tracedCommitVersion != tracedPlacedVersion) {
+       tracedPlacedVersion = tracedCommitVersion
+       bindingLog("placed", tracedPlacedVersion)
+     }
++    preparationPlaced()
+     if (audit) auditSlots()
+     true
+   }
+@@ -80,6 +121,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+   private fun auditSlots() {
+     if (rowPxF <= 0 || height <= 0) return
+     var wrong = 0; var visible = 0
++    val readyIndices = mutableSetOf<Int>()
+     val spans = mutableListOf<Pair<Float, Float>>()
+     for (s in 0 until childCount) {
+       val child = getChildAt(s)
+@@ -88,12 +130,18 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+       if (child.visibility != View.VISIBLE || bottom <= 0 || top >= height) continue
+       visible++
+       val expected = ((top + scrollY) / rowPxF).roundToInt()
+-      if (titleIndex(child) != expected) wrong++
++      if (titleIndex(child) != expected) wrong++ else readyIndices.add(expected)
+       spans.add(maxOf(0f, top) to minOf(height.toFloat(), bottom))
+     }
+     var end = 0f; var covered = 0f; var overlap = 0f
+     for ((a,b) in spans.sortedBy { it.first }) { overlap += maxOf(0f, minOf(end,b)-a); covered += maxOf(0f,b-maxOf(end,a)); end=maxOf(end,b) }
+-    Log.i("ZlAudit", "frame=${++auditFrame} y=$scrollY wrong=$wrong visible=$visible blank=${(height-covered).roundToInt()} overlap=${overlap.roundToInt()} version=$version")
++    val first = kotlin.math.floor(scrollY / rowPxF.toDouble()).toInt().coerceAtLeast(0)
++    val endIndex = kotlin.math.ceil((scrollY + height) / rowPxF.toDouble()).toInt().coerceAtMost(count)
++    val expected = (first until endIndex).toSet()
++    val entered = expected - previousExpected
++    previousExpected = expected
++    val unready = entered.count { it !in readyIndices }
++    Log.i("ZlAudit", "entered=${entered.size} unready=$unready frame=${++auditFrame} y=$scrollY wrong=$wrong visible=$visible blank=${(height-covered).roundToInt()} overlap=${overlap.roundToInt()} version=$version")
+   }
+   // 스크롤 표시가 프레임 재개에 미치는 영향을 분리하는 진단 옵션. 기본은 끈다.
+   private val showScrollIndicator = ctx.currentActivity?.intent?.getBooleanExtra("scrollIndicator", false) == true
+@@ -158,6 +206,13 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+   private fun setScroll(y: Int) {
+     val clamped = y.coerceIn(0, maxScroll())
+     if (clamped == scrollY) return
++    val now = android.os.SystemClock.uptimeMillis()
++    val dt = now - lastMotionMs
++    if (dt > 0 && dt <= 100) {
++      val v = (clamped - scrollY).toDouble() / dt
++      velocityPxMs = if (v * velocityPxMs < 0) v else velocityPxMs * .6 + v * .4
++    } else velocityPxMs = 0.0
++    lastMotionMs = now
+     scrollY = clamped
+     reposition()
+     if (!legacyRecycling) invalidate()
+@@ -182,7 +237,17 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+     )
+     val first = ZlEngine.firstOf(packed)
+     // 풀이 데이터 끝을 넘지 않도록 clamp(뷰포트 ≤ 풀 가정).
+-    val windowStart = (first - overscan).coerceIn(0, maxOf(0, count - n))
++    val behind = preparationBehind(n)
++    var windowStart = (first - behind).coerceIn(0, maxOf(0, count - n))
++    if ((preparationMode and 4) != 0 && lastN == n && lastWindowStart >= 0) {
++      val visible = kotlin.math.ceil(height / rowPxF.toDouble()).toInt()
++      val spare = maxOf(0, n - visible)
++      val ahead = if (kotlin.math.abs(velocityPxMs) < .01) 5 else if (velocityPxMs >= 0) spare - behind else behind
++      val needStart = maxOf(0, first - if (velocityPxMs < 0) ahead else 3)
++      val needEnd = minOf(count, first + visible + if (velocityPxMs >= 0) ahead else 3)
++      // 충분히 준비한 창은 축소·반전하지 않는다. 여유가 소진될 때만 옮긴다.
++      if (lastWindowStart <= needStart && lastWindowStart + n >= needEnd) windowStart = lastWindowStart
++    }
+     // 위치는 매 프레임 갱신(scrollY 추적). bind 는 windowStart 의
+     // 순수 함수라 ring 으로 자기배치.
+     if (legacyRecycling && (!freezePosition || !positionsInitialized)) {
+@@ -195,6 +260,8 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+     // csv·emit 는 windowStart/n 이 바뀐 프레임에만(불변 프레임
+     // 문자열 빌드/dispatch 낭비 제거).
+     if (windowStart == lastWindowStart && n == lastN) return
++    // 반영 중에는 최신 위치만 추적한다. 완료 시 현재 위치로 다시 요청한다.
++    if ((preparationMode and 2) != 0 && inFlightVersion >= 0) return
+     lastWindowStart = windowStart
+     lastN = n
+     val sb = StringBuilder(n * 5)
+@@ -204,6 +271,10 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+     }
+     val binds = sb.toString()
+     version++
++    preparationRequests[version] = android.os.SystemClock.uptimeMillis()
++    while (preparationRequests.size > 512) preparationRequests.remove(preparationRequests.keys.first())
++    inFlightVersion = version
++    if (preparationTrace) Log.i("ZlPrepare", "phase=request version=$version first=$first start=$windowStart pool=$n velocity=$velocityPxMs")
+     if (bindingTrace) {
+       if (tracedRequests.size > 512) tracedRequests.clear()
+       tracedRequests[binds] = version
+@@ -321,6 +392,9 @@ class ZlPoolListManager :
+ 
+   override fun getDelegate(): ViewManagerDelegate<ZlPoolListView> = delegate
+ 
++  override fun setPreparationMode(view: ZlPoolListView, value: Int) { view.setPreparationMode(value) }
++  override fun setPreparationTrace(view: ZlPoolListView, value: Boolean) { view.setPreparationTrace(value) }
++  override fun setCommittedVersion(view: ZlPoolListView, value: Int) { view.setCommittedVersion(value) }
+   override fun setCommittedBinds(view: ZlPoolListView, value: String?) { view.setCommittedBinds(value) }
+   override fun setOverscan(view: ZlPoolListView, value: Int) { view.setOverscan(value) }
+   override fun setLegacyRecycling(view: ZlPoolListView, value: Boolean) { view.setLegacyRecycling(value) }
+diff --git a/apps/example/ios/ZerolistExample/AppDelegate.swift b/apps/example/ios/ZerolistExample/AppDelegate.swift
+index 4894ec9..59de335 100644
+--- a/apps/example/ios/ZerolistExample/AppDelegate.swift
++++ b/apps/example/ios/ZerolistExample/AppDelegate.swift
+@@ -28,14 +28,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
+ 
+     let env = ProcessInfo.processInfo.environment
+     let solo = env["ZL_SOLO"] == "1"
+-    let initial: [String: Any]? = solo ? [
+-      "engine": env["ZL_ENGINE"] ?? "zigpool",
+-      "count": Int(env["ZL_COUNT"] ?? "100000") ?? 100000,
+-      "cell": env["ZL_CELL"] ?? "heavy",
+-      "legacyRecycling": env["ZL_LEGACY"] == "1",
+-      "audit": env["ZL_AUDIT"] == "1",
+-      "bindingDelayMs": Int(env["ZL_DELAY"] ?? "0") ?? 0
+-    ] : nil
++    var initial: [String: Any]? = nil
++    if solo {
++      var options: [String: Any] = [:]
++      options["jsBlockMs"] = Int(env["ZL_BLOCK_MS"] ?? "0") ?? 0
++      options["preparation"] = env["ZL_PREPARATION"] ?? "baseline"
++      options["preparationTrace"] = env["ZL_PREPARATION_TRACE"] == "1"
++      options["engine"] = env["ZL_ENGINE"] ?? "zigpool"
++      options["count"] = Int(env["ZL_COUNT"] ?? "100000") ?? 100000
++      options["cell"] = env["ZL_CELL"] ?? "heavy"
++      options["legacyRecycling"] = env["ZL_LEGACY"] == "1"
++      options["audit"] = env["ZL_AUDIT"] == "1"
++      options["bindingDelayMs"] = Int(env["ZL_DELAY"] ?? "0") ?? 0
++      initial = options
++    }
+     factory.startReactNative(
+       withModuleName: solo ? "ZLSolo" : "ZerolistExample",
+       in: window,
+@@ -75,10 +81,15 @@ private final class FrameProbe: NSObject {
+   deinit { link?.invalidate() }
+ }
+ private final class ProbeWindow: UIWindow {
++  private func scrollOffset(_ view: UIView) -> CGFloat? {
++    if let scroll = view as? UIScrollView { return scroll.contentOffset.y }
++    for child in view.subviews { if let y = scrollOffset(child) { return y } }
++    return nil
++  }
+   override func sendEvent(_ event: UIEvent) {
+     for touch in event.allTouches ?? [] {
+       if touch.phase == .began || touch.phase == .ended {
+-        NSLog("ZlTouch action=%d timestamp=%.9f", touch.phase == .began ? 0 : 1, touch.timestamp)
++        NSLog("ZlTouch action=%d timestamp=%.9f y=%.3f", touch.phase == .began ? 0 : 1, touch.timestamp, scrollOffset(self) ?? -1)
+       }
+     }
+     super.sendEvent(event)
+diff --git a/apps/example/ios/ZerolistExample/ZlPoolListComponentView.mm b/apps/example/ios/ZerolistExample/ZlPoolListComponentView.mm
+index 5faf68f..cd2d609 100644
+--- a/apps/example/ios/ZerolistExample/ZlPoolListComponentView.mm
++++ b/apps/example/ios/ZerolistExample/ZlPoolListComponentView.mm
+@@ -1,11 +1,15 @@
+ // React의 내용 커밋과 같은 매핑으로 배치한다. 이전 동작은 비교 옵션으로 남긴다.
+ #import <React/RCTViewComponentView.h>
++#import <React/RCTLog.h>
+ #import <React/RCTComponentViewFactory.h>
+ #import <React/RCTMountingTransactionObserving.h>
+ #import <UIKit/UIKit.h>
+ #import <string>
+ #import <vector>
+ #import <sstream>
++#import <map>
++#import <deque>
++#import <set>
+ #import <QuartzCore/QuartzCore.h>
+ 
+ #import <react/renderer/components/ZlExampleSpec/ComponentDescriptors.h>
+@@ -33,18 +37,31 @@ @implementation ZlPoolListComponentView {
+   NSInteger _lastStart;
+   std::vector<NSInteger> _committed;
+   NSInteger _overscan;
++  NSInteger _preparationMode;
++  BOOL _preparationTrace;
++  int32_t _committedVersion, _acknowledgedVersion, _inFlightVersion;
++  std::map<int32_t, double> _preparationRequests;
++  std::deque<double> _preparationSamples;
++  double _preparationBudgetMs, _velocity, _lastMotionMs, _lastMotionY;
+   int32_t _version;
+   BOOL _legacyRecycling;
+   BOOL _audit;
+   BOOL _placementDirty;
+   CADisplayLink *_auditLink;
+   NSUInteger _auditFrame;
++  std::set<NSInteger> _previousExpected;
+ }
+ 
+ // app-local Fabric 컴포넌트는 codegen ThirdPartyComponentsProvider 에
+ // 자동 등록되지 않는다(그 맵은 node_modules 라이브러리 전용, 앱은 빔).
+ // → 공개 API 로 명시 자기등록(런타임 준비 후 main 큐).
+ + (void)load {
++  if ([NSProcessInfo.processInfo.environment[@"ZL_PREPARATION_TRACE"] isEqualToString:@"1"]) {
++    // 기본 OS 로그에서 생략되는 JS 진단 메시지를 감사 실행에서만 보관한다.
++    RCTAddLogFunction(^(RCTLogLevel level, RCTLogSource source, NSString *file, NSNumber *line, NSString *message) {
++      if (source == RCTLogSourceJavaScript && ([message hasPrefix:@"[ZlBlock]"] || [message hasPrefix:@"[JS0]"])) NSLog(@"%@", message);
++    });
++  }
+   dispatch_async(dispatch_get_main_queue(), ^{
+     [[RCTComponentViewFactory currentComponentViewFactory]
+         registerComponentViewClass:self];
+@@ -60,6 +77,8 @@ - (instancetype)initWithFrame:(CGRect)frame {
+     _slots = [NSMutableArray new];
+     _lastStart = NSIntegerMin;
+     _overscan = 5;
++    _committedVersion = _acknowledgedVersion = _inFlightVersion = -1;
++    _preparationBudgetMs = 34;
+     _scroll = [[UIScrollView alloc] initWithFrame:frame];
+     _scroll.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+     _scroll.delegate = self;
+@@ -81,6 +100,35 @@ - (void)rebuild {
+   [self layoutSlots];
+ }
+ 
++// 완료된 요청의 최근 p95로 선행 준비 거리의 시간 예산을 정한다.
++- (NSInteger)preparationBehind:(NSInteger)pool {
++  if (!(_preparationMode & 1) || _rowH <= 0) return _overscan;
++  NSInteger spare = MAX(0, pool - (NSInteger)ceil(_scroll.bounds.size.height / _rowH));
++  if (spare < 8 || fabs(_velocity) < .01) return MIN(_overscan, spare);
++  NSInteger lead = (NSInteger)ceil(fabs(_velocity) * (_preparationBudgetMs * 1.25 + 16) / _rowH) + 2;
++  NSInteger ahead = MAX(5, MIN(lead, spare - 3));
++  return _velocity >= 0 ? spare - ahead : ahead;
++}
++- (void)preparationPlaced {
++  if (_committedVersion <= _acknowledgedVersion) return;
++  _acknowledgedVersion = _committedVersion;
++  auto found = _preparationRequests.find(_committedVersion);
++  if (found != _preparationRequests.end()) {
++    double elapsed = CACurrentMediaTime() * 1000 - found->second;
++    _preparationSamples.push_back(elapsed);
++    if (_preparationSamples.size() > 32) _preparationSamples.pop_front();
++    std::vector<double> sorted(_preparationSamples.begin(), _preparationSamples.end());
++    std::sort(sorted.begin(), sorted.end());
++    _preparationBudgetMs = MAX(34, MIN(500, sorted[(size_t)ceil(sorted.size() * .95)-1]));
++    if (_preparationTrace) NSLog(@"ZlPrepare phase=ready version=%d elapsed=%.3f budget=%.3f pool=%lu y=%.0f", _committedVersion, elapsed, _preparationBudgetMs, (unsigned long)_slots.count, _scroll.contentOffset.y);
++  }
++  _preparationRequests.erase(_preparationRequests.begin(), _preparationRequests.upper_bound(_committedVersion));
++  if (_inFlightVersion <= _committedVersion) {
++    _inFlightVersion = -1;
++    if (_preparationMode & 2) [self layoutSlots];
++  }
++}
++
+ // #25: 네이티브가 binding(slot→dataIndex, ring)의 단일 권위. 슬롯 s 를
+ // offsets[ring(s)] 에 자기배치(child 순서 무관). windowStart 가 바뀔
+ // 때만 재배치 + binding csv 하달 → JS 는 그대로 적용(자체 파생 X =
+@@ -92,11 +140,19 @@ - (void)layoutSlots {
+   double vp = _scroll.bounds.size.height;
+   int32_t f = 0, l = 0;
+   zl_visible_range(_offsets.data(), (size_t)_count, y, vp, &f, &l);
+-  NSInteger start =
+-      std::max<NSInteger>(0, std::min<NSInteger>(f - _overscan, _count - pool));
++  NSInteger behind = [self preparationBehind:pool];
++  NSInteger start = std::max<NSInteger>(0, std::min<NSInteger>(f - behind, _count - pool));
++  if ((_preparationMode & 4) && _lastStart >= 0) {
++    NSInteger visible = (NSInteger)ceil(vp/_rowH), spare=MAX(0,pool-visible);
++    NSInteger ahead = fabs(_velocity)<.01 ? 5 : (_velocity>=0 ? spare-behind : behind);
++    NSInteger needStart=MAX(0,f-(_velocity<0 ? ahead : 3));
++    NSInteger needEnd=MIN(_count,f+visible+(_velocity>=0 ? ahead : 3));
++    if (_lastStart<=needStart && _lastStart+pool>=needEnd) start=_lastStart;
++  }
+   // 슬롯은 content 고정좌표(offsets[ring])라 UIScrollView 가 스크롤
+   // 처리 → windowStart 불변 프레임은 frame·csv·emit 전부 불필요.
+   if (start == _lastStart) return;
++  if ((_preparationMode & 2) && _inFlightVersion >= 0) return;
+   _lastStart = start;
+   std::string binds;
+   for (NSInteger s = 0; s < pool; s++) {
+@@ -108,8 +164,13 @@ - (void)layoutSlots {
+     binds += std::to_string((long)idx);
+   }
+   if (_eventEmitter) {
++    ++_version;
++    _preparationRequests[_version] = CACurrentMediaTime() * 1000;
++    while (_preparationRequests.size() > 512) _preparationRequests.erase(_preparationRequests.begin());
++    _inFlightVersion = _version;
++    if (_preparationTrace) NSLog(@"ZlPrepare phase=request version=%d first=%d start=%ld pool=%ld velocity=%.3f", _version, f, (long)start, (long)pool, _velocity);
+     std::static_pointer_cast<const ZlPoolListEventEmitter>(_eventEmitter)
+-        ->onRecycle({.binds = binds, .version = ++_version});
++        ->onRecycle({.binds = binds, .version = _version});
+   }
+ }
+ 
+@@ -117,6 +178,7 @@ - (void)mountingTransactionDidMount:(const MountingTransaction &)transaction
+                withSurfaceTelemetry:(const SurfaceTelemetry &)surfaceTelemetry {
+   // 하위 텍스트까지 모두 반영한 뒤 같은 매핑으로 위치를 확정한다.
+   if (!_legacyRecycling && _placementDirty) { [self placeCommitted]; _placementDirty=NO; }
++  [self preparationPlaced];
+ }
+ 
+ - (void)placeCommitted {
+@@ -143,19 +205,28 @@ - (void)auditFrame:(CADisplayLink *)link {
+   CGFloat y = _scroll.contentOffset.y, height = _scroll.bounds.size.height;
+   CGFloat viewportStart=MAX(0,-y), viewportEnd=MIN(height,_scroll.contentSize.height-y);
+   NSInteger wrong = 0, visible = 0;
++  std::set<NSInteger> readyIndices;
+   std::vector<std::pair<CGFloat,CGFloat>> spans;
+   for (UIView *view in _slots) {
+     CGFloat top = view.frame.origin.y - y, bottom = top + view.frame.size.height;
+     if (view.hidden || bottom <= viewportStart || top >= viewportEnd) continue;
+     visible++;
+     NSInteger expected = (NSInteger)llround(view.frame.origin.y / _rowH);
+-    if ([self titleIndex:view] != expected) wrong++;
++    if ([self titleIndex:view] != expected) wrong++; else readyIndices.insert(expected);
+     spans.emplace_back(MAX(viewportStart,top), MIN(viewportEnd,bottom));
+   }
+   std::sort(spans.begin(),spans.end());
+   CGFloat end=viewportStart, covered=0, overlap=0;
+   for (auto span : spans) { overlap+=MAX(0,MIN(end,span.second)-span.first); covered+=MAX(0,span.second-MAX(end,span.first)); end=MAX(end,span.second); }
+-  NSLog(@"ZlAudit frame=%lu y=%.0f wrong=%ld visible=%ld blank=%.0f overlap=%.0f version=%d",(unsigned long)++_auditFrame,y,(long)wrong,(long)visible,MAX(0,viewportEnd-viewportStart)-covered,overlap,_version);
++  NSInteger first=MAX(0,(NSInteger)floor(y/_rowH)), stop=MIN(_count,(NSInteger)ceil((y+height)/_rowH));
++  std::set<NSInteger> expected;
++  NSInteger entered=0, unready=0;
++  for (NSInteger i=first;i<stop;i++) {
++    expected.insert(i);
++    if (!_previousExpected.count(i)) { entered++; if (!readyIndices.count(i)) unready++; }
++  }
++  _previousExpected=expected;
++  NSLog(@"ZlAudit entered=%ld unready=%ld frame=%lu y=%.0f wrong=%ld visible=%ld blank=%.0f overlap=%.0f version=%d",(long)entered,(long)unready,(unsigned long)++_auditFrame,y,(long)wrong,(long)visible,MAX(0,viewportEnd-viewportStart)-covered,overlap,_version);
+ }
+ - (void)didMoveToWindow {
+   [super didMoveToWindow];
+@@ -164,6 +235,12 @@ - (void)didMoveToWindow {
+ }
+ 
+ - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
++  double now = CACurrentMediaTime() * 1000, dt = now - _lastMotionMs;
++  if (dt > 0 && dt <= 100) {
++    double v = (scrollView.contentOffset.y - _lastMotionY) / dt;
++    _velocity = v * _velocity < 0 ? v : _velocity * .6 + v * .4;
++  } else _velocity = 0;
++  _lastMotionMs = now; _lastMotionY = scrollView.contentOffset.y;
+   [self layoutSlots];
+ }
+ 
+@@ -171,6 +248,10 @@ - (void)updateProps:(const Props::Shared &)props
+            oldProps:(const Props::Shared &)oldProps {
+   const auto &p = *std::static_pointer_cast<const ZlPoolListProps>(props);
+   BOOL changed = NO;
++  if (_preparationMode != p.preparationMode) _lastStart = NSIntegerMin;
++  _preparationMode = p.preparationMode;
++  _preparationTrace = p.preparationTrace;
++  _committedVersion = p.committedVersion;
+   _legacyRecycling = p.legacyRecycling;
+   _overscan = MAX(0,p.overscan);
+   if (_audit != p.audit) { _audit = p.audit; [self didMoveToWindow]; }
+@@ -224,6 +305,9 @@ - (void)layoutSubviews {
+ - (void)prepareForRecycle {
+   [_auditLink invalidate]; _auditLink=nil;
+   _committed.clear();
++  _preparationRequests.clear(); _preparationSamples.clear(); _previousExpected.clear();
++  _committedVersion = _acknowledgedVersion = _inFlightVersion = -1;
++  _preparationBudgetMs = 34; _velocity = _lastMotionMs = _lastMotionY = 0;
+   _scroll.delegate = nil;
+   [_slots removeAllObjects];
+   _offsets.clear();
+diff --git a/apps/example/specs/ZlPoolListNativeComponent.ts b/apps/example/specs/ZlPoolListNativeComponent.ts
+index e008cac..2edc459 100644
+--- a/apps/example/specs/ZlPoolListNativeComponent.ts
++++ b/apps/example/specs/ZlPoolListNativeComponent.ts
+@@ -12,6 +12,9 @@ import type {
+ import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
+ 
+ interface NativeProps extends ViewProps {
++  preparationMode: Int32;
++  preparationTrace?: WithDefault<boolean, false>;
++  committedVersion: Int32;
+   count: Int32;
+   rowHeight: Int32;
+   committedBinds: string;
+diff --git a/apps/example/src/Solo.tsx b/apps/example/src/Solo.tsx
+index e7e405e..e326974 100644
+--- a/apps/example/src/Solo.tsx
++++ b/apps/example/src/Solo.tsx
+@@ -5,13 +5,16 @@ import { ENGINES } from './harness/engines';
+ import { makeItems } from './harness/data';
+ import { fixedCellHeight } from './harness/cellLayout';
+ import { inst } from './harness/instrument';
+-import type { CellType, EngineId } from './harness/types';
++import type { CellType, EngineId, Preparation } from './harness/types';
+ 
+ // chrome-free 측정 루트 — harness UI(헤더/Seg/Run) 없이 선택된 엔진만
+ // 풀스크린 렌더. engine/count/cell 은 SoloActivity 가 intent extra →
+ // initialProps 로 주입. gfxinfo(프로세스 단위)가 엔진+RN루트+Fabric
+ // mount 만 보게 해 Native(맨 Activity)와 깨끗하게 비교(태스크 #18).
+ export default function Solo(props: {
++  jsBlockMs?: number;
++  preparation?: Preparation;
++  preparationTrace?: boolean;
+   engine?: string;
+   count?: number;
+   cell?: string;
+@@ -47,10 +50,27 @@ export default function Solo(props: {
+   // JS-0 정량 계측: 결정적 스크롤에서 renders/cbs 누적을 주기 로깅.
+   useEffect(() => inst.start(engineId), [engineId]);
+ 
++  // 지연 타이머와 별도로 JS 스레드가 실제로 점유되는 부하 조건이다.
++  useEffect(() => {
++    const duration = Math.min(400, Math.max(0, props.jsBlockMs ?? 0));
++    if (!duration) return;
++    const timer = setInterval(() => {
++      const start = performance.now();
++      while (performance.now() - start < duration) {
++        /* 측정용 CPU 점유 */
++      }
++      if (props.preparationTrace)
++        console.log(`[ZlBlock] elapsed=${performance.now() - start}`);
++    }, duration + 40);
++    return () => clearInterval(timer);
++  }, [props.jsBlockMs, props.preparationTrace]);
++
+   if (!Engine) return <View style={s.fill} />;
+   return (
+     <View style={s.fill}>
+       <Engine
++        preparation={props.preparation}
++        preparationTrace={props.preparationTrace}
+         diagnostic={props.diagnostic}
+         legacyRecycling={props.legacyRecycling}
+         audit={props.audit}
+diff --git a/apps/example/src/harness/engines/__tests__/zigpool.test.tsx b/apps/example/src/harness/engines/__tests__/zigpool.test.tsx
+index ab6f001..cd04add 100644
+--- a/apps/example/src/harness/engines/__tests__/zigpool.test.tsx
++++ b/apps/example/src/harness/engines/__tests__/zigpool.test.tsx
+@@ -74,3 +74,41 @@ describe('ZigPool 내용과 배치 매핑의 커밋', () => {
+     expect(jest.getTimerCount()).toBe(0);
+   });
+ });
++
++describe('내용 준비 PoC의 React 계약', () => {
++  it('확대한 풀도 작은 데이터의 범위를 넘지 않고 커밋 버전을 내용과 함께 전달한다', () => {
++    const view = render(
++      <ZigPoolEngine
++        {...props}
++        items={props.items.slice(0, 4)}
++        preparation="combined"
++      />
++    );
++    expect(view.getByTestId('pool').props.committedBinds).toBe('0,1,2,3');
++    fireEvent(view.getByTestId('pool'), 'recycle', {
++      nativeEvent: { binds: '3,2,1,0', version: 7 },
++    });
++    expect(view.getByTestId('pool').props.committedVersion).toBe(7);
++    expect(view.getByTestId('pool').props.committedBinds).toBe('3,2,1,0');
++    expect(view.getByText('#3')).toBeTruthy();
++  });
++
++  it('슬롯을 메모화해도 같은 ID의 새 데이터와 새 콜백을 반영한다', () => {
++    const view = render(<ZigPoolEngine {...props} preparation="memo" />);
++    const onRender = jest.fn();
++    const items = props.items.map((item) =>
++      item.id === 0 ? { ...item, title: '#0 변경' } : item
++    );
++    view.rerender(
++      <ZigPoolEngine
++        {...props}
++        items={items}
++        preparation="memo"
++        onRender={onRender}
++      />
++    );
++    expect(view.getByText('#0 변경')).toBeTruthy();
++    expect(view.queryByText('#0')).toBeNull();
++    expect(onRender).toHaveBeenCalledWith(0);
++  });
++});
+diff --git a/apps/example/src/harness/engines/zigpool.tsx b/apps/example/src/harness/engines/zigpool.tsx
+index 007b466..bae6c0a 100644
+--- a/apps/example/src/harness/engines/zigpool.tsx
++++ b/apps/example/src/harness/engines/zigpool.tsx
+@@ -1,5 +1,6 @@
+ import {
+   forwardRef,
++  memo,
+   useEffect,
+   useLayoutEffect,
+   useRef,
+@@ -17,6 +18,32 @@ import { useNoopScrollable } from './shared';
+ // 네이티브는 요청한 미래 인덱스 대신 실제 반영된 매핑으로 셀을 배치한다.
+ // 지연된 이벤트는 버전으로 거르고, 양방향 여유 셀로 역스크롤을 준비한다.
+ const POOL = 14;
++// Cell 자체는 이미 memo다. 이 PoC는 슬롯 래퍼와 자식 element 생성만 분리한다.
++const Slot = memo(function Slot({
++  item,
++  rh,
++  cell,
++  height,
++  onMeasure,
++  onRender,
++}: {
++  item: ListEngineProps['items'][number] | undefined;
++  rh: number;
++} & Pick<ListEngineProps, 'cell' | 'height' | 'onMeasure' | 'onRender'>) {
++  return (
++    <View collapsable={false} style={[styles.slot, { height: rh }]}>
++      {item ? (
++        <Cell
++          item={item}
++          cell={cell}
++          height={height}
++          onMeasure={onMeasure}
++          onRender={onRender}
++        />
++      ) : null}
++    </View>
++  );
++});
+ const initBinds = (n: number) => Array.from({ length: n }, (_, i) => i);
+ 
+ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
+@@ -25,8 +52,31 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
+     const rh = p.fixedHeight ?? 88;
+     const data = p.items;
+     const { height } = useWindowDimensions();
++    const preparation = p.preparation ?? 'baseline';
++    const adaptive = [
++      'adaptive-small',
++      'adaptive',
++      'combined',
++      'adaptive-stable',
++      'combined-stable',
++    ].includes(preparation);
++    const coalesce = ['coalesce', 'combined', 'combined-stable'].includes(
++      preparation
++    );
++    const memoSlots = ['memo', 'combined', 'combined-stable'].includes(
++      preparation
++    );
++    const extra = [
++      'wide',
++      'adaptive',
++      'combined',
++      'adaptive-stable',
++      'combined-stable',
++    ].includes(preparation)
++      ? 24
++      : 10;
+     const n = Math.min(
+-      p.legacyRecycling ? POOL : Math.max(POOL, Math.ceil(height / rh) + 10),
++      p.legacyRecycling ? POOL : Math.max(POOL, Math.ceil(height / rh) + extra),
+       data.length
+     );
+     const [binding, setBinding] = useState(() => ({
+@@ -55,10 +105,17 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
+     }, []);
+     return (
+       <ZlPoolList
++        preparationMode={
++          (adaptive ? 1 : 0) |
++          (coalesce ? 2 : 0) |
++          (preparation.endsWith('-stable') ? 4 : 0)
++        }
++        preparationTrace={p.preparationTrace ?? false}
++        committedVersion={binding.version}
+         count={data.length}
+         rowHeight={rh}
+         committedBinds={binds.join(',')}
+-        overscan={p.legacyRecycling ? 0 : 5}
++        overscan={p.legacyRecycling ? 0 : preparation === 'wide' ? 12 : 5}
+         legacyRecycling={p.legacyRecycling ?? false}
+         audit={p.audit ?? false}
+         // 인라인 타입: codegen 이벤트 타입을 tsc 가 해석 못 함(앱-local).
+@@ -89,6 +146,18 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
+       >
+         {Array.from({ length: n }, (_, s) => {
+           const item = data[binds[s] ?? s];
++          if (memoSlots)
++            return (
++              <Slot
++                key={s}
++                item={item}
++                rh={rh}
++                cell={p.cell}
++                height={p.height}
++                onMeasure={p.onMeasure}
++                onRender={p.onRender}
++              />
++            );
+           return (
+             <View
+               key={s}
+diff --git a/apps/example/src/harness/types.ts b/apps/example/src/harness/types.ts
+index 71fe7a7..2f63de0 100644
+--- a/apps/example/src/harness/types.ts
++++ b/apps/example/src/harness/types.ts
+@@ -45,7 +45,20 @@ export interface FrameStats {
+  * 레이아웃 힌트 패리티: fixed/variable 에선 모든 엔진이 동일한
+  * offsets/fixedHeight 를 받아 각 엔진의 최강 등가 API 에 연결한다
+  * (한 엔진만 getItemLayout 받는 불공정 방지). dynamic 에선 둘 다 null. */
++export type Preparation =
++  | 'baseline'
++  | 'wide'
++  | 'adaptive-small'
++  | 'adaptive'
++  | 'coalesce'
++  | 'memo'
++  | 'combined'
++  | 'adaptive-stable'
++  | 'combined-stable';
++
+ export interface ListEngineProps {
++  preparation?: Preparation;
++  preparationTrace?: boolean;
+   /** Solo-only causal experiment; frozen variants are not functional lists. */
+   diagnostic?:
+     | 'normal'

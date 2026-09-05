@@ -41,6 +41,45 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private val resumeDrag = ctx.currentActivity?.intent?.getBooleanExtra("resumeDrag", true) ?: true
   private val motionTrace = ctx.currentActivity?.intent?.getBooleanExtra("motionTrace", false) == true
   fun diagnosticScrollOffset(): Int = scrollY
+  private var preparationMode = 0
+  private var preparationTrace = false
+  private var committedVersion = -1
+  private var acknowledgedVersion = -1
+  private var inFlightVersion = -1
+  private val preparationRequests = linkedMapOf<Int, Long>()
+  private val preparationSamples = java.util.ArrayDeque<Double>()
+  private var preparationBudgetMs = 34.0
+  private var velocityPxMs = 0.0
+  private var lastMotionMs = 0L
+  fun setPreparationMode(value: Int) { preparationMode = value; lastWindowStart = -1; invalidate() }
+  fun setPreparationTrace(value: Boolean) { preparationTrace = value }
+  fun setCommittedVersion(value: Int) { committedVersion = value; invalidate() }
+  private fun preparationPlaced() {
+    if (committedVersion <= acknowledgedVersion) return
+    acknowledgedVersion = committedVersion
+    val now = android.os.SystemClock.uptimeMillis()
+    preparationRequests[committedVersion]?.let { requested ->
+      val elapsed = (now - requested).toDouble()
+      preparationSamples.addLast(elapsed)
+      if (preparationSamples.size > 32) preparationSamples.removeFirst()
+      val sorted = preparationSamples.sorted()
+      preparationBudgetMs = sorted[kotlin.math.ceil(sorted.size * .95).toInt() - 1].coerceIn(34.0, 500.0)
+      if (preparationTrace) Log.i("ZlPrepare", "phase=ready version=$committedVersion elapsed=$elapsed budget=$preparationBudgetMs pool=$childCount y=$scrollY")
+    }
+    preparationRequests.keys.removeAll { it <= committedVersion }
+    if (inFlightVersion <= committedVersion) {
+      inFlightVersion = -1
+      if ((preparationMode and 2) != 0) reposition()
+    }
+  }
+  private fun preparationBehind(pool: Int): Int {
+    if ((preparationMode and 1) == 0 || rowPxF <= 0f) return overscan
+    val spare = maxOf(0, pool - kotlin.math.ceil(height / rowPxF.toDouble()).toInt())
+    if (spare < 8 || kotlin.math.abs(velocityPxMs) < .01) return minOf(overscan, spare)
+    val lead = kotlin.math.ceil(kotlin.math.abs(velocityPxMs) * (preparationBudgetMs * 1.25 + 16) / rowPxF).toInt() + 2
+    val ahead = lead.coerceIn(5, spare - 3)
+    return if (velocityPxMs >= 0) spare - ahead else ahead
+  }
   private var positionsInitialized = false
   private var committed = intArrayOf()
   private var overscan = 5
@@ -48,12 +87,14 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private var audit = false
   private var version = 0
   private var auditFrame = 0
+  private var previousExpected = setOf<Int>()
   private val beforeDraw = ViewTreeObserver.OnPreDrawListener {
     if (!legacyRecycling && (!freezePosition || !positionsInitialized)) { placeCommitted(); positionsInitialized=true }
     if (bindingTrace && tracedCommitVersion != tracedPlacedVersion) {
       tracedPlacedVersion = tracedCommitVersion
       bindingLog("placed", tracedPlacedVersion)
     }
+    preparationPlaced()
     if (audit) auditSlots()
     true
   }
@@ -80,6 +121,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private fun auditSlots() {
     if (rowPxF <= 0 || height <= 0) return
     var wrong = 0; var visible = 0
+    val readyIndices = mutableSetOf<Int>()
     val spans = mutableListOf<Pair<Float, Float>>()
     for (s in 0 until childCount) {
       val child = getChildAt(s)
@@ -88,12 +130,18 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
       if (child.visibility != View.VISIBLE || bottom <= 0 || top >= height) continue
       visible++
       val expected = ((top + scrollY) / rowPxF).roundToInt()
-      if (titleIndex(child) != expected) wrong++
+      if (titleIndex(child) != expected) wrong++ else readyIndices.add(expected)
       spans.add(maxOf(0f, top) to minOf(height.toFloat(), bottom))
     }
     var end = 0f; var covered = 0f; var overlap = 0f
     for ((a,b) in spans.sortedBy { it.first }) { overlap += maxOf(0f, minOf(end,b)-a); covered += maxOf(0f,b-maxOf(end,a)); end=maxOf(end,b) }
-    Log.i("ZlAudit", "frame=${++auditFrame} y=$scrollY wrong=$wrong visible=$visible blank=${(height-covered).roundToInt()} overlap=${overlap.roundToInt()} version=$version")
+    val first = kotlin.math.floor(scrollY / rowPxF.toDouble()).toInt().coerceAtLeast(0)
+    val endIndex = kotlin.math.ceil((scrollY + height) / rowPxF.toDouble()).toInt().coerceAtMost(count)
+    val expected = (first until endIndex).toSet()
+    val entered = expected - previousExpected
+    previousExpected = expected
+    val unready = entered.count { it !in readyIndices }
+    Log.i("ZlAudit", "entered=${entered.size} unready=$unready frame=${++auditFrame} y=$scrollY wrong=$wrong visible=$visible blank=${(height-covered).roundToInt()} overlap=${overlap.roundToInt()} version=$version")
   }
   // 스크롤 표시가 프레임 재개에 미치는 영향을 분리하는 진단 옵션. 기본은 끈다.
   private val showScrollIndicator = ctx.currentActivity?.intent?.getBooleanExtra("scrollIndicator", false) == true
@@ -158,6 +206,13 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private fun setScroll(y: Int) {
     val clamped = y.coerceIn(0, maxScroll())
     if (clamped == scrollY) return
+    val now = android.os.SystemClock.uptimeMillis()
+    val dt = now - lastMotionMs
+    if (dt > 0 && dt <= 100) {
+      val v = (clamped - scrollY).toDouble() / dt
+      velocityPxMs = if (v * velocityPxMs < 0) v else velocityPxMs * .6 + v * .4
+    } else velocityPxMs = 0.0
+    lastMotionMs = now
     scrollY = clamped
     reposition()
     if (!legacyRecycling) invalidate()
@@ -182,7 +237,17 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     )
     val first = ZlEngine.firstOf(packed)
     // 풀이 데이터 끝을 넘지 않도록 clamp(뷰포트 ≤ 풀 가정).
-    val windowStart = (first - overscan).coerceIn(0, maxOf(0, count - n))
+    val behind = preparationBehind(n)
+    var windowStart = (first - behind).coerceIn(0, maxOf(0, count - n))
+    if ((preparationMode and 4) != 0 && lastN == n && lastWindowStart >= 0) {
+      val visible = kotlin.math.ceil(height / rowPxF.toDouble()).toInt()
+      val spare = maxOf(0, n - visible)
+      val ahead = if (kotlin.math.abs(velocityPxMs) < .01) 5 else if (velocityPxMs >= 0) spare - behind else behind
+      val needStart = maxOf(0, first - if (velocityPxMs < 0) ahead else 3)
+      val needEnd = minOf(count, first + visible + if (velocityPxMs >= 0) ahead else 3)
+      // 충분히 준비한 창은 축소·반전하지 않는다. 여유가 소진될 때만 옮긴다.
+      if (lastWindowStart <= needStart && lastWindowStart + n >= needEnd) windowStart = lastWindowStart
+    }
     // 위치는 매 프레임 갱신(scrollY 추적). bind 는 windowStart 의
     // 순수 함수라 ring 으로 자기배치.
     if (legacyRecycling && (!freezePosition || !positionsInitialized)) {
@@ -195,6 +260,8 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     // csv·emit 는 windowStart/n 이 바뀐 프레임에만(불변 프레임
     // 문자열 빌드/dispatch 낭비 제거).
     if (windowStart == lastWindowStart && n == lastN) return
+    // 반영 중에는 최신 위치만 추적한다. 완료 시 현재 위치로 다시 요청한다.
+    if ((preparationMode and 2) != 0 && inFlightVersion >= 0) return
     lastWindowStart = windowStart
     lastN = n
     val sb = StringBuilder(n * 5)
@@ -204,6 +271,10 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     }
     val binds = sb.toString()
     version++
+    preparationRequests[version] = android.os.SystemClock.uptimeMillis()
+    while (preparationRequests.size > 512) preparationRequests.remove(preparationRequests.keys.first())
+    inFlightVersion = version
+    if (preparationTrace) Log.i("ZlPrepare", "phase=request version=$version first=$first start=$windowStart pool=$n velocity=$velocityPxMs")
     if (bindingTrace) {
       if (tracedRequests.size > 512) tracedRequests.clear()
       tracedRequests[binds] = version
@@ -321,6 +392,9 @@ class ZlPoolListManager :
 
   override fun getDelegate(): ViewManagerDelegate<ZlPoolListView> = delegate
 
+  override fun setPreparationMode(view: ZlPoolListView, value: Int) { view.setPreparationMode(value) }
+  override fun setPreparationTrace(view: ZlPoolListView, value: Boolean) { view.setPreparationTrace(value) }
+  override fun setCommittedVersion(view: ZlPoolListView, value: Int) { view.setCommittedVersion(value) }
   override fun setCommittedBinds(view: ZlPoolListView, value: String?) { view.setCommittedBinds(value) }
   override fun setOverscan(view: ZlPoolListView, value: Int) { view.setOverscan(value) }
   override fun setLegacyRecycling(view: ZlPoolListView, value: Boolean) { view.setLegacyRecycling(value) }

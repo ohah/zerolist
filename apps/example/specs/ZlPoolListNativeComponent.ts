@@ -12,6 +12,9 @@ import type {
 import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNativeComponent';
 
 interface NativeProps extends ViewProps {
+  preparationMode: Int32;
+  preparationTrace?: WithDefault<boolean, false>;
+  committedVersion: Int32;
   count: Int32;
   rowHeight: Int32;
   committedBinds: string;

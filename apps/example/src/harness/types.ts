@@ -45,7 +45,20 @@ export interface FrameStats {
  * 레이아웃 힌트 패리티: fixed/variable 에선 모든 엔진이 동일한
  * offsets/fixedHeight 를 받아 각 엔진의 최강 등가 API 에 연결한다
  * (한 엔진만 getItemLayout 받는 불공정 방지). dynamic 에선 둘 다 null. */
+export type Preparation =
+  | 'baseline'
+  | 'wide'
+  | 'adaptive-small'
+  | 'adaptive'
+  | 'coalesce'
+  | 'memo'
+  | 'combined'
+  | 'adaptive-stable'
+  | 'combined-stable';
+
 export interface ListEngineProps {
+  preparation?: Preparation;
+  preparationTrace?: boolean;
   /** Solo-only causal experiment; frozen variants are not functional lists. */
   diagnostic?:
     | 'normal'

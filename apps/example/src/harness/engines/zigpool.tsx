@@ -1,5 +1,6 @@
 import {
   forwardRef,
+  memo,
   useEffect,
   useLayoutEffect,
   useRef,
@@ -17,6 +18,32 @@ import { useNoopScrollable } from './shared';
 // 네이티브는 요청한 미래 인덱스 대신 실제 반영된 매핑으로 셀을 배치한다.
 // 지연된 이벤트는 버전으로 거르고, 양방향 여유 셀로 역스크롤을 준비한다.
 const POOL = 14;
+// Cell 자체는 이미 memo다. 이 PoC는 슬롯 래퍼와 자식 element 생성만 분리한다.
+const Slot = memo(function Slot({
+  item,
+  rh,
+  cell,
+  height,
+  onMeasure,
+  onRender,
+}: {
+  item: ListEngineProps['items'][number] | undefined;
+  rh: number;
+} & Pick<ListEngineProps, 'cell' | 'height' | 'onMeasure' | 'onRender'>) {
+  return (
+    <View collapsable={false} style={[styles.slot, { height: rh }]}>
+      {item ? (
+        <Cell
+          item={item}
+          cell={cell}
+          height={height}
+          onMeasure={onMeasure}
+          onRender={onRender}
+        />
+      ) : null}
+    </View>
+  );
+});
 const initBinds = (n: number) => Array.from({ length: n }, (_, i) => i);
 
 export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
@@ -25,8 +52,31 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
     const rh = p.fixedHeight ?? 88;
     const data = p.items;
     const { height } = useWindowDimensions();
+    const preparation = p.preparation ?? 'baseline';
+    const adaptive = [
+      'adaptive-small',
+      'adaptive',
+      'combined',
+      'adaptive-stable',
+      'combined-stable',
+    ].includes(preparation);
+    const coalesce = ['coalesce', 'combined', 'combined-stable'].includes(
+      preparation
+    );
+    const memoSlots = ['memo', 'combined', 'combined-stable'].includes(
+      preparation
+    );
+    const extra = [
+      'wide',
+      'adaptive',
+      'combined',
+      'adaptive-stable',
+      'combined-stable',
+    ].includes(preparation)
+      ? 24
+      : 10;
     const n = Math.min(
-      p.legacyRecycling ? POOL : Math.max(POOL, Math.ceil(height / rh) + 10),
+      p.legacyRecycling ? POOL : Math.max(POOL, Math.ceil(height / rh) + extra),
       data.length
     );
     const [binding, setBinding] = useState(() => ({
@@ -55,10 +105,17 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
     }, []);
     return (
       <ZlPoolList
+        preparationMode={
+          (adaptive ? 1 : 0) |
+          (coalesce ? 2 : 0) |
+          (preparation.endsWith('-stable') ? 4 : 0)
+        }
+        preparationTrace={p.preparationTrace ?? false}
+        committedVersion={binding.version}
         count={data.length}
         rowHeight={rh}
         committedBinds={binds.join(',')}
-        overscan={p.legacyRecycling ? 0 : 5}
+        overscan={p.legacyRecycling ? 0 : preparation === 'wide' ? 12 : 5}
         legacyRecycling={p.legacyRecycling ?? false}
         audit={p.audit ?? false}
         // 인라인 타입: codegen 이벤트 타입을 tsc 가 해석 못 함(앱-local).
@@ -89,6 +146,18 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
       >
         {Array.from({ length: n }, (_, s) => {
           const item = data[binds[s] ?? s];
+          if (memoSlots)
+            return (
+              <Slot
+                key={s}
+                item={item}
+                rh={rh}
+                cell={p.cell}
+                height={p.height}
+                onMeasure={p.onMeasure}
+                onRender={p.onRender}
+              />
+            );
           return (
             <View
               key={s}
