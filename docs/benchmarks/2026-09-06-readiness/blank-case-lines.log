@@ -1,0 +1,5 @@
+2026-09-06 00:56:53.704 ZerolistExample[60145:178133050] ZlPrepare phase=request version=128 first=237 start=234 pool=28 velocity=38.917
+2026-09-06 00:56:53.724 ZerolistExample[60145:178133050] ZlPrepare phase=ready version=128 elapsed=170.558 budget=174.486 pool=28 y=55531
+2026-09-06 00:56:53.870 ZerolistExample[60145:178133050] ZlCommon frame=674 ns=2215627100000000 y=60701.667 viewport=874.000 rh=234.000 visible=3 attached=28 entered=4 unready=2 wrong=0 blank=267.667 overlap=0.000
+2026-09-06 00:56:53.887 ZerolistExample[60145:178133050] ZlCommon frame=675 ns=2215627116666667 y=61448.000 viewport=874.000 rh=234.000 visible=0 attached=28 entered=3 unready=3 wrong=0 blank=874.000 overlap=0.000
+2026-09-06 00:56:53.926 ZerolistExample[60145:178133050] ZlPrepare phase=ready version=139 elapsed=156.262 budget=170.558 pool=28 y=61348

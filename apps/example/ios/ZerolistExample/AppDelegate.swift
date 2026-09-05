@@ -44,6 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       options["bufferRows"] = Int(env["ZL_BUFFER_ROWS"] ?? "-1") ?? -1
       options["commonAudit"] = env["ZL_COMMON_AUDIT"] == "1"
       options["jsBlockMs"] = Int(env["ZL_BLOCK_MS"] ?? "0") ?? 0
+      options["diagnostic"] = env["ZL_DIAGNOSTIC"] ?? "normal"
       options["preparation"] = env["ZL_PREPARATION"] ?? "baseline"
       options["preparationTrace"] = env["ZL_PREPARATION_TRACE"] == "1"
       options["engine"] = env["ZL_ENGINE"] ?? "zigpool"

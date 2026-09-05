@@ -1,0 +1,13 @@
+{
+  "source_group": "zerolist-readiness-confirm-ios-audit-160",
+  "source_log": "1-pending-stable-12-measured.log",
+  "prepared_version": 128,
+  "prepared_start_index": 234,
+  "pool": 28,
+  "row_height_pt": 234,
+  "prepared_end_exclusive_pt": 61308,
+  "first_full_blank_scroll_y_pt": 61448,
+  "viewport_pt": 874,
+  "next_placed_version": 139,
+  "explanation": "확정된 셀 범위 끝보다 화면 시작이 앞서 전체 공백. 방향 전환 직전부터 발생."
+}

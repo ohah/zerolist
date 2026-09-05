@@ -54,7 +54,11 @@ export type Preparation =
   | 'memo'
   | 'combined'
   | 'adaptive-stable'
-  | 'combined-stable';
+  | 'combined-stable'
+  | 'priority'
+  | 'priority-stable'
+  | 'pending-stable'
+  | 'priority-pending-stable';
 
 export interface ListEngineProps {
   /** Solo 측정 옵션: 화면 밖 한쪽 여유 행 수. 생략하면 기존 설정. */

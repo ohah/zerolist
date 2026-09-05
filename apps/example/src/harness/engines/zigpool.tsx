@@ -64,6 +64,9 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
       'combined',
       'adaptive-stable',
       'combined-stable',
+      'priority-stable',
+      'pending-stable',
+      'priority-pending-stable',
     ].includes(preparation);
     const coalesce = ['coalesce', 'combined', 'combined-stable'].includes(
       preparation
@@ -117,7 +120,9 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
         preparationMode={
           (adaptive ? 1 : 0) |
           (coalesce ? 2 : 0) |
-          (preparation.endsWith('-stable') ? 4 : 0)
+          (preparation.endsWith('-stable') ? 4 : 0) |
+          (preparation.includes('pending') ? 8 : 0) |
+          (preparation.startsWith('priority') ? 16 : 0)
         }
         preparationTrace={p.preparationTrace ?? false}
         committedVersion={binding.version}

@@ -39,6 +39,7 @@ using namespace facebook::react;
   NSInteger _overscan;
   NSInteger _preparationMode;
   BOOL _preparationTrace;
+  BOOL _bindingTrace;
   int32_t _committedVersion, _acknowledgedVersion, _inFlightVersion;
   std::map<int32_t, double> _preparationRequests;
   std::deque<double> _preparationSamples;
@@ -74,6 +75,7 @@ using namespace facebook::react;
 
 - (instancetype)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:frame]) {
+    _bindingTrace = [NSProcessInfo.processInfo.environment[@"ZL_DIAGNOSTIC"] isEqualToString:@"trace-binding"];
     _slots = [NSMutableArray new];
     _lastStart = NSIntegerMin;
     _overscan = 5;
@@ -100,21 +102,34 @@ using namespace facebook::react;
   [self layoutSlots];
 }
 
+// 진단 실행에서만 JS Date.now와 같은 벽시계로 단계별 대기를 연결한다.
+- (void)bindingLog:(NSString *)phase version:(int32_t)version {
+  if (_bindingTrace)
+    NSLog(@"ZlBinding phase=%@ version=%d wall=%.0f", phase, version, NSDate.date.timeIntervalSince1970 * 1000);
+}
+
 // 완료된 요청의 최근 p95로 선행 준비 거리의 시간 예산을 정한다.
 - (NSInteger)preparationBehind:(NSInteger)pool {
   if (!(_preparationMode & 1) || _rowH <= 0) return _overscan;
   NSInteger spare = MAX(0, pool - (NSInteger)ceil(_scroll.bounds.size.height / _rowH));
   if (spare < 8 || fabs(_velocity) < .01) return MIN(_overscan, spare);
-  NSInteger lead = (NSInteger)ceil(fabs(_velocity) * (_preparationBudgetMs * 1.25 + 16) / _rowH) + 2;
+  double budget = _preparationBudgetMs;
+  if ((_preparationMode & 8) && !_preparationRequests.empty())
+    budget = MAX(budget, MIN(500, CACurrentMediaTime()*1000 - _preparationRequests.begin()->second));
+  NSInteger lead = (NSInteger)ceil(fabs(_velocity) * (budget * 1.25 + 16) / _rowH) + 2;
   NSInteger ahead = MAX(5, MIN(lead, spare - 3));
   return _velocity >= 0 ? spare - ahead : ahead;
 }
 - (void)preparationPlaced {
   if (_committedVersion <= _acknowledgedVersion) return;
   _acknowledgedVersion = _committedVersion;
+  [self bindingLog:@"placed" version:_committedVersion];
   auto found = _preparationRequests.find(_committedVersion);
   if (found != _preparationRequests.end()) {
-    double elapsed = CACurrentMediaTime() * 1000 - found->second;
+    double now = CACurrentMediaTime() * 1000;
+    // 합쳐져 사라진 이전 요청도 준비 예산에서 누락하지 않는 비교 옵션.
+    double requested = (_preparationMode & 8) ? _preparationRequests.begin()->second : found->second;
+    double elapsed = now - requested;
     _preparationSamples.push_back(elapsed);
     if (_preparationSamples.size() > 32) _preparationSamples.pop_front();
     std::vector<double> sorted(_preparationSamples.begin(), _preparationSamples.end());
@@ -169,8 +184,17 @@ using namespace facebook::react;
     while (_preparationRequests.size() > 512) _preparationRequests.erase(_preparationRequests.begin());
     _inFlightVersion = _version;
     if (_preparationTrace) NSLog(@"ZlPrepare phase=request version=%d first=%d start=%ld pool=%ld velocity=%.3f", _version, f, (long)start, (long)pool, _velocity);
-    std::static_pointer_cast<const ZlPoolListEventEmitter>(_eventEmitter)
-        ->onRecycle({.binds = binds, .version = _version});
+    [self bindingLog:@"request" version:_version];
+    auto emitter = std::static_pointer_cast<const ZlPoolListEventEmitter>(_eventEmitter);
+    if (_preparationMode & 16) {
+      // PoC: 화면 준비 요청에 명시적 우선순위. JS 실행을 강제 중단하지 않는다.
+      emitter->dispatchEvent("recycle", [binds, version = _version](facebook::jsi::Runtime &runtime) {
+        auto payload = facebook::jsi::Object(runtime);
+        payload.setProperty(runtime, "binds", binds);
+        payload.setProperty(runtime, "version", version);
+        return payload;
+      }, RawEvent::Category::Discrete);
+    } else emitter->onRecycle({.binds = binds, .version = _version});
   }
 }
 
@@ -251,6 +275,7 @@ using namespace facebook::react;
   if (_preparationMode != p.preparationMode) _lastStart = NSIntegerMin;
   _preparationMode = p.preparationMode;
   _preparationTrace = p.preparationTrace;
+  if (_committedVersion != p.committedVersion) [self bindingLog:@"native_commit" version:p.committedVersion];
   _committedVersion = p.committedVersion;
   _legacyRecycling = p.legacyRecycling;
   _overscan = MAX(0,p.overscan);

@@ -59,7 +59,8 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     acknowledgedVersion = committedVersion
     val now = android.os.SystemClock.uptimeMillis()
     preparationRequests[committedVersion]?.let { requested ->
-      val elapsed = (now - requested).toDouble()
+      val origin = if ((preparationMode and 8) != 0) preparationRequests.values.first() else requested
+      val elapsed = (now - origin).toDouble()
       preparationSamples.addLast(elapsed)
       if (preparationSamples.size > 32) preparationSamples.removeFirst()
       val sorted = preparationSamples.sorted()
@@ -76,7 +77,9 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     if ((preparationMode and 1) == 0 || rowPxF <= 0f) return overscan
     val spare = maxOf(0, pool - kotlin.math.ceil(height / rowPxF.toDouble()).toInt())
     if (spare < 8 || kotlin.math.abs(velocityPxMs) < .01) return minOf(overscan, spare)
-    val lead = kotlin.math.ceil(kotlin.math.abs(velocityPxMs) * (preparationBudgetMs * 1.25 + 16) / rowPxF).toInt() + 2
+    val pendingAge = if ((preparationMode and 8) != 0 && preparationRequests.isNotEmpty())
+      (android.os.SystemClock.uptimeMillis() - preparationRequests.values.first()).toDouble().coerceAtMost(500.0) else 0.0
+    val lead = kotlin.math.ceil(kotlin.math.abs(velocityPxMs) * (maxOf(preparationBudgetMs, pendingAge) * 1.25 + 16) / rowPxF).toInt() + 2
     val ahead = lead.coerceIn(5, spare - 3)
     return if (velocityPxMs >= 0) spare - ahead else ahead
   }
@@ -294,7 +297,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     val surfaceId = UIManagerHelper.getSurfaceId(rc)
     UIManagerHelper
       .getEventDispatcher(rc, surfaceId)
-      ?.dispatchEvent(RecycleEvent(surfaceId, id, binds, version))
+      ?.dispatchEvent(RecycleEvent(surfaceId, id, binds, version, (preparationMode and 16) != 0))
   }
 
   override fun onLayout(c: Boolean, l: Int, t: Int, r: Int, b: Int) {
@@ -368,7 +371,10 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     viewId: Int,
     private val binds: String,
     private val version: Int,
+    private val priority: Boolean,
   ) : Event<RecycleEvent>(surfaceId, viewId) {
+    // RN 0.87.1 RawEvent::Category::Discrete = 3. Kotlin 상수는 internal이므로 PoC에서 계약을 명시한다.
+    override fun getEventCategory(): Int = if (priority) 3 else super.getEventCategory()
     override fun getEventName() = "topRecycle"
     override fun getEventData(): WritableMap =
       Arguments.createMap().apply { putString("binds", binds); putInt("version", version) }

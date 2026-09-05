@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-09-05T15:48:40.406452+00:00",
+  "base_commit": "13c6641",
+  "rn": "0.87.1",
+  "sha256": {
+    "apk": "f34c0fc99b3614de1a7e6c69f78e3e9e428638a3716b4968751a9814ff70ffa0",
+    "ios_binary": "c7532e283b25263f7a72c4998bc72b301edbacc5dcfd931e6152ec377bfc6eb3",
+    "ios_jsbundle": "c240ebf28ede86632f5b65b651b17742e6c87e9b6d72223b576398e6eed8ae17"
+  },
+  "validation": {
+    "android_release": "BUILD SUCCESSFUL",
+    "ios_release": "BUILD SUCCEEDED",
+    "lint": "0 errors, 0 warnings",
+    "library_typecheck": "passed",
+    "tests": {
+      "suites": 4,
+      "tests": 73
+    }
+  },
+  "completed_at": "2026-09-05T16:26:14.868047+00:00",
+  "executed_runs": 106,
+  "audit_runs": 52,
+  "android_cost_runs_excluded_from_controlled_comparison": 18,
+  "host_limitations": "host-contention.json",
+  "binary_hashes_reverified": true,
+  "restored_environment": {
+    "android_rotation": 1,
+    "android_renderer": "skiagl",
+    "android_atrace": "0",
+    "android_app": "zigpool baseline 100000 heavy; no stress/audit extras",
+    "ios_app": "closed"
+  }
+}

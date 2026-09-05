@@ -1,0 +1,44 @@
+{
+  "diagnostic": "normal",
+  "order_seed": 870605,
+  "platform": "android",
+  "mode": "audit",
+  "configs": [
+    {
+      "name": "priority-5",
+      "engine": "zigpool",
+      "rows": 5,
+      "preparation": "priority"
+    },
+    {
+      "name": "priority-stable-5",
+      "engine": "zigpool",
+      "rows": 5,
+      "preparation": "priority-stable"
+    },
+    {
+      "name": "priority-pending-stable-12",
+      "engine": "zigpool",
+      "rows": 12,
+      "preparation": "priority-pending-stable"
+    }
+  ],
+  "block_ms": 160,
+  "repeats": 1,
+  "count": 100000,
+  "cell": "heavy",
+  "warmup_swipes": 12,
+  "measured_swipes": 18,
+  "versions": {
+    "react-native": "0.87.1",
+    "flash-list": "2.3.1",
+    "legend-list": "2.0.19"
+  },
+  "clock_ticks": 100,
+  "initial_rows": "FlatList/ZeroList: ceil(viewport / rowHeight)",
+  "legend_fixed_hint": true,
+  "other_platform_benchmark_app_stopped": true,
+  "screen": [1080, 2400],
+  "renderer": "skiagl",
+  "atrace": "0"
+}
