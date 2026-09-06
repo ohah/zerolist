@@ -1,0 +1,434 @@
+[
+  {
+    "name": "template-palette-5",
+    "engine": "template-palette",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 193.04296875,
+    "memory_after_mib": 200.0185546875,
+    "cpu_seconds": 5.65,
+    "wall_seconds": 6.842649207999999,
+    "cpu_one_core_percent": 82.57035876388889,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 212,
+    "late": 45,
+    "late_percent": 21.23,
+    "p95_ms": 101,
+    "host_load": [8.0400390625, 11.26513671875],
+    "external_build_processes": [34, 12],
+    "recent_frame_stages": {
+      "retained_frames": 120,
+      "stages": {
+        "callback_wait": {
+          "valid_frames": 120,
+          "p95_ms": 13.727768,
+          "max_ms": 29.702794
+        },
+        "ui_work": {
+          "valid_frames": 120,
+          "p95_ms": 3.631458,
+          "max_ms": 11.566292
+        },
+        "render_queue": {
+          "valid_frames": 120,
+          "p95_ms": 7.978917,
+          "max_ms": 20.42725
+        },
+        "draw_commands": {
+          "valid_frames": 120,
+          "p95_ms": 3.878542,
+          "max_ms": 22.112208
+        },
+        "complete_after_swap": {
+          "valid_frames": 120,
+          "p95_ms": 30.109,
+          "max_ms": 40.650833
+        }
+      }
+    },
+    "gfx_diagnostics": {
+      "slow_ui": 10,
+      "slow_issue_commands": 39
+    }
+  },
+  {
+    "name": "template-compact-5",
+    "engine": "template-compact",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 1,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 264.900390625,
+    "memory_after_mib": 281.9931640625,
+    "cpu_seconds": 5.13,
+    "wall_seconds": 5.823895,
+    "cpu_one_core_percent": 88.08537928654276,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 275,
+    "late": 3,
+    "late_percent": 1.09,
+    "p95_ms": 19,
+    "host_load": [12.12451171875, 11.79736328125],
+    "external_build_processes": [4, 3],
+    "recent_frame_stages": {
+      "retained_frames": 120,
+      "stages": {
+        "callback_wait": {
+          "valid_frames": 120,
+          "p95_ms": 2.760699,
+          "max_ms": 5.95889
+        },
+        "ui_work": {
+          "valid_frames": 120,
+          "p95_ms": 3.151,
+          "max_ms": 3.7885
+        },
+        "render_queue": {
+          "valid_frames": 120,
+          "p95_ms": 0.5565,
+          "max_ms": 1.127542
+        },
+        "draw_commands": {
+          "valid_frames": 120,
+          "p95_ms": 1.377083,
+          "max_ms": 2.788666
+        },
+        "complete_after_swap": {
+          "valid_frames": 120,
+          "p95_ms": 15.693916,
+          "max_ms": 17.315
+        }
+      }
+    },
+    "gfx_diagnostics": {
+      "slow_ui": 0,
+      "slow_issue_commands": 3
+    }
+  },
+  {
+    "name": "template-palette-5",
+    "engine": "template-palette",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 193.3427734375,
+    "memory_after_mib": 202.71484375,
+    "cpu_seconds": 4.819999999999999,
+    "wall_seconds": 5.824989792000004,
+    "cpu_one_core_percent": 82.74692612542859,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 273,
+    "late": 2,
+    "late_percent": 0.73,
+    "p95_ms": 19,
+    "host_load": [11.5732421875, 11.68701171875],
+    "external_build_processes": [8, 8],
+    "recent_frame_stages": {
+      "retained_frames": 120,
+      "stages": {
+        "callback_wait": {
+          "valid_frames": 120,
+          "p95_ms": 3.405323,
+          "max_ms": 6.511401
+        },
+        "ui_work": {
+          "valid_frames": 120,
+          "p95_ms": 2.548708,
+          "max_ms": 5.728958
+        },
+        "render_queue": {
+          "valid_frames": 120,
+          "p95_ms": 0.613708,
+          "max_ms": 3.006083
+        },
+        "draw_commands": {
+          "valid_frames": 120,
+          "p95_ms": 1.328583,
+          "max_ms": 3.2255
+        },
+        "complete_after_swap": {
+          "valid_frames": 120,
+          "p95_ms": 16.921541,
+          "max_ms": 19.705917
+        }
+      }
+    },
+    "gfx_diagnostics": {
+      "slow_ui": 0,
+      "slow_issue_commands": 2
+    }
+  },
+  {
+    "name": "template-compact-5",
+    "engine": "template-compact",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 2,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 264.1474609375,
+    "memory_after_mib": 276.3681640625,
+    "cpu_seconds": 5.49,
+    "wall_seconds": 6.098981000000002,
+    "cpu_one_core_percent": 90.01503693813767,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 264,
+    "late": 9,
+    "late_percent": 3.41,
+    "p95_ms": 28,
+    "host_load": [11.49462890625, 12.65576171875],
+    "external_build_processes": [4, 12],
+    "recent_frame_stages": {
+      "retained_frames": 120,
+      "stages": {
+        "callback_wait": {
+          "valid_frames": 120,
+          "p95_ms": 6.75153,
+          "max_ms": 45.109537
+        },
+        "ui_work": {
+          "valid_frames": 120,
+          "p95_ms": 4.495,
+          "max_ms": 7.526708
+        },
+        "render_queue": {
+          "valid_frames": 120,
+          "p95_ms": 16.339625,
+          "max_ms": 183.22675
+        },
+        "draw_commands": {
+          "valid_frames": 120,
+          "p95_ms": 6.412625,
+          "max_ms": 210.161875
+        },
+        "complete_after_swap": {
+          "valid_frames": 120,
+          "p95_ms": 23.202,
+          "max_ms": 41.255666
+        }
+      }
+    },
+    "gfx_diagnostics": {
+      "slow_ui": 2,
+      "slow_issue_commands": 8
+    }
+  },
+  {
+    "name": "template-palette-5",
+    "engine": "template-palette",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 193.0556640625,
+    "memory_after_mib": 200.859375,
+    "cpu_seconds": 4.779999999999999,
+    "wall_seconds": 5.820430583000004,
+    "cpu_one_core_percent": 82.12450834756389,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 274,
+    "late": 3,
+    "late_percent": 1.09,
+    "p95_ms": 18,
+    "host_load": [12.85546875, 12.62646484375],
+    "external_build_processes": [6, 5],
+    "recent_frame_stages": {
+      "retained_frames": 120,
+      "stages": {
+        "callback_wait": {
+          "valid_frames": 120,
+          "p95_ms": 2.141918,
+          "max_ms": 4.481936
+        },
+        "ui_work": {
+          "valid_frames": 120,
+          "p95_ms": 2.171583,
+          "max_ms": 4.105708
+        },
+        "render_queue": {
+          "valid_frames": 120,
+          "p95_ms": 0.946334,
+          "max_ms": 1.439583
+        },
+        "draw_commands": {
+          "valid_frames": 120,
+          "p95_ms": 1.163125,
+          "max_ms": 5.1715
+        },
+        "complete_after_swap": {
+          "valid_frames": 120,
+          "p95_ms": 16.509291,
+          "max_ms": 17.225459
+        }
+      }
+    },
+    "gfx_diagnostics": {
+      "slow_ui": 0,
+      "slow_issue_commands": 2
+    }
+  },
+  {
+    "name": "template-compact-5",
+    "engine": "template-compact",
+    "rows": 5,
+    "preparation": "baseline",
+    "run": 3,
+    "mode": "perf",
+    "block_ms": 160,
+    "memory_before_mib": 263.75,
+    "memory_after_mib": 281.37109375,
+    "cpu_seconds": 5.109999999999999,
+    "wall_seconds": 5.828452749999997,
+    "cpu_one_core_percent": 87.6733537901633,
+    "initial_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 0,
+      "callbacks": 0,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 275,
+    "late": 3,
+    "late_percent": 1.09,
+    "p95_ms": 22,
+    "host_load": [12.3359375, 11.98828125],
+    "external_build_processes": [6, 5],
+    "recent_frame_stages": {
+      "retained_frames": 120,
+      "stages": {
+        "callback_wait": {
+          "valid_frames": 120,
+          "p95_ms": 2.920758,
+          "max_ms": 4.750851
+        },
+        "ui_work": {
+          "valid_frames": 120,
+          "p95_ms": 3.215292,
+          "max_ms": 3.70125
+        },
+        "render_queue": {
+          "valid_frames": 120,
+          "p95_ms": 1.749667,
+          "max_ms": 4.686083
+        },
+        "draw_commands": {
+          "valid_frames": 120,
+          "p95_ms": 0.932333,
+          "max_ms": 2.666875
+        },
+        "complete_after_swap": {
+          "valid_frames": 120,
+          "p95_ms": 19.668917,
+          "max_ms": 32.0265
+        }
+      }
+    },
+    "gfx_diagnostics": {
+      "slow_ui": 0,
+      "slow_issue_commands": 3
+    }
+  }
+]

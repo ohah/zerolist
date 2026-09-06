@@ -1,0 +1,32 @@
+[
+  {
+    "link": "https://github.com/ohah/zerolist/actions/runs/34015672253/job/101438870890",
+    "name": "lint",
+    "state": "SUCCESS"
+  },
+  {
+    "link": "https://github.com/ohah/zerolist/actions/runs/34015672253/job/101438870997",
+    "name": "test",
+    "state": "SUCCESS"
+  },
+  {
+    "link": "https://github.com/ohah/zerolist/actions/runs/34015672253/job/101438870905",
+    "name": "build-library",
+    "state": "SUCCESS"
+  },
+  {
+    "link": "https://github.com/ohah/zerolist/actions/runs/34015672253/job/101438870899",
+    "name": "build-android",
+    "state": "SUCCESS"
+  },
+  {
+    "link": "https://github.com/ohah/zerolist/actions/runs/34015672253/job/101438870824",
+    "name": "build-ios",
+    "state": "SUCCESS"
+  },
+  {
+    "link": "https://github.com/ohah/zerolist/actions/runs/34015672253/job/101438870874",
+    "name": "build-web",
+    "state": "SUCCESS"
+  }
+]

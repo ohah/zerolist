@@ -1,0 +1,78 @@
+{
+  "implementation_commit": "864b6e6e74941da5d352e907a9bcb0fa40ed6491",
+  "rn": "0.87.1",
+  "build": "arm64 Release",
+  "sources": [
+    {
+      "path": "apps/example/android/app/src/main/java/zerolist/example/NativeList.kt",
+      "sha256": "9b5174ef8fea833de5473e8e02b21008d9c268b4333fe20cac4f2cf5f0d1017a"
+    },
+    {
+      "path": "apps/example/android/app/src/main/java/zerolist/example/ZlTemplatePalette.kt",
+      "sha256": "266de73b62d99c6e57551bf419629bd0c2728a9660a4da67462dc55344ced517"
+    },
+    {
+      "path": "apps/example/ios/ZerolistExample.xcodeproj/project.pbxproj",
+      "sha256": "3fff9c91f59ebbe7d59a3f749023ddaf2a12c52317427e2c13e090e37db2979f"
+    },
+    {
+      "path": "apps/example/ios/ZerolistExample/ZlTemplatePaletteComponentView.mm",
+      "sha256": "0ea9ead8bd3e155546694ed6e8afefc1902de9dd6958a7fc6ecf3729d64adce7"
+    },
+    {
+      "path": "apps/example/specs/ZlTemplatePaletteNativeComponent.ts",
+      "sha256": "c9aae08193a110d01ae26a524e6d7fc417e50c74fab1a184aa44a100acef7d2f"
+    },
+    {
+      "path": "apps/example/src/harness/cells.tsx",
+      "sha256": "9f0ea09e4f06065ca4ae9c9828a6aaa3e88a37c658694412b7a550fb9ce67b22"
+    },
+    {
+      "path": "apps/example/src/harness/engines/flatlist.tsx",
+      "sha256": "be11c72f41633f3c05c02fec8ff2201d5843a82581859b788299a86d92949faf"
+    },
+    {
+      "path": "apps/example/src/harness/engines/index.ts",
+      "sha256": "59441ffaf9f192abf2c1c3772d80f497746a435698b7bb6f04b8419a4adc9c38"
+    },
+    {
+      "path": "apps/example/src/harness/engines/shared.tsx",
+      "sha256": "946354499ec40e5bba20baec579fdabd38665d3b9aae205980ebadedf31ae321"
+    },
+    {
+      "path": "apps/example/src/harness/engines/template.native.tsx",
+      "sha256": "74d55ebe6e1f6c51257521ca6ec5a9da2a7e9faf8330872047cd2fe967096a2f"
+    },
+    {
+      "path": "apps/example/src/harness/engines/template.tsx",
+      "sha256": "f7c8e708e92375448743bf4cff36c2b1e9dc949c809cf3698cb41d34f2144b4e"
+    },
+    {
+      "path": "apps/example/src/harness/palette.native.tsx",
+      "sha256": "9297308e37b970128c951aba183b501afa8fce7ad32c336c3f9dc23533d6ff24"
+    },
+    {
+      "path": "apps/example/src/harness/palette.tsx",
+      "sha256": "22565af0cb35d8718a2dd6848f9872a17e25234f0720025b0d40ba8857e503bd"
+    },
+    {
+      "path": "apps/example/src/harness/types.ts",
+      "sha256": "f16d2558d839b6ed4b8c575db06db5ac70c8cae6cc74bb1c227758df66fcf8fd"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "app-release.apk",
+      "sha256": "c3ed06d0002c39dceffa475ee157ef6f4e338aa36e64a8ff8a5d03ddab2eeacb"
+    },
+    {
+      "name": "ZerolistExample",
+      "sha256": "5581833b8a4fed88cce4cab39e3e2807202e6077e945c88f876be7ad28345bdd"
+    },
+    {
+      "name": "main.jsbundle",
+      "sha256": "d381b45adee154b24fd0e6edda4ae560f0082e5970c1fde16e5f5ae12d33923f"
+    }
+  ],
+  "comparison": "eight engines in the same new binary; native decoration controls"
+}
