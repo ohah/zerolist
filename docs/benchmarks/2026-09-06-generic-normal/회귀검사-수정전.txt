@@ -1,0 +1,154 @@
+Running one project: native
+FAIL native packages/zerolist/src/__tests__/list.test.tsx
+  ZeroList — FlatList drop-in 동작
+    ✓ 같은 키의 객체·extraData 교체만으로 실제 측정 높이를 잃지 않는다 (117 ms)
+    ✕ 이전 데이터의 늦은 onLayout이 현재 측정을 덮어쓰지 않는다 (4 ms)
+    ✕ 동적 측정값이 다른 항목에 붙지 않는다: reorder (88 ms)
+    ✕ 동적 측정값이 다른 항목에 붙지 않는다: insert (87 ms)
+    ✕ 동적 측정값이 다른 항목에 붙지 않는다: remove (3 ms)
+    ✓ 동적 측정값이 다른 항목에 붙지 않는다: replace (4 ms)
+    ✓ 동적 측정값이 다른 항목에 붙지 않는다: resize (4 ms)
+    ✕ 키가 같은 항목의 로컬 상태는 재정렬 후에도 항목을 따라간다 (3 ms)
+    ✓ 10만 건에서 창이 한 행 이동하면 새 항목만 renderItem을 호출한다 (39 ms)
+    ✓ extraData가 바뀌면 같은 항목 객체의 외부 상태도 다시 표시한다 (1 ms)
+    ✓ 항목 교체·추가·삭제와 renderItem 교체가 화면에 반영된다 (3 ms)
+    ✓ 동적 높이 재측정 후 새 오프셋으로 창을 계산한다 (5 ms)
+    ✓ 항목의 로컬 상태와 컨텍스트 변경은 메모이제이션에 막히지 않는다 (3 ms)
+    ✓ 초기 렌더: 빈 데이터면 ListEmptyComponent
+    ✓ header/footer 렌더 + 첫 화면 initialNumToRender 만큼 셀 (2 ms)
+    ✓ 스크롤하면 윈도우가 이동해 먼 셀이 렌더된다 (3 ms)
+    ✓ keyExtractor 미지정 시 id 기반 키로 정상 렌더 (1 ms)
+    ✓ ItemSeparatorComponent 가 셀 사이에 들어간다 (1 ms)
+    ✓ onEndReached: 끝 근처 스크롤 시 1회 발화 (12 ms)
+    ✓ onViewableItemsChanged: 가시 토큰 보고 (8 ms)
+    ✓ numColumns: 행 그룹 렌더 (1 ms)
+    ✓ onScrollToIndexFailed: 범위 밖 index 면 발화 (1 ms)
+    ✓ ScrollView prop 패스스루: onMomentumScrollEnd 전달 (2 ms)
+    ✓ scrollToIndex viewPosition 지정해도 throw 안 함 (3 ms)
+    ✓ imperative ref: scrollToOffset/Index/End 호출 (1 ms)
+
+  ● ZeroList — FlatList drop-in 동작 › 이전 데이터의 늦은 onLayout이 현재 측정을 덮어쓰지 않는다
+
+    Unable to find an element with testID: cell-2
+
+    [36m<RCTScrollView[39m
+      [33mtestID[39m=[32m"zl"[39m
+    [36m>[39m
+      [36m<View>[39m
+        [36m<View>[39m
+          [36m<View />[39m
+          [36m<View>[39m
+            [36m<Text[39m
+              [33mtestID[39m=[32m"cell-1"[39m
+            [36m>[39m
+              [0mrow-1[0m
+            [36m</Text>[39m
+          [36m</View>[39m
+          [36m<View />[39m
+        [36m</View>[39m
+      [36m</View>[39m
+    [36m</RCTScrollView>[39m
+
+      89 |       act(() => jest.runOnlyPendingTimers());
+      90 |       scrollTo('zl', 200);
+    > 91 |       expect(screen.getByTestId('cell-2')).toBeTruthy();
+         |                     ^
+      92 |       expect(screen.queryByTestId('cell-1')).toBeNull();
+      93 |     } finally {
+      94 |       jest.useRealTimers();
+
+      at Object.getByTestId (packages/zerolist/src/__tests__/list.test.tsx:91:21)
+
+  ● ZeroList — FlatList drop-in 동작 › 동적 측정값이 다른 항목에 붙지 않는다: reorder
+
+    expect(received).toBeNull()
+
+    Received: {"_fiber": {"_debugHookTypes": null, "_debugInfo": null, "_debugNeedsRemount": false, "_debugOwner": [FiberNode], "_debugStack": [Error: react-stack-top-frame], "_debugTask": null, "actualDuration": 0, "actualStartTime": 1788686162865, "alternate": null, "child": [FiberNode], "childLanes": 0, "deletions": null, "dependencies": null, "elementType": "Text", "flags": 0, "index": 0, "key": null, "lanes": 0, "memoizedProps": [Object], "memoizedState": null, "mode": 3, "pendingProps": [Object], "ref": null, "refCleanup": null, "return": [FiberNode], "selfBaseDuration": 0, "sibling": null, "stateNode": [Object], "subtreeFlags": 0, "tag": 5, "treeBaseDuration": 0, "type": "Text", "updateQueue": null}}
+
+      141 |               : 2;
+      142 |         expect(screen.getByTestId(`cell-${expected}`)).toBeTruthy();
+    > 143 |         expect(screen.queryByTestId(`cell-${next[0]!.id}`)).toBeNull();
+          |                                                             ^
+      144 |       } finally {
+      145 |         jest.useRealTimers();
+      146 |       }
+
+      at toBeNull (packages/zerolist/src/__tests__/list.test.tsx:143:61)
+
+  ● ZeroList — FlatList drop-in 동작 › 동적 측정값이 다른 항목에 붙지 않는다: insert
+
+    expect(received).toBeNull()
+
+    Received: {"_fiber": {"_debugHookTypes": null, "_debugInfo": null, "_debugNeedsRemount": false, "_debugOwner": [FiberNode], "_debugStack": [Error: react-stack-top-frame], "_debugTask": null, "actualDuration": 0, "actualStartTime": 1788686162954, "alternate": null, "child": [FiberNode], "childLanes": 0, "deletions": null, "dependencies": null, "elementType": "Text", "flags": 0, "index": 0, "key": null, "lanes": 0, "memoizedProps": [Object], "memoizedState": null, "mode": 3, "pendingProps": [Object], "ref": null, "refCleanup": null, "return": [FiberNode], "selfBaseDuration": 0, "sibling": null, "stateNode": [Object], "subtreeFlags": 0, "tag": 5, "treeBaseDuration": 0, "type": "Text", "updateQueue": null}}
+
+      141 |               : 2;
+      142 |         expect(screen.getByTestId(`cell-${expected}`)).toBeTruthy();
+    > 143 |         expect(screen.queryByTestId(`cell-${next[0]!.id}`)).toBeNull();
+          |                                                             ^
+      144 |       } finally {
+      145 |         jest.useRealTimers();
+      146 |       }
+
+      at toBeNull (packages/zerolist/src/__tests__/list.test.tsx:143:61)
+
+  ● ZeroList — FlatList drop-in 동작 › 동적 측정값이 다른 항목에 붙지 않는다: remove
+
+    Unable to find an element with testID: cell-3
+
+    [36m<RCTScrollView[39m
+      [33mtestID[39m=[32m"zl"[39m
+    [36m>[39m
+      [36m<View>[39m
+        [36m<View>[39m
+          [36m<View />[39m
+          [36m<View>[39m
+            [36m<Text[39m
+              [33mtestID[39m=[32m"cell-1"[39m
+            [36m>[39m
+              [0mrow-1[0m
+            [36m</Text>[39m
+          [36m</View>[39m
+          [36m<View>[39m
+            [36m<Text[39m
+              [33mtestID[39m=[32m"cell-2"[39m
+            [36m>[39m
+              [0mrow-2[0m
+            [36m</Text>[39m
+          [36m</View>[39m
+          [36m<View />[39m
+        [36m</View>[39m
+      [36m</View>[39m
+    [36m</RCTScrollView>[39m
+
+      140 |               ? 3
+      141 |               : 2;
+    > 142 |         expect(screen.getByTestId(`cell-${expected}`)).toBeTruthy();
+          |                       ^
+      143 |         expect(screen.queryByTestId(`cell-${next[0]!.id}`)).toBeNull();
+      144 |       } finally {
+      145 |         jest.useRealTimers();
+
+      at getByTestId (packages/zerolist/src/__tests__/list.test.tsx:142:23)
+
+  ● ZeroList — FlatList drop-in 동작 › 키가 같은 항목의 로컬 상태는 재정렬 후에도 항목을 따라간다
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 0
+
+      164 |       <ZeroList data={[data[1]!, data[0]!, data[2]!]} renderItem={draw} />
+      165 |     );
+    > 166 |     expect(screen.getByTestId('move-0').props.children).toBe(1);
+          |                                                         ^
+      167 |     expect(screen.getByTestId('move-1').props.children).toBe(0);
+      168 |   });
+      169 |
+
+      at Object.toBe (packages/zerolist/src/__tests__/list.test.tsx:166:57)
+
+Test Suites: 1 failed, 1 total
+Tests:       5 failed, 20 passed, 25 total
+Snapshots:   0 total
+Time:        0.726 s, estimated 1 s
+Ran all test suites within paths "packages/zerolist/src/__tests__/list.test.tsx".
