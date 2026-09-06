@@ -1,0 +1,213 @@
+--------- beginning of main
+I/ReactNativeJS(11031): Running "ZLSolo"
+I/ReactNativeJS(11031): [ZlRuntime] rn=0.87.1
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":0,"index":0,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 0"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":1,"index":1,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 1"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":3,"index":3,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 3"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":7,"index":7,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 7"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":8,"index":8,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 8"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":4,"index":4,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 4"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":9,"index":9,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 9"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":2,"index":2,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 2"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":5,"index":5,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 5"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":6,"index":6,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 6"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":13,"index":13,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 13"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":17,"index":17,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 17"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":15,"index":15,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 15"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":10,"index":10,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 10"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":12,"index":12,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 12"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":14,"index":14,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 14"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":18,"index":18,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 18"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":11,"index":11,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 11"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"초기","id":16,"index":16,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 16"}
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContract] step=선택
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":0,"index":0,"value":1,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 0"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":18,"index":18,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 18"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":5,"index":5,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 5"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":16,"index":16,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 16"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":6,"index":6,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 6"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":14,"index":14,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 14"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":7,"index":7,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 7"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":12,"index":12,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 12"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":8,"index":8,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 8"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":9,"index":9,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 9"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":10,"index":10,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 10"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":11,"index":11,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 11"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":1,"index":1,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 1"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":2,"index":2,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 2"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":13,"index":13,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 13"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":4,"index":4,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 4"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":17,"index":17,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 17"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":15,"index":15,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 15"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"선택","id":3,"index":3,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 3"}
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContract] step=재정렬
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":0,"index":1,"value":1,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 0"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":6,"index":6,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 6"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":17,"index":17,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 17"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":7,"index":7,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 7"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":15,"index":15,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 15"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":8,"index":8,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 8"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":13,"index":13,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 13"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":9,"index":9,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 9"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":1,"index":0,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 1"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":10,"index":10,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 10"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":11,"index":11,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 11"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":12,"index":12,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 12"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":2,"index":2,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 2"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":3,"index":3,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 3"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":5,"index":5,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 5"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":18,"index":18,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 18"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":14,"index":14,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 14"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":16,"index":16,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 16"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"재정렬","id":4,"index":4,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 4"}
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContract] step=앞 삽입
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":99,"index":0,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"새 항목"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":0,"index":2,"value":1,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 0"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":7,"index":8,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 7"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":16,"index":17,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 16"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":8,"index":9,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 8"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":14,"index":15,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 14"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":13,"index":14,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 13"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":12,"index":13,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 12"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":9,"index":10,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 9"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":10,"index":11,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 10"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":1,"index":1,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 1"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":11,"index":12,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 11"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":2,"index":3,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 2"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":6,"index":7,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 6"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":3,"index":4,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 3"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":17,"index":18,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 17"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":4,"index":5,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 4"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":15,"index":16,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 15"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"앞 삽입","id":5,"index":6,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 5"}
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContract] step=내용 교체
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":0,"index":2,"value":1,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"변경된 항목 0"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":1,"index":1,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 1"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":17,"index":18,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 17"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":8,"index":9,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 8"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":15,"index":16,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 15"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":14,"index":15,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 14"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":13,"index":14,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 13"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":9,"index":10,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 9"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":10,"index":11,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 10"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":11,"index":12,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 11"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":2,"index":3,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 2"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":12,"index":13,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 12"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":7,"index":8,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 7"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":3,"index":4,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 3"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":99,"index":0,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"새 항목"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":16,"index":17,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 16"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":4,"index":5,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 4"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":5,"index":6,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 5"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"내용 교체","id":6,"index":7,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 6"}
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContract] step=먼 항목 이동
+I/ReactNativeJS(11031): [ZlContractScroll] step=먼 항목 이동 y=3000
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":38,"index":39,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 38"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":39,"index":40,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 39"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":40,"index":41,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 40"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":41,"index":42,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 41"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":37,"index":38,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 37"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":42,"index":43,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 42"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":34,"index":35,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 34"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":30,"index":31,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 30"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":36,"index":37,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 36"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":27,"index":28,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 27"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":28,"index":29,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 28"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":26,"index":27,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 26"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":29,"index":30,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 29"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":31,"index":32,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 31"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":32,"index":33,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 32"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":33,"index":34,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 33"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":35,"index":36,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 35"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":24,"index":25,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 24"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"먼 항목 이동","id":25,"index":26,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 25"}
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContract] step=처음 이동
+I/ReactNativeJS(11031): [ZlContractScroll] step=처음 이동 y=0
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":0,"index":2,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"변경된 항목 0"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":2,"index":3,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 2"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":16,"index":17,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 16"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":15,"index":16,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 15"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":14,"index":15,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 14"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":9,"index":10,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 9"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":10,"index":11,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 10"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":11,"index":12,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 11"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":12,"index":13,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 12"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":3,"index":4,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 3"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":8,"index":9,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 8"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":7,"index":8,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 7"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":6,"index":7,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 6"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":17,"index":18,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 17"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":13,"index":14,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 13"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":4,"index":5,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 4"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":99,"index":0,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"새 항목"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":5,"index":6,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 5"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"처음 이동","id":1,"index":1,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 1"}
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContract] step=비우기
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContract] step=복원
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":0,"index":0,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 0"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":4,"index":4,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 4"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":5,"index":5,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 5"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":1,"index":1,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 1"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":6,"index":6,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 6"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":7,"index":7,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 7"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":2,"index":2,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 2"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":8,"index":8,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 8"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":9,"index":9,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 9"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":3,"index":3,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 3"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":14,"index":14,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 14"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":12,"index":12,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 12"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":16,"index":16,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 16"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":17,"index":17,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 17"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":13,"index":13,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 13"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":18,"index":18,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 18"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":11,"index":11,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 11"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":15,"index":15,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 15"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"복원","id":10,"index":10,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":99.80950927734375,"label":"항목 10"}
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContract] step=동적 높이
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":3,"index":3,"value":0,"x":0,"y":415.2380676269531,"width":411.4285583496094,"height":150.09518432617188,"label":"항목 3"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":1,"index":1,"value":0,"x":0,"y":185.14285278320312,"width":411.4285583496094,"height":149.71435546875,"label":"항목 1"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":5,"index":5,"value":0,"x":0,"y":645.3333129882812,"width":411.4285583496094,"height":150.09521484375,"label":"항목 5"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":8,"index":8,"value":0,"x":0,"y":1025.142822265625,"width":411.4285583496094,"height":80,"label":"항목 8"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":7,"index":7,"value":0,"x":0,"y":875.0476684570312,"width":411.4285583496094,"height":150.09515380859375,"label":"항목 7"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":6,"index":6,"value":0,"x":0,"y":795.0476684570312,"width":411.4285583496094,"height":80,"label":"항목 6"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":2,"index":2,"value":0,"x":0,"y":335.2380676269531,"width":411.4285583496094,"height":80,"label":"항목 2"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":4,"index":4,"value":0,"x":0,"y":565.3333129882812,"width":411.4285583496094,"height":80,"label":"항목 4"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":9,"index":9,"value":0,"x":0,"y":1105.142822265625,"width":411.4285583496094,"height":149.71435546875,"label":"항목 9"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":0,"index":0,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":80,"label":"항목 0"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 높이","id":10,"index":10,"value":0,"x":0,"y":1255.238037109375,"width":411.4285583496094,"height":80,"label":"항목 10"}
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContract] step=동적 크기 변경
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 크기 변경","id":0,"index":0,"value":0,"x":0,"y":105.14285278320312,"width":411.4285583496094,"height":179.8095703125,"label":"항목 0"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 크기 변경","id":9,"index":9,"value":0,"x":0,"y":1205.333251953125,"width":411.4285583496094,"height":149.71435546875,"label":"항목 9"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 크기 변경","id":8,"index":8,"value":0,"x":0,"y":1125.333251953125,"width":411.4285583496094,"height":80,"label":"항목 8"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 크기 변경","id":7,"index":7,"value":0,"x":0,"y":975.238037109375,"width":411.4285583496094,"height":150.09521484375,"label":"항목 7"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 크기 변경","id":2,"index":2,"value":0,"x":0,"y":435.0476379394531,"width":411.4285583496094,"height":79.99996948242188,"label":"항목 2"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 크기 변경","id":5,"index":5,"value":0,"x":0,"y":745.1428833007812,"width":411.4285583496094,"height":150.09521484375,"label":"항목 5"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 크기 변경","id":1,"index":1,"value":0,"x":0,"y":285.3332824707031,"width":411.4285583496094,"height":149.71435546875,"label":"항목 1"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 크기 변경","id":3,"index":3,"value":0,"x":0,"y":515.0476684570312,"width":411.4285583496094,"height":150.09521484375,"label":"항목 3"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 크기 변경","id":6,"index":6,"value":0,"x":0,"y":895.2380981445312,"width":411.4285583496094,"height":79.99993896484375,"label":"항목 6"}
+I/ReactNativeJS(11031): [ZlContractRow] {"step":"동적 크기 변경","id":4,"index":4,"value":0,"x":0,"y":665.1428833007812,"width":411.4285583496094,"height":80,"label":"항목 4"}
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(11031): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0

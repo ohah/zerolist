@@ -1,0 +1,20 @@
+[
+  {
+    "platform": "android",
+    "cell": "heavy",
+    "engine": "legend",
+    "run": 1,
+    "stage": "비용 계측 전 RN 버전 시작 로그 확인",
+    "reason": "[ZlRuntime] rn=0.87.1 시작 로그 미확인",
+    "completed_measurements_retained": 26,
+    "cpu_window_started": false,
+    "cause": "미확인. 시작 로그 원문 보존 이전 실패여서 정확한 원인을 단정하지 않음",
+    "action": "시작 로그 선보존 보완 후 실패한 실행부터 명시적 재개. 완료된 실행 재측정 없음",
+    "retry_version_verified": true
+  },
+  {
+    "stage": "재개 조건 확인",
+    "reason": "화면 크기의 JSON list와 Python tuple 비교",
+    "action": "JSON 왕복으로 표현을 정규화해 비교. 조건값 변경 없음, 비용 계측 전 재개 확인"
+  }
+]
