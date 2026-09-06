@@ -1,0 +1,190 @@
+diff --git a/apps/example/src/Solo.tsx b/apps/example/src/Solo.tsx
+index 8273565..d4ed842 100644
+--- a/apps/example/src/Solo.tsx
++++ b/apps/example/src/Solo.tsx
+@@ -24,6 +24,12 @@ export default function Solo(props: {
+   cell?: string;
+   diagnostic?:
+     | 'unified-contract'
++    | 'android-pool-contract'
++    | 'pool-unmemoized'
++    | 'pool-baseline'
++    | 'pool-parent-scroll'
++    | 'pool-fabric-layout'
++    | 'pool-combined'
+     | 'normal'
+     | 'freeze-content'
+     | 'freeze-position'
+diff --git a/apps/example/src/harness/engines/zerolist.tsx b/apps/example/src/harness/engines/zerolist.tsx
+index e8f74dc..ca24afc 100644
+--- a/apps/example/src/harness/engines/zerolist.tsx
++++ b/apps/example/src/harness/engines/zerolist.tsx
+@@ -1,3 +1,4 @@
++import { NativePoolList } from '../../../../../packages/zerolist/src/pool-list';
+ import { useWindowDimensions } from 'react-native';
+ import { forwardRef, useRef } from 'react';
+ import { ZeroList, type ZeroListHandle } from '@ohah/zerolist';
+@@ -23,6 +24,26 @@ export const ZeroListEngine = forwardRef<Scrollable, ListEngineProps>(
+     useScrollableHandle(ref, listRef);
+     const { offsets, fixedHeight, items } = p;
+ 
++    // 같은 네이티브 경로에서 슬롯 memo만 끄는 내부 계측용 대조군.
++    // 실제 사용자는 공개 ZeroList를 그대로 사용한다.
++    if (p.diagnostic === 'pool-unmemoized')
++      return (
++        <NativePoolList
++          ref={listRef}
++          data={items}
++          keyExtractor={(it) => String(it.id)}
++          rowHeight={fixedHeight ?? 100}
++          memoizeSlots={false}
++          renderItem={renderCell(p)}
++          onScroll={scrollYHandler(p.onScrollY)}
++          scrollEventThrottle={SCROLL_THROTTLE}
++          windowSize={windowSize}
++          initialNumToRender={Math.max(
++            1,
++            Math.ceil(viewportHeight / (fixedHeight ?? 100))
++          )}
++        />
++      );
+     return (
+       <ZeroList
+         ref={listRef}
+diff --git a/apps/example/src/harness/types.ts b/apps/example/src/harness/types.ts
+index 4352524..d5a4647 100644
+--- a/apps/example/src/harness/types.ts
++++ b/apps/example/src/harness/types.ts
+@@ -77,6 +77,11 @@ export interface ListEngineProps {
+   preparationTrace?: boolean;
+   /** Solo-only causal experiment; frozen variants are not functional lists. */
+   diagnostic?:
++    | 'pool-unmemoized'
++    | 'pool-baseline'
++    | 'pool-parent-scroll'
++    | 'pool-fabric-layout'
++    | 'pool-combined'
+     | 'normal'
+     | 'freeze-content'
+     | 'freeze-position'
+diff --git a/packages/zerolist/src/pool-list.tsx b/packages/zerolist/src/pool-list.tsx
+index 3d7e900..78e9843 100644
+--- a/packages/zerolist/src/pool-list.tsx
++++ b/packages/zerolist/src/pool-list.tsx
+@@ -34,6 +34,38 @@ function Content<T>({
+ }
+ const MemoContent = memo(Content) as typeof Content;
+ 
++// 바뀌지 않은 슬롯은 래퍼 View/Fragment까지 재조정하지 않는다.
++// 다른 항목으로 바뀔 때의 key 초기화는 동일하게 유지한다.
++function Slot<T>({
++  item,
++  index,
++  itemKey,
++  rowHeight,
++  renderItem,
++  extraData,
++}: {
++  item: T;
++  index: number;
++  itemKey: string;
++  rowHeight: number;
++  renderItem: ZeroListProps<T>['renderItem'];
++  extraData: unknown;
++}) {
++  return (
++    <View collapsable={false} style={[slotStyle, { height: rowHeight }]}>
++      <Fragment key={itemKey}>
++        <MemoContent
++          item={item}
++          index={index}
++          renderItem={renderItem}
++          extraData={extraData}
++        />
++      </Fragment>
++    </View>
++  );
++}
++const MemoSlot = memo(Slot) as typeof Slot;
++
+ type State<T> = {
+   data: readonly T[];
+   keyExtractor: ZeroListProps<T>['keyExtractor'];
+@@ -45,7 +77,7 @@ type State<T> = {
+ };
+ 
+ function PoolList<T>(
+-  props: ZeroListProps<T> & { rowHeight: number },
++  props: ZeroListProps<T> & { rowHeight: number; memoizeSlots?: boolean },
+   ref: React.ForwardedRef<ZeroListHandle<T>>
+ ) {
+   const {
+@@ -56,7 +88,9 @@ function PoolList<T>(
+     extraData,
+     windowSize = 21,
+     initialNumToRender = 10,
++    memoizeSlots = true,
+   } = props;
++
+   const data = source!;
+   const nativeRef = useRef<React.ComponentRef<typeof View>>(null);
+   const [viewport, setViewport] = useState(0);
+@@ -237,28 +271,42 @@ function PoolList<T>(
+         } as NativeSyntheticEvent<NativeScrollEvent>);
+       }}
+     >
+-      {state.slots.map((slot, s) => (
+-        <View
+-          key={s}
+-          collapsable={false}
+-          style={[slotStyle, { height: rowHeight }]}
+-        >
+-          <Fragment key={slot.key}>
+-            <MemoContent
+-              item={data[slot.index]!}
+-              index={slot.index}
+-              renderItem={renderItem}
+-              extraData={extraData}
+-            />
+-          </Fragment>
+-        </View>
+-      ))}
++      {state.slots.map((slot, s) =>
++        memoizeSlots ? (
++          <MemoSlot
++            key={s}
++            item={data[slot.index]!}
++            index={slot.index}
++            itemKey={slot.key}
++            rowHeight={rowHeight}
++            renderItem={renderItem}
++            extraData={extraData}
++          />
++        ) : (
++          <View
++            key={s}
++            collapsable={false}
++            style={[slotStyle, { height: rowHeight }]}
++          >
++            <Fragment key={slot.key}>
++              <MemoContent
++                item={data[slot.index]!}
++                index={slot.index}
++                renderItem={renderItem}
++                extraData={extraData}
++              />
++            </Fragment>
++          </View>
++        )
++      )}
+     </PoolHost>
+   );
+ }
+ export const NativePoolList = forwardRef(PoolList) as <T>(
+   props: ZeroListProps<T> & {
+     rowHeight: number;
++    /** 내부 비교용. 공개 ZeroList API에는 노출하지 않는다. */
++    memoizeSlots?: boolean;
+     ref?: React.ForwardedRef<ZeroListHandle<T>>;
+   }
+ ) => React.ReactElement;

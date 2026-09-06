@@ -1,0 +1,8 @@
+PASS native apps/example/src/harness/engines/__tests__/template-data.test.tsx
+PASS logic packages/zerolist/src/__tests__/measurements.test.ts
+
+Test Suites: 8 passed, 8 total
+Tests:       104 passed, 104 total
+Snapshots:   0 total
+Time:        0.877 s, estimated 1 s
+Ran all test suites in 2 projects.

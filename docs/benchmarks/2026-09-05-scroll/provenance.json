@@ -1,0 +1,20 @@
+{
+  "base_commit": "d50685f572d15dc4f0e7eedcd3e0b54d24804692",
+  "runtime_patch_sha256": "fdd452816df60ba6908646000b6e46df942957a3c3f45956dd3fea88a17e992a",
+  "final_apk_sha256": "f5bd92857e7fefcec7dbdd933e942d75b0b0b66641c16e9587ddb12fbe886bed",
+  "diagnostic_apk_note": "사전 진단은 최종 기본값 적용 전 APK이며 해당 바이너리는 별도로 보관하지 않았다. 최종 교차 비교는 위 단일 APK에서 resumeDrag=false/true로 실행했다.",
+  "orientation_original": {
+    "accelerometer_rotation": 0,
+    "user_rotation": 1
+  },
+  "orientation_test": {
+    "accelerometer_rotation": 0,
+    "user_rotation": 0
+  },
+  "invalid_attempt": "가로 화면에서 입력 좌표가 벗어난 최초 실행은 제외. 프레임 0·입력 0이었으며 통계에 포함하지 않았다.",
+  "restored": {
+    "user_rotation": 1,
+    "renderer": "skiagl",
+    "diagnostic_options": "normal app, audit/trace/motion off"
+  }
+}

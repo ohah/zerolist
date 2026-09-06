@@ -1,0 +1,11 @@
+$ jest --runInBand
+PASS native packages/zerolist/src/__tests__/list.test.tsx
+PASS native apps/example/src/harness/engines/__tests__/zigpool.test.tsx
+PASS logic packages/zerolist/src/__tests__/virtualizer.test.ts
+PASS native packages/zerolist/src/__tests__/index.test.tsx
+
+Test Suites: 4 passed, 4 total
+Tests:       73 passed, 73 total
+Snapshots:   0 total
+Time:        0.724 s, estimated 3 s
+Ran all test suites in 2 projects.

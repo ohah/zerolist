@@ -1,0 +1,3857 @@
+{
+  "frames-1-before": {
+    "frames": 274,
+    "late": 11,
+    "dropped": 0,
+    "gfx_frames": 274,
+    "gfx_jank": 10,
+    "gfx_jank_matches": false,
+    "late_frames": [
+      {
+        "intended": 126985113104165,
+        "vsync": 126985113104165,
+        "total": 17364386,
+        "deadline": 16666666,
+        "gpu": 5626959,
+        "input": 758167,
+        "layout": 113792,
+        "unknown": 4289177,
+        "draw": 592125,
+        "sync": 652333,
+        "command": 666833,
+        "swap": 844375,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 58.073698,
+        "excess_ms": 0.69772
+      },
+      {
+        "intended": 126985279770825,
+        "vsync": 126985279770825,
+        "total": 38035309,
+        "deadline": 33333332,
+        "gpu": 31299125,
+        "input": 607167,
+        "layout": 61000,
+        "unknown": 1149559,
+        "draw": 321500,
+        "sync": 731417,
+        "command": 2991625,
+        "swap": 1655792,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 224.740358,
+        "excess_ms": 4.701977
+      },
+      {
+        "intended": 126986246437453,
+        "vsync": 126986246437453,
+        "total": 50413223,
+        "deadline": 49999998,
+        "gpu": 27777625,
+        "input": 250,
+        "layout": 42416,
+        "unknown": 4040390,
+        "draw": 23292,
+        "sync": 630416,
+        "command": 2129625,
+        "swap": 18735042,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 1191.406986,
+        "excess_ms": 0.413225
+      },
+      {
+        "intended": 126986513104109,
+        "vsync": 126986513104109,
+        "total": 54120276,
+        "deadline": 33333332,
+        "gpu": 1241625,
+        "input": 513250,
+        "layout": 72125,
+        "unknown": 282276,
+        "draw": 119541,
+        "sync": 496958,
+        "command": 1119833,
+        "swap": 50406709,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 1458.073642,
+        "excess_ms": 20.786944
+      },
+      {
+        "intended": 126986529770775,
+        "vsync": 126986529770775,
+        "total": 51182693,
+        "deadline": 33333332,
+        "gpu": 5448208,
+        "input": 27916,
+        "layout": 84541,
+        "unknown": 7687735,
+        "draw": 610292,
+        "sync": 720334,
+        "command": 820625,
+        "swap": 2436666,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 1474.740308,
+        "excess_ms": 17.849361
+      },
+      {
+        "intended": 126986996437423,
+        "vsync": 126986996437423,
+        "total": 33785295,
+        "deadline": 33333332,
+        "gpu": 26896083,
+        "input": 450834,
+        "layout": 86625,
+        "unknown": 837170,
+        "draw": 476875,
+        "sync": 675458,
+        "command": 870542,
+        "swap": 19942792,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 1941.406956,
+        "excess_ms": 0.451963
+      },
+      {
+        "intended": 126987313104077,
+        "vsync": 126987313104077,
+        "total": 37239558,
+        "deadline": 33333332,
+        "gpu": 33539208,
+        "input": 582292,
+        "layout": 130666,
+        "unknown": 452641,
+        "draw": 97625,
+        "sync": 526792,
+        "command": 928542,
+        "swap": 26002958,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 2258.07361,
+        "excess_ms": 3.906226
+      },
+      {
+        "intended": 126987329770743,
+        "vsync": 126987329770743,
+        "total": 50446600,
+        "deadline": 49999998,
+        "gpu": 21907375,
+        "input": 1392625,
+        "layout": 283166,
+        "unknown": 1079475,
+        "draw": 4611667,
+        "sync": 961708,
+        "command": 1417500,
+        "swap": 7993125,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 2274.740276,
+        "excess_ms": 0.446602
+      },
+      {
+        "intended": 126987446437405,
+        "vsync": 126987463104071,
+        "total": 50667314,
+        "deadline": 49999998,
+        "gpu": 14499751,
+        "input": 653417,
+        "layout": 37667,
+        "unknown": 32608313,
+        "draw": 27083,
+        "sync": 1488417,
+        "command": 958666,
+        "swap": 726875,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 2391.406938,
+        "excess_ms": 0.667316
+      },
+      {
+        "intended": 126987596437399,
+        "vsync": 126987596437399,
+        "total": 17708736,
+        "deadline": 16666666,
+        "gpu": 7890833,
+        "input": 1150209,
+        "layout": 195458,
+        "unknown": 2205736,
+        "draw": 100500,
+        "sync": 674041,
+        "command": 4378167,
+        "swap": 2421292,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 2541.406932,
+        "excess_ms": 1.04207
+      },
+      {
+        "intended": 126989396437327,
+        "vsync": 126989396437327,
+        "total": 34068976,
+        "deadline": 33333332,
+        "gpu": 19893417,
+        "input": 458,
+        "layout": 94708,
+        "unknown": 683684,
+        "draw": 568500,
+        "sync": 1124250,
+        "command": 2646458,
+        "swap": 14423792,
+        "first": 0,
+        "dropped": 0,
+        "gfx_timeline_ms": {
+          "HandleInputStart": 0.683684,
+          "AnimationStart": 0.684142,
+          "PerformTraversalsStart": 1.159601,
+          "DrawStart": 1.254309,
+          "FrameDeadline": 33.333332,
+          "SyncQueued": 1.822809,
+          "SyncStart": 10.404851,
+          "IssueDrawCommandsStart": 11.529101,
+          "SwapBuffers": 14.175559,
+          "FrameCompleted": 34.068976,
+          "GpuCompleted": 34.068976,
+          "SwapBuffersCompleted": 28.599351,
+          "CommandSubmissionCompleted": 14.175559
+        },
+        "from_first_touch_ms": 4341.40686,
+        "excess_ms": 0.735644
+      }
+    ],
+    "late_ratio_percent": 4.014598540145985
+  },
+  "frames-1-flat": {
+    "frames": 289,
+    "late": 6,
+    "dropped": 0,
+    "gfx_frames": 289,
+    "gfx_jank": 6,
+    "gfx_jank_matches": true,
+    "late_frames": [
+      {
+        "intended": 127012179769749,
+        "vsync": 127012179769749,
+        "total": 16942106,
+        "deadline": 16666666,
+        "gpu": 13229000,
+        "input": 750833,
+        "layout": 14834,
+        "unknown": 1641190,
+        "draw": 112875,
+        "sync": 180833,
+        "command": 673583,
+        "swap": 5660709,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 35.096477,
+        "excess_ms": 0.27544
+      },
+      {
+        "intended": 127014563102987,
+        "vsync": 127014563102987,
+        "total": 35023286,
+        "deadline": 33333332,
+        "gpu": 19612375,
+        "input": 1944042,
+        "layout": 17041,
+        "unknown": 1276786,
+        "draw": 886334,
+        "sync": 631750,
+        "command": 10304208,
+        "swap": 6231750,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 2418.429715,
+        "excess_ms": 1.689954
+      },
+      {
+        "intended": 127014629769651,
+        "vsync": 127014629769651,
+        "total": 36120039,
+        "deadline": 33333332,
+        "gpu": 24687917,
+        "input": 1423583,
+        "layout": 18667,
+        "unknown": 963122,
+        "draw": 2020375,
+        "sync": 221542,
+        "command": 6540083,
+        "swap": 21582292,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 2485.096379,
+        "excess_ms": 2.786707
+      },
+      {
+        "intended": 127014663102983,
+        "vsync": 127014663102983,
+        "total": 66835082,
+        "deadline": 49999998,
+        "gpu": 41223875,
+        "input": 417,
+        "layout": 16916,
+        "unknown": 5272290,
+        "draw": 1490875,
+        "sync": 217333,
+        "command": 2750417,
+        "swap": 28691333,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 2518.429711,
+        "excess_ms": 16.835084
+      },
+      {
+        "intended": 127016746436233,
+        "vsync": 127016746436233,
+        "total": 50997666,
+        "deadline": 49999998,
+        "gpu": 30495458,
+        "input": 125,
+        "layout": 13833,
+        "unknown": 5676666,
+        "draw": 42042,
+        "sync": 252500,
+        "command": 1009875,
+        "swap": 15692583,
+        "first": 0,
+        "dropped": 0,
+        "gfx_timeline_ms": {
+          "HandleInputStart": 5.676666,
+          "AnimationStart": 5.676791,
+          "PerformTraversalsStart": 5.850166,
+          "DrawStart": 5.863999,
+          "FrameDeadline": 49.999998,
+          "SyncQueued": 5.906041,
+          "SyncStart": 19.239833,
+          "IssueDrawCommandsStart": 19.492333,
+          "SwapBuffers": 20.502208,
+          "FrameCompleted": 50.997666,
+          "GpuCompleted": 50.997666,
+          "SwapBuffersCompleted": 36.194791,
+          "CommandSubmissionCompleted": 20.502208
+        },
+        "from_first_touch_ms": 4601.762961,
+        "excess_ms": 0.997668
+      },
+      {
+        "intended": 127017129769551,
+        "vsync": 127017129769551,
+        "total": 19253348,
+        "deadline": 16666666,
+        "gpu": 14100916,
+        "input": 708,
+        "layout": 22875,
+        "unknown": 3421432,
+        "draw": 92833,
+        "sync": 225750,
+        "command": 1182209,
+        "swap": 685916,
+        "first": 0,
+        "dropped": 0,
+        "gfx_timeline_ms": {
+          "HandleInputStart": 3.421432,
+          "AnimationStart": 3.42214,
+          "PerformTraversalsStart": 3.53364,
+          "DrawStart": 3.556515,
+          "FrameDeadline": 16.666666,
+          "SyncQueued": 3.649348,
+          "SyncStart": 3.744473,
+          "IssueDrawCommandsStart": 3.970223,
+          "SwapBuffers": 5.152432,
+          "FrameCompleted": 19.253348,
+          "GpuCompleted": 19.253348,
+          "SwapBuffersCompleted": 5.838348,
+          "CommandSubmissionCompleted": 5.152432
+        },
+        "from_first_touch_ms": 4985.096279,
+        "excess_ms": 2.586682
+      }
+    ],
+    "late_ratio_percent": 2.0761245674740483
+  },
+  "frames-1-zero": {
+    "frames": 272,
+    "late": 1,
+    "dropped": 0,
+    "gfx_frames": 272,
+    "gfx_jank": 1,
+    "gfx_jank_matches": true,
+    "late_frames": [
+      {
+        "intended": 126998963103611,
+        "vsync": 126998963103611,
+        "total": 17137738,
+        "deadline": 16666666,
+        "gpu": 12244250,
+        "input": 471833,
+        "layout": 65834,
+        "unknown": 3141238,
+        "draw": 34166,
+        "sync": 443500,
+        "command": 628417,
+        "swap": 6227125,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 37.461595,
+        "excess_ms": 0.471072
+      }
+    ],
+    "late_ratio_percent": 0.36764705882352944
+  },
+  "frames-2-before": {
+    "frames": 273,
+    "late": 1,
+    "dropped": 0,
+    "gfx_frames": 273,
+    "gfx_jank": 1,
+    "gfx_jank_matches": true,
+    "late_frames": [
+      {
+        "intended": 127051846434829,
+        "vsync": 127051846434829,
+        "total": 17247587,
+        "deadline": 16666666,
+        "gpu": 13908000,
+        "input": 668000,
+        "layout": 58209,
+        "unknown": 477379,
+        "draw": 32708,
+        "sync": 672167,
+        "command": 966625,
+        "swap": 1211333,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 49.299872,
+        "excess_ms": 0.580921
+      }
+    ],
+    "late_ratio_percent": 0.3663003663003663
+  },
+  "frames-2-flat": {
+    "frames": 289,
+    "late": 4,
+    "dropped": 0,
+    "gfx_frames": 289,
+    "gfx_jank": 4,
+    "gfx_jank_matches": true,
+    "late_frames": [
+      {
+        "intended": 127038713102021,
+        "vsync": 127038713102021,
+        "total": 17118014,
+        "deadline": 16666666,
+        "gpu": 11175959,
+        "input": 954875,
+        "layout": 222833,
+        "unknown": 2539472,
+        "draw": 972792,
+        "sync": 181958,
+        "command": 933250,
+        "swap": 1626209,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 36.956861,
+        "excess_ms": 0.451348
+      },
+      {
+        "intended": 127039429768659,
+        "vsync": 127039429768659,
+        "total": 33927626,
+        "deadline": 33333332,
+        "gpu": 30133042,
+        "input": 839584,
+        "layout": 12875,
+        "unknown": 488834,
+        "draw": 1423334,
+        "sync": 229292,
+        "command": 632416,
+        "swap": 22540959,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 753.623499,
+        "excess_ms": 0.594294
+      },
+      {
+        "intended": 127043246435173,
+        "vsync": 127043246435173,
+        "total": 34067780,
+        "deadline": 33333332,
+        "gpu": 30470750,
+        "input": 416,
+        "layout": 16541,
+        "unknown": 758614,
+        "draw": 40125,
+        "sync": 262084,
+        "command": 878166,
+        "swap": 19072417,
+        "first": 0,
+        "dropped": 0,
+        "gfx_timeline_ms": {
+          "HandleInputStart": 0.758614,
+          "AnimationStart": 0.75903,
+          "PerformTraversalsStart": 0.899114,
+          "DrawStart": 0.915655,
+          "FrameDeadline": 33.333332,
+          "SyncQueued": 0.95578,
+          "SyncStart": 2.45678,
+          "IssueDrawCommandsStart": 2.718864,
+          "SwapBuffers": 3.59703,
+          "FrameCompleted": 34.06778,
+          "GpuCompleted": 34.06778,
+          "SwapBuffersCompleted": 22.669447,
+          "CommandSubmissionCompleted": 3.59703
+        },
+        "from_first_touch_ms": 4570.290013,
+        "excess_ms": 0.734448
+      },
+      {
+        "intended": 127043629768491,
+        "vsync": 127043629768491,
+        "total": 17410379,
+        "deadline": 16666666,
+        "gpu": 15905250,
+        "input": 83,
+        "layout": 19583,
+        "unknown": 338838,
+        "draw": 76083,
+        "sync": 217042,
+        "command": 746791,
+        "swap": 484209,
+        "first": 0,
+        "dropped": 0,
+        "gfx_timeline_ms": {
+          "HandleInputStart": 0.338838,
+          "AnimationStart": 0.338921,
+          "PerformTraversalsStart": 0.419963,
+          "DrawStart": 0.439546,
+          "FrameDeadline": 16.666666,
+          "SyncQueued": 0.515629,
+          "SyncStart": 0.541296,
+          "IssueDrawCommandsStart": 0.758338,
+          "SwapBuffers": 1.505129,
+          "FrameCompleted": 17.410379,
+          "GpuCompleted": 17.410379,
+          "SwapBuffersCompleted": 1.989338,
+          "CommandSubmissionCompleted": 1.505129
+        },
+        "from_first_touch_ms": 4953.623331,
+        "excess_ms": 0.743713
+      }
+    ],
+    "late_ratio_percent": 1.3840830449826989
+  },
+  "frames-2-zero": {
+    "frames": 273,
+    "late": 2,
+    "dropped": 0,
+    "gfx_frames": 273,
+    "gfx_jank": 2,
+    "gfx_jank_matches": true,
+    "late_frames": [
+      {
+        "intended": 127025446435885,
+        "vsync": 127025446435885,
+        "total": 17055310,
+        "deadline": 16666666,
+        "gpu": 14495042,
+        "input": 438750,
+        "layout": 41792,
+        "unknown": 525768,
+        "draw": 29375,
+        "sync": 550417,
+        "command": 623916,
+        "swap": 6396709,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 32.90444,
+        "excess_ms": 0.388644
+      },
+      {
+        "intended": 127029979769037,
+        "vsync": 127029979769037,
+        "total": 33683118,
+        "deadline": 33333332,
+        "gpu": 29176458,
+        "input": 625,
+        "layout": 32459,
+        "unknown": 513827,
+        "draw": 23333,
+        "sync": 644667,
+        "command": 787958,
+        "swap": 14185708,
+        "first": 0,
+        "dropped": 0,
+        "gfx_timeline_ms": {
+          "HandleInputStart": 0.513827,
+          "AnimationStart": 0.514452,
+          "PerformTraversalsStart": 0.722618,
+          "DrawStart": 0.755077,
+          "FrameDeadline": 33.333332,
+          "SyncQueued": 0.77841,
+          "SyncStart": 3.074035,
+          "IssueDrawCommandsStart": 3.718702,
+          "SwapBuffers": 4.50666,
+          "FrameCompleted": 33.683118,
+          "GpuCompleted": 33.683118,
+          "SwapBuffersCompleted": 18.692368,
+          "CommandSubmissionCompleted": 4.50666
+        },
+        "from_first_touch_ms": 4566.237592,
+        "excess_ms": 0.349786
+      }
+    ],
+    "late_ratio_percent": 0.7326007326007326
+  },
+  "trace-before": {
+    "frames": 274,
+    "late": 2,
+    "dropped": 0,
+    "gfx_frames": 274,
+    "gfx_jank": 2,
+    "gfx_jank_matches": true,
+    "late_frames": [
+      {
+        "intended": 127112463099071,
+        "vsync": 127112463099071,
+        "total": 17291790,
+        "deadline": 16666666,
+        "gpu": 13448000,
+        "input": 686959,
+        "layout": 95500,
+        "unknown": 1552915,
+        "draw": 28792,
+        "sync": 468875,
+        "command": 713541,
+        "swap": 6377709,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 45.631918,
+        "excess_ms": 0.625124,
+        "thread_states_ms": {
+          "main:S": 15.965498,
+          "main:R": 0.325959,
+          "main:Running": 0.96125,
+          "main:R+": 0.039083,
+          "RenderThread:S": 9.395414,
+          "RenderThread:R": 0.20637500000000003,
+          "RenderThread:Running": 7.686375999999999,
+          "RenderThread:R+": 0.003625,
+          "mqt_v_js:S": 17.142623,
+          "mqt_v_js:R": 0.030542,
+          "mqt_v_js:Running": 0.118625
+        },
+        "slices": [
+          {
+            "ts": "127112464612028",
+            "dur": "21042",
+            "name": "Choreographer#onVsync 69993041",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.512957,
+            "duration_ms": 0.021042
+          },
+          {
+            "ts": "127112464650236",
+            "dur": "1607459",
+            "name": "Choreographer#doFrame 69993041",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.551165,
+            "duration_ms": 1.607459
+          },
+          {
+            "ts": "127112464653570",
+            "dur": "684875",
+            "name": "input",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.554499,
+            "duration_ms": 0.684875
+          },
+          {
+            "ts": "127112464655820",
+            "dur": "681583",
+            "name": "VRI[SoloActivity]",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.556749,
+            "duration_ms": 0.681583
+          },
+          {
+            "ts": "127112464677778",
+            "dur": "2833",
+            "name": "processInputEventForCompatibility",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.578707,
+            "duration_ms": 0.002833
+          },
+          {
+            "ts": "127112464755570",
+            "dur": "543291",
+            "name": "deliverInputEvent src=0x1002 eventTimeNano=127112448000000 id=0xc9f703a7",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.656499,
+            "duration_ms": 0.543291
+          },
+          {
+            "ts": "127112464759736",
+            "dur": "1917",
+            "name": "EarlyPostImeInputStage id=0xc9f703a7",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.660665,
+            "duration_ms": 0.001917
+          },
+          {
+            "ts": "127112464762403",
+            "dur": "792",
+            "name": "NativePostImeInputStage id=0xc9f703a7",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.663332,
+            "duration_ms": 0.000792
+          },
+          {
+            "ts": "127112464763945",
+            "dur": "430833",
+            "name": "ViewPostImeInputStage id=0xc9f703a7",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.664874,
+            "duration_ms": 0.430833
+          },
+          {
+            "ts": "127112464907320",
+            "dur": "102000",
+            "name": "TouchesHelper.sentTouchEventModern(topTouchMove)",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.808249,
+            "duration_ms": 0.102
+          },
+          {
+            "ts": "127112465015861",
+            "dur": "26959",
+            "name": "TouchesHelper.sentTouchEventModern(topTouchMove)",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.91679,
+            "duration_ms": 0.026959
+          },
+          {
+            "ts": "127112465029736",
+            "dur": "12709",
+            "name": "FabricEventEmitter.receiveEvent('topTouchMove')",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.930665,
+            "duration_ms": 0.012709
+          },
+          {
+            "ts": "127112465048695",
+            "dur": "137833",
+            "name": "View#onTouchEvent",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.949624,
+            "duration_ms": 0.137833
+          },
+          {
+            "ts": "127112465101445",
+            "dur": "3500",
+            "name": "FabricEventEmitter.receiveEvent('topPoolScroll')",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.002374,
+            "duration_ms": 0.0035
+          },
+          {
+            "ts": "127112465106111",
+            "dur": "6292",
+            "name": "ZL.reposition",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.00704,
+            "duration_ms": 0.006292
+          },
+          {
+            "ts": "127112465120403",
+            "dur": "27458",
+            "name": "Choreographer#scheduleVsyncLocked",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.021332,
+            "duration_ms": 0.027458
+          },
+          {
+            "ts": "127112465339986",
+            "dur": "248417",
+            "name": "animation",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.240915,
+            "duration_ms": 0.248417
+          },
+          {
+            "ts": "127112465396236",
+            "dur": "190542",
+            "name": "BatchEventDispatchedListeners",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.297165,
+            "duration_ms": 0.190542
+          },
+          {
+            "ts": "127112465589486",
+            "dur": "666959",
+            "name": "traversal",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.490415,
+            "duration_ms": 0.666959
+          },
+          {
+            "ts": "127112465676111",
+            "dur": "578792",
+            "name": "draw-VRI[SoloActivity]",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.57704,
+            "duration_ms": 0.578792
+          },
+          {
+            "ts": "127112465685070",
+            "dur": "26916",
+            "name": "Record View#draw()",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.585999,
+            "duration_ms": 0.026916
+          },
+          {
+            "ts": "127112465713695",
+            "dur": "540208",
+            "name": "postAndWait",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.614624,
+            "duration_ms": 0.540208
+          },
+          {
+            "ts": "127112465292736",
+            "dur": "1042",
+            "name": "notifyFramePending",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.193665,
+            "duration_ms": 0.001042
+          },
+          {
+            "ts": "127112465651653",
+            "dur": "708",
+            "name": "notifyFramePending",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.552582,
+            "duration_ms": 0.000708
+          },
+          {
+            "ts": "127112465755778",
+            "dur": "7625167",
+            "name": "DrawFrames 69993041",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.656707,
+            "duration_ms": 7.625167
+          },
+          {
+            "ts": "127112465758861",
+            "dur": "456000",
+            "name": "syncFrameState",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.65979,
+            "duration_ms": 0.456
+          },
+          {
+            "ts": "127112465762153",
+            "dur": "450958",
+            "name": "prepareTree",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.663082,
+            "duration_ms": 0.450958
+          },
+          {
+            "ts": "127112466238111",
+            "dur": "7141459",
+            "name": "Drawing  0.00  0.00 1080.00 2400.00",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.13904,
+            "duration_ms": 7.141459
+          },
+          {
+            "ts": "127112466470236",
+            "dur": "465875",
+            "name": "flush commands",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.371165,
+            "duration_ms": 0.465875
+          },
+          {
+            "ts": "127112466474736",
+            "dur": "319709",
+            "name": "auto skgpu::ganesh::OpsTask::onPrepare(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.375665,
+            "duration_ms": 0.319709
+          },
+          {
+            "ts": "127112466475195",
+            "dur": "2916",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.376124,
+            "duration_ms": 0.002916
+          },
+          {
+            "ts": "127112466478528",
+            "dur": "292",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.379457,
+            "duration_ms": 0.000292
+          },
+          {
+            "ts": "127112466479195",
+            "dur": "110833",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.380124,
+            "duration_ms": 0.110833
+          },
+          {
+            "ts": "127112466590528",
+            "dur": "203583",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.491457,
+            "duration_ms": 0.203583
+          },
+          {
+            "ts": "127112466736861",
+            "dur": "334",
+            "name": "Atlas full",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.63779,
+            "duration_ms": 0.000334
+          },
+          {
+            "ts": "127112466892070",
+            "dur": "38708",
+            "name": "auto skgpu::ganesh::OpsTask::onExecute(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.792999,
+            "duration_ms": 0.038708
+          },
+          {
+            "ts": "127112466896028",
+            "dur": "12083",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.796957,
+            "duration_ms": 0.012083
+          },
+          {
+            "ts": "127112466908486",
+            "dur": "2000",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.809415,
+            "duration_ms": 0.002
+          },
+          {
+            "ts": "127112466910778",
+            "dur": "11000",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.811707,
+            "duration_ms": 0.011
+          },
+          {
+            "ts": "127112466922070",
+            "dur": "8333",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.822999,
+            "duration_ms": 0.008333
+          },
+          {
+            "ts": "127112466940903",
+            "dur": "1458",
+            "name": "frameTimelineInfo(frameNumber=113, vsyncId=69993041, inputEventId=0xeb0cff3a)",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.841832,
+            "duration_ms": 0.001458
+          },
+          {
+            "ts": "127112473323528",
+            "dur": "19292",
+            "name": "reportMetricsWithPresentTime",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 10.224457,
+            "duration_ms": 0.019292
+          },
+          {
+            "ts": "127112473344486",
+            "dur": "34792",
+            "name": "dumpingMemoryStatistics",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 10.245415,
+            "duration_ms": 0.034792
+          }
+        ],
+        "mount_slices": []
+      },
+      {
+        "intended": 127114479765657,
+        "vsync": 127114479765657,
+        "total": 33336580,
+        "deadline": 33333332,
+        "gpu": 20964375,
+        "input": 167,
+        "layout": 83000,
+        "unknown": 2020955,
+        "draw": 441416,
+        "sync": 961125,
+        "command": 4501708,
+        "swap": 16651792,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 2062.298504,
+        "excess_ms": 0.003248,
+        "thread_states_ms": {
+          "main:R": 2.679539,
+          "main:Running": 5.543458,
+          "main:S": 25.039124,
+          "main:R+": 0.074459,
+          "RenderThread:Running": 15.700539,
+          "RenderThread:R": 1.8127089999999997,
+          "RenderThread:R+": 0.823666,
+          "RenderThread:S": 14.999666,
+          "mqt_v_js:S": 31.213829999999998,
+          "mqt_v_js:R": 1.8129579999999998,
+          "mqt_v_js:Running": 0.309792
+        },
+        "slices": [
+          {
+            "ts": "127114481772737",
+            "dur": "4000",
+            "name": "Choreographer#onVsync 69995653",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.00708,
+            "duration_ms": 0.004
+          },
+          {
+            "ts": "127114481784571",
+            "dur": "6103041",
+            "name": "Choreographer#doFrame 69995653",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.018914,
+            "duration_ms": 6.103041
+          },
+          {
+            "ts": "127114481787612",
+            "dur": "1253084",
+            "name": "animation",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.021955,
+            "duration_ms": 1.253084
+          },
+          {
+            "ts": "127114481813946",
+            "dur": "610666",
+            "name": "Choreographer#scheduleVsyncLocked",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.048289,
+            "duration_ms": 0.610666
+          },
+          {
+            "ts": "127114483019779",
+            "dur": "7250",
+            "name": "BatchEventDispatchedListeners",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.254122,
+            "duration_ms": 0.00725
+          },
+          {
+            "ts": "127114483043946",
+            "dur": "4836583",
+            "name": "traversal",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.278289,
+            "duration_ms": 4.836583
+          },
+          {
+            "ts": "127114483110779",
+            "dur": "4758375",
+            "name": "draw-VRI[SoloActivity]",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.345122,
+            "duration_ms": 4.758375
+          },
+          {
+            "ts": "127114483126529",
+            "dur": "436250",
+            "name": "Record View#draw()",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.360872,
+            "duration_ms": 0.43625
+          },
+          {
+            "ts": "127114483422571",
+            "dur": "22208",
+            "name": "FabricEventEmitter.receiveEvent('topPoolScroll')",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.656914,
+            "duration_ms": 0.022208
+          },
+          {
+            "ts": "127114483447154",
+            "dur": "18125",
+            "name": "ZL.reposition",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.681497,
+            "duration_ms": 0.018125
+          },
+          {
+            "ts": "127114483567737",
+            "dur": "4294792",
+            "name": "postAndWait",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.80208,
+            "duration_ms": 4.294792
+          },
+          {
+            "ts": "127114490439237",
+            "dur": "3334",
+            "name": "processInputEventForCompatibility",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 10.67358,
+            "duration_ms": 0.003334
+          },
+          {
+            "ts": "127114490454279",
+            "dur": "536542",
+            "name": "deliverInputEvent src=0x1002 eventTimeNano=127114489000000 id=0xff7a8fcf",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 10.688622,
+            "duration_ms": 0.536542
+          },
+          {
+            "ts": "127114490457404",
+            "dur": "22542",
+            "name": "EarlyPostImeInputStage id=0xff7a8fcf",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 10.691747,
+            "duration_ms": 0.022542
+          },
+          {
+            "ts": "127114490480821",
+            "dur": "666",
+            "name": "NativePostImeInputStage id=0xff7a8fcf",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 10.715164,
+            "duration_ms": 0.000666
+          },
+          {
+            "ts": "127114490482112",
+            "dur": "484834",
+            "name": "ViewPostImeInputStage id=0xff7a8fcf",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 10.716455,
+            "duration_ms": 0.484834
+          },
+          {
+            "ts": "127114490824196",
+            "dur": "87625",
+            "name": "TouchesHelper.sentTouchEventModern(topTouchStart)",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 11.058539,
+            "duration_ms": 0.087625
+          },
+          {
+            "ts": "127114490917071",
+            "dur": "24333",
+            "name": "TouchesHelper.sentTouchEventModern(topTouchStart)",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 11.151414,
+            "duration_ms": 0.024333
+          },
+          {
+            "ts": "127114490931529",
+            "dur": "9542",
+            "name": "FabricEventEmitter.receiveEvent('topTouchStart')",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 11.165872,
+            "duration_ms": 0.009542
+          },
+          {
+            "ts": "127114490953029",
+            "dur": "6292",
+            "name": "View#onTouchEvent",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 11.187372,
+            "duration_ms": 0.006292
+          },
+          {
+            "ts": "127114499384196",
+            "dur": "19375",
+            "name": "Choreographer#onVsync 69995668",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 19.618539,
+            "duration_ms": 0.019375
+          },
+          {
+            "ts": "127114499432696",
+            "dur": "10912291",
+            "name": "Choreographer#doFrame 69995668",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 19.667039,
+            "duration_ms": 10.912291
+          },
+          {
+            "ts": "127114499438612",
+            "dur": "340334",
+            "name": "animation",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 19.672955,
+            "duration_ms": 0.340334
+          },
+          {
+            "ts": "127114499502487",
+            "dur": "31750",
+            "name": "Choreographer#scheduleVsyncLocked",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 19.73683,
+            "duration_ms": 0.03175
+          },
+          {
+            "ts": "127114499664737",
+            "dur": "46959",
+            "name": "BatchEventDispatchedListeners",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 19.89908,
+            "duration_ms": 0.046959
+          },
+          {
+            "ts": "127114499782987",
+            "dur": "10556875",
+            "name": "traversal",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 20.01733,
+            "duration_ms": 10.556875
+          },
+          {
+            "ts": "127114501595112",
+            "dur": "8735084",
+            "name": "draw-VRI[SoloActivity]",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 21.829455,
+            "duration_ms": 8.735084
+          },
+          {
+            "ts": "127114501621279",
+            "dur": "212667",
+            "name": "Record View#draw()",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 21.855622,
+            "duration_ms": 0.212667
+          },
+          {
+            "ts": "127114501837654",
+            "dur": "8488125",
+            "name": "postAndWait",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 22.071997,
+            "duration_ms": 8.488125
+          },
+          {
+            "ts": "127114475982279",
+            "dur": "10679583",
+            "name": "DrawFrames 69995639",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": -3.783378,
+            "duration_ms": 10.679583
+          },
+          {
+            "ts": "127114478465529",
+            "dur": "8194542",
+            "name": "Drawing  0.00  0.00 1080.00 2400.00",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": -1.300128,
+            "duration_ms": 8.194542
+          },
+          {
+            "ts": "127114480749154",
+            "dur": "4628542",
+            "name": "flush commands",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 0.983497,
+            "duration_ms": 4.628542
+          },
+          {
+            "ts": "127114480754696",
+            "dur": "3036458",
+            "name": "auto skgpu::ganesh::OpsTask::onPrepare(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 0.989039,
+            "duration_ms": 3.036458
+          },
+          {
+            "ts": "127114480755446",
+            "dur": "4208",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 0.989789,
+            "duration_ms": 0.004208
+          },
+          {
+            "ts": "127114480760112",
+            "dur": "1891792",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 0.994455,
+            "duration_ms": 1.891792
+          },
+          {
+            "ts": "127114482653154",
+            "dur": "333",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.887497,
+            "duration_ms": 0.000333
+          },
+          {
+            "ts": "127114482654154",
+            "dur": "331417",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.888497,
+            "duration_ms": 0.331417
+          },
+          {
+            "ts": "127114482987154",
+            "dur": "802917",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.221497,
+            "duration_ms": 0.802917
+          },
+          {
+            "ts": "127114485263487",
+            "dur": "93917",
+            "name": "auto skgpu::ganesh::OpsTask::onExecute(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.49783,
+            "duration_ms": 0.093917
+          },
+          {
+            "ts": "127114485273821",
+            "dur": "33500",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.508164,
+            "duration_ms": 0.0335
+          },
+          {
+            "ts": "127114485308487",
+            "dur": "14500",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.54283,
+            "duration_ms": 0.0145
+          },
+          {
+            "ts": "127114485324196",
+            "dur": "2000",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.558539,
+            "duration_ms": 0.002
+          },
+          {
+            "ts": "127114485327029",
+            "dur": "15333",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.561372,
+            "duration_ms": 0.015333
+          },
+          {
+            "ts": "127114485343529",
+            "dur": "13042",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.577872,
+            "duration_ms": 0.013042
+          },
+          {
+            "ts": "127114485393654",
+            "dur": "2458",
+            "name": "frameTimelineInfo(frameNumber=233, vsyncId=69995639, inputEventId=0xcc78bf61)",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.627997,
+            "duration_ms": 0.002458
+          },
+          {
+            "ts": "127114486619612",
+            "dur": "28042",
+            "name": "reportMetricsWithPresentTime",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.853955,
+            "duration_ms": 0.028042
+          },
+          {
+            "ts": "127114486649862",
+            "dur": "9709",
+            "name": "dumpingMemoryStatistics",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.884205,
+            "duration_ms": 0.009709
+          },
+          {
+            "ts": "127114486669821",
+            "dur": "666",
+            "name": "notifyFramePending",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.904164,
+            "duration_ms": 0.000666
+          },
+          {
+            "ts": "127114486671987",
+            "dur": "22137834",
+            "name": "DrawFrames 69995653",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.90633,
+            "duration_ms": 22.137834
+          },
+          {
+            "ts": "127114486674071",
+            "dur": "945375",
+            "name": "syncFrameState",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.908414,
+            "duration_ms": 0.945375
+          },
+          {
+            "ts": "127114486677237",
+            "dur": "940584",
+            "name": "prepareTree",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.91158,
+            "duration_ms": 0.940584
+          },
+          {
+            "ts": "127114487643654",
+            "dur": "21164958",
+            "name": "Drawing  0.00  0.00 1080.00 2400.00",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 7.877997,
+            "duration_ms": 21.164958
+          },
+          {
+            "ts": "127114487882446",
+            "dur": "4245333",
+            "name": "flush commands",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 8.116789,
+            "duration_ms": 4.245333
+          },
+          {
+            "ts": "127114487886487",
+            "dur": "2350417",
+            "name": "auto skgpu::ganesh::OpsTask::onPrepare(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 8.12083,
+            "duration_ms": 2.350417
+          },
+          {
+            "ts": "127114487887112",
+            "dur": "2834",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 8.121455,
+            "duration_ms": 0.002834
+          },
+          {
+            "ts": "127114487890321",
+            "dur": "622708",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 8.124664,
+            "duration_ms": 0.622708
+          },
+          {
+            "ts": "127114488516112",
+            "dur": "750",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 8.750455,
+            "duration_ms": 0.00075
+          },
+          {
+            "ts": "127114488518279",
+            "dur": "1093833",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 8.752622,
+            "duration_ms": 1.093833
+          },
+          {
+            "ts": "127114489614904",
+            "dur": "620292",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 9.849247,
+            "duration_ms": 0.620292
+          },
+          {
+            "ts": "127114491987529",
+            "dur": "129333",
+            "name": "auto skgpu::ganesh::OpsTask::onExecute(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 12.221872,
+            "duration_ms": 0.129333
+          },
+          {
+            "ts": "127114491995821",
+            "dur": "91291",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 12.230164,
+            "duration_ms": 0.091291
+          },
+          {
+            "ts": "127114492088154",
+            "dur": "8667",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 12.322497,
+            "duration_ms": 0.008667
+          },
+          {
+            "ts": "127114492097821",
+            "dur": "2416",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 12.332164,
+            "duration_ms": 0.002416
+          },
+          {
+            "ts": "127114492100862",
+            "dur": "6334",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 12.335205,
+            "duration_ms": 0.006334
+          },
+          {
+            "ts": "127114492107779",
+            "dur": "8625",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 12.342122,
+            "duration_ms": 0.008625
+          },
+          {
+            "ts": "127114492135571",
+            "dur": "1583",
+            "name": "frameTimelineInfo(frameNumber=234, vsyncId=69995653, inputEventId=0x0)",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 12.369914,
+            "duration_ms": 0.001583
+          },
+          {
+            "ts": "127114508792237",
+            "dur": "8834",
+            "name": "reportMetricsWithPresentTime",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 29.02658,
+            "duration_ms": 0.008834
+          },
+          {
+            "ts": "127114508802862",
+            "dur": "5459",
+            "name": "dumpingMemoryStatistics",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 29.037205,
+            "duration_ms": 0.005459
+          },
+          {
+            "ts": "127114508817237",
+            "dur": "417",
+            "name": "notifyFramePending",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 29.05158,
+            "duration_ms": 0.000417
+          },
+          {
+            "ts": "127114508818654",
+            "dur": "11067708",
+            "name": "DrawFrames 69995668",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 29.052997,
+            "duration_ms": 11.067708
+          },
+          {
+            "ts": "127114508820237",
+            "dur": "1369209",
+            "name": "syncFrameState",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 29.05458,
+            "duration_ms": 1.369209
+          },
+          {
+            "ts": "127114508823029",
+            "dur": "1364917",
+            "name": "prepareTree",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 29.057372,
+            "duration_ms": 1.364917
+          },
+          {
+            "ts": "127114510305862",
+            "dur": "9579167",
+            "name": "Drawing  0.00  0.00 1080.00 2400.00",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 30.540205,
+            "duration_ms": 9.579167
+          },
+          {
+            "ts": "127114510962654",
+            "dur": "1439667",
+            "name": "flush commands",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 31.196997,
+            "duration_ms": 1.439667
+          },
+          {
+            "ts": "127114510971279",
+            "dur": "1216625",
+            "name": "auto skgpu::ganesh::OpsTask::onPrepare(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 31.205622,
+            "duration_ms": 1.216625
+          },
+          {
+            "ts": "127114510972404",
+            "dur": "5875",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 31.206747,
+            "duration_ms": 0.005875
+          },
+          {
+            "ts": "127114510979279",
+            "dur": "197458",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 31.213622,
+            "duration_ms": 0.197458
+          },
+          {
+            "ts": "127114511178071",
+            "dur": "666",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 31.412414,
+            "duration_ms": 0.000666
+          },
+          {
+            "ts": "127114511179362",
+            "dur": "180417",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 31.413705,
+            "duration_ms": 0.180417
+          },
+          {
+            "ts": "127114511361321",
+            "dur": "826166",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 31.595664,
+            "duration_ms": 0.826166
+          },
+          {
+            "ts": "127114512356821",
+            "dur": "38958",
+            "name": "auto skgpu::ganesh::OpsTask::onExecute(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 32.591164,
+            "duration_ms": 0.038958
+          },
+          {
+            "ts": "127114512361529",
+            "dur": "11000",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 32.595872,
+            "duration_ms": 0.011
+          },
+          {
+            "ts": "127114512373071",
+            "dur": "7291",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 32.607414,
+            "duration_ms": 0.007291
+          },
+          {
+            "ts": "127114512380904",
+            "dur": "1792",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 32.615247,
+            "duration_ms": 0.001792
+          },
+          {
+            "ts": "127114512382987",
+            "dur": "5917",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 32.61733,
+            "duration_ms": 0.005917
+          },
+          {
+            "ts": "127114512389237",
+            "dur": "6084",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 32.62358,
+            "duration_ms": 0.006084
+          },
+          {
+            "ts": "127114512407612",
+            "dur": "1000",
+            "name": "frameTimelineInfo(frameNumber=235, vsyncId=69995668, inputEventId=0xff7a8fcf)",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 32.641955,
+            "duration_ms": 0.001
+          }
+        ],
+        "mount_slices": []
+      }
+    ],
+    "late_ratio_percent": 0.7299270072992701,
+    "trace_errors": []
+  },
+  "trace-flat": {
+    "frames": 290,
+    "late": 3,
+    "dropped": 0,
+    "gfx_frames": 290,
+    "gfx_jank": 3,
+    "gfx_jank_matches": true,
+    "late_frames": [
+      {
+        "intended": 127088879766681,
+        "vsync": 127088879766681,
+        "total": 16977961,
+        "deadline": 16666666,
+        "gpu": 12853250,
+        "input": 773625,
+        "layout": 12667,
+        "unknown": 1691044,
+        "draw": 40000,
+        "sync": 245916,
+        "command": 1054417,
+        "swap": 3237083,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 72.332789,
+        "excess_ms": 0.311295,
+        "thread_states_ms": {
+          "main:S": 15.712668,
+          "main:R": 0.191709,
+          "main:Running": 1.0735839999999999,
+          "RenderThread:S": 12.245543999999999,
+          "RenderThread:R": 0.432541,
+          "RenderThread:Running": 4.287959,
+          "RenderThread:R+": 0.011917,
+          "mqt_v_js:S": 16.415086,
+          "mqt_v_js:R": 0.31125,
+          "mqt_v_js:Running": 0.251625
+        },
+        "slices": [
+          {
+            "ts": "127088881442059",
+            "dur": "8208",
+            "name": "Choreographer#onVsync 69969393",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.675378,
+            "duration_ms": 0.008208
+          },
+          {
+            "ts": "127088881455642",
+            "dur": "1432292",
+            "name": "Choreographer#doFrame 69969393",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.688961,
+            "duration_ms": 1.432292
+          },
+          {
+            "ts": "127088881459059",
+            "dur": "771833",
+            "name": "input",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.692378,
+            "duration_ms": 0.771833
+          },
+          {
+            "ts": "127088881461142",
+            "dur": "768833",
+            "name": "VRI[SoloActivity]",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.694461,
+            "duration_ms": 0.768833
+          },
+          {
+            "ts": "127088881488809",
+            "dur": "3666",
+            "name": "processInputEventForCompatibility",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.722128,
+            "duration_ms": 0.003666
+          },
+          {
+            "ts": "127088881501892",
+            "dur": "724042",
+            "name": "deliverInputEvent src=0x1002 eventTimeNano=127088874000000 id=0xc206278f",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.735211,
+            "duration_ms": 0.724042
+          },
+          {
+            "ts": "127088881505725",
+            "dur": "1459",
+            "name": "EarlyPostImeInputStage id=0xc206278f",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.739044,
+            "duration_ms": 0.001459
+          },
+          {
+            "ts": "127088881508225",
+            "dur": "709",
+            "name": "NativePostImeInputStage id=0xc206278f",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.741544,
+            "duration_ms": 0.000709
+          },
+          {
+            "ts": "127088881509684",
+            "dur": "706833",
+            "name": "ViewPostImeInputStage id=0xc206278f",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.743003,
+            "duration_ms": 0.706833
+          },
+          {
+            "ts": "127088881561100",
+            "dur": "649709",
+            "name": "View#onTouchEvent",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.794419,
+            "duration_ms": 0.649709
+          },
+          {
+            "ts": "127088881586267",
+            "dur": "591250",
+            "name": "ReactScrollView.onScrollChanged",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.819586,
+            "duration_ms": 0.59125
+          },
+          {
+            "ts": "127088881591517",
+            "dur": "444417",
+            "name": "ReactScrollView.updateClippingRect",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.824836,
+            "duration_ms": 0.444417
+          },
+          {
+            "ts": "127088881698017",
+            "dur": "11250",
+            "name": "Choreographer#scheduleVsyncLocked",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 1.931336,
+            "duration_ms": 0.01125
+          },
+          {
+            "ts": "127088882164559",
+            "dur": "11208",
+            "name": "FabricEventEmitter.receiveEvent('topScroll')",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.397878,
+            "duration_ms": 0.011208
+          },
+          {
+            "ts": "127088882232100",
+            "dur": "125584",
+            "name": "animation",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.465419,
+            "duration_ms": 0.125584
+          },
+          {
+            "ts": "127088882256225",
+            "dur": "22000",
+            "name": "MountItemDispatcher::mountViews mountItems to execute",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.489544,
+            "duration_ms": 0.022
+          },
+          {
+            "ts": "127088882264767",
+            "dur": "12542",
+            "name": "IntBufferBatchMountItem::mountViews",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.498086,
+            "duration_ms": 0.012542
+          },
+          {
+            "ts": "127088882269017",
+            "dur": "7042",
+            "name": "IntBufferBatchMountItem::mountInstructions::UPDATE_STATE numInstructions=1",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.502336,
+            "duration_ms": 0.007042
+          },
+          {
+            "ts": "127088882323684",
+            "dur": "30958",
+            "name": "BatchEventDispatchedListeners",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.557003,
+            "duration_ms": 0.030958
+          },
+          {
+            "ts": "127088882358517",
+            "dur": "527458",
+            "name": "traversal",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.591836,
+            "duration_ms": 0.527458
+          },
+          {
+            "ts": "127088882366184",
+            "dur": "515125",
+            "name": "draw-VRI[SoloActivity]",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.599503,
+            "duration_ms": 0.515125
+          },
+          {
+            "ts": "127088882371225",
+            "dur": "38625",
+            "name": "Record View#draw()",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.604544,
+            "duration_ms": 0.038625
+          },
+          {
+            "ts": "127088882411017",
+            "dur": "467958",
+            "name": "postAndWait",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 2.644336,
+            "duration_ms": 0.467958
+          },
+          {
+            "ts": "127088881836809",
+            "dur": "1083",
+            "name": "notifyFramePending",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.070128,
+            "duration_ms": 0.001083
+          },
+          {
+            "ts": "127088882584809",
+            "dur": "4593333",
+            "name": "DrawFrames 69969393",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.818128,
+            "duration_ms": 4.593333
+          },
+          {
+            "ts": "127088882589559",
+            "dur": "220416",
+            "name": "syncFrameState",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.822878,
+            "duration_ms": 0.220416
+          },
+          {
+            "ts": "127088882593600",
+            "dur": "215334",
+            "name": "prepareTree",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.826919,
+            "duration_ms": 0.215334
+          },
+          {
+            "ts": "127088882847350",
+            "dur": "4329834",
+            "name": "Drawing  0.00  0.00 1080.00 2400.00",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.080669,
+            "duration_ms": 4.329834
+          },
+          {
+            "ts": "127088883089642",
+            "dur": "793875",
+            "name": "flush commands",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.322961,
+            "duration_ms": 0.793875
+          },
+          {
+            "ts": "127088883094767",
+            "dur": "509583",
+            "name": "auto skgpu::ganesh::OpsTask::onPrepare(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.328086,
+            "duration_ms": 0.509583
+          },
+          {
+            "ts": "127088883095350",
+            "dur": "3667",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.328669,
+            "duration_ms": 0.003667
+          },
+          {
+            "ts": "127088883099725",
+            "dur": "375",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.333044,
+            "duration_ms": 0.000375
+          },
+          {
+            "ts": "127088883100892",
+            "dur": "140667",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.334211,
+            "duration_ms": 0.140667
+          },
+          {
+            "ts": "127088883242434",
+            "dur": "375",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.475753,
+            "duration_ms": 0.000375
+          },
+          {
+            "ts": "127088883243267",
+            "dur": "119000",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.476586,
+            "duration_ms": 0.119
+          },
+          {
+            "ts": "127088883363392",
+            "dur": "375",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.596711,
+            "duration_ms": 0.000375
+          },
+          {
+            "ts": "127088883364225",
+            "dur": "88667",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.597544,
+            "duration_ms": 0.088667
+          },
+          {
+            "ts": "127088883453892",
+            "dur": "417",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.687211,
+            "duration_ms": 0.000417
+          },
+          {
+            "ts": "127088883454767",
+            "dur": "833",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.688086,
+            "duration_ms": 0.000833
+          },
+          {
+            "ts": "127088883456225",
+            "dur": "146667",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.689544,
+            "duration_ms": 0.146667
+          },
+          {
+            "ts": "127088883535434",
+            "dur": "458",
+            "name": "Atlas full",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.768753,
+            "duration_ms": 0.000458
+          },
+          {
+            "ts": "127088883603434",
+            "dur": "583",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.836753,
+            "duration_ms": 0.000583
+          },
+          {
+            "ts": "127088883802975",
+            "dur": "70834",
+            "name": "auto skgpu::ganesh::OpsTask::onExecute(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.036294,
+            "duration_ms": 0.070834
+          },
+          {
+            "ts": "127088883812725",
+            "dur": "21417",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.046044,
+            "duration_ms": 0.021417
+          },
+          {
+            "ts": "127088883834684",
+            "dur": "2750",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.068003,
+            "duration_ms": 0.00275
+          },
+          {
+            "ts": "127088883837850",
+            "dur": "12584",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.071169,
+            "duration_ms": 0.012584
+          },
+          {
+            "ts": "127088883850809",
+            "dur": "583",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.084128,
+            "duration_ms": 0.000583
+          },
+          {
+            "ts": "127088883851684",
+            "dur": "3833",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.085003,
+            "duration_ms": 0.003833
+          },
+          {
+            "ts": "127088883855809",
+            "dur": "458",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.089128,
+            "duration_ms": 0.000458
+          },
+          {
+            "ts": "127088883856600",
+            "dur": "3375",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.089919,
+            "duration_ms": 0.003375
+          },
+          {
+            "ts": "127088883860309",
+            "dur": "416",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.093628,
+            "duration_ms": 0.000416
+          },
+          {
+            "ts": "127088883861017",
+            "dur": "1083",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.094336,
+            "duration_ms": 0.001083
+          },
+          {
+            "ts": "127088883862559",
+            "dur": "8416",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.095878,
+            "duration_ms": 0.008416
+          },
+          {
+            "ts": "127088883871350",
+            "dur": "1959",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.104669,
+            "duration_ms": 0.001959
+          },
+          {
+            "ts": "127088883889100",
+            "dur": "1500",
+            "name": "frameTimelineInfo(frameNumber=149, vsyncId=69969393, inputEventId=0xc206278f)",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.122419,
+            "duration_ms": 0.0015
+          },
+          {
+            "ts": "127088887131142",
+            "dur": "38292",
+            "name": "reportMetricsWithPresentTime",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 7.364461,
+            "duration_ms": 0.038292
+          },
+          {
+            "ts": "127088887171517",
+            "dur": "5292",
+            "name": "dumpingMemoryStatistics",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 7.404836,
+            "duration_ms": 0.005292
+          }
+        ],
+        "mount_slices": [
+          {
+            "ts": "127088882256225",
+            "dur": "22000",
+            "name": "MountItemDispatcher::mountViews mountItems to execute",
+            "thread": "erolist.example",
+            "is_main_thread": "1"
+          },
+          {
+            "ts": "127088882264767",
+            "dur": "12542",
+            "name": "IntBufferBatchMountItem::mountViews",
+            "thread": "erolist.example",
+            "is_main_thread": "1"
+          },
+          {
+            "ts": "127088882269017",
+            "dur": "7042",
+            "name": "IntBufferBatchMountItem::mountInstructions::UPDATE_STATE numInstructions=1",
+            "thread": "erolist.example",
+            "is_main_thread": "1"
+          }
+        ]
+      },
+      {
+        "intended": 127093379766501,
+        "vsync": 127093379766501,
+        "total": 33708518,
+        "deadline": 33333332,
+        "gpu": 30461542,
+        "input": 334,
+        "layout": 15375,
+        "unknown": 453976,
+        "draw": 28542,
+        "sync": 323166,
+        "command": 771375,
+        "swap": 15568500,
+        "first": 0,
+        "dropped": 0,
+        "gfx_timeline_ms": {
+          "HandleInputStart": 0.453976,
+          "AnimationStart": 0.45431,
+          "PerformTraversalsStart": 0.633518,
+          "DrawStart": 0.648893,
+          "FrameDeadline": 33.333332,
+          "SyncQueued": 0.677435,
+          "SyncStart": 2.152435,
+          "IssueDrawCommandsStart": 2.475601,
+          "SwapBuffers": 3.246976,
+          "FrameCompleted": 33.708518,
+          "GpuCompleted": 33.708518,
+          "SwapBuffersCompleted": 18.815476,
+          "CommandSubmissionCompleted": 3.246976
+        },
+        "from_first_touch_ms": 4572.332609,
+        "excess_ms": 0.375186,
+        "thread_states_ms": {
+          "main:S": 32.74131,
+          "main:R": 0.42608300000000005,
+          "main:Running": 0.541125,
+          "RenderThread:S": 31.983185,
+          "RenderThread:R": 0.118375,
+          "RenderThread:Running": 1.6069579999999999,
+          "mqt_v_js:S": 33.53706,
+          "mqt_v_js:R": 0.029833,
+          "mqt_v_js:Running": 0.141625
+        },
+        "slices": [
+          {
+            "ts": "127093380203394",
+            "dur": "9000",
+            "name": "Choreographer#onVsync 69974934",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.436893,
+            "duration_ms": 0.009
+          },
+          {
+            "ts": "127093380217936",
+            "dur": "2104125",
+            "name": "Choreographer#doFrame 69974934",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.451435,
+            "duration_ms": 2.104125
+          },
+          {
+            "ts": "127093380221894",
+            "dur": "177875",
+            "name": "animation",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.455393,
+            "duration_ms": 0.177875
+          },
+          {
+            "ts": "127093380272019",
+            "dur": "31375",
+            "name": "MountItemDispatcher::mountViews mountItems to execute",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.505518,
+            "duration_ms": 0.031375
+          },
+          {
+            "ts": "127093380285102",
+            "dur": "17209",
+            "name": "IntBufferBatchMountItem::mountViews",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.518601,
+            "duration_ms": 0.017209
+          },
+          {
+            "ts": "127093380289602",
+            "dur": "10292",
+            "name": "IntBufferBatchMountItem::mountInstructions::UPDATE_STATE numInstructions=1",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.523101,
+            "duration_ms": 0.010292
+          },
+          {
+            "ts": "127093380311811",
+            "dur": "36375",
+            "name": "Choreographer#scheduleVsyncLocked",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.54531,
+            "duration_ms": 0.036375
+          },
+          {
+            "ts": "127093380384811",
+            "dur": "3166",
+            "name": "BatchEventDispatchedListeners",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.61831,
+            "duration_ms": 0.003166
+          },
+          {
+            "ts": "127093380400561",
+            "dur": "1918916",
+            "name": "traversal",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.63406,
+            "duration_ms": 1.918916
+          },
+          {
+            "ts": "127093380409102",
+            "dur": "1905709",
+            "name": "draw-VRI[SoloActivity]",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.642601,
+            "duration_ms": 1.905709
+          },
+          {
+            "ts": "127093380415936",
+            "dur": "27208",
+            "name": "Record View#draw()",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.649435,
+            "duration_ms": 0.027208
+          },
+          {
+            "ts": "127093380444477",
+            "dur": "1868375",
+            "name": "postAndWait",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.677976,
+            "duration_ms": 1.868375
+          },
+          {
+            "ts": "127093396768269",
+            "dur": "6125",
+            "name": "Choreographer#onVsync 69974949",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 17.001768,
+            "duration_ms": 0.006125
+          },
+          {
+            "ts": "127093396779144",
+            "dur": "131833",
+            "name": "Choreographer#doFrame 69974949",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 17.012643,
+            "duration_ms": 0.131833
+          },
+          {
+            "ts": "127093396781561",
+            "dur": "128625",
+            "name": "animation",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 17.01506,
+            "duration_ms": 0.128625
+          },
+          {
+            "ts": "127093396803019",
+            "dur": "40042",
+            "name": "Choreographer#scheduleVsyncLocked",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 17.036518,
+            "duration_ms": 0.040042
+          },
+          {
+            "ts": "127093396900352",
+            "dur": "1959",
+            "name": "BatchEventDispatchedListeners",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 17.133851,
+            "duration_ms": 0.001959
+          },
+          {
+            "ts": "127093366426644",
+            "dur": "15483083",
+            "name": "DrawFrames 69974919",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": -13.339857,
+            "duration_ms": 15.483083
+          },
+          {
+            "ts": "127093366715102",
+            "dur": "15193375",
+            "name": "Drawing  0.00  0.00 1080.00 2400.00",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": -13.051399,
+            "duration_ms": 15.193375
+          },
+          {
+            "ts": "127093381894394",
+            "dur": "6542",
+            "name": "reportMetricsWithPresentTime",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.127893,
+            "duration_ms": 0.006542
+          },
+          {
+            "ts": "127093381902686",
+            "dur": "5541",
+            "name": "dumpingMemoryStatistics",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.136185,
+            "duration_ms": 0.005541
+          },
+          {
+            "ts": "127093381916102",
+            "dur": "334",
+            "name": "notifyFramePending",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.149601,
+            "duration_ms": 0.000334
+          },
+          {
+            "ts": "127093381917269",
+            "dur": "16696000",
+            "name": "DrawFrames 69974934",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.150768,
+            "duration_ms": 16.696
+          },
+          {
+            "ts": "127093381918269",
+            "dur": "306708",
+            "name": "syncFrameState",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.151768,
+            "duration_ms": 0.306708
+          },
+          {
+            "ts": "127093381920311",
+            "dur": "303208",
+            "name": "prepareTree",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.15381,
+            "duration_ms": 0.303208
+          },
+          {
+            "ts": "127093382248894",
+            "dur": "16362958",
+            "name": "Drawing  0.00  0.00 1080.00 2400.00",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.482393,
+            "duration_ms": 16.362958
+          },
+          {
+            "ts": "127093382607186",
+            "dur": "400750",
+            "name": "flush commands",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.840685,
+            "duration_ms": 0.40075
+          },
+          {
+            "ts": "127093382611519",
+            "dur": "252208",
+            "name": "auto skgpu::ganesh::OpsTask::onPrepare(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.845018,
+            "duration_ms": 0.252208
+          },
+          {
+            "ts": "127093382612311",
+            "dur": "333",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.84581,
+            "duration_ms": 0.000333
+          },
+          {
+            "ts": "127093382613102",
+            "dur": "5959",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.846601,
+            "duration_ms": 0.005959
+          },
+          {
+            "ts": "127093382619436",
+            "dur": "291",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.852935,
+            "duration_ms": 0.000291
+          },
+          {
+            "ts": "127093382620019",
+            "dur": "68333",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.853518,
+            "duration_ms": 0.068333
+          },
+          {
+            "ts": "127093382688894",
+            "dur": "292",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.922393,
+            "duration_ms": 0.000292
+          },
+          {
+            "ts": "127093382689519",
+            "dur": "66708",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.923018,
+            "duration_ms": 0.066708
+          },
+          {
+            "ts": "127093382756644",
+            "dur": "292",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.990143,
+            "duration_ms": 0.000292
+          },
+          {
+            "ts": "127093382757269",
+            "dur": "48958",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.990768,
+            "duration_ms": 0.048958
+          },
+          {
+            "ts": "127093382806811",
+            "dur": "53916",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.04031,
+            "duration_ms": 0.053916
+          },
+          {
+            "ts": "127093382861352",
+            "dur": "1000",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.094851,
+            "duration_ms": 0.001
+          },
+          {
+            "ts": "127093382862686",
+            "dur": "666",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.096185,
+            "duration_ms": 0.000666
+          },
+          {
+            "ts": "127093382952394",
+            "dur": "49083",
+            "name": "auto skgpu::ganesh::OpsTask::onExecute(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.185893,
+            "duration_ms": 0.049083
+          },
+          {
+            "ts": "127093382956894",
+            "dur": "2792",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.190393,
+            "duration_ms": 0.002792
+          },
+          {
+            "ts": "127093382960019",
+            "dur": "14542",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.193518,
+            "duration_ms": 0.014542
+          },
+          {
+            "ts": "127093382974894",
+            "dur": "500",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.208393,
+            "duration_ms": 0.0005
+          },
+          {
+            "ts": "127093382975727",
+            "dur": "3875",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.209226,
+            "duration_ms": 0.003875
+          },
+          {
+            "ts": "127093382979936",
+            "dur": "416",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.213435,
+            "duration_ms": 0.000416
+          },
+          {
+            "ts": "127093382980644",
+            "dur": "3375",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.214143,
+            "duration_ms": 0.003375
+          },
+          {
+            "ts": "127093382984311",
+            "dur": "416",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.21781,
+            "duration_ms": 0.000416
+          },
+          {
+            "ts": "127093382985019",
+            "dur": "3250",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.218518,
+            "duration_ms": 0.00325
+          },
+          {
+            "ts": "127093382988561",
+            "dur": "6458",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.22206,
+            "duration_ms": 0.006458
+          },
+          {
+            "ts": "127093382995352",
+            "dur": "3459",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.228851,
+            "duration_ms": 0.003459
+          },
+          {
+            "ts": "127093382999144",
+            "dur": "1917",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.232643,
+            "duration_ms": 0.001917
+          },
+          {
+            "ts": "127093383011852",
+            "dur": "1042",
+            "name": "frameTimelineInfo(frameNumber=419, vsyncId=69974934, inputEventId=0x0)",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 3.245351,
+            "duration_ms": 0.001042
+          },
+          {
+            "ts": "127093398584894",
+            "dur": "19500",
+            "name": "reportMetricsWithPresentTime",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 18.818393,
+            "duration_ms": 0.0195
+          },
+          {
+            "ts": "127093398606269",
+            "dur": "5292",
+            "name": "dumpingMemoryStatistics",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 18.839768,
+            "duration_ms": 0.005292
+          }
+        ],
+        "mount_slices": [
+          {
+            "ts": "127093380272019",
+            "dur": "31375",
+            "name": "MountItemDispatcher::mountViews mountItems to execute",
+            "thread": "erolist.example",
+            "is_main_thread": "1"
+          },
+          {
+            "ts": "127093380285102",
+            "dur": "17209",
+            "name": "IntBufferBatchMountItem::mountViews",
+            "thread": "erolist.example",
+            "is_main_thread": "1"
+          },
+          {
+            "ts": "127093380289602",
+            "dur": "10292",
+            "name": "IntBufferBatchMountItem::mountInstructions::UPDATE_STATE numInstructions=1",
+            "thread": "erolist.example",
+            "is_main_thread": "1"
+          }
+        ]
+      },
+      {
+        "intended": 127093763099819,
+        "vsync": 127093763099819,
+        "total": 17520409,
+        "deadline": 16666666,
+        "gpu": 15646417,
+        "input": 166,
+        "layout": 21541,
+        "unknown": 444784,
+        "draw": 53334,
+        "sync": 225708,
+        "command": 1023917,
+        "swap": 577083,
+        "first": 0,
+        "dropped": 0,
+        "gfx_timeline_ms": {
+          "HandleInputStart": 0.444784,
+          "AnimationStart": 0.44495,
+          "PerformTraversalsStart": 0.520909,
+          "DrawStart": 0.54245,
+          "FrameDeadline": 16.666666,
+          "SyncQueued": 0.595784,
+          "SyncStart": 0.624367,
+          "IssueDrawCommandsStart": 0.850075,
+          "SwapBuffers": 1.873992,
+          "FrameCompleted": 17.520409,
+          "GpuCompleted": 17.520409,
+          "SwapBuffersCompleted": 2.451075,
+          "CommandSubmissionCompleted": 1.873992
+        },
+        "from_first_touch_ms": 4955.665927,
+        "excess_ms": 0.853743,
+        "thread_states_ms": {
+          "main:S": 17.02445,
+          "main:R": 0.11025,
+          "main:Running": 0.38570899999999997,
+          "RenderThread:S": 15.520241,
+          "RenderThread:R": 0.219625,
+          "RenderThread:Running": 1.780543,
+          "mqt_v_js:S": 17.520409
+        },
+        "slices": [
+          {
+            "ts": "127093763537603",
+            "dur": "3458",
+            "name": "Choreographer#onVsync 69975258",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.437784,
+            "duration_ms": 0.003458
+          },
+          {
+            "ts": "127093763543269",
+            "dur": "544875",
+            "name": "Choreographer#doFrame 69975258",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.44345,
+            "duration_ms": 0.544875
+          },
+          {
+            "ts": "127093763545769",
+            "dur": "74750",
+            "name": "animation",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.44595,
+            "duration_ms": 0.07475
+          },
+          {
+            "ts": "127093763566394",
+            "dur": "18334",
+            "name": "Choreographer#scheduleVsyncLocked",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.466575,
+            "duration_ms": 0.018334
+          },
+          {
+            "ts": "127093763617019",
+            "dur": "2459",
+            "name": "BatchEventDispatchedListeners",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.5172,
+            "duration_ms": 0.002459
+          },
+          {
+            "ts": "127093763621436",
+            "dur": "465625",
+            "name": "traversal",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.521617,
+            "duration_ms": 0.465625
+          },
+          {
+            "ts": "127093763634561",
+            "dur": "338708",
+            "name": "draw-VRI[SoloActivity]",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.534742,
+            "duration_ms": 0.338708
+          },
+          {
+            "ts": "127093763642894",
+            "dur": "51292",
+            "name": "Record View#draw()",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.543075,
+            "duration_ms": 0.051292
+          },
+          {
+            "ts": "127093763696269",
+            "dur": "276334",
+            "name": "postAndWait",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.59645,
+            "duration_ms": 0.276334
+          },
+          {
+            "ts": "127093763978394",
+            "dur": "107750",
+            "name": "ViewRootImpl#setFrameRate 0.0 compatibility 1",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 0.878575,
+            "duration_ms": 0.10775
+          },
+          {
+            "ts": "127093763569603",
+            "dur": "2083",
+            "name": "notifyFramePending",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 0.469784,
+            "duration_ms": 0.002083
+          },
+          {
+            "ts": "127093763717603",
+            "dur": "500",
+            "name": "notifyFramePending",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 0.617784,
+            "duration_ms": 0.0005
+          },
+          {
+            "ts": "127093763719269",
+            "dur": "1854709",
+            "name": "DrawFrames 69975258",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 0.61945,
+            "duration_ms": 1.854709
+          },
+          {
+            "ts": "127093763722644",
+            "dur": "214792",
+            "name": "syncFrameState",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 0.622825,
+            "duration_ms": 0.214792
+          },
+          {
+            "ts": "127093763726144",
+            "dur": "210500",
+            "name": "prepareTree",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 0.626325,
+            "duration_ms": 0.2105
+          },
+          {
+            "ts": "127093763957644",
+            "dur": "1615459",
+            "name": "Drawing  0.00  0.00 1080.00 2400.00",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 0.857825,
+            "duration_ms": 1.615459
+          },
+          {
+            "ts": "127093764528228",
+            "dur": "438166",
+            "name": "flush commands",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.428409,
+            "duration_ms": 0.438166
+          },
+          {
+            "ts": "127093764532603",
+            "dur": "277416",
+            "name": "auto skgpu::ganesh::OpsTask::onPrepare(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.432784,
+            "duration_ms": 0.277416
+          },
+          {
+            "ts": "127093764533186",
+            "dur": "333",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.433367,
+            "duration_ms": 0.000333
+          },
+          {
+            "ts": "127093764533978",
+            "dur": "6166",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.434159,
+            "duration_ms": 0.006166
+          },
+          {
+            "ts": "127093764540394",
+            "dur": "250",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.440575,
+            "duration_ms": 0.00025
+          },
+          {
+            "ts": "127093764540936",
+            "dur": "81375",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.441117,
+            "duration_ms": 0.081375
+          },
+          {
+            "ts": "127093764622769",
+            "dur": "292",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.52295,
+            "duration_ms": 0.000292
+          },
+          {
+            "ts": "127093764623353",
+            "dur": "75083",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.523534,
+            "duration_ms": 0.075083
+          },
+          {
+            "ts": "127093764698811",
+            "dur": "250",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.598992,
+            "duration_ms": 0.00025
+          },
+          {
+            "ts": "127093764699353",
+            "dur": "55166",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.599534,
+            "duration_ms": 0.055166
+          },
+          {
+            "ts": "127093764755103",
+            "dur": "52166",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.655284,
+            "duration_ms": 0.052166
+          },
+          {
+            "ts": "127093764807853",
+            "dur": "1041",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.708034,
+            "duration_ms": 0.001041
+          },
+          {
+            "ts": "127093764809144",
+            "dur": "500",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.709325,
+            "duration_ms": 0.0005
+          },
+          {
+            "ts": "127093764906936",
+            "dur": "45250",
+            "name": "auto skgpu::ganesh::OpsTask::onExecute(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.807117,
+            "duration_ms": 0.04525
+          },
+          {
+            "ts": "127093764911394",
+            "dur": "2667",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.811575,
+            "duration_ms": 0.002667
+          },
+          {
+            "ts": "127093764914353",
+            "dur": "13458",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.814534,
+            "duration_ms": 0.013458
+          },
+          {
+            "ts": "127093764928144",
+            "dur": "417",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.828325,
+            "duration_ms": 0.000417
+          },
+          {
+            "ts": "127093764928811",
+            "dur": "3292",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.828992,
+            "duration_ms": 0.003292
+          },
+          {
+            "ts": "127093764932394",
+            "dur": "417",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.832575,
+            "duration_ms": 0.000417
+          },
+          {
+            "ts": "127093764933103",
+            "dur": "2875",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.833284,
+            "duration_ms": 0.002875
+          },
+          {
+            "ts": "127093764936269",
+            "dur": "334",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.83645,
+            "duration_ms": 0.000334
+          },
+          {
+            "ts": "127093764936894",
+            "dur": "2834",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.837075,
+            "duration_ms": 0.002834
+          },
+          {
+            "ts": "127093764940019",
+            "dur": "6125",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.8402,
+            "duration_ms": 0.006125
+          },
+          {
+            "ts": "127093764946436",
+            "dur": "3542",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.846617,
+            "duration_ms": 0.003542
+          },
+          {
+            "ts": "127093764950228",
+            "dur": "1583",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.850409,
+            "duration_ms": 0.001583
+          },
+          {
+            "ts": "127093764971519",
+            "dur": "1625",
+            "name": "frameTimelineInfo(frameNumber=420, vsyncId=69975258, inputEventId=0x0)",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 1.8717,
+            "duration_ms": 0.001625
+          },
+          {
+            "ts": "127093765554478",
+            "dur": "11750",
+            "name": "reportMetricsWithPresentTime",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.454659,
+            "duration_ms": 0.01175
+          },
+          {
+            "ts": "127093765567561",
+            "dur": "5250",
+            "name": "dumpingMemoryStatistics",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 2.467742,
+            "duration_ms": 0.00525
+          }
+        ],
+        "mount_slices": []
+      }
+    ],
+    "late_ratio_percent": 1.0344827586206897,
+    "trace_errors": []
+  },
+  "trace-zero": {
+    "frames": 272,
+    "late": 1,
+    "dropped": 0,
+    "gfx_frames": 272,
+    "gfx_jank": 1,
+    "gfx_jank_matches": true,
+    "late_frames": [
+      {
+        "intended": 127065229767627,
+        "vsync": 127065229767627,
+        "total": 17400545,
+        "deadline": 16666666,
+        "gpu": 10752375,
+        "input": 626041,
+        "layout": 50625,
+        "unknown": 3721379,
+        "draw": 83250,
+        "sync": 558416,
+        "command": 1205125,
+        "swap": 6594167,
+        "first": 0,
+        "dropped": 0,
+        "from_first_touch_ms": 31.472121,
+        "excess_ms": 0.733879,
+        "thread_states_ms": {
+          "main:S": 15.88092,
+          "main:R": 0.537834,
+          "main:Running": 0.958583,
+          "main:R+": 0.023208,
+          "RenderThread:S": 8.659085,
+          "RenderThread:R": 0.200042,
+          "RenderThread:Running": 8.541418,
+          "mqt_v_js:S": 17.257711999999998,
+          "mqt_v_js:R": 0.014125,
+          "mqt_v_js:Running": 0.128708
+        },
+        "slices": [
+          {
+            "ts": "127065233471297",
+            "dur": "12042",
+            "name": "Choreographer#onVsync 69945610",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.70367,
+            "duration_ms": 0.012042
+          },
+          {
+            "ts": "127065233487506",
+            "dur": "1764916",
+            "name": "Choreographer#doFrame 69945610",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.719879,
+            "duration_ms": 1.764916
+          },
+          {
+            "ts": "127065233490381",
+            "dur": "624083",
+            "name": "input",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.722754,
+            "duration_ms": 0.624083
+          },
+          {
+            "ts": "127065233492922",
+            "dur": "620209",
+            "name": "VRI[SoloActivity]",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.725295,
+            "duration_ms": 0.620209
+          },
+          {
+            "ts": "127065233590297",
+            "dur": "3250",
+            "name": "processInputEventForCompatibility",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.82267,
+            "duration_ms": 0.00325
+          },
+          {
+            "ts": "127065233603339",
+            "dur": "472583",
+            "name": "deliverInputEvent src=0x1002 eventTimeNano=127065218000000 id=0xeea49df9",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.835712,
+            "duration_ms": 0.472583
+          },
+          {
+            "ts": "127065233606089",
+            "dur": "1958",
+            "name": "EarlyPostImeInputStage id=0xeea49df9",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.838462,
+            "duration_ms": 0.001958
+          },
+          {
+            "ts": "127065233611672",
+            "dur": "709",
+            "name": "NativePostImeInputStage id=0xeea49df9",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.844045,
+            "duration_ms": 0.000709
+          },
+          {
+            "ts": "127065233613214",
+            "dur": "426083",
+            "name": "ViewPostImeInputStage id=0xeea49df9",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.845587,
+            "duration_ms": 0.426083
+          },
+          {
+            "ts": "127065233757089",
+            "dur": "101417",
+            "name": "TouchesHelper.sentTouchEventModern(topTouchMove)",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 3.989462,
+            "duration_ms": 0.101417
+          },
+          {
+            "ts": "127065233863964",
+            "dur": "25792",
+            "name": "TouchesHelper.sentTouchEventModern(topTouchMove)",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.096337,
+            "duration_ms": 0.025792
+          },
+          {
+            "ts": "127065233877631",
+            "dur": "11791",
+            "name": "FabricEventEmitter.receiveEvent('topTouchMove')",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.110004,
+            "duration_ms": 0.011791
+          },
+          {
+            "ts": "127065233893881",
+            "dur": "135208",
+            "name": "View#onTouchEvent",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.126254,
+            "duration_ms": 0.135208
+          },
+          {
+            "ts": "127065233937631",
+            "dur": "4500",
+            "name": "FabricEventEmitter.receiveEvent('topPoolScroll')",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.170004,
+            "duration_ms": 0.0045
+          },
+          {
+            "ts": "127065233943339",
+            "dur": "6875",
+            "name": "ZL.reposition",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.175712,
+            "duration_ms": 0.006875
+          },
+          {
+            "ts": "127065233958256",
+            "dur": "27125",
+            "name": "Choreographer#scheduleVsyncLocked",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.190629,
+            "duration_ms": 0.027125
+          },
+          {
+            "ts": "127065234116006",
+            "dur": "326500",
+            "name": "animation",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.348379,
+            "duration_ms": 0.3265
+          },
+          {
+            "ts": "127065234173672",
+            "dur": "266584",
+            "name": "BatchEventDispatchedListeners",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.406045,
+            "duration_ms": 0.266584
+          },
+          {
+            "ts": "127065234443797",
+            "dur": "806667",
+            "name": "traversal",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.67617,
+            "duration_ms": 0.806667
+          },
+          {
+            "ts": "127065234484131",
+            "dur": "762333",
+            "name": "draw-VRI[SoloActivity]",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.716504,
+            "duration_ms": 0.762333
+          },
+          {
+            "ts": "127065234494547",
+            "dur": "80667",
+            "name": "Record View#draw()",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.72692,
+            "duration_ms": 0.080667
+          },
+          {
+            "ts": "127065234577506",
+            "dur": "667000",
+            "name": "postAndWait",
+            "thread": "erolist.example",
+            "is_main_thread": "1",
+            "relative_ms": 4.809879,
+            "duration_ms": 0.667
+          },
+          {
+            "ts": "127065234056631",
+            "dur": "1583",
+            "name": "notifyFramePending",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.289004,
+            "duration_ms": 0.001583
+          },
+          {
+            "ts": "127065234647339",
+            "dur": "8476708",
+            "name": "DrawFrames 69945610",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.879712,
+            "duration_ms": 8.476708
+          },
+          {
+            "ts": "127065234651047",
+            "dur": "540459",
+            "name": "syncFrameState",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.88342,
+            "duration_ms": 0.540459
+          },
+          {
+            "ts": "127065234654297",
+            "dur": "534834",
+            "name": "prepareTree",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 4.88667,
+            "duration_ms": 0.534834
+          },
+          {
+            "ts": "127065235220297",
+            "dur": "7902084",
+            "name": "Drawing  0.00  0.00 1080.00 2400.00",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.45267,
+            "duration_ms": 7.902084
+          },
+          {
+            "ts": "127065235486589",
+            "dur": "920708",
+            "name": "flush commands",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.718962,
+            "duration_ms": 0.920708
+          },
+          {
+            "ts": "127065235491881",
+            "dur": "326875",
+            "name": "auto skgpu::ganesh::OpsTask::onPrepare(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.724254,
+            "duration_ms": 0.326875
+          },
+          {
+            "ts": "127065235492422",
+            "dur": "3667",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.724795,
+            "duration_ms": 0.003667
+          },
+          {
+            "ts": "127065235496672",
+            "dur": "334",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.729045,
+            "duration_ms": 0.000334
+          },
+          {
+            "ts": "127065235497422",
+            "dur": "93792",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.729795,
+            "duration_ms": 0.093792
+          },
+          {
+            "ts": "127065235591881",
+            "dur": "226500",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.824254,
+            "duration_ms": 0.2265
+          },
+          {
+            "ts": "127065235749964",
+            "dur": "375",
+            "name": "Atlas full",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 5.982337,
+            "duration_ms": 0.000375
+          },
+          {
+            "ts": "127065236349422",
+            "dur": "50000",
+            "name": "auto skgpu::ganesh::OpsTask::onExecute(GrOpFlushState *)::(anonymous class)::operator()() const",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.581795,
+            "duration_ms": 0.05
+          },
+          {
+            "ts": "127065236355381",
+            "dur": "17541",
+            "name": "FillRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.587754,
+            "duration_ms": 0.017541
+          },
+          {
+            "ts": "127065236373506",
+            "dur": "2833",
+            "name": "Clear",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.605879,
+            "duration_ms": 0.002833
+          },
+          {
+            "ts": "127065236376922",
+            "dur": "13500",
+            "name": "CircularRRectOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.609295,
+            "duration_ms": 0.0135
+          },
+          {
+            "ts": "127065236390797",
+            "dur": "8167",
+            "name": "AtlasTextOp",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.62317,
+            "duration_ms": 0.008167
+          },
+          {
+            "ts": "127065236413464",
+            "dur": "1333",
+            "name": "frameTimelineInfo(frameNumber=113, vsyncId=69945610, inputEventId=0xd62e2a69)",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 6.645837,
+            "duration_ms": 0.001333
+          },
+          {
+            "ts": "127065243015172",
+            "dur": "68792",
+            "name": "reportMetricsWithPresentTime",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 13.247545,
+            "duration_ms": 0.068792
+          },
+          {
+            "ts": "127065243086089",
+            "dur": "35917",
+            "name": "dumpingMemoryStatistics",
+            "thread": "RenderThread",
+            "is_main_thread": "0",
+            "relative_ms": 13.318462,
+            "duration_ms": 0.035917
+          }
+        ],
+        "mount_slices": []
+      }
+    ],
+    "late_ratio_percent": 0.36764705882352944,
+    "trace_errors": []
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "measured_runs": 70,
+  "audit_runs": 28,
+  "audit_frames": 10903,
+  "wrong_frames": 0,
+  "overlap_frames": 0,
+  "native_release_builds": ["android-arm64", "ios-simulator-arm64"],
+  "library_typecheck": true,
+  "lint": true,
+  "jest_tests": 73,
+  "web_build": true,
+  "template_source_hashes_match": true,
+  "physical_device_tested": false,
+  "controlled_host_load": false,
+  "initial_textinput_attempt_excluded": true
+}

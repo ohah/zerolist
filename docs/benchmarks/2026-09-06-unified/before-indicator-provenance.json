@@ -1,0 +1,22 @@
+{
+  "commit": "097612344112e3df579d5de688420fe0befec1bc",
+  "rn": "0.87.1",
+  "build": "arm64 Release",
+  "tests_passed": 103,
+  "sources": {
+    "packages/zerolist/src/list.tsx": "999e0f09b8ab0847d18f8ddb7bd3a25f7afb7020597ac145e39fd8e2a601e6ee",
+    "packages/zerolist/src/windowed-list.tsx": "2886441019b6482029605fb075046b14eec978a6499a0230286cac0259564ef1",
+    "packages/zerolist/src/pool-list.tsx": "cd267212b2d2ea02a210a4b858e4690f771ea2d3350f80339886bee57405abdd",
+    "packages/zerolist/src/pool-layout.ts": "a7926a8e31e90ed797052b61903acbaf1573a4d2d05c37408d883538eebea7f0",
+    "packages/zerolist/src/ZlPoolListNativeComponent.ts": "72187035134b5b44301c0bf6c14f744f7ca920f5bc2245d1ecc077be0046c4bd",
+    "packages/zerolist/android/src/main/java/com/zerolist/ZlPoolList.kt": "a3376b6efc175a9edb6526d56206c1e42391b9b635251852e3c39e9c291decc6",
+    "packages/zerolist/ios/ZlPoolListComponentView.mm": "00648ebe57c288dc5be10f4477d7deb30dd98df1a1b3a89c75ba366d1cd265fa",
+    "apps/example/src/UnifiedContract.tsx": "60d710a2b384690ed8868efbd813ca9943fc52a4726aa3ea30a80e996bdff6fb",
+    "apps/example/src/Solo.tsx": "8ebabf8e1b50ed78645e975fd4b0eeb82b8222295b7b869a43c0a1176bb0c634"
+  },
+  "artifacts": {
+    "apk": "c6fb1fe18a470956e47ab73c3ba147e0221705fbdb34f28b2bc4c0a72987569c",
+    "ios_executable": "2d4d7355b491d7b633fcdfa9e020ec90f72cf6ed85f9ff30af6fe602521f9fe6",
+    "ios_bundle": "9f749d7bca039c01aa9358e6e3f93b574c4d6479656466047d023980af79c2ff"
+  }
+}

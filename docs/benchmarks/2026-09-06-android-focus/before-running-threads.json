@@ -1,0 +1,152 @@
+{
+  "zerolist": [
+    {
+      "name": "RenderThread",
+      "ms": "570.935367"
+    },
+    {
+      "name": "erolist.example",
+      "ms": "453.171548"
+    },
+    {
+      "name": "mqt_v_js",
+      "ms": "182.007419"
+    },
+    {
+      "name": "HeapTaskDaemon",
+      "ms": "37.280001"
+    },
+    {
+      "name": "Jit thread pool",
+      "ms": "18.407753"
+    },
+    {
+      "name": "FrescoDecodeExe",
+      "ms": "16.764588"
+    },
+    {
+      "name": "ZLFrameMetrics",
+      "ms": "13.713091"
+    },
+    {
+      "name": "binder:23093_2",
+      "ms": "11.774832"
+    },
+    {
+      "name": "FrescoLightWeig",
+      "ms": "11.341669"
+    },
+    {
+      "name": "binder:23093_5",
+      "ms": "11.098008"
+    },
+    {
+      "name": "ReferenceQueueD",
+      "ms": "7.846751"
+    },
+    {
+      "name": "HybridData Dest",
+      "ms": "5.007999"
+    }
+  ],
+  "flatlist": [
+    {
+      "name": "erolist.example",
+      "ms": "737.454105"
+    },
+    {
+      "name": "RenderThread",
+      "ms": "523.757749"
+    },
+    {
+      "name": "mqt_v_js",
+      "ms": "248.635256"
+    },
+    {
+      "name": "HeapTaskDaemon",
+      "ms": "107.408708"
+    },
+    {
+      "name": "Jit thread pool",
+      "ms": "21.352961"
+    },
+    {
+      "name": "FrescoDecodeExe",
+      "ms": "20.646968"
+    },
+    {
+      "name": "binder:23314_1",
+      "ms": "19.885813"
+    },
+    {
+      "name": "FrescoLightWeig",
+      "ms": "16.208166"
+    },
+    {
+      "name": "ZLFrameMetrics",
+      "ms": "15.770836"
+    },
+    {
+      "name": "binder:23314_5",
+      "ms": "11.715382"
+    },
+    {
+      "name": "ReferenceQueueD",
+      "ms": "9.409249"
+    },
+    {
+      "name": "HybridData Dest",
+      "ms": "6.809875"
+    }
+  ],
+  "zigpool": [
+    {
+      "name": "RenderThread",
+      "ms": "536.819212"
+    },
+    {
+      "name": "erolist.example",
+      "ms": "382.964457"
+    },
+    {
+      "name": "mqt_v_js",
+      "ms": "147.083293"
+    },
+    {
+      "name": "Jit thread pool",
+      "ms": "15.079330"
+    },
+    {
+      "name": "HeapTaskDaemon",
+      "ms": "14.601998"
+    },
+    {
+      "name": "binder:23534_2",
+      "ms": "14.349864"
+    },
+    {
+      "name": "ZLFrameMetrics",
+      "ms": "14.279461"
+    },
+    {
+      "name": "binder:23534_4",
+      "ms": "13.382042"
+    },
+    {
+      "name": "HybridData Dest",
+      "ms": "5.841125"
+    },
+    {
+      "name": "binder:23534_3",
+      "ms": "2.167701"
+    },
+    {
+      "name": "ReferenceQueueD",
+      "ms": "2.073333"
+    },
+    {
+      "name": "SharedPreferenc",
+      "ms": "0.100459"
+    }
+  ]
+}

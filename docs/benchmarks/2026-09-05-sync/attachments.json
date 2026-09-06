@@ -1,0 +1,162 @@
+{
+  "report_snapshot": "752086f",
+  "placement": "PR 본문",
+  "attachments": [
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/b71c8695-60f1-4806-9bcb-a5feb8f7ab48",
+      "id": 646707196,
+      "name": "android-compare-0.mp4",
+      "local_file": "android-compare-0.mp4",
+      "sha256": "3d1c4b21a8bd2e8cae2ede25e323bd9f4cc03e7d2ffe775cf75d4e5e81337efc"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/74f8ccd8-ca39-4540-9718-fa0cb6647d12",
+      "id": 646707195,
+      "name": "android-compare-120-slow.mp4",
+      "local_file": "android-compare-120-slow.mp4",
+      "sha256": "b93d089a7d4170e9c91bfb1264c8d62d25fe8539cdc93ae8c3f257b53240bf6c"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/ee09b9e2-b707-4f90-8a9c-ee5f98b94234",
+      "id": 646707203,
+      "name": "android-compare-120.mp4",
+      "local_file": "android-compare-120.mp4",
+      "sha256": "bc36000659ff20c8b49dddecf5b5bf04937871fa346cad5d5f5c8a5529364aa4"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/76f95f2c-da00-452a-9c8a-8400fce88699",
+      "id": 646707202,
+      "name": "android-fixed-0.mp4",
+      "local_file": "android-fixed-0.mp4",
+      "sha256": "4f96aa6e051a4a29e8b12601c9f138e174a00a6bd26e54a06f124c7ac3c3feb5"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/7adfc7cb-7b13-4162-9df3-386bf34323a9",
+      "id": 646707204,
+      "name": "android-fixed-120.mp4",
+      "local_file": "android-fixed-120.mp4",
+      "sha256": "e7f15b072e572fe53e873f4139ddb5c1462e41a63cb59ef6f8389e933869da98"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/e262e81c-b020-4dd9-81f1-4f9e278c9729",
+      "id": 646707206,
+      "name": "android-legacy-0.mp4",
+      "local_file": "android-legacy-0.mp4",
+      "sha256": "1629ab116f1e7ec2a2172714c0844550c4b28721595bab503f969eb67f9a83d8"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/4e1f9680-725c-4a77-acea-6cf8873a8544",
+      "id": 646707209,
+      "name": "android-legacy-120.mp4",
+      "local_file": "android-legacy-120.mp4",
+      "sha256": "479fde1eb86b039dd3544e7fad586a3413f9dde7827bac958b68b5e1c6983cef"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/5ec2d351-baca-44d9-9fd5-fc31abbb8e36",
+      "id": 646707211,
+      "name": "ios-compare-0.mp4",
+      "local_file": "ios-compare-0.mp4",
+      "sha256": "bef39b8506f20fee80f379f2f91ccce18853943b9a76ce35141fd19bafb1a9de"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/fd61ee18-f56e-4e52-8199-cef87f7370b6",
+      "id": 646707214,
+      "name": "ios-compare-120-slow.mp4",
+      "local_file": "ios-compare-120-slow.mp4",
+      "sha256": "f761d013886667528e398cc2218126adbe9d74038355f75008de9c22a207fcb1"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/fa9db60e-1917-4b46-8a67-4223ee41112b",
+      "id": 646707219,
+      "name": "ios-compare-120.mp4",
+      "local_file": "ios-compare-120.mp4",
+      "sha256": "14aef8ec0f5a1d130aa963f2b099278f414488a996fbde45ac455e975db1816f"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/7f25c515-c03a-4db8-90ea-52cf98424e62",
+      "id": 646707223,
+      "name": "ios-fixed-0.mp4",
+      "local_file": "ios-fixed-0.mp4",
+      "sha256": "2e30352ddc48dc951ead145c79a093e5bf39954a2e166a54ca7666905402af0d"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/023b050f-9966-4db8-99a7-c715824b1e07",
+      "id": 646707224,
+      "name": "ios-fixed-120.mp4",
+      "local_file": "ios-fixed-120.mp4",
+      "sha256": "02786eb9ca01b1e70a5daa38212e012cadbedd339c942fc5a4b9d7cced9df333"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/1d08d08a-579c-463f-9c9b-137f2aaeca48",
+      "id": 646707226,
+      "name": "ios-legacy-0.mp4",
+      "local_file": "ios-legacy-0.mp4",
+      "sha256": "212e89fa1a69a2f405751d56e72b21ac5a234c782bdf87341fc70a9fa6d3b4fb"
+    },
+    {
+      "contentType": "video/mp4",
+      "href": "https://github.com/user-attachments/assets/c905a36d-aaf1-4278-bf02-0dbff67e4e54",
+      "id": 646707229,
+      "name": "ios-legacy-120.mp4",
+      "local_file": "ios-legacy-120.mp4",
+      "sha256": "dd58417b83a15b048b6e832ecd17a0cc9945bdc0070e5dcc2ae487953c116723"
+    },
+    {
+      "contentType": "image/png",
+      "href": "https://github.com/user-attachments/assets/3bd79062-ae16-4383-aa0e-784b37d868d9",
+      "id": 646707233,
+      "name": "android-performance-ko.png",
+      "local_file": "android-performance-ko.png",
+      "sha256": "50186cb97666305eeaac221234d5f60f3d281a81fec166a082f14ce32df6597d"
+    },
+    {
+      "contentType": "image/png",
+      "href": "https://github.com/user-attachments/assets/871a3e7e-acac-4a94-9bec-4a313ae1ea97",
+      "id": 646707235,
+      "name": "ios-performance-ko.png",
+      "local_file": "ios-performance-ko.png",
+      "sha256": "40832a3c21cc8074bb4ef9941cffab3277a3b8466fbcf32efda3a5214719bcb5"
+    },
+    {
+      "contentType": "image/png",
+      "href": "https://github.com/user-attachments/assets/2b0ff03c-05f1-4185-ae49-e3c35906b037",
+      "id": 646707236,
+      "name": "sync-correctness-ko.png",
+      "local_file": "sync-correctness-ko.png",
+      "sha256": "0f5cd0934071c6109ec5174900eb3e605edca4276db2e5adce40ed08a0cf4432"
+    }
+  ],
+  "unavailable_report_uploads": {
+    "reason": "gh attach 업로드 후 공개 다운로드가 404를 반환했습니다. 본문에서는 정상 접근 가능한 저장소 보고서 링크를 사용합니다.",
+    "attempts": [
+      {
+        "contentType": "text/markdown",
+        "href": "https://github.com/user-attachments/files/31860191/-.-.-.md",
+        "id": 31860191,
+        "name": "-.-.-.md",
+        "local_file": "제로리스트-양플랫폼-동기화-검증.md",
+        "sha256": "23058b093c4e7328ef6d7b423c13ab995f26e21fe096ccfe19818e565404d457"
+      },
+      {
+        "contentType": "text/markdown",
+        "href": "https://github.com/user-attachments/files/31860288/zerolist-sync-report-ko.md",
+        "id": 31860288,
+        "name": "zerolist-sync-report-ko.md"
+      }
+    ],
+    "fallback": "https://github.com/ohah/zerolist/blob/752086f/docs/benchmarks/2026-09-05-sync/README.md"
+  }
+}

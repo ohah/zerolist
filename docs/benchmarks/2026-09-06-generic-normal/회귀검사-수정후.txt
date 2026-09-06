@@ -1,0 +1,12 @@
+PASS native packages/zerolist/src/__tests__/list.test.tsx
+PASS logic packages/zerolist/src/__tests__/measurements.test.ts
+PASS native apps/example/src/harness/engines/__tests__/zigpool.test.tsx
+PASS logic packages/zerolist/src/__tests__/virtualizer.test.ts
+PASS native packages/zerolist/src/__tests__/index.test.tsx
+PASS native apps/example/src/harness/engines/__tests__/template-data.test.tsx
+
+Test Suites: 6 passed, 6 total
+Tests:       92 passed, 92 total
+Snapshots:   0 total
+Time:        0.722 s, estimated 1 s
+Ran all test suites in 2 projects.

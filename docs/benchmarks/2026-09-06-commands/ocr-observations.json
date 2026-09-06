@@ -1,0 +1,838 @@
+{
+  "android-template-command-after-scroll.png": [
+    {
+      "confidence": 1,
+      "height": 0.017529069582621237,
+      "text": "#32 dolor do ipsum",
+      "width": 0.3161290204083479,
+      "x": 0.19677420263453574,
+      "y": 0.946220930105877
+    },
+    {
+      "confidence": 1,
+      "height": 0.015998062292734705,
+      "text": "sit eiusmod dolor do ipsum sed lorem elit labore",
+      "width": 0.6709677237051506,
+      "x": 0.19677420227645698,
+      "y": 0.924418604454315
+    },
+    {
+      "confidence": 1,
+      "height": 0.01598837216695148,
+      "text": "adipiscing ut consectetur incididunt amet tempor sit",
+      "width": 0.7322580408166957,
+      "x": 0.19677420097874912,
+      "y": 0.9040697672450126
+    },
+    {
+      "confidence": 1,
+      "height": 0.011627906958262102,
+      "text": "eiusmod",
+      "width": 0.1258064552589699,
+      "x": 0.19677419046728925,
+      "y": 0.8880813952708689
+    },
+    {
+      "confidence": 1,
+      "height": 0.014998469352722199,
+      "text": "2=26031.3",
+      "width": 0.15505088523582175,
+      "x": 0.1966681077030182,
+      "y": 0.8631403003221679
+    },
+    {
+      "confidence": 1,
+      "height": 0.014602712790171224,
+      "text": "#33 sit eiusmod dolor",
+      "width": 0.3580645243326823,
+      "x": 0.19677418688895845,
+      "y": 0.693313953516208
+    },
+    {
+      "confidence": 1,
+      "height": 0.015988372166951592,
+      "text": "amet tempor sit eiusmod dolor do ipsum sed lorem",
+      "width": 0.716128992151331,
+      "x": 0.19677422255336652,
+      "y": 0.6686046511803323
+    },
+    {
+      "confidence": 1,
+      "height": 0.014660852750142395,
+      "text": "elit labore adipiscing ut consectetur incididunt amet",
+      "width": 0.729032219780816,
+      "x": 0.19677421876550583,
+      "y": 0.6495833332581513
+    },
+    {
+      "confidence": 1,
+      "height": 0.014823384284973096,
+      "text": "tempor sit",
+      "width": 0.15174854419849537,
+      "x": 0.1934805665684039,
+      "y": 0.62921621465265
+    },
+    {
+      "confidence": 1,
+      "height": 0.014778189659118701,
+      "text": "2=26044.3",
+      "width": 0.1549508836534288,
+      "x": 0.19671810502672693,
+      "y": 0.6074364863865132
+    },
+    {
+      "confidence": 1,
+      "height": 0.01749999999999996,
+      "text": "#34 amet tempor sit",
+      "width": 0.33548386185257517,
+      "x": 0.1967741996543575,
+      "y": 0.43458333356552004
+    },
+    {
+      "confidence": 1,
+      "height": 0.014612402915954559,
+      "text": "consectetur incididunt amet tempor sit eiusmod",
+      "width": 0.6709677237051505,
+      "x": 0.20000001242161822,
+      "y": 0.4141666665589089
+    },
+    {
+      "confidence": 1,
+      "height": 0.015988372166951592,
+      "text": "dolor do ipsum sed lorem elit labore adipiscing ut",
+      "width": 0.6903225934063947,
+      "x": 0.19677418141508238,
+      "y": 0.39244186039181495
+    },
+    {
+      "confidence": 1,
+      "height": 0.014534883499145557,
+      "text": "consectetur incididunt amet tempor",
+      "width": 0.5064515855577256,
+      "x": 0.1967742115759758,
+      "y": 0.37354651159345054
+    },
+    {
+      "confidence": 1,
+      "height": 0.014995484352111732,
+      "text": "2=26049.9",
+      "width": 0.15504954302752458,
+      "x": 0.19666877570993838,
+      "y": 0.35151388558903207
+    },
+    {
+      "confidence": 1,
+      "height": 0.01600775241851804,
+      "text": "#35 consectetur incididunt amet",
+      "width": 0.5322580408166957,
+      "x": 0.19677420549487806,
+      "y": 0.1816666663829809
+    },
+    {
+      "confidence": 1,
+      "height": 0.014631783167521228,
+      "text": "adipiscing ut consectetur incididunt amet tempor",
+      "width": 0.687096772370515,
+      "x": 0.1999999915029148,
+      "y": 0.15833333324290433
+    },
+    {
+      "confidence": 1,
+      "height": 0.013081394831339521,
+      "text": "sit eiusmod dolor do ipsum sed lorem elit labore",
+      "width": 0.6677419026692708,
+      "x": 0.20000001605246137,
+      "y": 0.13953488384886514
+    },
+    {
+      "confidence": 1,
+      "height": 0.01601744174957276,
+      "text": "adipiscing ut consectetur incididunt amet",
+      "width": 0.5838709513346354,
+      "x": 0.19677419707461782,
+      "y": 0.11773255826245455
+    },
+    {
+      "confidence": 1,
+      "height": 0.013405925432841026,
+      "text": "2=26046.9",
+      "width": 0.15497282522696038,
+      "x": 0.19670713461368994,
+      "y": 0.09722145575498298
+    }
+  ],
+  "android-template-palette-after-scroll.png": [
+    {
+      "confidence": 1,
+      "height": 0.017548449834187796,
+      "text": "#32 dolor do ipsum",
+      "width": 0.3161290204083478,
+      "x": 0.1967742009248584,
+      "y": 0.9679166664843537
+    },
+    {
+      "confidence": 1,
+      "height": 0.014612402915954559,
+      "text": "sit eiusmod dolor do ipsum sed lorem elit labore",
+      "width": 0.6709677237051506,
+      "x": 0.19677420227645698,
+      "y": 0.9462209301981017
+    },
+    {
+      "confidence": 1,
+      "height": 0.016027131875356093,
+      "text": "adipiscing ut consectetur incididunt amet tempor sit",
+      "width": 0.7322580408166955,
+      "x": 0.1967741992368137,
+      "y": 0.9258333334377709
+    },
+    {
+      "confidence": 1,
+      "height": 0.013081394831339521,
+      "text": "eiusmod",
+      "width": 0.1258064552589699,
+      "x": 0.196774191604386,
+      "y": 0.908430232653371
+    },
+    {
+      "confidence": 1,
+      "height": 0.015277190208434988,
+      "text": "2=26031.3",
+      "width": 0.1551753008807147,
+      "x": 0.19660589949297705,
+      "y": 0.8848032654555344
+    },
+    {
+      "confidence": 1,
+      "height": 0.01598837216695148,
+      "text": "#33 sit eiusmod dolor",
+      "width": 0.35806449607566554,
+      "x": 0.19677419958313508,
+      "y": 0.7136627904608557
+    },
+    {
+      "confidence": 1,
+      "height": 0.014728682041168284,
+      "text": "amet tempor sit eiusmod dolor do ipsum sed lorem",
+      "width": 0.7129032276294849,
+      "x": 0.19999999537880606,
+      "y": 0.6916666669273968
+    },
+    {
+      "confidence": 1,
+      "height": 0.016249999999999987,
+      "text": "elit labore adipiscing ut consectetur incididunt amet",
+      "width": 0.729032219780816,
+      "x": 0.19677421075475335,
+      "y": 0.6700000001328225
+    },
+    {
+      "confidence": 1,
+      "height": 0.014977793693542463,
+      "text": "tempor sit",
+      "width": 0.15182007683648002,
+      "x": 0.1934448002570871,
+      "y": 0.6509413355661169
+    },
+    {
+      "confidence": 1,
+      "height": 0.015247945785522354,
+      "text": "2=26044.3",
+      "width": 0.15516235916702834,
+      "x": 0.1966123673561713,
+      "y": 0.6290039338956144
+    },
+    {
+      "confidence": 1,
+      "height": 0.01758720874786368,
+      "text": "#34 amet tempor sit",
+      "width": 0.3387096828884549,
+      "x": 0.19354838012835335,
+      "y": 0.45624999987187953
+    },
+    {
+      "confidence": 1,
+      "height": 0.013120154937108275,
+      "text": "consectetur incididunt amet tempor sit eiusmod",
+      "width": 0.6709677237051505,
+      "x": 0.20000001242161822,
+      "y": 0.43604651172313835
+    },
+    {
+      "confidence": 1,
+      "height": 0.016249999999999987,
+      "text": "dolor do ipsum sed lorem elit labore adipiscing ut",
+      "width": 0.6903225934063947,
+      "x": 0.19677419292045847,
+      "y": 0.41416666667752533
+    },
+    {
+      "confidence": 1,
+      "height": 0.013333333730697672,
+      "text": "consectetur incididunt amet tempor",
+      "width": 0.5032258210358798,
+      "x": 0.19999999709496333,
+      "y": 0.3966666663325501
+    },
+    {
+      "confidence": 1,
+      "height": 0.01494138717651372,
+      "text": "2=26049.9",
+      "width": 0.15502511483651624,
+      "x": 0.19668099251607105,
+      "y": 0.3733432599913906
+    },
+    {
+      "confidence": 1,
+      "height": 0.015988372166951592,
+      "text": "#35 consectetur incididunt amet",
+      "width": 0.5322580408166957,
+      "x": 0.1967742091999471,
+      "y": 0.2020348837358764
+    },
+    {
+      "confidence": 1,
+      "height": 0.01310077508290619,
+      "text": "adipiscing ut consectetur incididunt amet tempor",
+      "width": 0.687096772370515,
+      "x": 0.19999999404054902,
+      "y": 0.18023255832560925
+    },
+    {
+      "confidence": 1,
+      "height": 0.01598837216695148,
+      "text": "sit eiusmod dolor do ipsum sed lorem elit labore",
+      "width": 0.6709677237051505,
+      "x": 0.1967741957280701,
+      "y": 0.1598837210931231
+    },
+    {
+      "confidence": 1,
+      "height": 0.014689922332763783,
+      "text": "adipiscing ut consectetur incididunt amet",
+      "width": 0.5806451302987559,
+      "x": 0.2000000096893319,
+      "y": 0.14083333355198346
+    },
+    {
+      "confidence": 1,
+      "height": 0.013907308578491318,
+      "text": "≥=26046.9",
+      "width": 0.1551736761022497,
+      "x": 0.1966067118823388,
+      "y": 0.11877308997773861
+    }
+  ],
+  "android-template-palette-command-after-scroll.png": [
+    {
+      "confidence": 1,
+      "height": 0.016249999999999987,
+      "text": "#32 dolor do ipsum",
+      "width": 0.3161290204083479,
+      "x": 0.19677420263453574,
+      "y": 0.9679166668211637
+    },
+    {
+      "confidence": 1,
+      "height": 0.01461240291595467,
+      "text": "sit eiusmod dolor do ipsum sed lorem elit labore",
+      "width": 0.6709677237051505,
+      "x": 0.19677420239473656,
+      "y": 0.9462209302223265
+    },
+    {
+      "confidence": 1,
+      "height": 0.016027131875356093,
+      "text": "adipiscing ut consectetur incididunt amet tempor sit",
+      "width": 0.7322580408166955,
+      "x": 0.1967741992368137,
+      "y": 0.9258333334377709
+    },
+    {
+      "confidence": 1,
+      "height": 0.013304104804992667,
+      "text": "eiusmod",
+      "width": 0.1259201756230107,
+      "x": 0.19671733049421472,
+      "y": 0.9083188777471324
+    },
+    {
+      "confidence": 1,
+      "height": 0.015321400960286446,
+      "text": "2=26031.3",
+      "width": 0.15519479822229457,
+      "x": 0.19659615082642243,
+      "y": 0.8847811600643023
+    },
+    {
+      "confidence": 1,
+      "height": 0.01598837216695148,
+      "text": "#33 sit eiusmod dolor",
+      "width": 0.3580644960756655,
+      "x": 0.19677420547829624,
+      "y": 0.713662790820594
+    },
+    {
+      "confidence": 1,
+      "height": 0.014593022664388,
+      "text": "amet tempor sit eiusmod dolor do ipsum sed lorem",
+      "width": 0.7161289921513311,
+      "x": 0.1967742207630441,
+      "y": 0.6904069769422878
+    },
+    {
+      "confidence": 1,
+      "height": 0.016250000000000098,
+      "text": "elit labore adipiscing ut consectetur incididunt amet",
+      "width": 0.729032219780816,
+      "x": 0.19677420539991464,
+      "y": 0.6700000002600026
+    },
+    {
+      "confidence": 1,
+      "height": 0.015060952504475922,
+      "text": "tempor sit",
+      "width": 0.15185830858018665,
+      "x": 0.19342568290250564,
+      "y": 0.6508997562530288
+    },
+    {
+      "confidence": 1,
+      "height": 0.014770898818969647,
+      "text": "2=26044.3",
+      "width": 0.15494754932544846,
+      "x": 0.19671977527209578,
+      "y": 0.6292424576568292
+    },
+    {
+      "confidence": 1,
+      "height": 0.01755813995997102,
+      "text": "#34 amet tempor sit",
+      "width": 0.33548386185257517,
+      "x": 0.1967741996543575,
+      "y": 0.4549418601058771
+    },
+    {
+      "confidence": 1,
+      "height": 0.014583333333333282,
+      "text": "consectetur incididunt amet tempor sit eiusmod",
+      "width": 0.6709677237051505,
+      "x": 0.20000001352376873,
+      "y": 0.434583332998675
+    },
+    {
+      "confidence": 1,
+      "height": 0.016249999999999987,
+      "text": "dolor do ipsum sed lorem elit labore adipiscing ut",
+      "width": 0.6903225934063947,
+      "x": 0.196774192098646,
+      "y": 0.4141666666654128
+    },
+    {
+      "confidence": 1,
+      "height": 0.01793790022532138,
+      "text": "consectetur incididunt amet tempor",
+      "width": 0.5070742571795429,
+      "x": 0.19646135820941169,
+      "y": 0.3935975616707764
+    },
+    {
+      "confidence": 1,
+      "height": 0.015139508247375533,
+      "text": "E=26049.9",
+      "width": 0.15511413856788916,
+      "x": 0.19663648065315983,
+      "y": 0.37324419944583875
+    },
+    {
+      "confidence": 1,
+      "height": 0.01598837216695148,
+      "text": "#35 consectetur incididunt amet",
+      "width": 0.5322580408166955,
+      "x": 0.19677420793842643,
+      "y": 0.20203488388382085
+    },
+    {
+      "confidence": 1,
+      "height": 0.014583333333333282,
+      "text": "adipiscing ut consectetur incididunt amet tempor",
+      "width": 0.687096772370515,
+      "x": 0.1999999940835599,
+      "y": 0.17875000005346497
+    },
+    {
+      "confidence": 1,
+      "height": 0.016249999999999987,
+      "text": "sit eiusmod dolor do ipsum sed lorem elit labore",
+      "width": 0.6741935447410301,
+      "x": 0.19677420379883953,
+      "y": 0.15833333370203417
+    },
+    {
+      "confidence": 1,
+      "height": 0.014631783167521117,
+      "text": "adipiscing ut consectetur incididunt amet",
+      "width": 0.5838709513346354,
+      "x": 0.1967741968864458,
+      "y": 0.13953488375914824
+    },
+    {
+      "confidence": 1,
+      "height": 0.014534883499145557,
+      "text": "E=26046.9",
+      "width": 0.15483870329680266,
+      "x": 0.19677419828708248,
+      "y": 0.1177325583376364
+    }
+  ],
+  "ios-template-command-after-scroll.png": [
+    {
+      "confidence": 1,
+      "height": 0.014615818346665144,
+      "text": "labore adipicsin.",
+      "width": 0.24921135087906818,
+      "x": 0.19873817625604942,
+      "y": 0.9752097633268675
+    },
+    {
+      "confidence": 1,
+      "height": 0.016865557882278503,
+      "text": "4:2pmpor si",
+      "width": 0.20915109561648138,
+      "x": 0.13840721895808678,
+      "y": 0.9541349953074466
+    },
+    {
+      "confidence": 1,
+      "height": 0.01640030739418341,
+      "text": "2=26063.6",
+      "width": 0.17052813983872955,
+      "x": 0.20180217510991744,
+      "y": 0.9300265906863261
+    },
+    {
+      "confidence": 1,
+      "height": 0.014543753739625465,
+      "text": "stętur incididunt amet",
+      "width": 0.3406939909825871,
+      "x": 0.5899053687042901,
+      "y": 0.9767353163786746
+    },
+    {
+      "confidence": 1,
+      "height": 0.01908604194879704,
+      "text": "#161 tempor sit eiusmod",
+      "width": 0.438485773443978,
+      "x": 0.19873818510766394,
+      "y": 0.7498093061919422
+    },
+    {
+      "confidence": 1,
+      "height": 0.016128067202826335,
+      "text": "incididunt amet tempor sit eiusmod dolor do",
+      "width": 0.6687696972494299,
+      "x": 0.19873817945099495,
+      "y": 0.7252906973284454
+    },
+    {
+      "confidence": 1,
+      "height": 0.016052676011004685,
+      "text": "ipsum sed lorem elit labore adipiscing ut",
+      "width": 0.6119873654189987,
+      "x": 0.1987381823141598,
+      "y": 0.7063310451870759
+    },
+    {
+      "confidence": 1,
+      "height": 0.013103569490504063,
+      "text": "consectetur incididunt amet tempor sit eiusmod",
+      "width": 0.719242886721989,
+      "x": 0.20504733354752278,
+      "y": 0.6918382911995415
+    },
+    {
+      "confidence": 1,
+      "height": 0.014534884059274611,
+      "text": "E=26024.0",
+      "width": 0.17034699549129353,
+      "x": 0.19873817204930597,
+      "y": 0.6627906975052464
+    },
+    {
+      "confidence": 1,
+      "height": 0.020594965675057142,
+      "text": "#162 incididunt amet tempor",
+      "width": 0.5236592711896249,
+      "x": 0.19558361885313705,
+      "y": 0.482456140578189
+    },
+    {
+      "confidence": 1,
+      "height": 0.014589210033053024,
+      "text": "ut consectetur incididunt",
+      "width": 0.38170346691833795,
+      "x": 0.20189274268436425,
+      "y": 0.4404069763933278
+    },
+    {
+      "confidence": 1,
+      "height": 0.015123380403496811,
+      "text": "E=26048.6",
+      "width": 0.17058054606119794,
+      "x": 0.20177597316394558,
+      "y": 0.39505458885240186
+    },
+    {
+      "confidence": 1,
+      "height": 0.017602620099356536,
+      "text": "#163 ut consectetur incididunt",
+      "width": 0.5552050335885677,
+      "x": 0.19558360704528358,
+      "y": 0.2165697673011462
+    },
+    {
+      "confidence": 1,
+      "height": 0.016131392332727312,
+      "text": "labore adipiscing ut consectetur",
+      "width": 0.49526810527440923,
+      "x": 0.19558360678708578,
+      "y": 0.1715116284301591
+    },
+    {
+      "confidence": 1,
+      "height": 0.015269844701142787,
+      "text": "Z=26045.9",
+      "width": 0.1706372287933704,
+      "x": 0.20174763378786287,
+      "y": 0.12753949633594597
+    }
+  ],
+  "ios-template-palette-after-scroll.png": [
+    {
+      "confidence": 1,
+      "height": 0.016018306636155666,
+      "text": "4:24t conseg",
+      "width": 0.20820188759571281,
+      "x": 0.13880126291687997,
+      "y": 0.9534706332009981
+    },
+    {
+      "confidence": 1,
+      "height": 0.01696540343679609,
+      "text": "E=26048.6",
+      "width": 0.17076928184597842,
+      "x": 0.20168160340431837,
+      "y": 0.9108486934206361
+    },
+    {
+      "confidence": 1,
+      "height": 0.015988372465202128,
+      "text": "#163 ut consectetur incididunt",
+      "width": 0.5520504371048404,
+      "x": 0.1987381939081476,
+      "y": 0.7340116277644919
+    },
+    {
+      "confidence": 1,
+      "height": 0.016154675516438344,
+      "text": "labore adipiscing ut consectetur",
+      "width": 0.49526810527440923,
+      "x": 0.195583608025256,
+      "y": 0.6887871850911627
+    },
+    {
+      "confidence": 1,
+      "height": 0.016191898639833058,
+      "text": "2=26045.9",
+      "width": 0.17043706789538632,
+      "x": 0.20184771037295418,
+      "y": 0.6437935853660239
+    },
+    {
+      "confidence": 1,
+      "height": 0.020913162638811933,
+      "text": "#164 labore adipiscing ut",
+      "width": 0.45796216265676826,
+      "x": 0.19532022827241827,
+      "y": 0.4632056237457326
+    },
+    {
+      "confidence": 1,
+      "height": 0.0160659801678108,
+      "text": "lorem elit labore adipiscing ut",
+      "width": 0.4542586546434494,
+      "x": 0.19558360188963186,
+      "y": 0.4214340199746739
+    },
+    {
+      "confidence": 1,
+      "height": 0.017959385223737745,
+      "text": "[=26041.3",
+      "width": 0.164895508419815,
+      "x": 0.20146391874390893,
+      "y": 0.3754679818761135
+    },
+    {
+      "confidence": 1,
+      "height": 0.01603161079296167,
+      "text": "#165 lorem elit labore",
+      "width": 0.3911671804551462,
+      "x": 0.19873817959366769,
+      "y": 0.19908466849923245
+    },
+    {
+      "confidence": 1,
+      "height": 0.016029393554733984,
+      "text": "ipsum sed lorem elit labore adipiscing",
+      "width": 0.5741324606621839,
+      "x": 0.19558360626196805,
+      "y": 0.1540697674156548
+    },
+    {
+      "confidence": 1,
+      "height": 0.014534884059274611,
+      "text": "Z=26055.6",
+      "width": 0.17034699549129353,
+      "x": 0.20189275001460558,
+      "y": 0.10901162782501383
+    }
+  ],
+  "ios-template-palette-command-after-scroll.png": [
+    {
+      "confidence": 1,
+      "height": 0.017441860871129422,
+      "text": "4:21",
+      "width": 0.09148264642971668,
+      "x": 0.13880126410769686,
+      "y": 0.9534883719626911
+    },
+    {
+      "confidence": 1,
+      "height": 0.017612598398821122,
+      "text": "#149 labore adıpiscing ut",
+      "width": 0.4542586546434495,
+      "x": 0.1987381773200058,
+      "y": 0.9271548436023582
+    },
+    {
+      "confidence": 1,
+      "height": 0.016024959078278833,
+      "text": "lorem elit labore adipiscing ut consectetur",
+      "width": 0.6403785313342143,
+      "x": 0.19558359859156801,
+      "y": 0.8924418602354223
+    },
+    {
+      "confidence": 1,
+      "height": 0.014558166515545312,
+      "text": "incididunt amet",
+      "width": 0.24290220852119612,
+      "x": 0.19558359301858183,
+      "y": 0.8764302057103129
+    },
+    {
+      "confidence": 1,
+      "height": 0.015342476711665998,
+      "text": "Z=26039.8",
+      "width": 0.17066511467321596,
+      "x": 0.2017336901380329,
+      "y": 0.8397124826538065
+    },
+    {
+      "confidence": 1,
+      "height": 0.01754385964912275,
+      "text": "#150 lorem elit labore",
+      "width": 0.39432175163408223,
+      "x": 0.19558360696424174,
+      "y": 0.6613272308483039
+    },
+    {
+      "confidence": 1,
+      "height": 0.016113652972025605,
+      "text": "ipsum sed lorem elit labore adipiscing ut",
+      "width": 0.6151419619027259,
+      "x": 0.1955835854918549,
+      "y": 0.6250000004868452
+    },
+    {
+      "confidence": 1,
+      "height": 0.014558166515545312,
+      "text": "consectetur incididunt",
+      "width": 0.3406939909825871,
+      "x": 0.20189274930365922,
+      "y": 0.6090116276409053
+    },
+    {
+      "confidence": 1,
+      "height": 0.015220404944285226,
+      "text": "E=26037.3",
+      "width": 0.1643194575017167,
+      "x": 0.20175194419719442,
+      "y": 0.5723316580699334
+    },
+    {
+      "confidence": 1,
+      "height": 0.019076064376772894,
+      "text": "#151 ipsum sed lorem",
+      "width": 0.3880126092762101,
+      "x": 0.1987381780906015,
+      "y": 0.3924418610331949
+    },
+    {
+      "confidence": 1,
+      "height": 0.015988372465202016,
+      "text": "dolor do ipsum sed lorem elit labore adipiscing ut",
+      "width": 0.7444794561534774,
+      "x": 0.20189277148162088,
+      "y": 0.357558139392399
+    },
+    {
+      "confidence": 1,
+      "height": 0.013081395653347094,
+      "text": "consectetur",
+      "width": 0.18611986403836933,
+      "x": 0.19873817645873326,
+      "y": 0.34156976745312295
+    },
+    {
+      "confidence": 1,
+      "height": 0.015988371010321356,
+      "text": "E=26051.8",
+      "width": 0.16403785313342142,
+      "x": 0.2018927469348665,
+      "y": 0.30377907010893823
+    },
+    {
+      "confidence": 1,
+      "height": 0.01889534927705694,
+      "text": "#152 dolor do ipsum",
+      "width": 0.3659305857188667,
+      "x": 0.1955836056534103,
+      "y": 0.12499999983198651
+    },
+    {
+      "confidence": 1,
+      "height": 0.016097023685318623,
+      "text": "sit eiusmod dolor do ipsum sed lorem elit labore",
+      "width": 0.7223974832057162,
+      "x": 0.20189274063688956,
+      "y": 0.09000762750367786
+    },
+    {
+      "confidence": 1,
+      "height": 0.017662518266318483,
+      "text": "adipiscing ut",
+      "width": 0.19619995167797083,
+      "x": 0.20158456511476008,
+      "y": 0.07183734544720566
+    },
+    {
+      "confidence": 1,
+      "height": 0.015290399256050802,
+      "text": "[=26048.0",
+      "width": 0.1706451365406043,
+      "x": 0.20174367885261915,
+      "y": 0.03741293997480322
+    }
+  ]
+}

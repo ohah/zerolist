@@ -1,0 +1,31 @@
+{
+  "started_at": "2026-09-05T14:03:03.401462+00:00",
+  "commit": "9ae7276f4284ab068cb22bb62f853fdbde8d4d26",
+  "versions": {
+    "rn": "0.87.1",
+    "flash_list": "2.3.1",
+    "legend_list": "2.0.19"
+  },
+  "sha256": {
+    "apk": "03cb18de475f39ad9ec560526731669253d1dc4809ed1a9e6770b14456782f3a",
+    "ios_binary": "e71369279d095a9522e98a253fa70f3fb5a8a9fc3f70844b6135bb615d5d3c52",
+    "ios_jsbundle": "7251e183d1c10e20d5c0a9484f45633b17126665721bf7d7fed4fb9679e532f5"
+  },
+  "notes": [
+    "지난 99회와 같은 바이너리 사용",
+    "모든 리스트 5행 조건과 이전 선택 설정 포함",
+    "실행 순서는 고정 seed 870102 + 반복 번호로 섞음",
+    "정량 측정 중 앱 빌드/화면 녹화/다른 플랫폼의 벤치마크 앱 실행 없음"
+  ],
+  "completed_at": "2026-09-05T15:30:05.363644+00:00",
+  "valid_runs": 117,
+  "audit_runs": 39,
+  "binary_hashes_reverified": true,
+  "restored_environment": {
+    "android_rotation": 1,
+    "android_renderer": "skiagl",
+    "android_atrace": "0",
+    "android_app": "zigpool baseline 100000 heavy; stress/audit extras omitted",
+    "ios_app": "closed"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "implementation_commit": "266fb1fa8329f74d8b1e9b85f2601724bf4f4c85",
+  "build": "Release arm64",
+  "versions": {
+    "react-native": "0.87.1",
+    "reanimated": "4.6.0",
+    "worklets": "0.12.1"
+  },
+  "sources": [
+    {
+      "path": "apps/example/src/harness/engines/template.native.tsx",
+      "sha256": "d2849131d21062241e6d9efed04fb63edec33f67031bfe3b9de0205f25347d54"
+    },
+    {
+      "path": "apps/example/src/harness/engines/templateData.ts",
+      "sha256": "1f45ecbc20a61b93698193ca035c581a8dc0025e711f4ea86132ac271a6eb15f"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "app-release.apk",
+      "sha256": "c0d5a2b48c672808b259ab5d0ffc86124706856f319e2e1d27356f540a5ef6f9"
+    },
+    {
+      "name": "ZerolistExample",
+      "sha256": "90cbd6605565f4396be3d0f9b58cc24abd143422f641ff09ab04b535f26f261d"
+    },
+    {
+      "name": "main.jsbundle",
+      "sha256": "3d31ff2c1e0a3a71ffd7a058c9268a64f318ec02428b802c193ee4518a65cbfe"
+    }
+  ]
+}

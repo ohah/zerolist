@@ -13,7 +13,8 @@ import {
 const DYNAMIC_ESTIMATE = 100;
 
 // 패리티: fixed/variable 는 offsets 에서 도출한 크기를
-// getEstimatedItemSize 로 전달(Legend 의 최강 등가 힌트).
+// getEstimatedItemSize 로 전달. 자원 예산 비교의 고정 높이 조건은
+// getFixedItemSize도 제공해 실제 확정 높이를 활용한다.
 export const LegendEngine = forwardRef<Scrollable, ListEngineProps>(
   (p, ref) => {
     const listRef = useRef<LegendListRef>(null);
@@ -28,10 +29,20 @@ export const LegendEngine = forwardRef<Scrollable, ListEngineProps>(
 
     return (
       <LegendList
+        drawDistance={
+          p.bufferRows == null || p.bufferRows < 0
+            ? undefined
+            : p.bufferRows * (p.fixedHeight ?? 100)
+        }
         ref={listRef}
         data={items}
         recycleItems
         keyExtractor={(it) => String(it.id)}
+        getFixedItemSize={
+          p.bufferRows != null && p.bufferRows >= 0 && fixedHeight != null
+            ? () => fixedHeight
+            : undefined
+        }
         estimatedItemSize={estimate}
         getEstimatedItemSize={
           offsets ? (i) => offsets[i + 1]! - offsets[i]! : undefined

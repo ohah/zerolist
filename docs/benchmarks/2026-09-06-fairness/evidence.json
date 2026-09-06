@@ -1,0 +1,82 @@
+{
+  "measurement_source": "864b6e6",
+  "new_device_runs": 0,
+  "source_files": {
+    "summary.json": "622c503750bc3b82278ff6e876c56e7abe9733db807843b9f9a65638c6b0c56d",
+    "matrix.json": "0e23d768a35d3053e91358411fa5abd0889feee70ee2a503e5a205b4137fc21c"
+  },
+  "comparisons": [
+    {
+      "platform": "android",
+      "engine": "flatlist",
+      "repeats": 3,
+      "startup_median_ms": 281.903792,
+      "memory_mib": 181.59765625,
+      "cpu_percent": 22.50065652607814,
+      "stress_late_percent": 1.1533333333333333,
+      "stress_blank_percent": 0.0,
+      "audit_travel_rows": 45.75552842219504,
+      "attached_max": 5.0
+    },
+    {
+      "platform": "android",
+      "engine": "flatlist-palette",
+      "repeats": 3,
+      "startup_median_ms": 278.365708,
+      "memory_mib": 128.47233072916666,
+      "cpu_percent": 16.149518815827065,
+      "stress_late_percent": 1.4966666666666666,
+      "stress_blank_percent": 0.0,
+      "audit_travel_rows": 45.37891737891732,
+      "attached_max": 5.0
+    },
+    {
+      "platform": "android",
+      "engine": "template-palette",
+      "repeats": 3,
+      "startup_median_ms": 294.057667,
+      "memory_mib": 201.41341145833334,
+      "cpu_percent": 10.435993287887998,
+      "stress_late_percent": 1.5733333333333335,
+      "stress_blank_percent": 0.0,
+      "audit_travel_rows": 45.495048161714784,
+      "attached_max": 14.0
+    },
+    {
+      "platform": "ios",
+      "engine": "flatlist",
+      "repeats": 3,
+      "startup_median_ms": 287.392,
+      "memory_mib": 472.0104166666667,
+      "cpu_percent": 26.21257230697448,
+      "stress_late_percent": 0.0,
+      "stress_blank_percent": 3.710490200780996,
+      "audit_travel_rows": 132.19278205128268,
+      "attached_max": 6.0
+    },
+    {
+      "platform": "ios",
+      "engine": "flatlist-palette",
+      "repeats": 3,
+      "startup_median_ms": 272.415,
+      "memory_mib": 349.3385416666667,
+      "cpu_percent": 21.024267279579437,
+      "stress_late_percent": 0.0,
+      "stress_blank_percent": 2.1958136161121367,
+      "audit_travel_rows": 132.3129145299152,
+      "attached_max": 6.0
+    },
+    {
+      "platform": "ios",
+      "engine": "template-palette",
+      "repeats": 3,
+      "startup_median_ms": 320.251,
+      "memory_mib": 435.6614583333333,
+      "cpu_percent": 15.09772074099195,
+      "stress_late_percent": 0.0,
+      "stress_blank_percent": 0.0,
+      "audit_travel_rows": 126.36751709401763,
+      "attached_max": 14.0
+    }
+  ]
+}

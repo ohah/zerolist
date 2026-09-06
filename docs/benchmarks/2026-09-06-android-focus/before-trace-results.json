@@ -1,0 +1,26 @@
+[
+  {
+    "engine": "zerolist",
+    "diagnostic_only": true,
+    "trace_seconds": 15,
+    "gesture_seconds": 3.81435775,
+    "jank_percent": 0.37,
+    "p95_ms": 19
+  },
+  {
+    "engine": "flatlist",
+    "diagnostic_only": true,
+    "trace_seconds": 15,
+    "gesture_seconds": 3.8135654999999957,
+    "jank_percent": 0.69,
+    "p95_ms": 20
+  },
+  {
+    "engine": "zigpool",
+    "diagnostic_only": true,
+    "trace_seconds": 15,
+    "gesture_seconds": 3.7973465419999997,
+    "jank_percent": 0.37,
+    "p95_ms": 20
+  }
+]

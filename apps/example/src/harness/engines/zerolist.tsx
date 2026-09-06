@@ -1,3 +1,4 @@
+import { useWindowDimensions } from 'react-native';
 import { forwardRef, useRef } from 'react';
 import { ZeroList, type ZeroListHandle } from '@ohah/zerolist';
 import type { Item, ListEngineProps } from '../types';
@@ -13,6 +14,11 @@ import {
 // 최강 힌트(getItemLayout)로 연결. dynamic 은 측정으로 수렴.
 export const ZeroListEngine = forwardRef<Scrollable, ListEngineProps>(
   (p, ref) => {
+    const { height: viewportHeight } = useWindowDimensions();
+    const windowSize =
+      p.bufferRows == null || p.bufferRows < 0
+        ? 11
+        : 1 + (2 * p.bufferRows * (p.fixedHeight ?? 100)) / viewportHeight;
     const listRef = useRef<ZeroListHandle<Item>>(null);
     useScrollableHandle(ref, listRef);
     const { offsets, fixedHeight, items } = p;
@@ -35,8 +41,12 @@ export const ZeroListEngine = forwardRef<Scrollable, ListEngineProps>(
         estimatedItemSize={fixedHeight ?? 100}
         onScroll={scrollYHandler(p.onScrollY)}
         scrollEventThrottle={SCROLL_THROTTLE}
-        initialNumToRender={12}
-        windowSize={11}
+        initialNumToRender={
+          p.bufferRows == null || p.bufferRows < 0
+            ? 12
+            : Math.max(1, Math.ceil(viewportHeight / (p.fixedHeight ?? 100)))
+        }
+        windowSize={windowSize}
       />
     );
   }

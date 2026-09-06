@@ -1,0 +1,43 @@
+package com.zerolist
+
+import java.nio.ByteBuffer
+import java.nio.ByteOrder
+
+// ZeroList 네이티브 진입점 — Zig 엔진을 JNI 로 호출.
+// 버퍼는 direct ByteBuffer(네이티브 주소 그대로 Zig 로, 복사 없음).
+object PoolEngine {
+  init {
+    System.loadLibrary("zerolistpool")
+  }
+
+  /** 가변 높이(f32) → 누적 오프셋(f64). 1회성 데이터 준비. */
+  external fun buildOffsets(heights: ByteBuffer, n: Int, out: ByteBuffer)
+
+  /** scrollY 의 가시 index 범위를 (first<<32)|last 로 비트팩해 반환.
+   *  스크롤마다 네이티브 스레드에서 호출 — 프레임당 JS 0회.
+   *  언팩은 firstOf/lastOf 로(비트 레이아웃 정의는 여기 한 곳). */
+  external fun visibleRange(
+    offsets: ByteBuffer,
+    n: Int,
+    scrollY: Double,
+    viewport: Double,
+  ): Long
+
+  /** visibleRange 반환값의 first index. */
+  fun firstOf(packed: Long): Int = (packed ushr 32).toInt()
+
+  /** visibleRange 반환값의 last index(exclusive). */
+  fun lastOf(packed: Long): Int = packed.toInt()
+}
+
+// 균일 높이 count 행의 누적 오프셋(f64, 길이 count+1) direct buffer.
+// ZlZigList/ZlPoolList 공유. 네이티브 엔디안(Zig 와 일치) 필수.
+fun buildUniformOffsets(count: Int, rowPxF: Float): ByteBuffer {
+  val h = ByteBuffer.allocateDirect(count * 4).order(ByteOrder.nativeOrder())
+  val hf = h.asFloatBuffer()
+  for (i in 0 until count) hf.put(i, rowPxF)
+  val o =
+    ByteBuffer.allocateDirect((count + 1) * 8).order(ByteOrder.nativeOrder())
+  PoolEngine.buildOffsets(h, count, o)
+  return o
+}

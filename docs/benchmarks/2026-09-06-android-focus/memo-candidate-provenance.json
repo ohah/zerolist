@@ -1,0 +1,6 @@
+{
+  "base_commit": "acaa8da454fcd72492de1bdb3a5c84d2c317994a",
+  "patch": "memo-candidate.patch",
+  "apk_sha256": "e5dc1450961fcbc85bce4e59b171fb8ae8df127abccac5f3f41d0c034d41898f",
+  "note": "normal=슬롯 memo 사용, pool-unmemoized=이전 인라인 래퍼. 둘 다 개선 네이티브 배치 사용."
+}

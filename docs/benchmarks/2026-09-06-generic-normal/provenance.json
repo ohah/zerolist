@@ -1,0 +1,21 @@
+{
+  "commit": "ff2d9850a6c818a6b92ee5d6575a20bfb0ea23de",
+  "rn": "0.87.1",
+  "build": "arm64 Release",
+  "tests_passed": 92,
+  "sources": {
+    "packages/zerolist/src/list.tsx": "2886441019b6482029605fb075046b14eec978a6499a0230286cac0259564ef1",
+    "packages/zerolist/src/measurements.ts": "10f544567523526a3aefeef64cae8c41a28f2708e4639df1b70f6dc193ee2193",
+    "apps/example/android/app/build.gradle": "1d97c0ff6573b66712f287e54daf6443963bd6dd81d5e0d95459e20c31c6c7d3",
+    "apps/example/src/Solo.tsx": "54868c87f9617e6054c57f7f25a1885d8cfee141b79d01b7042bdd30d394edf0",
+    "apps/example/src/harness/cells.tsx": "9f0ea09e4f06065ca4ae9c9828a6aaa3e88a37c658694412b7a550fb9ce67b22",
+    "apps/example/src/harness/engines/flatlist.tsx": "be11c72f41633f3c05c02fec8ff2201d5843a82581859b788299a86d92949faf"
+  },
+  "artifacts": {
+    "app-release.apk": "92e2970dcfce00e1b908bd93c8f07929afe518de8537f4e6517422690da7c784",
+    "ZerolistExample": "618468460776fd8ac1006fc6e5daab4c16e3c9ce353d80caea4af540ac7c9dfe",
+    "main.jsbundle": "8df0a35c3fef0af9d9d37c2f0dd4e56929615bcb3375d359e79eb1587de6ce79"
+  },
+  "both_bundles_contain_new_functions": true,
+  "android_library_only_change_invalidates_bundle": true
+}

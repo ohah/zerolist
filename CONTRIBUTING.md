@@ -6,99 +6,59 @@ We want this community to be friendly and respectful to each other. Please follo
 
 ## Development workflow
 
-This project is a monorepo managed using [Yarn workspaces](https://yarnpkg.com/features/workspaces). It contains the following packages:
-
-- The library package in the root directory.
-- An example app in the `example/` directory.
-
-To get started with the project, make sure you have the correct version of [Node.js](https://nodejs.org/) installed. See the [`.nvmrc`](./.nvmrc) file for the version used in this project.
-
-Run `yarn` in the root directory to install the required dependencies for each package:
+The repository uses Bun workspaces: `packages/zerolist` is the library and
+`apps/example` is the example application. CI pins Node from `.nvmrc`, Bun
+1.3.11 and Zig 0.16.0. Install with the committed lockfile:
 
 ```sh
-yarn
+bun install --frozen-lockfile
+bun run lint
+bun run typecheck
+bun run test --runInBand
+bun run build:lib
+bun run --cwd apps/example build:web
 ```
 
-> Since the project relies on Yarn workspaces, you cannot use [`npm`](https://github.com/npm/cli) for development without manually migrating.
+`typecheck` checks the library build project. Android/iOS CI also compile the
+example app. Web lists using Android Fabric components are unavailable on web;
+they are not substituted with another engine for performance comparisons.
 
-You need to run React Native Codegen to generate the native scaffolding for the C++ Turbo Module. The example app will not build without these generated files.
-
-Run **Codegen** in following cases:
-
-- When you make changes to `src/NativeZerolist.ts`.
-- When running the project for the first time (since the generated files are not committed to the repository).
-
-To invoke **Codegen**, use the following command:
+Generate the native module code after changing its spec or on a fresh checkout:
 
 ```sh
-yarn bob build --target codegen
+bun run codegen
 ```
 
-The [example app](/example/) demonstrates usage of the library. You need to run it to test any changes you make.
-
-It is configured to use the local version of the library, so any changes you make to the library's source code will be reflected in the example app. Changes to the library's JavaScript code will be reflected in the example app without a rebuild, but native code changes will require a rebuild of the example app.
-
-If you want to use Android Studio or Xcode to edit the native code, you can open the `example/android` or `example/ios` directories respectively in those editors. To edit the Objective-C or Swift files, open `example/ios/ZerolistExample.xcworkspace` in Xcode and find the source files at `Pods > Development Pods > react-native-zerolist`.
-
-To edit the Java or Kotlin files, open `example/android` in Android studio and find the source files at `react-native-zerolist` under `Android`.
-
-You can use various commands from the root directory to work with the project.
-
-To start the packager:
+Android release build (JDK 17+, SDK 36, NDK 27.1.12297006 and CMake 3.22.1):
 
 ```sh
-yarn example start
+bun run zig:build
+bun run codegen
+cd apps/example/android
+./gradlew assembleRelease -PreactNativeArchitectures=arm64-v8a
 ```
 
-To run the example app on Android:
+The example JNI bridge currently supports arm64. Gradle resolves RN tools
+through Node so both hoisted and isolated workspace installs work.
+
+For iOS, build the Zig XCFramework before installing pods. The Apple packaging
+script repacks archives with `libtool` to satisfy Mach-O member alignment:
 
 ```sh
-yarn example android
+bun run zig:apple
+bun run codegen
+cd apps/example/ios
+pod install
+xcodebuild -workspace ZerolistExample.xcworkspace -scheme ZerolistExample \
+  -configuration Release -sdk iphonesimulator \
+  -destination 'generic/platform=iOS Simulator' ARCHS=arm64 \
+  CODE_SIGNING_ALLOWED=NO build
 ```
 
-To run the example app on iOS:
-
-```sh
-yarn example ios
-```
-
-To confirm that the app is running with the new architecture, you can check the Metro logs for a message like this:
-
-```sh
-Running "ZerolistExample" with {"fabric":true,"initialProps":{"concurrentRoot":true},"rootTag":1}
-```
-
-Note the `"fabric":true` and `"concurrentRoot":true` properties.
-
-To run the example app on Web:
-
-```sh
-yarn example web
-```
-
-Make sure your code passes TypeScript:
-
-```sh
-yarn typecheck
-```
-
-To check for linting errors, run the following:
-
-```sh
-yarn lint
-```
-
-To fix formatting errors, run the following:
-
-```sh
-yarn lint --fix
-```
-
-Remember to add tests for your change if possible. Run the unit tests by:
-
-```sh
-yarn test
-```
+Start the development server with `bun run example:start`. JavaScript changes
+can reload in a development build; native changes require rebuilding the app.
+For benchmarks, rebuild/install the release APK and validate the layout before
+collecting measurements. Keep recording separate from performance runs.
 
 ### Commit message convention
 
@@ -120,7 +80,7 @@ We use [release-it](https://github.com/release-it/release-it) to make it easier 
 To publish new versions, run the following:
 
 ```sh
-yarn release
+bunx release-it
 ```
 
 ### Scripts

@@ -1,0 +1,1188 @@
+{
+  "1-pending-stable-12-measured": {
+    "backlog_samples": [
+      {
+        "latest_ms": 47.0,
+        "oldest_ms": 47.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 64.0,
+        "oldest_ms": 64.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 97.0,
+        "oldest_ms": 97.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 62.0,
+        "oldest_ms": 62.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 96.0,
+        "oldest_ms": 96.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 28.0,
+        "oldest_ms": 28.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 112.0,
+        "oldest_ms": 112.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 162.0,
+        "oldest_ms": 162.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 35.0,
+        "oldest_ms": 151.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 47.0,
+        "oldest_ms": 47.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 64.0,
+        "oldest_ms": 114.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 49.0,
+        "oldest_ms": 166.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 33.0,
+        "oldest_ms": 167.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 24.0,
+        "oldest_ms": 123.0,
+        "requests": 6
+      },
+      {
+        "latest_ms": 9.0,
+        "oldest_ms": 9.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 7.0,
+        "oldest_ms": 7.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 14.0,
+        "oldest_ms": 132.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 25.0,
+        "oldest_ms": 175.0,
+        "requests": 6
+      },
+      {
+        "latest_ms": 35.0,
+        "oldest_ms": 168.0,
+        "requests": 6
+      },
+      {
+        "latest_ms": 28.0,
+        "oldest_ms": 28.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 54.0,
+        "oldest_ms": 188.0,
+        "requests": 5
+      },
+      {
+        "latest_ms": 13.0,
+        "oldest_ms": 64.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 145.0,
+        "oldest_ms": 145.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 5.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 48.0,
+        "oldest_ms": 114.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 15.0,
+        "oldest_ms": 81.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 161.0,
+        "oldest_ms": 161.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 6.0,
+        "oldest_ms": 7.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 21.0,
+        "oldest_ms": 137.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 5.0,
+        "oldest_ms": 5.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 17.0,
+        "oldest_ms": 99.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 20.0,
+        "oldest_ms": 170.0,
+        "requests": 8
+      },
+      {
+        "latest_ms": 24.0,
+        "oldest_ms": 24.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 10.0,
+        "oldest_ms": 10.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 30.0,
+        "oldest_ms": 30.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 31.0,
+        "oldest_ms": 98.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 80.0,
+        "oldest_ms": 80.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 30.0,
+        "oldest_ms": 30.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 113.0,
+        "oldest_ms": 113.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      }
+    ],
+    "phases": {
+      "request": 92,
+      "receive": 92,
+      "render": 44,
+      "react_layout": 44,
+      "native_commit": 44,
+      "placed": 44
+    },
+    "durations": {
+      "request->receive": {
+        "n": 92,
+        "p50": 60.0,
+        "p95": 159.0,
+        "max": 160.0,
+        "min": 0.0
+      },
+      "receive->render": {
+        "n": 44,
+        "p50": 0.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "min": 0.0
+      },
+      "render->native_commit": {
+        "n": 44,
+        "p50": 3.0,
+        "p95": 20.0,
+        "max": 23.0,
+        "min": 2.0
+      },
+      "native_commit->placed": {
+        "n": 44,
+        "p50": 1.0,
+        "p95": 2.0,
+        "max": 4.0,
+        "min": 0.0
+      },
+      "request->placed": {
+        "n": 44,
+        "p50": 29.0,
+        "p95": 145.0,
+        "max": 162.0,
+        "min": 2.0
+      }
+    }
+  },
+  "1-priority-5-measured": {
+    "backlog_samples": [
+      {
+        "latest_ms": 147.0,
+        "oldest_ms": 147.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 29.0,
+        "oldest_ms": 29.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 45.0,
+        "oldest_ms": 45.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 95.0,
+        "oldest_ms": 95.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 47.0,
+        "oldest_ms": 114.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 31.0,
+        "oldest_ms": 148.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 36.0,
+        "oldest_ms": 136.0,
+        "requests": 6
+      },
+      {
+        "latest_ms": 18.0,
+        "oldest_ms": 167.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 7.0,
+        "oldest_ms": 7.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 63.0,
+        "oldest_ms": 164.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 23.0,
+        "oldest_ms": 174.0,
+        "requests": 7
+      },
+      {
+        "latest_ms": 29.0,
+        "oldest_ms": 161.0,
+        "requests": 6
+      },
+      {
+        "latest_ms": 14.0,
+        "oldest_ms": 14.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 30.0,
+        "oldest_ms": 96.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 6.0,
+        "oldest_ms": 6.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 30.0,
+        "oldest_ms": 181.0,
+        "requests": 6
+      },
+      {
+        "latest_ms": 31.0,
+        "oldest_ms": 148.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 63.0,
+        "oldest_ms": 130.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 30.0,
+        "oldest_ms": 130.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 30.0,
+        "oldest_ms": 97.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 30.0,
+        "oldest_ms": 97.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 67.0,
+        "oldest_ms": 133.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 35.0,
+        "oldest_ms": 151.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 78.0,
+        "oldest_ms": 130.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 5.0,
+        "oldest_ms": 5.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 31.0,
+        "oldest_ms": 164.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 80.0,
+        "oldest_ms": 80.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 113.0,
+        "oldest_ms": 113.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 80.0,
+        "oldest_ms": 80.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 129.0,
+        "oldest_ms": 129.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 30.0,
+        "oldest_ms": 30.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 78.0,
+        "oldest_ms": 78.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 62.0,
+        "oldest_ms": 62.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      }
+    ],
+    "phases": {
+      "request": 97,
+      "receive": 97,
+      "render": 52,
+      "react_layout": 52,
+      "native_commit": 52,
+      "placed": 52
+    },
+    "durations": {
+      "request->receive": {
+        "n": 97,
+        "p50": 60.0,
+        "p95": 159.0,
+        "max": 160.0,
+        "min": -1.0
+      },
+      "receive->render": {
+        "n": 52,
+        "p50": 0.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "min": 0.0
+      },
+      "render->native_commit": {
+        "n": 52,
+        "p50": 2.0,
+        "p95": 12.0,
+        "max": 18.0,
+        "min": 2.0
+      },
+      "native_commit->placed": {
+        "n": 52,
+        "p50": 0.0,
+        "p95": 1.0,
+        "max": 2.0,
+        "min": 0.0
+      },
+      "request->placed": {
+        "n": 52,
+        "p50": 29.0,
+        "p95": 113.0,
+        "max": 147.0,
+        "min": 2.0
+      }
+    }
+  },
+  "1-stable-12-measured": {
+    "backlog_samples": [
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 14.0,
+        "oldest_ms": 14.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 162.0,
+        "oldest_ms": 162.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 79.0,
+        "oldest_ms": 79.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 47.0,
+        "oldest_ms": 47.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 95.0,
+        "oldest_ms": 95.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 129.0,
+        "oldest_ms": 129.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 112.0,
+        "oldest_ms": 112.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 19.0,
+        "oldest_ms": 136.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 66.0,
+        "oldest_ms": 167.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 5.0,
+        "oldest_ms": 5.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 19.0,
+        "oldest_ms": 151.0,
+        "requests": 5
+      },
+      {
+        "latest_ms": 68.0,
+        "oldest_ms": 168.0,
+        "requests": 5
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 9.0,
+        "oldest_ms": 9.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 54.0,
+        "oldest_ms": 171.0,
+        "requests": 6
+      },
+      {
+        "latest_ms": 7.0,
+        "oldest_ms": 7.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 35.0,
+        "oldest_ms": 135.0,
+        "requests": 7
+      },
+      {
+        "latest_ms": 19.0,
+        "oldest_ms": 119.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 9.0,
+        "oldest_ms": 9.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 70.0,
+        "oldest_ms": 170.0,
+        "requests": 9
+      },
+      {
+        "latest_ms": 5.0,
+        "oldest_ms": 5.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 146.0,
+        "oldest_ms": 146.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 64.0,
+        "oldest_ms": 115.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 49.0,
+        "oldest_ms": 116.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 30.0,
+        "oldest_ms": 47.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 128.0,
+        "oldest_ms": 128.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 6.0,
+        "oldest_ms": 6.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 15.0,
+        "oldest_ms": 148.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 5.0,
+        "oldest_ms": 5.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 35.0,
+        "oldest_ms": 102.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 116.0,
+        "oldest_ms": 166.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 26.0,
+        "oldest_ms": 26.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 69.0,
+        "oldest_ms": 69.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 112.0,
+        "oldest_ms": 112.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 112.0,
+        "oldest_ms": 112.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 13.0,
+        "oldest_ms": 164.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 46.0,
+        "oldest_ms": 46.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 96.0,
+        "oldest_ms": 96.0,
+        "requests": 1
+      }
+    ],
+    "phases": {
+      "request": 91,
+      "receive": 91,
+      "render": 48,
+      "react_layout": 48,
+      "native_commit": 48,
+      "placed": 48
+    },
+    "durations": {
+      "request->receive": {
+        "n": 91,
+        "p50": 66.0,
+        "p95": 160.0,
+        "max": 160.0,
+        "min": 0.0
+      },
+      "receive->render": {
+        "n": 48,
+        "p50": 0.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "min": 0.0
+      },
+      "render->native_commit": {
+        "n": 48,
+        "p50": 3.0,
+        "p95": 10.0,
+        "max": 24.0,
+        "min": 2.0
+      },
+      "native_commit->placed": {
+        "n": 48,
+        "p50": 1.0,
+        "p95": 1.0,
+        "max": 3.0,
+        "min": 0.0
+      },
+      "request->placed": {
+        "n": 48,
+        "p50": 22.5,
+        "p95": 129.0,
+        "max": 162.0,
+        "min": 2.0
+      }
+    }
+  },
+  "1-zigpool-5-measured": {
+    "backlog_samples": [
+      {
+        "latest_ms": 130.0,
+        "oldest_ms": 130.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 149.0,
+        "oldest_ms": 149.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 29.0,
+        "oldest_ms": 29.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 12.0,
+        "oldest_ms": 12.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 62.0,
+        "oldest_ms": 62.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 12.0,
+        "oldest_ms": 96.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 48.0,
+        "oldest_ms": 165.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 15.0,
+        "oldest_ms": 132.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 5.0,
+        "oldest_ms": 5.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 31.0,
+        "oldest_ms": 97.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 6.0,
+        "oldest_ms": 6.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 53.0,
+        "oldest_ms": 170.0,
+        "requests": 5
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 24.0,
+        "oldest_ms": 124.0,
+        "requests": 7
+      },
+      {
+        "latest_ms": 7.0,
+        "oldest_ms": 7.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 18.0,
+        "oldest_ms": 118.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 8.0,
+        "oldest_ms": 8.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 8.0,
+        "oldest_ms": 8.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 20.0,
+        "oldest_ms": 170.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 27.0,
+        "oldest_ms": 161.0,
+        "requests": 8
+      },
+      {
+        "latest_ms": 15.0,
+        "oldest_ms": 148.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 48.0,
+        "oldest_ms": 114.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 47.0,
+        "oldest_ms": 131.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 80.0,
+        "oldest_ms": 146.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 16.0,
+        "oldest_ms": 132.0,
+        "requests": 3
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 46.0,
+        "oldest_ms": 112.0,
+        "requests": 2
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 49.0,
+        "oldest_ms": 150.0,
+        "requests": 4
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 20.0,
+        "oldest_ms": 120.0,
+        "requests": 6
+      },
+      {
+        "latest_ms": 4.0,
+        "oldest_ms": 4.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 30.0,
+        "oldest_ms": 30.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 79.0,
+        "oldest_ms": 79.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 113.0,
+        "oldest_ms": 113.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 130.0,
+        "oldest_ms": 130.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 2.0,
+        "oldest_ms": 2.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 13.0,
+        "oldest_ms": 13.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 63.0,
+        "oldest_ms": 63.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 80.0,
+        "oldest_ms": 80.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 13.0,
+        "oldest_ms": 13.0,
+        "requests": 1
+      },
+      {
+        "latest_ms": 3.0,
+        "oldest_ms": 3.0,
+        "requests": 1
+      }
+    ],
+    "phases": {
+      "request": 101,
+      "receive": 101,
+      "render": 54,
+      "react_layout": 54,
+      "native_commit": 54,
+      "placed": 54
+    },
+    "durations": {
+      "request->receive": {
+        "n": 101,
+        "p50": 43.0,
+        "p95": 143.0,
+        "max": 160.0,
+        "min": 0.0
+      },
+      "receive->render": {
+        "n": 54,
+        "p50": 0.0,
+        "p95": 1.0,
+        "max": 1.0,
+        "min": 0.0
+      },
+      "render->native_commit": {
+        "n": 54,
+        "p50": 2.0,
+        "p95": 9.0,
+        "max": 16.0,
+        "min": 1.0
+      },
+      "native_commit->placed": {
+        "n": 54,
+        "p50": 1.0,
+        "p95": 1.0,
+        "max": 2.0,
+        "min": 0.0
+      },
+      "request->placed": {
+        "n": 54,
+        "p50": 13.0,
+        "p95": 130.0,
+        "max": 149.0,
+        "min": 2.0
+      }
+    }
+  }
+}

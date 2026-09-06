@@ -1,0 +1,15 @@
+{
+  "udid": "ACA7BF91-E2D5-4CF7-909A-08D1AD95FF3D",
+  "frame_metric": "CADisplayLink 시각 간격: 실제 표시 지연 아님",
+  "platform": "ios",
+  "mode": "audit",
+  "variants": ["baseline", "wide", "adaptive-stable", "coalesce"],
+  "delays": [0],
+  "repeats": 1,
+  "count": 100000,
+  "cell": "heavy",
+  "js_block_ms": 160,
+  "scenario": "mixed",
+  "warmup_swipes": 12,
+  "memory": "시작/종료 RSS"
+}

@@ -1,0 +1,12 @@
+{
+  "source_commit": "ff7c77c879acde58b8229d51c0b7b8cd603a0ecf",
+  "android_apk_sha256": "007bbfc829b4e59f9e504ec4c54d2ec4effeddf582cdb04fc4a70f457c3bfceb",
+  "ios_executable_sha256": "b93858f1971bb91b212d6f8b41360d3ec4aa39c3387af0368c4912ea4161cb70",
+  "ios_bundle_sha256": "d60fe9b72354266f54403df8b573110eb6fdf7e8d4dd98f601dc1296942f2b36",
+  "android": "Android 16 API 36 arm64 emulator 1080x2400",
+  "ios": "iPhone 17 Pro iOS 26.2 simulator 1206x2622",
+  "performance_repetitions": 5,
+  "data_count": 100000,
+  "cell": "heavy, fixed height",
+  "scope": "실물 구형 태블릿, 발열·전력, 동적 높이, 종단 지연은 미검증. iOS는 실제 화면 표시 지연이 아닌 보조 지표."
+}

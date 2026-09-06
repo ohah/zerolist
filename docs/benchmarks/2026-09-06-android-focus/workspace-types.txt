@@ -1,0 +1,36 @@
+apps/example/specs/ZlNativeListNativeComponent.ts(5,28): error TS2307: Cannot find module 'react-native/Libraries/Types/CodegenTypes' or its corresponding type declarations.
+apps/example/specs/ZlNativeListNativeComponent.ts(6,36): error TS2307: Cannot find module 'react-native/Libraries/Utilities/codegenNativeComponent' or its corresponding type declarations.
+apps/example/specs/ZlTemplatePaletteNativeComponent.ts(3,29): error TS2307: Cannot find module 'react-native/Libraries/Types/CodegenTypes' or its corresponding type declarations.
+apps/example/specs/ZlTemplatePaletteNativeComponent.ts(4,36): error TS2307: Cannot find module 'react-native/Libraries/Utilities/codegenNativeComponent' or its corresponding type declarations.
+apps/example/specs/ZlTemplateTextNativeComponent.ts(4,28): error TS2307: Cannot find module 'react-native/Libraries/Types/CodegenTypes' or its corresponding type declarations.
+apps/example/specs/ZlTemplateTextNativeComponent.ts(5,36): error TS2307: Cannot find module 'react-native/Libraries/Utilities/codegenNativeComponent' or its corresponding type declarations.
+apps/example/specs/ZlZigListNativeComponent.ts(6,28): error TS2307: Cannot find module 'react-native/Libraries/Types/CodegenTypes' or its corresponding type declarations.
+apps/example/specs/ZlZigListNativeComponent.ts(7,36): error TS2307: Cannot find module 'react-native/Libraries/Utilities/codegenNativeComponent' or its corresponding type declarations.
+apps/example/src/harness/engines/legend.tsx(37,9): error TS2322: Type 'RefObject<LegendListRef | null>' is not assignable to type '((((instance: ScrollViewInstance | null) => void | (() => VoidOrUndefinedOnly)) | RefObject<ScrollViewInstance | null>) & (RefObject<...> | ((instance: LegendListRef | null) => void | (() => VoidOrUndefinedOnly)))) | null | undefined'.
+  Type 'RefObject<LegendListRef | null>' is not assignable to type 'RefObject<ScrollViewInstance | null> & ((instance: LegendListRef | null) => void | (() => VoidOrUndefinedOnly))'.
+    Type 'RefObject<LegendListRef | null>' is not assignable to type 'RefObject<ScrollViewInstance | null>'.
+      Type 'LegendListRef | null' is not assignable to type 'ScrollViewInstance | null'.
+        Type 'LegendListRef' is missing the following properties from type 'ScrollViewInstance': offsetHeight, offsetLeft, offsetParent, offsetTop, and 49 more.
+apps/example/src/harness/engines/template.native.tsx(351,9): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: Omit<AnimatedProps<Readonly<Omit<NativeProps, "ref"> & { ref?: Ref<ReactNativeElement> | undefined; }>>, "ref"> & Partial<...> & object & { ...; }): ReactNode', gave the following error.
+    Type 'EventHandlerProcessed<{ binds: string; version: number; }, never> | ((event: { nativeEvent: { binds: string; version: number; }; }) => void)' is not assignable to type 'DirectEventHandler<Readonly<{ binds: string; version: number; dataVersion: number; }>, never> | SharedValueDisableContravariance<DirectEventHandler<Readonly<{ binds: string; version: number; dataVersion: number; }>, never> | null | undefined> | null | undefined'.
+      Type 'EventHandlerProcessed<{ binds: string; version: number; }, never>' is not assignable to type 'DirectEventHandler<Readonly<{ binds: string; version: number; dataVersion: number; }>, never> | SharedValueDisableContravariance<DirectEventHandler<Readonly<{ binds: string; version: number; dataVersion: number; }>, never> | null | undefined> | null | undefined'.
+        Type 'EventHandlerProcessed<{ binds: string; version: number; }, never>' is not assignable to type 'DirectEventHandler<Readonly<{ binds: string; version: number; dataVersion: number; }>, never>'.
+          Types of parameters 'event' and 'event' are incompatible.
+            Type 'Readonly<{ bubbles: boolean | undefined; cancelable: boolean | undefined; currentTarget: number | ReactNativeElement; defaultPrevented: boolean | undefined; dispatchConfig: Readonly<...>; ... 10 more ...; type: string | undefined; }>' is missing the following properties from type '{ binds: string; version: number; }': binds, version
+  Overload 2 of 2, '(props: Omit<AnimatedProps<Readonly<Omit<NativeProps, "ref"> & { ref?: Ref<ReactNativeElement> | undefined; }>>, "ref"> & Partial<...> & object & RefAttributes<...>): ReactNode', gave the following error.
+    Type 'EventHandlerProcessed<{ binds: string; version: number; }, never> | ((event: { nativeEvent: { binds: string; version: number; }; }) => void)' is not assignable to type 'DirectEventHandler<Readonly<{ binds: string; version: number; dataVersion: number; }>, never> | SharedValueDisableContravariance<DirectEventHandler<Readonly<{ binds: string; version: number; dataVersion: number; }>, never> | null | undefined> | null | undefined'.
+      Type 'EventHandlerProcessed<{ binds: string; version: number; }, never>' is not assignable to type 'DirectEventHandler<Readonly<{ binds: string; version: number; dataVersion: number; }>, never> | SharedValueDisableContravariance<DirectEventHandler<Readonly<{ binds: string; version: number; dataVersion: number; }>, never> | null | undefined> | null | undefined'.
+        Type 'EventHandlerProcessed<{ binds: string; version: number; }, never>' is not assignable to type 'DirectEventHandler<Readonly<{ binds: string; version: number; dataVersion: number; }>, never>'.
+          Types of parameters 'event' and 'event' are incompatible.
+            Type 'Readonly<{ bubbles: boolean | undefined; cancelable: boolean | undefined; currentTarget: number | ReactNativeElement; defaultPrevented: boolean | undefined; dispatchConfig: Readonly<...>; ... 10 more ...; type: string | undefined; }>' is missing the following properties from type '{ binds: string; version: number; }': binds, version
+apps/example/src/harness/util.ts(3,15): error TS2774: This condition will always return true since this function is always defined. Did you mean to call it instead?
+apps/example/src/UnifiedContract.tsx(34,23): error TS2339: Property 'measureInWindow' does not exist on type '(props: Omit<ViewProps, "ref"> & { ref?: Ref<ReactNativeElement> | undefined; }) => ReactNode'.
+apps/example/src/UnifiedContract.tsx(34,40): error TS7006: Parameter 'x' implicitly has an 'any' type.
+apps/example/src/UnifiedContract.tsx(34,43): error TS7006: Parameter 'y' implicitly has an 'any' type.
+apps/example/src/UnifiedContract.tsx(34,46): error TS7006: Parameter 'width' implicitly has an 'any' type.
+apps/example/src/UnifiedContract.tsx(34,53): error TS7006: Parameter 'height' implicitly has an 'any' type.
+apps/example/src/UnifiedContract.tsx(45,7): error TS2322: Type 'RefObject<((props: Omit<ViewProps, "ref"> & { ref?: Ref<ReactNativeElement> | undefined; }) => ReactNode) | null>' is not assignable to type 'Ref<ReactNativeElement> | undefined'.
+  Type 'RefObject<((props: Omit<ViewProps, "ref"> & { ref?: Ref<ReactNativeElement> | undefined; }) => ReactNode) | null>' is not assignable to type 'RefObject<ReactNativeElement | null>'.
+    Type '((props: Omit<ViewProps, "ref"> & { ref?: Ref<ReactNativeElement> | undefined; }) => ReactNode) | null' is not assignable to type 'ReactNativeElement | null'.
+      Type '(props: Omit<ViewProps, "ref"> & { ref?: Ref<ReactNativeElement> | undefined; }) => ReactNode' is not assignable to type 'ReactNativeElement'.

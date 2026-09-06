@@ -1,13 +1,18 @@
 import { defineConfig, mergeConfig } from 'vite';
 
 import config from 'react-native-builder-bob/vite-config';
-import pack from '../package.json' with { type: 'json' };
+import pack from '../../packages/zerolist/package.json' with { type: 'json' };
 
 export default defineConfig((env) =>
   mergeConfig(config(env), {
     resolve: {
       alias: {
-        [pack.name]: new URL('..', import.meta.url),
+        'react-native': new URL('./src/web/reactNative.js', import.meta.url)
+          .pathname,
+        [pack.name]: new URL(
+          '../../packages/zerolist/src/index.tsx',
+          import.meta.url
+        ).pathname,
       },
       dedupe: Object.keys(pack.peerDependencies),
     },

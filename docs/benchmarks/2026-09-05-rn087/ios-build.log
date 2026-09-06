@@ -1,0 +1,34 @@
+Stripped /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/Frameworks/React.framework/React of architectures: x86_64
+rsync --delete -av --filter P .*.?????? --links --filter "- CVS/" --filter "- .svn/" --filter "- .git/" --filter "- .hg/" --filter "- Headers" --filter "- PrivateHeaders" --filter "- Modules" "/tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/XCFrameworkIntermediates/ReactNativeDependencies/ReactNativeDependencies.framework" "/tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/Frameworks"
+Transfer starting: 41 files
+ReactNativeDependencies.framework/
+ReactNativeDependencies.framework/ReactNativeDependencies
+
+sent 2480612 bytes  received 48 bytes  189363358 bytes/sec
+total size is 2492537  speedup is 1.00
+Stripped /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/Frameworks/ReactNativeDependencies.framework/ReactNativeDependencies of architectures: x86_64
+rsync --delete -av --filter P .*.?????? --links --filter "- CVS/" --filter "- .svn/" --filter "- .git/" --filter "- .hg/" --filter "- Headers" --filter "- PrivateHeaders" --filter "- Modules" "/tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/XCFrameworkIntermediates/hermes-engine/Pre-built/hermesvm.framework" "/tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/Frameworks"
+Transfer starting: 3 files
+hermesvm.framework/
+hermesvm.framework/hermesvm
+
+sent 10174806 bytes  received 48 bytes  362094448 bytes/sec
+total size is 10174074  speedup is 1.00
+Stripped /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/Frameworks/hermesvm.framework/hermesvm of architectures: x86_64
+
+ExtractAppIntentsMetadata (in target 'ZerolistExample' from project 'ZerolistExample')
+    cd /Users/yoonhb/Documents/workspace/zerolist/apps/example/ios
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name ZerolistExample --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk --xcode-version 17C52 --platform-family iOS --deployment-target 15.1 --bundle-identifier zerolist.example --output /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app --target-triple arm64-apple-ios15.1-simulator --binary-file /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/ZerolistExample --dependency-file /tmp/zerolist-rn087-ios-build/Build/Intermediates.noindex/ZerolistExample.build/Release-iphonesimulator/ZerolistExample.build/Objects-normal/arm64/ZerolistExample_dependency_info.dat --stringsdata-file /tmp/zerolist-rn087-ios-build/Build/Intermediates.noindex/ZerolistExample.build/Release-iphonesimulator/ZerolistExample.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/zerolist-rn087-ios-build/Build/Intermediates.noindex/ZerolistExample.build/Release-iphonesimulator/ZerolistExample.build/Objects-normal/arm64/ZerolistExample.SwiftFileList --metadata-file-list /tmp/zerolist-rn087-ios-build/Build/Intermediates.noindex/ZerolistExample.build/Release-iphonesimulator/ZerolistExample.build/ZerolistExample.DependencyMetadataFileList --static-metadata-file-list /tmp/zerolist-rn087-ios-build/Build/Intermediates.noindex/ZerolistExample.build/Release-iphonesimulator/ZerolistExample.build/ZerolistExample.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/zerolist-rn087-ios-build/Build/Intermediates.noindex/ZerolistExample.build/Release-iphonesimulator/ZerolistExample.build/Objects-normal/arm64/ZerolistExample.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-09-05 22:25:32.226 appintentsmetadataprocessor[83087:176323953] Starting appintentsmetadataprocessor export
+2026-09-05 22:25:32.227 appintentsmetadataprocessor[83087:176323953] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+CopySwiftLibs /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app (in target 'ZerolistExample' from project 'ZerolistExample')
+    cd /Users/yoonhb/Documents/workspace/zerolist/apps/example/ios
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/ZerolistExample --scan-folder /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/Frameworks --scan-folder /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/PlugIns --scan-folder /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/SystemExtensions --scan-folder /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/Extensions --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/zerolist-rn087-ios-build/Build/Intermediates.noindex/ZerolistExample.build/Release-iphonesimulator/ZerolistExample.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+GenerateDSYMFile /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app.dSYM /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/ZerolistExample (in target 'ZerolistExample' from project 'ZerolistExample')
+    cd /Users/yoonhb/Documents/workspace/zerolist/apps/example/ios
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/ZerolistExample -o /tmp/zerolist-rn087-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app.dSYM
+
+** BUILD SUCCEEDED **

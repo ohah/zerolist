@@ -1,0 +1,222 @@
+[
+  {
+    "run": 1,
+    "variant": "zigpool",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": false,
+    "keep_alive": false,
+    "frames": 273,
+    "jank_count": 12,
+    "jank_percent": 4.4,
+    "p50_ms": 17,
+    "p95_ms": 21,
+    "slow_ui": 0,
+    "slow_draw": 12,
+    "baseline": [0, 1, 0, 0],
+    "final": [26, 27, 0, 0],
+    "delta": [26, 26, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.3371, 0.6693, 1.0038, 1.3372, 1.6706, 2.0032, 2.3364, 2.6712,
+      3.0023, 3.3361, 3.6695
+    ]
+  },
+  {
+    "run": 1,
+    "variant": "zigpool-keep-alive",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": false,
+    "keep_alive": true,
+    "frames": 286,
+    "jank_count": 2,
+    "jank_percent": 0.7,
+    "p50_ms": 19,
+    "p95_ms": 23,
+    "slow_ui": 0,
+    "slow_draw": 2,
+    "baseline": [0, 1, 0, 0],
+    "final": [26, 27, 0, 0],
+    "delta": [26, 26, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.3345, 0.6677, 1.0015, 1.3343, 1.6687, 2.0013, 2.3341, 2.6674,
+      3.0023, 3.3348, 3.6681
+    ]
+  },
+  {
+    "run": 2,
+    "variant": "zigpool-keep-alive",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": false,
+    "keep_alive": true,
+    "frames": 286,
+    "jank_count": 2,
+    "jank_percent": 0.7,
+    "p50_ms": 17,
+    "p95_ms": 20,
+    "slow_ui": 0,
+    "slow_draw": 2,
+    "baseline": [0, 1, 0, 0],
+    "final": [26, 27, 0, 0],
+    "delta": [26, 26, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.332, 0.6643, 0.9972, 1.332, 1.6678, 2.0, 2.3325, 2.6631, 2.9963,
+      3.3303, 3.667
+    ]
+  },
+  {
+    "run": 2,
+    "variant": "zigpool",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": false,
+    "keep_alive": false,
+    "frames": 275,
+    "jank_count": 12,
+    "jank_percent": 4.36,
+    "p50_ms": 17,
+    "p95_ms": 21,
+    "slow_ui": 0,
+    "slow_draw": 11,
+    "baseline": [0, 1, 0, 0],
+    "final": [26, 27, 0, 0],
+    "delta": [26, 26, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.3375, 0.6691, 1.0021, 1.3366, 1.6717, 2.0026, 2.3372, 2.684, 3.019,
+      3.3519, 3.688
+    ]
+  },
+  {
+    "run": 3,
+    "variant": "zigpool",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": false,
+    "keep_alive": false,
+    "frames": 273,
+    "jank_count": 12,
+    "jank_percent": 4.4,
+    "p50_ms": 17,
+    "p95_ms": 20,
+    "slow_ui": 0,
+    "slow_draw": 11,
+    "baseline": [0, 1, 0, 0],
+    "final": [25, 26, 0, 0],
+    "delta": [25, 25, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.322, 0.6552, 0.9875, 1.3248, 1.6556, 1.9899, 2.3224, 2.6548,
+      2.9877, 3.3217, 3.6546
+    ]
+  },
+  {
+    "run": 3,
+    "variant": "zigpool-keep-alive",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": false,
+    "keep_alive": true,
+    "frames": 286,
+    "jank_count": 2,
+    "jank_percent": 0.7,
+    "p50_ms": 19,
+    "p95_ms": 23,
+    "slow_ui": 0,
+    "slow_draw": 2,
+    "baseline": [0, 1, 0, 0],
+    "final": [26, 27, 0, 0],
+    "delta": [26, 26, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.3356, 0.6698, 1.0027, 1.3365, 1.6695, 2.0023, 2.3359, 2.6696,
+      3.0027, 3.3355, 3.6687
+    ]
+  },
+  {
+    "run": 4,
+    "variant": "zigpool-keep-alive",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": false,
+    "keep_alive": true,
+    "frames": 286,
+    "jank_count": 2,
+    "jank_percent": 0.7,
+    "p50_ms": 19,
+    "p95_ms": 23,
+    "slow_ui": 0,
+    "slow_draw": 2,
+    "baseline": [0, 1, 0, 0],
+    "final": [25, 26, 0, 0],
+    "delta": [25, 25, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.3285, 0.6622, 0.995, 1.3283, 1.6632, 1.996, 2.3342, 2.6625, 2.9973,
+      3.3289, 3.6629
+    ]
+  },
+  {
+    "run": 4,
+    "variant": "zigpool",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": false,
+    "keep_alive": false,
+    "frames": 273,
+    "jank_count": 12,
+    "jank_percent": 4.4,
+    "p50_ms": 17,
+    "p95_ms": 20,
+    "slow_ui": 0,
+    "slow_draw": 12,
+    "baseline": [0, 1, 0, 0],
+    "final": [25, 26, 0, 0],
+    "delta": [25, 25, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.3237, 0.6564, 0.993, 1.3232, 1.6552, 1.9906, 2.3245, 2.6556,
+      2.9891, 3.3249, 3.6565
+    ]
+  },
+  {
+    "run": 5,
+    "variant": "zigpool",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": false,
+    "keep_alive": false,
+    "frames": 272,
+    "jank_count": 15,
+    "jank_percent": 5.51,
+    "p50_ms": 17,
+    "p95_ms": 20,
+    "slow_ui": 3,
+    "slow_draw": 14,
+    "baseline": [0, 1, 0, 0],
+    "final": [26, 27, 0, 0],
+    "delta": [26, 26, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.3237, 0.6564, 0.9921, 1.3266, 1.6626, 2.0231, 2.3564, 2.6918,
+      3.0232, 3.3563, 3.6902
+    ]
+  },
+  {
+    "run": 5,
+    "variant": "zigpool-keep-alive",
+    "engine": "zigpool",
+    "mode": "normal",
+    "trace": false,
+    "keep_alive": true,
+    "frames": 285,
+    "jank_count": 2,
+    "jank_percent": 0.7,
+    "p50_ms": 19,
+    "p95_ms": 22,
+    "slow_ui": 0,
+    "slow_draw": 1,
+    "baseline": [0, 1, 0, 0],
+    "final": [25, 26, 0, 0],
+    "delta": [25, 25, 0, 0],
+    "gesture_host_seconds": [
+      0.0, 0.3333, 0.6651, 1.0001, 1.3349, 1.6667, 2.0005, 2.3338, 2.6659,
+      3.0011, 3.3354, 3.6657
+    ]
+  }
+]

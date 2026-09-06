@@ -1,0 +1,542 @@
+[
+  {
+    "run": 1,
+    "variant": "flatlist",
+    "callbacks": 431,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 283.953125,
+    "rss_after_mib": 425.25,
+    "rss_sampled_peak_mib": 425.25,
+    "rss_samples_mib": [
+      307.5625, 311.390625, 316.453125, 322.875, 328.359375, 337.28125,
+      345.453125, 352.609375, 365.171875, 375.171875, 384.9375, 393.171875
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 1,
+    "variant": "legend",
+    "callbacks": 428,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 323.84375,
+    "rss_after_mib": 356.453125,
+    "rss_sampled_peak_mib": 356.453125,
+    "rss_samples_mib": [
+      328.390625, 330.75, 331.96875, 333.0, 334.0625, 333.90625, 334.9375,
+      336.9375, 337.578125, 340.53125, 344.25, 347.375
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 1,
+    "variant": "flashlist",
+    "callbacks": 421,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 285.6875,
+    "rss_after_mib": 341.703125,
+    "rss_sampled_peak_mib": 341.703125,
+    "rss_samples_mib": [
+      307.6875, 310.28125, 312.8125, 313.640625, 316.0625, 316.859375,
+      318.328125, 320.71875, 322.171875, 325.375, 329.15625, 330.546875
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 1,
+    "variant": "zerolist",
+    "callbacks": 367,
+    "late_callbacks": 19,
+    "late_callback_percent": 5.177111716621254,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 24.01966694742441,
+    "callback_max_ms": 177.75729205459356,
+    "rss_before_mib": 289.84375,
+    "rss_after_mib": 425.515625,
+    "rss_sampled_peak_mib": 425.515625,
+    "rss_samples_mib": [
+      313.28125, 316.90625, 323.921875, 329.171875, 339.421875, 343.34375,
+      348.796875, 356.40625, 361.375, 372.59375, 377.921875, 385.0625
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 1,
+    "variant": "zigpool",
+    "callbacks": 430,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 277.609375,
+    "rss_after_mib": 328.078125,
+    "rss_sampled_peak_mib": 328.078125,
+    "rss_samples_mib": [
+      295.625, 295.78125, 297.59375, 299.421875, 302.59375, 304.5625,
+      307.453125, 309.671875, 311.984375, 314.546875, 317.640625, 318.890625
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 1,
+    "variant": "zigpool-legacy",
+    "callbacks": 435,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 275.75,
+    "rss_after_mib": 330.28125,
+    "rss_sampled_peak_mib": 330.28125,
+    "rss_samples_mib": [
+      295.234375, 296.625, 298.328125, 301.90625, 303.65625, 305.109375, 307.0,
+      311.640625, 313.453125, 316.40625, 319.734375, 321.484375
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 2,
+    "variant": "legend",
+    "callbacks": 434,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 323.671875,
+    "rss_after_mib": 356.828125,
+    "rss_sampled_peak_mib": 356.828125,
+    "rss_samples_mib": [
+      328.875, 330.84375, 331.890625, 333.0, 333.96875, 333.984375, 334.90625,
+      337.71875, 338.40625, 341.8125, 345.125, 347.296875
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 2,
+    "variant": "flashlist",
+    "callbacks": 436,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 288.34375,
+    "rss_after_mib": 340.953125,
+    "rss_sampled_peak_mib": 340.953125,
+    "rss_samples_mib": [
+      310.125, 313.0, 316.078125, 317.421875, 317.9375, 318.65625, 321.28125,
+      322.4375, 324.296875, 326.609375, 330.890625, 335.265625
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 2,
+    "variant": "zerolist",
+    "callbacks": 372,
+    "late_callbacks": 17,
+    "late_callback_percent": 4.56989247311828,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 18.09829194098711,
+    "callback_max_ms": 163.01487479358912,
+    "rss_before_mib": 289.765625,
+    "rss_after_mib": 416.890625,
+    "rss_sampled_peak_mib": 416.890625,
+    "rss_samples_mib": [
+      313.078125, 320.109375, 327.625, 330.984375, 337.671875, 342.734375,
+      349.4375, 357.578125, 362.96875, 366.84375, 371.21875, 380.828125
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 2,
+    "variant": "zigpool",
+    "callbacks": 433,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 276.453125,
+    "rss_after_mib": 329.625,
+    "rss_sampled_peak_mib": 329.625,
+    "rss_samples_mib": [
+      294.625, 294.671875, 296.15625, 298.078125, 301.28125, 303.265625,
+      305.78125, 307.75, 312.078125, 315.671875, 319.484375, 321.609375
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 2,
+    "variant": "zigpool-legacy",
+    "callbacks": 428,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 277.8125,
+    "rss_after_mib": 333.203125,
+    "rss_sampled_peak_mib": 333.203125,
+    "rss_samples_mib": [
+      297.5, 299.0625, 300.40625, 303.96875, 305.453125, 307.109375, 309.203125,
+      313.375, 315.28125, 316.828125, 321.375, 323.171875
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 2,
+    "variant": "flatlist",
+    "callbacks": 426,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 283.25,
+    "rss_after_mib": 418.5625,
+    "rss_sampled_peak_mib": 418.5625,
+    "rss_samples_mib": [
+      307.078125, 313.015625, 315.671875, 323.328125, 326.78125, 333.375,
+      342.9375, 352.96875, 360.5, 366.9375, 381.0, 391.765625
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 3,
+    "variant": "flashlist",
+    "callbacks": 430,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 288.109375,
+    "rss_after_mib": 343.390625,
+    "rss_sampled_peak_mib": 343.390625,
+    "rss_samples_mib": [
+      309.3125, 311.421875, 314.296875, 315.453125, 316.34375, 317.625,
+      319.71875, 321.328125, 323.09375, 326.203125, 329.390625, 331.90625
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 3,
+    "variant": "zerolist",
+    "callbacks": 376,
+    "late_callbacks": 22,
+    "late_callback_percent": 5.851063829787234,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 36.53783304616809,
+    "callback_max_ms": 113.33320895209908,
+    "rss_before_mib": 288.421875,
+    "rss_after_mib": 409.546875,
+    "rss_sampled_peak_mib": 409.546875,
+    "rss_samples_mib": [
+      310.59375, 315.90625, 323.75, 325.84375, 332.5, 341.0, 349.78125,
+      354.640625, 360.453125, 368.0625, 373.953125, 380.671875
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 3,
+    "variant": "zigpool",
+    "callbacks": 434,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 275.9375,
+    "rss_after_mib": 329.3125,
+    "rss_sampled_peak_mib": 329.3125,
+    "rss_samples_mib": [
+      294.03125, 294.046875, 295.71875, 297.6875, 300.859375, 302.84375,
+      305.375, 307.71875, 312.03125, 315.125, 319.3125, 321.234375
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 3,
+    "variant": "zigpool-legacy",
+    "callbacks": 427,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 276.65625,
+    "rss_after_mib": 332.40625,
+    "rss_sampled_peak_mib": 332.40625,
+    "rss_samples_mib": [
+      296.421875, 297.796875, 299.359375, 302.4375, 303.953125, 305.734375,
+      308.046875, 312.03125, 315.28125, 317.21875, 321.125, 322.28125
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 3,
+    "variant": "flatlist",
+    "callbacks": 423,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 284.828125,
+    "rss_after_mib": 431.703125,
+    "rss_sampled_peak_mib": 431.703125,
+    "rss_samples_mib": [
+      307.453125, 311.375, 314.140625, 321.765625, 325.46875, 334.984375,
+      345.640625, 354.125, 364.65625, 376.34375, 391.078125, 400.578125
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 3,
+    "variant": "legend",
+    "callbacks": 424,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 325.0625,
+    "rss_after_mib": 354.734375,
+    "rss_sampled_peak_mib": 354.734375,
+    "rss_samples_mib": [
+      330.5625, 332.359375, 333.75, 335.15625, 336.09375, 336.03125, 337.375,
+      340.234375, 341.328125, 343.390625, 345.765625, 347.75
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 4,
+    "variant": "zerolist",
+    "callbacks": 381,
+    "late_callbacks": 22,
+    "late_callback_percent": 5.774278215223097,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 28.70504092425108,
+    "callback_max_ms": 95.92441702261567,
+    "rss_before_mib": 291.328125,
+    "rss_after_mib": 410.5,
+    "rss_sampled_peak_mib": 410.5,
+    "rss_samples_mib": [
+      313.375, 318.59375, 324.984375, 329.78125, 334.984375, 341.5, 352.8125,
+      357.953125, 364.890625, 368.515625, 374.609375, 381.609375
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 4,
+    "variant": "zigpool",
+    "callbacks": 425,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 277.21875,
+    "rss_after_mib": 331.703125,
+    "rss_sampled_peak_mib": 331.703125,
+    "rss_samples_mib": [
+      295.28125, 295.34375, 297.171875, 298.921875, 302.390625, 304.484375,
+      306.984375, 309.125, 313.5625, 316.359375, 319.71875, 321.796875
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 4,
+    "variant": "zigpool-legacy",
+    "callbacks": 425,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 275.84375,
+    "rss_after_mib": 331.78125,
+    "rss_sampled_peak_mib": 331.78125,
+    "rss_samples_mib": [
+      295.75, 296.765625, 298.453125, 301.703125, 303.1875, 304.875, 306.875,
+      310.5, 312.171875, 314.3125, 317.484375, 320.28125
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 4,
+    "variant": "flatlist",
+    "callbacks": 427,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 282.484375,
+    "rss_after_mib": 423.5,
+    "rss_sampled_peak_mib": 423.5,
+    "rss_samples_mib": [
+      305.15625, 309.71875, 313.203125, 322.65625, 326.046875, 332.0625,
+      338.8125, 349.453125, 357.84375, 365.625, 381.46875, 387.0
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 4,
+    "variant": "legend",
+    "callbacks": 431,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 324.03125,
+    "rss_after_mib": 352.984375,
+    "rss_sampled_peak_mib": 352.984375,
+    "rss_samples_mib": [
+      329.546875, 331.375, 332.40625, 333.765625, 335.09375, 335.21875,
+      336.15625, 337.875, 338.921875, 341.765625, 344.078125, 346.15625
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 4,
+    "variant": "flashlist",
+    "callbacks": 433,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 289.328125,
+    "rss_after_mib": 341.0625,
+    "rss_sampled_peak_mib": 341.0625,
+    "rss_samples_mib": [
+      311.171875, 313.3125, 315.796875, 317.859375, 319.15625, 319.703125,
+      321.359375, 323.53125, 326.0, 328.625, 331.453125, 334.765625
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 5,
+    "variant": "zigpool",
+    "callbacks": 432,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 276.0625,
+    "rss_after_mib": 330.203125,
+    "rss_sampled_peak_mib": 330.203125,
+    "rss_samples_mib": [
+      294.234375, 294.296875, 296.0625, 297.828125, 301.046875, 302.703125,
+      304.953125, 307.0625, 311.515625, 315.546875, 319.25, 320.15625
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 5,
+    "variant": "zigpool-legacy",
+    "callbacks": 434,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 276.625,
+    "rss_after_mib": 330.328125,
+    "rss_sampled_peak_mib": 330.328125,
+    "rss_samples_mib": [
+      296.40625, 297.625, 298.96875, 302.546875, 304.03125, 305.625, 307.234375,
+      311.484375, 312.984375, 315.0625, 319.84375, 321.734375
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 5,
+    "variant": "flatlist",
+    "callbacks": 431,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 283.53125,
+    "rss_after_mib": 420.75,
+    "rss_sampled_peak_mib": 420.75,
+    "rss_samples_mib": [
+      307.484375, 313.671875, 316.65625, 324.359375, 327.625, 335.484375,
+      341.484375, 348.640625, 363.21875, 370.578125, 382.578125, 387.5
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 5,
+    "variant": "legend",
+    "callbacks": 429,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 321.984375,
+    "rss_after_mib": 351.265625,
+    "rss_sampled_peak_mib": 351.265625,
+    "rss_samples_mib": [
+      327.375, 329.125, 330.5, 331.765625, 332.734375, 332.65625, 333.578125,
+      335.828125, 337.125, 339.296875, 341.5625, 344.203125
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 5,
+    "variant": "flashlist",
+    "callbacks": 429,
+    "late_callbacks": 0,
+    "late_callback_percent": 0.0,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 16.666667070239782,
+    "rss_before_mib": 287.78125,
+    "rss_after_mib": 340.640625,
+    "rss_sampled_peak_mib": 340.640625,
+    "rss_samples_mib": [
+      309.578125, 311.890625, 314.421875, 315.84375, 316.703125, 318.328125,
+      319.265625, 322.28125, 323.71875, 327.375, 329.375, 331.765625
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  },
+  {
+    "run": 5,
+    "variant": "zerolist",
+    "callbacks": 389,
+    "late_callbacks": 17,
+    "late_callback_percent": 4.370179948586118,
+    "callback_p50_ms": 16.666667070239782,
+    "callback_p95_ms": 16.666667070239782,
+    "callback_max_ms": 100.72195902466774,
+    "rss_before_mib": 288.9375,
+    "rss_after_mib": 406.15625,
+    "rss_sampled_peak_mib": 406.15625,
+    "rss_samples_mib": [
+      312.5, 316.203125, 319.0625, 326.71875, 332.828125, 339.578125,
+      347.078125, 355.03125, 358.8125, 365.21875, 370.140625, 379.78125
+    ],
+    "note": "UI callback intervals, not presented frames or GPU deadlines; RSS is sampled simulator process memory, not peak device memory."
+  }
+]

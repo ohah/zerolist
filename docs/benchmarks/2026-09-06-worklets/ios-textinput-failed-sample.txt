@@ -1,0 +1,12 @@
+2026-09-06 07:35:28.793 ZerolistExample[77316:179964907] ZlCommon frame=793 ns=2239542100000000 y=2833.667 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.810 ZerolistExample[77316:179964907] ZlCommon frame=794 ns=2239542116666667 y=2835.333 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.826 ZerolistExample[77316:179964907] ZlCommon frame=795 ns=2239542133333334 y=2837.000 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.843 ZerolistExample[77316:179964907] ZlCommon frame=796 ns=2239542150000000 y=2838.333 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.860 ZerolistExample[77316:179964907] ZlCommon frame=797 ns=2239542166666667 y=2839.667 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.876 ZerolistExample[77316:179964907] ZlCommon frame=798 ns=2239542183333334 y=2841.000 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.893 ZerolistExample[77316:179964907] ZlCommon frame=799 ns=2239542200000001 y=2842.333 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.910 ZerolistExample[77316:179964907] ZlCommon frame=800 ns=2239542216666667 y=2843.667 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.926 ZerolistExample[77316:179964907] ZlCommon frame=801 ns=2239542233333334 y=2845.000 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.943 ZerolistExample[77316:179964907] ZlCommon frame=802 ns=2239542250000000 y=2846.333 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.960 ZerolistExample[77316:179964907] ZlCommon frame=803 ns=2239542266666667 y=2847.333 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000
+2026-09-06 07:35:28.977 ZerolistExample[77316:179964907] ZlCommon frame=804 ns=2239542283333334 y=2848.333 viewport=874.000 rh=234.000 visible=4 attached=14 entered=0 unready=0 wrong=2 blank=0.000 overlap=0.000

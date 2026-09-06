@@ -190,6 +190,7 @@ class ZlPackage : com.facebook.react.ReactPackage {
     listOf<com.facebook.react.uimanager.ViewManager<*, *>>(
       ZlNativeListManager(),
       ZlZigListManager(),
-      ZlPoolListManager(),
+      ZlTemplateTextManager(),
+      ZlTemplatePaletteManager(),
     )
 }

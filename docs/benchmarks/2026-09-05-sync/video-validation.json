@@ -1,0 +1,156 @@
+[
+  {
+    "file": "android-compare-0.mp4",
+    "seconds": 7.9,
+    "frames": 237,
+    "width": 1080,
+    "height": 1380,
+    "bytes": 9378969,
+    "sha256": "3d1c4b21a8bd2e8cae2ede25e323bd9f4cc03e7d2ffe775cf75d4e5e81337efc",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "android-compare-120-slow.mp4",
+    "seconds": 31.733333,
+    "frames": 952,
+    "width": 1080,
+    "height": 1446,
+    "bytes": 12687053,
+    "sha256": "b93d089a7d4170e9c91bfb1264c8d62d25fe8539cdc93ae8c3f257b53240bf6c",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "android-compare-120.mp4",
+    "seconds": 7.933333,
+    "frames": 238,
+    "width": 1080,
+    "height": 1380,
+    "bytes": 9482345,
+    "sha256": "bc36000659ff20c8b49dddecf5b5bf04937871fa346cad5d5f5c8a5529364aa4",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "android-fixed-0.mp4",
+    "seconds": 7.886667,
+    "frames": 394,
+    "width": 540,
+    "height": 1200,
+    "bytes": 5942835,
+    "sha256": "4f96aa6e051a4a29e8b12601c9f138e174a00a6bd26e54a06f124c7ac3c3feb5",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "android-fixed-120.mp4",
+    "seconds": 7.916667,
+    "frames": 396,
+    "width": 540,
+    "height": 1200,
+    "bytes": 5925535,
+    "sha256": "e7f15b072e572fe53e873f4139ddb5c1462e41a63cb59ef6f8389e933869da98",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "android-legacy-0.mp4",
+    "seconds": 7.914671,
+    "frames": 393,
+    "width": 540,
+    "height": 1200,
+    "bytes": 5962864,
+    "sha256": "1629ab116f1e7ec2a2172714c0844550c4b28721595bab503f969eb67f9a83d8",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "android-legacy-120.mp4",
+    "seconds": 7.905669,
+    "frames": 396,
+    "width": 540,
+    "height": 1200,
+    "bytes": 5970583,
+    "sha256": "479fde1eb86b039dd3544e7fad586a3413f9dde7827bac958b68b5e1c6983cef",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "ios-compare-0.mp4",
+    "seconds": 9.466667,
+    "frames": 284,
+    "width": 1080,
+    "height": 1354,
+    "bytes": 9008201,
+    "sha256": "bef39b8506f20fee80f379f2f91ccce18853943b9a76ce35141fd19bafb1a9de",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "ios-compare-120-slow.mp4",
+    "seconds": 37.866667,
+    "frames": 1136,
+    "width": 1080,
+    "height": 1420,
+    "bytes": 12487405,
+    "sha256": "f761d013886667528e398cc2218126adbe9d74038355f75008de9c22a207fcb1",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "ios-compare-120.mp4",
+    "seconds": 9.466667,
+    "frames": 284,
+    "width": 1080,
+    "height": 1354,
+    "bytes": 8523264,
+    "sha256": "14aef8ec0f5a1d130aa963f2b099278f414488a996fbde45ac455e975db1816f",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "ios-fixed-0.mp4",
+    "seconds": 9.476133,
+    "frames": 464,
+    "width": 540,
+    "height": 1174,
+    "bytes": 6225901,
+    "sha256": "2e30352ddc48dc951ead145c79a093e5bf39954a2e166a54ca7666905402af0d",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "ios-fixed-120.mp4",
+    "seconds": 9.466667,
+    "frames": 466,
+    "width": 540,
+    "height": 1174,
+    "bytes": 5736345,
+    "sha256": "02786eb9ca01b1e70a5daa38212e012cadbedd339c942fc5a4b9d7cced9df333",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "ios-legacy-0.mp4",
+    "seconds": 9.416667,
+    "frames": 458,
+    "width": 540,
+    "height": 1174,
+    "bytes": 6283431,
+    "sha256": "212e89fa1a69a2f405751d56e72b21ac5a234c782bdf87341fc70a9fa6d3b4fb",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  },
+  {
+    "file": "ios-legacy-120.mp4",
+    "seconds": 9.483008,
+    "frames": 462,
+    "width": 540,
+    "height": 1174,
+    "bytes": 6473290,
+    "sha256": "dd58417b83a15b048b6e832ecd17a0cc9945bdc0070e5dcc2ae487953c116723",
+    "full_decode": "pass",
+    "monotonic_pts": true
+  }
+]

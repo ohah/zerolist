@@ -9,6 +9,7 @@
   "sortPackageJson": false,
   "ignorePatterns": [
     "**/lib/**",
+    "**/dist/**",
     "**/node_modules/**",
     "**/generated/**",
     "**/zig-out/**",

@@ -1,0 +1,38 @@
+[
+  {
+    "platform": "ios",
+    "item_id": 3,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0
+  },
+  {
+    "platform": "ios",
+    "item_id": 4,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0
+  },
+  {
+    "platform": "ios",
+    "item_id": 5,
+    "checked_dots": 64,
+    "max_color_channel_difference": 1
+  },
+  {
+    "platform": "android",
+    "item_id": 3,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0
+  },
+  {
+    "platform": "android",
+    "item_id": 4,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0
+  },
+  {
+    "platform": "android",
+    "item_id": 5,
+    "checked_dots": 64,
+    "max_color_channel_difference": 1
+  }
+]

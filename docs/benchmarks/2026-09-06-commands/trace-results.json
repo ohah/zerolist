@@ -1,0 +1,26 @@
+[
+  {
+    "engine": "template-palette",
+    "diagnostic_only": true,
+    "trace_seconds": 15,
+    "gesture_seconds": 3.7950422920000006,
+    "jank_percent": 1.09,
+    "p95_ms": 19
+  },
+  {
+    "engine": "template-palette-command",
+    "diagnostic_only": true,
+    "trace_seconds": 15,
+    "gesture_seconds": 3.7956813749999974,
+    "jank_percent": 1.09,
+    "p95_ms": 18
+  },
+  {
+    "engine": "template-command",
+    "diagnostic_only": true,
+    "trace_seconds": 15,
+    "gesture_seconds": 3.9394966249999968,
+    "jank_percent": 2.88,
+    "p95_ms": 26
+  }
+]

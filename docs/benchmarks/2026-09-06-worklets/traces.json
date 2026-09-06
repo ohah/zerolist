@@ -1,0 +1,182 @@
+[
+  {
+    "platform": "android",
+    "engine": "template-js",
+    "group": "android-trace",
+    "requested": 43,
+    "received": 26,
+    "committed": 23,
+    "placed": 23,
+    "request_to_receive": {
+      "n": 26,
+      "p95_ms": 143,
+      "median_ms": 30.5,
+      "min_ms": 0,
+      "negative_samples": 0
+    },
+    "receive_to_commit": {
+      "n": 23,
+      "p95_ms": 39,
+      "median_ms": 27,
+      "min_ms": 16,
+      "negative_samples": 0
+    },
+    "commit_to_placed": {
+      "n": 23,
+      "p95_ms": 2,
+      "median_ms": 1,
+      "min_ms": 0,
+      "negative_samples": 0
+    }
+  },
+  {
+    "platform": "android",
+    "engine": "template-worklet",
+    "group": "android-trace",
+    "requested": 46,
+    "received": 46,
+    "committed": 46,
+    "placed": 46,
+    "request_to_receive": {
+      "n": 46,
+      "p95_ms": 1,
+      "median_ms": 0.0,
+      "min_ms": 0,
+      "negative_samples": 0
+    },
+    "receive_to_commit": {
+      "n": 46,
+      "p95_ms": 17,
+      "median_ms": 2.0,
+      "min_ms": 1,
+      "negative_samples": 0
+    },
+    "commit_to_placed": {
+      "n": 46,
+      "p95_ms": 8,
+      "median_ms": 1.0,
+      "min_ms": 0,
+      "negative_samples": 0
+    }
+  },
+  {
+    "platform": "android",
+    "engine": "zigpool",
+    "group": "android-trace",
+    "requested": 46,
+    "received": 30,
+    "committed": 30,
+    "placed": 28,
+    "request_to_receive": {
+      "n": 30,
+      "p95_ms": 127,
+      "median_ms": 14.5,
+      "min_ms": 0,
+      "negative_samples": 0
+    },
+    "receive_to_commit": {
+      "n": 30,
+      "p95_ms": 22,
+      "median_ms": 10.5,
+      "min_ms": 5,
+      "negative_samples": 0
+    },
+    "commit_to_placed": {
+      "n": 28,
+      "p95_ms": 2,
+      "median_ms": 1.0,
+      "min_ms": 0,
+      "negative_samples": 0
+    }
+  },
+  {
+    "platform": "ios",
+    "engine": "template-js",
+    "group": "ios-trace",
+    "requested": 96,
+    "received": 95,
+    "committed": 50,
+    "placed": 50,
+    "request_to_receive": {
+      "n": 95,
+      "p95_ms": 158,
+      "median_ms": 60,
+      "min_ms": 0,
+      "negative_samples": 0
+    },
+    "receive_to_commit": {
+      "n": 50,
+      "p95_ms": 22,
+      "median_ms": 11.0,
+      "min_ms": 3,
+      "negative_samples": 0
+    },
+    "commit_to_placed": {
+      "n": 50,
+      "p95_ms": 1,
+      "median_ms": 0.0,
+      "min_ms": 0,
+      "negative_samples": 0
+    }
+  },
+  {
+    "platform": "ios",
+    "engine": "template-worklet",
+    "group": "ios-trace",
+    "requested": 100,
+    "received": 100,
+    "committed": 100,
+    "placed": 100,
+    "request_to_receive": {
+      "n": 100,
+      "p95_ms": 0,
+      "median_ms": 0.0,
+      "min_ms": -1,
+      "negative_samples": 44
+    },
+    "receive_to_commit": {
+      "n": 100,
+      "p95_ms": 4,
+      "median_ms": 2.0,
+      "min_ms": 1,
+      "negative_samples": 0
+    },
+    "commit_to_placed": {
+      "n": 100,
+      "p95_ms": 1,
+      "median_ms": 0.0,
+      "min_ms": 0,
+      "negative_samples": 0
+    }
+  },
+  {
+    "platform": "ios",
+    "engine": "zigpool",
+    "group": "ios-trace",
+    "requested": 100,
+    "received": 100,
+    "committed": 53,
+    "placed": 53,
+    "request_to_receive": {
+      "n": 100,
+      "p95_ms": 159,
+      "median_ms": 60.0,
+      "min_ms": -1,
+      "negative_samples": 2
+    },
+    "receive_to_commit": {
+      "n": 53,
+      "p95_ms": 10,
+      "median_ms": 3,
+      "min_ms": 2,
+      "negative_samples": 0
+    },
+    "commit_to_placed": {
+      "n": 53,
+      "p95_ms": 1,
+      "median_ms": 0,
+      "min_ms": 0,
+      "negative_samples": 0
+    }
+  }
+]

@@ -1,0 +1,632 @@
+[
+  {
+    "name": "android-flatlist-5-block",
+    "platform": "android",
+    "engine": "flatlist",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-budget-videos/android-flatlist-5-block.webm",
+    "seconds": 6.822,
+    "wall_seconds": 6.816104084,
+    "events": [
+      {
+        "t": 1.0174228750000003,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.3433578749999997,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.6718646670000004,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0062461249999997,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.15577475,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.3045156249999996,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.458782541999999,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.604891166999999,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.7571376669999994,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.905983084,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.055785417,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.208737125,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.3574108750000002,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.5055038749999996,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.656325709,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.8055738749999994,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.139477541999999,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.4743735419999995,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "9a076305d00e711f67ae783491f1b62c822f72dd7bcf977d4064c8232272263a"
+  },
+  {
+    "name": "android-flashlist-2-block",
+    "platform": "android",
+    "engine": "flashlist",
+    "buffer_rows": 2,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-budget-videos/android-flashlist-2-block.webm",
+    "seconds": 6.841,
+    "wall_seconds": 6.835372417000002,
+    "events": [
+      {
+        "t": 1.021776667000001,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.3430977500000019,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.674990459,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.007067375000002,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.1594714170000024,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.311358875,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.4587290840000016,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.6084090840000016,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.7578977920000014,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.9296764169999996,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.075358125000001,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.2253981250000017,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.377349167000002,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.5252947920000004,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.674691334000002,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.826247084000002,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.158648834000001,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.491322042,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "1b34331018e0a1b008ec8997ef1d062a31bf1c6cac788bbf4148010878d9d786"
+  },
+  {
+    "name": "android-zigpool-5-block",
+    "platform": "android",
+    "engine": "zigpool",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-budget-videos/android-zigpool-5-block.webm",
+    "seconds": 6.864,
+    "wall_seconds": 6.831026915999999,
+    "events": [
+      {
+        "t": 1.0137254999999996,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.338970125000003,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.6709706250000025,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0065818329999985,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.154966625,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.3045668330000026,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.4566632499999983,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.6061202500000036,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.7560443329999984,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.909244583000003,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.0560448749999978,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.204505458,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.3560008749999994,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.508601458000001,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.654841666000003,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.8080967080000008,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.144675249999999,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.489666958000001,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "8634b7e3b7f1b6cb2f8c5806bd42daf1695c6410e82ea2919b5d8965ae1ce16f"
+  },
+  {
+    "name": "ios-flatlist-5-block",
+    "platform": "ios",
+    "engine": "flatlist",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-budget-videos/ios-flatlist-5-block.mp4",
+    "seconds": 9.97,
+    "wall_seconds": 9.967453499999998,
+    "events": [
+      {
+        "t": 1.0038688329999985,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.5146259580000034,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.042079292000004,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.5749822920000014,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.898995333000002,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.215677708000001,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.5250756249999995,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.846784792000001,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.194018083000003,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.518605417000003,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.823792417,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.141747875,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.455845042,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.757158457999999,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 6.0578833329999995,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 6.377996457999998,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.912913750000001,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 7.431066792000003,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "f445d2a465bb1bb579b35c9363da300ee8f4e5ec221e3e8e7832f34521eb269e"
+  },
+  {
+    "name": "ios-flashlist-5-block",
+    "platform": "ios",
+    "engine": "flashlist",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-budget-videos/ios-flashlist-5-block.mp4",
+    "seconds": 10.106667,
+    "wall_seconds": 10.101983665999995,
+    "events": [
+      {
+        "t": 1.0056868329999986,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.5308260000000047,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0753599159999965,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.6242248329999995,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.9454585409999936,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.2718559580000033,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.593155291000002,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.9107330410000003,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.223512874999997,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.538868500000007,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.847026166000006,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.156163250000006,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.529882541000006,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.851132750000005,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 6.169520625000004,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 6.484872082999999,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 7.026891125000006,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 7.565596249999999,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "405dc6ac23cf2c45e4e32b0ab12bff6666676fbe6a96be8b67df84cc1cc59c0b"
+  },
+  {
+    "name": "ios-zigpool-12-block",
+    "platform": "ios",
+    "engine": "zigpool",
+    "buffer_rows": 12,
+    "variant": "adaptive-stable",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-budget-videos/ios-zigpool-12-block.mp4",
+    "seconds": 9.753333,
+    "wall_seconds": 9.75073733299999,
+    "events": [
+      {
+        "t": 1.0070045410000006,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.506475832999996,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0008641249999926,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.520721457999997,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.8272707080000004,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.1467839999999967,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.454361665999997,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.749073624999994,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.056409540999994,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.371272082999994,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.684382874999997,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.982263457999991,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.292394582999989,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.601262957999992,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.906122999999994,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 6.215975,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.736092540999991,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 7.236533374999993,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "4cb4c5848b749cd7fb52f0a8371680446143931e788c06dd1bff7108445ccbff"
+  }
+]

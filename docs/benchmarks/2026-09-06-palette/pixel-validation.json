@@ -1,0 +1,34 @@
+[
+  {
+    "platform": "ios",
+    "old": "flatlist",
+    "new": "flatlist-palette",
+    "checked_dots": 64,
+    "max_center_position_difference_px": 0,
+    "max_center_color_channel_difference": 1
+  },
+  {
+    "platform": "ios",
+    "old": "template-compact",
+    "new": "template-palette",
+    "checked_dots": 64,
+    "max_center_position_difference_px": 0,
+    "max_center_color_channel_difference": 1
+  },
+  {
+    "platform": "android",
+    "old": "flatlist",
+    "new": "flatlist-palette",
+    "checked_dots": 64,
+    "max_center_position_difference_px": 1,
+    "max_center_color_channel_difference": 1
+  },
+  {
+    "platform": "android",
+    "old": "template-compact",
+    "new": "template-palette",
+    "checked_dots": 64,
+    "max_center_position_difference_px": 1,
+    "max_center_color_channel_difference": 1
+  }
+]

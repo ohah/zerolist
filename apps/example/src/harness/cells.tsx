@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import type { Item, CellType, HeightMode } from './types';
 import { inst } from './instrument';
+import { PaletteDecoration } from './palette';
 
 // 결정론적 데이터-URI 이미지(네트워크 비결정성 제거). 실제 대용량
 // 사진 디코드 비용은 별도 축 — 여기선 Image 파이프라인/레이아웃 비용.
@@ -19,6 +20,8 @@ function hsl(h: number, l = 70) {
 }
 
 interface Props {
+  nativePalette?: boolean;
+  commonAudit?: boolean;
   item: Item;
   cell: CellType;
   height: HeightMode;
@@ -31,7 +34,15 @@ const HEAVY_ITERS = 4000; // 셀당 동기 연산 부하 (변별용 코스트 kn
 
 // 무거운 셀: 렌더마다 동기 연산 + 64 서브뷰 + 이미지. 실제 무거운
 // 앱의 행을 모사 — 재활용/재렌더 비용을 표면화한다.
-function HeavyCell({ item }: { item: Item }) {
+function HeavyCell({
+  item,
+  sized,
+  nativePalette,
+}: {
+  item: Item;
+  sized: boolean;
+  nativePalette?: boolean;
+}) {
   let acc = 0;
   for (let i = 0; i < HEAVY_ITERS; i++)
     acc += Math.sqrt((i * (item.id + 1)) % 97);
@@ -43,23 +54,40 @@ function HeavyCell({ item }: { item: Item }) {
           <Text style={styles.title} numberOfLines={1}>
             {item.title}
           </Text>
-          <Text style={styles.body}>{item.body}</Text>
+          <Text style={styles.body} numberOfLines={sized ? 3 : undefined}>
+            {item.body}
+          </Text>
           <Text style={styles.body}>∑={acc.toFixed(1)}</Text>
         </View>
       </View>
-      <View style={styles.grid}>
-        {DOTS.map((d) => (
-          <View
-            key={d}
-            style={[styles.dot, { backgroundColor: hsl(item.hue + d * 5) }]}
-          />
-        ))}
-      </View>
+      {nativePalette ? (
+        <PaletteDecoration hue={item.hue} />
+      ) : (
+        <View style={styles.grid}>
+          {DOTS.map((d) => (
+            <View
+              key={d}
+              style={[styles.dot, { backgroundColor: hsl(item.hue + d * 5) }]}
+            />
+          ))}
+        </View>
+      )}
     </>
   );
 }
 
-function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
+function CellInner({
+  item,
+  cell,
+  height,
+  onMeasure,
+  onRender,
+  commonAudit,
+  nativePalette,
+}: Props) {
+  const auditProps = commonAudit
+    ? { testID: `zl-row-${item.id}-h${item.height}`, collapsable: false }
+    : {};
   onRender?.(item.id); // 실제 렌더 검증(측정 유효성)
   // 카운트 지표: 셀 인스턴스 mount/unmount churn(시간 아님). ③ 고정
   // 풀 = 초기 후 ≈0, FlatList = 스크롤 따라 생성/파괴.
@@ -83,7 +111,7 @@ function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
 
   if (cell === 'simple') {
     return (
-      <View style={style} onLayout={onLayout}>
+      <View {...auditProps} style={style} onLayout={onLayout}>
         <Text style={styles.title} numberOfLines={1}>
           {item.title}
         </Text>
@@ -93,7 +121,11 @@ function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
 
   if (cell === 'image') {
     return (
-      <View style={[style, styles.imageRow]} onLayout={onLayout}>
+      <View
+        {...auditProps}
+        style={[style, styles.imageRow]}
+        onLayout={onLayout}
+      >
         <Image source={{ uri: IMG }} style={styles.thumb} />
         <View style={styles.flex}>
           <Text style={styles.title} numberOfLines={1}>
@@ -109,21 +141,23 @@ function CellInner({ item, cell, height, onMeasure, onRender }: Props) {
 
   if (cell === 'heavy') {
     return (
-      <View style={[style, styles.complex]} onLayout={onLayout}>
-        <HeavyCell item={item} />
+      <View {...auditProps} style={[style, styles.complex]} onLayout={onLayout}>
+        <HeavyCell item={item} sized={sized} nativePalette={nativePalette} />
       </View>
     );
   }
 
   return (
-    <View style={[style, styles.complex]} onLayout={onLayout}>
+    <View {...auditProps} style={[style, styles.complex]} onLayout={onLayout}>
       <View style={styles.imageRow}>
         <Image source={{ uri: IMG }} style={styles.thumb} />
         <View style={styles.flex}>
           <Text style={styles.title} numberOfLines={1}>
             {item.title}
           </Text>
-          <Text style={styles.body}>{item.body}</Text>
+          <Text style={styles.body} numberOfLines={sized ? 3 : undefined}>
+            {item.body}
+          </Text>
         </View>
       </View>
       <View style={styles.tags}>
@@ -151,8 +185,8 @@ const styles = StyleSheet.create({
   complex: { gap: 8 },
   flex: { flex: 1 },
   thumb: { width: 56, height: 56, borderRadius: 8, backgroundColor: '#ccc' },
-  title: { fontSize: 15, fontWeight: '700', color: '#111' },
-  body: { fontSize: 13, color: '#444', marginTop: 2 },
+  title: { lineHeight: 20, fontSize: 15, fontWeight: '700', color: '#111' },
+  body: { lineHeight: 18, fontSize: 13, color: '#444', marginTop: 2 },
   tags: { flexDirection: 'row', gap: 6, alignItems: 'center' },
   tag: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 10 },
   tagText: { fontSize: 11, color: '#222' },

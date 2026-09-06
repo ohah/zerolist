@@ -1,0 +1,137 @@
+diff --git a/apps/example/android/app/src/main/AndroidManifest.xml b/apps/example/android/app/src/main/AndroidManifest.xml
+index b0ab4a3..a3af2f6 100644
+--- a/apps/example/android/app/src/main/AndroidManifest.xml
++++ b/apps/example/android/app/src/main/AndroidManifest.xml
+@@ -11,6 +11,7 @@
+       android:theme="@style/AppTheme"
+       android:usesCleartextTraffic="${usesCleartextTraffic}"
+       android:supportsRtl="true">
++      <profileable android:shell="true" />
+       <activity
+         android:name=".MainActivity"
+         android:label="@string/app_name"
+diff --git a/apps/example/android/app/src/main/java/zerolist/example/ZlPoolList.kt b/apps/example/android/app/src/main/java/zerolist/example/ZlPoolList.kt
+index 3864c35..3fb16dc 100644
+--- a/apps/example/android/app/src/main/java/zerolist/example/ZlPoolList.kt
++++ b/apps/example/android/app/src/main/java/zerolist/example/ZlPoolList.kt
+@@ -29,6 +29,13 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+   // Solo-only ablation, intentionally not a usable list. Default path unchanged.
+   private val freezePosition = ctx.currentActivity?.intent?.getStringExtra("diagnostic") == "freeze-position"
+   private val traceEnabled = ctx.currentActivity?.intent?.getBooleanExtra("trace", false) == true
++  private val bindingTrace = ctx.currentActivity?.intent?.getStringExtra("diagnostic") == "trace-binding"
++  private val tracedRequests = mutableMapOf<String, Int>()
++  private var tracedCommitVersion = -1
++  private var tracedPlacedVersion = -1
++  private fun bindingLog(phase: String, v: Int) {
++    if (bindingTrace) Log.i("ZlBinding", "phase=$phase version=$v wall=${System.currentTimeMillis()} nano=${System.nanoTime()}")
++  }
+   private var positionsInitialized = false
+   private var committed = intArrayOf()
+   private var overscan = 5
+@@ -38,10 +45,14 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+   private var auditFrame = 0
+   private val beforeDraw = ViewTreeObserver.OnPreDrawListener {
+     if (!legacyRecycling && (!freezePosition || !positionsInitialized)) { placeCommitted(); positionsInitialized=true }
++    if (bindingTrace && tracedCommitVersion != tracedPlacedVersion) {
++      tracedPlacedVersion = tracedCommitVersion
++      bindingLog("placed", tracedPlacedVersion)
++    }
+     if (audit) auditSlots()
+     true
+   }
+-  fun setCommittedBinds(value: String?) { committed = value.orEmpty().split(',').mapNotNull { it.toIntOrNull() }.toIntArray(); invalidate() }
++  fun setCommittedBinds(value: String?) { if (bindingTrace) { tracedCommitVersion = tracedRequests[value] ?: -1; bindingLog("native_commit", tracedCommitVersion) }; committed = value.orEmpty().split(',').mapNotNull { it.toIntOrNull() }.toIntArray(); invalidate() }
+   fun setOverscan(value: Int) { overscan = value.coerceAtLeast(0); lastWindowStart = -1; invalidate() }
+   fun setLegacyRecycling(value: Boolean) { legacyRecycling = value; lastWindowStart = -1; invalidate() }
+   fun setAudit(value: Boolean) { audit = value }
+@@ -188,6 +199,11 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
+     }
+     val binds = sb.toString()
+     version++
++    if (bindingTrace) {
++      if (tracedRequests.size > 512) tracedRequests.clear()
++      tracedRequests[binds] = version
++      bindingLog("request", version)
++    }
+     emitRecycle(binds)
+     if (checks < RECYCLE_LOG_SAMPLES) {
+       checks++
+diff --git a/apps/example/src/Solo.tsx b/apps/example/src/Solo.tsx
+index b24850f..e7e405e 100644
+--- a/apps/example/src/Solo.tsx
++++ b/apps/example/src/Solo.tsx
+@@ -15,7 +15,11 @@ export default function Solo(props: {
+   engine?: string;
+   count?: number;
+   cell?: string;
+-  diagnostic?: 'normal' | 'freeze-content' | 'freeze-position';
++  diagnostic?:
++    | 'normal'
++    | 'freeze-content'
++    | 'freeze-position'
++    | 'trace-binding';
+   legacyRecycling?: boolean;
+   audit?: boolean;
+   bindingDelayMs?: number;
+diff --git a/apps/example/src/harness/engines/zigpool.tsx b/apps/example/src/harness/engines/zigpool.tsx
+index 76d3da4..007b466 100644
+--- a/apps/example/src/harness/engines/zigpool.tsx
++++ b/apps/example/src/harness/engines/zigpool.tsx
+@@ -1,4 +1,10 @@
+-import { forwardRef, useEffect, useRef, useState } from 'react';
++import {
++  forwardRef,
++  useEffect,
++  useLayoutEffect,
++  useRef,
++  useState,
++} from 'react';
+ import { StyleSheet, View, useWindowDimensions } from 'react-native';
+ import ZlPoolList from '../../../specs/ZlPoolListNativeComponent';
+ import { Cell } from '../cells';
+@@ -28,6 +34,17 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
+       binds: initBinds(n),
+     }));
+     const binds = binding.binds;
++    const traceBinding = p.diagnostic === 'trace-binding';
++    if (traceBinding)
++      console.log(
++        `[ZlBinding] phase=render version=${binding.version} wall=${Date.now()}`
++      );
++    useLayoutEffect(() => {
++      if (traceBinding)
++        console.log(
++          `[ZlBinding] phase=react_layout version=${binding.version} wall=${Date.now()}`
++        );
++    }, [binding.version, traceBinding]);
+     const timers = useRef(new Set<ReturnType<typeof setTimeout>>());
+     useEffect(() => {
+       const pending = timers.current;
+@@ -49,6 +66,10 @@ export const ZigPoolEngine = forwardRef<Scrollable, ListEngineProps>(
+           inst.cb(); // ③ JS 콜백 = binding 변경시만(스크롤 프레임 아님)
+           if (p.diagnostic !== 'freeze-content') {
+             const { binds: encoded, version } = e.nativeEvent;
++            if (traceBinding)
++              console.log(
++                `[ZlBinding] phase=receive version=${version} wall=${Date.now()}`
++              );
+             const apply = () =>
+               setBinding((previous) =>
+                 version > previous.version
+diff --git a/apps/example/src/harness/types.ts b/apps/example/src/harness/types.ts
+index 6dcd13b..71fe7a7 100644
+--- a/apps/example/src/harness/types.ts
++++ b/apps/example/src/harness/types.ts
+@@ -47,7 +47,11 @@ export interface FrameStats {
+  * (한 엔진만 getItemLayout 받는 불공정 방지). dynamic 에선 둘 다 null. */
+ export interface ListEngineProps {
+   /** Solo-only causal experiment; frozen variants are not functional lists. */
+-  diagnostic?: 'normal' | 'freeze-content' | 'freeze-position';
++  diagnostic?:
++    | 'normal'
++    | 'freeze-content'
++    | 'freeze-position'
++    | 'trace-binding';
+   legacyRecycling?: boolean;
+   audit?: boolean;
+   bindingDelayMs?: number;

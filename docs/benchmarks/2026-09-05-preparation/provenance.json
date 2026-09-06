@@ -1,0 +1,22 @@
+{
+  "base_commit": "d58678d111e4a8b079741cab4643c76add65d112",
+  "runtime_patch_sha256": "2d8bb2bc8b34855249765871ccae2a32ff5dc9624d85613b7b7fd783e8403f72",
+  "android_apk_sha256": "975604c538b2cec1abe22fbd97ffa8b0cb0ac7c3bc204bcb6a10711d8a55418a",
+  "ios_executable_sha256": "c258cbc56c864882ac00df65648a32134b442f3fb30830ffedf807518a012c5c",
+  "ios_jsbundle_sha256": "1f093d0ad295e57e8a6bbebe81d3b2bc1d826537cb43396c790d41fdb8421162",
+  "stage_a_apk": "d8870773ca3bb6a5913315f61d3db86291ae34231087e6f50fea159748b251a0",
+  "stage_b": "e1e1baf7064d3789e23af86207912b44bb0de31e4d5092fc90c35d9a61db478d  apps/example/android/app/build/outputs/apk/release/app-release.apk\nf769ee0fdeb68492d44bc69552ed2ef9eec3fbc00e071d03737d747e48950a96  /private/tmp/zerolist-sync-ios-build/Build/Products/Release-iphonesimulator/ZerolistExample.app/ZerolistExample\n",
+  "notes": [
+    "A: 완료 확인 수정 후 7개 Android 감사 PoC.",
+    "B: 범위 유지 2개 추가 및 기본 대조군 Android 감사. A/B 기본 경로에서 준비 시간 18ms 재확인.",
+    "C: 기본 동작을 유지하며 JS 부하 선택 옵션과 iOS 진단 로그 전달을 추가. 전체 성능 교차 비교, iOS 감사, 실제 JS 부하 검사는 C 바이너리.",
+    "최초 파일럿은 초기 완료 확인 지연과 목록 시작 경계 효과를 발견해 최종 집계에서 제외했다.",
+    "iOS 첫 검사 시도는 JS console 정보 로그가 표준 출력에 없어 검증기가 중단했다. 진단 로그 전달을 추가하고 재실행했다."
+  ],
+  "restored": {
+    "android_user_rotation": 1,
+    "android_renderer": "skiagl",
+    "android_launch": "baseline, no tracing/audit/block/delay",
+    "ios": "measurement app terminated"
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "run": 1,
+    "engine": "flatlist",
+    "late": 2,
+    "percent": 0.69
+  },
+  {
+    "run": 1,
+    "engine": "zigpool",
+    "late": 2,
+    "percent": 0.71
+  },
+  {
+    "run": 2,
+    "engine": "zigpool",
+    "late": 1,
+    "percent": 0.35
+  },
+  {
+    "run": 2,
+    "engine": "flatlist",
+    "late": 2,
+    "percent": 0.69
+  },
+  {
+    "run": 3,
+    "engine": "flatlist",
+    "late": 2,
+    "percent": 0.69
+  },
+  {
+    "run": 3,
+    "engine": "zigpool",
+    "late": 2,
+    "percent": 0.7
+  }
+]

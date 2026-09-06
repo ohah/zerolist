@@ -1,0 +1,366 @@
+{
+  "main": [
+    {
+      "variant": "flatlist",
+      "runs": 5,
+      "frames": {
+        "median": 287,
+        "min": 286,
+        "max": 289
+      },
+      "jank_count": {
+        "median": 3,
+        "min": 2,
+        "max": 4
+      },
+      "jank_percent": {
+        "median": 1.05,
+        "min": 0.69,
+        "max": 1.39
+      },
+      "p50_ms": {
+        "median": 18,
+        "min": 17,
+        "max": 20
+      },
+      "p95_ms": {
+        "median": 23,
+        "min": 19,
+        "max": 26
+      },
+      "slow_ui": {
+        "median": 0,
+        "min": 0,
+        "max": 1
+      },
+      "slow_draw": {
+        "median": 2,
+        "min": 1,
+        "max": 3
+      },
+      "delta_median": [25, 241, 25, 0]
+    },
+    {
+      "variant": "legend",
+      "runs": 5,
+      "frames": {
+        "median": 287,
+        "min": 287,
+        "max": 288
+      },
+      "jank_count": {
+        "median": 2,
+        "min": 2,
+        "max": 6
+      },
+      "jank_percent": {
+        "median": 0.7,
+        "min": 0.69,
+        "max": 2.08
+      },
+      "p50_ms": {
+        "median": 17,
+        "min": 17,
+        "max": 20
+      },
+      "p95_ms": {
+        "median": 19,
+        "min": 19,
+        "max": 26
+      },
+      "slow_ui": {
+        "median": 0,
+        "min": 0,
+        "max": 1
+      },
+      "slow_draw": {
+        "median": 2,
+        "min": 2,
+        "max": 6
+      },
+      "delta_median": [26, 210, 2, 0]
+    },
+    {
+      "variant": "flashlist",
+      "runs": 5,
+      "frames": {
+        "median": 287,
+        "min": 287,
+        "max": 288
+      },
+      "jank_count": {
+        "median": 3,
+        "min": 2,
+        "max": 4
+      },
+      "jank_percent": {
+        "median": 1.05,
+        "min": 0.69,
+        "max": 1.39
+      },
+      "p50_ms": {
+        "median": 17,
+        "min": 17,
+        "max": 20
+      },
+      "p95_ms": {
+        "median": 22,
+        "min": 19,
+        "max": 23
+      },
+      "slow_ui": {
+        "median": 0,
+        "min": 0,
+        "max": 1
+      },
+      "slow_draw": {
+        "median": 2,
+        "min": 1,
+        "max": 4
+      },
+      "delta_median": [25, 240, 1, 0]
+    },
+    {
+      "variant": "zerolist",
+      "runs": 5,
+      "frames": {
+        "median": 271,
+        "min": 237,
+        "max": 277
+      },
+      "jank_count": {
+        "median": 34,
+        "min": 31,
+        "max": 34
+      },
+      "jank_percent": {
+        "median": 12.55,
+        "min": 11.52,
+        "max": 13.5
+      },
+      "p50_ms": {
+        "median": 22,
+        "min": 22,
+        "max": 22
+      },
+      "p95_ms": {
+        "median": 57,
+        "min": 57,
+        "max": 61
+      },
+      "slow_ui": {
+        "median": 15,
+        "min": 13,
+        "max": 18
+      },
+      "slow_draw": {
+        "median": 18,
+        "min": 17,
+        "max": 19
+      },
+      "delta_median": [25, 239, 25, 5]
+    },
+    {
+      "variant": "zigpool",
+      "runs": 5,
+      "frames": {
+        "median": 273,
+        "min": 272,
+        "max": 274
+      },
+      "jank_count": {
+        "median": 12,
+        "min": 12,
+        "max": 15
+      },
+      "jank_percent": {
+        "median": 4.4,
+        "min": 4.38,
+        "max": 5.51
+      },
+      "p50_ms": {
+        "median": 17,
+        "min": 17,
+        "max": 17
+      },
+      "p95_ms": {
+        "median": 21,
+        "min": 19,
+        "max": 24
+      },
+      "slow_ui": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "slow_draw": {
+        "median": 11,
+        "min": 10,
+        "max": 14
+      },
+      "delta_median": [26, 26, 0, 0]
+    },
+    {
+      "variant": "zigpool-freeze-content",
+      "runs": 5,
+      "frames": {
+        "median": 273,
+        "min": 272,
+        "max": 273
+      },
+      "jank_count": {
+        "median": 13,
+        "min": 12,
+        "max": 13
+      },
+      "jank_percent": {
+        "median": 4.76,
+        "min": 4.4,
+        "max": 4.78
+      },
+      "p50_ms": {
+        "median": 17,
+        "min": 17,
+        "max": 17
+      },
+      "p95_ms": {
+        "median": 21,
+        "min": 19,
+        "max": 21
+      },
+      "slow_ui": {
+        "median": 0,
+        "min": 0,
+        "max": 1
+      },
+      "slow_draw": {
+        "median": 12,
+        "min": 10,
+        "max": 13
+      },
+      "delta_median": [0, 25, 0, 0]
+    },
+    {
+      "variant": "zigpool-freeze-position",
+      "runs": 5,
+      "frames": {
+        "median": 77,
+        "min": 75,
+        "max": 77
+      },
+      "jank_count": {
+        "median": 16,
+        "min": 14,
+        "max": 19
+      },
+      "jank_percent": {
+        "median": 20.78,
+        "min": 18.67,
+        "max": 24.68
+      },
+      "p50_ms": {
+        "median": 17,
+        "min": 17,
+        "max": 18
+      },
+      "p95_ms": {
+        "median": 20,
+        "min": 18,
+        "max": 25
+      },
+      "slow_ui": {
+        "median": 0,
+        "min": 0,
+        "max": 1
+      },
+      "slow_draw": {
+        "median": 16,
+        "min": 13,
+        "max": 17
+      },
+      "delta_median": [25, 25, 0, 0]
+    }
+  ],
+  "cadence-main": [
+    {
+      "variant": "zigpool",
+      "runs": 5,
+      "frames": {
+        "median": 273,
+        "min": 272,
+        "max": 275
+      },
+      "jank_count": {
+        "median": 12,
+        "min": 12,
+        "max": 15
+      },
+      "jank_percent": {
+        "median": 4.4,
+        "min": 4.36,
+        "max": 5.51
+      },
+      "p50_ms": {
+        "median": 17,
+        "min": 17,
+        "max": 17
+      },
+      "p95_ms": {
+        "median": 20,
+        "min": 20,
+        "max": 21
+      },
+      "slow_ui": {
+        "median": 0,
+        "min": 0,
+        "max": 3
+      },
+      "slow_draw": {
+        "median": 12,
+        "min": 11,
+        "max": 14
+      },
+      "delta_median": [26, 26, 0, 0]
+    },
+    {
+      "variant": "zigpool-keep-alive",
+      "runs": 5,
+      "frames": {
+        "median": 286,
+        "min": 285,
+        "max": 286
+      },
+      "jank_count": {
+        "median": 2,
+        "min": 2,
+        "max": 2
+      },
+      "jank_percent": {
+        "median": 0.7,
+        "min": 0.7,
+        "max": 0.7
+      },
+      "p50_ms": {
+        "median": 19,
+        "min": 17,
+        "max": 19
+      },
+      "p95_ms": {
+        "median": 23,
+        "min": 20,
+        "max": 23
+      },
+      "slow_ui": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "slow_draw": {
+        "median": 2,
+        "min": 1,
+        "max": 2
+      },
+      "delta_median": [26, 26, 0, 0]
+    }
+  ]
+}

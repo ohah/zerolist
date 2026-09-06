@@ -1,0 +1,22 @@
+[
+  {
+    "platform": "android",
+    "row_records": 173,
+    "reorder_state": true,
+    "insert_replace_state": true,
+    "new_item_state": true,
+    "scroll_to_index": true,
+    "dynamic_height": true,
+    "position_source": "스크린샷·영상 별도 시각 확인, measureInWindow 위치는 판정 제외"
+  },
+  {
+    "platform": "ios",
+    "row_records": 149,
+    "reorder_state": true,
+    "insert_replace_state": true,
+    "new_item_state": true,
+    "scroll_to_index": true,
+    "dynamic_height": true,
+    "position_source": "스크린샷·영상 별도 시각 확인, measureInWindow 위치는 판정 제외"
+  }
+]

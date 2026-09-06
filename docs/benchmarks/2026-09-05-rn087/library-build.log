@@ -1,0 +1,11 @@
+$ cd packages/zerolist && bob build
+ℹ [module] Cleaning up previous build at lib/module
+ℹ [typescript] Cleaning up previous build at lib/typescript
+ℹ [codegen] Cleaning up previous iOS codegen native code at ios/generated
+ℹ [codegen] Cleaning up previous Android codegen native code at android/generated
+ℹ [typescript] Generating type definitions with tsc
+⚠ [typescript] Failed to locate tsc in the workspace. Falling back to the binary found in PATH at /Users/yoonhb/Documents/workspace/zerolist/node_modules/.bin/tsc. Consider adding typescript to your devDependencies or specifying the tsc option for the typescript target.
+ℹ [module] Compiling 9 files in src with babel
+✔ [module] Wrote files to lib/module
+✔ [typescript] Wrote definition files to lib/typescript
+✔ [codegen] Generated native code with codegen

@@ -1,0 +1,44 @@
+{
+  "diagnostic": "normal",
+  "order_seed": 870604,
+  "platform": "android",
+  "mode": "perf",
+  "configs": [
+    {
+      "name": "legend-5",
+      "engine": "legend",
+      "rows": 5,
+      "preparation": "baseline"
+    },
+    {
+      "name": "zigpool-5",
+      "engine": "zigpool",
+      "rows": 5,
+      "preparation": "baseline"
+    },
+    {
+      "name": "pending-stable-5",
+      "engine": "zigpool",
+      "rows": 5,
+      "preparation": "pending-stable"
+    }
+  ],
+  "block_ms": 160,
+  "repeats": 3,
+  "count": 100000,
+  "cell": "heavy",
+  "warmup_swipes": 12,
+  "measured_swipes": 18,
+  "versions": {
+    "react-native": "0.87.1",
+    "flash-list": "2.3.1",
+    "legend-list": "2.0.19"
+  },
+  "clock_ticks": 100,
+  "initial_rows": "FlatList/ZeroList: ceil(viewport / rowHeight)",
+  "legend_fixed_hint": true,
+  "other_platform_benchmark_app_stopped": true,
+  "screen": [1080, 2400],
+  "renderer": "skiagl",
+  "atrace": "0"
+}

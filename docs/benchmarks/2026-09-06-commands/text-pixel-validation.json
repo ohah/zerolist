@@ -1,0 +1,58 @@
+[
+  {
+    "platform": "ios",
+    "step": "initial",
+    "engine": "template-palette-command",
+    "item_id": 1,
+    "ink_mismatch": 0.0
+  },
+  {
+    "platform": "ios",
+    "step": "initial",
+    "engine": "template-palette-command",
+    "item_id": 2,
+    "ink_mismatch": 0.0
+  },
+  {
+    "platform": "ios",
+    "step": "initial",
+    "engine": "template-command",
+    "item_id": 1,
+    "ink_mismatch": 0.0
+  },
+  {
+    "platform": "ios",
+    "step": "initial",
+    "engine": "template-command",
+    "item_id": 2,
+    "ink_mismatch": 0.0
+  },
+  {
+    "platform": "android",
+    "step": "initial",
+    "engine": "template-palette-command",
+    "item_id": 1,
+    "ink_mismatch": 0.0
+  },
+  {
+    "platform": "android",
+    "step": "initial",
+    "engine": "template-palette-command",
+    "item_id": 2,
+    "ink_mismatch": 0.0
+  },
+  {
+    "platform": "android",
+    "step": "initial",
+    "engine": "template-command",
+    "item_id": 1,
+    "ink_mismatch": 0.0
+  },
+  {
+    "platform": "android",
+    "step": "initial",
+    "engine": "template-command",
+    "item_id": 2,
+    "ink_mismatch": 0.0
+  }
+]

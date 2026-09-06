@@ -1,0 +1,431 @@
+[
+  {
+    "name": "ios-audit160",
+    "conditions": {
+      "diagnostic": "normal",
+      "order_seed": 870307,
+      "platform": "ios",
+      "mode": "audit",
+      "configs": [
+        {
+          "name": "flatlist-5",
+          "engine": "flatlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "flashlist-5",
+          "engine": "flashlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "legend-5",
+          "engine": "legend",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zerolist-5",
+          "engine": "zerolist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zigpool-5",
+          "engine": "zigpool",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-worklet-5",
+          "engine": "template-worklet",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-compact-5",
+          "engine": "template-compact",
+          "rows": 5,
+          "preparation": "baseline"
+        }
+      ],
+      "block_ms": 160,
+      "repeats": 3,
+      "count": 100000,
+      "cell": "heavy",
+      "warmup_swipes": 12,
+      "measured_swipes": 18,
+      "versions": {
+        "react-native": "0.87.1",
+        "flash-list": "2.3.1",
+        "legend-list": "2.0.19",
+        "reanimated": "4.6.0",
+        "worklets": "0.12.1"
+      },
+      "clock_ticks": null,
+      "initial_rows": "FlatList/ZeroList: ceil(viewport / rowHeight)",
+      "legend_fixed_hint": true,
+      "other_platform_benchmark_app_stopped": true
+    }
+  },
+  {
+    "name": "ios-perf0",
+    "conditions": {
+      "diagnostic": "normal",
+      "order_seed": 870307,
+      "platform": "ios",
+      "mode": "perf",
+      "configs": [
+        {
+          "name": "flatlist-5",
+          "engine": "flatlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "flashlist-5",
+          "engine": "flashlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "legend-5",
+          "engine": "legend",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zerolist-5",
+          "engine": "zerolist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zigpool-5",
+          "engine": "zigpool",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-worklet-5",
+          "engine": "template-worklet",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-compact-5",
+          "engine": "template-compact",
+          "rows": 5,
+          "preparation": "baseline"
+        }
+      ],
+      "block_ms": 0,
+      "repeats": 3,
+      "count": 100000,
+      "cell": "heavy",
+      "warmup_swipes": 12,
+      "measured_swipes": 18,
+      "versions": {
+        "react-native": "0.87.1",
+        "flash-list": "2.3.1",
+        "legend-list": "2.0.19",
+        "reanimated": "4.6.0",
+        "worklets": "0.12.1"
+      },
+      "clock_ticks": null,
+      "initial_rows": "FlatList/ZeroList: ceil(viewport / rowHeight)",
+      "legend_fixed_hint": true,
+      "other_platform_benchmark_app_stopped": true
+    }
+  },
+  {
+    "name": "ios-perf160",
+    "conditions": {
+      "diagnostic": "normal",
+      "order_seed": 870307,
+      "platform": "ios",
+      "mode": "perf",
+      "configs": [
+        {
+          "name": "flatlist-5",
+          "engine": "flatlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "flashlist-5",
+          "engine": "flashlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "legend-5",
+          "engine": "legend",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zerolist-5",
+          "engine": "zerolist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zigpool-5",
+          "engine": "zigpool",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-worklet-5",
+          "engine": "template-worklet",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-compact-5",
+          "engine": "template-compact",
+          "rows": 5,
+          "preparation": "baseline"
+        }
+      ],
+      "block_ms": 160,
+      "repeats": 3,
+      "count": 100000,
+      "cell": "heavy",
+      "warmup_swipes": 12,
+      "measured_swipes": 18,
+      "versions": {
+        "react-native": "0.87.1",
+        "flash-list": "2.3.1",
+        "legend-list": "2.0.19",
+        "reanimated": "4.6.0",
+        "worklets": "0.12.1"
+      },
+      "clock_ticks": null,
+      "initial_rows": "FlatList/ZeroList: ceil(viewport / rowHeight)",
+      "legend_fixed_hint": true,
+      "other_platform_benchmark_app_stopped": true
+    }
+  },
+  {
+    "name": "android-audit160",
+    "conditions": {
+      "diagnostic": "normal",
+      "order_seed": 870307,
+      "platform": "android",
+      "mode": "audit",
+      "configs": [
+        {
+          "name": "flatlist-5",
+          "engine": "flatlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "flashlist-5",
+          "engine": "flashlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "legend-5",
+          "engine": "legend",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zerolist-5",
+          "engine": "zerolist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zigpool-5",
+          "engine": "zigpool",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-worklet-5",
+          "engine": "template-worklet",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-compact-5",
+          "engine": "template-compact",
+          "rows": 5,
+          "preparation": "baseline"
+        }
+      ],
+      "block_ms": 160,
+      "repeats": 3,
+      "count": 100000,
+      "cell": "heavy",
+      "warmup_swipes": 12,
+      "measured_swipes": 18,
+      "versions": {
+        "react-native": "0.87.1",
+        "flash-list": "2.3.1",
+        "legend-list": "2.0.19",
+        "reanimated": "4.6.0",
+        "worklets": "0.12.1"
+      },
+      "clock_ticks": 100,
+      "initial_rows": "FlatList/ZeroList: ceil(viewport / rowHeight)",
+      "legend_fixed_hint": true,
+      "other_platform_benchmark_app_stopped": true,
+      "screen": [1080, 2400],
+      "renderer": "skiagl",
+      "atrace": "0"
+    }
+  },
+  {
+    "name": "android-perf0",
+    "conditions": {
+      "diagnostic": "normal",
+      "order_seed": 870307,
+      "platform": "android",
+      "mode": "perf",
+      "configs": [
+        {
+          "name": "flatlist-5",
+          "engine": "flatlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "flashlist-5",
+          "engine": "flashlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "legend-5",
+          "engine": "legend",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zerolist-5",
+          "engine": "zerolist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zigpool-5",
+          "engine": "zigpool",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-worklet-5",
+          "engine": "template-worklet",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-compact-5",
+          "engine": "template-compact",
+          "rows": 5,
+          "preparation": "baseline"
+        }
+      ],
+      "block_ms": 0,
+      "repeats": 3,
+      "count": 100000,
+      "cell": "heavy",
+      "warmup_swipes": 12,
+      "measured_swipes": 18,
+      "versions": {
+        "react-native": "0.87.1",
+        "flash-list": "2.3.1",
+        "legend-list": "2.0.19",
+        "reanimated": "4.6.0",
+        "worklets": "0.12.1"
+      },
+      "clock_ticks": 100,
+      "initial_rows": "FlatList/ZeroList: ceil(viewport / rowHeight)",
+      "legend_fixed_hint": true,
+      "other_platform_benchmark_app_stopped": true,
+      "screen": [1080, 2400],
+      "renderer": "skiagl",
+      "atrace": "0"
+    }
+  },
+  {
+    "name": "android-perf160",
+    "conditions": {
+      "diagnostic": "normal",
+      "order_seed": 870307,
+      "platform": "android",
+      "mode": "perf",
+      "configs": [
+        {
+          "name": "flatlist-5",
+          "engine": "flatlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "flashlist-5",
+          "engine": "flashlist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "legend-5",
+          "engine": "legend",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zerolist-5",
+          "engine": "zerolist",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "zigpool-5",
+          "engine": "zigpool",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-worklet-5",
+          "engine": "template-worklet",
+          "rows": 5,
+          "preparation": "baseline"
+        },
+        {
+          "name": "template-compact-5",
+          "engine": "template-compact",
+          "rows": 5,
+          "preparation": "baseline"
+        }
+      ],
+      "block_ms": 160,
+      "repeats": 3,
+      "count": 100000,
+      "cell": "heavy",
+      "warmup_swipes": 12,
+      "measured_swipes": 18,
+      "versions": {
+        "react-native": "0.87.1",
+        "flash-list": "2.3.1",
+        "legend-list": "2.0.19",
+        "reanimated": "4.6.0",
+        "worklets": "0.12.1"
+      },
+      "clock_ticks": 100,
+      "initial_rows": "FlatList/ZeroList: ceil(viewport / rowHeight)",
+      "legend_fixed_hint": true,
+      "other_platform_benchmark_app_stopped": true,
+      "screen": [1080, 2400],
+      "renderer": "skiagl",
+      "atrace": "0"
+    }
+  }
+]

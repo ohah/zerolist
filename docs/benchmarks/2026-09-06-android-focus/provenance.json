@@ -1,0 +1,17 @@
+{
+  "commit": "acaa8da454fcd72492de1bdb3a5c84d2c317994a",
+  "rn": "0.87.1",
+  "platform": "Android 16 API 36 arm64 Release emulator-5554",
+  "renderer": "skiagl",
+  "sources": {
+    "packages/zerolist/android/src/main/java/com/zerolist/ZlPoolList.kt": "80649d00007aa5e155ae6134deefd1d8d747df611d04f697e1ab3996ea56b50a",
+    "packages/zerolist/src/pool-list.tsx": "4f1b02f6a1f70e8f95c52c9ee2093e27b6a9b7da10f17d6497f83550f0bc4656",
+    "apps/example/src/AndroidPoolContract.tsx": "f02a88ed77b9ed35c24f4448fcf8f09e7f3d77a8f1a150baf827222cab80dd19",
+    "apps/example/src/Solo.tsx": "3bc1192e0948ef19002c4c890dedc94cf8981bc61e4bab03c4c08b6a25d86ecb"
+  },
+  "apk_sha256": "cf131db051b4a94548119eab3fa45e38a4a039d0dbc1149488bbf2c7cb220bfa",
+  "tests_passed": 104,
+  "post_measurement_type_fix_commit": "82dd12e1edda941f70a245ed9370522880dd0bbe",
+  "post_measurement_note": "Solo/진단 타입만 보완. TypeScript transpileModule로 acaa8da와 출력 JS 동일 확인. 회수한 memo 후보는 최종 소스에 없음.",
+  "rebuilt_final_apk_sha256": "cf131db051b4a94548119eab3fa45e38a4a039d0dbc1149488bbf2c7cb220bfa"
+}

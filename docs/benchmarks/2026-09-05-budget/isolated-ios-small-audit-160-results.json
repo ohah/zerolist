@@ -1,0 +1,100 @@
+[
+  {
+    "name": "stable-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "adaptive-stable",
+    "run": 1,
+    "mode": "audit",
+    "block_ms": 160,
+    "memory_before_mib": 344.484375,
+    "memory_after_mib": 368.921875,
+    "cpu_seconds": 7.899999999999999,
+    "wall_seconds": 9.144104208000002,
+    "cpu_one_core_percent": 86.39446598922659,
+    "initial_counts": {
+      "renders": 143,
+      "callbacks": 86,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 266,
+      "callbacks": 192,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 123,
+      "callbacks": 106,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 549,
+    "moving_frames": 518,
+    "entry_ready_percent": 87.78625954198473,
+    "entered": 131.0,
+    "unready": 16.0,
+    "blank_moving_percent": 2.5096525096525095,
+    "mean_blank_area_percent": 1.7596867462428103,
+    "max_blank_area_percent": 99.77116704805492,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "last_blank_px": 0.0,
+    "scroll_min": 39397.0,
+    "scroll_max": 59039.667,
+    "attached_max": 14.0,
+    "travel_rows": 130.58261965812036,
+    "block_samples": 45,
+    "block_median_ms": 160.0012502670288
+  },
+  {
+    "name": "stable-5",
+    "engine": "zigpool",
+    "rows": 5,
+    "preparation": "adaptive-stable",
+    "run": 2,
+    "mode": "audit",
+    "block_ms": 160,
+    "memory_before_mib": 343.796875,
+    "memory_after_mib": 368.15625,
+    "cpu_seconds": 7.959999999999999,
+    "wall_seconds": 9.316887834,
+    "cpu_one_core_percent": 85.43625448566283,
+    "initial_counts": {
+      "renders": 148,
+      "callbacks": 91,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "final_counts": {
+      "renders": 266,
+      "callbacks": 196,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "work": {
+      "renders": 118,
+      "callbacks": 105,
+      "mounts": 0,
+      "unmounts": 0
+    },
+    "frames": 560,
+    "moving_frames": 528,
+    "entry_ready_percent": 84.9624060150376,
+    "entered": 133.0,
+    "unready": 20.0,
+    "blank_moving_percent": 3.5984848484848486,
+    "mean_blank_area_percent": 2.8616399261493655,
+    "max_blank_area_percent": 99.77116704805492,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "last_blank_px": 0.0,
+    "scroll_min": 42369.333,
+    "scroll_max": 62303.667,
+    "attached_max": 14.0,
+    "travel_rows": 132.93590170940254,
+    "block_samples": 45,
+    "block_median_ms": 160.00124979019165
+  }
+]

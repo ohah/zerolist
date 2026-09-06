@@ -1,0 +1,11 @@
+Task path ':app:createBundleReleaseJsAndAssets' matched project ':app'
+Task name matched 'createBundleReleaseJsAndAssets'
+Selected primary task 'createBundleReleaseJsAndAssets' from project :app
+Tasks to be executed: [task ':app:createBundleReleaseJsAndAssets']
+Resolve mutations for :app:createBundleReleaseJsAndAssets (Thread[#1133,included builds,5,main]) started.
+:app:createBundleReleaseJsAndAssets (Thread[#1133,included builds,5,main]) started.
+> Task :app:createBundleReleaseJsAndAssets
+Caching disabled for task ':app:createBundleReleaseJsAndAssets' because:
+Task ':app:createBundleReleaseJsAndAssets' is not up-to-date because:
+  Input property 'zerolistSource' file <저장소>/packages/zerolist/src/measurements.ts has changed.
+BUILD SUCCESSFUL in 6s

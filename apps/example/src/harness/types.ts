@@ -11,6 +11,13 @@ export type EngineId =
   | 'native'
   | 'nativezig'
   | 'zigpool'
+  | 'template-js'
+  | 'template-worklet'
+  | 'template-compact'
+  | 'template-palette'
+  | 'template-palette-command'
+  | 'template-command'
+  | 'flatlist-palette'
   | 'zerolist';
 
 export interface BenchConfig {
@@ -45,7 +52,43 @@ export interface FrameStats {
  * 레이아웃 힌트 패리티: fixed/variable 에선 모든 엔진이 동일한
  * offsets/fixedHeight 를 받아 각 엔진의 최강 등가 API 에 연결한다
  * (한 엔진만 getItemLayout 받는 불공정 방지). dynamic 에선 둘 다 null. */
+export type Preparation =
+  | 'baseline'
+  | 'wide'
+  | 'adaptive-small'
+  | 'adaptive'
+  | 'coalesce'
+  | 'memo'
+  | 'combined'
+  | 'adaptive-stable'
+  | 'combined-stable'
+  | 'priority'
+  | 'priority-stable'
+  | 'pending-stable'
+  | 'priority-pending-stable';
+
 export interface ListEngineProps {
+  /** Solo 비교용: 동일한 장식 통합을 일반 리스트에도 적용하는 대조군. */
+  nativePalette?: boolean;
+  /** Solo 측정 옵션: 화면 밖 한쪽 여유 행 수. 생략하면 기존 설정. */
+  bufferRows?: number;
+  commonAudit?: boolean;
+  preparation?: Preparation;
+  preparationTrace?: boolean;
+  /** Solo-only causal experiment; frozen variants are not functional lists. */
+  diagnostic?:
+    | 'pool-baseline'
+    | 'pool-parent-scroll'
+    | 'pool-fabric-layout'
+    | 'pool-combined'
+    | 'normal'
+    | 'freeze-content'
+    | 'freeze-position'
+    | 'trace-binding'
+    | 'trace-startup';
+  legacyRecycling?: boolean;
+  audit?: boolean;
+  bindingDelayMs?: number;
   items: Item[];
   cell: CellType;
   height: HeightMode;

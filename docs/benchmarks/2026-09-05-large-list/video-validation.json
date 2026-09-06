@@ -1,0 +1,175 @@
+[
+  {
+    "file": "comparison-complex.mp4",
+    "bytes": 4778604,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1080,
+        "height": 680
+      }
+    ],
+    "format": {
+      "duration": "8.966667"
+    }
+  },
+  {
+    "file": "comparison-heavy.mp4",
+    "bytes": 5049837,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1080,
+        "height": 680
+      }
+    ],
+    "format": {
+      "duration": "8.966979"
+    }
+  },
+  {
+    "file": "complex-flashlist.mp4",
+    "bytes": 6489275,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 540,
+        "height": 1200
+      },
+      {}
+    ],
+    "format": {
+      "duration": "9.337664"
+    }
+  },
+  {
+    "file": "complex-flatlist.mp4",
+    "bytes": 6453459,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 540,
+        "height": 1200
+      },
+      {}
+    ],
+    "format": {
+      "duration": "9.327664"
+    }
+  },
+  {
+    "file": "complex-legend.mp4",
+    "bytes": 6195906,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 540,
+        "height": 1200
+      },
+      {}
+    ],
+    "format": {
+      "duration": "9.307664"
+    }
+  },
+  {
+    "file": "complex-zigpool.mp4",
+    "bytes": 6298370,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 540,
+        "height": 1200
+      },
+      {}
+    ],
+    "format": {
+      "duration": "9.321678"
+    }
+  },
+  {
+    "file": "heavy-detail-slow.mp4",
+    "bytes": 10186739,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1080,
+        "height": 950
+      }
+    ],
+    "format": {
+      "duration": "23.966667"
+    }
+  },
+  {
+    "file": "heavy-flashlist.mp4",
+    "bytes": 6753433,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 540,
+        "height": 1200
+      },
+      {}
+    ],
+    "format": {
+      "duration": "9.325646"
+    }
+  },
+  {
+    "file": "heavy-flatlist.mp4",
+    "bytes": 7008242,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 540,
+        "height": 1200
+      },
+      {}
+    ],
+    "format": {
+      "duration": "9.400680"
+    }
+  },
+  {
+    "file": "heavy-legend.mp4",
+    "bytes": 6711143,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 540,
+        "height": 1200
+      },
+      {}
+    ],
+    "format": {
+      "duration": "9.321655"
+    }
+  },
+  {
+    "file": "heavy-zigpool.mp4",
+    "bytes": 6636962,
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 540,
+        "height": 1200
+      },
+      {}
+    ],
+    "format": {
+      "duration": "9.380929"
+    }
+  }
+]

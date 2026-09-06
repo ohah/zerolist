@@ -1,0 +1,45 @@
+{
+  "commit": "82dd12e1edda941f70a245ed9370522880dd0bbe",
+  "checks": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-09-06T12:00:43Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/ohah/zerolist/actions/runs/34031812263/job/101482607255",
+      "name": "lint",
+      "startedAt": "2026-09-06T12:00:08Z",
+      "status": "COMPLETED",
+      "workflowName": "CI"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-09-06T12:01:25Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/ohah/zerolist/actions/runs/34031812263/job/101482607220",
+      "name": "test",
+      "startedAt": "2026-09-06T12:00:44Z",
+      "status": "COMPLETED",
+      "workflowName": "CI"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-09-06T12:01:35Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/ohah/zerolist/actions/runs/34031812263/job/101482607143",
+      "name": "build-library",
+      "startedAt": "2026-09-06T12:00:09Z",
+      "status": "COMPLETED",
+      "workflowName": "CI"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-09-06T12:00:49Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/ohah/zerolist/actions/runs/34031812263/job/101482607319",
+      "name": "build-web",
+      "startedAt": "2026-09-06T12:00:08Z",
+      "status": "COMPLETED",
+      "workflowName": "CI"
+    }
+  ]
+}

@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+        C450E0000000000000000001 /* ZlTemplatePaletteComponentView.mm in Sources */ = {isa = PBXBuildFile; fileRef = C450E0000000000000000002 /* ZlTemplatePaletteComponentView.mm */; };
+		050258F6EF9C855F8C331882 /* ZlTemplateTextComponentView.mm in Sources */ = {isa = PBXBuildFile; fileRef = A7C4E68A4713968C2D407369 /* ZlTemplateTextComponentView.mm */; };
 		0C80B921A6F3F58F76C31292 /* libPods-ZerolistExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-ZerolistExample.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		4FC50FB7150982E16DC4932C /* ZlPoolListComponentView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 87F46C86DE87A3A6D939A6CC /* ZlPoolListComponentView.mm */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		FCF1307991121C43ED3D58D2 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+        C450E0000000000000000002 /* ZlTemplatePaletteComponentView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ZerolistExample/ZlTemplatePaletteComponentView.mm; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ZerolistExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZerolistExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ZerolistExample/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ZerolistExample/Info.plist; sourceTree = "<group>"; };
@@ -25,7 +27,7 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ZerolistExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZerolistExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ZerolistExample/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ZerolistExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		87F46C86DE87A3A6D939A6CC /* ZlPoolListComponentView.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = ZerolistExample/ZlPoolListComponentView.mm; sourceTree = "<group>"; };
+		A7C4E68A4713968C2D407369 /* ZlTemplateTextComponentView.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = ZlTemplateTextComponentView.mm; path = ZerolistExample/ZlTemplateTextComponentView.mm; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -49,7 +51,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
-				87F46C86DE87A3A6D939A6CC /* ZlPoolListComponentView.mm */,
 			);
 			name = ZerolistExample;
 			sourceTree = "<group>";
@@ -78,6 +79,8 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				A7C4E68A4713968C2D407369 /* ZlTemplateTextComponentView.mm */,
+                C450E0000000000000000002 /* ZlTemplatePaletteComponentView.mm */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -250,7 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
-				4FC50FB7150982E16DC4932C /* ZlPoolListComponentView.mm in Sources */,
+				050258F6EF9C855F8C331882 /* ZlTemplateTextComponentView.mm in Sources */,
+                C450E0000000000000000001 /* ZlTemplatePaletteComponentView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +403,7 @@
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 					"-DRCT_REMOVE_LEGACY_ARCH=1",
 				);
+				PODFILE_DIR = "$(SRCROOT)";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -473,6 +478,7 @@
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 					"-DRCT_REMOVE_LEGACY_ARCH=1",
 				);
+				PODFILE_DIR = "$(SRCROOT)";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ENABLE_EXPLICIT_MODULES = NO;

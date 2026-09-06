@@ -24,7 +24,7 @@ module.exports = {
     {
       displayName: 'native',
       preset: '@react-native/jest-preset',
-      roots: ['<rootDir>/packages/zerolist'],
+      roots: ['<rootDir>/packages/zerolist', '<rootDir>/apps/example/src'],
       testMatch: ['**/__tests__/**/*.test.tsx'],
       modulePathIgnorePatterns: ignore,
       // bun 호이스팅(.bun/<pkg>@<ver>/node_modules/<pkg>) 때문에 기본

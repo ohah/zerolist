@@ -1,0 +1,353 @@
+[
+  {
+    "cost_comparison_eligible": true,
+    "platform": "ios",
+    "name": "pending-stable-12",
+    "label": "대기 보정 12행",
+    "normal_cpu": 12.233806030584738,
+    "normal_memory": 415.5625,
+    "normal_p95": 16.666667070239782,
+    "normal_late": 0.0,
+    "stress_cpu": 85.9596279098969,
+    "stress_memory": 421.3125,
+    "mean_blank": 0.0,
+    "worst_blank": 99.77116704805492,
+    "max_duration": 66.666667,
+    "zero_runs": 2,
+    "entry_ready": 100.0,
+    "p95": 16.666667070239782,
+    "late": 0.0,
+    "audit_samples": [
+      {
+        "run": 1,
+        "mean": 0.6634007707572667,
+        "max": 99.77116704805492,
+        "duration": 66.666667
+      },
+      {
+        "run": 2,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      },
+      {
+        "run": 3,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "cost_comparison_eligible": true,
+    "platform": "ios",
+    "name": "zigpool-5",
+    "label": "기존 고정 5행",
+    "normal_cpu": 15.038746139841008,
+    "normal_memory": 379.28125,
+    "normal_p95": 16.666667070239782,
+    "normal_late": 0.0,
+    "stress_cpu": 83.84322360803506,
+    "stress_memory": 380.40625,
+    "mean_blank": 3.549789876660478,
+    "worst_blank": 99.77116704805492,
+    "max_duration": 150.0,
+    "zero_runs": 0,
+    "entry_ready": 76.51515151515152,
+    "p95": 16.666667070239782,
+    "late": 0.0,
+    "audit_samples": [
+      {
+        "run": 1,
+        "mean": 2.487229667629516,
+        "max": 99.77116704805492,
+        "duration": 133.333334
+      },
+      {
+        "run": 2,
+        "mean": 3.549789876660478,
+        "max": 99.77116704805492,
+        "duration": 133.333333
+      },
+      {
+        "run": 3,
+        "mean": 3.9637189432427116,
+        "max": 99.77116704805492,
+        "duration": 150.0
+      }
+    ]
+  },
+  {
+    "cost_comparison_eligible": true,
+    "platform": "ios",
+    "name": "stable-5",
+    "label": "기존 선행 준비 5행",
+    "normal_cpu": 15.075495844833181,
+    "normal_memory": 381.984375,
+    "normal_p95": 16.666667070239782,
+    "normal_late": 0.0,
+    "stress_cpu": 84.97200345807624,
+    "stress_memory": 378.5625,
+    "mean_blank": 2.303712231858685,
+    "worst_blank": 99.77116704805492,
+    "max_duration": 116.666667,
+    "zero_runs": 0,
+    "entry_ready": 82.53968253968253,
+    "p95": 16.666667070239782,
+    "late": 0.0,
+    "audit_samples": [
+      {
+        "run": 1,
+        "mean": 2.303712231858685,
+        "max": 99.77116704805492,
+        "duration": 116.666666
+      },
+      {
+        "run": 2,
+        "mean": 3.0626828641702786,
+        "max": 99.77116704805492,
+        "duration": 116.666667
+      },
+      {
+        "run": 3,
+        "mean": 2.055826144404125,
+        "max": 99.77116704805492,
+        "duration": 116.666667
+      }
+    ]
+  },
+  {
+    "cost_comparison_eligible": true,
+    "platform": "ios",
+    "name": "legend-5",
+    "label": "레전드리스트 5행",
+    "normal_cpu": 20.091691821191525,
+    "normal_memory": 431.4375,
+    "normal_p95": 16.666667070239782,
+    "normal_late": 0.0,
+    "stress_cpu": 85.62113834197696,
+    "stress_memory": 444.25,
+    "mean_blank": 1.9786149390622914,
+    "worst_blank": 99.77116704805492,
+    "max_duration": 133.333333,
+    "zero_runs": 0,
+    "entry_ready": 86.92307692307692,
+    "p95": 16.666667070239782,
+    "late": 0.0,
+    "audit_samples": [
+      {
+        "run": 1,
+        "mean": 1.523319178882261,
+        "max": 99.77116704805492,
+        "duration": 100.0
+      },
+      {
+        "run": 2,
+        "mean": 1.9786149390622914,
+        "max": 99.77116704805492,
+        "duration": 100.000001
+      },
+      {
+        "run": 3,
+        "mean": 2.1288186498855834,
+        "max": 99.77116704805492,
+        "duration": 133.333333
+      }
+    ]
+  },
+  {
+    "cost_comparison_eligible": true,
+    "platform": "ios",
+    "name": "pending-stable-5",
+    "label": "대기 보정 5행",
+    "normal_cpu": 14.924206843256119,
+    "normal_memory": 378.921875,
+    "normal_p95": 16.666667070239782,
+    "normal_late": 0.0,
+    "stress_cpu": 85.23537430728018,
+    "stress_memory": 383.296875,
+    "mean_blank": 2.053312606745101,
+    "worst_blank": 99.77116704805492,
+    "max_duration": 116.666666,
+    "zero_runs": 0,
+    "entry_ready": 81.3953488372093,
+    "p95": 16.666667070239782,
+    "late": 0.0,
+    "audit_samples": [
+      {
+        "run": 1,
+        "mean": 2.053312606745101,
+        "max": 99.77116704805492,
+        "duration": 116.666666
+      },
+      {
+        "run": 2,
+        "mean": 2.020489077135182,
+        "max": 99.77116704805492,
+        "duration": 100.0
+      },
+      {
+        "run": 3,
+        "mean": 2.7558657987122817,
+        "max": 99.77116704805492,
+        "duration": 116.666666
+      }
+    ]
+  },
+  {
+    "cost_comparison_eligible": true,
+    "platform": "ios",
+    "name": "stable-12",
+    "label": "기존 선행 준비 12행",
+    "normal_cpu": 12.211055467283526,
+    "normal_memory": 416.671875,
+    "normal_p95": 16.666667070239782,
+    "normal_late": 0.0,
+    "stress_cpu": 85.84944525347699,
+    "stress_memory": 421.296875,
+    "mean_blank": 0.0,
+    "worst_blank": 32.608695652173914,
+    "max_duration": 50.0,
+    "zero_runs": 2,
+    "entry_ready": 100.0,
+    "p95": 16.666667070239782,
+    "late": 0.0,
+    "audit_samples": [
+      {
+        "run": 1,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      },
+      {
+        "run": 2,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      },
+      {
+        "run": 3,
+        "mean": 0.12555017032183483,
+        "max": 32.608695652173914,
+        "duration": 50.0
+      }
+    ]
+  },
+  {
+    "cost_comparison_eligible": false,
+    "platform": "android",
+    "name": "pending-stable-5",
+    "label": "대기 보정 5행",
+    "normal_cpu": 15.801040027816581,
+    "normal_memory": 154.404296875,
+    "normal_p95": 20,
+    "normal_late": 0.74,
+    "stress_cpu": 85.09021587341613,
+    "stress_memory": 156.3623046875,
+    "mean_blank": 0.0,
+    "worst_blank": 5.833333333333333,
+    "max_duration": 20.657625,
+    "zero_runs": 2,
+    "entry_ready": 97.82608695652173,
+    "p95": 23,
+    "late": 0.72,
+    "audit_samples": [
+      {
+        "run": 1,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      },
+      {
+        "run": 2,
+        "mean": 0.02333333333333333,
+        "max": 5.833333333333333,
+        "duration": 20.657625
+      },
+      {
+        "run": 3,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "cost_comparison_eligible": false,
+    "platform": "android",
+    "name": "legend-5",
+    "label": "레전드리스트 5행",
+    "normal_cpu": 19.58125205965785,
+    "normal_memory": 189.06640625,
+    "normal_p95": 23,
+    "normal_late": 1.38,
+    "stress_cpu": 89.82728877658921,
+    "stress_memory": 194.0126953125,
+    "mean_blank": 0.0,
+    "worst_blank": 0.0,
+    "max_duration": 0,
+    "zero_runs": 3,
+    "entry_ready": 100.0,
+    "p95": 36,
+    "late": 4.38,
+    "audit_samples": [
+      {
+        "run": 1,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      },
+      {
+        "run": 2,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      },
+      {
+        "run": 3,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      }
+    ]
+  },
+  {
+    "cost_comparison_eligible": false,
+    "platform": "android",
+    "name": "zigpool-5",
+    "label": "기존 고정 5행",
+    "normal_cpu": 14.279477869990195,
+    "normal_memory": 154.46875,
+    "normal_p95": 20,
+    "normal_late": 0.37,
+    "stress_cpu": 85.907803925595,
+    "stress_memory": 155.1162109375,
+    "mean_blank": 0.0,
+    "worst_blank": 0.0,
+    "max_duration": 0,
+    "zero_runs": 3,
+    "entry_ready": 100.0,
+    "p95": 48,
+    "late": 7.95,
+    "audit_samples": [
+      {
+        "run": 1,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      },
+      {
+        "run": 2,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      },
+      {
+        "run": 3,
+        "mean": 0.0,
+        "max": 0.0,
+        "duration": 0
+      }
+    ]
+  }
+]

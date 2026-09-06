@@ -1,0 +1,530 @@
+[
+  {
+    "name": "android-legacy-0",
+    "platform": "android",
+    "legacy": true,
+    "binding_delay_ms": 0,
+    "source": "/private/tmp/zerolist-sync-videos/android-legacy-0.webm",
+    "wall_seconds": 7.882175,
+    "encoded_seconds": 7.915,
+    "events": [
+      {
+        "t": 1.5220630000000002,
+        "from_y": 1800,
+        "to_y": 600,
+        "duration_ms": 500
+      },
+      {
+        "t": 2.347215834,
+        "from_y": 1800,
+        "to_y": 600,
+        "duration_ms": 500
+      },
+      {
+        "t": 3.184698042,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 3.647782459,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.094352875,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.555552334,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.014608624999999,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.466564459000001,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.931955709,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      }
+    ],
+    "sha256": "e35976d484ffc328b0e1d52b718466733c10724a092717ef4bf73dbcb51eb1c9"
+  },
+  {
+    "name": "android-fixed-0",
+    "platform": "android",
+    "legacy": false,
+    "binding_delay_ms": 0,
+    "source": "/private/tmp/zerolist-sync-videos/android-fixed-0.webm",
+    "wall_seconds": 7.897618208000001,
+    "encoded_seconds": 7.891,
+    "events": [
+      {
+        "t": 1.5156833750000018,
+        "from_y": 1800,
+        "to_y": 600,
+        "duration_ms": 500
+      },
+      {
+        "t": 2.374476916999999,
+        "from_y": 1800,
+        "to_y": 600,
+        "duration_ms": 500
+      },
+      {
+        "t": 3.205932208,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 3.6519387919999993,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.102365750000001,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.554583707999999,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.001608000000001,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.460283707999999,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.929484958,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      }
+    ],
+    "sha256": "083baf9122fa764136d010564b6fca64c79beebe26a5e2a59c13c27b9aecd012"
+  },
+  {
+    "name": "android-legacy-120",
+    "platform": "android",
+    "legacy": true,
+    "binding_delay_ms": 120,
+    "source": "/private/tmp/zerolist-sync-videos/android-legacy-120.webm",
+    "wall_seconds": 7.887471333000001,
+    "encoded_seconds": 7.906,
+    "events": [
+      {
+        "t": 1.5182134169999983,
+        "from_y": 1800,
+        "to_y": 600,
+        "duration_ms": 500
+      },
+      {
+        "t": 2.350965291999998,
+        "from_y": 1800,
+        "to_y": 600,
+        "duration_ms": 500
+      },
+      {
+        "t": 3.1790406669999953,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 3.6285302920000007,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.085484000000001,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.536518207999997,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.001106249999999,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.470912083000002,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.933823457999999,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      }
+    ],
+    "sha256": "0f5b44848716b1edbcec4890af12a4d1546627b790ac3744d0202a248fd2412d"
+  },
+  {
+    "name": "android-fixed-120",
+    "platform": "android",
+    "legacy": false,
+    "binding_delay_ms": 120,
+    "source": "/private/tmp/zerolist-sync-videos/android-fixed-120.webm",
+    "wall_seconds": 7.901471917000002,
+    "encoded_seconds": 7.912,
+    "events": [
+      {
+        "t": 1.514488374999999,
+        "from_y": 1800,
+        "to_y": 600,
+        "duration_ms": 500
+      },
+      {
+        "t": 2.3747150840000018,
+        "from_y": 1800,
+        "to_y": 600,
+        "duration_ms": 500
+      },
+      {
+        "t": 3.2081628339999995,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 3.677617374999997,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.138135374999997,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.587706625000003,
+        "from_y": 1900,
+        "to_y": 400,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.0366417919999975,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.490700791999998,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.939827166999997,
+        "from_y": 400,
+        "to_y": 1900,
+        "duration_ms": 120
+      }
+    ],
+    "sha256": "af6409c186eaf737fb5f18d157b07d2806ad4e9833c977e5c54c6293af119488"
+  },
+  {
+    "name": "ios-legacy-0",
+    "platform": "ios",
+    "legacy": true,
+    "binding_delay_ms": 0,
+    "source": "/private/tmp/zerolist-sync-videos/ios-legacy-0.mp4",
+    "wall_seconds": 9.4076735,
+    "encoded_seconds": 9.411667,
+    "events": [
+      {
+        "t": 1.5087856659999996,
+        "from_y": 750,
+        "to_y": 220,
+        "duration_ms": 500
+      },
+      {
+        "t": 2.617016458,
+        "from_y": 750,
+        "to_y": 220,
+        "duration_ms": 500
+      },
+      {
+        "t": 3.7322279579999993,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.325790124999999,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.922151458,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.520349040999999,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 6.117269041,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      },
+      {
+        "t": 6.713085790999999,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      },
+      {
+        "t": 7.308057333000001,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      }
+    ],
+    "sha256": "e2bd978a059d0ac840c7d08aa6e79fe175739ea4d952522d86eef6b76f99796e"
+  },
+  {
+    "name": "ios-fixed-0",
+    "platform": "ios",
+    "legacy": false,
+    "binding_delay_ms": 0,
+    "source": "/private/tmp/zerolist-sync-videos/ios-fixed-0.mp4",
+    "wall_seconds": 9.466750166999997,
+    "encoded_seconds": 9.47,
+    "events": [
+      {
+        "t": 1.5091322920000003,
+        "from_y": 750,
+        "to_y": 220,
+        "duration_ms": 500
+      },
+      {
+        "t": 2.621785541999998,
+        "from_y": 750,
+        "to_y": 220,
+        "duration_ms": 500
+      },
+      {
+        "t": 3.746107124999998,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.342420541999999,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.935973957999998,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.530496457999998,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 6.1340889579999995,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      },
+      {
+        "t": 6.739993667,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      },
+      {
+        "t": 7.341287375,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      }
+    ],
+    "sha256": "fc5fcf6d8dadb9115a90860bceb60884f6470611a59516cc1c4b9523f08e4f4b"
+  },
+  {
+    "name": "ios-legacy-120",
+    "platform": "ios",
+    "legacy": true,
+    "binding_delay_ms": 120,
+    "source": "/private/tmp/zerolist-sync-videos/ios-legacy-120.mp4",
+    "wall_seconds": 9.457262833000001,
+    "encoded_seconds": 9.461667,
+    "events": [
+      {
+        "t": 1.507361416000002,
+        "from_y": 750,
+        "to_y": 220,
+        "duration_ms": 500
+      },
+      {
+        "t": 2.615409624999998,
+        "from_y": 750,
+        "to_y": 220,
+        "duration_ms": 500
+      },
+      {
+        "t": 3.7386030409999975,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.334447916000002,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.938494124999998,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.534903165999999,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 6.126654541000001,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      },
+      {
+        "t": 6.733273416000003,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      },
+      {
+        "t": 7.341477707999999,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      }
+    ],
+    "sha256": "a8ca1c6843f204bda2a9fcc12af7c2f491ff1a82770f924a5abb8adf11336607"
+  },
+  {
+    "name": "ios-fixed-120",
+    "platform": "ios",
+    "legacy": false,
+    "binding_delay_ms": 120,
+    "source": "/private/tmp/zerolist-sync-videos/ios-fixed-120.mp4",
+    "wall_seconds": 9.464731,
+    "encoded_seconds": 9.468333,
+    "events": [
+      {
+        "t": 1.5077374999999975,
+        "from_y": 750,
+        "to_y": 220,
+        "duration_ms": 500
+      },
+      {
+        "t": 2.630678499999995,
+        "from_y": 750,
+        "to_y": 220,
+        "duration_ms": 500
+      },
+      {
+        "t": 3.745631791000001,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.353146250000002,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 4.952874541,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 5.5580121659999975,
+        "from_y": 780,
+        "to_y": 150,
+        "duration_ms": 120
+      },
+      {
+        "t": 6.164620749999997,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      },
+      {
+        "t": 6.764945790999995,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      },
+      {
+        "t": 7.3651360409999995,
+        "from_y": 150,
+        "to_y": 780,
+        "duration_ms": 120
+      }
+    ],
+    "sha256": "d34e8c53016ad2afe279a31b7b1d22d8050ef8a6615e69b937c2e187c67cf9f6"
+  }
+]

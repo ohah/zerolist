@@ -1,0 +1,192 @@
+2026-09-06 19:31:23.035 ZerolistExample[51030:187476074] _setUpFeatureFlags called with release level 2
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W0906 19:31:23.054132 1853698048 ReactInstance.cpp:287] ReactInstance: evaluateJavaScript() with JS bundle
+2026-09-06 19:31:23.151 ZerolistExample[51030:187476173] [ZlRuntime] rn=0.87.1
+2026-09-06 19:31:23.658 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":0,"index":0,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 0"}
+2026-09-06 19:31:23.658 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":1,"index":1,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 1"}
+2026-09-06 19:31:23.659 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":2,"index":2,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 2"}
+2026-09-06 19:31:23.659 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":3,"index":3,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 3"}
+2026-09-06 19:31:23.659 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":4,"index":4,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 4"}
+2026-09-06 19:31:23.659 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":5,"index":5,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 5"}
+2026-09-06 19:31:23.659 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":6,"index":6,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 6"}
+2026-09-06 19:31:23.659 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":7,"index":7,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 7"}
+2026-09-06 19:31:23.659 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":9,"index":9,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 9"}
+2026-09-06 19:31:23.659 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":8,"index":8,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 8"}
+2026-09-06 19:31:23.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":10,"index":10,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 10"}
+2026-09-06 19:31:23.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":11,"index":11,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 11"}
+2026-09-06 19:31:23.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":12,"index":12,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 12"}
+2026-09-06 19:31:23.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":13,"index":13,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 13"}
+2026-09-06 19:31:23.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":14,"index":14,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 14"}
+2026-09-06 19:31:23.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"초기","id":15,"index":15,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 15"}
+2026-09-06 19:31:24.155 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:25.155 ZerolistExample[51030:187476173] [ZlContract] step=선택
+2026-09-06 19:31:25.171 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:25.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":1,"index":1,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 1"}
+2026-09-06 19:31:25.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":2,"index":2,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 2"}
+2026-09-06 19:31:25.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":3,"index":3,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 3"}
+2026-09-06 19:31:25.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":4,"index":4,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 4"}
+2026-09-06 19:31:25.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":5,"index":5,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 5"}
+2026-09-06 19:31:25.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":6,"index":6,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 6"}
+2026-09-06 19:31:25.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":7,"index":7,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 7"}
+2026-09-06 19:31:25.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":8,"index":8,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 8"}
+2026-09-06 19:31:25.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":9,"index":9,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 9"}
+2026-09-06 19:31:25.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":10,"index":10,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 10"}
+2026-09-06 19:31:25.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":11,"index":11,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 11"}
+2026-09-06 19:31:25.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":12,"index":12,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 12"}
+2026-09-06 19:31:25.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":13,"index":13,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 13"}
+2026-09-06 19:31:25.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":14,"index":14,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 14"}
+2026-09-06 19:31:25.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":15,"index":15,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 15"}
+2026-09-06 19:31:25.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"선택","id":0,"index":0,"value":1,"x":0,"y":105,"width":402,"height":100,"label":"항목 0"}
+2026-09-06 19:31:26.188 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:27.155 ZerolistExample[51030:187476173] [ZlContract] step=재정렬
+2026-09-06 19:31:27.205 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:27.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":0,"index":1,"value":1,"x":0,"y":105,"width":402,"height":100,"label":"항목 0"}
+2026-09-06 19:31:27.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":1,"index":0,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 1"}
+2026-09-06 19:31:27.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":2,"index":2,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 2"}
+2026-09-06 19:31:27.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":3,"index":3,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 3"}
+2026-09-06 19:31:27.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":4,"index":4,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 4"}
+2026-09-06 19:31:27.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":5,"index":5,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 5"}
+2026-09-06 19:31:27.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":6,"index":6,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 6"}
+2026-09-06 19:31:27.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":7,"index":7,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 7"}
+2026-09-06 19:31:27.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":8,"index":8,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 8"}
+2026-09-06 19:31:27.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":9,"index":9,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 9"}
+2026-09-06 19:31:27.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":10,"index":10,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 10"}
+2026-09-06 19:31:27.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":11,"index":11,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 11"}
+2026-09-06 19:31:27.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":12,"index":12,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 12"}
+2026-09-06 19:31:27.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":13,"index":13,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 13"}
+2026-09-06 19:31:27.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":14,"index":14,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 14"}
+2026-09-06 19:31:27.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"재정렬","id":15,"index":15,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 15"}
+2026-09-06 19:31:28.205 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:29.154 ZerolistExample[51030:187476173] [ZlContract] step=앞 삽입
+2026-09-06 19:31:29.205 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:29.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":0,"index":2,"value":1,"x":0,"y":105,"width":402,"height":100,"label":"항목 0"}
+2026-09-06 19:31:29.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":1,"index":1,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 1"}
+2026-09-06 19:31:29.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":2,"index":3,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 2"}
+2026-09-06 19:31:29.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":3,"index":4,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 3"}
+2026-09-06 19:31:29.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":4,"index":5,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 4"}
+2026-09-06 19:31:29.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":5,"index":6,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 5"}
+2026-09-06 19:31:29.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":6,"index":7,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 6"}
+2026-09-06 19:31:29.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":7,"index":8,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 7"}
+2026-09-06 19:31:29.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":8,"index":9,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 8"}
+2026-09-06 19:31:29.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":9,"index":10,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 9"}
+2026-09-06 19:31:29.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":10,"index":11,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 10"}
+2026-09-06 19:31:29.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":11,"index":12,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 11"}
+2026-09-06 19:31:29.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":12,"index":13,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 12"}
+2026-09-06 19:31:29.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":13,"index":14,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 13"}
+2026-09-06 19:31:29.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":14,"index":15,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 14"}
+2026-09-06 19:31:29.676 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"앞 삽입","id":99,"index":0,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"새 항목"}
+2026-09-06 19:31:30.206 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:31.154 ZerolistExample[51030:187476173] [ZlContract] step=내용 교체
+2026-09-06 19:31:31.221 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:31.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":0,"index":2,"value":1,"x":0,"y":105,"width":402,"height":100,"label":"변경된 항목 0"}
+2026-09-06 19:31:31.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":1,"index":1,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 1"}
+2026-09-06 19:31:31.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":2,"index":3,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 2"}
+2026-09-06 19:31:31.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":3,"index":4,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 3"}
+2026-09-06 19:31:31.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":4,"index":5,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 4"}
+2026-09-06 19:31:31.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":5,"index":6,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 5"}
+2026-09-06 19:31:31.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":6,"index":7,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 6"}
+2026-09-06 19:31:31.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":7,"index":8,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 7"}
+2026-09-06 19:31:31.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":8,"index":9,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 8"}
+2026-09-06 19:31:31.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":9,"index":10,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 9"}
+2026-09-06 19:31:31.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":10,"index":11,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 10"}
+2026-09-06 19:31:31.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":11,"index":12,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 11"}
+2026-09-06 19:31:31.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":12,"index":13,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 12"}
+2026-09-06 19:31:31.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":13,"index":14,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 13"}
+2026-09-06 19:31:31.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":14,"index":15,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 14"}
+2026-09-06 19:31:31.675 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"내용 교체","id":99,"index":0,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"새 항목"}
+2026-09-06 19:31:32.238 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:33.154 ZerolistExample[51030:187476173] [ZlContract] step=먼 항목 이동
+2026-09-06 19:31:33.158 ZerolistExample[51030:187476173] [ZlContractScroll] step=먼 항목 이동 y=3000
+2026-09-06 19:31:33.254 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:33.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":31,"index":32,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 31"}
+2026-09-06 19:31:33.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":32,"index":33,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 32"}
+2026-09-06 19:31:33.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":33,"index":34,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 33"}
+2026-09-06 19:31:33.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":34,"index":35,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 34"}
+2026-09-06 19:31:33.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":35,"index":36,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 35"}
+2026-09-06 19:31:33.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":36,"index":37,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 36"}
+2026-09-06 19:31:33.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":37,"index":38,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 37"}
+2026-09-06 19:31:33.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":38,"index":39,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 38"}
+2026-09-06 19:31:33.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":39,"index":40,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 39"}
+2026-09-06 19:31:33.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":40,"index":41,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 40"}
+2026-09-06 19:31:33.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":25,"index":26,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 25"}
+2026-09-06 19:31:33.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":26,"index":27,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 26"}
+2026-09-06 19:31:33.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":27,"index":28,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 27"}
+2026-09-06 19:31:33.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":28,"index":29,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 28"}
+2026-09-06 19:31:33.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":29,"index":30,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 29"}
+2026-09-06 19:31:33.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"먼 항목 이동","id":30,"index":31,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 30"}
+2026-09-06 19:31:34.271 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:35.154 ZerolistExample[51030:187476173] [ZlContract] step=처음 이동
+2026-09-06 19:31:35.157 ZerolistExample[51030:187476173] [ZlContractScroll] step=처음 이동 y=0
+2026-09-06 19:31:35.288 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:35.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":99,"index":0,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"새 항목"}
+2026-09-06 19:31:35.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":1,"index":1,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 1"}
+2026-09-06 19:31:35.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":0,"index":2,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"변경된 항목 0"}
+2026-09-06 19:31:35.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":2,"index":3,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 2"}
+2026-09-06 19:31:35.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":3,"index":4,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 3"}
+2026-09-06 19:31:35.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":4,"index":5,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 4"}
+2026-09-06 19:31:35.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":5,"index":6,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 5"}
+2026-09-06 19:31:35.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":6,"index":7,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 6"}
+2026-09-06 19:31:35.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":7,"index":8,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 7"}
+2026-09-06 19:31:35.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":8,"index":9,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 8"}
+2026-09-06 19:31:35.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":9,"index":10,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 9"}
+2026-09-06 19:31:35.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":10,"index":11,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 10"}
+2026-09-06 19:31:35.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":11,"index":12,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 11"}
+2026-09-06 19:31:35.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":12,"index":13,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 12"}
+2026-09-06 19:31:35.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":13,"index":14,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 13"}
+2026-09-06 19:31:35.674 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"처음 이동","id":14,"index":15,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 14"}
+2026-09-06 19:31:36.288 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:37.155 ZerolistExample[51030:187476173] [ZlContract] step=비우기
+I0906 19:31:37.162827 1853698048 UIManagerBinding.cpp:143] instanceHandle is null, event of type topRecycle will be dropped
+I0906 19:31:37.162967 1853698048 UIManagerBinding.cpp:143] instanceHandle is null, event of type topRecycle will be dropped
+2026-09-06 19:31:37.288 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:38.288 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:39.156 ZerolistExample[51030:187476173] [ZlContract] step=복원
+2026-09-06 19:31:39.289 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:39.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":0,"index":0,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 0"}
+2026-09-06 19:31:39.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":1,"index":1,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 1"}
+2026-09-06 19:31:39.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":2,"index":2,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 2"}
+2026-09-06 19:31:39.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":3,"index":3,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 3"}
+2026-09-06 19:31:39.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":4,"index":4,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 4"}
+2026-09-06 19:31:39.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":5,"index":5,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 5"}
+2026-09-06 19:31:39.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":6,"index":6,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 6"}
+2026-09-06 19:31:39.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":7,"index":7,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 7"}
+2026-09-06 19:31:39.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":8,"index":8,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 8"}
+2026-09-06 19:31:39.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":9,"index":9,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 9"}
+2026-09-06 19:31:39.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":10,"index":10,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 10"}
+2026-09-06 19:31:39.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":11,"index":11,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 11"}
+2026-09-06 19:31:39.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":12,"index":12,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 12"}
+2026-09-06 19:31:39.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":13,"index":13,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 13"}
+2026-09-06 19:31:39.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":14,"index":14,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 14"}
+2026-09-06 19:31:39.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"복원","id":15,"index":15,"value":0,"x":0,"y":105,"width":402,"height":100,"label":"항목 15"}
+2026-09-06 19:31:40.304 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:41.156 ZerolistExample[51030:187476173] [ZlContract] step=동적 높이
+I0906 19:31:41.163585 1853698048 UIManagerBinding.cpp:143] instanceHandle is null, event of type topRecycle will be dropped
+I0906 19:31:41.163679 1853698048 UIManagerBinding.cpp:143] instanceHandle is null, event of type topRecycle will be dropped
+2026-09-06 19:31:41.321 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:41.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":0,"index":0,"value":0,"x":0,"y":105,"width":402,"height":80,"label":"항목 0"}
+2026-09-06 19:31:41.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":1,"index":1,"value":0,"x":0,"y":185,"width":402,"height":150,"label":"항목 1"}
+2026-09-06 19:31:41.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":2,"index":2,"value":0,"x":0,"y":335,"width":402,"height":80,"label":"항목 2"}
+2026-09-06 19:31:41.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":3,"index":3,"value":0,"x":0,"y":415,"width":402,"height":150,"label":"항목 3"}
+2026-09-06 19:31:41.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":4,"index":4,"value":0,"x":0,"y":565,"width":402,"height":80,"label":"항목 4"}
+2026-09-06 19:31:41.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":5,"index":5,"value":0,"x":0,"y":645,"width":402,"height":150,"label":"항목 5"}
+2026-09-06 19:31:41.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":6,"index":6,"value":0,"x":0,"y":795,"width":402,"height":80,"label":"항목 6"}
+2026-09-06 19:31:41.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":7,"index":7,"value":0,"x":0,"y":875,"width":402,"height":150,"label":"항목 7"}
+2026-09-06 19:31:41.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":8,"index":8,"value":0,"x":0,"y":1025,"width":402,"height":80,"label":"항목 8"}
+2026-09-06 19:31:41.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":9,"index":9,"value":0,"x":0,"y":1105,"width":402,"height":150,"label":"항목 9"}
+2026-09-06 19:31:41.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 높이","id":10,"index":10,"value":0,"x":0,"y":1255,"width":402,"height":80,"label":"항목 10"}
+2026-09-06 19:31:42.337 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:43.154 ZerolistExample[51030:187476173] [ZlContract] step=동적 크기 변경
+2026-09-06 19:31:43.354 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:43.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 크기 변경","id":0,"index":0,"value":0,"x":0,"y":105,"width":402,"height":180,"label":"항목 0"}
+2026-09-06 19:31:43.671 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 크기 변경","id":1,"index":1,"value":0,"x":0,"y":285,"width":402,"height":150,"label":"항목 1"}
+2026-09-06 19:31:43.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 크기 변경","id":2,"index":2,"value":0,"x":0,"y":435,"width":402,"height":80,"label":"항목 2"}
+2026-09-06 19:31:43.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 크기 변경","id":3,"index":3,"value":0,"x":0,"y":515,"width":402,"height":150,"label":"항목 3"}
+2026-09-06 19:31:43.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 크기 변경","id":4,"index":4,"value":0,"x":0,"y":665,"width":402,"height":80,"label":"항목 4"}
+2026-09-06 19:31:43.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 크기 변경","id":5,"index":5,"value":0,"x":0,"y":745,"width":402,"height":150,"label":"항목 5"}
+2026-09-06 19:31:43.672 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 크기 변경","id":6,"index":6,"value":0,"x":0,"y":895,"width":402,"height":80,"label":"항목 6"}
+2026-09-06 19:31:43.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 크기 변경","id":7,"index":7,"value":0,"x":0,"y":975,"width":402,"height":150,"label":"항목 7"}
+2026-09-06 19:31:43.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 크기 변경","id":8,"index":8,"value":0,"x":0,"y":1125,"width":402,"height":80,"label":"항목 8"}
+2026-09-06 19:31:43.673 ZerolistExample[51030:187476173] [ZlContractRow] {"step":"동적 크기 변경","id":9,"index":9,"value":0,"x":0,"y":1205,"width":402,"height":150,"label":"항목 9"}
+2026-09-06 19:31:44.371 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+2026-09-06 19:31:45.371 ZerolistExample[51030:187476173] [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+zerolist.example: 51030
