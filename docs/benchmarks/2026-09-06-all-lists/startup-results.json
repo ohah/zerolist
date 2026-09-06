@@ -1,0 +1,7512 @@
+[
+  {
+    "platform": "ios",
+    "engine": "template-compact",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "render_begin": 279.0,
+      "data_ready": 715.0,
+      "content_ready": 503.35
+    },
+    "data_and_content_ms": 715.0,
+    "command_to_log_observed_ms": 1392.3779590000001,
+    "audit_frames": 48,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670861.941869,
+      "load": [7.54150390625, 7.18994140625, 6.380859375],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 11.0,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 399,
+          "cpu_percent": 8.8,
+          "name": "loginwindow"
+        },
+        {
+          "pid": 626,
+          "cpu_percent": 5.2,
+          "name": "fontd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 337.3,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 168.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 93.8,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 92863,
+          "cpu_percent": 98.6,
+          "name": "test"
+        },
+        {
+          "pid": 93844,
+          "cpu_percent": 11.2,
+          "name": "node"
+        },
+        {
+          "pid": 93919,
+          "cpu_percent": 6.8,
+          "name": "node"
+        },
+        {
+          "pid": 93920,
+          "cpu_percent": 14.8,
+          "name": "node"
+        },
+        {
+          "pid": 93928,
+          "cpu_percent": 8.8,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 93943,
+          "cpu_percent": 8.8,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 93945,
+          "cpu_percent": 5.7,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 93956,
+          "cpu_percent": 12.8,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 93961,
+          "cpu_percent": 9.0,
+          "name": "Python"
+        },
+        {
+          "pid": 93964,
+          "cpu_percent": 23.7,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 93965,
+          "cpu_percent": 13.7,
+          "name": "Python"
+        },
+        {
+          "pid": 52691,
+          "cpu_percent": 5.9,
+          "name": "codex"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 9.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670864.228074,
+      "load": [7.41796875, 7.169921875, 6.37841796875],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 8.6,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 626,
+          "cpu_percent": 5.9,
+          "name": "fontd"
+        },
+        {
+          "pid": 1247,
+          "cpu_percent": 7.6,
+          "name": "com.apple.CoreSimulator.CoreSimulatorService"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 9.4,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 157.9,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 158.0,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 9.2,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 91.4,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 15.9,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 92863,
+          "cpu_percent": 98.6,
+          "name": "test"
+        },
+        {
+          "pid": 93844,
+          "cpu_percent": 12.8,
+          "name": "node"
+        },
+        {
+          "pid": 93919,
+          "cpu_percent": 6.6,
+          "name": "node"
+        },
+        {
+          "pid": 93920,
+          "cpu_percent": 9.3,
+          "name": "node"
+        },
+        {
+          "pid": 93928,
+          "cpu_percent": 5.2,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94002,
+          "cpu_percent": 94.6,
+          "name": "zig"
+        },
+        {
+          "pid": 94093,
+          "cpu_percent": 37.8,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94094,
+          "cpu_percent": 74.6,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94095,
+          "cpu_percent": 42.3,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 28.2,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "zigpool",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "content_ready": 322.911
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 972.9217079999999,
+    "audit_frames": 43,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670864.362061,
+      "load": [7.41796875, 7.169921875, 6.37841796875],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 8.8,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 8.9,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 158.3,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 165.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 10.9,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 93.9,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 5.1,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 23.7,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 92863,
+          "cpu_percent": 96.6,
+          "name": "test"
+        },
+        {
+          "pid": 93844,
+          "cpu_percent": 7.7,
+          "name": "node"
+        },
+        {
+          "pid": 93920,
+          "cpu_percent": 5.9,
+          "name": "node"
+        },
+        {
+          "pid": 94002,
+          "cpu_percent": 92.9,
+          "name": "zig"
+        },
+        {
+          "pid": 94093,
+          "cpu_percent": 23.3,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94094,
+          "cpu_percent": 86.3,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94095,
+          "cpu_percent": 29.2,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 22.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670866.5942929,
+      "load": [7.41796875, 7.169921875, 6.37841796875],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 8.0,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 6.6,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 183.2,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 104.1,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 7.4,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 7.9,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.1,
+          "name": "backboardd"
+        },
+        {
+          "pid": 92863,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 93934,
+          "cpu_percent": 6.0,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94002,
+          "cpu_percent": 97.9,
+          "name": "zig"
+        },
+        {
+          "pid": 94146,
+          "cpu_percent": 102.5,
+          "name": "zig"
+        },
+        {
+          "pid": 94156,
+          "cpu_percent": 95.3,
+          "name": "test"
+        },
+        {
+          "pid": 94244,
+          "cpu_percent": 17.1,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 23.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "flashlist",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "content_ready": 461.337
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 1120.2630000000004,
+    "audit_frames": 45,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670866.73017,
+      "load": [7.41796875, 7.169921875, 6.37841796875],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 7.9,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 399,
+          "cpu_percent": 5.1,
+          "name": "loginwindow"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 7.1,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 185.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 103.5,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 92863,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 93934,
+          "cpu_percent": 6.5,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94002,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 94146,
+          "cpu_percent": 102.9,
+          "name": "zig"
+        },
+        {
+          "pid": 94156,
+          "cpu_percent": 99.1,
+          "name": "test"
+        },
+        {
+          "pid": 94244,
+          "cpu_percent": 16.2,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 17.6,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670868.973824,
+      "load": [7.86474609375, 7.2666015625, 6.4169921875],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 7.3,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 626,
+          "cpu_percent": 7.3,
+          "name": "fontd"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 5.2,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 6.1,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 187.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 6.5,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 101.6,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 82552,
+          "cpu_percent": 7.3,
+          "name": "build"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 6.4,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 5.2,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 11.7,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 93844,
+          "cpu_percent": 14.0,
+          "name": "node"
+        },
+        {
+          "pid": 93920,
+          "cpu_percent": 18.3,
+          "name": "node"
+        },
+        {
+          "pid": 93928,
+          "cpu_percent": 10.9,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 93934,
+          "cpu_percent": 5.6,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94002,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 94146,
+          "cpu_percent": 98.5,
+          "name": "zig"
+        },
+        {
+          "pid": 94366,
+          "cpu_percent": 89.0,
+          "name": "test"
+        },
+        {
+          "pid": 94372,
+          "cpu_percent": 20.5,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 6.8,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 5.2,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "template-worklet",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "render_begin": 258.0,
+      "data_ready": 1254.0,
+      "content_ready": 1033.101
+    },
+    "data_and_content_ms": 1254.0,
+    "command_to_log_observed_ms": 1901.410791000001,
+    "audit_frames": 45,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670869.11688,
+      "load": [7.86474609375, 7.2666015625, 6.4169921875],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 7.5,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 626,
+          "cpu_percent": 7.8,
+          "name": "fontd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 6.4,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 153.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 94.5,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 82552,
+          "cpu_percent": 8.9,
+          "name": "build"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 6.8,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 7.6,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.8,
+          "name": "backboardd"
+        },
+        {
+          "pid": 93844,
+          "cpu_percent": 17.5,
+          "name": "node"
+        },
+        {
+          "pid": 93920,
+          "cpu_percent": 19.5,
+          "name": "node"
+        },
+        {
+          "pid": 93928,
+          "cpu_percent": 13.2,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 93934,
+          "cpu_percent": 5.0,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94002,
+          "cpu_percent": 97.6,
+          "name": "zig"
+        },
+        {
+          "pid": 94146,
+          "cpu_percent": 91.8,
+          "name": "zig"
+        },
+        {
+          "pid": 94366,
+          "cpu_percent": 92.7,
+          "name": "test"
+        },
+        {
+          "pid": 94372,
+          "cpu_percent": 12.6,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94390,
+          "cpu_percent": 27.7,
+          "name": "test"
+        },
+        {
+          "pid": 94406,
+          "cpu_percent": 15.3,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 40.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670872.391977,
+      "load": [7.71533203125, 7.2451171875, 6.4140625],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 6.6,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.9,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 186.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 103.4,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 6.0,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 6.1,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 94146,
+          "cpu_percent": 99.1,
+          "name": "zig"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 99.0,
+          "name": "test"
+        },
+        {
+          "pid": 94515,
+          "cpu_percent": 8.4,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94521,
+          "cpu_percent": 49.5,
+          "name": "test"
+        },
+        {
+          "pid": 57780,
+          "cpu_percent": 45.8,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 13.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "legend",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "content_ready": 1042.112
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 1658.6899590000003,
+    "audit_frames": 42,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670872.5190961,
+      "load": [7.71533203125, 7.2451171875, 6.4140625],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 6.2,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 1247,
+          "cpu_percent": 7.6,
+          "name": "com.apple.CoreSimulator.CoreSimulatorService"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 6.4,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 186.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 103.1,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 94146,
+          "cpu_percent": 98.8,
+          "name": "zig"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 99.1,
+          "name": "test"
+        },
+        {
+          "pid": 94465,
+          "cpu_percent": 5.0,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94521,
+          "cpu_percent": 79.6,
+          "name": "test"
+        },
+        {
+          "pid": 57780,
+          "cpu_percent": 29.1,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 9.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670875.779935,
+      "load": [7.71533203125, 7.2451171875, 6.4140625],
+      "processes": [
+        {
+          "pid": 364,
+          "cpu_percent": 6.2,
+          "name": "opendirectoryd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.7,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 191.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 110.0,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 93844,
+          "cpu_percent": 6.6,
+          "name": "node"
+        },
+        {
+          "pid": 93922,
+          "cpu_percent": 8.4,
+          "name": "node"
+        },
+        {
+          "pid": 93929,
+          "cpu_percent": 5.3,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94146,
+          "cpu_percent": 98.7,
+          "name": "zig"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 99.0,
+          "name": "test"
+        },
+        {
+          "pid": 94711,
+          "cpu_percent": 95.7,
+          "name": "test"
+        },
+        {
+          "pid": 94880,
+          "cpu_percent": 22.6,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94885,
+          "cpu_percent": 5.7,
+          "name": "(limactl)"
+        }
+      ]
+    },
+    "first_valid_attached": 12.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "zerolist",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "content_ready": 312.829
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 971.0012500000005,
+    "audit_frames": 44,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670875.910005,
+      "load": [7.71533203125, 7.2451171875, 6.4140625],
+      "processes": [
+        {
+          "pid": 364,
+          "cpu_percent": 6.8,
+          "name": "opendirectoryd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.6,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 191.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 112.4,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 93844,
+          "cpu_percent": 8.7,
+          "name": "node"
+        },
+        {
+          "pid": 93922,
+          "cpu_percent": 8.2,
+          "name": "node"
+        },
+        {
+          "pid": 93929,
+          "cpu_percent": 5.8,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94146,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 94711,
+          "cpu_percent": 97.8,
+          "name": "test"
+        },
+        {
+          "pid": 94880,
+          "cpu_percent": 51.8,
+          "name": "chrome-headless-shell"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670878.1606998,
+      "load": [7.73779296875, 7.25732421875, 6.42333984375],
+      "processes": [
+        {
+          "pid": 1,
+          "cpu_percent": 11.1,
+          "name": "launchd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 6.5,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 454,
+          "cpu_percent": 7.6,
+          "name": "syspolicyd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.2,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 186.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 24.5,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 5.1,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 5.7,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 94146,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 94950,
+          "cpu_percent": 100.8,
+          "name": "zig"
+        },
+        {
+          "pid": 95171,
+          "cpu_percent": 10.8,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 61.2,
+          "name": "node"
+        },
+        {
+          "pid": 95236,
+          "cpu_percent": 25.8,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 24.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 9.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "flatlist",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "content_ready": 280.605
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 932.9667500000021,
+    "audit_frames": 44,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670878.292057,
+      "load": [7.73779296875, 7.25732421875, 6.42333984375],
+      "processes": [
+        {
+          "pid": 1,
+          "cpu_percent": 8.2,
+          "name": "launchd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.6,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 454,
+          "cpu_percent": 15.0,
+          "name": "syspolicyd"
+        },
+        {
+          "pid": 4641,
+          "cpu_percent": 5.3,
+          "name": "trustd"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 188.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 15.3,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 94146,
+          "cpu_percent": 99.6,
+          "name": "zig"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 99.7,
+          "name": "test"
+        },
+        {
+          "pid": 94950,
+          "cpu_percent": 99.3,
+          "name": "zig"
+        },
+        {
+          "pid": 95171,
+          "cpu_percent": 6.6,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 58.8,
+          "name": "node"
+        },
+        {
+          "pid": 95236,
+          "cpu_percent": 52.3,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 19.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670880.5750191,
+      "load": [7.73779296875, 7.25732421875, 6.42333984375],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 18.1,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 6.2,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 91.3,
+          "name": "stable"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.2,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 167.8,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 5.1,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 93922,
+          "cpu_percent": 7.0,
+          "name": "node"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 99.5,
+          "name": "test"
+        },
+        {
+          "pid": 94950,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 223.3,
+          "name": "node"
+        },
+        {
+          "pid": 95236,
+          "cpu_percent": 98.8,
+          "name": "test"
+        },
+        {
+          "pid": 95333,
+          "cpu_percent": 21.9,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 11.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "flashlist",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 435.965
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 1068.8660839999998,
+    "audit_frames": 44,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670880.70616,
+      "load": [7.73779296875, 7.25732421875, 6.42333984375],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 11.4,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.7,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 56.9,
+          "name": "stable"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 15.2,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 176.8,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 98.5,
+          "name": "test"
+        },
+        {
+          "pid": 94950,
+          "cpu_percent": 97.4,
+          "name": "zig"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 241.3,
+          "name": "node"
+        },
+        {
+          "pid": 95236,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 95333,
+          "cpu_percent": 13.5,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 7.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670882.966888,
+      "load": [7.8388671875, 7.2861328125, 6.43798828125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 7.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 185.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 5.7,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 8.3,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 5.3,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 10.6,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 6.1,
+          "name": "backboardd"
+        },
+        {
+          "pid": 93935,
+          "cpu_percent": 7.9,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 99.0,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 118.9,
+          "name": "node"
+        },
+        {
+          "pid": 95236,
+          "cpu_percent": 98.4,
+          "name": "test"
+        },
+        {
+          "pid": 95438,
+          "cpu_percent": 20.6,
+          "name": "chrome-headless-shell"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "zerolist",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 286.521
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 901.8107079999993,
+    "audit_frames": 43,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670883.101919,
+      "load": [7.8388671875, 7.2861328125, 6.43798828125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 6.9,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 454,
+          "cpu_percent": 7.9,
+          "name": "syspolicyd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.0,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 183.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 5.1,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 6.5,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 6.6,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.0,
+          "name": "backboardd"
+        },
+        {
+          "pid": 93935,
+          "cpu_percent": 7.3,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 99.7,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 114.9,
+          "name": "node"
+        },
+        {
+          "pid": 95236,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 41.0,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670885.367562,
+      "load": [7.8388671875, 7.2861328125, 6.43798828125],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 36.1,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 7.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 17.5,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 421,
+          "cpu_percent": 5.3,
+          "name": "symptomsd"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 6.0,
+          "name": "stable"
+        },
+        {
+          "pid": 628,
+          "cpu_percent": 5.3,
+          "name": "Finder"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 160.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 6.0,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 7.3,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 5.5,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 6.3,
+          "name": "backboardd"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 121.3,
+          "name": "node"
+        },
+        {
+          "pid": 95465,
+          "cpu_percent": 99.3,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 19.6,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "legend",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 614.945
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 1243.8598749999983,
+    "audit_frames": 42,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670885.496078,
+      "load": [7.8388671875, 7.2861328125, 6.43798828125],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 37.5,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 6.4,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 18.0,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 421,
+          "cpu_percent": 5.4,
+          "name": "symptomsd"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 8.2,
+          "name": "stable"
+        },
+        {
+          "pid": 628,
+          "cpu_percent": 6.0,
+          "name": "Finder"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 163.0,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 98.9,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 115.2,
+          "name": "node"
+        },
+        {
+          "pid": 95465,
+          "cpu_percent": 98.8,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 13.8,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670887.780587,
+      "load": [7.931640625, 7.314453125, 6.45263671875],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 35.4,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 6.9,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 15.3,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 8.1,
+          "name": "stable"
+        },
+        {
+          "pid": 628,
+          "cpu_percent": 6.0,
+          "name": "Finder"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 146.2,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 5.8,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 82552,
+          "cpu_percent": 15.6,
+          "name": "build"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 9.2,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 9.0,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 13.1,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 7.3,
+          "name": "backboardd"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 98.1,
+          "name": "node"
+        },
+        {
+          "pid": 95524,
+          "cpu_percent": 6.0,
+          "name": "chrome-headless-shell"
+        }
+      ]
+    },
+    "first_valid_attached": 12.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "flatlist",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 282.58
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 901.4566250000016,
+    "audit_frames": 43,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670887.91392,
+      "load": [7.931640625, 7.314453125, 6.45263671875],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 29.4,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 7.6,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 14.3,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 9.4,
+          "name": "stable"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 5.3,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.9,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 145.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 5.2,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 82552,
+          "cpu_percent": 16.1,
+          "name": "build"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 9.2,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 11.0,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 8.6,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 9.7,
+          "name": "backboardd"
+        },
+        {
+          "pid": 93844,
+          "cpu_percent": 8.2,
+          "name": "node"
+        },
+        {
+          "pid": 93929,
+          "cpu_percent": 6.3,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 102.7,
+          "name": "node"
+        },
+        {
+          "pid": 95524,
+          "cpu_percent": 61.0,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 95532,
+          "cpu_percent": 6.1,
+          "name": "test"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670890.1498299,
+      "load": [7.931640625, 7.314453125, 6.45263671875],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 25.2,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 7.0,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 13.1,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 10.0,
+          "name": "stable"
+        },
+        {
+          "pid": 628,
+          "cpu_percent": 5.5,
+          "name": "Finder"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.1,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 167.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 6.5,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 5.3,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 93844,
+          "cpu_percent": 5.1,
+          "name": "node"
+        },
+        {
+          "pid": 93929,
+          "cpu_percent": 5.3,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 99.6,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 98.2,
+          "name": "node"
+        },
+        {
+          "pid": 95545,
+          "cpu_percent": 97.7,
+          "name": "zig"
+        },
+        {
+          "pid": 95552,
+          "cpu_percent": 59.1,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 27.0,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "template-compact",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 253.0,
+      "data_ready": 690.0,
+      "content_ready": 536.024
+    },
+    "data_and_content_ms": 690.0,
+    "command_to_log_observed_ms": 1310.1617919999987,
+    "audit_frames": 47,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670890.282284,
+      "load": [7.931640625, 7.314453125, 6.45263671875],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 22.8,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 6.4,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 12.6,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 7.5,
+          "name": "stable"
+        },
+        {
+          "pid": 1247,
+          "cpu_percent": 5.1,
+          "name": "com.apple.CoreSimulator.CoreSimulatorService"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.3,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 167.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 100.5,
+          "name": "node"
+        },
+        {
+          "pid": 95545,
+          "cpu_percent": 98.9,
+          "name": "zig"
+        },
+        {
+          "pid": 95552,
+          "cpu_percent": 36.3,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 95557,
+          "cpu_percent": 18.4,
+          "name": "managedappdistributiond"
+        },
+        {
+          "pid": 95558,
+          "cpu_percent": 18.2,
+          "name": "mlhostd"
+        },
+        {
+          "pid": 95559,
+          "cpu_percent": 17.7,
+          "name": "proactiveeventtrackerd"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 20.7,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670892.543245,
+      "load": [7.93701171875, 7.32568359375, 6.46142578125],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 20.7,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 7.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 12.0,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 6.1,
+          "name": "stable"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 8.9,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 156.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 8.0,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 7.7,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 23.5,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 7.0,
+          "name": "backboardd"
+        },
+        {
+          "pid": 93922,
+          "cpu_percent": 7.0,
+          "name": "node"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 99.1,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 101.7,
+          "name": "node"
+        },
+        {
+          "pid": 95545,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 95578,
+          "cpu_percent": 41.0,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 60254,
+          "cpu_percent": 50.4,
+          "name": "claude"
+        },
+        {
+          "pid": 57780,
+          "cpu_percent": 17.4,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 9.8,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "template-worklet",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 251.0,
+      "data_ready": 1218.0,
+      "content_ready": 1213.061
+    },
+    "data_and_content_ms": 1218.0,
+    "command_to_log_observed_ms": 1852.9553330000042,
+    "audit_frames": 44,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670892.671382,
+      "load": [7.93701171875, 7.32568359375, 6.46142578125],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 21.6,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 7.5,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 12.1,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 8.4,
+          "name": "stable"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 5.4,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.5,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 159.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 5.0,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 5.6,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 9.2,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 14.2,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 6.7,
+          "name": "backboardd"
+        },
+        {
+          "pid": 93935,
+          "cpu_percent": 7.6,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 99.1,
+          "name": "node"
+        },
+        {
+          "pid": 95545,
+          "cpu_percent": 99.3,
+          "name": "zig"
+        },
+        {
+          "pid": 95578,
+          "cpu_percent": 28.6,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 60254,
+          "cpu_percent": 34.9,
+          "name": "claude"
+        },
+        {
+          "pid": 57780,
+          "cpu_percent": 15.0,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 6.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670895.9092538,
+      "load": [7.93701171875, 7.32568359375, 6.46142578125],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 24.1,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.8,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 14.0,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 7.1,
+          "name": "stable"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 170.8,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 5.6,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 96.5,
+          "name": "node"
+        },
+        {
+          "pid": 95827,
+          "cpu_percent": 98.9,
+          "name": "test"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "zigpool",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 297.231
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 929.6531249999944,
+    "audit_frames": 42,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670896.035729,
+      "load": [7.93701171875, 7.32568359375, 6.46142578125],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 25.7,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.6,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 13.3,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 8.4,
+          "name": "stable"
+        },
+        {
+          "pid": 628,
+          "cpu_percent": 5.9,
+          "name": "Finder"
+        },
+        {
+          "pid": 1247,
+          "cpu_percent": 5.6,
+          "name": "com.apple.CoreSimulator.CoreSimulatorService"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 170.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 99.7,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 98.4,
+          "name": "node"
+        },
+        {
+          "pid": 95827,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 36.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670898.278369,
+      "load": [8.18212890625, 7.38623046875, 6.48779296875],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 30.6,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 6.0,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 13.4,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 9.5,
+          "name": "stable"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 152.0,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 101.8,
+          "name": "node"
+        },
+        {
+          "pid": 95959,
+          "cpu_percent": 95.4,
+          "name": "test"
+        },
+        {
+          "pid": 95960,
+          "cpu_percent": 6.8,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 19.7,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "zerolist",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 284.801
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 898.2621249999952,
+    "audit_frames": 43,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670898.403127,
+      "load": [8.18212890625, 7.38623046875, 6.48779296875],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 29.0,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.3,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 12.8,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 6.9,
+          "name": "stable"
+        },
+        {
+          "pid": 1247,
+          "cpu_percent": 7.9,
+          "name": "com.apple.CoreSimulator.CoreSimulatorService"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 157.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 94414,
+          "cpu_percent": 98.7,
+          "name": "test"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 98.4,
+          "name": "node"
+        },
+        {
+          "pid": 95959,
+          "cpu_percent": 97.0,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 14.2,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670900.6219351,
+      "load": [8.18212890625, 7.38623046875, 6.48779296875],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 21.1,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 6.2,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 11.1,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 11.0,
+          "name": "stable"
+        },
+        {
+          "pid": 5434,
+          "cpu_percent": 5.8,
+          "name": "XprotectService"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.1,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 169.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 5.1,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 5.9,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 93844,
+          "cpu_percent": 7.5,
+          "name": "node"
+        },
+        {
+          "pid": 93922,
+          "cpu_percent": 16.5,
+          "name": "node"
+        },
+        {
+          "pid": 93929,
+          "cpu_percent": 6.0,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 97.3,
+          "name": "node"
+        },
+        {
+          "pid": 95959,
+          "cpu_percent": 99.0,
+          "name": "test"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 64.1,
+          "name": "test"
+        },
+        {
+          "pid": 96000,
+          "cpu_percent": 61.5,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 8.9,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "legend",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 622.707
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 1264.6396669999972,
+    "audit_frames": 43,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670900.752448,
+      "load": [8.18212890625, 7.38623046875, 6.48779296875],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 20.9,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 6.7,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 11.2,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 8.5,
+          "name": "stable"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 6.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 175.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 93922,
+          "cpu_percent": 10.3,
+          "name": "node"
+        },
+        {
+          "pid": 95215,
+          "cpu_percent": 97.9,
+          "name": "node"
+        },
+        {
+          "pid": 95959,
+          "cpu_percent": 98.9,
+          "name": "test"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 69.3,
+          "name": "test"
+        },
+        {
+          "pid": 96000,
+          "cpu_percent": 105.0,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 5.7,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670902.989824,
+      "load": [7.92724609375, 7.34619140625, 6.47900390625],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 17.0,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 7.2,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 415,
+          "cpu_percent": 7.0,
+          "name": "mDNSResponder"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 9.2,
+          "name": "stable"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 9.1,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.6,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 165.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 11.2,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 7.9,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 6.0,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 21.4,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 6.9,
+          "name": "backboardd"
+        },
+        {
+          "pid": 93922,
+          "cpu_percent": 7.8,
+          "name": "node"
+        },
+        {
+          "pid": 93935,
+          "cpu_percent": 11.5,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 67.6,
+          "name": "test"
+        },
+        {
+          "pid": 96000,
+          "cpu_percent": 43.6,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 92.5,
+          "name": "test"
+        },
+        {
+          "pid": 96104,
+          "cpu_percent": 25.0,
+          "name": "node"
+        }
+      ]
+    },
+    "first_valid_attached": 12.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "flashlist",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 406.99
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 1048.4406670000012,
+    "audit_frames": 42,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670903.121581,
+      "load": [7.92724609375, 7.34619140625, 6.47900390625],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 11.8,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 7.2,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 11.4,
+          "name": "stable"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 6.2,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.3,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 174.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 7.6,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 7.4,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 5.7,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 13.4,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.6,
+          "name": "backboardd"
+        },
+        {
+          "pid": 93922,
+          "cpu_percent": 6.4,
+          "name": "node"
+        },
+        {
+          "pid": 93935,
+          "cpu_percent": 8.6,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 65.4,
+          "name": "test"
+        },
+        {
+          "pid": 96000,
+          "cpu_percent": 32.7,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 95.1,
+          "name": "test"
+        },
+        {
+          "pid": 96104,
+          "cpu_percent": 55.1,
+          "name": "node"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 35.2,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670905.3988118,
+      "load": [7.92724609375, 7.34619140625, 6.47900390625],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 117.6,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 352,
+          "cpu_percent": 22.5,
+          "name": "mds"
+        },
+        {
+          "pid": 364,
+          "cpu_percent": 5.7,
+          "name": "opendirectoryd"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 37.8,
+          "name": "stable"
+        },
+        {
+          "pid": 628,
+          "cpu_percent": 12.2,
+          "name": "Finder"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 97.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 72888,
+          "cpu_percent": 19.0,
+          "name": "colima"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 12.6,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 6.2,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 6.2,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 8.9,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.8,
+          "name": "backboardd"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 97.9,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 99.3,
+          "name": "test"
+        },
+        {
+          "pid": 96311,
+          "cpu_percent": 92.1,
+          "name": "test"
+        },
+        {
+          "pid": 96316,
+          "cpu_percent": 84.5,
+          "name": "cp"
+        },
+        {
+          "pid": 96317,
+          "cpu_percent": 10.1,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 16.0,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "zigpool",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 301.699
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 930.3329170000012,
+    "audit_frames": 43,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670905.525291,
+      "load": [7.92724609375, 7.34619140625, 6.47900390625],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 116.8,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 352,
+          "cpu_percent": 21.3,
+          "name": "mds"
+        },
+        {
+          "pid": 364,
+          "cpu_percent": 5.9,
+          "name": "opendirectoryd"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 34.1,
+          "name": "stable"
+        },
+        {
+          "pid": 628,
+          "cpu_percent": 11.5,
+          "name": "Finder"
+        },
+        {
+          "pid": 1247,
+          "cpu_percent": 5.4,
+          "name": "com.apple.CoreSimulator.CoreSimulatorService"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 104.8,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 72888,
+          "cpu_percent": 18.2,
+          "name": "colima"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 13.4,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 5.7,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 99.8,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 99.2,
+          "name": "test"
+        },
+        {
+          "pid": 96311,
+          "cpu_percent": 95.5,
+          "name": "test"
+        },
+        {
+          "pid": 96316,
+          "cpu_percent": 89.5,
+          "name": "cp"
+        },
+        {
+          "pid": 96317,
+          "cpu_percent": 6.0,
+          "name": "chrome-headless-shell"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 10.2,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670907.779617,
+      "load": [8.4130859375, 7.45654296875, 6.52294921875],
+      "processes": [
+        {
+          "pid": 1,
+          "cpu_percent": 30.0,
+          "name": "launchd"
+        },
+        {
+          "pid": 327,
+          "cpu_percent": 93.9,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 352,
+          "cpu_percent": 18.2,
+          "name": "mds"
+        },
+        {
+          "pid": 364,
+          "cpu_percent": 6.0,
+          "name": "opendirectoryd"
+        },
+        {
+          "pid": 454,
+          "cpu_percent": 5.6,
+          "name": "syspolicyd"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 23.7,
+          "name": "stable"
+        },
+        {
+          "pid": 628,
+          "cpu_percent": 10.2,
+          "name": "Finder"
+        },
+        {
+          "pid": 5434,
+          "cpu_percent": 25.4,
+          "name": "XprotectService"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.1,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 102.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 72888,
+          "cpu_percent": 15.6,
+          "name": "colima"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 14.4,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 98.3,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 97.8,
+          "name": "test"
+        },
+        {
+          "pid": 96185,
+          "cpu_percent": 5.4,
+          "name": "build"
+        },
+        {
+          "pid": 96316,
+          "cpu_percent": 72.6,
+          "name": "cp"
+        },
+        {
+          "pid": 96750,
+          "cpu_percent": 22.6,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 5.2,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "template-compact",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 254.0,
+      "data_ready": 672.0,
+      "content_ready": 474.106
+    },
+    "data_and_content_ms": 672.0,
+    "command_to_log_observed_ms": 1298.812708,
+    "audit_frames": 46,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670907.906539,
+      "load": [8.4130859375, 7.45654296875, 6.52294921875],
+      "processes": [
+        {
+          "pid": 1,
+          "cpu_percent": 20.4,
+          "name": "launchd"
+        },
+        {
+          "pid": 327,
+          "cpu_percent": 102.5,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 352,
+          "cpu_percent": 19.7,
+          "name": "mds"
+        },
+        {
+          "pid": 364,
+          "cpu_percent": 6.0,
+          "name": "opendirectoryd"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 31.4,
+          "name": "stable"
+        },
+        {
+          "pid": 628,
+          "cpu_percent": 10.2,
+          "name": "Finder"
+        },
+        {
+          "pid": 5434,
+          "cpu_percent": 15.8,
+          "name": "XprotectService"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.1,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 105.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 72888,
+          "cpu_percent": 16.6,
+          "name": "colima"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 15.4,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 98.8,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 99.6,
+          "name": "test"
+        },
+        {
+          "pid": 96316,
+          "cpu_percent": 81.2,
+          "name": "cp"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670910.1321018,
+      "load": [8.4130859375, 7.45654296875, 6.52294921875],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 6.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 1247,
+          "cpu_percent": 6.1,
+          "name": "com.apple.CoreSimulator.CoreSimulatorService"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 11.6,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 178.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 13.2,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 5.9,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90939,
+          "cpu_percent": 6.4,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 6.2,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 32.3,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 7.2,
+          "name": "backboardd"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 83.1,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 32.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "flatlist",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 281.84
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 891.5927079999974,
+    "audit_frames": 42,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670910.258116,
+      "load": [8.4130859375, 7.45654296875, 6.52294921875],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 6.8,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 628,
+          "cpu_percent": 9.6,
+          "name": "Finder"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 7.2,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 181.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 8.4,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 7.1,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 9.4,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 22.0,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 6.1,
+          "name": "backboardd"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 78.8,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 97.9,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 98.7,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 26.1,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 6.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670912.472762,
+      "load": [8.2197265625, 7.43212890625, 6.51953125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.7,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 190.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 5.6,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 7.5,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 5.8,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.9,
+          "name": "backboardd"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 67.9,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 98.7,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 15.6,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 13.9,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "template-worklet",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 249.0,
+      "data_ready": 1214.0,
+      "content_ready": 1008.798
+    },
+    "data_and_content_ms": 1214.0,
+    "command_to_log_observed_ms": 1830.524750000002,
+    "audit_frames": 44,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670912.596669,
+      "load": [8.2197265625, 7.43212890625, 6.51953125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.4,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 192.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 65.7,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 98.2,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 99.3,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 8.0,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 11.2,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 8.9,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670915.871634,
+      "load": [8.2197265625, 7.43212890625, 6.51953125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.0,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 193.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 5.1,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 90.3,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 98.6,
+          "name": "test"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "template-worklet",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 248.0,
+      "data_ready": 1204.0,
+      "content_ready": 1199.648
+    },
+    "data_and_content_ms": 1204.0,
+    "command_to_log_observed_ms": 1821.622083000001,
+    "audit_frames": 44,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670915.999104,
+      "load": [8.2197265625, 7.43212890625, 6.51953125],
+      "processes": [
+        {
+          "pid": 32687,
+          "cpu_percent": 195.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 93.7,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 98.1,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 100.0,
+          "name": "test"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670919.222659,
+      "load": [8.36181640625, 7.474609375, 6.53955078125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.2,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 192.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 88.7,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 99.7,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 98.8,
+          "name": "test"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 6.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "flashlist",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 400.21
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 1022.9192090000013,
+    "audit_frames": 41,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670919.346647,
+      "load": [8.36181640625, 7.474609375, 6.53955078125],
+      "processes": [
+        {
+          "pid": 32687,
+          "cpu_percent": 193.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 94.4,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 98.7,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97092,
+          "cpu_percent": 21.1,
+          "name": "pairedsyncd"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670921.5932329,
+      "load": [8.36181640625, 7.474609375, 6.53955078125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 8.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 399,
+          "cpu_percent": 8.1,
+          "name": "loginwindow"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 164.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 7.4,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 7.2,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.1,
+          "name": "backboardd"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 92.8,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97231,
+          "cpu_percent": 157.1,
+          "name": "(zig)"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 7.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "template-compact",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 249.0,
+      "data_ready": 665.0,
+      "content_ready": 480.819
+    },
+    "data_and_content_ms": 665.0,
+    "command_to_log_observed_ms": 1294.8842500000026,
+    "audit_frames": 47,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670921.776187,
+      "load": [8.36181640625, 7.474609375, 6.53955078125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 7.0,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 399,
+          "cpu_percent": 6.8,
+          "name": "loginwindow"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 174.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 96.7,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 98.8,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 99.4,
+          "name": "test"
+        },
+        {
+          "pid": 97254,
+          "cpu_percent": 8.7,
+          "name": "zig"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670924.0125031,
+      "load": [8.49267578125, 7.51611328125, 6.5595703125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.4,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 1247,
+          "cpu_percent": 5.0,
+          "name": "com.apple.CoreSimulator.CoreSimulatorService"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 10.2,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 185.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 13.3,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 7.7,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 5.2,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 21.7,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 6.6,
+          "name": "backboardd"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 81.9,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 99.2,
+          "name": "test"
+        },
+        {
+          "pid": 97254,
+          "cpu_percent": 98.7,
+          "name": "zig"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "zigpool",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 290.28
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 912.9667090000027,
+    "audit_frames": 43,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670924.1334,
+      "load": [8.49267578125, 7.51611328125, 6.5595703125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.6,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 6.5,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 189.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 9.0,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 7.4,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 5.3,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 16.1,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.2,
+          "name": "backboardd"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 87.7,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97254,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670926.3700511,
+      "load": [8.49267578125, 7.51611328125, 6.5595703125],
+      "processes": [
+        {
+          "pid": 32687,
+          "cpu_percent": 195.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 5.1,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 96.4,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 98.5,
+          "name": "test"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "zerolist",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 287.302
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 894.0087499999976,
+    "audit_frames": 42,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670926.493978,
+      "load": [8.49267578125, 7.51611328125, 6.5595703125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 194.2,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 98.7,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 99.3,
+          "name": "test"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670928.70969,
+      "load": [8.29296875, 7.49072265625, 6.55615234375],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.3,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 626,
+          "cpu_percent": 5.1,
+          "name": "fontd"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 181.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 5.0,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 6.4,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 5.9,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 83.1,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 97.8,
+          "name": "test"
+        },
+        {
+          "pid": 97513,
+          "cpu_percent": 18.0,
+          "name": "node"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 19.7,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 5.9,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "legend",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 611.438
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 1231.6121669999943,
+    "audit_frames": 42,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670928.833343,
+      "load": [8.29296875, 7.49072265625, 6.55615234375],
+      "processes": [
+        {
+          "pid": 626,
+          "cpu_percent": 6.9,
+          "name": "fontd"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 186.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 85.8,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 99.3,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97513,
+          "cpu_percent": 26.0,
+          "name": "node"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 14.7,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670931.064888,
+      "load": [8.29296875, 7.49072265625, 6.55615234375],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 6.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 7.2,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 6.4,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 185.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 8.0,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 9.5,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 9.7,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 20.2,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.8,
+          "name": "backboardd"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 79.5,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 99.1,
+          "name": "test"
+        },
+        {
+          "pid": 97625,
+          "cpu_percent": 46.0,
+          "name": "tar"
+        }
+      ]
+    },
+    "first_valid_attached": 12.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "ios",
+    "engine": "flatlist",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 287.651
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 927.221000000003,
+    "audit_frames": 44,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670931.193434,
+      "load": [8.29296875, 7.49072265625, 6.55615234375],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 6.6,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 5.6,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 185.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 58569,
+          "cpu_percent": 5.2,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 9.9,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 10.7,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 11.9,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.1,
+          "name": "backboardd"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 78.3,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97625,
+          "cpu_percent": 66.6,
+          "name": "tar"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 6.0,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670933.43582,
+      "load": [8.18896484375, 7.482421875, 6.55859375],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.5,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 191.8,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 90935,
+          "cpu_percent": 5.0,
+          "name": "SimRenderServer"
+        },
+        {
+          "pid": 90940,
+          "cpu_percent": 6.9,
+          "name": "SimMetalHost"
+        },
+        {
+          "pid": 90951,
+          "cpu_percent": 5.2,
+          "name": "SpringBoard"
+        },
+        {
+          "pid": 90973,
+          "cpu_percent": 5.1,
+          "name": "backboardd"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 73.2,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 99.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 99.9,
+          "name": "test"
+        },
+        {
+          "pid": 97807,
+          "cpu_percent": 41.7,
+          "name": "find"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 18.2,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "template-compact",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "render_begin": 242.0,
+      "data_ready": 700.0,
+      "content_ready": 471.410667
+    },
+    "data_and_content_ms": 700.0,
+    "command_to_log_observed_ms": 783.280542,
+    "audit_frames": 4,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670933.586557,
+      "load": [8.18896484375, 7.482421875, 6.55859375],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.6,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 1247,
+          "cpu_percent": 5.4,
+          "name": "com.apple.CoreSimulator.CoreSimulatorService"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 192.2,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95975,
+          "cpu_percent": 86.1,
+          "name": "test"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 99.9,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 99.7,
+          "name": "test"
+        },
+        {
+          "pid": 97807,
+          "cpu_percent": 64.3,
+          "name": "find"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 33.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670935.1678889,
+      "load": [8.18896484375, 7.482421875, 6.55859375],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 28.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 197.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 101.9,
+          "name": "zig"
+        },
+        {
+          "pid": 97845,
+          "cpu_percent": 98.3,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 9.7,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "zigpool",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "content_ready": 297.784917
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 437.977458000006,
+    "audit_frames": 2,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670935.237216,
+      "load": [8.18896484375, 7.482421875, 6.55859375],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 53.9,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 196.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 99.9,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 99.7,
+          "name": "test"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 100.6,
+          "name": "zig"
+        },
+        {
+          "pid": 97845,
+          "cpu_percent": 98.0,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 9.2,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 7.0,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670936.4637299,
+      "load": [8.18896484375, 7.482421875, 6.55859375],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 47.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 194.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 97.0,
+          "name": "zig"
+        },
+        {
+          "pid": 97845,
+          "cpu_percent": 99.1,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 12.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "flashlist",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "content_ready": 440.006501
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 527.4792090000062,
+    "audit_frames": 4,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670936.546229,
+      "load": [8.18896484375, 7.482421875, 6.55859375],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 47.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 194.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 96782,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 97.0,
+          "name": "zig"
+        },
+        {
+          "pid": 97845,
+          "cpu_percent": 99.1,
+          "name": "(test)"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 12.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670937.86022,
+      "load": [8.09375, 7.47412109375, 6.56103515625],
+      "processes": [
+        {
+          "pid": 1,
+          "cpu_percent": 40.4,
+          "name": "launchd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.4,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 40.1,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 185.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 6.3,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 99.7,
+          "name": "test"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 96.1,
+          "name": "zig"
+        },
+        {
+          "pid": 97871,
+          "cpu_percent": 95.1,
+          "name": "test"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 67.4,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 14.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "template-worklet",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "render_begin": 251.0,
+      "data_ready": 1380.0,
+      "content_ready": 1131.2445
+    },
+    "data_and_content_ms": 1380.0,
+    "command_to_log_observed_ms": 1476.7434169999945,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670937.944076,
+      "load": [8.09375, 7.47412109375, 6.56103515625],
+      "processes": [
+        {
+          "pid": 1,
+          "cpu_percent": 25.2,
+          "name": "launchd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.5,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 153.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 182.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 98.1,
+          "name": "test"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 97.6,
+          "name": "zig"
+        },
+        {
+          "pid": 97871,
+          "cpu_percent": 94.8,
+          "name": "test"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 78.9,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 9.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670940.2011762,
+      "load": [8.09375, 7.47412109375, 6.56103515625],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 28.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 198.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 99.3,
+          "name": "zig"
+        },
+        {
+          "pid": 97871,
+          "cpu_percent": 99.8,
+          "name": "test"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.0,
+          "name": "test"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 5.7,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "legend",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "content_ready": 776.640417
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 863.2516250000037,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670940.291807,
+      "load": [8.09375, 7.47412109375, 6.56103515625],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 28.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 198.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96073,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 99.3,
+          "name": "zig"
+        },
+        {
+          "pid": 97871,
+          "cpu_percent": 99.8,
+          "name": "test"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.0,
+          "name": "test"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 5.7,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670941.934696,
+      "load": [8.09375, 7.47412109375, 6.56103515625],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 37.5,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 197.8,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 97871,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98036,
+          "cpu_percent": 99.9,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 26.9,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 9.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 12.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "zerolist",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "content_ready": 254.904042
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 343.36525000000506,
+    "audit_frames": 4,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670942.01037,
+      "load": [8.09375, 7.47412109375, 6.56103515625],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 42.9,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 197.8,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 99.1,
+          "name": "zig"
+        },
+        {
+          "pid": 97871,
+          "cpu_percent": 98.8,
+          "name": "test"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.3,
+          "name": "test"
+        },
+        {
+          "pid": 98036,
+          "cpu_percent": 98.4,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 26.9,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 9.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670943.144369,
+      "load": [8.166015625, 7.4990234375, 6.5751953125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.4,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 71.6,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 190.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 97871,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.4,
+          "name": "test"
+        },
+        {
+          "pid": 98141,
+          "cpu_percent": 27.1,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 14.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "flatlist",
+    "run": 0,
+    "warmup": true,
+    "milliseconds": {
+      "content_ready": 253.957375
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 340.88820899999916,
+    "audit_frames": 2,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670943.228218,
+      "load": [8.166015625, 7.4990234375, 6.5751953125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.4,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 126.0,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 186.8,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 99.9,
+          "name": "zig"
+        },
+        {
+          "pid": 97871,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98141,
+          "cpu_percent": 53.6,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 9.0,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 7.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670944.346219,
+      "load": [8.166015625, 7.4990234375, 6.5751953125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 55.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 191.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 99.9,
+          "name": "zig"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.6,
+          "name": "test"
+        },
+        {
+          "pid": 98141,
+          "cpu_percent": 98.5,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 12.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "flashlist",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 365.545958
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 467.5919169999929,
+    "audit_frames": 4,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670944.4233532,
+      "load": [8.166015625, 7.4990234375, 6.5751953125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.2,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 454,
+          "cpu_percent": 5.7,
+          "name": "syspolicyd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 55.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 191.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 99.9,
+          "name": "zig"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.6,
+          "name": "test"
+        },
+        {
+          "pid": 98141,
+          "cpu_percent": 98.5,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 12.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670945.684962,
+      "load": [8.166015625, 7.4990234375, 6.5751953125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 53.3,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 178.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98256,
+          "cpu_percent": 96.4,
+          "name": "test"
+        },
+        {
+          "pid": 98300,
+          "cpu_percent": 6.1,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 25.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "zerolist",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 325.162542
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 436.3888750000058,
+    "audit_frames": 4,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670945.7617211,
+      "load": [8.166015625, 7.4990234375, 6.5751953125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 56.5,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 185.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.8,
+          "name": "test"
+        },
+        {
+          "pid": 98256,
+          "cpu_percent": 98.7,
+          "name": "test"
+        },
+        {
+          "pid": 98300,
+          "cpu_percent": 40.4,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 25.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670947.005934,
+      "load": [8.166015625, 7.4990234375, 6.5751953125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 54.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 162.0,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98256,
+          "cpu_percent": 97.9,
+          "name": "test"
+        },
+        {
+          "pid": 98375,
+          "cpu_percent": 91.3,
+          "name": "test"
+        },
+        {
+          "pid": 98390,
+          "cpu_percent": 138.6,
+          "name": "zig"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 32.6,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 12.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "legend",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 669.691709
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 761.1785419999961,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670947.08154,
+      "load": [8.166015625, 7.4990234375, 6.5751953125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.0,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 151.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 163.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97835,
+          "cpu_percent": 98.0,
+          "name": "zig"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 98.6,
+          "name": "test"
+        },
+        {
+          "pid": 98256,
+          "cpu_percent": 98.4,
+          "name": "test"
+        },
+        {
+          "pid": 98375,
+          "cpu_percent": 93.4,
+          "name": "test"
+        },
+        {
+          "pid": 98390,
+          "cpu_percent": 113.9,
+          "name": "(zig)"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 40.6,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 8.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670948.6244638,
+      "load": [8.072265625, 7.49072265625, 6.57763671875],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 31.5,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 194.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 98.8,
+          "name": "test"
+        },
+        {
+          "pid": 98256,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98411,
+          "cpu_percent": 97.8,
+          "name": "zig"
+        },
+        {
+          "pid": 98526,
+          "cpu_percent": 86.8,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 8.1,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 40.8,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 12.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "flatlist",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 257.980417
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 368.6227500000001,
+    "audit_frames": 2,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670948.694769,
+      "load": [8.072265625, 7.49072265625, 6.57763671875],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 110.0,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 190.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 98.8,
+          "name": "test"
+        },
+        {
+          "pid": 98256,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98411,
+          "cpu_percent": 97.8,
+          "name": "zig"
+        },
+        {
+          "pid": 98526,
+          "cpu_percent": 86.8,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 5.3,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 25.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670949.844587,
+      "load": [8.072265625, 7.49072265625, 6.57763671875],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 49.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 193.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.7,
+          "name": "test"
+        },
+        {
+          "pid": 98256,
+          "cpu_percent": 98.5,
+          "name": "test"
+        },
+        {
+          "pid": 98411,
+          "cpu_percent": 94.3,
+          "name": "(zig)"
+        },
+        {
+          "pid": 98526,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98537,
+          "cpu_percent": 6.1,
+          "name": "(zig)"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 15.9,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "template-compact",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 232.0,
+      "data_ready": 749.0,
+      "content_ready": 498.687417
+    },
+    "data_and_content_ms": 749.0,
+    "command_to_log_observed_ms": 859.7683750000016,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670949.918437,
+      "load": [8.072265625, 7.49072265625, 6.57763671875],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 49.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 193.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.7,
+          "name": "test"
+        },
+        {
+          "pid": 98256,
+          "cpu_percent": 98.5,
+          "name": "test"
+        },
+        {
+          "pid": 98526,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 15.9,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670951.571929,
+      "load": [8.072265625, 7.49072265625, 6.57763671875],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 39.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 149.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95681,
+          "cpu_percent": 6.8,
+          "name": "build"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98256,
+          "cpu_percent": 98.5,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 7.6,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 41.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "template-worklet",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 239.0,
+      "data_ready": 1334.0,
+      "content_ready": 1085.971001
+    },
+    "data_and_content_ms": 1334.0,
+    "command_to_log_observed_ms": 1421.0847089999988,
+    "audit_frames": 4,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670951.642367,
+      "load": [8.072265625, 7.49072265625, 6.57763671875],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 39.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 149.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95681,
+          "cpu_percent": 7.9,
+          "name": "build"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.7,
+          "name": "test"
+        },
+        {
+          "pid": 98256,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98723,
+          "cpu_percent": 142.1,
+          "name": "(zig)"
+        },
+        {
+          "pid": 98724,
+          "cpu_percent": 27.7,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 7.6,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 41.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670953.87197,
+      "load": [7.986328125, 7.482421875, 6.580078125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 19.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 198.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98724,
+          "cpu_percent": 99.4,
+          "name": "test"
+        },
+        {
+          "pid": 98758,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 98760,
+          "cpu_percent": 98.9,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 16.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "zigpool",
+    "run": 1,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 276.566709
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 364.48204099998804,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670953.943907,
+      "load": [7.986328125, 7.482421875, 6.580078125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 19.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 198.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98724,
+          "cpu_percent": 99.4,
+          "name": "test"
+        },
+        {
+          "pid": 98758,
+          "cpu_percent": 100.0,
+          "name": "zig"
+        },
+        {
+          "pid": 98760,
+          "cpu_percent": 98.9,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 31.3,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 12.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670955.095434,
+      "load": [7.986328125, 7.482421875, 6.580078125],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 8.3,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 52.5,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 187.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98760,
+          "cpu_percent": 98.7,
+          "name": "test"
+        },
+        {
+          "pid": 98802,
+          "cpu_percent": 92.7,
+          "name": "test"
+        },
+        {
+          "pid": 98825,
+          "cpu_percent": 45.5,
+          "name": "node"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 41.4,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 6.9,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "zerolist",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 286.59675
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 380.83991699998876,
+    "audit_frames": 4,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670955.168185,
+      "load": [7.986328125, 7.482421875, 6.580078125],
+      "processes": [
+        {
+          "pid": 327,
+          "cpu_percent": 8.3,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 397,
+          "cpu_percent": 5.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 52.5,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 187.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98760,
+          "cpu_percent": 98.7,
+          "name": "test"
+        },
+        {
+          "pid": 98802,
+          "cpu_percent": 92.7,
+          "name": "test"
+        },
+        {
+          "pid": 98825,
+          "cpu_percent": 45.5,
+          "name": "node"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 41.4,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 6.9,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670956.331894,
+      "load": [7.986328125, 7.482421875, 6.580078125],
+      "processes": [
+        {
+          "pid": 454,
+          "cpu_percent": 5.2,
+          "name": "syspolicyd"
+        },
+        {
+          "pid": 4958,
+          "cpu_percent": 7.7,
+          "name": "tccd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 66.3,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 115.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96185,
+          "cpu_percent": 33.2,
+          "name": "build"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 87.3,
+          "name": "test"
+        },
+        {
+          "pid": 98802,
+          "cpu_percent": 88.5,
+          "name": "test"
+        },
+        {
+          "pid": 98846,
+          "cpu_percent": 127.5,
+          "name": "zig"
+        },
+        {
+          "pid": 98887,
+          "cpu_percent": 9.0,
+          "name": "(zig)"
+        },
+        {
+          "pid": 98889,
+          "cpu_percent": 7.3,
+          "name": "(zig)"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 70.3,
+          "name": "claude"
+        },
+        {
+          "pid": 98840,
+          "cpu_percent": 7.7,
+          "name": "gh"
+        },
+        {
+          "pid": 98843,
+          "cpu_percent": 7.4,
+          "name": "gh"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 5.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "legend",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 565.482584
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 658.9032079999981,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670956.4060328,
+      "load": [7.986328125, 7.482421875, 6.580078125],
+      "processes": [
+        {
+          "pid": 454,
+          "cpu_percent": 5.2,
+          "name": "syspolicyd"
+        },
+        {
+          "pid": 4958,
+          "cpu_percent": 7.7,
+          "name": "tccd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 66.3,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 115.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96185,
+          "cpu_percent": 33.2,
+          "name": "build"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 87.3,
+          "name": "test"
+        },
+        {
+          "pid": 98802,
+          "cpu_percent": 88.5,
+          "name": "test"
+        },
+        {
+          "pid": 98846,
+          "cpu_percent": 127.5,
+          "name": "zig"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 70.3,
+          "name": "claude"
+        },
+        {
+          "pid": 98840,
+          "cpu_percent": 7.7,
+          "name": "gh"
+        },
+        {
+          "pid": 98843,
+          "cpu_percent": 7.4,
+          "name": "gh"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 5.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670957.8470669,
+      "load": [8.5478515625, 7.60693359375, 6.62939453125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 33.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 194.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98802,
+          "cpu_percent": 98.6,
+          "name": "test"
+        },
+        {
+          "pid": 98846,
+          "cpu_percent": 99.0,
+          "name": "zig"
+        },
+        {
+          "pid": 98945,
+          "cpu_percent": 62.2,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 16.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 12.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "flashlist",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 391.144542
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 503.10549999998955,
+    "audit_frames": 5,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670957.9254808,
+      "load": [8.5478515625, 7.60693359375, 6.62939453125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 33.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 194.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98802,
+          "cpu_percent": 98.6,
+          "name": "test"
+        },
+        {
+          "pid": 98846,
+          "cpu_percent": 99.0,
+          "name": "zig"
+        },
+        {
+          "pid": 98945,
+          "cpu_percent": 62.2,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 16.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670959.2026792,
+      "load": [8.5478515625, 7.60693359375, 6.62939453125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 4958,
+          "cpu_percent": 5.0,
+          "name": "tccd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 51.9,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 193.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96185,
+          "cpu_percent": 15.7,
+          "name": "build"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98802,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 98846,
+          "cpu_percent": 98.3,
+          "name": "zig"
+        },
+        {
+          "pid": 98970,
+          "cpu_percent": 28.3,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 5.9,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 6.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "zigpool",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 435.3295
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 510.6137499999903,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670959.2692108,
+      "load": [8.5478515625, 7.60693359375, 6.62939453125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.1,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 4958,
+          "cpu_percent": 5.0,
+          "name": "tccd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 51.9,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 193.3,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96185,
+          "cpu_percent": 11.0,
+          "name": "build"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.3,
+          "name": "test"
+        },
+        {
+          "pid": 98802,
+          "cpu_percent": 98.9,
+          "name": "test"
+        },
+        {
+          "pid": 98846,
+          "cpu_percent": 99.3,
+          "name": "zig"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 5.9,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 6.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670960.558418,
+      "load": [8.5478515625, 7.60693359375, 6.62939453125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 45.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 187.0,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95681,
+          "cpu_percent": 8.7,
+          "name": "build"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.4,
+          "name": "test"
+        },
+        {
+          "pid": 98846,
+          "cpu_percent": 98.9,
+          "name": "zig"
+        },
+        {
+          "pid": 98998,
+          "cpu_percent": 95.8,
+          "name": "test"
+        },
+        {
+          "pid": 99051,
+          "cpu_percent": 57.7,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 5.5,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "template-compact",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 200.0,
+      "data_ready": 675.0,
+      "content_ready": 437.459125
+    },
+    "data_and_content_ms": 675.0,
+    "command_to_log_observed_ms": 781.3677079999906,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670960.640409,
+      "load": [8.5478515625, 7.60693359375, 6.62939453125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 67.6,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 191.6,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 98.1,
+          "name": "test"
+        },
+        {
+          "pid": 98846,
+          "cpu_percent": 98.0,
+          "name": "zig"
+        },
+        {
+          "pid": 98998,
+          "cpu_percent": 96.1,
+          "name": "test"
+        },
+        {
+          "pid": 99051,
+          "cpu_percent": 73.2,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 38.9,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670962.201792,
+      "load": [8.82421875, 7.6796875, 6.66064453125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 41.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 192.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 5.8,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "flatlist",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 251.497209
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 350.5967090000013,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670962.270447,
+      "load": [8.82421875, 7.6796875, 6.66064453125],
+      "processes": [
+        {
+          "pid": 8702,
+          "cpu_percent": 41.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 192.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 99067,
+          "cpu_percent": 37.0,
+          "name": "test"
+        },
+        {
+          "pid": 99068,
+          "cpu_percent": 25.4,
+          "name": "(test)"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 5.8,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670963.406105,
+      "load": [8.82421875, 7.6796875, 6.66064453125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.3,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 63.6,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 189.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 73027,
+          "cpu_percent": 8.1,
+          "name": "com.apple.Virtualization.VirtualMachine"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.6,
+          "name": "test"
+        },
+        {
+          "pid": 99101,
+          "cpu_percent": 97.6,
+          "name": "test"
+        },
+        {
+          "pid": 99105,
+          "cpu_percent": 86.4,
+          "name": "test"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "template-worklet",
+    "run": 2,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 225.0,
+      "data_ready": 1396.0,
+      "content_ready": 1156.201459
+    },
+    "data_and_content_ms": 1396.0,
+    "command_to_log_observed_ms": 1499.19541700001,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670963.491297,
+      "load": [8.82421875, 7.6796875, 6.66064453125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.2,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 102.0,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 189.0,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.1,
+          "name": "test"
+        },
+        {
+          "pid": 99101,
+          "cpu_percent": 95.6,
+          "name": "test"
+        },
+        {
+          "pid": 99105,
+          "cpu_percent": 90.9,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 5.6,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670965.774118,
+      "load": [8.82421875, 7.6796875, 6.66064453125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.0,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 548,
+          "cpu_percent": 5.1,
+          "name": "com.apple.DriverKit-AppleBCMWLAN"
+        },
+        {
+          "pid": 617,
+          "cpu_percent": 5.5,
+          "name": "stable"
+        },
+        {
+          "pid": 4958,
+          "cpu_percent": 6.9,
+          "name": "tccd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 20.9,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 191.2,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.9,
+          "name": "test"
+        },
+        {
+          "pid": 99246,
+          "cpu_percent": 99.6,
+          "name": "test"
+        },
+        {
+          "pid": 99458,
+          "cpu_percent": 21.9,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 22.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "template-worklet",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 223.0,
+      "data_ready": 1333.0,
+      "content_ready": 1094.702626
+    },
+    "data_and_content_ms": 1333.0,
+    "command_to_log_observed_ms": 1424.4721670000047,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670965.8546078,
+      "load": [8.82421875, 7.6796875, 6.66064453125],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.3,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 136.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 184.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 97900,
+          "cpu_percent": 99.9,
+          "name": "test"
+        },
+        {
+          "pid": 99246,
+          "cpu_percent": 99.9,
+          "name": "test"
+        },
+        {
+          "pid": 99458,
+          "cpu_percent": 50.5,
+          "name": "test"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 13.8,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670968.056449,
+      "load": [8.837890625, 7.701171875, 6.67431640625],
+      "processes": [
+        {
+          "pid": 1,
+          "cpu_percent": 22.9,
+          "name": "launchd"
+        },
+        {
+          "pid": 454,
+          "cpu_percent": 18.7,
+          "name": "syspolicyd"
+        },
+        {
+          "pid": 5434,
+          "cpu_percent": 24.0,
+          "name": "XprotectService"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 22.4,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 192.2,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 99565,
+          "cpu_percent": 99.0,
+          "name": "test"
+        },
+        {
+          "pid": 99792,
+          "cpu_percent": 78.7,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 34.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "flashlist",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 369.332791
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 467.4090419999999,
+    "audit_frames": 4,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670968.1311,
+      "load": [8.837890625, 7.701171875, 6.67431640625],
+      "processes": [
+        {
+          "pid": 1,
+          "cpu_percent": 14.4,
+          "name": "launchd"
+        },
+        {
+          "pid": 327,
+          "cpu_percent": 5.0,
+          "name": "fseventsd"
+        },
+        {
+          "pid": 454,
+          "cpu_percent": 11.6,
+          "name": "syspolicyd"
+        },
+        {
+          "pid": 5434,
+          "cpu_percent": 50.5,
+          "name": "XprotectService"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 88.5,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 189.2,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 99565,
+          "cpu_percent": 99.4,
+          "name": "test"
+        },
+        {
+          "pid": 99792,
+          "cpu_percent": 85.9,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 24.8,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670969.3835762,
+      "load": [8.837890625, 7.701171875, 6.67431640625],
+      "processes": [
+        {
+          "pid": 4958,
+          "cpu_percent": 7.5,
+          "name": "tccd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 46.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 123.0,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96185,
+          "cpu_percent": 10.1,
+          "name": "build"
+        },
+        {
+          "pid": 99792,
+          "cpu_percent": 98.8,
+          "name": "test"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 71.7,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 10.9,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 5.4,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "template-compact",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "render_begin": 232.0,
+      "data_ready": 703.0,
+      "content_ready": 476.389792
+    },
+    "data_and_content_ms": 703.0,
+    "command_to_log_observed_ms": 794.1247910000016,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670969.466348,
+      "load": [8.837890625, 7.701171875, 6.67431640625],
+      "processes": [
+        {
+          "pid": 220,
+          "cpu_percent": 11.8,
+          "name": "test"
+        },
+        {
+          "pid": 221,
+          "cpu_percent": 11.1,
+          "name": "(zig)"
+        },
+        {
+          "pid": 4958,
+          "cpu_percent": 6.3,
+          "name": "tccd"
+        },
+        {
+          "pid": 5104,
+          "cpu_percent": 6.6,
+          "name": "diagnosticd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 175.8,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 131.0,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 96185,
+          "cpu_percent": 29.2,
+          "name": "build"
+        },
+        {
+          "pid": 99792,
+          "cpu_percent": 92.9,
+          "name": "test"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 69.6,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 7.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670971.044806,
+      "load": [8.837890625, 7.701171875, 6.67431640625],
+      "processes": [
+        {
+          "pid": 633,
+          "cpu_percent": 62.1,
+          "name": "test"
+        },
+        {
+          "pid": 684,
+          "cpu_percent": 24.5,
+          "name": "test"
+        },
+        {
+          "pid": 4958,
+          "cpu_percent": 5.0,
+          "name": "tccd"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 28.4,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 190.1,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95681,
+          "cpu_percent": 11.6,
+          "name": "build"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 65.5,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 33.8,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 19.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "zigpool",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 280.596167
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 366.8402910000026,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670971.121382,
+      "load": [8.837890625, 7.701171875, 6.67431640625],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.0,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 633,
+          "cpu_percent": 73.2,
+          "name": "test"
+        },
+        {
+          "pid": 684,
+          "cpu_percent": 50.3,
+          "name": "test"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 96.3,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 184.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 95681,
+          "cpu_percent": 7.0,
+          "name": "build"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 65.2,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 25.4,
+          "name": "claude"
+        },
+        {
+          "pid": 97883,
+          "cpu_percent": 12.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670972.2786791,
+      "load": [8.7705078125, 7.7060546875, 6.681640625],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.5,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 633,
+          "cpu_percent": 97.8,
+          "name": "test"
+        },
+        {
+          "pid": 846,
+          "cpu_percent": 76.4,
+          "name": "test"
+        },
+        {
+          "pid": 931,
+          "cpu_percent": 15.1,
+          "name": "xpcproxy_sim"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 66.2,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 185.7,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 87.4,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 17.7,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 7.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 14.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "zerolist",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 275.979833
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 360.8090410000102,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670972.3638191,
+      "load": [8.7705078125, 7.7060546875, 6.681640625],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.5,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 633,
+          "cpu_percent": 97.8,
+          "name": "test"
+        },
+        {
+          "pid": 931,
+          "cpu_percent": 43.2,
+          "name": "xpcproxy_sim"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 153.3,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 178.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 89.8,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 11.1,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 5.1,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670973.49763,
+      "load": [8.7705078125, 7.7060546875, 6.681640625],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.6,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 633,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 56.1,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 189.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 95.0,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 7.2,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "legend",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 647.038084
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 751.6743330000111,
+    "audit_frames": 3,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670973.568994,
+      "load": [8.7705078125, 7.7060546875, 6.681640625],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.9,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 633,
+          "cpu_percent": 100.0,
+          "name": "test"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 56.1,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 189.9,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 95.0,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 7.2,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670975.105558,
+      "load": [8.7705078125, 7.7060546875, 6.681640625],
+      "processes": [
+        {
+          "pid": 548,
+          "cpu_percent": 5.1,
+          "name": "com.apple.DriverKit-AppleBCMWLAN"
+        },
+        {
+          "pid": 633,
+          "cpu_percent": 99.6,
+          "name": "test"
+        },
+        {
+          "pid": 1237,
+          "cpu_percent": 75.0,
+          "name": "test"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 32.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 195.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 98.9,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 25.3,
+          "name": "claude"
+        },
+        {
+          "pid": 69245,
+          "cpu_percent": 6.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 12.0,
+    "first_valid_visible": 4.0
+  },
+  {
+    "platform": "android",
+    "engine": "flatlist",
+    "run": 3,
+    "warmup": false,
+    "milliseconds": {
+      "content_ready": 264.50225
+    },
+    "data_and_content_ms": null,
+    "command_to_log_observed_ms": 363.54291700000374,
+    "audit_frames": 2,
+    "wrong_frames": 0,
+    "overlap_frames": 0,
+    "host_before": {
+      "epoch": 1788670975.177181,
+      "load": [8.7705078125, 7.7060546875, 6.681640625],
+      "processes": [
+        {
+          "pid": 548,
+          "cpu_percent": 5.1,
+          "name": "com.apple.DriverKit-AppleBCMWLAN"
+        },
+        {
+          "pid": 633,
+          "cpu_percent": 99.6,
+          "name": "test"
+        },
+        {
+          "pid": 1237,
+          "cpu_percent": 75.0,
+          "name": "(test)"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 32.7,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 195.5,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 98.9,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 25.3,
+          "name": "claude"
+        },
+        {
+          "pid": 69245,
+          "cpu_percent": 6.3,
+          "name": "claude"
+        }
+      ]
+    },
+    "host_after": {
+      "epoch": 1788670976.346936,
+      "load": [8.7705078125, 7.7060546875, 6.681640625],
+      "processes": [
+        {
+          "pid": 397,
+          "cpu_percent": 5.2,
+          "name": "WindowServer"
+        },
+        {
+          "pid": 548,
+          "cpu_percent": 5.0,
+          "name": "com.apple.DriverKit-AppleBCMWLAN"
+        },
+        {
+          "pid": 633,
+          "cpu_percent": 98.6,
+          "name": "test"
+        },
+        {
+          "pid": 1349,
+          "cpu_percent": 93.5,
+          "name": "test"
+        },
+        {
+          "pid": 8702,
+          "cpu_percent": 61.9,
+          "name": "qemu-system-aarch64"
+        },
+        {
+          "pid": 32687,
+          "cpu_percent": 189.4,
+          "name": "PerfPowerServices"
+        },
+        {
+          "pid": 99803,
+          "cpu_percent": 98.5,
+          "name": "test"
+        },
+        {
+          "pid": 87625,
+          "cpu_percent": 10.6,
+          "name": "claude"
+        },
+        {
+          "pid": 40581,
+          "cpu_percent": 5.6,
+          "name": "claude"
+        }
+      ]
+    },
+    "first_valid_attached": 4.0,
+    "first_valid_visible": 4.0
+  }
+]

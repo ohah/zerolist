@@ -1,0 +1,34 @@
+[
+  {
+    "engine": "zigpool",
+    "run": 1,
+    "late_percent": 6.64,
+    "p95_ms": 38,
+    "host_load": [11.77099609375, 12.029296875],
+    "external_build_processes": [6, 7]
+  },
+  {
+    "engine": "zerolist",
+    "run": 2,
+    "late_percent": 5.65,
+    "p95_ms": 48,
+    "host_load": [13.86279296875, 14.056640625],
+    "external_build_processes": [10, 8]
+  },
+  {
+    "engine": "template-compact",
+    "run": 2,
+    "late_percent": 11.52,
+    "p95_ms": 53,
+    "host_load": [14.01318359375, 14.4921875],
+    "external_build_processes": [14, 11]
+  },
+  {
+    "engine": "template-worklet",
+    "run": 3,
+    "late_percent": 30.91,
+    "p95_ms": 117,
+    "host_load": [25.2158203125, 27.0400390625],
+    "external_build_processes": [34, 22]
+  }
+]
