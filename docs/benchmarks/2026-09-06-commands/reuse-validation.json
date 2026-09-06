@@ -1,0 +1,162 @@
+[
+  {
+    "file": "android-template-command-after-scroll.png",
+    "item_id": 32,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet tempor sit eiusmod",
+    "sum": "26031.3"
+  },
+  {
+    "file": "android-template-command-after-scroll.png",
+    "item_id": 33,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "amet tempor sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet tempor sit",
+    "sum": "26044.3"
+  },
+  {
+    "file": "android-template-command-after-scroll.png",
+    "item_id": 34,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "consectetur incididunt amet tempor sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet tempor",
+    "sum": "26049.9"
+  },
+  {
+    "file": "android-template-palette-after-scroll.png",
+    "item_id": 32,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet tempor sit eiusmod",
+    "sum": "26031.3"
+  },
+  {
+    "file": "android-template-palette-after-scroll.png",
+    "item_id": 33,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "amet tempor sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet tempor sit",
+    "sum": "26044.3"
+  },
+  {
+    "file": "android-template-palette-after-scroll.png",
+    "item_id": 34,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "consectetur incididunt amet tempor sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet tempor",
+    "sum": "26049.9"
+  },
+  {
+    "file": "android-template-palette-after-scroll.png",
+    "item_id": 35,
+    "checked_dots": 64,
+    "max_color_channel_difference": 1,
+    "body_prefix": "adipiscing ut consectetur incididunt amet tempor sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet",
+    "sum": "26046.9"
+  },
+  {
+    "file": "android-template-palette-command-after-scroll.png",
+    "item_id": 32,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet tempor sit eiusmod",
+    "sum": "26031.3"
+  },
+  {
+    "file": "android-template-palette-command-after-scroll.png",
+    "item_id": 33,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "amet tempor sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet tempor sit",
+    "sum": "26044.3"
+  },
+  {
+    "file": "android-template-palette-command-after-scroll.png",
+    "item_id": 34,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "consectetur incididunt amet tempor sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet tempor",
+    "sum": "26049.9"
+  },
+  {
+    "file": "android-template-palette-command-after-scroll.png",
+    "item_id": 35,
+    "checked_dots": 64,
+    "max_color_channel_difference": 1,
+    "body_prefix": "adipiscing ut consectetur incididunt amet tempor sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet",
+    "sum": "26046.9"
+  },
+  {
+    "file": "ios-template-command-after-scroll.png",
+    "item_id": 161,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "incididunt amet tempor sit eiusmod dolor do ipsum sed lorem elit labore adipiscing ut consectetur incididunt amet tempor sit eiusmod",
+    "sum": "26024.0"
+  },
+  {
+    "file": "ios-template-command-after-scroll.png",
+    "item_id": 162,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "ut consectetur incididunt",
+    "sum": "26048.6"
+  },
+  {
+    "file": "ios-template-command-after-scroll.png",
+    "item_id": 163,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "labore adipiscing ut consectetur",
+    "sum": "26045.9"
+  },
+  {
+    "file": "ios-template-palette-after-scroll.png",
+    "item_id": 163,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "labore adipiscing ut consectetur",
+    "sum": "26045.9"
+  },
+  {
+    "file": "ios-template-palette-after-scroll.png",
+    "item_id": 164,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "lorem elit labore adipiscing ut",
+    "sum": "26041.3"
+  },
+  {
+    "file": "ios-template-palette-after-scroll.png",
+    "item_id": 165,
+    "checked_dots": 64,
+    "max_color_channel_difference": 1,
+    "body_prefix": "ipsum sed lorem elit labore adipiscing",
+    "sum": "26055.6"
+  },
+  {
+    "file": "ios-template-palette-command-after-scroll.png",
+    "item_id": 149,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "lorem elit labore adipiscing ut consectetur incididunt amet",
+    "sum": "26039.8"
+  },
+  {
+    "file": "ios-template-palette-command-after-scroll.png",
+    "item_id": 150,
+    "checked_dots": 64,
+    "max_color_channel_difference": 1,
+    "body_prefix": "ipsum sed lorem elit labore adipiscing ut consectetur incididunt",
+    "sum": "26037.3"
+  },
+  {
+    "file": "ios-template-palette-command-after-scroll.png",
+    "item_id": 151,
+    "checked_dots": 64,
+    "max_color_channel_difference": 0,
+    "body_prefix": "dolor do ipsum sed lorem elit labore adipiscing ut consectetur",
+    "sum": "26051.8"
+  }
+]

@@ -1,0 +1,1485 @@
+{
+  "template-command": {
+    "frame_timeline": [
+      {
+        "jank_type": "Prediction Error",
+        "present_type": "Early Present",
+        "on_time_finish": "1",
+        "n": "3",
+        "avg_ms": "2.332875",
+        "max_ms": "3.006583"
+      },
+      {
+        "jank_type": "Prediction Error, App Deadline Missed",
+        "present_type": "Late Present",
+        "on_time_finish": "0",
+        "n": "1",
+        "avg_ms": "27.125125",
+        "max_ms": "27.125125"
+      },
+      {
+        "jank_type": "Prediction Error, App Deadline Missed, Buffer Stuffing",
+        "present_type": "Late Present",
+        "on_time_finish": "0",
+        "n": "2",
+        "avg_ms": "45.780250",
+        "max_ms": "48.565250"
+      },
+      {
+        "jank_type": "Prediction Error, Buffer Stuffing",
+        "present_type": "Late Present",
+        "on_time_finish": "1",
+        "n": "183",
+        "avg_ms": "28.150266",
+        "max_ms": "83.499791"
+      },
+      {
+        "jank_type": "SurfaceFlinger CPU Deadline Missed, App Deadline Missed",
+        "present_type": "Late Present",
+        "on_time_finish": "0",
+        "n": "2",
+        "avg_ms": "41.073562",
+        "max_ms": "58.918791"
+      },
+      {
+        "jank_type": "SurfaceFlinger CPU Deadline Missed, Buffer Stuffing",
+        "present_type": "Late Present",
+        "on_time_finish": "1",
+        "n": "2",
+        "avg_ms": "16.996063",
+        "max_ms": "29.692917"
+      },
+      {
+        "jank_type": "Unknown Jank",
+        "present_type": "Early Present",
+        "on_time_finish": "0",
+        "n": "84",
+        "avg_ms": "16.345881",
+        "max_ms": "22.131167"
+      }
+    ],
+    "thread_states": [
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "D",
+        "n": "1",
+        "total_ms": "0.150375",
+        "max_ms": "0.150375"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R",
+        "n": "500",
+        "total_ms": "62.871165",
+        "max_ms": "3.240875"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R+",
+        "n": "135",
+        "total_ms": "12.388711",
+        "max_ms": "4.025750"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "Running",
+        "n": "639",
+        "total_ms": "448.767743",
+        "max_ms": "12.502209"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "S",
+        "n": "390",
+        "total_ms": "5017.975384",
+        "max_ms": "482.870750"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "D",
+        "n": "5",
+        "total_ms": "1.984875",
+        "max_ms": "1.160417"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R",
+        "n": "1551",
+        "total_ms": "227.451440",
+        "max_ms": "21.228500"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R+",
+        "n": "397",
+        "total_ms": "17.733971",
+        "max_ms": "4.174583"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "Running",
+        "n": "1948",
+        "total_ms": "377.201420",
+        "max_ms": "3.249875"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "S",
+        "n": "1106",
+        "total_ms": "14182.178509",
+        "max_ms": "40.055083"
+      }
+    ],
+    "view_slices": [
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61125035",
+        "n": "1",
+        "avg_ms": "76.484375",
+        "max_ms": "76.484375"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "Drawing  0.00  0.00 1080.00 2400.00",
+        "n": "278",
+        "avg_ms": "11.914268",
+        "max_ms": "69.628834"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61125056",
+        "n": "1",
+        "avg_ms": "48.396542",
+        "max_ms": "48.396542"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame - resynced to 61125058 in 26.2ms",
+        "n": "1",
+        "avg_ms": "48.370083",
+        "max_ms": "48.370083"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "traversal",
+        "n": "280",
+        "avg_ms": "6.821897",
+        "max_ms": "40.185042"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "draw-VRI[SoloActivity]",
+        "n": "280",
+        "avg_ms": "6.758630",
+        "max_ms": "40.135166"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "postAndWait",
+        "n": "278",
+        "avg_ms": "6.652241",
+        "max_ms": "40.101750"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61127062",
+        "n": "1",
+        "avg_ms": "36.226084",
+        "max_ms": "36.226084"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61125035",
+        "n": "1",
+        "avg_ms": "32.181917",
+        "max_ms": "32.181917"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61125226",
+        "n": "1",
+        "avg_ms": "25.831084",
+        "max_ms": "25.831084"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61125014",
+        "n": "1",
+        "avg_ms": "25.676375",
+        "max_ms": "25.676375"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61124949",
+        "n": "1",
+        "avg_ms": "25.545167",
+        "max_ms": "25.545167"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61125204",
+        "n": "1",
+        "avg_ms": "25.459042",
+        "max_ms": "25.459042"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61126952",
+        "n": "1",
+        "avg_ms": "21.449167",
+        "max_ms": "21.449167"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61125461",
+        "n": "1",
+        "avg_ms": "21.154292",
+        "max_ms": "21.154292"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61126416",
+        "n": "1",
+        "avg_ms": "20.432709",
+        "max_ms": "20.432709"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61127268",
+        "n": "1",
+        "avg_ms": "19.852541",
+        "max_ms": "19.852541"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61127290",
+        "n": "1",
+        "avg_ms": "19.828750",
+        "max_ms": "19.828750"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61126115",
+        "n": "1",
+        "avg_ms": "19.447958",
+        "max_ms": "19.447958"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61125733",
+        "n": "1",
+        "avg_ms": "19.196167",
+        "max_ms": "19.196167"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61126519",
+        "n": "1",
+        "avg_ms": "19.048791",
+        "max_ms": "19.048791"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61126306",
+        "n": "1",
+        "avg_ms": "18.985125",
+        "max_ms": "18.985125"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61127018",
+        "n": "1",
+        "avg_ms": "18.822542",
+        "max_ms": "18.822542"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61126541",
+        "n": "1",
+        "avg_ms": "18.795667",
+        "max_ms": "18.795667"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61125101",
+        "n": "1",
+        "avg_ms": "18.460792",
+        "max_ms": "18.460792"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61125351",
+        "n": "1",
+        "avg_ms": "18.195084",
+        "max_ms": "18.195084"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61125116",
+        "n": "1",
+        "avg_ms": "17.937291",
+        "max_ms": "17.937291"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61128587",
+        "n": "1",
+        "avg_ms": "17.819584",
+        "max_ms": "17.819584"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61126651",
+        "n": "1",
+        "avg_ms": "17.774125",
+        "max_ms": "17.774125"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61125843",
+        "n": "1",
+        "avg_ms": "17.768458",
+        "max_ms": "17.768458"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61128572",
+        "n": "1",
+        "avg_ms": "17.765709",
+        "max_ms": "17.765709"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61127980",
+        "n": "1",
+        "avg_ms": "17.741833",
+        "max_ms": "17.741833"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61127958",
+        "n": "1",
+        "avg_ms": "17.738667",
+        "max_ms": "17.738667"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61127848",
+        "n": "1",
+        "avg_ms": "17.669750",
+        "max_ms": "17.669750"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61126930",
+        "n": "1",
+        "avg_ms": "17.644667",
+        "max_ms": "17.644667"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61127870",
+        "n": "1",
+        "avg_ms": "17.636167",
+        "max_ms": "17.636167"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61126798",
+        "n": "1",
+        "avg_ms": "17.487833",
+        "max_ms": "17.487833"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "flush commands",
+        "n": "278",
+        "avg_ms": "0.749164",
+        "max_ms": "17.484541"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61125630",
+        "n": "1",
+        "avg_ms": "17.473625",
+        "max_ms": "17.473625"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61125204",
+        "n": "1",
+        "avg_ms": "17.473208",
+        "max_ms": "17.473208"
+      }
+    ],
+    "late_frame_main_states": [
+      {
+        "jank_type": "Prediction Error, App Deadline Missed",
+        "state": "R",
+        "overlaps": "3",
+        "overlapping_ms": "1.417457"
+      },
+      {
+        "jank_type": "Prediction Error, App Deadline Missed",
+        "state": "R+",
+        "overlaps": "2",
+        "overlapping_ms": "0.089209"
+      },
+      {
+        "jank_type": "Prediction Error, App Deadline Missed",
+        "state": "Running",
+        "overlaps": "6",
+        "overlapping_ms": "2.415543"
+      },
+      {
+        "jank_type": "Prediction Error, App Deadline Missed",
+        "state": "S",
+        "overlaps": "4",
+        "overlapping_ms": "23.202916"
+      },
+      {
+        "jank_type": "Prediction Error, App Deadline Missed, Buffer Stuffing",
+        "state": "R",
+        "overlaps": "9",
+        "overlapping_ms": "4.174667"
+      },
+      {
+        "jank_type": "Prediction Error, App Deadline Missed, Buffer Stuffing",
+        "state": "R+",
+        "overlaps": "5",
+        "overlapping_ms": "0.427293"
+      },
+      {
+        "jank_type": "Prediction Error, App Deadline Missed, Buffer Stuffing",
+        "state": "Running",
+        "overlaps": "15",
+        "overlapping_ms": "4.544625"
+      },
+      {
+        "jank_type": "Prediction Error, App Deadline Missed, Buffer Stuffing",
+        "state": "S",
+        "overlaps": "8",
+        "overlapping_ms": "82.413915"
+      },
+      {
+        "jank_type": "SurfaceFlinger CPU Deadline Missed, App Deadline Missed",
+        "state": "R",
+        "overlaps": "5",
+        "overlapping_ms": "27.914959"
+      },
+      {
+        "jank_type": "SurfaceFlinger CPU Deadline Missed, App Deadline Missed",
+        "state": "R+",
+        "overlaps": "1",
+        "overlapping_ms": "2.209500"
+      },
+      {
+        "jank_type": "SurfaceFlinger CPU Deadline Missed, App Deadline Missed",
+        "state": "Running",
+        "overlaps": "8",
+        "overlapping_ms": "6.113666"
+      },
+      {
+        "jank_type": "SurfaceFlinger CPU Deadline Missed, App Deadline Missed",
+        "state": "S",
+        "overlaps": "5",
+        "overlapping_ms": "45.908999"
+      }
+    ],
+    "slow_slice_states": [
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61125035",
+        "ts": "111501025978584",
+        "wall_ms": "76.484375",
+        "running_ms": "27.944000",
+        "runnable_ms": "3.525792",
+        "sleeping_ms": "45.014583"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "Drawing  0.00  0.00 1080.00 2400.00",
+        "ts": "111501032832792",
+        "wall_ms": "69.628834",
+        "running_ms": "24.329334",
+        "runnable_ms": "0.284917",
+        "sleeping_ms": "45.014583"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61125056",
+        "ts": "111501054190709",
+        "wall_ms": "48.396542",
+        "running_ms": "4.043001",
+        "runnable_ms": "4.298458",
+        "sleeping_ms": "40.055083"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame - resynced to 61125058 in 26.2ms",
+        "ts": "111501054216876",
+        "wall_ms": "48.370083",
+        "running_ms": "4.016542",
+        "runnable_ms": "4.298458",
+        "sleeping_ms": "40.055083"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "traversal",
+        "ts": "111501062396917",
+        "wall_ms": "40.185042",
+        "running_ms": "0.094417",
+        "runnable_ms": "0.035542",
+        "sleeping_ms": "40.055083"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "draw-VRI[SoloActivity]",
+        "ts": "111501062437376",
+        "wall_ms": "40.135166",
+        "running_ms": "0.044541",
+        "runnable_ms": "0.035542",
+        "sleeping_ms": "40.055083"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "postAndWait",
+        "ts": "111501062466334",
+        "wall_ms": "40.101750",
+        "running_ms": "0.011125",
+        "runnable_ms": "0.035542",
+        "sleeping_ms": "40.055083"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61127062",
+        "ts": "111502653509626",
+        "wall_ms": "36.226084",
+        "running_ms": "1.543500",
+        "runnable_ms": "0.170126",
+        "sleeping_ms": "34.512458"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "Drawing  0.00  0.00 1080.00 2400.00",
+        "ts": "111502653626293",
+        "wall_ms": "36.108292",
+        "running_ms": "1.425708",
+        "runnable_ms": "0.170126",
+        "sleeping_ms": "34.512458"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61125035",
+        "ts": "111501021886334",
+        "wall_ms": "32.181917",
+        "running_ms": "1.736667",
+        "runnable_ms": "23.460875",
+        "sleeping_ms": "6.984375"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "traversal",
+        "ts": "111501025351292",
+        "wall_ms": "28.710959",
+        "running_ms": "0.475209",
+        "runnable_ms": "21.251375",
+        "sleeping_ms": "6.984375"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "draw-VRI[SoloActivity]",
+        "ts": "111501025412376",
+        "wall_ms": "28.640666",
+        "running_ms": "0.404916",
+        "runnable_ms": "21.251375",
+        "sleeping_ms": "6.984375"
+      }
+    ],
+    "trace_errors": []
+  },
+  "template-palette-command": {
+    "frame_timeline": [
+      {
+        "jank_type": "Prediction Error",
+        "present_type": "Early Present",
+        "on_time_finish": "1",
+        "n": "21",
+        "avg_ms": "2.961361",
+        "max_ms": "7.890625"
+      },
+      {
+        "jank_type": "Unknown Jank",
+        "present_type": "Early Present",
+        "on_time_finish": "0",
+        "n": "253",
+        "avg_ms": "16.510245",
+        "max_ms": "22.610750"
+      }
+    ],
+    "thread_states": [
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R",
+        "n": "695",
+        "total_ms": "92.760616",
+        "max_ms": "7.209208"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R+",
+        "n": "184",
+        "total_ms": "13.578160",
+        "max_ms": "0.819042"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "Running",
+        "n": "894",
+        "total_ms": "416.310428",
+        "max_ms": "7.021583"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "S",
+        "n": "561",
+        "total_ms": "4993.124007",
+        "max_ms": "896.395126"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R",
+        "n": "1702",
+        "total_ms": "195.224521",
+        "max_ms": "3.141084"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R+",
+        "n": "327",
+        "total_ms": "13.838153",
+        "max_ms": "1.980791"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "Running",
+        "n": "2029",
+        "total_ms": "397.252463",
+        "max_ms": "2.395167"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "S",
+        "n": "1223",
+        "total_ms": "14210.729579",
+        "max_ms": "25.955583"
+      }
+    ],
+    "view_slices": [
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61100190",
+        "n": "1",
+        "avg_ms": "7.835792",
+        "max_ms": "7.835792"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "traversal",
+        "n": "274",
+        "avg_ms": "0.711338",
+        "max_ms": "7.276125"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "draw-VRI[SoloActivity]",
+        "n": "274",
+        "avg_ms": "0.648453",
+        "max_ms": "7.232917"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61100212",
+        "n": "1",
+        "avg_ms": "7.205416",
+        "max_ms": "7.205416"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "postAndWait",
+        "n": "274",
+        "avg_ms": "0.519308",
+        "max_ms": "7.203708"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "Drawing  0.00  0.00 1080.00 2400.00",
+        "n": "274",
+        "avg_ms": "1.523629",
+        "max_ms": "7.143000"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61100124",
+        "n": "1",
+        "avg_ms": "6.702875",
+        "max_ms": "6.702875"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61100234",
+        "n": "1",
+        "avg_ms": "5.804125",
+        "max_ms": "5.804125"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61103640",
+        "n": "1",
+        "avg_ms": "4.280375",
+        "max_ms": "4.280375"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61102700",
+        "n": "1",
+        "avg_ms": "3.772625",
+        "max_ms": "3.772625"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61101812",
+        "n": "1",
+        "avg_ms": "3.768375",
+        "max_ms": "3.768375"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61103699",
+        "n": "1",
+        "avg_ms": "3.496417",
+        "max_ms": "3.496417"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61103963",
+        "n": "1",
+        "avg_ms": "3.486458",
+        "max_ms": "3.486458"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61103787",
+        "n": "1",
+        "avg_ms": "3.243541",
+        "max_ms": "3.243541"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "input",
+        "n": "217",
+        "avg_ms": "0.666454",
+        "max_ms": "3.101958"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61104227",
+        "n": "1",
+        "avg_ms": "3.099583",
+        "max_ms": "3.099583"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "VRI[SoloActivity]",
+        "n": "217",
+        "avg_ms": "0.658041",
+        "max_ms": "3.098625"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61100476",
+        "n": "1",
+        "avg_ms": "3.072541",
+        "max_ms": "3.072541"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61103618",
+        "n": "1",
+        "avg_ms": "3.026458",
+        "max_ms": "3.026458"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61101878",
+        "n": "1",
+        "avg_ms": "3.002750",
+        "max_ms": "3.002750"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61104227",
+        "n": "1",
+        "avg_ms": "2.998791",
+        "max_ms": "2.998791"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61104469",
+        "n": "1",
+        "avg_ms": "2.958583",
+        "max_ms": "2.958583"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61103699",
+        "n": "1",
+        "avg_ms": "2.948333",
+        "max_ms": "2.948333"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61103684",
+        "n": "1",
+        "avg_ms": "2.936625",
+        "max_ms": "2.936625"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61104315",
+        "n": "1",
+        "avg_ms": "2.891625",
+        "max_ms": "2.891625"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61103640",
+        "n": "1",
+        "avg_ms": "2.846917",
+        "max_ms": "2.846917"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61103662",
+        "n": "1",
+        "avg_ms": "2.788208",
+        "max_ms": "2.788208"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61104682",
+        "n": "1",
+        "avg_ms": "2.772084",
+        "max_ms": "2.772084"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61101900",
+        "n": "1",
+        "avg_ms": "2.753333",
+        "max_ms": "2.753333"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61103809",
+        "n": "1",
+        "avg_ms": "2.713709",
+        "max_ms": "2.713709"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61104381",
+        "n": "1",
+        "avg_ms": "2.686125",
+        "max_ms": "2.686125"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "flush commands",
+        "n": "274",
+        "avg_ms": "0.704513",
+        "max_ms": "2.621542"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61104271",
+        "n": "1",
+        "avg_ms": "2.606292",
+        "max_ms": "2.606292"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61104205",
+        "n": "1",
+        "avg_ms": "2.545625",
+        "max_ms": "2.545625"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61103787",
+        "n": "1",
+        "avg_ms": "2.540583",
+        "max_ms": "2.540583"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61104968",
+        "n": "1",
+        "avg_ms": "2.538417",
+        "max_ms": "2.538417"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61101555",
+        "n": "1",
+        "avg_ms": "2.530250",
+        "max_ms": "2.530250"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61101144",
+        "n": "1",
+        "avg_ms": "2.519125",
+        "max_ms": "2.519125"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61104007",
+        "n": "1",
+        "avg_ms": "2.513792",
+        "max_ms": "2.513792"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61100909",
+        "n": "1",
+        "avg_ms": "2.497250",
+        "max_ms": "2.497250"
+      }
+    ],
+    "late_frame_main_states": [],
+    "slow_slice_states": [],
+    "trace_errors": []
+  },
+  "template-palette": {
+    "frame_timeline": [
+      {
+        "jank_type": "Prediction Error",
+        "present_type": "Early Present",
+        "on_time_finish": "1",
+        "n": "25",
+        "avg_ms": "2.391362",
+        "max_ms": "5.979708"
+      },
+      {
+        "jank_type": "Unknown Jank",
+        "present_type": "Early Present",
+        "on_time_finish": "0",
+        "n": "249",
+        "avg_ms": "16.498119",
+        "max_ms": "23.576500"
+      }
+    ],
+    "thread_states": [
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R",
+        "n": "702",
+        "total_ms": "83.415634",
+        "max_ms": "1.528458"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R+",
+        "n": "212",
+        "total_ms": "12.421581",
+        "max_ms": "0.510959"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "Running",
+        "n": "928",
+        "total_ms": "418.194334",
+        "max_ms": "7.972875"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "S",
+        "n": "568",
+        "total_ms": "5100.989203",
+        "max_ms": "646.808292"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R",
+        "n": "1719",
+        "total_ms": "185.994098",
+        "max_ms": "2.437875"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R+",
+        "n": "387",
+        "total_ms": "15.440089",
+        "max_ms": "1.096458"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "Running",
+        "n": "2106",
+        "total_ms": "395.112770",
+        "max_ms": "2.107458"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "S",
+        "n": "1212",
+        "total_ms": "14192.427217",
+        "max_ms": "23.596916"
+      }
+    ],
+    "view_slices": [
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61077236",
+        "n": "1",
+        "avg_ms": "8.695417",
+        "max_ms": "8.695417"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61077258",
+        "n": "1",
+        "avg_ms": "8.556625",
+        "max_ms": "8.556625"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "Drawing  0.00  0.00 1080.00 2400.00",
+        "n": "274",
+        "avg_ms": "1.554398",
+        "max_ms": "8.495917"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61077280",
+        "n": "1",
+        "avg_ms": "8.482500",
+        "max_ms": "8.482500"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61077170",
+        "n": "1",
+        "avg_ms": "5.530000",
+        "max_ms": "5.530000"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61079431",
+        "n": "1",
+        "avg_ms": "4.764375",
+        "max_ms": "4.764375"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "input",
+        "n": "215",
+        "avg_ms": "0.646549",
+        "max_ms": "4.153417"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "VRI[SoloActivity]",
+        "n": "215",
+        "avg_ms": "0.641409",
+        "max_ms": "4.149541"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "deliverInputEvent src=0x1002 eventTimeNano=111454656000000 id=0xe7a25ffa",
+        "n": "1",
+        "avg_ms": "4.064416",
+        "max_ms": "4.064416"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "ViewPostImeInputStage id=0xe7a25ffa",
+        "n": "1",
+        "avg_ms": "4.016583",
+        "max_ms": "4.016583"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "View#onTouchEvent",
+        "n": "228",
+        "avg_ms": "0.199207",
+        "max_ms": "3.722958"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61078814",
+        "n": "1",
+        "avg_ms": "3.471209",
+        "max_ms": "3.471209"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61080826",
+        "n": "1",
+        "avg_ms": "3.409292",
+        "max_ms": "3.409292"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61079886",
+        "n": "1",
+        "avg_ms": "2.929083",
+        "max_ms": "2.929083"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61080187",
+        "n": "1",
+        "avg_ms": "2.903917",
+        "max_ms": "2.903917"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61078388",
+        "n": "1",
+        "avg_ms": "2.863458",
+        "max_ms": "2.863458"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61080914",
+        "n": "1",
+        "avg_ms": "2.834500",
+        "max_ms": "2.834500"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "MountItemDispatcher::mountViews mountItems to execute",
+        "n": "56",
+        "avg_ms": "0.278321",
+        "max_ms": "2.811708"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61080400",
+        "n": "1",
+        "avg_ms": "2.774417",
+        "max_ms": "2.774417"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61078880",
+        "n": "1",
+        "avg_ms": "2.713917",
+        "max_ms": "2.713917"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61078858",
+        "n": "1",
+        "avg_ms": "2.664833",
+        "max_ms": "2.664833"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61082569",
+        "n": "1",
+        "avg_ms": "2.647125",
+        "max_ms": "2.647125"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61082614",
+        "n": "1",
+        "avg_ms": "2.644458",
+        "max_ms": "2.644458"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61080613",
+        "n": "1",
+        "avg_ms": "2.631292",
+        "max_ms": "2.631292"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61078645",
+        "n": "1",
+        "avg_ms": "2.630959",
+        "max_ms": "2.630959"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61081354",
+        "n": "1",
+        "avg_ms": "2.622875",
+        "max_ms": "2.622875"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61082164",
+        "n": "1",
+        "avg_ms": "2.606208",
+        "max_ms": "2.606208"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61078711",
+        "n": "1",
+        "avg_ms": "2.588750",
+        "max_ms": "2.588750"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61080253",
+        "n": "1",
+        "avg_ms": "2.587000",
+        "max_ms": "2.587000"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61077192",
+        "n": "1",
+        "avg_ms": "2.571959",
+        "max_ms": "2.571959"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61078990",
+        "n": "1",
+        "avg_ms": "2.547000",
+        "max_ms": "2.547000"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61082599",
+        "n": "1",
+        "avg_ms": "2.521584",
+        "max_ms": "2.521584"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61080466",
+        "n": "1",
+        "avg_ms": "2.484708",
+        "max_ms": "2.484708"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61082554",
+        "n": "1",
+        "avg_ms": "2.436458",
+        "max_ms": "2.436458"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61081442",
+        "n": "1",
+        "avg_ms": "2.431875",
+        "max_ms": "2.431875"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61077324",
+        "n": "1",
+        "avg_ms": "2.427000",
+        "max_ms": "2.427000"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 61081721",
+        "n": "1",
+        "avg_ms": "2.417000",
+        "max_ms": "2.417000"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61080128",
+        "n": "1",
+        "avg_ms": "2.394125",
+        "max_ms": "2.394125"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61081266",
+        "n": "1",
+        "avg_ms": "2.382167",
+        "max_ms": "2.382167"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 61082629",
+        "n": "1",
+        "avg_ms": "2.376875",
+        "max_ms": "2.376875"
+      }
+    ],
+    "late_frame_main_states": [],
+    "slow_slice_states": [],
+    "trace_errors": []
+  }
+}

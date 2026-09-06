@@ -1,0 +1,30 @@
+[
+  {
+    "path": "apps/example/node_modules/react-native-reanimated/Common/cpp/reanimated/NativeModules/ReanimatedModuleProxy.cpp",
+    "sha256": "114209f353667f30ee2f135ba6549431f4694cadc0cf5c7f7ef780b9f20d9952"
+  },
+  {
+    "path": "node_modules/react-native/ReactAndroid/src/main/jni/react/fabric/FabricUIManagerBinding.cpp",
+    "sha256": "e53126373be416e8d228df4aaac1c3455cf834a1e6187d2b95fdfbae7a60b9e8"
+  },
+  {
+    "path": "node_modules/react-native/ReactAndroid/src/main/jni/react/fabric/FabricMountingManager.cpp",
+    "sha256": "263fc8bb42b0d767c9a4cc32982a0331615f1dfe63c3fec5b1859d8656aeba4f"
+  },
+  {
+    "path": "node_modules/react-native/ReactAndroid/src/main/java/com/facebook/react/fabric/FabricUIManager.java",
+    "sha256": "c82c4ba0f4ff7fed1998aae013941632f923854da5bd378197129acc1732a46e"
+  },
+  {
+    "path": "node_modules/react-native/ReactAndroid/src/main/java/com/facebook/react/fabric/mounting/MountItemDispatcher.kt",
+    "sha256": "c9fd4bfd5b1a4e417f6ceda4f5107d057c2f056c7f00d3851f2a9e966c670966"
+  },
+  {
+    "path": "node_modules/react-native/React/Fabric/RCTSurfacePresenter.mm",
+    "sha256": "084d9411e657a74a369cd74c6e983ebfd1efb6f41642b94dad49cf5c6ce708b1"
+  },
+  {
+    "path": "node_modules/react-native/React/Fabric/Mounting/RCTMountingManager.mm",
+    "sha256": "4f1ad241fe512bddf4226b1d8c7838c09dcc374b8c52ac32328454f4686c23e5"
+  }
+]

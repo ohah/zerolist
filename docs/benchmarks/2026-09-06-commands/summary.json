@@ -1,0 +1,1250 @@
+[
+  {
+    "platform": "ios",
+    "engine": "template-palette",
+    "label": "기존 장식 통합",
+    "startup_ms": {
+      "n": 5,
+      "mean": 320.0218,
+      "median": 322.652,
+      "min": 300.768,
+      "max": 339.775
+    },
+    "data_ready_ms": {
+      "n": 5,
+      "mean": 452.4,
+      "median": 454.0,
+      "min": 409.0,
+      "max": 477.0
+    },
+    "perf0": {
+      "memory": {
+        "n": 5,
+        "mean": 433.846875,
+        "median": 433.84375,
+        "min": 430.78125,
+        "max": 436.328125
+      },
+      "cpu": {
+        "n": 5,
+        "mean": 15.237764062181025,
+        "median": 15.242351694007628,
+        "min": 14.693370804224939,
+        "max": 15.669963346082453
+      },
+      "late": {
+        "n": 5,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "p95": {
+        "n": 5,
+        "mean": 16.666667070239782,
+        "median": 16.666667070239782,
+        "min": 16.666667070239782,
+        "max": 16.666667070239782
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [15.42431640625, 14.58984375],
+          "external_build_processes": [2, 2]
+        },
+        {
+          "run": 2,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [13.42236328125, 12.7900390625],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 3,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [9.55224609375, 9.427734375],
+          "external_build_processes": [0, 0]
+        },
+        {
+          "run": 4,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [11.4326171875, 11.04541015625],
+          "external_build_processes": [2, 2]
+        },
+        {
+          "run": 5,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [7.8017578125, 7.06298828125],
+          "external_build_processes": [0, 0]
+        }
+      ]
+    },
+    "perf160": {
+      "memory": {
+        "n": 10,
+        "mean": 436.0953125,
+        "median": 436.2265625,
+        "min": 432.140625,
+        "max": 438.5625
+      },
+      "cpu": {
+        "n": 10,
+        "mean": 85.19808973137798,
+        "median": 85.25170709344951,
+        "min": 84.57860912772011,
+        "max": 85.7199199001603
+      },
+      "late": {
+        "n": 10,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "p95": {
+        "n": 10,
+        "mean": 16.666667070239782,
+        "median": 16.666667070239782,
+        "min": 16.666667070239782,
+        "max": 16.666667070239782
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [9.0302734375, 9.6337890625],
+          "external_build_processes": [2, 1]
+        },
+        {
+          "run": 2,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [9.2412109375, 8.5888671875],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 3,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [8.17529296875, 8.44287109375],
+          "external_build_processes": [3, 1]
+        },
+        {
+          "run": 4,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [10.12109375, 10.4833984375],
+          "external_build_processes": [2, 2]
+        },
+        {
+          "run": 5,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [9.7216796875, 9.302734375],
+          "external_build_processes": [3, 2]
+        },
+        {
+          "run": 6,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [9.1552734375, 8.970703125],
+          "external_build_processes": [2, 3]
+        },
+        {
+          "run": 7,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [10.95703125, 10.73583984375],
+          "external_build_processes": [4, 5]
+        },
+        {
+          "run": 8,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [11.52490234375, 11.37646484375],
+          "external_build_processes": [2, 3]
+        },
+        {
+          "run": 9,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [9.888671875, 10.8212890625],
+          "external_build_processes": [14, 5]
+        },
+        {
+          "run": 10,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [12.58154296875, 14.6982421875],
+          "external_build_processes": [17, 9]
+        }
+      ]
+    },
+    "audit": {
+      "blank": {
+        "n": 3,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "zero_blank_runs": 3,
+      "wrong_frames": 0,
+      "overlap_frames": 0,
+      "frames": 1604,
+      "travel_rows": {
+        "n": 3,
+        "mean": 136.2103532763539,
+        "median": 128.78775213675263,
+        "min": 127.16239743589801,
+        "max": 152.68091025641107
+      }
+    }
+  },
+  {
+    "platform": "ios",
+    "engine": "template-palette-command",
+    "label": "장식만 명령",
+    "startup_ms": {
+      "n": 5,
+      "mean": 307.0956,
+      "median": 309.092,
+      "min": 281.134,
+      "max": 326.98
+    },
+    "data_ready_ms": {
+      "n": 5,
+      "mean": 458.6,
+      "median": 465.0,
+      "min": 433.0,
+      "max": 473.0
+    },
+    "perf0": {
+      "memory": {
+        "n": 5,
+        "mean": 437.425,
+        "median": 437.5625,
+        "min": 436.21875,
+        "max": 438.09375
+      },
+      "cpu": {
+        "n": 5,
+        "mean": 15.265018456017602,
+        "median": 15.431981768369663,
+        "min": 14.736963255110858,
+        "max": 15.555910036772106
+      },
+      "late": {
+        "n": 5,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "p95": {
+        "n": 5,
+        "mean": 16.666667070239782,
+        "median": 16.666667070239782,
+        "min": 16.666667070239782,
+        "max": 16.666667070239782
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [18.0458984375, 17.5615234375],
+          "external_build_processes": [2, 3]
+        },
+        {
+          "run": 2,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [11.11328125, 10.47412109375],
+          "external_build_processes": [0, 0]
+        },
+        {
+          "run": 3,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [12.896484375, 12.22314453125],
+          "external_build_processes": [2, 1]
+        },
+        {
+          "run": 4,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [10.294921875, 9.24658203125],
+          "external_build_processes": [0, 0]
+        },
+        {
+          "run": 5,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [8.36572265625, 8.25634765625],
+          "external_build_processes": [0, 0]
+        }
+      ]
+    },
+    "perf160": {
+      "memory": {
+        "n": 10,
+        "mean": 435.9296875,
+        "median": 436.375,
+        "min": 432.203125,
+        "max": 438.296875
+      },
+      "cpu": {
+        "n": 10,
+        "mean": 85.20244184025563,
+        "median": 85.26458332633331,
+        "min": 84.5830488689538,
+        "max": 85.89339977951589
+      },
+      "late": {
+        "n": 10,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "p95": {
+        "n": 10,
+        "mean": 16.666667070239782,
+        "median": 16.666667070239782,
+        "min": 16.666667070239782,
+        "max": 16.666667070239782
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [7.5380859375, 7.45458984375],
+          "external_build_processes": [0, 1]
+        },
+        {
+          "run": 2,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [7.8134765625, 8.19091796875],
+          "external_build_processes": [1, 2]
+        },
+        {
+          "run": 3,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [8.8359375, 10.21875],
+          "external_build_processes": [2, 1]
+        },
+        {
+          "run": 4,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [9.00927734375, 8.84814453125],
+          "external_build_processes": [2, 1]
+        },
+        {
+          "run": 5,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [9.9599609375, 9.8857421875],
+          "external_build_processes": [2, 2]
+        },
+        {
+          "run": 6,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [8.892578125, 8.92138671875],
+          "external_build_processes": [3, 4]
+        },
+        {
+          "run": 7,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [13.50830078125, 13.11572265625],
+          "external_build_processes": [5, 3]
+        },
+        {
+          "run": 8,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [11.4462890625, 11.06982421875],
+          "external_build_processes": [2, 4]
+        },
+        {
+          "run": 9,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [10.607421875, 9.978515625],
+          "external_build_processes": [3, 2]
+        },
+        {
+          "run": 10,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [14.583984375, 14.43310546875],
+          "external_build_processes": [7, 4]
+        }
+      ]
+    },
+    "audit": {
+      "blank": {
+        "n": 3,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "zero_blank_runs": 3,
+      "wrong_frames": 0,
+      "overlap_frames": 0,
+      "frames": 1554,
+      "travel_rows": {
+        "n": 3,
+        "mean": 129.6951552706558,
+        "median": 129.79059829059887,
+        "min": 129.04985470085518,
+        "max": 130.24501282051332
+      }
+    }
+  },
+  {
+    "platform": "ios",
+    "engine": "template-command",
+    "label": "글자·장식 명령",
+    "startup_ms": {
+      "n": 5,
+      "mean": 326.236,
+      "median": 324.514,
+      "min": 309.552,
+      "max": 339.336
+    },
+    "data_ready_ms": {
+      "n": 5,
+      "mean": 461.8,
+      "median": 462.0,
+      "min": 447.0,
+      "max": 471.0
+    },
+    "perf0": {
+      "memory": {
+        "n": 5,
+        "mean": 432.628125,
+        "median": 433.109375,
+        "min": 430.609375,
+        "max": 433.859375
+      },
+      "cpu": {
+        "n": 5,
+        "mean": 14.993608047745703,
+        "median": 14.933196704661489,
+        "min": 14.331475955769916,
+        "max": 15.588355385723881
+      },
+      "late": {
+        "n": 5,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "p95": {
+        "n": 5,
+        "mean": 16.666667070239782,
+        "median": 16.666667070239782,
+        "min": 16.666667070239782,
+        "max": 16.666667070239782
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [15.01318359375, 16.07080078125],
+          "external_build_processes": [3, 2]
+        },
+        {
+          "run": 2,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [12.24609375, 11.5927734375],
+          "external_build_processes": [1, 0]
+        },
+        {
+          "run": 3,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [12.1962890625, 13.4306640625],
+          "external_build_processes": [15, 3]
+        },
+        {
+          "run": 4,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [11.12158203125, 11.169921875],
+          "external_build_processes": [2, 3]
+        },
+        {
+          "run": 5,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [8.3505859375, 8.04296875],
+          "external_build_processes": [0, 0]
+        }
+      ]
+    },
+    "perf160": {
+      "memory": {
+        "n": 10,
+        "mean": 432.034375,
+        "median": 432.09375,
+        "min": 430.40625,
+        "max": 433.90625
+      },
+      "cpu": {
+        "n": 10,
+        "mean": 84.90383645950617,
+        "median": 84.9826218207524,
+        "min": 84.34243222666362,
+        "max": 85.41684625046011
+      },
+      "late": {
+        "n": 10,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "p95": {
+        "n": 10,
+        "mean": 16.666667070239782,
+        "median": 16.666667070239782,
+        "min": 16.666667070239782,
+        "max": 16.666667070239782
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [8.4794921875, 9.033203125],
+          "external_build_processes": [1, 2]
+        },
+        {
+          "run": 2,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [8.62158203125, 8.15087890625],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 3,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [8.66259765625, 8.640625],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 4,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [10.02099609375, 9.4697265625],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 5,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [9.5087890625, 9.4365234375],
+          "external_build_processes": [2, 2]
+        },
+        {
+          "run": 6,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [9.65625, 9.55517578125],
+          "external_build_processes": [4, 2]
+        },
+        {
+          "run": 7,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [10.00244140625, 10.763671875],
+          "external_build_processes": [4, 5]
+        },
+        {
+          "run": 8,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [12.1015625, 11.39697265625],
+          "external_build_processes": [3, 3]
+        },
+        {
+          "run": 9,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [10.67724609375, 10.3994140625],
+          "external_build_processes": [3, 2]
+        },
+        {
+          "run": 10,
+          "value": 0.0,
+          "p95_ms": 16.666667070239782,
+          "host_load": [10.37451171875, 11.587890625],
+          "external_build_processes": [3, 7]
+        }
+      ]
+    },
+    "audit": {
+      "blank": {
+        "n": 3,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "zero_blank_runs": 3,
+      "wrong_frames": 0,
+      "overlap_frames": 0,
+      "frames": 1542,
+      "travel_rows": {
+        "n": 3,
+        "mean": 131.52849287749345,
+        "median": 132.3675256410262,
+        "min": 125.93875213675274,
+        "max": 136.27920085470143
+      }
+    }
+  },
+  {
+    "platform": "android",
+    "engine": "template-palette",
+    "label": "기존 장식 통합",
+    "startup_ms": {
+      "n": 5,
+      "mean": 310.6033918,
+      "median": 296.523875,
+      "min": 277.287875,
+      "max": 402.660167
+    },
+    "data_ready_ms": {
+      "n": 5,
+      "mean": 483.4,
+      "median": 467.0,
+      "min": 449.0,
+      "max": 579.0
+    },
+    "perf0": {
+      "memory": {
+        "n": 5,
+        "mean": 201.751953125,
+        "median": 201.8095703125,
+        "min": 201.57421875,
+        "max": 201.8642578125
+      },
+      "cpu": {
+        "n": 5,
+        "mean": 12.082504775714705,
+        "median": 12.520059517159195,
+        "min": 10.289884067614882,
+        "max": 12.681119408907692
+      },
+      "late": {
+        "n": 5,
+        "mean": 1.592,
+        "median": 1.46,
+        "min": 0.73,
+        "max": 2.97
+      },
+      "p95": {
+        "n": 5,
+        "mean": 21.2,
+        "median": 21,
+        "min": 19,
+        "max": 25
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 1.09,
+          "p95_ms": 20,
+          "host_load": [10.1298828125, 10.0390625],
+          "external_build_processes": [1, 2]
+        },
+        {
+          "run": 2,
+          "value": 1.46,
+          "p95_ms": 21,
+          "host_load": [10.6669921875, 10.453125],
+          "external_build_processes": [4, 1]
+        },
+        {
+          "run": 3,
+          "value": 2.97,
+          "p95_ms": 21,
+          "host_load": [9.142578125, 8.810546875],
+          "external_build_processes": [1, 8]
+        },
+        {
+          "run": 4,
+          "value": 0.73,
+          "p95_ms": 19,
+          "host_load": [12.25, 11.98974609375],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 5,
+          "value": 1.71,
+          "p95_ms": 25,
+          "host_load": [10.63134765625, 10.42041015625],
+          "external_build_processes": [2, 2]
+        }
+      ]
+    },
+    "perf160": {
+      "memory": {
+        "n": 10,
+        "mean": 202.748828125,
+        "median": 202.79541015625,
+        "min": 202.1025390625,
+        "max": 203.2802734375
+      },
+      "cpu": {
+        "n": 10,
+        "mean": 81.32939290086907,
+        "median": 81.0117565879498,
+        "min": 80.52624329235897,
+        "max": 82.50566968648874
+      },
+      "late": {
+        "n": 10,
+        "mean": 1.242,
+        "median": 1.0950000000000002,
+        "min": 1.09,
+        "max": 1.47
+      },
+      "p95": {
+        "n": 10,
+        "mean": 18.9,
+        "median": 18.0,
+        "min": 18,
+        "max": 22
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [9.4189453125, 9.14501953125],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 2,
+          "value": 1.46,
+          "p95_ms": 21,
+          "host_load": [8.8212890625, 8.91552734375],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 3,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [7.9560546875, 7.95947265625],
+          "external_build_processes": [0, 0]
+        },
+        {
+          "run": 4,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [11.6572265625, 11.4443359375],
+          "external_build_processes": [4, 4]
+        },
+        {
+          "run": 5,
+          "value": 1.1,
+          "p95_ms": 22,
+          "host_load": [8.1357421875, 7.88427734375],
+          "external_build_processes": [1, 3]
+        },
+        {
+          "run": 6,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [7.64404296875, 7.951171875],
+          "external_build_processes": [2, 10]
+        },
+        {
+          "run": 7,
+          "value": 1.47,
+          "p95_ms": 20,
+          "host_load": [9.50390625, 9.33935546875],
+          "external_build_processes": [3, 4]
+        },
+        {
+          "run": 8,
+          "value": 1.47,
+          "p95_ms": 18,
+          "host_load": [8.30224609375, 8.44091796875],
+          "external_build_processes": [2, 2]
+        },
+        {
+          "run": 9,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [8.61572265625, 8.326171875],
+          "external_build_processes": [2, 2]
+        },
+        {
+          "run": 10,
+          "value": 1.47,
+          "p95_ms": 18,
+          "host_load": [7.9658203125, 7.64794921875],
+          "external_build_processes": [2, 2]
+        }
+      ]
+    },
+    "audit": {
+      "blank": {
+        "n": 3,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "zero_blank_runs": 3,
+      "wrong_frames": 0,
+      "overlap_frames": 0,
+      "frames": 816,
+      "travel_rows": {
+        "n": 3,
+        "mean": 45.33387600054262,
+        "median": 45.3544973544973,
+        "min": 45.277981277981226,
+        "max": 45.369149369149326
+      }
+    }
+  },
+  {
+    "platform": "android",
+    "engine": "template-palette-command",
+    "label": "장식만 명령",
+    "startup_ms": {
+      "n": 5,
+      "mean": 289.817925,
+      "median": 289.932625,
+      "min": 270.126,
+      "max": 309.551875
+    },
+    "data_ready_ms": {
+      "n": 5,
+      "mean": 466.2,
+      "median": 463.0,
+      "min": 459.0,
+      "max": 479.0
+    },
+    "perf0": {
+      "memory": {
+        "n": 5,
+        "mean": 203.18125,
+        "median": 203.00390625,
+        "min": 202.9267578125,
+        "max": 203.5146484375
+      },
+      "cpu": {
+        "n": 5,
+        "mean": 11.948536736425513,
+        "median": 11.690408331564889,
+        "min": 10.825936236739178,
+        "max": 13.515081427331715
+      },
+      "late": {
+        "n": 5,
+        "mean": 1.312,
+        "median": 1.1,
+        "min": 1.09,
+        "max": 1.82
+      },
+      "p95": {
+        "n": 5,
+        "mean": 21,
+        "median": 20,
+        "min": 19,
+        "max": 26
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 1.46,
+          "p95_ms": 20,
+          "host_load": [11.1767578125, 11.16259765625],
+          "external_build_processes": [2, 2]
+        },
+        {
+          "run": 2,
+          "value": 1.09,
+          "p95_ms": 19,
+          "host_load": [9.3662109375, 9.17626953125],
+          "external_build_processes": [1, 6]
+        },
+        {
+          "run": 3,
+          "value": 1.82,
+          "p95_ms": 26,
+          "host_load": [12.76318359375, 13.10205078125],
+          "external_build_processes": [10, 0]
+        },
+        {
+          "run": 4,
+          "value": 1.09,
+          "p95_ms": 20,
+          "host_load": [10.5830078125, 10.4560546875],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 5,
+          "value": 1.1,
+          "p95_ms": 20,
+          "host_load": [9.7705078125, 9.70849609375],
+          "external_build_processes": [1, 0]
+        }
+      ]
+    },
+    "perf160": {
+      "memory": {
+        "n": 10,
+        "mean": 202.7119140625,
+        "median": 202.79296875,
+        "min": 202.111328125,
+        "max": 203.4130859375
+      },
+      "cpu": {
+        "n": 10,
+        "mean": 81.53994672962237,
+        "median": 81.1745671529922,
+        "min": 80.15103597924693,
+        "max": 83.87352338172084
+      },
+      "late": {
+        "n": 10,
+        "mean": 1.422,
+        "median": 1.0950000000000002,
+        "min": 0.73,
+        "max": 2.59
+      },
+      "p95": {
+        "n": 10,
+        "mean": 19.4,
+        "median": 18.0,
+        "min": 18,
+        "max": 23
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 1.1,
+          "p95_ms": 21,
+          "host_load": [10.02880859375, 9.7861328125],
+          "external_build_processes": [8, 4]
+        },
+        {
+          "run": 2,
+          "value": 1.46,
+          "p95_ms": 21,
+          "host_load": [8.70361328125, 8.40673828125],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 3,
+          "value": 2.59,
+          "p95_ms": 18,
+          "host_load": [8.27685546875, 9.61572265625],
+          "external_build_processes": [6, 4]
+        },
+        {
+          "run": 4,
+          "value": 0.73,
+          "p95_ms": 18,
+          "host_load": [9.5166015625, 10.11572265625],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 5,
+          "value": 1.46,
+          "p95_ms": 21,
+          "host_load": [9.4091796875, 8.9755859375],
+          "external_build_processes": [2, 1]
+        },
+        {
+          "run": 6,
+          "value": 2.52,
+          "p95_ms": 23,
+          "host_load": [7.794921875, 8.29150390625],
+          "external_build_processes": [3, 6]
+        },
+        {
+          "run": 7,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [9.15185546875, 8.9794921875],
+          "external_build_processes": [3, 3]
+        },
+        {
+          "run": 8,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [8.1650390625, 7.9912109375],
+          "external_build_processes": [2, 2]
+        },
+        {
+          "run": 9,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [8.98193359375, 8.82275390625],
+          "external_build_processes": [3, 3]
+        },
+        {
+          "run": 10,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [7.3203125, 7.53466796875],
+          "external_build_processes": [2, 3]
+        }
+      ]
+    },
+    "audit": {
+      "blank": {
+        "n": 3,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "zero_blank_runs": 3,
+      "wrong_frames": 0,
+      "overlap_frames": 0,
+      "frames": 824,
+      "travel_rows": {
+        "n": 3,
+        "mean": 45.524352191018814,
+        "median": 45.80056980056979,
+        "min": 44.520960520960465,
+        "max": 46.25152625152619
+      }
+    }
+  },
+  {
+    "platform": "android",
+    "engine": "template-command",
+    "label": "글자·장식 명령",
+    "startup_ms": {
+      "n": 5,
+      "mean": 280.4487418,
+      "median": 285.247751,
+      "min": 265.420958,
+      "max": 292.525334
+    },
+    "data_ready_ms": {
+      "n": 5,
+      "mean": 447.8,
+      "median": 451.0,
+      "min": 430.0,
+      "max": 461.0
+    },
+    "perf0": {
+      "memory": {
+        "n": 5,
+        "mean": 201.48203125,
+        "median": 201.5244140625,
+        "min": 201.2294921875,
+        "max": 201.6044921875
+      },
+      "cpu": {
+        "n": 5,
+        "mean": 11.526645036491464,
+        "median": 11.507392074638277,
+        "min": 11.17439943878302,
+        "max": 11.843615780840262
+      },
+      "late": {
+        "n": 5,
+        "mean": 1.166,
+        "median": 1.09,
+        "min": 0.73,
+        "max": 1.46
+      },
+      "p95": {
+        "n": 5,
+        "mean": 21.4,
+        "median": 20,
+        "min": 19,
+        "max": 25
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 0.73,
+          "p95_ms": 20,
+          "host_load": [10.9892578125, 10.1416015625],
+          "external_build_processes": [2, 1]
+        },
+        {
+          "run": 2,
+          "value": 1.09,
+          "p95_ms": 20,
+          "host_load": [10.01611328125, 9.3984375],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 3,
+          "value": 1.46,
+          "p95_ms": 25,
+          "host_load": [8.90576171875, 13.00390625],
+          "external_build_processes": [6, 9]
+        },
+        {
+          "run": 4,
+          "value": 1.09,
+          "p95_ms": 19,
+          "host_load": [11.349609375, 10.89501953125],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 5,
+          "value": 1.46,
+          "p95_ms": 23,
+          "host_load": [10.7724609375, 10.94775390625],
+          "external_build_processes": [11, 5]
+        }
+      ]
+    },
+    "perf160": {
+      "memory": {
+        "n": 10,
+        "mean": 200.96767578125,
+        "median": 200.98583984375,
+        "min": 200.6943359375,
+        "max": 201.2041015625
+      },
+      "cpu": {
+        "n": 10,
+        "mean": 81.2547486069908,
+        "median": 81.19635916876632,
+        "min": 80.29535999608542,
+        "max": 82.57130711651561
+      },
+      "late": {
+        "n": 10,
+        "mean": 1.165,
+        "median": 1.09,
+        "min": 1.09,
+        "max": 1.47
+      },
+      "p95": {
+        "n": 10,
+        "mean": 18.6,
+        "median": 18.5,
+        "min": 18,
+        "max": 20
+      },
+      "late_runs": [
+        {
+          "run": 1,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [9.56298828125, 9.54296875],
+          "external_build_processes": [1, 1]
+        },
+        {
+          "run": 2,
+          "value": 1.09,
+          "p95_ms": 19,
+          "host_load": [8.76171875, 8.4169921875],
+          "external_build_processes": [0, 2]
+        },
+        {
+          "run": 3,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [7.80224609375, 8.126953125],
+          "external_build_processes": [5, 3]
+        },
+        {
+          "run": 4,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [11.00830078125, 10.083984375],
+          "external_build_processes": [2, 2]
+        },
+        {
+          "run": 5,
+          "value": 1.09,
+          "p95_ms": 18,
+          "host_load": [8.6572265625, 8.32177734375],
+          "external_build_processes": [1, 2]
+        },
+        {
+          "run": 6,
+          "value": 1.09,
+          "p95_ms": 20,
+          "host_load": [7.75390625, 7.61328125],
+          "external_build_processes": [3, 4]
+        },
+        {
+          "run": 7,
+          "value": 1.09,
+          "p95_ms": 19,
+          "host_load": [10.2353515625, 9.89599609375],
+          "external_build_processes": [5, 3]
+        },
+        {
+          "run": 8,
+          "value": 1.1,
+          "p95_ms": 19,
+          "host_load": [8.8154296875, 8.58984375],
+          "external_build_processes": [3, 2]
+        },
+        {
+          "run": 9,
+          "value": 1.47,
+          "p95_ms": 19,
+          "host_load": [7.537109375, 7.41357421875],
+          "external_build_processes": [6, 3]
+        },
+        {
+          "run": 10,
+          "value": 1.45,
+          "p95_ms": 18,
+          "host_load": [8.0546875, 8.05029296875],
+          "external_build_processes": [2, 2]
+        }
+      ]
+    },
+    "audit": {
+      "blank": {
+        "n": 3,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "zero_blank_runs": 3,
+      "wrong_frames": 0,
+      "overlap_frames": 0,
+      "frames": 818,
+      "travel_rows": {
+        "n": 3,
+        "mean": 45.619318952652236,
+        "median": 45.52869352869351,
+        "min": 45.52218152218145,
+        "max": 45.80708180708175
+      }
+    }
+  }
+]

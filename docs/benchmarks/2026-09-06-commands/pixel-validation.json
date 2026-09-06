@@ -1,0 +1,34 @@
+[
+  {
+    "platform": "ios",
+    "old": "template-palette",
+    "new": "template-palette-command",
+    "checked_dots": 64,
+    "max_center_position_difference_px": 0,
+    "max_center_color_channel_difference": 0
+  },
+  {
+    "platform": "ios",
+    "old": "template-palette",
+    "new": "template-command",
+    "checked_dots": 64,
+    "max_center_position_difference_px": 0,
+    "max_center_color_channel_difference": 0
+  },
+  {
+    "platform": "android",
+    "old": "template-palette",
+    "new": "template-palette-command",
+    "checked_dots": 64,
+    "max_center_position_difference_px": 0,
+    "max_center_color_channel_difference": 0
+  },
+  {
+    "platform": "android",
+    "old": "template-palette",
+    "new": "template-command",
+    "checked_dots": 64,
+    "max_center_position_difference_px": 0,
+    "max_center_color_channel_difference": 0
+  }
+]

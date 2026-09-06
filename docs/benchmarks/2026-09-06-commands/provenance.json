@@ -1,0 +1,65 @@
+{
+  "implementation_commit": "ba8b86f9dc7e9120658a0fc023ba2e0217c4e5cd",
+  "rn": "0.87.1",
+  "build": "arm64 Release",
+  "sources": [
+    {
+      "path": "apps/example/android/app/src/main/java/zerolist/example/ZlTemplatePalette.kt",
+      "sha256": "2db6b4734c54c6619d89cc07ddff1f15d5cbbfaf88f990432ff3a9923415afd1"
+    },
+    {
+      "path": "apps/example/android/app/src/main/java/zerolist/example/ZlTemplateText.kt",
+      "sha256": "686a8d03ce5c0a6839d990e79254d6e76ada5b0dc0e95229e38fb85b43a2d3f4"
+    },
+    {
+      "path": "apps/example/ios/ZerolistExample/ZlTemplatePaletteComponentView.mm",
+      "sha256": "2c78f41d38a845fa7e9f29381d8457edc7c6ebf49c0be35178d7900f5c3aacc2"
+    },
+    {
+      "path": "apps/example/ios/ZerolistExample/ZlTemplateTextComponentView.mm",
+      "sha256": "76a8e850693c8fabb3caca85038c777c32d8377e6b3ae08300eb588326a3b546"
+    },
+    {
+      "path": "apps/example/specs/ZlTemplatePaletteNativeComponent.ts",
+      "sha256": "dfc668fbc9cd0ed4e52137f3e050af1f82537c7dd1b7884c9fb1e5bf9f4cbae0"
+    },
+    {
+      "path": "apps/example/specs/ZlTemplateTextNativeComponent.ts",
+      "sha256": "3987e829f32fc82ef177b628f925651ac7a11addc36a55d59f2e7b3cd94a01e5"
+    },
+    {
+      "path": "apps/example/src/harness/engines/index.ts",
+      "sha256": "191a8cae15dc71774f3483c09e9dad302236516ae491d4892bcb68d20810fff0"
+    },
+    {
+      "path": "apps/example/src/harness/engines/index.web.ts",
+      "sha256": "badf3b85e1f72a4f09fe9bffa3f8591699c61ac4fa7750573e5937a3dc3fdcac"
+    },
+    {
+      "path": "apps/example/src/harness/engines/template.native.tsx",
+      "sha256": "25f2ed8db00c97ea4be5f400464939c2e5d1078a86bc0754bddbbb8d08e50568"
+    },
+    {
+      "path": "apps/example/src/harness/engines/template.tsx",
+      "sha256": "b503342a9829e4666f5a9b9610227d96c9cda5d5971325a44606d154a28f6d55"
+    },
+    {
+      "path": "apps/example/src/harness/types.ts",
+      "sha256": "79ebb5f0520103b37443b72344c5dc1b30c43eb00668edde190699b2ea14e892"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "app-release.apk",
+      "sha256": "072a878fad83754aa2985f244dc733718425caa87742b0e51faac10b19cf3d23"
+    },
+    {
+      "name": "ZerolistExample",
+      "sha256": "618468460776fd8ac1006fc6e5daab4c16e3c9ce353d80caea4af540ac7c9dfe"
+    },
+    {
+      "name": "main.jsbundle",
+      "sha256": "c886492890a89d1ae8c93f04d1c44371ebe7b71b12da591e94535ffb1dc1c463"
+    }
+  ]
+}
