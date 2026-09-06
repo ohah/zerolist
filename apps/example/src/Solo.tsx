@@ -24,6 +24,11 @@ export default function Solo(props: {
   cell?: string;
   diagnostic?:
     | 'unified-contract'
+    | 'android-pool-contract'
+    | 'pool-baseline'
+    | 'pool-parent-scroll'
+    | 'pool-fabric-layout'
+    | 'pool-combined'
     | 'normal'
     | 'freeze-content'
     | 'freeze-position'

@@ -77,6 +77,10 @@ export interface ListEngineProps {
   preparationTrace?: boolean;
   /** Solo-only causal experiment; frozen variants are not functional lists. */
   diagnostic?:
+    | 'pool-baseline'
+    | 'pool-parent-scroll'
+    | 'pool-fabric-layout'
+    | 'pool-combined'
     | 'normal'
     | 'freeze-content'
     | 'freeze-position'
