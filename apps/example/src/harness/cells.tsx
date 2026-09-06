@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import type { Item, CellType, HeightMode } from './types';
 import { inst } from './instrument';
+import { PaletteDecoration } from './palette';
 
 // 결정론적 데이터-URI 이미지(네트워크 비결정성 제거). 실제 대용량
 // 사진 디코드 비용은 별도 축 — 여기선 Image 파이프라인/레이아웃 비용.
@@ -19,6 +20,7 @@ function hsl(h: number, l = 70) {
 }
 
 interface Props {
+  nativePalette?: boolean;
   commonAudit?: boolean;
   item: Item;
   cell: CellType;
@@ -32,7 +34,15 @@ const HEAVY_ITERS = 4000; // 셀당 동기 연산 부하 (변별용 코스트 kn
 
 // 무거운 셀: 렌더마다 동기 연산 + 64 서브뷰 + 이미지. 실제 무거운
 // 앱의 행을 모사 — 재활용/재렌더 비용을 표면화한다.
-function HeavyCell({ item, sized }: { item: Item; sized: boolean }) {
+function HeavyCell({
+  item,
+  sized,
+  nativePalette,
+}: {
+  item: Item;
+  sized: boolean;
+  nativePalette?: boolean;
+}) {
   let acc = 0;
   for (let i = 0; i < HEAVY_ITERS; i++)
     acc += Math.sqrt((i * (item.id + 1)) % 97);
@@ -50,14 +60,18 @@ function HeavyCell({ item, sized }: { item: Item; sized: boolean }) {
           <Text style={styles.body}>∑={acc.toFixed(1)}</Text>
         </View>
       </View>
-      <View style={styles.grid}>
-        {DOTS.map((d) => (
-          <View
-            key={d}
-            style={[styles.dot, { backgroundColor: hsl(item.hue + d * 5) }]}
-          />
-        ))}
-      </View>
+      {nativePalette ? (
+        <PaletteDecoration hue={item.hue} />
+      ) : (
+        <View style={styles.grid}>
+          {DOTS.map((d) => (
+            <View
+              key={d}
+              style={[styles.dot, { backgroundColor: hsl(item.hue + d * 5) }]}
+            />
+          ))}
+        </View>
+      )}
     </>
   );
 }
@@ -69,6 +83,7 @@ function CellInner({
   onMeasure,
   onRender,
   commonAudit,
+  nativePalette,
 }: Props) {
   const auditProps = commonAudit
     ? { testID: `zl-row-${item.id}-h${item.height}`, collapsable: false }
@@ -127,7 +142,7 @@ function CellInner({
   if (cell === 'heavy') {
     return (
       <View {...auditProps} style={[style, styles.complex]} onLayout={onLayout}>
-        <HeavyCell item={item} sized={sized} />
+        <HeavyCell item={item} sized={sized} nativePalette={nativePalette} />
       </View>
     );
   }

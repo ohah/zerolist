@@ -50,3 +50,7 @@ export const FlatListEngine = forwardRef<Scrollable, ListEngineProps>(
     );
   }
 );
+
+export const FlatPaletteEngine = forwardRef<Scrollable, ListEngineProps>(
+  (p, ref) => <FlatListEngine {...p} ref={ref} nativePalette />
+);

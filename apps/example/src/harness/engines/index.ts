@@ -1,5 +1,5 @@
 import type { ForwardRefExoticComponent, RefAttributes } from 'react';
-import { FlatListEngine } from './flatlist';
+import { FlatListEngine, FlatPaletteEngine } from './flatlist';
 import { LegendEngine } from './legend';
 import { FlashListEngine } from './flashlist';
 import { NativeFabricEngine } from './native';
@@ -9,6 +9,7 @@ import {
   TemplateJSEngine,
   TemplateWorkletEngine,
   TemplateCompactEngine,
+  TemplatePaletteEngine,
 } from './template';
 import { ZeroListEngine } from './zerolist';
 import type { EngineId, ListEngineProps } from '../types';
@@ -31,6 +32,8 @@ export const ENGINES: Record<EngineId, EngineComponent | null> = {
   'template-js': TemplateJSEngine,
   'template-worklet': TemplateWorkletEngine,
   'template-compact': TemplateCompactEngine,
+  'template-palette': TemplatePaletteEngine,
+  'flatlist-palette': FlatPaletteEngine,
   'zerolist': ZeroListEngine,
 };
 
@@ -45,6 +48,8 @@ export const ENGINE_LABEL: Record<EngineId, string> = {
   'template-js': '템플릿(JS 수신)',
   'template-worklet': '템플릿(UI 수신)',
   'template-compact': '템플릿압축전달',
+  'template-palette': '템플릿장식통합',
+  'flatlist-palette': 'FlatList장식통합',
   'zerolist': 'ZeroList',
 };
 
@@ -59,5 +64,7 @@ export const ENGINE_HINT: Record<EngineId, string> = {
   'template-js': 'fixed-template-js-event',
   'template-worklet': 'fixed-template-ui-event',
   'template-compact': 'fixed-template-ui-compact',
+  'template-palette': 'fixed-template-ui-palette',
+  'flatlist-palette': 'getItemLayout-native-palette',
   'zerolist': 'offsets',
 };

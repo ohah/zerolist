@@ -192,5 +192,6 @@ class ZlPackage : com.facebook.react.ReactPackage {
       ZlZigListManager(),
       ZlPoolListManager(),
       ZlTemplateTextManager(),
+      ZlTemplatePaletteManager(),
     )
 }

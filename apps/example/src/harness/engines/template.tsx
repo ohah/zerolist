@@ -3,3 +3,4 @@ export const TemplateJSEngine = null;
 export const TemplateWorkletEngine = null;
 
 export const TemplateCompactEngine = null;
+export const TemplatePaletteEngine = null;

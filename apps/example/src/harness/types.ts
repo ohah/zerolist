@@ -14,6 +14,8 @@ export type EngineId =
   | 'template-js'
   | 'template-worklet'
   | 'template-compact'
+  | 'template-palette'
+  | 'flatlist-palette'
   | 'zerolist';
 
 export interface BenchConfig {
@@ -64,6 +66,8 @@ export type Preparation =
   | 'priority-pending-stable';
 
 export interface ListEngineProps {
+  /** Solo 비교용: 동일한 장식 통합을 일반 리스트에도 적용하는 대조군. */
+  nativePalette?: boolean;
   /** Solo 측정 옵션: 화면 밖 한쪽 여유 행 수. 생략하면 기존 설정. */
   bufferRows?: number;
   commonAudit?: boolean;

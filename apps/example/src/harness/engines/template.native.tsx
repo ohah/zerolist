@@ -15,6 +15,7 @@ import Animated, {
 } from 'react-native-reanimated';
 import ZlPoolList from '../../../specs/ZlPoolListNativeComponent';
 import ZlTemplateText from '../../../specs/ZlTemplateTextNativeComponent';
+import ZlTemplatePalette from '../../../specs/ZlTemplatePaletteNativeComponent';
 import type { Item, ListEngineProps } from '../types';
 import type { Scrollable } from '../flingDriver';
 import { inst } from '../instrument';
@@ -26,6 +27,7 @@ import { packItems, columnItem, type Columns } from './templateData';
 // 일반 Text children, 임의 renderItem, 동적 높이를 지원하는 drop-in API가 아니다.
 const Pool = Animated.createAnimatedComponent(ZlPoolList);
 const NativeText = Animated.createAnimatedComponent(ZlTemplateText);
+const NativePalette = Animated.createAnimatedComponent(ZlTemplatePalette);
 const IMG =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAFklEQVR4nGNgYGD4z4AHMA4qAQAB/wQEZxJ3HQAAAABJRU5ErkJggg==';
 const DOTS = Array.from({ length: 64 }, (_, i) => i);
@@ -61,6 +63,24 @@ function Dot({ item, d }: { item: SharedValue<Item>; d: number }) {
   }));
   return <Animated.View style={[styles.dot, style]} />;
 }
+function Palette({
+  item,
+  initial,
+}: {
+  item: SharedValue<Item>;
+  initial: Item;
+}) {
+  const { width } = useWindowDimensions();
+  const columns = Math.max(1, Math.floor((width - 28 + 2) / 20));
+  const props = useAnimatedProps(() => ({ hue: item.value.hue }));
+  return (
+    <NativePalette
+      hue={initial.hue}
+      animatedProps={props}
+      style={{ height: Math.ceil(64 / columns) * 20 - 2, marginTop: 6 }}
+    />
+  );
+}
 function Slot({
   slot,
   binding,
@@ -69,6 +89,7 @@ function Slot({
   rh,
   heavy,
   audit,
+  palette,
 }: {
   slot: number;
   binding: SharedValue<Binding>;
@@ -77,6 +98,7 @@ function Slot({
   rh: number;
   heavy: boolean;
   audit: boolean;
+  palette: boolean;
 }) {
   // 다른 슬롯만 바뀌면 같은 index 이후의 무거운 계산을 반복하지 않는다.
   const index = useDerivedValue(() => binding.value.indices[slot] ?? slot);
@@ -128,11 +150,15 @@ function Slot({
                 <TemplateText value={sum} initial="" kind="sum" />
               </View>
             </View>
-            <View style={styles.grid}>
-              {DOTS.map((d) => (
-                <Dot key={d} d={d} item={item} />
-              ))}
-            </View>
+            {palette ? (
+              <Palette item={item} initial={initial} />
+            ) : (
+              <View style={styles.grid}>
+                {DOTS.map((d) => (
+                  <Dot key={d} d={d} item={item} />
+                ))}
+              </View>
+            )}
           </>
         ) : (
           <TemplateText value={title} initial={initial.title} kind="title" />
@@ -176,7 +202,8 @@ function useCompactData(items: Item[]) {
 
 function makeTemplateEngine(
   uiEvent: boolean,
-  useData: (items: Item[]) => DataValue = useObjectData
+  useData: (items: Item[]) => DataValue = useObjectData,
+  palette = false
 ) {
   return forwardRef<Scrollable, ListEngineProps>((p, ref) => {
     useNoopScrollable(ref);
@@ -300,6 +327,7 @@ function makeTemplateEngine(
             rh={rh}
             heavy={p.cell === 'heavy'}
             audit={p.commonAudit ?? false}
+            palette={palette}
           />
         ))}
       </Pool>
@@ -309,6 +337,11 @@ function makeTemplateEngine(
 export const TemplateJSEngine = makeTemplateEngine(false);
 export const TemplateWorkletEngine = makeTemplateEngine(true);
 export const TemplateCompactEngine = makeTemplateEngine(true, useCompactData);
+export const TemplatePaletteEngine = makeTemplateEngine(
+  true,
+  useCompactData,
+  true
+);
 const styles = StyleSheet.create({
   fill: { flex: 1 },
   slot: { position: 'absolute', left: 0, right: 0 },

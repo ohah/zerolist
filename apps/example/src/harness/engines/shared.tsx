@@ -34,11 +34,17 @@ export function useScrollableHandle(
 export function renderCell(
   p: Pick<
     ListEngineProps,
-    'cell' | 'height' | 'onMeasure' | 'onRender' | 'commonAudit'
+    | 'cell'
+    | 'height'
+    | 'onMeasure'
+    | 'onRender'
+    | 'commonAudit'
+    | 'nativePalette'
   >
 ) {
   return ({ item }: { item: Item }) => (
     <Cell
+      nativePalette={p.nativePalette}
       commonAudit={p.commonAudit}
       item={item}
       cell={p.cell}
