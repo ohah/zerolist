@@ -13,6 +13,7 @@ export type EngineId =
   | 'zigpool'
   | 'template-js'
   | 'template-worklet'
+  | 'template-compact'
   | 'zerolist';
 
 export interface BenchConfig {

@@ -5,7 +5,11 @@ import { FlashListEngine } from './flashlist';
 import { NativeFabricEngine } from './native';
 import { NativeZigEngine } from './nativezig';
 import { ZigPoolEngine } from './zigpool';
-import { TemplateJSEngine, TemplateWorkletEngine } from './template';
+import {
+  TemplateJSEngine,
+  TemplateWorkletEngine,
+  TemplateCompactEngine,
+} from './template';
 import { ZeroListEngine } from './zerolist';
 import type { EngineId, ListEngineProps } from '../types';
 import type { Scrollable } from '../flingDriver';
@@ -26,6 +30,7 @@ export const ENGINES: Record<EngineId, EngineComponent | null> = {
   'zigpool': ZigPoolEngine,
   'template-js': TemplateJSEngine,
   'template-worklet': TemplateWorkletEngine,
+  'template-compact': TemplateCompactEngine,
   'zerolist': ZeroListEngine,
 };
 
@@ -39,6 +44,7 @@ export const ENGINE_LABEL: Record<EngineId, string> = {
   'zigpool': 'ZigPool',
   'template-js': '템플릿(JS 수신)',
   'template-worklet': '템플릿(UI 수신)',
+  'template-compact': '템플릿압축전달',
   'zerolist': 'ZeroList',
 };
 
@@ -52,5 +58,6 @@ export const ENGINE_HINT: Record<EngineId, string> = {
   'zigpool': 'zig-pool',
   'template-js': 'fixed-template-js-event',
   'template-worklet': 'fixed-template-ui-event',
+  'template-compact': 'fixed-template-ui-compact',
   'zerolist': 'offsets',
 };

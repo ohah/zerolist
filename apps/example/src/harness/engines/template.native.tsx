@@ -1,5 +1,10 @@
 import { forwardRef, useEffect } from 'react';
 import { Image, StyleSheet, View, useWindowDimensions } from 'react-native';
+import {
+  getRuntimeKind,
+  RuntimeKind,
+  scheduleOnUI,
+} from 'react-native-worklets';
 import Animated, {
   useAnimatedProps,
   useAnimatedStyle,
@@ -14,6 +19,7 @@ import type { Item, ListEngineProps } from '../types';
 import type { Scrollable } from '../flingDriver';
 import { inst } from '../instrument';
 import { useNoopScrollable } from './shared';
+import { packItems, columnItem, type Columns } from './templateData';
 
 // WishList의 템플릿 발상을 현재 RN/Worklets API로 검증하는 별도 PoC.
 // React는 구조를 한 번 만들고, UI 런타임이 이미 존재하는 네이티브 속성을 갱신한다.
@@ -23,6 +29,8 @@ const NativeText = Animated.createAnimatedComponent(ZlTemplateText);
 const IMG =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAFklEQVR4nGNgYGD4z4AHMA4qAQAB/wQEZxJ3HQAAAABJRU5ErkJggg==';
 const DOTS = Array.from({ length: 64 }, (_, i) => i);
+type DataSource = Item[] | Columns;
+type DataValue = { readonly value: DataSource };
 type Binding = { version: number; encoded: string; indices: number[] };
 
 function TemplateText({
@@ -64,7 +72,7 @@ function Slot({
 }: {
   slot: number;
   binding: SharedValue<Binding>;
-  data: SharedValue<Item[]>;
+  data: DataValue;
   initial: Item;
   rh: number;
   heavy: boolean;
@@ -72,7 +80,14 @@ function Slot({
 }) {
   // 다른 슬롯만 바뀌면 같은 index 이후의 무거운 계산을 반복하지 않는다.
   const index = useDerivedValue(() => binding.value.indices[slot] ?? slot);
-  const item = useDerivedValue(() => data.value[index.value] ?? initial);
+  const item = useDerivedValue(() => {
+    // JS 초기 평가에서 UI 소유 배열 전체를 역직렬화하지 않는다.
+    if (getRuntimeKind() !== RuntimeKind.UI) return initial;
+    const source = data.value;
+    const i = index.value;
+    if (Array.isArray(source)) return source[i] ?? initial;
+    return columnItem(source, i) ?? initial;
+  });
   const title = useDerivedValue(() => item.value.title);
   const body = useDerivedValue(() => item.value.body);
   const sum = useDerivedValue(() => {
@@ -126,7 +141,43 @@ function Slot({
     </View>
   );
 }
-function makeTemplateEngine(uiEvent: boolean) {
+function useObjectData(items: Item[]) {
+  const data = useSharedValue(items);
+  useEffect(() => {
+    data.value = items;
+  }, [data, items]);
+  return data;
+}
+
+function useCompactData(items: Item[]) {
+  // UI 소유 데이터는 빈 배열로 시작한다. JS는 복원된 전체 값을 읽지 않는다.
+  const data = useSharedValue<DataSource>([]);
+  useEffect(() => {
+    const start = performance.now();
+    const columns = packItems(items);
+    const encoded = JSON.stringify(columns);
+    console.log(
+      `[ZlData] phase=encode count=${items.length} chars=${encoded.length} ms=${performance.now() - start}`
+    );
+    scheduleOnUI((payload: string) => {
+      'worklet';
+      const start = performance.now();
+      const decoded: Columns = JSON.parse(payload);
+      data.value = decoded;
+      console.log(
+        `[ZlData] phase=decode count=${decoded.id.length} ms=${performance.now() - start}`
+      );
+    }, encoded);
+    // 전달 문자열/열 배열을 shared value나 React 상태에 영구 보관하지 않는다.
+    // 전체 스냅샷 복원 후 한 번에 공개하므로 스크롤 중 JS 재요청이 없다.
+  }, [data, items]);
+  return data;
+}
+
+function makeTemplateEngine(
+  uiEvent: boolean,
+  useData: (items: Item[]) => DataValue = useObjectData
+) {
   return forwardRef<Scrollable, ListEngineProps>((p, ref) => {
     useNoopScrollable(ref);
     const { height } = useWindowDimensions();
@@ -141,16 +192,12 @@ function makeTemplateEngine(uiEvent: boolean) {
     const rows = p.bufferRows ?? 5;
     const n = Math.min(Math.ceil(height / rh) + 2 * rows, p.items.length);
     const indices = Array.from({ length: n }, (_, i) => i);
-    // 비교하는 두 템플릿 모두 같은 실제 데이터 사본을 UI 런타임에 전달한다.
-    const data = useSharedValue(p.items);
+    const data = useData(p.items);
     const binding = useSharedValue<Binding>({
       version: -1,
       encoded: indices.join(','),
       indices,
     });
-    useEffect(() => {
-      data.value = p.items;
-    }, [data, p.items]);
     const trace = p.diagnostic === 'trace-binding';
     const onRecycleUI = useEvent<{ binds: string; version: number }>(
       (event) => {
@@ -168,10 +215,23 @@ function makeTemplateEngine(uiEvent: boolean) {
       },
       ['onRecycle']
     );
-    const props = useAnimatedProps(() => ({
-      committedBinds: binding.value.encoded,
-      committedVersion: binding.value.version,
-    }));
+    const initialEncoded = indices.join(',');
+    const props = useAnimatedProps(() => {
+      // 첫 복원 중 발생한 재활용 요청은 binding에 남겨두되 아직 배치하지 않는다.
+      // UI 데이터와 내용이 준비되는 같은 갱신에서 최신 매핑을 공개한다.
+      if (getRuntimeKind() !== RuntimeKind.UI)
+        return { committedBinds: initialEncoded, committedVersion: -1 };
+      const source = data.value;
+      const ready = Array.isArray(source)
+        ? source.length > 0
+        : source.id.length > 0;
+      return ready
+        ? {
+            committedBinds: binding.value.encoded,
+            committedVersion: binding.value.version,
+          }
+        : { committedBinds: initialEncoded, committedVersion: -1 };
+    });
     return (
       <Pool
         style={styles.fill}
@@ -227,6 +287,7 @@ function makeTemplateEngine(uiEvent: boolean) {
 }
 export const TemplateJSEngine = makeTemplateEngine(false);
 export const TemplateWorkletEngine = makeTemplateEngine(true);
+export const TemplateCompactEngine = makeTemplateEngine(true, useCompactData);
 const styles = StyleSheet.create({
   fill: { flex: 1 },
   slot: { position: 'absolute', left: 0, right: 0 },
