@@ -24,7 +24,8 @@ export default function Solo(props: {
     | 'normal'
     | 'freeze-content'
     | 'freeze-position'
-    | 'trace-binding';
+    | 'trace-binding'
+    | 'trace-startup';
   legacyRecycling?: boolean;
   audit?: boolean;
   bindingDelayMs?: number;

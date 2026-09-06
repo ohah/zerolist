@@ -44,8 +44,10 @@ class SoloActivity : ReactActivity() {
   private var frameListener: Window.OnFrameMetricsAvailableListener? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
+    val startupNs = if (intent.getStringExtra("diagnostic") == "trace-startup") System.nanoTime() else null
+    if (startupNs != null) Log.i("ZlStartup", "phase=native_start wall=${System.currentTimeMillis()}")
     super.onCreate(savedInstanceState)
-    if (intent.getBooleanExtra("commonAudit", false)) commonProbe = CommonListProbe(window.decorView, intent.getIntExtra("count", 100000))
+    if (intent.getBooleanExtra("commonAudit", false)) commonProbe = CommonListProbe(window.decorView, intent.getIntExtra("count", 100000), startupNs)
     if (intent.getBooleanExtra("motionTrace", false)) {
       val listener = android.view.ViewTreeObserver.OnPreDrawListener {
         val target = motionTarget ?: findMotionTarget(window.decorView).also { motionTarget = it }

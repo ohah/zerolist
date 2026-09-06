@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
   ) -> Bool {
+    let startupTime: Double? = ProcessInfo.processInfo.environment["ZL_DIAGNOSTIC"] == "trace-startup" ? CACurrentMediaTime() : nil
+    if startupTime != nil { NSLog("ZlStartup phase=native_start wall=%.0f", Date().timeIntervalSince1970*1000) }
     // RN 0.87의 os_log 정보 로그는 simctl --console에 나타나지 않을 수 있다.
     // Solo 측정 태그만 stderr에도 남겨 버전/작업량/JS 부하를 검증한다.
     if ProcessInfo.processInfo.environment["ZL_SOLO"] == "1" {
@@ -62,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       launchOptions: launchOptions
     )
 
-    if env["ZL_COMMON_AUDIT"] == "1", let window { commonProbe = CommonListProbe(window: window, count: Int(env["ZL_COUNT"] ?? "100000") ?? 100000) }
+    if env["ZL_COMMON_AUDIT"] == "1", let window { commonProbe = CommonListProbe(window: window, count: Int(env["ZL_COUNT"] ?? "100000") ?? 100000, startupTime: startupTime) }
     return true
   }
 }
@@ -119,8 +121,10 @@ private final class CommonListProbe: NSObject {
   private var rowHeight: CGFloat = 0
   private var previous = Set<Int>()
   private var frame = 0
-  init(window: UIWindow, count: Int) {
-    self.window=window; self.count=count; super.init()
+  private let startupTime: Double?
+  private var startupReported = false
+  init(window: UIWindow, count: Int, startupTime: Double? = nil) {
+    self.window=window; self.count=count; self.startupTime=startupTime; super.init()
     link=CADisplayLink(target:self,selector:#selector(tick(_:)))
     link?.add(to:.main,forMode:.common)
   }
@@ -172,6 +176,10 @@ private final class CommonListProbe: NSObject {
     let first=max(0,Int(floor(y/rowHeight)));let last=min(count,Int(ceil((y+height)/rowHeight)))
     guard last>=first else { return }
     let expected=Set(first..<last);let entered=expected.subtracting(previous);previous=expected
+    if let startupTime, !startupReported, visible>0, wrong==0, stop-start-covered<=2, overlap<=2, expected.isSubset(of:ready) {
+      startupReported=true
+      NSLog("ZlStartup phase=content_ready wall=%.0f ms=%.3f",Date().timeIntervalSince1970*1000,(CACurrentMediaTime()-startupTime)*1000)
+    }
     frame+=1
     NSLog("ZlCommon frame=%d ns=%.0f y=%.3f viewport=%.3f rh=%.3f visible=%d attached=%d entered=%d unready=%d wrong=%d blank=%.3f overlap=%.3f",frame,link.timestamp*1e9,y,stop-start,rowHeight,visible,candidates.count,entered.count,entered.subtracting(ready).count,wrong,stop-start-covered,overlap)
   }

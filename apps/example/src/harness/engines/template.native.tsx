@@ -1,4 +1,4 @@
-import { forwardRef, useEffect } from 'react';
+import { forwardRef, useEffect, useRef } from 'react';
 import { Image, StyleSheet, View, useWindowDimensions } from 'react-native';
 import {
   getRuntimeKind,
@@ -192,7 +192,28 @@ function makeTemplateEngine(
     const rows = p.bufferRows ?? 5;
     const n = Math.min(Math.ceil(height / rh) + 2 * rows, p.items.length);
     const indices = Array.from({ length: n }, (_, i) => i);
+    const startupTrace = p.diagnostic === 'trace-startup';
+    const startupRendered = useRef(false);
+    if (startupTrace && !startupRendered.current) {
+      startupRendered.current = true;
+      console.log(`[ZlStartup] phase=render_begin wall=${Date.now()}`);
+    }
     const data = useData(p.items);
+    const startupReady = useSharedValue(false);
+    useDerivedValue(() => {
+      if (
+        !startupTrace ||
+        getRuntimeKind() !== RuntimeKind.UI ||
+        startupReady.value
+      )
+        return;
+      const source = data.value;
+      const length = Array.isArray(source) ? source.length : source.id.length;
+      if (length > 0) {
+        startupReady.value = true;
+        console.log(`[ZlStartup] phase=data_ready wall=${Date.now()}`);
+      }
+    });
     const binding = useSharedValue<Binding>({
       version: -1,
       encoded: indices.join(','),

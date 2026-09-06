@@ -11,7 +11,8 @@ import kotlin.math.*
 
 // 측정 전용. 모든 엔진의 실제 행 루트·텍스트·화면 좌표를 같은 방법으로 검사한다.
 // OnDraw는 ZigPool의 OnPreDraw 배치가 끝난 뒤 호출된다. 실제 GPU 표시 시각은 아니다.
-class CommonListProbe(private val root: View, private val count: Int) : ViewTreeObserver.OnDrawListener {
+class CommonListProbe(private val root: View, private val count: Int, private val startupNs: Long? = null) : ViewTreeObserver.OnDrawListener {
+  private var startupReported = false
   private var target: View? = null
   private var previous = setOf<Int>()
   private var rowHeight = 0.0
@@ -64,6 +65,10 @@ class CommonListProbe(private val root: View, private val count: Int) : ViewTree
     for ((a,b) in spans.sortedBy { it.first }) { if(b<=a) continue; overlap+=max(0.0,min(end,b)-a);covered+=max(0.0,b-max(end,a));end=max(end,b) }
     val first=max(0,floor(y/rowHeight).toInt());val last=min(count,ceil((y+scroll.height)/rowHeight).toInt())
     val expected=(first until last).toSet();val entered=expected-previous;previous=expected
+    if (startupNs != null && !startupReported && visible > 0 && wrong == 0 && stop-start-covered <= 2 && overlap <= 2 && expected.all { it in ready }) {
+      startupReported = true
+      Log.i("ZlStartup", "phase=content_ready wall=${System.currentTimeMillis()} ms=${(System.nanoTime()-startupNs)/1e6}")
+    }
     Log.i("ZlCommon", "frame=${++frame} ns=${System.nanoTime()} y=$y viewport=${stop-start} rh=$rowHeight visible=$visible attached=${candidates.size} entered=${entered.size} unready=${entered.count{it !in ready}} wrong=$wrong blank=${stop-start-covered} overlap=$overlap")
   }
 }
