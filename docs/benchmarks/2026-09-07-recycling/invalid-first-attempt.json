@@ -1,0 +1,8 @@
+{
+  "path": "/private/tmp/zerolist-recycling-zero-perf",
+  "reason": "앱 갱신량 비정상 및 다음 실행 프레임 부족. 검사 시 테스트 앱이 전면에 없었음. 성능 비교에서 첫 시도 전체 제외.",
+  "discarded_results": ["on-zerolist run 1"],
+  "failed_run": "off-zerolist run 1",
+  "prevention": "매 스와이프 직전 전면 앱 확인, 전환 시 즉시 중단",
+  "verified_lifecycle": "테스트 실행 중 01:49:58.867 및 01:50:33.711에 SoloActivity userLeaving=true pause, 뒤이어 stop 이벤트 확인"
+}

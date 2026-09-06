@@ -46,6 +46,11 @@ class SoloActivity : ReactActivity() {
   private var frameListener: Window.OnFrameMetricsAvailableListener? = null
 
   override fun onCreate(savedInstanceState: Bundle?) {
+    if (intent.hasExtra("viewRecycling")) {
+      (application as MainApplication).configureBenchmarkRecycling(
+        intent.getBooleanExtra("viewRecycling", false)
+      )
+    }
     val startupNs = if (intent.getStringExtra("diagnostic") == "trace-startup") System.nanoTime() else null
     if (startupNs != null) Log.i("ZlStartup", "phase=native_start wall=${System.currentTimeMillis()}")
     super.onCreate(savedInstanceState)

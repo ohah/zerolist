@@ -1,0 +1,28 @@
+[
+  {
+    "recycling": false,
+    "checks": {
+      "재정렬": true,
+      "앞 삽입": true,
+      "내용 교체": true,
+      "내용 변경": true,
+      "먼 항목 이동": true,
+      "복원": true,
+      "동적 크기 변경": true
+    },
+    "note": "measureInWindow 좌표는 실제 화면 위치 증거로 사용하지 않음. PNG 별도 육안 검사."
+  },
+  {
+    "recycling": true,
+    "checks": {
+      "재정렬": true,
+      "앞 삽입": true,
+      "내용 교체": true,
+      "내용 변경": true,
+      "먼 항목 이동": true,
+      "복원": true,
+      "동적 크기 변경": true
+    },
+    "note": "measureInWindow 좌표는 실제 화면 위치 증거로 사용하지 않음. PNG 별도 육안 검사."
+  }
+]

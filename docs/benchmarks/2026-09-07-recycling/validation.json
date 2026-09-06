@@ -1,0 +1,8 @@
+{
+  "android_release_build": "passed, 49s",
+  "physical_flag_smoke": "configured=true effective=true previous=null",
+  "emulator_contracts": "off/on each 7 assertions passed",
+  "visual_checks": ["on-reorder.png", "on-dynamic.png"],
+  "physical_performance": "invalid initial attempt; no accepted result",
+  "physical_settings_restored": true
+}

@@ -1,0 +1,8 @@
+{
+  "base": "40e5d09",
+  "apk_sha256": "2a465705b714d873c01c54c90d197ccc38d0c4c3a602a7ce368b6ce871978f90",
+  "patch_sha256": "07b775af145a3c89815c95b27425de4e444238d6023539ed7324d417a2602612",
+  "native_runtime": "RN 0.87.1",
+  "diagnostic_only": true,
+  "runtime_smoke": "configured=true effective=true previous=null"
+}
