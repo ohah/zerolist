@@ -185,6 +185,7 @@ function PoolList<T>(
       committedBinds={state.slots.map((s) => s.index).join(',')}
       overscan={overscan}
       scrollCommand={command}
+      scrollIndicator={props.showsVerticalScrollIndicator === false ? 0 : 1}
       reportScroll={!!(props.onScroll || props.onEndReached)}
       onLayout={(e: any) => {
         setViewport(e.nativeEvent.layout.height);

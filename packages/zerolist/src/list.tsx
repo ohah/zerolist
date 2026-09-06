@@ -30,6 +30,7 @@ const poolProps = new Set([
   'onEndReachedThreshold',
   'onScrollToIndexFailed',
   'onLayout',
+  'showsVerticalScrollIndicator',
 ]);
 function UnifiedList<T>(
   props: ZeroListProps<T>,

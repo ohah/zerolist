@@ -168,7 +168,14 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     Log.i("ZlAudit", "entered=${entered.size} unready=$unready frame=${++auditFrame} y=$scrollY wrong=$wrong visible=$visible blank=${(height-covered).roundToInt()} overlap=${overlap.roundToInt()} version=$version")
   }
   // 스크롤 표시가 프레임 재개에 미치는 영향을 분리하는 진단 옵션. 기본은 끈다.
-  private val showScrollIndicator = ctx.currentActivity?.intent?.getBooleanExtra("scrollIndicator", false) == true
+  private var showScrollIndicator = ctx.currentActivity?.intent?.getBooleanExtra("scrollIndicator", false) == true
+  fun setScrollIndicator(value: Int) {
+    if (value < 0) return
+    showScrollIndicator = value != 0
+    isVerticalScrollBarEnabled = showScrollIndicator
+    if (showScrollIndicator) setWillNotDraw(false)
+    invalidate()
+  }
   init { isVerticalScrollBarEnabled = showScrollIndicator; if (showScrollIndicator) setWillNotDraw(false) }
   override fun computeVerticalScrollRange(): Int = offD?.get(count)?.toInt() ?: 0
   override fun computeVerticalScrollOffset(): Int = scrollY
@@ -435,6 +442,7 @@ class ZlPoolListManager :
 
   override fun getDelegate(): ViewManagerDelegate<ZlPoolListView> = delegate
 
+  override fun setScrollIndicator(view: ZlPoolListView, value: Int) { view.setScrollIndicator(value) }
   override fun setDataVersion(view: ZlPoolListView, value: Int) { view.setDataVersion(value) }
   override fun setReportScroll(view: ZlPoolListView, value: Boolean) { view.setReportScroll(value) }
   override fun setScrollCommand(view: ZlPoolListView, value: String?) { view.setScrollCommand(value) }

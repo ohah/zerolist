@@ -282,6 +282,7 @@ using namespace facebook::react;
   BOOL changed = NO;
   if (_dataVersion != p.dataVersion) { _dataVersion=p.dataVersion; _lastStart=NSIntegerMin; }
   _reportScroll=p.reportScroll;
+  if (p.scrollIndicator >= 0) _scroll.showsVerticalScrollIndicator=p.scrollIndicator != 0;
   if (_preparationMode != p.preparationMode) _lastStart = NSIntegerMin;
   _preparationMode = p.preparationMode;
   _preparationTrace = p.preparationTrace;

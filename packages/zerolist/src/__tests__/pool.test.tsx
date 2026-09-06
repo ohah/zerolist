@@ -211,3 +211,13 @@ it('onScroll 구독이 없어도 데이터 갱신 시 마지막 준비 창을 �
   expect(v.getByTestId('item-50')).toBeTruthy();
   expect(v.queryByTestId('item-0')).toBeNull();
 });
+
+it('공개 API의 기본 스크롤바와 명시적 숨김을 네이티브에 전달한다', () => {
+  const data = make(10);
+  const v = render(<ZeroList {...defaults} data={data} />);
+  expect(v.getByTestId('unified').props.scrollIndicator).toBe(1);
+  v.rerender(
+    <ZeroList {...defaults} data={data} showsVerticalScrollIndicator={false} />
+  );
+  expect(v.getByTestId('unified').props.scrollIndicator).toBe(0);
+});

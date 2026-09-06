@@ -13,6 +13,7 @@ import {
 interface NativeProps extends ViewProps {
   dataVersion?: CodegenTypes.WithDefault<CodegenTypes.Int32, 0>;
   scrollCommand?: CodegenTypes.WithDefault<string, ''>;
+  scrollIndicator?: CodegenTypes.WithDefault<CodegenTypes.Int32, -1>;
   reportScroll?: CodegenTypes.WithDefault<boolean, false>;
   onPoolScroll?: CodegenTypes.DirectEventHandler<
     Readonly<{ offset: CodegenTypes.Double; viewport: CodegenTypes.Double }>
