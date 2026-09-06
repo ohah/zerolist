@@ -29,6 +29,11 @@ import java.nio.DoubleBuffer
 class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   // Solo-only ablation, intentionally not a usable list. Default path unchanged.
   private val freezePosition = ctx.currentActivity?.intent?.getStringExtra("diagnostic") == "freeze-position"
+  // Android 계측용 대조 경로. 공개 API/상태 재사용 정책은 동일하다.
+  private val diagnostic = ctx.currentActivity?.intent?.getStringExtra("diagnostic")
+  private val parentScroll = diagnostic !in listOf("pool-baseline", "pool-fabric-layout")
+  private val fabricLayout = diagnostic !in listOf("pool-baseline", "pool-parent-scroll")
+  private var placementOrigin = 0
   private val traceEnabled = ctx.currentActivity?.intent?.getBooleanExtra("trace", false) == true
   private val bindingTrace = ctx.currentActivity?.intent?.getStringExtra("diagnostic") == "trace-binding"
   private val tracedRequests = mutableMapOf<String, Int>()
@@ -130,11 +135,20 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
 
   private fun placeCommitted() {
     val d = offD ?: return
+    // 스크롤은 부모의 단일 변환으로 처리한다. 먼 위치에서는 좌표를 재기준화해
+    // 큰 데이터 인덱스가 float 정밀도를 잃지 않게 한다.
+    if (parentScroll) {
+      if (kotlin.math.abs(scrollY.toLong() - placementOrigin) > maxOf(height * 4L, 1L)) {
+        placementOrigin = scrollY
+      }
+      super.scrollTo(0, scrollY - placementOrigin)
+    }
     for (s in 0 until childCount) {
       val child = getChildAt(s)
       val index = committed.getOrNull(s) ?: -1
       child.visibility = if (index in 0 until count) View.VISIBLE else View.INVISIBLE
-      if (index in 0 until count) child.translationY = (d.get(index) - scrollY).toFloat()
+      if (index in 0 until count) child.translationY =
+        (d.get(index) - if (parentScroll) placementOrigin else scrollY).toFloat()
     }
   }
   private fun titleIndex(view: View): Int? {
@@ -149,7 +163,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     val spans = mutableListOf<Pair<Float, Float>>()
     for (s in 0 until childCount) {
       val child = getChildAt(s)
-      val top = child.top + child.translationY
+      val top = child.top + child.translationY - super.getScrollY()
       val bottom = top + child.height
       if (child.visibility != View.VISIBLE || bottom <= 0 || top >= height) continue
       visible++
@@ -334,14 +348,23 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   // Fabric ViewProps의 overflow 기본값과 무관하게 스크롤 영역 밖 셀은 그리지 않는다.
   override fun dispatchDraw(canvas: Canvas) {
     val saved=canvas.save()
-    canvas.clipRect(0,0,width,height)
+    canvas.clipRect(0,super.getScrollY(),width,height+super.getScrollY())
     super.dispatchDraw(canvas)
     canvas.restoreToCount(saved)
   }
 
+  // Fabric이 RN 자식의 크기·배치를 소유한다. FrameLayout으로 다시 측정하지 않는다.
+  // pool-baseline/pool-parent-scroll은 이전 배치와 비교하는 진단 경로다.
+  override fun onMeasure(widthSpec: Int, heightSpec: Int) {
+    if (fabricLayout) setMeasuredDimension(MeasureSpec.getSize(widthSpec), MeasureSpec.getSize(heightSpec))
+    else super.onMeasure(widthSpec, heightSpec)
+  }
+
   override fun onLayout(c: Boolean, l: Int, t: Int, r: Int, b: Int) {
-    super.onLayout(c, l, t, r, b)
-    if (rowPxF > 0) for (slot in 0 until childCount) getChildAt(slot).layout(0, 0, width, rowPxF.roundToInt())
+    if (!fabricLayout) {
+      super.onLayout(c, l, t, r, b)
+      if (rowPxF > 0) for (slot in 0 until childCount) getChildAt(slot).layout(0, 0, width, rowPxF.roundToInt())
+    }
     reposition()
   }
 

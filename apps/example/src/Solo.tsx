@@ -1,3 +1,4 @@
+import { AndroidPoolContract } from './AndroidPoolContract';
 import { UnifiedContract } from './UnifiedContract';
 import { useEffect, useMemo } from 'react';
 import { View, StyleSheet, useWindowDimensions, Platform } from 'react-native';
@@ -76,6 +77,8 @@ export default function Solo(props: {
     return () => clearInterval(timer);
   }, [props.jsBlockMs, props.preparationTrace]);
 
+  if (props.diagnostic === 'android-pool-contract')
+    return <AndroidPoolContract />;
   if (props.diagnostic === 'unified-contract') return <UnifiedContract />;
   if (!Engine) return <View style={s.fill} />;
   return (
