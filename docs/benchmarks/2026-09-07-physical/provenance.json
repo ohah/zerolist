@@ -1,0 +1,26 @@
+{
+  "source": "74ed97a",
+  "apk_sha256": "cf131db051b4a94548119eab3fa45e38a4a039d0dbc1149488bbf2c7cb220bfa",
+  "device": {
+    "model": "SM-S731N",
+    "soc": "s5e9945",
+    "android": "16",
+    "api": 36,
+    "size": [1080, 2340],
+    "density": 450,
+    "refresh_hz": 60,
+    "pipeline": "Skia (Vulkan)"
+  },
+  "changes": "제품 수정 및 GPU 설정 변경 없음. 60Hz 비교를 위해 peak/min refresh rate를 임시 변경, 종료 후 원래 값으로 복구.",
+  "local_trace_sha256": {
+    "trace-flat.trace": "11d818ef8f65561fea25a28f937abc7785a0c5a9792e2e0e18bb7dd65fb4ea44",
+    "trace-zero.trace": "894f8e0d7ebfa6172c29b99a79cce062521f58c97ba0193f0b9825a12b55ce5e",
+    "trace-before.trace": "fbc1b712abf309db3ceb5a29242e95225484134cd8ed60f6b23cf5844609fd81"
+  },
+  "archive_sha256": {
+    "trace-app-data.zip": "79b47cca66f509abc267582ade0b5d933a8a067ec368a4a03993070aa95ff931",
+    "audit-raw.zip": "09f1ecaf4ceee8c12cd05d1284043e7d188e83afb1eac312de9e703a839b2cf5",
+    "perf-raw.zip": "4de74df9f7cd6f890fbe4427a511c41e8369cb1d3a117b69cef150fa8d0bd0c0"
+  },
+  "settings_restored": true
+}
