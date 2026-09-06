@@ -1,0 +1,632 @@
+[
+  {
+    "name": "android-zigpool-5-block",
+    "platform": "android",
+    "engine": "zigpool",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-memory-videos/android-zigpool-5-block.webm",
+    "seconds": 6.813,
+    "wall_seconds": 6.8042124159999995,
+    "events": [
+      {
+        "t": 1.0146429580000005,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.337650375,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.669490916,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0021446250000006,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.1548331660000004,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.3027035830000004,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.4525224999999997,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.601886249999999,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.753075625,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.902340249999999,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.056117124999999,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.201827291,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.3527189999999996,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.5020657910000006,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.652207915999999,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.8027029160000003,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.135343332999999,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.47047775,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "42ed0e85747637b77f45966f3c10a5617667266ad9d1be29d57bb3b996a1206e"
+  },
+  {
+    "name": "android-template-worklet-5-block",
+    "platform": "android",
+    "engine": "template-worklet",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-memory-videos/android-template-worklet-5-block.webm",
+    "seconds": 6.832,
+    "wall_seconds": 6.827243750000001,
+    "events": [
+      {
+        "t": 1.0205036669999998,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.3532388340000026,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.6851186670000011,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0187451250000024,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.1687965420000026,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.3191026669999992,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.4717805000000013,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.6201134170000024,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.7693336670000015,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.9239092090000014,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.070650792000002,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.2182584170000013,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.3707625000000014,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.520262667000001,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.6689898340000013,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.8221212090000023,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.152696500000001,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.487574084000002,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "0beb58c6929c0a8912e9e2548965a98cd4acdeb65372b485a277cb156be0a89b"
+  },
+  {
+    "name": "android-template-compact-5-block",
+    "platform": "android",
+    "engine": "template-compact",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-memory-videos/android-template-compact-5-block.webm",
+    "seconds": 6.826,
+    "wall_seconds": 6.814881250000006,
+    "events": [
+      {
+        "t": 1.0208512499999998,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.3435106670000039,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.6784282090000033,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.011094167000003,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.1614722500000028,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.3118478340000053,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.458786042,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.6093952500000057,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.7606140420000003,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.911618209000004,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.062103042000004,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.2129806670000036,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.365054709000006,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.511045542000005,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.663107417000006,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.809599625000004,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.143415584000003,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 4.478869167000006,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "4c62e401b70346a74878fc16ce594d721d5bdf2a56a8aacd75237bdfdb070dee"
+  },
+  {
+    "name": "ios-zigpool-5-block",
+    "platform": "ios",
+    "engine": "zigpool",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-memory-videos/ios-zigpool-5-block.mp4",
+    "seconds": 9.448333,
+    "wall_seconds": 9.445034083000003,
+    "events": [
+      {
+        "t": 1.010199208000003,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.5594745000000003,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.079559291999999,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.5967780829999967,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.8703050419999983,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.1513561249999995,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.434488958000003,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.7099672920000017,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.990938749999998,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.269109749999998,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.548417458000003,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.831156583000002,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.1147610000000014,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.3907705419999985,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.669651541999997,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.9460060420000005,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.430468583,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.937473417,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "10616ca8537c51969f7cc1469818a09a8dcaa5de6051cbcbe6a6944950a4f332"
+  },
+  {
+    "name": "ios-template-worklet-5-block",
+    "platform": "ios",
+    "engine": "template-worklet",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-memory-videos/ios-template-worklet-5-block.mp4",
+    "seconds": 9.433333,
+    "wall_seconds": 9.429378541999995,
+    "events": [
+      {
+        "t": 1.0099792089999937,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.5297613339999998,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0480007919999963,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.564774541999995,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.846004417000003,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.1273352089999946,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.410603334000001,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.695003708999991,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.974041624999998,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.250112208999994,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.530350291999994,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.8074045420000004,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.074625209000004,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.3471106669999955,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.624218749999997,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.903604791999996,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.409118583999998,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.907389917000003,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "939361f875d444d4588402e636063c3d1545346654bc6b445eea48ca39e0823a"
+  },
+  {
+    "name": "ios-template-compact-5-block",
+    "platform": "ios",
+    "engine": "template-compact",
+    "buffer_rows": 5,
+    "variant": "baseline",
+    "delay_ms": 0,
+    "js_block_ms": 160,
+    "source": "/private/tmp/zerolist-memory-videos/ios-template-compact-5-block.mp4",
+    "seconds": 9.361667,
+    "wall_seconds": 9.357057499999996,
+    "events": [
+      {
+        "t": 1.001090916999999,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 1.542016916999998,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.0341959590000016,
+        "phase": "normal",
+        "duration_ms": 300
+      },
+      {
+        "t": 2.544172500000002,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 2.824671959,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.1016711249999958,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.380938583999992,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.658711334000003,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 3.9378782919999935,
+        "phase": "fast",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.2162655839999985,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.49936787499999,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 4.7747978339999975,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.052973999999992,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.330283749999992,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.606481333999994,
+        "phase": "reverse",
+        "duration_ms": 120
+      },
+      {
+        "t": 5.878796499999993,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.391812416999997,
+        "phase": "settle",
+        "duration_ms": 300
+      },
+      {
+        "t": 6.869756041999992,
+        "phase": "settle",
+        "duration_ms": 300
+      }
+    ],
+    "sha256": "a6aea3c337c32ba22136f6f1378fc43e811991f95f994cafe29770c44c431c48"
+  }
+]
