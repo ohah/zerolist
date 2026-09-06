@@ -1,0 +1,37 @@
+{
+  "implementation_commit": "6dac750444e26e572145c996171d6f5af44c9f1a",
+  "rn": "0.87.1",
+  "build": "arm64 Release",
+  "sources": [
+    {
+      "path": "apps/example/src/harness/engines/template.native.tsx",
+      "sha256": "731dcd59c3dd9435a324954d1132da899f4dc65d224a04c601434d4599505c71"
+    },
+    {
+      "path": "apps/example/android/app/src/main/java/zerolist/example/CommonListProbe.kt",
+      "sha256": "1a9c5905ca1a3dab16935829f2a25d2ad00aff1d1b9c61291f3fe9d90ab89391"
+    },
+    {
+      "path": "apps/example/android/app/src/main/java/zerolist/example/SoloActivity.kt",
+      "sha256": "92ac19624762f08c0e79ceb87d3d78b1444a02d0dd86d7d62e95d8699d9a6590"
+    },
+    {
+      "path": "apps/example/ios/ZerolistExample/AppDelegate.swift",
+      "sha256": "324c376dc51e691d9d04d5dc3c8ea7377d14f7742bd44ab818d1b24e6af6409d"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "app-release.apk",
+      "sha256": "15c249d4add35f793ef781b13afc8be49d97aacbe3abeb21eb8625f5007a19f8"
+    },
+    {
+      "name": "ZerolistExample",
+      "sha256": "db18853e9a359e49995b6fd3e332079e4e5d0e854a619fc1651051cbb72e0773"
+    },
+    {
+      "name": "main.jsbundle",
+      "sha256": "3c7b4d3f1d55b2c7f7181fb992a8282ebf9c8fa88c2cbccfaaadbb18d8ff5ded"
+    }
+  ]
+}

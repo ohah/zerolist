@@ -1,0 +1,504 @@
+[
+  {
+    "platform": "ios",
+    "engine": "template-worklet",
+    "startup": {
+      "render_begin": {
+        "median": 251.0,
+        "min": 246.0,
+        "max": 256.0
+      },
+      "data_ready": {
+        "median": 1219.5,
+        "min": 1202.0,
+        "max": 1259.0
+      },
+      "content_ready": {
+        "median": 1039.224,
+        "min": 994.592,
+        "max": 1213.947
+      },
+      "both": {
+        "median": 1219.5,
+        "min": 1202.0,
+        "max": 1259.0
+      }
+    },
+    "perf": {
+      "0": {
+        "late": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "p95": {
+          "mean": 16.666667070239782,
+          "min": 16.666667070239782,
+          "max": 16.666667070239782
+        },
+        "cpu": {
+          "mean": 15.852008435892607,
+          "min": 15.421704140081962,
+          "max": 16.1099834998291
+        },
+        "memory": {
+          "mean": 599.1,
+          "min": 591.3125,
+          "max": 604.09375
+        }
+      },
+      "160": {
+        "late": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "p95": {
+          "mean": 16.666667070239782,
+          "min": 16.666667070239782,
+          "max": 16.666667070239782
+        },
+        "cpu": {
+          "mean": 87.90743448851703,
+          "min": 87.38322591252128,
+          "max": 88.73992742688046
+        },
+        "memory": {
+          "mean": 587.96875,
+          "min": 585.96875,
+          "max": 590.703125
+        }
+      }
+    },
+    "audit": {
+      "name": "template-worklet-5",
+      "engine": "template-worklet",
+      "rows": 5,
+      "preparation": "baseline",
+      "run": 1,
+      "mode": "audit",
+      "block_ms": 160,
+      "memory_before_mib": 564.21875,
+      "memory_after_mib": 592.921875,
+      "cpu_seconds": 7.26,
+      "wall_seconds": 8.292114291999999,
+      "cpu_one_core_percent": 87.55306239572995,
+      "initial_counts": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "final_counts": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "work": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "blank_episode_count": 0,
+      "blank_episode_max_ms": 0,
+      "blank_episode_total_ms": 0,
+      "blank_tail_open": false,
+      "frames": 500,
+      "moving_frames": 470,
+      "entry_ready_percent": 100.0,
+      "entered": 132.0,
+      "unready": 0.0,
+      "blank_moving_percent": 0.0,
+      "mean_blank_area_percent": 0.0,
+      "max_blank_area_percent": 0.0,
+      "wrong_frames": 0,
+      "overlap_frames": 0,
+      "last_blank_px": 0.0,
+      "scroll_min": 37176.0,
+      "scroll_max": 57015.0,
+      "attached_max": 14.0,
+      "travel_rows": 132.2450128205133,
+      "block_samples": 82,
+      "block_median_ms": 160.00133323669434
+    }
+  },
+  {
+    "platform": "ios",
+    "engine": "template-compact",
+    "startup": {
+      "render_begin": {
+        "median": 250.0,
+        "min": 245.0,
+        "max": 258.0
+      },
+      "data_ready": {
+        "median": 674.5,
+        "min": 650.0,
+        "max": 689.0
+      },
+      "content_ready": {
+        "median": 519.5065,
+        "min": 464.801,
+        "max": 532.213
+      },
+      "both": {
+        "median": 674.5,
+        "min": 650.0,
+        "max": 689.0
+      }
+    },
+    "paired_faster_runs": 10,
+    "perf": {
+      "0": {
+        "late": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "p95": {
+          "mean": 16.666667070239782,
+          "min": 16.666667070239782,
+          "max": 16.666667070239782
+        },
+        "cpu": {
+          "mean": 15.634106368148418,
+          "min": 14.773341545689735,
+          "max": 16.607101716077917
+        },
+        "memory": {
+          "mean": 516.69375,
+          "min": 508.171875,
+          "max": 522.625
+        }
+      },
+      "160": {
+        "late": {
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "p95": {
+          "mean": 16.666667070239782,
+          "min": 16.666667070239782,
+          "max": 16.666667070239782
+        },
+        "cpu": {
+          "mean": 87.7157096729739,
+          "min": 86.6068991974821,
+          "max": 88.44348045325448
+        },
+        "memory": {
+          "mean": 507.1625,
+          "min": 504.59375,
+          "max": 509.140625
+        }
+      }
+    },
+    "audit": {
+      "name": "template-compact-5",
+      "engine": "template-compact",
+      "rows": 5,
+      "preparation": "baseline",
+      "run": 1,
+      "mode": "audit",
+      "block_ms": 160,
+      "memory_before_mib": 483.125,
+      "memory_after_mib": 508.4375,
+      "cpu_seconds": 7.390000000000001,
+      "wall_seconds": 8.410193832999997,
+      "cpu_one_core_percent": 87.86955624022659,
+      "initial_counts": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "final_counts": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "work": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "blank_episode_count": 0,
+      "blank_episode_max_ms": 0,
+      "blank_episode_total_ms": 0,
+      "blank_tail_open": false,
+      "frames": 507,
+      "moving_frames": 476,
+      "entry_ready_percent": 100.0,
+      "entered": 124.0,
+      "unready": 0.0,
+      "blank_moving_percent": 0.0,
+      "mean_blank_area_percent": 0.0,
+      "max_blank_area_percent": 0.0,
+      "wrong_frames": 0,
+      "overlap_frames": 0,
+      "last_blank_px": 0.0,
+      "scroll_min": 38074.667,
+      "scroll_max": 56811.333,
+      "attached_max": 14.0,
+      "travel_rows": 124.82478632478679,
+      "block_samples": 82,
+      "block_median_ms": 160.00129175186157
+    }
+  },
+  {
+    "platform": "android",
+    "engine": "template-worklet",
+    "startup": {
+      "render_begin": {
+        "median": 228.5,
+        "min": 211.0,
+        "max": 290.0
+      },
+      "data_ready": {
+        "median": 1319.5,
+        "min": 1296.0,
+        "max": 1538.0
+      },
+      "content_ready": {
+        "median": 1080.7034385,
+        "min": 1056.684625,
+        "max": 1281.499542
+      },
+      "both": {
+        "median": 1319.5,
+        "min": 1296.0,
+        "max": 1538.0
+      }
+    },
+    "perf": {
+      "0": {
+        "late": {
+          "mean": 1.092,
+          "min": 0.73,
+          "max": 1.46
+        },
+        "p95": {
+          "mean": 20,
+          "min": 19,
+          "max": 23
+        },
+        "cpu": {
+          "mean": 16.21525261482082,
+          "min": 15.657005254925402,
+          "max": 16.9989744381356
+        },
+        "memory": {
+          "mean": 363.540625,
+          "min": 360.2099609375,
+          "max": 365.6435546875
+        }
+      },
+      "160": {
+        "late": {
+          "mean": 0.9460000000000001,
+          "min": 0.73,
+          "max": 1.09
+        },
+        "p95": {
+          "mean": 18.8,
+          "min": 18,
+          "max": 21
+        },
+        "cpu": {
+          "mean": 87.49393528857662,
+          "min": 86.80066620865313,
+          "max": 88.69062308478199
+        },
+        "memory": {
+          "mean": 363.759375,
+          "min": 361.080078125,
+          "max": 365.912109375
+        }
+      }
+    },
+    "audit": {
+      "name": "template-worklet-5",
+      "engine": "template-worklet",
+      "rows": 5,
+      "preparation": "baseline",
+      "run": 1,
+      "mode": "audit",
+      "block_ms": 160,
+      "memory_before_mib": 349.2666015625,
+      "memory_after_mib": 364.908203125,
+      "cpu_seconds": 5.130000000000001,
+      "wall_seconds": 5.821791458000001,
+      "cpu_one_core_percent": 88.11720648204641,
+      "initial_counts": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "final_counts": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "work": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "blank_episode_count": 0,
+      "blank_episode_max_ms": 0,
+      "blank_episode_total_ms": 0,
+      "blank_tail_open": false,
+      "frames": 269,
+      "moving_frames": 244,
+      "entry_ready_percent": 100.0,
+      "entered": 45.0,
+      "unready": 0.0,
+      "blank_moving_percent": 0.0,
+      "mean_blank_area_percent": 0.0,
+      "max_blank_area_percent": 0.0,
+      "wrong_frames": 0,
+      "overlap_frames": 0,
+      "last_blank_px": 1.0,
+      "scroll_min": 19808.0,
+      "scroll_max": 33149.0,
+      "attached_max": 14.0,
+      "travel_rows": 45.289377289377214,
+      "block_samples": 28,
+      "block_median_ms": 160.00147950649261
+    }
+  },
+  {
+    "platform": "android",
+    "engine": "template-compact",
+    "startup": {
+      "render_begin": {
+        "median": 235.0,
+        "min": 222.0,
+        "max": 254.0
+      },
+      "data_ready": {
+        "median": 700.0,
+        "min": 668.0,
+        "max": 741.0
+      },
+      "content_ready": {
+        "median": 464.648688,
+        "min": 433.647375,
+        "max": 521.588708
+      },
+      "both": {
+        "median": 700.0,
+        "min": 668.0,
+        "max": 741.0
+      }
+    },
+    "paired_faster_runs": 10,
+    "perf": {
+      "0": {
+        "late": {
+          "mean": 1.216,
+          "min": 0.73,
+          "max": 1.71
+        },
+        "p95": {
+          "mean": 20.8,
+          "min": 20,
+          "max": 24
+        },
+        "cpu": {
+          "mean": 16.0074441166949,
+          "min": 15.36507537788753,
+          "max": 16.516631160577923
+        },
+        "memory": {
+          "mean": 282.1505859375,
+          "min": 279.5849609375,
+          "max": 285.2919921875
+        }
+      },
+      "160": {
+        "late": {
+          "mean": 2.676,
+          "min": 0.73,
+          "max": 8.0
+        },
+        "p95": {
+          "mean": 24.6,
+          "min": 18,
+          "max": 40
+        },
+        "cpu": {
+          "mean": 88.67594294358926,
+          "min": 86.35342825934742,
+          "max": 94.50467419749407
+        },
+        "memory": {
+          "mean": 279.97109375,
+          "min": 277.3876953125,
+          "max": 282.2900390625
+        }
+      }
+    },
+    "audit": {
+      "name": "template-compact-5",
+      "engine": "template-compact",
+      "rows": 5,
+      "preparation": "baseline",
+      "run": 1,
+      "mode": "audit",
+      "block_ms": 160,
+      "memory_before_mib": 268.78125,
+      "memory_after_mib": 282.095703125,
+      "cpu_seconds": 5.1000000000000005,
+      "wall_seconds": 5.8102318749999995,
+      "cpu_one_core_percent": 87.77618707342899,
+      "initial_counts": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "final_counts": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "work": {
+        "renders": 0,
+        "callbacks": 0,
+        "mounts": 0,
+        "unmounts": 0
+      },
+      "blank_episode_count": 0,
+      "blank_episode_max_ms": 0,
+      "blank_episode_total_ms": 0,
+      "blank_tail_open": false,
+      "frames": 273,
+      "moving_frames": 252,
+      "entry_ready_percent": 100.0,
+      "entered": 46.0,
+      "unready": 0.0,
+      "blank_moving_percent": 0.0,
+      "mean_blank_area_percent": 0.0,
+      "max_blank_area_percent": 0.0,
+      "wrong_frames": 0,
+      "overlap_frames": 0,
+      "last_blank_px": 1.0,
+      "scroll_min": 19682.0,
+      "scroll_max": 33000.0,
+      "attached_max": 14.0,
+      "travel_rows": 45.23728123728119,
+      "block_samples": 28,
+      "block_median_ms": 160.00154200196266
+    }
+  }
+]
