@@ -1,5 +1,7 @@
 # 통합 ZeroList와 일반 React 셀 5종 비교
 
+> 후속 확인: 같은 코드를 다시 측정하자 Android의 큰 차이가 재현되지 않았고, 당시 높은 호스트 부하를 확인했다. 아래는 당시 실행 기록이며 코드 고유의 고정 성능 차이로 해석하지 않는다. [Android 재측정과 배치 개선](../2026-09-06-android-focus/README.md).
+
 **정상 부하에서 simple/heavy를 나눠 같은 새 바이너리로 비교했다.** 비용 각 3회 총 60회, 별도 실제 제목·행 배치 검사 각 1회 총 20회다. 강제 JS 점유는 없다. 동적 변경은 별도 계약 화면에서 검사했고 이 표는 고정 높이 정상 스크롤이다. 이전 ZeroList 바이너리와의 직접 전후 비교는 아니다.
 
 RN 0.87.1 arm64 Release, 10만 건, 화면 밖 한쪽 5행 목표. 임의의 특별 텍스트·장식 뷰를 요구하지 않는 공통 React 셀을 사용한다. FlatList에는 getItemLayout·초기 화면 행 수를 주고, FlashList·LegendList도 같은 높이 힌트를 사용한다. [범위와 구현 검증](implementation-ko.md) · [판단과 후속 기준](findings-ko.md).

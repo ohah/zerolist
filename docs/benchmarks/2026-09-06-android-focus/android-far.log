@@ -1,0 +1,35 @@
+--------- beginning of main
+I/ReactNativeJS(30650): Running "ZLSolo"
+I/ReactNativeJS(30650): [ZlRuntime] rn=0.87.1
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [ZlAndroidStep] 99980 이동 · 첫 행을 눌러 확인
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [ZlAndroidScroll] step=99980 이동 · 첫 행을 눌러 확인 y=9998000
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [ZlAndroidTouch] id=99980 index=99980 value=1
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [ZlAndroidStep] 먼 위치에서 앞 삽입
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [ZlAndroidStep] 20개로 축소
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [ZlAndroidStep] 처음 이동
+I/ReactNativeJS(30650): [ZlAndroidScroll] step=처음 이동 y=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [ZlAndroidStep] 고정 높이 140 변경
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [ZlAndroidStep] 끝으로 이동
+I/ReactNativeJS(30650): [ZlAndroidScroll] step=끝으로 이동 y=2000.3809523809523
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0
+I/ReactNativeJS(30650): [JS0] zerolist renders=0 cbs=0 mounts=0 unmounts=0

@@ -1,0 +1,1243 @@
+{
+  "flatlist": {
+    "frame_timeline": [
+      {
+        "jank_type": "Prediction Error",
+        "present_type": "Early Present",
+        "on_time_finish": "1",
+        "n": "21",
+        "avg_ms": "3.424929",
+        "max_ms": "6.389417"
+      },
+      {
+        "jank_type": "Unknown Jank",
+        "present_type": "Early Present",
+        "on_time_finish": "0",
+        "n": "270",
+        "avg_ms": "16.461201",
+        "max_ms": "21.570416"
+      }
+    ],
+    "thread_states": [
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R",
+        "n": "919",
+        "total_ms": "99.635782",
+        "max_ms": "1.374583"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R+",
+        "n": "154",
+        "total_ms": "7.493423",
+        "max_ms": "0.258208"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "Running",
+        "n": "1084",
+        "total_ms": "523.757749",
+        "max_ms": "6.926125"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "S",
+        "n": "810",
+        "total_ms": "4598.960048",
+        "max_ms": "384.645583"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R",
+        "n": "1960",
+        "total_ms": "152.025156",
+        "max_ms": "3.096500"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R+",
+        "n": "264",
+        "total_ms": "7.153243",
+        "max_ms": "0.271458"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "Running",
+        "n": "2227",
+        "total_ms": "737.454105",
+        "max_ms": "6.107916"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "S",
+        "n": "1445",
+        "total_ms": "13874.138462",
+        "max_ms": "24.178917"
+      }
+    ],
+    "view_slices": [
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67598530",
+        "n": "1",
+        "avg_ms": "8.685084",
+        "max_ms": "8.685084"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67598354",
+        "n": "1",
+        "avg_ms": "8.221791",
+        "max_ms": "8.221791"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67598442",
+        "n": "1",
+        "avg_ms": "7.076833",
+        "max_ms": "7.076833"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67595740",
+        "n": "1",
+        "avg_ms": "7.029750",
+        "max_ms": "7.029750"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "Drawing  0.00  0.00 1080.00 2400.00",
+        "n": "291",
+        "avg_ms": "1.574577",
+        "max_ms": "6.763875"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597362",
+        "n": "1",
+        "avg_ms": "6.761750",
+        "max_ms": "6.761750"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67599051",
+        "n": "1",
+        "avg_ms": "6.345834",
+        "max_ms": "6.345834"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597590",
+        "n": "1",
+        "avg_ms": "6.232041",
+        "max_ms": "6.232041"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67598038",
+        "n": "1",
+        "avg_ms": "6.206959",
+        "max_ms": "6.206959"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "animation",
+        "n": "887",
+        "avg_ms": "0.315586",
+        "max_ms": "6.183209"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597296",
+        "n": "1",
+        "avg_ms": "6.153541",
+        "max_ms": "6.153541"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597230",
+        "n": "1",
+        "avg_ms": "6.057125",
+        "max_ms": "6.057125"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597149",
+        "n": "1",
+        "avg_ms": "5.978959",
+        "max_ms": "5.978959"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597443",
+        "n": "1",
+        "avg_ms": "5.973625",
+        "max_ms": "5.973625"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67595828",
+        "n": "1",
+        "avg_ms": "5.928125",
+        "max_ms": "5.928125"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597722",
+        "n": "1",
+        "avg_ms": "5.919125",
+        "max_ms": "5.919125"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "MountItemDispatcher::mountViews mountItems to execute",
+        "n": "256",
+        "avg_ms": "0.633490",
+        "max_ms": "5.918958"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "IntBufferBatchMountItem::mountViews",
+        "n": "299",
+        "avg_ms": "0.526231",
+        "max_ms": "5.895000"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67595938",
+        "n": "1",
+        "avg_ms": "5.764667",
+        "max_ms": "5.764667"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67598104",
+        "n": "1",
+        "avg_ms": "5.751500",
+        "max_ms": "5.751500"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67595806",
+        "n": "1",
+        "avg_ms": "5.740917",
+        "max_ms": "5.740917"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67600086",
+        "n": "1",
+        "avg_ms": "5.677916",
+        "max_ms": "5.677916"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597509",
+        "n": "1",
+        "avg_ms": "5.651834",
+        "max_ms": "5.651834"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67596371",
+        "n": "1",
+        "avg_ms": "5.632208",
+        "max_ms": "5.632208"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597972",
+        "n": "1",
+        "avg_ms": "5.462792",
+        "max_ms": "5.462792"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597083",
+        "n": "1",
+        "avg_ms": "5.440458",
+        "max_ms": "5.440458"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67598882",
+        "n": "1",
+        "avg_ms": "5.435375",
+        "max_ms": "5.435375"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67595850",
+        "n": "1",
+        "avg_ms": "5.408584",
+        "max_ms": "5.408584"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67598618",
+        "n": "1",
+        "avg_ms": "5.395416",
+        "max_ms": "5.395416"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67596980",
+        "n": "1",
+        "avg_ms": "5.374083",
+        "max_ms": "5.374083"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67598794",
+        "n": "1",
+        "avg_ms": "5.365917",
+        "max_ms": "5.365917"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67599653",
+        "n": "1",
+        "avg_ms": "5.247875",
+        "max_ms": "5.247875"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597678",
+        "n": "1",
+        "avg_ms": "5.245542",
+        "max_ms": "5.245542"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67596547",
+        "n": "1",
+        "avg_ms": "5.184917",
+        "max_ms": "5.184917"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597891",
+        "n": "1",
+        "avg_ms": "5.149875",
+        "max_ms": "5.149875"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67596804",
+        "n": "1",
+        "avg_ms": "5.137084",
+        "max_ms": "5.137084"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67598706",
+        "n": "1",
+        "avg_ms": "5.091375",
+        "max_ms": "5.091375"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67599477",
+        "n": "1",
+        "avg_ms": "5.084416",
+        "max_ms": "5.084416"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67597825",
+        "n": "1",
+        "avg_ms": "5.051334",
+        "max_ms": "5.051334"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67600526",
+        "n": "1",
+        "avg_ms": "4.834833",
+        "max_ms": "4.834833"
+      }
+    ],
+    "late_frame_main_states": [],
+    "slow_slice_states": [],
+    "trace_errors": []
+  },
+  "zerolist": {
+    "frame_timeline": [
+      {
+        "jank_type": "Prediction Error",
+        "present_type": "Early Present",
+        "on_time_finish": "1",
+        "n": "5",
+        "avg_ms": "5.261150",
+        "max_ms": "12.625000"
+      },
+      {
+        "jank_type": "Unknown Jank",
+        "present_type": "Early Present",
+        "on_time_finish": "0",
+        "n": "268",
+        "avg_ms": "16.515363",
+        "max_ms": "21.843209"
+      }
+    ],
+    "thread_states": [
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R",
+        "n": "786",
+        "total_ms": "85.073052",
+        "max_ms": "1.416542"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R+",
+        "n": "111",
+        "total_ms": "6.754836",
+        "max_ms": "2.401917"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "Running",
+        "n": "900",
+        "total_ms": "570.935367",
+        "max_ms": "11.106875"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "S",
+        "n": "582",
+        "total_ms": "3906.704914",
+        "max_ms": "20.365417"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "D",
+        "n": "1",
+        "total_ms": "0.249167",
+        "max_ms": "0.249167"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R",
+        "n": "1636",
+        "total_ms": "121.813514",
+        "max_ms": "1.623875"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R+",
+        "n": "303",
+        "total_ms": "6.973450",
+        "max_ms": "0.639875"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "Running",
+        "n": "1941",
+        "total_ms": "453.171548",
+        "max_ms": "4.142083"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "S",
+        "n": "1207",
+        "total_ms": "14205.235370",
+        "max_ms": "24.204583"
+      }
+    ],
+    "view_slices": [
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67572442",
+        "n": "1",
+        "avg_ms": "12.021708",
+        "max_ms": "12.021708"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "Drawing  0.00  0.00 1080.00 2400.00",
+        "n": "273",
+        "avg_ms": "1.500903",
+        "max_ms": "11.787792"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67572464",
+        "n": "1",
+        "avg_ms": "11.454708",
+        "max_ms": "11.454708"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67572486",
+        "n": "1",
+        "avg_ms": "10.294417",
+        "max_ms": "10.294417"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67572376",
+        "n": "1",
+        "avg_ms": "7.497625",
+        "max_ms": "7.497625"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67574122",
+        "n": "1",
+        "avg_ms": "5.600583",
+        "max_ms": "5.600583"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67574768",
+        "n": "1",
+        "avg_ms": "5.452584",
+        "max_ms": "5.452584"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67576075",
+        "n": "1",
+        "avg_ms": "5.435083",
+        "max_ms": "5.435083"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67574658",
+        "n": "1",
+        "avg_ms": "5.421000",
+        "max_ms": "5.421000"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67574188",
+        "n": "1",
+        "avg_ms": "5.419917",
+        "max_ms": "5.419917"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67575150",
+        "n": "1",
+        "avg_ms": "5.294208",
+        "max_ms": "5.294208"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67572398",
+        "n": "1",
+        "avg_ms": "5.279833",
+        "max_ms": "5.279833"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67575730",
+        "n": "1",
+        "avg_ms": "5.269417",
+        "max_ms": "5.269417"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67575297",
+        "n": "1",
+        "avg_ms": "5.205583",
+        "max_ms": "5.205583"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67572838",
+        "n": "1",
+        "avg_ms": "5.064375",
+        "max_ms": "5.064375"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67573249",
+        "n": "1",
+        "avg_ms": "5.057959",
+        "max_ms": "5.057959"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67573036",
+        "n": "1",
+        "avg_ms": "5.042167",
+        "max_ms": "5.042167"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67573902",
+        "n": "1",
+        "avg_ms": "4.890833",
+        "max_ms": "4.890833"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67576706",
+        "n": "1",
+        "avg_ms": "4.867500",
+        "max_ms": "4.867500"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67575084",
+        "n": "1",
+        "avg_ms": "4.853750",
+        "max_ms": "4.853750"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67573799",
+        "n": "1",
+        "avg_ms": "4.838334",
+        "max_ms": "4.838334"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67573733",
+        "n": "1",
+        "avg_ms": "4.792042",
+        "max_ms": "4.792042"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67575517",
+        "n": "1",
+        "avg_ms": "4.783625",
+        "max_ms": "4.783625"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67575451",
+        "n": "1",
+        "avg_ms": "4.756333",
+        "max_ms": "4.756333"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67577117",
+        "n": "1",
+        "avg_ms": "4.742291",
+        "max_ms": "4.742291"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67575899",
+        "n": "1",
+        "avg_ms": "4.707750",
+        "max_ms": "4.707750"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67575018",
+        "n": "1",
+        "avg_ms": "4.701375",
+        "max_ms": "4.701375"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67574871",
+        "n": "1",
+        "avg_ms": "4.692375",
+        "max_ms": "4.692375"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67574056",
+        "n": "1",
+        "avg_ms": "4.680291",
+        "max_ms": "4.680291"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67576273",
+        "n": "1",
+        "avg_ms": "4.670667",
+        "max_ms": "4.670667"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67573689",
+        "n": "1",
+        "avg_ms": "4.639417",
+        "max_ms": "4.639417"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67574357",
+        "n": "1",
+        "avg_ms": "4.633000",
+        "max_ms": "4.633000"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67576919",
+        "n": "1",
+        "avg_ms": "4.623959",
+        "max_ms": "4.623959"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67575664",
+        "n": "1",
+        "avg_ms": "4.616792",
+        "max_ms": "4.616792"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67574291",
+        "n": "1",
+        "avg_ms": "4.615459",
+        "max_ms": "4.615459"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67576508",
+        "n": "1",
+        "avg_ms": "4.615250",
+        "max_ms": "4.615250"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67572618",
+        "n": "1",
+        "avg_ms": "4.605583",
+        "max_ms": "4.605583"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67574489",
+        "n": "1",
+        "avg_ms": "4.603292",
+        "max_ms": "4.603292"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67575965",
+        "n": "1",
+        "avg_ms": "4.590125",
+        "max_ms": "4.590125"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67577526",
+        "n": "1",
+        "avg_ms": "4.563084",
+        "max_ms": "4.563084"
+      }
+    ],
+    "late_frame_main_states": [],
+    "slow_slice_states": [],
+    "trace_errors": []
+  },
+  "zigpool": {
+    "frame_timeline": [
+      {
+        "jank_type": "Prediction Error",
+        "present_type": "Early Present",
+        "on_time_finish": "1",
+        "n": "12",
+        "avg_ms": "3.246344",
+        "max_ms": "6.800875"
+      },
+      {
+        "jank_type": "Unknown Jank",
+        "present_type": "Early Present",
+        "on_time_finish": "0",
+        "n": "260",
+        "avg_ms": "16.545106",
+        "max_ms": "22.752125"
+      }
+    ],
+    "thread_states": [
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R",
+        "n": "809",
+        "total_ms": "79.620686",
+        "max_ms": "1.363209"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "R+",
+        "n": "147",
+        "total_ms": "5.706675",
+        "max_ms": "0.261917"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "Running",
+        "n": "965",
+        "total_ms": "536.819212",
+        "max_ms": "7.412625"
+      },
+      {
+        "name": "RenderThread",
+        "is_main_thread": "0",
+        "state": "S",
+        "n": "593",
+        "total_ms": "3934.737512",
+        "max_ms": "20.829792"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R",
+        "n": "1727",
+        "total_ms": "113.119152",
+        "max_ms": "2.871500"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "R+",
+        "n": "376",
+        "total_ms": "9.327554",
+        "max_ms": "0.726167"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "Running",
+        "n": "2103",
+        "total_ms": "382.964457",
+        "max_ms": "2.206667"
+      },
+      {
+        "name": "erolist.example",
+        "is_main_thread": "1",
+        "state": "S",
+        "n": "1202",
+        "total_ms": "14266.942511",
+        "max_ms": "24.522541"
+      }
+    ],
+    "view_slices": [
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67618758",
+        "n": "1",
+        "avg_ms": "7.402750",
+        "max_ms": "7.402750"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "Drawing  0.00  0.00 1080.00 2400.00",
+        "n": "272",
+        "avg_ms": "1.486767",
+        "max_ms": "6.941959"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67623521",
+        "n": "1",
+        "avg_ms": "4.388250",
+        "max_ms": "4.388250"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67622193",
+        "n": "1",
+        "avg_ms": "4.120791",
+        "max_ms": "4.120791"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67618824",
+        "n": "1",
+        "avg_ms": "3.880333",
+        "max_ms": "3.880333"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67618846",
+        "n": "1",
+        "avg_ms": "3.796041",
+        "max_ms": "3.796041"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67619712",
+        "n": "1",
+        "avg_ms": "3.630958",
+        "max_ms": "3.630958"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67621466",
+        "n": "1",
+        "avg_ms": "3.457333",
+        "max_ms": "3.457333"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67619910",
+        "n": "1",
+        "avg_ms": "3.432417",
+        "max_ms": "3.432417"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67622846",
+        "n": "1",
+        "avg_ms": "3.315584",
+        "max_ms": "3.315584"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67622193",
+        "n": "1",
+        "avg_ms": "3.269833",
+        "max_ms": "3.269833"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67618846",
+        "n": "1",
+        "avg_ms": "3.228417",
+        "max_ms": "3.228417"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67621554",
+        "n": "1",
+        "avg_ms": "3.126625",
+        "max_ms": "3.126625"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67618868",
+        "n": "1",
+        "avg_ms": "3.115791",
+        "max_ms": "3.115791"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67622259",
+        "n": "1",
+        "avg_ms": "3.089833",
+        "max_ms": "3.089833"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67623345",
+        "n": "1",
+        "avg_ms": "3.081750",
+        "max_ms": "3.081750"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67621679",
+        "n": "1",
+        "avg_ms": "3.073000",
+        "max_ms": "3.073000"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67621532",
+        "n": "1",
+        "avg_ms": "3.072292",
+        "max_ms": "3.072292"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67622934",
+        "n": "1",
+        "avg_ms": "2.994084",
+        "max_ms": "2.994084"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67620739",
+        "n": "1",
+        "avg_ms": "2.970500",
+        "max_ms": "2.970500"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67622494",
+        "n": "1",
+        "avg_ms": "2.940583",
+        "max_ms": "2.940583"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67620629",
+        "n": "1",
+        "avg_ms": "2.921583",
+        "max_ms": "2.921583"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67623565",
+        "n": "1",
+        "avg_ms": "2.873625",
+        "max_ms": "2.873625"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67621099",
+        "n": "1",
+        "avg_ms": "2.849500",
+        "max_ms": "2.849500"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67621165",
+        "n": "1",
+        "avg_ms": "2.844000",
+        "max_ms": "2.844000"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67619022",
+        "n": "1",
+        "avg_ms": "2.797917",
+        "max_ms": "2.797917"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67620820",
+        "n": "1",
+        "avg_ms": "2.796708",
+        "max_ms": "2.796708"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67622303",
+        "n": "1",
+        "avg_ms": "2.783375",
+        "max_ms": "2.783375"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67618824",
+        "n": "1",
+        "avg_ms": "2.781208",
+        "max_ms": "2.781208"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67621613",
+        "n": "1",
+        "avg_ms": "2.769958",
+        "max_ms": "2.769958"
+      },
+      {
+        "thread_name": "RenderThread",
+        "is_main_thread": "0",
+        "slice_name": "DrawFrames 67618802",
+        "n": "1",
+        "avg_ms": "2.767208",
+        "max_ms": "2.767208"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67620673",
+        "n": "1",
+        "avg_ms": "2.764917",
+        "max_ms": "2.764917"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67619279",
+        "n": "1",
+        "avg_ms": "2.752167",
+        "max_ms": "2.752167"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67619477",
+        "n": "1",
+        "avg_ms": "2.683416",
+        "max_ms": "2.683416"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67620145",
+        "n": "1",
+        "avg_ms": "2.646042",
+        "max_ms": "2.646042"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67621826",
+        "n": "1",
+        "avg_ms": "2.627500",
+        "max_ms": "2.627500"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67620299",
+        "n": "1",
+        "avg_ms": "2.623167",
+        "max_ms": "2.623167"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67623751",
+        "n": "1",
+        "avg_ms": "2.610791",
+        "max_ms": "2.610791"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67620453",
+        "n": "1",
+        "avg_ms": "2.602250",
+        "max_ms": "2.602250"
+      },
+      {
+        "thread_name": "erolist.example",
+        "is_main_thread": "1",
+        "slice_name": "Choreographer#doFrame 67620585",
+        "n": "1",
+        "avg_ms": "2.599375",
+        "max_ms": "2.599375"
+      }
+    ],
+    "late_frame_main_states": [],
+    "slow_slice_states": [],
+    "trace_errors": []
+  }
+}

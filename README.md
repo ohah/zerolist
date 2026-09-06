@@ -32,6 +32,8 @@ import { Text } from 'react-native';
 
 ## 검증 자료
 
+- [Android 배치 개선과 호스트 부하 재확인](docs/benchmarks/2026-09-06-android-focus/README.md)
+
 - [통합 구현과 지원 범위](docs/benchmarks/2026-09-06-unified/implementation-ko.md)
 - [통합 후 정상 부하 비교](docs/benchmarks/2026-09-06-unified/README.md)
 - [이전 비교의 공정성 점검](docs/benchmarks/2026-09-06-fairness/README.md)

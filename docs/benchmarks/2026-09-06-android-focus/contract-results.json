@@ -1,0 +1,9 @@
+{
+  "reorder_state": true,
+  "replace_state": true,
+  "other_items_reset": true,
+  "scroll_target": true,
+  "dynamic_height": true,
+  "large_offset": true,
+  "native_touch": true
+}

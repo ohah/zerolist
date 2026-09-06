@@ -1,0 +1,6 @@
+{
+  "base_commit": "2eae2fd8c3a7f2add99053392150d98da3dd8a8f",
+  "native_sha256": "e8b87882d4c7136bcd10a22d9fe71439a5603b916f54819c71ac8e42e5ff6133",
+  "apk_sha256": "cb4224da271fcadb1f329710753a6eeb62107f29e576819e2b81c49c5767e4cf",
+  "note": "normal=기존, pool-parent-scroll=부모 이동, pool-fabric-layout=중복 배치 제거, pool-combined=둘 다. 최종 기본값 변경 전 동일 APK 교차 비교."
+}
