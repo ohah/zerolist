@@ -27,6 +27,146 @@ const renderRow = ({ item }: { item: Row }) => (
 );
 
 describe('ZeroList — FlatList drop-in 동작', () => {
+  it('같은 키의 객체·extraData 교체만으로 실제 측정 높이를 잃지 않는다', () => {
+    jest.useFakeTimers();
+    try {
+      const data = make(10);
+      const props = {
+        testID: 'zl',
+        renderItem: renderRow,
+        estimatedItemSize: 100,
+        initialNumToRender: 3,
+        windowSize: 1,
+      };
+      const { rerender } = render(
+        <ZeroList {...props} data={data} extraData={0} />
+      );
+      layout('zl', 400, 100);
+      fireEvent(screen.getByTestId('cell-0'), 'layout', {
+        nativeEvent: { layout: { x: 0, y: 0, width: 400, height: 300 } },
+      });
+      act(() => jest.runOnlyPendingTimers());
+      rerender(
+        <ZeroList
+          {...props}
+          data={data.map((item) => ({ ...item }))}
+          extraData={1}
+        />
+      );
+      scrollTo('zl', 200);
+      expect(screen.getByTestId('cell-0')).toBeTruthy();
+      expect(screen.queryByTestId('cell-2')).toBeNull();
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it('이전 데이터의 늦은 onLayout이 현재 측정을 덮어쓰지 않는다', () => {
+    jest.useFakeTimers();
+    try {
+      const data = make(10);
+      const props = {
+        testID: 'zl',
+        renderItem: renderRow,
+        estimatedItemSize: 100,
+        initialNumToRender: 3,
+        windowSize: 1,
+      };
+      const { rerender } = render(<ZeroList {...props} data={data} />);
+      layout('zl', 400, 100);
+      let view = screen.getByTestId('cell-0').parent;
+      while (view && typeof view.props.onLayout !== 'function')
+        view = view.parent;
+      const oldLayout = view!.props.onLayout;
+      rerender(
+        <ZeroList {...props} data={[data[1]!, data[0]!, ...data.slice(2)]} />
+      );
+      act(() =>
+        oldLayout({
+          nativeEvent: { layout: { x: 0, y: 0, width: 400, height: 999 } },
+        })
+      );
+      act(() => jest.runOnlyPendingTimers());
+      scrollTo('zl', 200);
+      expect(screen.getByTestId('cell-2')).toBeTruthy();
+      expect(screen.queryByTestId('cell-1')).toBeNull();
+    } finally {
+      jest.useRealTimers();
+    }
+  });
+
+  it.each(['reorder', 'insert', 'remove', 'replace', 'resize'])(
+    '동적 측정값이 다른 항목에 붙지 않는다: %s',
+    (change) => {
+      jest.useFakeTimers();
+      try {
+        const data = make(10);
+        const props = {
+          testID: 'zl',
+          renderItem: renderRow,
+          estimatedItemSize: 100,
+          initialNumToRender: 3,
+          windowSize: 1,
+        };
+        const { rerender } = render(<ZeroList {...props} data={data} />);
+        layout('zl', 400, 100);
+        fireEvent(screen.getByTestId('cell-0'), 'layout', {
+          nativeEvent: { layout: { x: 0, y: 0, width: 400, height: 300 } },
+        });
+        act(() => jest.runOnlyPendingTimers());
+        const next =
+          change === 'reorder'
+            ? [data[1]!, data[0]!, ...data.slice(2)]
+            : change === 'insert'
+              ? [{ id: 99, label: 'new' }, ...data]
+              : change === 'remove'
+                ? data.slice(1)
+                : change === 'replace'
+                  ? [{ ...data[0]!, label: 'replacement' }, ...data.slice(1)]
+                  : data;
+        rerender(<ZeroList {...props} data={next} />);
+        if (change === 'resize') layout('zl', 200, 100);
+        if (change === 'resize' || change === 'replace') {
+          fireEvent(screen.getByTestId('cell-0'), 'layout', {
+            nativeEvent: { layout: { x: 0, y: 0, width: 200, height: 100 } },
+          });
+          act(() => jest.runOnlyPendingTimers());
+        }
+        scrollTo('zl', 200);
+        const expected =
+          change === 'reorder' || change === 'insert'
+            ? 0
+            : change === 'remove'
+              ? 3
+              : 2;
+        expect(screen.getByTestId(`cell-${expected}`)).toBeTruthy();
+        expect(screen.queryByTestId(`cell-${next[0]!.id}`)).toBeNull();
+      } finally {
+        jest.useRealTimers();
+      }
+    }
+  );
+
+  it('키가 같은 항목의 로컬 상태는 재정렬 후에도 항목을 따라간다', () => {
+    function Stateful({ item }: { item: Row }) {
+      const [value, setValue] = useState(0);
+      return (
+        <Text testID={`move-${item.id}`} onPress={() => setValue(value + 1)}>
+          {value}
+        </Text>
+      );
+    }
+    const draw = ({ item }: { item: Row }) => <Stateful item={item} />;
+    const data = make(3);
+    const { rerender } = render(<ZeroList data={data} renderItem={draw} />);
+    fireEvent.press(screen.getByTestId('move-0'));
+    rerender(
+      <ZeroList data={[data[1]!, data[0]!, data[2]!]} renderItem={draw} />
+    );
+    expect(screen.getByTestId('move-0').props.children).toBe(1);
+    expect(screen.getByTestId('move-1').props.children).toBe(0);
+  });
+
   it('10만 건에서 창이 한 행 이동하면 새 항목만 renderItem을 호출한다', () => {
     const draw = jest.fn(renderRow);
     render(

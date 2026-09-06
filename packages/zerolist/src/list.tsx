@@ -14,6 +14,7 @@ import {
   useCallback,
   useEffect,
   useImperativeHandle,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -27,6 +28,7 @@ import type {
   ViewStyle,
 } from 'react-native';
 import { RefreshControl, ScrollView, View } from 'react-native';
+import { retainMeasurements } from './measurements';
 import {
   buildOffsets,
   computeViewableItems,
@@ -198,7 +200,10 @@ function ZeroListInner<ItemT>(
   const isH = !!horizontal;
 
   const scrollRef = useRef<React.ComponentRef<typeof ScrollView>>(null);
-  const measured = useRef<Map<number, number>>(new Map());
+  const measurementState = useRef<{
+    values: Map<string, number>;
+    isH: boolean;
+  } | null>(null);
   const prevViewable = useRef<Map<string, ViewToken>>(new Map());
   const endReachedArmed = useRef(true);
   const measureRaf = useRef<number | null>(null);
@@ -217,6 +222,16 @@ function ZeroListInner<ItemT>(
     [keyExtractor, items]
   );
 
+  const measured = useMemo(() => {
+    const previous = measurementState.current;
+    if (!previous || previous.isH !== isH) return new Map<string, number>();
+    return retainMeasurements(previous.values, items.length, keyOf);
+  }, [items, keyOf, isH]);
+  // 중단된 렌더에서는 현재 커밋의 측정을 교체하지 않는다.
+  useLayoutEffect(() => {
+    measurementState.current = { values: measured, isH };
+  }, [measured, isH]);
+
   const rows = useMemo(
     () => (cols > 1 ? groupIntoRows(count, cols) : null),
     [cols, count]
@@ -226,18 +241,27 @@ function ZeroListInner<ItemT>(
   const offsets = useMemo(
     () => {
       const getRowLength = (rowIdx: number): number | undefined => {
-        if (!getItemLayout) return undefined;
-        return getItemLayout(data, rows ? rows[rowIdx]![0]! : rowIdx).length;
+        if (getItemLayout)
+          return getItemLayout(data, rows ? rows[rowIdx]![0]! : rowIdx).length;
+        return rows ? undefined : measured.get(keyOf(rowIdx));
       };
       return buildOffsets(rowCount, {
-        getItemLength: getItemLayout ? getRowLength : undefined,
-        measured: rows ? undefined : measured.current,
+        getItemLength: getRowLength,
         estimatedItemSize,
       });
     },
-    // measured.current(ref) 변경은 measureNonce 로만 반영된다.
+    // 같은 측정 Map의 변경은 measureNonce로 반영한다.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [rowCount, getItemLayout, data, rows, estimatedItemSize, measureNonce]
+    [
+      rowCount,
+      getItemLayout,
+      data,
+      rows,
+      estimatedItemSize,
+      measureNonce,
+      measured,
+      keyOf,
+    ]
   );
 
   const contentLength = offsets[rowCount] ?? 0;
@@ -423,15 +447,18 @@ function ZeroListInner<ItemT>(
   const measureRow = useCallback(
     (rowIdx: number, e: LayoutChangeEvent) => {
       if (rows || getItemLayout) return; // 측정 불필요
+      if (measurementState.current?.values !== measured) return; // 이전 커밋의 늦은 이벤트
       const len = isH
         ? e.nativeEvent.layout.width
         : e.nativeEvent.layout.height;
-      if (measured.current.get(rowIdx) !== len) {
-        measured.current.set(rowIdx, len);
+      if (!Number.isFinite(len) || len < 0) return;
+      const key = keyOf(rowIdx);
+      if (measured.get(key) !== len) {
+        measured.set(key, len);
         scheduleMeasureFlush();
       }
     },
-    [rows, getItemLayout, isH, scheduleMeasureFlush]
+    [rows, getItemLayout, isH, scheduleMeasureFlush, measured, keyOf]
   );
 
   const noopSeparators = useMemo(
@@ -457,7 +484,7 @@ function ZeroListInner<ItemT>(
       const idxs = rows ? rows[r]! : [r];
       bodyRows.push(
         <View
-          key={`row-${r}`}
+          key={`row-${rows ? r : keyOf(r)}`}
           onLayout={(e) => measureRow(r, e)}
           style={
             rows
