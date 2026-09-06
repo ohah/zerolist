@@ -1,3 +1,4 @@
+import { UnifiedContract } from './UnifiedContract';
 import { useEffect, useMemo } from 'react';
 import { View, StyleSheet, useWindowDimensions, Platform } from 'react-native';
 import { jsRef } from '@ohah/zerolist';
@@ -21,6 +22,7 @@ export default function Solo(props: {
   count?: number;
   cell?: string;
   diagnostic?:
+    | 'unified-contract'
     | 'normal'
     | 'freeze-content'
     | 'freeze-position'
@@ -74,6 +76,7 @@ export default function Solo(props: {
     return () => clearInterval(timer);
   }, [props.jsBlockMs, props.preparationTrace]);
 
+  if (props.diagnostic === 'unified-contract') return <UnifiedContract />;
   if (!Engine) return <View style={s.fill} />;
   return (
     <View style={s.fill}>

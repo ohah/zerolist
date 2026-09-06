@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => min_ios_version_supported }
   s.source       = { :git => "https://github.com/ohah/zerolist.git", :tag => "#{s.version}" }
 
-  s.source_files = "ios/**/*.{h,m,mm}", "cpp/**/*.{hpp,cpp,c,h}", "ios/generated/*.{h,cpp,mm}"
+  s.source_files = "ios/**/*.{h,m,mm,cpp}", "cpp/**/*.{hpp,cpp,c,h}", "ios/generated/*.{h,cpp,mm}"
   s.private_header_files = "ios/**/*.h"
 
   # Zig 엔진 (zero-copy SIMD). zig/build-apple.sh 가 생성.

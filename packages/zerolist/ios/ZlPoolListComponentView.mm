@@ -12,10 +12,10 @@
 #import <set>
 #import <QuartzCore/QuartzCore.h>
 
-#import <react/renderer/components/ZlExampleSpec/ComponentDescriptors.h>
-#import <react/renderer/components/ZlExampleSpec/EventEmitters.h>
-#import <react/renderer/components/ZlExampleSpec/Props.h>
-#import <react/renderer/components/ZlExampleSpec/RCTComponentViewHelpers.h>
+#import "generated/ReactCodegen/ZerolistSpec/ComponentDescriptors.h"
+#import "generated/ReactCodegen/ZerolistSpec/EventEmitters.h"
+#import "generated/ReactCodegen/ZerolistSpec/Props.h"
+#import "generated/ReactCodegen/ZerolistSpec/RCTComponentViewHelpers.h"
 
 #import "zerolist_engine.h"
 
@@ -31,6 +31,9 @@ using namespace facebook::react;
   NSMutableArray<UIView *> *_slots;
   std::vector<double> _offsets; // Zig 가 채운 누적 오프셋(count+1)
   NSInteger _count;
+  int32_t _dataVersion;
+  BOOL _reportScroll;
+  std::string _scrollCommand;
   CGFloat _rowH;
   // windowStart 불변 프레임은 frame 재배치·csv·emit 전부 스킵
   // (슬롯은 content 고정좌표라 UIScrollView 가 스크롤 처리).
@@ -92,7 +95,7 @@ using namespace facebook::react;
 
 // Zig 로 균일 높이 offsets 빌드(zero-copy: 직접 포인터 전달).
 - (void)rebuild {
-  if (_count <= 0 || _rowH <= 0) return;
+  if (_count <= 0 || _rowH <= 0) { _offsets.clear(); _scroll.contentSize=CGSizeZero; _lastStart=NSIntegerMin; return; }
   std::vector<float> heights((size_t)_count, (float)_rowH);
   _offsets.assign((size_t)_count + 1, 0.0);
   zl_build_offsets(heights.data(), (size_t)_count, _offsets.data());
@@ -188,13 +191,14 @@ using namespace facebook::react;
     auto emitter = std::static_pointer_cast<const ZlPoolListEventEmitter>(_eventEmitter);
     if (_preparationMode & 16) {
       // PoC: 화면 준비 요청에 명시적 우선순위. JS 실행을 강제 중단하지 않는다.
-      emitter->dispatchEvent("recycle", [binds, version = _version](facebook::jsi::Runtime &runtime) {
+      emitter->dispatchEvent("recycle", [binds, version = _version, dataVersion = _dataVersion](facebook::jsi::Runtime &runtime) {
         auto payload = facebook::jsi::Object(runtime);
         payload.setProperty(runtime, "binds", binds);
         payload.setProperty(runtime, "version", version);
+        payload.setProperty(runtime, "dataVersion", dataVersion);
         return payload;
       }, RawEvent::Category::Discrete);
-    } else emitter->onRecycle({.binds = binds, .version = _version});
+    } else emitter->onRecycle({.binds = binds, .version = _version, .dataVersion = _dataVersion});
   }
 }
 
@@ -259,6 +263,10 @@ using namespace facebook::react;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+  if (_reportScroll && _eventEmitter) {
+    auto emitter=std::static_pointer_cast<const ZlPoolListEventEmitter>(_eventEmitter);
+    emitter->onPoolScroll({.offset=scrollView.contentOffset.y, .viewport=scrollView.bounds.size.height});
+  }
   double now = CACurrentMediaTime() * 1000, dt = now - _lastMotionMs;
   if (dt > 0 && dt <= 100) {
     double v = (scrollView.contentOffset.y - _lastMotionY) / dt;
@@ -272,6 +280,8 @@ using namespace facebook::react;
            oldProps:(const Props::Shared &)oldProps {
   const auto &p = *std::static_pointer_cast<const ZlPoolListProps>(props);
   BOOL changed = NO;
+  if (_dataVersion != p.dataVersion) { _dataVersion=p.dataVersion; _lastStart=NSIntegerMin; }
+  _reportScroll=p.reportScroll;
   if (_preparationMode != p.preparationMode) _lastStart = NSIntegerMin;
   _preparationMode = p.preparationMode;
   _preparationTrace = p.preparationTrace;
@@ -296,6 +306,15 @@ using namespace facebook::react;
   }
   [super updateProps:props oldProps:oldProps];
   if (changed) [self rebuild];
+  if (_scrollCommand != p.scrollCommand) {
+    _scrollCommand=p.scrollCommand;
+    NSArray<NSString *> *parts=[@(p.scrollCommand.c_str()) componentsSeparatedByString:@","];
+    if (parts.count == 3 && [parts[1] isEqualToString:@"flash"]) [_scroll flashScrollIndicators];
+    else if (parts.count == 3) {
+      double y=MAX(0,MIN([parts[1] doubleValue],_scroll.contentSize.height-_scroll.bounds.size.height));
+      [_scroll setContentOffset:CGPointMake(0,y) animated:[parts[2] boolValue]];
+    }
+  }
 }
 
 // Fabric 자식(JSX 슬롯)을 스크롤뷰에 마운트 — 풀.
@@ -336,7 +355,7 @@ using namespace facebook::react;
   _scroll.delegate = nil;
   [_slots removeAllObjects];
   _offsets.clear();
-  _count = 0;
+  _count = 0; _dataVersion=0; _reportScroll=NO; _scrollCommand.clear();
   _rowH = 0;
   _lastStart = NSIntegerMin;
   _scroll.contentOffset = CGPointZero; // 재사용 셀 스크롤 위치 누수 방지

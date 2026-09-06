@@ -1,6 +1,7 @@
-package zerolist.example
+package com.zerolist
 
 import android.util.Log
+import android.graphics.Canvas
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
@@ -41,6 +42,26 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private val resumeDrag = ctx.currentActivity?.intent?.getBooleanExtra("resumeDrag", true) ?: true
   private val motionTrace = ctx.currentActivity?.intent?.getBooleanExtra("motionTrace", false) == true
   fun diagnosticScrollOffset(): Int = scrollY
+  private var dataVersion = 0
+  private var reportScroll = false
+  fun setDataVersion(value: Int) { if (dataVersion != value) { dataVersion=value; lastWindowStart=-1; lastN=-1; invalidate(); requestLayout() } }
+  fun setReportScroll(value: Boolean) { reportScroll=value }
+  fun setScrollCommand(value: String?) {
+    val parts=value.orEmpty().split(',')
+    if (parts.size != 3) return
+    if (parts[1] == "flash") { awakenScrollBars(); return }
+    val y=parts[1].toDoubleOrNull() ?: return
+    val target=(y*resources.displayMetrics.density).toInt().coerceIn(0,maxScroll())
+    scroller.forceFinished(true)
+    if (parts[2] == "1") { scroller.startScroll(0,scrollY,0,target-scrollY); postInvalidateOnAnimation() }
+    else setScroll(target)
+  }
+  private fun emitScroll() {
+    if (!reportScroll) return
+    val rc=context as? ReactContext ?: return
+    val surfaceId=UIManagerHelper.getSurfaceId(rc)
+    UIManagerHelper.getEventDispatcher(rc,surfaceId)?.dispatchEvent(PoolScrollEvent(surfaceId,id,scrollY/resources.displayMetrics.density.toDouble(),height/resources.displayMetrics.density.toDouble()))
+  }
   private var preparationMode = 0
   private var preparationTrace = false
   private var committedVersion = -1
@@ -171,24 +192,26 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
   private var checks = 0
 
   fun setCount(value: Int) {
-    count = value
+    count = value.coerceAtLeast(0)
     buildOffsets()
   }
 
   fun setRowHeight(dp: Int) {
-    rowPxF = dpF(resources.displayMetrics, dp.toFloat())
+    rowPxF = resources.displayMetrics.density * dp.toFloat()
     buildOffsets()
   }
 
   private fun buildOffsets() {
-    if (count <= 0 || rowPxF <= 0f) return
+    if (count <= 0 || rowPxF <= 0f) {
+      offsets=null; offD=null; builtCount=-1; scrollY=0; lastWindowStart=-1; requestLayout(); invalidate(); return
+    }
     if (builtCount == count && builtRowPxF == rowPxF) return
     val o = buildUniformOffsets(count, rowPxF)
     offsets = o
     offD = o.asDoubleBuffer()
     builtCount = count
     builtRowPxF = rowPxF
-    scrollY = 0
+    scrollY = scrollY.coerceIn(0, maxScroll())
     lastWindowStart = -1
     lastN = -1
     checks = 0
@@ -217,6 +240,7 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     } else velocityPxMs = 0.0
     lastMotionMs = now
     scrollY = clamped
+    emitScroll()
     reposition()
     if (!legacyRecycling) invalidate()
     if (showScrollIndicator) awakenScrollBars()
@@ -235,10 +259,10 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     val d = offD ?: return
     val n = childCount
     if (n == 0) return
-    val packed = ZlEngine.visibleRange(
+    val packed = PoolEngine.visibleRange(
       offsets!!, count, scrollY.toDouble(), height.toDouble(),
     )
-    val first = ZlEngine.firstOf(packed)
+    val first = PoolEngine.firstOf(packed)
     // 풀이 데이터 끝을 넘지 않도록 clamp(뷰포트 ≤ 풀 가정).
     val behind = preparationBehind(n)
     var windowStart = (first - behind).coerceIn(0, maxOf(0, count - n))
@@ -297,7 +321,15 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     val surfaceId = UIManagerHelper.getSurfaceId(rc)
     UIManagerHelper
       .getEventDispatcher(rc, surfaceId)
-      ?.dispatchEvent(RecycleEvent(surfaceId, id, binds, version, (preparationMode and 16) != 0))
+      ?.dispatchEvent(RecycleEvent(surfaceId, id, binds, version, dataVersion, (preparationMode and 16) != 0))
+  }
+
+  // Fabric ViewProps의 overflow 기본값과 무관하게 스크롤 영역 밖 셀은 그리지 않는다.
+  override fun dispatchDraw(canvas: Canvas) {
+    val saved=canvas.save()
+    canvas.clipRect(0,0,width,height)
+    super.dispatchDraw(canvas)
+    canvas.restoreToCount(saved)
   }
 
   override fun onLayout(c: Boolean, l: Int, t: Int, r: Int, b: Int) {
@@ -371,15 +403,20 @@ class ZlPoolListView(ctx: ThemedReactContext) : FrameLayout(ctx) {
     viewId: Int,
     private val binds: String,
     private val version: Int,
+    private val dataVersion: Int,
     private val priority: Boolean,
   ) : Event<RecycleEvent>(surfaceId, viewId) {
     // RN 0.87.1 RawEvent::Category::Discrete = 3. Kotlin 상수는 internal이므로 PoC에서 계약을 명시한다.
     override fun getEventCategory(): Int = if (priority) 3 else super.getEventCategory()
     override fun getEventName() = "topRecycle"
     override fun getEventData(): WritableMap =
-      Arguments.createMap().apply { putString("binds", binds); putInt("version", version) }
+      Arguments.createMap().apply { putString("binds", binds); putInt("version", version); putInt("dataVersion", dataVersion) }
   }
 
+  private class PoolScrollEvent(surfaceId: Int, viewId: Int, val offset: Double, val viewport: Double) : Event<PoolScrollEvent>(surfaceId,viewId) {
+    override fun getEventName() = "topPoolScroll"
+    override fun getEventData(): WritableMap = Arguments.createMap().apply { putDouble("offset",offset); putDouble("viewport",viewport) }
+  }
   companion object {
     private const val RECYCLE_LOG_SAMPLES = 8
   }
@@ -398,6 +435,9 @@ class ZlPoolListManager :
 
   override fun getDelegate(): ViewManagerDelegate<ZlPoolListView> = delegate
 
+  override fun setDataVersion(view: ZlPoolListView, value: Int) { view.setDataVersion(value) }
+  override fun setReportScroll(view: ZlPoolListView, value: Boolean) { view.setReportScroll(value) }
+  override fun setScrollCommand(view: ZlPoolListView, value: String?) { view.setScrollCommand(value) }
   override fun setPreparationMode(view: ZlPoolListView, value: Int) { view.setPreparationMode(value) }
   override fun setPreparationTrace(view: ZlPoolListView, value: Boolean) { view.setPreparationTrace(value) }
   override fun setCommittedVersion(view: ZlPoolListView, value: Int) { view.setCommittedVersion(value) }
@@ -417,6 +457,7 @@ class ZlPoolListManager :
   override fun getExportedCustomDirectEventTypeConstants():
     MutableMap<String, Any> =
     mutableMapOf(
+      "topPoolScroll" to mapOf("registrationName" to "onPoolScroll"),
       "topRecycle" to mapOf("registrationName" to "onRecycle"),
     )
 }

@@ -7,7 +7,7 @@ import {
   useState,
 } from 'react';
 import { StyleSheet, View, useWindowDimensions } from 'react-native';
-import ZlPoolList from '../../../specs/ZlPoolListNativeComponent';
+import ZlPoolList from '../../../../../packages/zerolist/src/ZlPoolListNativeComponent';
 import { Cell } from '../cells';
 import type { ListEngineProps } from '../types';
 import type { Scrollable } from '../flingDriver';

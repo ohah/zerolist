@@ -16,7 +16,7 @@ import Animated, {
   dispatchCommand,
   type SharedValue,
 } from 'react-native-reanimated';
-import ZlPoolList from '../../../specs/ZlPoolListNativeComponent';
+import ZlPoolList from '../../../../../packages/zerolist/src/ZlPoolListNativeComponent';
 import ZlTemplateText from '../../../specs/ZlTemplateTextNativeComponent';
 import ZlTemplatePalette from '../../../specs/ZlTemplatePaletteNativeComponent';
 import type { Item, ListEngineProps } from '../types';

@@ -3,12 +3,15 @@ import { render, fireEvent, act } from '@testing-library/react-native';
 import { ZigPoolEngine } from '../zigpool';
 import type { ListEngineProps } from '../../types';
 
-jest.mock('../../../../specs/ZlPoolListNativeComponent', () => {
-  const React = require('react');
-  const { View } = require('react-native');
-  return (props: object) =>
-    React.createElement(View, { ...props, testID: 'pool' });
-});
+jest.mock(
+  '../../../../../../packages/zerolist/src/ZlPoolListNativeComponent',
+  () => {
+    const React = require('react');
+    const { View } = require('react-native');
+    return (props: object) =>
+      React.createElement(View, { ...props, testID: 'pool' });
+  }
+);
 
 const props: ListEngineProps = {
   items: Array.from({ length: 100 }, (_, id) => ({
