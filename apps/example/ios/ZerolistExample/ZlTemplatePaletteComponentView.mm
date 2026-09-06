@@ -2,6 +2,7 @@
 #import <React/RCTComponentViewFactory.h>
 #import <react/renderer/components/ZlExampleSpec/ComponentDescriptors.h>
 #import <react/renderer/components/ZlExampleSpec/Props.h>
+#import <react/renderer/components/ZlExampleSpec/RCTComponentViewHelpers.h>
 #include <cmath>
 using namespace facebook::react;
 
@@ -45,7 +46,7 @@ using namespace facebook::react;
   }
 }
 @end
-@interface ZlTemplatePaletteComponentView : RCTViewComponentView
+@interface ZlTemplatePaletteComponentView : RCTViewComponentView <RCTZlTemplatePaletteViewProtocol>
 @end
 @implementation ZlTemplatePaletteComponentView {
   ZlPaletteCanvas *_canvas;
@@ -64,9 +65,16 @@ using namespace facebook::react;
   return self;
 }
 - (void)updateProps:(Props::Shared const &)props oldProps:(Props::Shared const &)oldProps {
-  _canvas.hue=std::static_pointer_cast<const ZlTemplatePaletteProps>(props)->hue;
+  const auto &p=*std::static_pointer_cast<const ZlTemplatePaletteProps>(props);
+  const auto &old=*std::static_pointer_cast<const ZlTemplatePaletteProps>(_props);
+  // 명령으로 설정한 현재 값을 무관한 스타일 갱신이 초기 props로 되돌리지 않는다.
+  if (p.hue!=old.hue) _canvas.hue=p.hue;
   [super updateProps:props oldProps:oldProps];
 }
+- (void)handleCommand:(const NSString *)commandName args:(const NSArray *)args {
+  RCTZlTemplatePaletteHandleCommand(self, commandName, args);
+}
+- (void)updateHue:(double)hue { _canvas.hue=hue; }
 - (void)layoutSubviews { [super layoutSubviews];_canvas.frame=self.bounds; }
 - (void)prepareForRecycle { [super prepareForRecycle];_canvas.hue=0; }
 @end

@@ -5,6 +5,7 @@ import android.graphics.Typeface
 import android.text.TextUtils
 import android.view.Gravity
 import android.widget.TextView
+import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewManagerDelegate
@@ -23,6 +24,10 @@ class ZlTemplateTextManager : SimpleViewManager<TextView>(), ZlTemplateTextManag
     ellipsize = TextUtils.TruncateAt.END
   }
   override fun setContent(view: TextView, value: String?) { view.text = value.orEmpty() }
+  override fun updateContent(view: TextView, content: String?) { view.text = content.orEmpty() }
+  override fun receiveCommand(view: TextView, commandId: String, args: ReadableArray?) {
+    delegate.receiveCommand(view, commandId, args)
+  }
   override fun setKind(view: TextView, value: Int) {
     view.textSize = if (value == 0) 15f else 13f
     view.setTypeface(null, if (value == 0) Typeface.BOLD else Typeface.NORMAL)

@@ -11,6 +11,9 @@ import Animated, {
   useDerivedValue,
   useEvent,
   useSharedValue,
+  useAnimatedRef,
+  useAnimatedReaction,
+  dispatchCommand,
   type SharedValue,
 } from 'react-native-reanimated';
 import ZlPoolList from '../../../specs/ZlPoolListNativeComponent';
@@ -63,6 +66,49 @@ function Dot({ item, d }: { item: SharedValue<Item>; d: number }) {
   }));
   return <Animated.View style={[styles.dot, style]} />;
 }
+function CommandText({
+  value,
+  initial,
+  kind,
+}: Parameters<typeof TemplateText>[0]) {
+  const ref = useAnimatedRef();
+  // ref 연결도 추적해 최초 문자열을 마운트 전에 보내고 잃지 않게 한다.
+  useAnimatedReaction(
+    () => (ref() ? value.value : null),
+    (content) => {
+      if (content !== null) dispatchCommand(ref, 'updateContent', [content]);
+    }
+  );
+  return (
+    <NativeText
+      ref={ref}
+      content={initial}
+      kind={kind === 'title' ? 0 : kind === 'body' ? 1 : 2}
+      style={{
+        height: kind === 'body' ? 54 : 20,
+        marginTop: kind === 'title' ? 0 : 2,
+      }}
+    />
+  );
+}
+function CommandPalette({ item, initial }: Parameters<typeof Palette>[0]) {
+  const ref = useAnimatedRef();
+  const { width } = useWindowDimensions();
+  const columns = Math.max(1, Math.floor((width - 28 + 2) / 20));
+  useAnimatedReaction(
+    () => (ref() ? item.value.hue : null),
+    (hue) => {
+      if (hue !== null) dispatchCommand(ref, 'updateHue', [hue]);
+    }
+  );
+  return (
+    <NativePalette
+      ref={ref}
+      hue={initial.hue}
+      style={{ height: Math.ceil(64 / columns) * 20 - 2, marginTop: 6 }}
+    />
+  );
+}
 function Palette({
   item,
   initial,
@@ -90,6 +136,7 @@ function Slot({
   heavy,
   audit,
   palette,
+  command,
 }: {
   slot: number;
   binding: SharedValue<Binding>;
@@ -99,7 +146,10 @@ function Slot({
   heavy: boolean;
   audit: boolean;
   palette: boolean;
+  command: 'none' | 'palette' | 'all';
 }) {
+  const TextComponent = command === 'all' ? CommandText : TemplateText;
+  const PaletteComponent = command === 'none' ? Palette : CommandPalette;
   // 다른 슬롯만 바뀌면 같은 index 이후의 무거운 계산을 반복하지 않는다.
   const index = useDerivedValue(() => binding.value.indices[slot] ?? slot);
   const item = useDerivedValue(() => {
@@ -141,17 +191,21 @@ function Slot({
             <View style={styles.imageRow}>
               <Image source={{ uri: IMG }} style={styles.thumb} />
               <View style={styles.flex}>
-                <TemplateText
+                <TextComponent
                   value={title}
                   initial={initial.title}
                   kind="title"
                 />
-                <TemplateText value={body} initial={initial.body} kind="body" />
-                <TemplateText value={sum} initial="" kind="sum" />
+                <TextComponent
+                  value={body}
+                  initial={initial.body}
+                  kind="body"
+                />
+                <TextComponent value={sum} initial="" kind="sum" />
               </View>
             </View>
             {palette ? (
-              <Palette item={item} initial={initial} />
+              <PaletteComponent item={item} initial={initial} />
             ) : (
               <View style={styles.grid}>
                 {DOTS.map((d) => (
@@ -161,7 +215,7 @@ function Slot({
             )}
           </>
         ) : (
-          <TemplateText value={title} initial={initial.title} kind="title" />
+          <TextComponent value={title} initial={initial.title} kind="title" />
         )}
       </Animated.View>
     </View>
@@ -203,7 +257,8 @@ function useCompactData(items: Item[]) {
 function makeTemplateEngine(
   uiEvent: boolean,
   useData: (items: Item[]) => DataValue = useObjectData,
-  palette = false
+  palette = false,
+  command: 'none' | 'palette' | 'all' = 'none'
 ) {
   return forwardRef<Scrollable, ListEngineProps>((p, ref) => {
     useNoopScrollable(ref);
@@ -328,6 +383,7 @@ function makeTemplateEngine(
             heavy={p.cell === 'heavy'}
             audit={p.commonAudit ?? false}
             palette={palette}
+            command={command}
           />
         ))}
       </Pool>
@@ -341,6 +397,18 @@ export const TemplatePaletteEngine = makeTemplateEngine(
   true,
   useCompactData,
   true
+);
+export const TemplatePaletteCommandEngine = makeTemplateEngine(
+  true,
+  useCompactData,
+  true,
+  'palette'
+);
+export const TemplateCommandEngine = makeTemplateEngine(
+  true,
+  useCompactData,
+  true,
+  'all'
 );
 const styles = StyleSheet.create({
   fill: { flex: 1 },

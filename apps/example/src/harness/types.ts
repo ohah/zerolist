@@ -15,6 +15,8 @@ export type EngineId =
   | 'template-worklet'
   | 'template-compact'
   | 'template-palette'
+  | 'template-palette-command'
+  | 'template-command'
   | 'flatlist-palette'
   | 'zerolist';
 

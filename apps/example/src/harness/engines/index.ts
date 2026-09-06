@@ -10,6 +10,8 @@ import {
   TemplateWorkletEngine,
   TemplateCompactEngine,
   TemplatePaletteEngine,
+  TemplatePaletteCommandEngine,
+  TemplateCommandEngine,
 } from './template';
 import { ZeroListEngine } from './zerolist';
 import type { EngineId, ListEngineProps } from '../types';
@@ -33,6 +35,8 @@ export const ENGINES: Record<EngineId, EngineComponent | null> = {
   'template-worklet': TemplateWorkletEngine,
   'template-compact': TemplateCompactEngine,
   'template-palette': TemplatePaletteEngine,
+  'template-palette-command': TemplatePaletteCommandEngine,
+  'template-command': TemplateCommandEngine,
   'flatlist-palette': FlatPaletteEngine,
   'zerolist': ZeroListEngine,
 };
@@ -49,6 +53,8 @@ export const ENGINE_LABEL: Record<EngineId, string> = {
   'template-worklet': '템플릿(UI 수신)',
   'template-compact': '템플릿압축전달',
   'template-palette': '템플릿장식통합',
+  'template-palette-command': '템플릿장식명령',
+  'template-command': '템플릿전체명령',
   'flatlist-palette': 'FlatList장식통합',
   'zerolist': 'ZeroList',
 };
@@ -65,6 +71,8 @@ export const ENGINE_HINT: Record<EngineId, string> = {
   'template-worklet': 'fixed-template-ui-event',
   'template-compact': 'fixed-template-ui-compact',
   'template-palette': 'fixed-template-ui-palette',
+  'template-palette-command': 'fixed-template-palette-command',
+  'template-command': 'fixed-template-content-command',
   'flatlist-palette': 'getItemLayout-native-palette',
   'zerolist': 'offsets',
 };

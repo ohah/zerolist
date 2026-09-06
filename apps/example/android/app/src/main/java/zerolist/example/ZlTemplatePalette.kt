@@ -4,6 +4,7 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.view.View
+import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewManagerDelegate
@@ -40,4 +41,8 @@ class ZlTemplatePaletteManager : SimpleViewManager<ZlTemplatePaletteView>(), ZlT
   override fun getDelegate(): ViewManagerDelegate<ZlTemplatePaletteView> = delegate
   override fun createViewInstance(ctx: ThemedReactContext) = ZlTemplatePaletteView(ctx)
   override fun setHue(view: ZlTemplatePaletteView, value: Double) { view.hue=value }
+  override fun updateHue(view: ZlTemplatePaletteView, hue: Double) { view.hue=hue }
+  override fun receiveCommand(view: ZlTemplatePaletteView, commandId: String, args: ReadableArray?) {
+    delegate.receiveCommand(view, commandId, args)
+  }
 }
