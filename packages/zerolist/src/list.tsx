@@ -10,6 +10,7 @@ import type * as React from 'react';
 import {
   Fragment,
   forwardRef,
+  memo,
   useCallback,
   useEffect,
   useImperativeHandle,
@@ -135,6 +136,22 @@ function render(node: Renderable): React.ReactElement | null {
   return node as React.ReactElement;
 }
 
+function ItemContentInner<ItemT>({
+  item,
+  index,
+  separators,
+  renderItem,
+}: RenderItemInfo<ItemT> & {
+  renderItem: ZeroListOwnProps<ItemT>['renderItem'];
+  extraData: unknown;
+}) {
+  return renderItem({ item, index, separators });
+}
+
+// 창이 이동해도 같은 항목의 renderItem은 다시 실행하지 않는다.
+// extraData도 비교하므로 항목 외부 선택 상태 등의 변경은 반영한다.
+const ItemContent = memo(ItemContentInner) as typeof ItemContentInner;
+
 function ZeroListInner<ItemT>(
   props: ZeroListProps<ItemT>,
   ref: React.ForwardedRef<ZeroListHandle<ItemT>>
@@ -174,10 +191,6 @@ function ZeroListInner<ItemT>(
     // 나머지는 ScrollView 로 패스스루(FlatList 동일).
     ...rest
   } = props;
-
-  // FlatList 패리티: 함수 컴포넌트라 prop(extraData 포함) 변경이 곧
-  // 리렌더 → 선언만으로 충분(class PureComponent 의 bailout 회피용 prop).
-  void extraData;
 
   const items = (data ?? EMPTY) as ReadonlyArray<ItemT>;
   const count = items.length;
@@ -454,11 +467,13 @@ function ZeroListInner<ItemT>(
         >
           {idxs.map((i) => (
             <Fragment key={keyOf(i)}>
-              {renderItem({
-                item: items[i] as ItemT,
-                index: i,
-                separators: noopSeparators,
-              })}
+              <ItemContent
+                item={items[i] as ItemT}
+                index={i}
+                separators={noopSeparators}
+                renderItem={renderItem}
+                extraData={extraData}
+              />
               {ItemSeparatorComponent && i < count - 1 ? (
                 <ItemSeparatorComponent />
               ) : null}
